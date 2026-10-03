@@ -1,0 +1,210 @@
+[
+  {
+    "case_id": "01-ai-pm-interview",
+    "origin": "synthetic",
+    "core_decision_property": "Interview Bottleneck Identification",
+    "semantic_rubric": "01-ai-pm-interview/rubric.json",
+    "decision_properties": [
+      {
+        "path": "mode",
+        "op": "equals",
+        "value": "interview"
+      },
+      {
+        "path": "stop_condition",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "urgency.within_72h",
+        "op": "equals",
+        "value": true
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "question_ladder"
+        ]
+      }
+    ],
+    "extraction_properties": [],
+    "input_sha256": "eea94cad991a3e9393494cc76654e1bf777dcf045a5d7b1ae8354b5ad82d2a18",
+    "boundary": "Machine checks protect integrity; recommendations/meaning judged semantically. No exact role or offer winner required."
+  },
+  {
+    "case_id": "02-hr-silence",
+    "origin": "synthetic",
+    "core_decision_property": "Recruiting Uncertainty Discipline",
+    "semantic_rubric": "02-hr-silence/rubric.json",
+    "decision_properties": [
+      {
+        "path": "mode",
+        "op": "equals",
+        "value": "recruiting"
+      },
+      {
+        "path": "stop_condition",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "application_status",
+        "op": "equals",
+        "value": "waiting"
+      }
+    ],
+    "extraction_properties": [
+      {
+        "path": "recruiting.no_contact",
+        "op": "equals",
+        "value": false
+      },
+      {
+        "path": "recruiting.working_days",
+        "op": "equals",
+        "value": null
+      }
+    ],
+    "input_sha256": "744f1b69f9594887de196a64d32d109d503beccddd834ebdedc2df6f6a6b6eec",
+    "boundary": "Machine checks protect integrity; recommendations/meaning judged semantically. No exact role or offer winner required."
+  },
+  {
+    "case_id": "03-offer-choice",
+    "origin": "synthetic",
+    "core_decision_property": "Decision Under Uncertainty",
+    "semantic_rubric": "03-offer-choice/rubric.json",
+    "decision_properties": [
+      {
+        "path": "mode",
+        "op": "equals",
+        "value": "offer"
+      },
+      {
+        "path": "stop_condition",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      }
+    ],
+    "extraction_properties": [
+      {
+        "path": "offer.weights",
+        "op": "equals",
+        "value": {}
+      }
+    ],
+    "input_sha256": "c87000afe66e7d278bc044b6192f3520979074b06eb2ebf6c6b8e85a6a0a2660",
+    "boundary": "Machine checks protect integrity; recommendations/meaning judged semantically. No exact role or offer winner required."
+  },
+  {
+    "case_id": "04-career-direction",
+    "origin": "synthetic",
+    "core_decision_property": "Career Positioning / Prioritization",
+    "semantic_rubric": "04-career-direction/rubric.json",
+    "decision_properties": [
+      {
+        "path": "mode",
+        "op": "equals",
+        "value": "job"
+      },
+      {
+        "path": "stop_condition",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "jd_map"
+        ]
+      }
+    ],
+    "extraction_properties": [],
+    "input_sha256": "9a2058a0f38a7725de4242dfb9a7550da74b2b6e4f6153d5361fe54862090efa",
+    "boundary": "Machine checks protect integrity; recommendations/meaning judged semantically. No exact role or offer winner required."
+  },
+  {
+    "case_id": "05-ownership-claim",
+    "origin": "synthetic",
+    "core_decision_property": "Ownership / Evidence Discipline",
+    "semantic_rubric": "05-ownership-claim/rubric.json",
+    "decision_properties": [
+      {
+        "path": "mode",
+        "op": "equals",
+        "value": "positioning"
+      },
+      {
+        "path": "stop_condition",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "claims",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "write_material"
+        ]
+      }
+    ],
+    "extraction_properties": [],
+    "input_sha256": "10cc72b8727f92c6f24f7544afab72859a14f6ddb445f93f18f81f762ec42efc",
+    "boundary": "Machine checks protect integrity; recommendations/meaning judged semantically. No exact role or offer winner required."
+  }
+]

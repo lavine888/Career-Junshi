@@ -1,0 +1,389 @@
+{
+  "mode": "offer",
+  "summary": "用户正在比较深圳大厂 AI 产品经理 Offer A 与香港 25 人 AI startup 的 AI Product Engineer Offer B；关键取舍涉及创业方向、AI-native 产品与技术成长、品牌、薪酬、稳定性和职责所有权，同时 B 的书面职责、runway、融资、客户量、管理者质量和工作负荷仍未知。",
+  "goal": "判断两个 Offer 哪个更符合用户的职业方向和已表达偏好。",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "用户自述未来可能创业；这是带不确定性的职业方向意向，不是已经发生的创业结果。",
+      "confidence": "SELF_REPORTED",
+      "stage": "planned",
+      "ownership": {
+        "scope": "sole",
+        "contribution": "个人职业方向意向；未提供已创业、已筹备或已取得创业成果的证据。"
+      },
+      "evidence": [
+        {
+          "source": "S1: 我以后可能还是想创业",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户直接表达了带有“可能”的未来创业意向。"
+        }
+      ],
+      "risk": [
+        "方向意向尚未具体化为时间表、行业、角色或行动计划。"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "用户报告 B 的 Founder 表示加入后可以覆盖产品、Agent workflow 并直接接触客户；这不证明实际 ownership、工程实现作者身份或入职后的真实职责。",
+      "confidence": "SELF_REPORTED",
+      "stage": "planned",
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "用户尚未入职，未提供其将亲自承担产品领导、Agent 工程实现或客户交付的书面边界。"
+      },
+      "evidence": [
+        {
+          "source": "S1: Founder 说进去以后从产品到 Agent workflow 都可以做，甚至直接跟客户。",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户转述 Founder 对未来工作范围的口头描述。"
+        },
+        {
+          "source": "S5: “你来了什么都能做，客户也可以直接见。”",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "Founder 原话的用户转述，未附书面职责或实际工作证据。"
+        }
+      ],
+      "risk": [
+        "口头范围可能与入职后的实际优先级、权限和资源不一致。",
+        "没有证据区分产品领导职责与工程实现作者身份。"
+      ]
+    },
+    {
+      "id": "C3",
+      "claim": "用户预计进入 A 后应该负责较细的一个模块；这是尚未由书面职责确认的预期。",
+      "confidence": "SELF_REPORTED",
+      "stage": "planned",
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "尚未入职；个人决策权、模块边界和跨团队影响范围均未确认。"
+      },
+      "evidence": [
+        {
+          "source": "S1: 但我进去应该负责比较细的一个模块。",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户使用“应该”描述对 A 岗位范围的预期。"
+        }
+      ],
+      "risk": [
+        "模块范围和实际 ownership 缺少书面确认。"
+      ]
+    }
+  ],
+  "metadata": {
+    "mode": "offer",
+    "role_family": "ai-product",
+    "stage": "decision",
+    "situation_type": "offer-choice",
+    "risk_tags": [
+      "constraints",
+      "direction",
+      "evidence",
+      "manager",
+      "ownership",
+      "salary"
+    ],
+    "situation_tags": [
+      "constraints",
+      "direction",
+      "evidence",
+      "manager",
+      "ownership",
+      "salary"
+    ]
+  },
+  "offer": {
+    "weights": {},
+    "constraints": [],
+    "options": [
+      {
+        "name": "A：深圳某大厂 AI Product Manager",
+        "constraint_status": "unknown",
+        "ratings": {
+          "brand": 5,
+          "learning": 3.5,
+          "ownership": 2.5,
+          "technical_depth": 3
+        }
+      },
+      {
+        "name": "B：香港 25 人 AI startup / AI Product Engineer",
+        "constraint_status": "unknown",
+        "ratings": {
+          "brand": 2.5,
+          "learning": 4.5,
+          "ownership": 4.5,
+          "technical_depth": 4
+        }
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "F2",
+      "text": "用户报告 A 是位于深圳的某大厂 AI 产品经理岗位。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "A 是深圳某大厂 AI 产品经理",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "用户报告 A 的月薪为 28k、按 16 个月计。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "月薪 28k × 16",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "用户报告 A 团队成熟，业务是 AI 搜索产品。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "团队成熟，\n做 AI 搜索产品",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户报告 B 是香港一家 25 人的 AI startup，岗位名称为 AI Product Engineer。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "B 是香港一家 25 人的 AI startup，\n月薪 HKD 35k × 12，\nTitle 是 AI Product Engineer。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户转述 Founder 称，加入 B 后从产品到 Agent workflow 都可以做，甚至可以直接接触客户；这是口头表述，不是已确认的实际职责或成果。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "Founder 说进去以后从产品到 Agent workflow 都可以做，\n甚至直接跟客户。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F8",
+      "text": "用户表示未来可能仍想创业，保留了不确定性。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我以后可能还是想创业",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "preferred"
+    },
+    {
+      "id": "F9",
+      "text": "用户表示大厂品牌也较重要。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "但大厂品牌也挺重要。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "preferred"
+    },
+    {
+      "id": "F10",
+      "text": "用户给出的定性偏好为：创业、AI-native 产品和技术成长为 high；品牌、薪酬和稳定性为 medium；地点为深圳或香港。这些不是数值权重。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "entrepreneurship: high\nai_native_product: high\nbrand: medium\ncompensation: medium\nlocation: Shenzhen_or_HongKong\nstability: medium\ntechnical_growth: high",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "preferred"
+    },
+    {
+      "id": "F11",
+      "text": "Offer A 材料将公司类型列为 large_tech、地点列为 Shenzhen、角色列为 AI Product Manager。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "company_type: large_tech\nlocation: Shenzhen\nrole: AI Product Manager",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "Offer A 材料列出的薪酬是每月 RMB 28000、每年 16 个月。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "compensation:\n  monthly: RMB 28000\n  months: 16",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F13",
+      "text": "Offer A 材料提供的 learning 评分为 3.5，ownership 评分为 2.5。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "learning: 3.5\nownership: 2.5",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F15",
+      "text": "Offer A 材料提供的 technical_depth 为 3、brand_signal 为 5、stability 为 4。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "technical_depth: 3\nbrand_signal: 5\nstability: 4",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F16",
+      "text": "Offer B 材料将公司类型列为 startup、地点列为 Hong_Kong、角色列为 AI Product Engineer。",
+      "source": "S4",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "company_type: startup\nlocation: Hong_Kong\nrole: AI Product Engineer",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F17",
+      "text": "Offer B 材料列出的薪酬是每月 HKD 35000、每年 12 个月。",
+      "source": "S4",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "compensation:\n  monthly: HKD 35000\n  months: 12",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F18",
+      "text": "Offer B 材料提供的 learning 评分为 4.5，ownership 评分为 4.5。",
+      "source": "S4",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "learning: 4.5\nownership: 4.5",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F20",
+      "text": "Offer B 材料提供的 technical_depth 为 4、brand_signal 为 2.5、stability 为 2。",
+      "source": "S4",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "technical_depth: 4\nbrand_signal: 2.5\nstability: 2",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F21",
+      "text": "用户另行转述 Founder 的原话为“你来了什么都能做，客户也可以直接见”；该话只证明存在这项口头表述。",
+      "source": "S5",
+      "source_id": "S5",
+      "source_type": "user_report",
+      "source_span": "“你来了什么都能做，客户也可以直接见。”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "unknown"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F1",
+      "text": "用户表示自己对两个 Offer 的选择感到纠结。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我挺纠结",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "self_reported",
+      "kind": "feeling",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "用户预计自己进入 A 后应该负责较细的一个模块；该职责范围尚带有推测性。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "但我进去应该负责比较细的一个模块。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "unknown"
+    }
+  ],
+  "unknowns": [
+    "Offer A 的 manager_quality 未知。",
+    "Offer B 的 manager_quality 未知。",
+    "书面职责范围、runway、融资状态、真实客户量、管理者质量和工作负荷均未提供。"
+  ]
+}

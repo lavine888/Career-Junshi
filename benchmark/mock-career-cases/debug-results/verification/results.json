@@ -1,0 +1,56 @@
+{
+  "baseline_commit": "90a4c433f00c0b99b2e1ebd0d6607c70986b267c",
+  "baseline_red": {
+    "command": "baseline-boundaries-red",
+    "exit_code": 1,
+    "stdout": "baseline-boundaries-red.stdout.txt",
+    "stderr": "baseline-boundaries-red.stderr.txt",
+    "summary": [
+      "----------------------------------------------------------------------",
+      "Ran 7 tests in 0.047s",
+      "",
+      "FAILED (failures=3, errors=1)"
+    ]
+  },
+  "checks": [
+    {
+      "command": "full-unittest",
+      "exit_code": 0,
+      "stdout": "full-unittest.stdout.txt",
+      "stderr": "full-unittest.stderr.txt",
+      "summary": [
+        "----------------------------------------------------------------------",
+        "Ran 135 tests in 14.668s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "command": "original-13-benchmark",
+      "exit_code": 0,
+      "stdout": "original-13-benchmark.stdout.txt",
+      "stderr": "original-13-benchmark.stderr.txt",
+      "summary": []
+    },
+    {
+      "command": "validate-skill",
+      "exit_code": 0,
+      "stdout": "validate-skill.stdout.txt",
+      "stderr": "validate-skill.stderr.txt",
+      "summary": []
+    },
+    {
+      "command": "new-5-replay",
+      "exit_code": 0,
+      "stdout": "new-5-replay.stdout.txt",
+      "stderr": "new-5-replay.stderr.txt",
+      "summary": []
+    }
+  ],
+  "tests": 135,
+  "original_benchmark_cases": 13,
+  "original_benchmark_regressions": [],
+  "new_frozen_cases": 5,
+  "new_frozen_regressions": [],
+  "semantic_boundary": "Machine guards pass; independent semantic review retains PARTIAL and FAIL cases."
+}

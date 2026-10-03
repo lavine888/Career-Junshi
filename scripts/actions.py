@@ -45,7 +45,11 @@ def artifact_contents(decision: dict) -> dict[str, str]:
     if kinds & {"risk_map", "evidence_audit", "write_material"}:
         lines = ["# Claim / 面试风险图", "", "逐条核对真实来源；风险触发器不是完整的语义事实检查。", ""]
         if not claims:
-            lines.append("尚无 Claim。需要实际简历、JD 和个人贡献，不能填入假经历。")
+            supplied = {f["source_type"] for f in decision["facts"]}
+            missing = [label for kind, label in (("resume", "简历原文"), ("jd", "JD 原文")) if kind not in supplied]
+            lines.append("尚无结构化 Claim。先从已给材料整理项目表述并核实个人贡献，不能填入假经历。")
+            if missing:
+                lines.append("待提供：" + "、".join(missing) + "。")
         for c in claims:
             lines.extend([f"## {c['id']}", "", f"原表述：{c['claim']}", "", f"安全表述：{c['safe_wording']}", "",
                           f"个人贡献：{c['ownership']['contribution'] or '未知'}；ownership：{c['ownership']['scope']}", "",

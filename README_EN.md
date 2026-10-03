@@ -117,6 +117,11 @@ All cases are synthetic; passing tests is not career outcome validation. Current
 company / market claims require fresh host checks. Memory is unencrypted and logical
 deletion does not erase external backups.
 
+The [five core mock decision cases](benchmark/mock-career-cases/README.md) retain
+synthetic source inputs, model outputs, failures and frozen extraction replays.
+See the [debug report](documentation/MOCK_CASE_DEBUG_REPORT.md) for semantic findings;
+passing deterministic guards does not mean every career judgment passed.
+
 ## Design and attribution
 
 Inspired by / adapted from [Goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi):

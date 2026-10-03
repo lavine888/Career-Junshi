@@ -1,0 +1,11 @@
+{
+  "case_id": "05-ownership-claim",
+  "origin": "synthetic",
+  "outcomes": [
+    {
+      "branch": "only",
+      "origin": "synthetic",
+      "text": "面试中对方连续问了大约 10 分钟：\n\n“哪些是你做的？”\n\n用户提前明确了产品、集成和工程边界，\n没有声称所有核心代码由本人实现。"
+    }
+  ]
+}

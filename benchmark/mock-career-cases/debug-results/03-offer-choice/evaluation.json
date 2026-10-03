@@ -1,0 +1,239 @@
+{
+  "case_id": "03-offer-choice",
+  "extraction": {
+    "passed": true,
+    "failures": [],
+    "rating": "PASS"
+  },
+  "decision": {
+    "passed": false,
+    "failures": [
+      "结构化建议称仍需确认目标和权重，但材料已经明确给出创业、AI-native 产品、技术成长为 high，品牌、薪酬、稳定性为 medium；真正缺失的是硬约束及 B 的经营和岗位事实。",
+      "在 constraints 为空时把两个选项都标成 eligible:false，语义上把‘硬约束未知’错误地表现为‘不具备资格’。",
+      "highest_risk 设为 C1（创业意向），没有抓住本案最主要风险：B 的 ownership 主要来自口头承诺，且 runway、融资、客户量、管理者质量和工作负荷未知。",
+      "recommended_move 只给出笼统的‘先确认再选’，没有利用已知偏好形成合理的条件性倾向；actions 还遗漏了 runway、融资和真实客户这些最关键的验证项。",
+      "decision_trace 将‘核实书面条款、经理与个人负责范围’列为被拒方案，但 chosen 本身也是先核实信息，存在内部区分不清。"
+    ],
+    "rating": "PARTIAL"
+  },
+  "host": {
+    "baseline_rating": "PASS",
+    "after_rating": "PASS",
+    "failures": [
+      "after_host 给出‘12–18 个月以上 runway’这一具体阈值，但材料没有提供用户风险承受期；它可以作为建议性门槛，却不应被误读为来源事实或普适标准。",
+      "after_host 对汇报对象、职责和工时有追问，但没有像核实 runway、客户和岗位范围那样明确核实 manager/founder 的实际工作风格；这是仍然存在的小缺口。",
+      "after_host 用‘大概率只负责较细模块’略微强化了用户原话中的‘应该’，不过整体仍保持了条件性，并提供了 A 反转胜出的条件。"
+    ],
+    "comparison": "两版 host 都给出来源支撑的‘有条件偏向 B’，明确口头承诺的不确定性、币种不可直接比较、反转条件和停止线。after_host 的三道门槛更集中，并补问生产代码、部署和线上故障责任；baseline_host 对管理方式、同事交叉验证及 90/180 天职责的覆盖略好。相同模型与设置下，这些差异不能证明补丁改进，整体语义质量大致相当。"
+  },
+  "must_notice": {
+    "detected": [
+      "B 的 ownership/upside 主要来自 Founder 口头表述，尚非已验证职责。",
+      "用户对创业、AI-native 产品和技术成长的偏好为 high。",
+      "B 的潜在 upside 较高，同时经营、客户、职责和工作负荷不确定性较高。",
+      "A 的品牌、成熟体系和稳定性更确定，但实际模块边界仍带有用户推测。",
+      "A 与 B 的薪酬币种不同，不能只比较名义数字。"
+    ],
+    "missed": []
+  },
+  "hard_failures": [],
+  "product_failure_labels": [
+    "GENERIC_ADVICE",
+    "OVER_CAUTION"
+  ],
+  "recommendation": {
+    "clear": true,
+    "evidence_grounded": true,
+    "actionable": true
+  },
+  "counterfactual": {
+    "present": true,
+    "useful": true
+  },
+  "reconsider_if": {
+    "present": true,
+    "useful": true
+  },
+  "stop_condition": {
+    "present": true,
+    "useful": true
+  },
+  "memory_behavior": {
+    "status": "NOT_APPLICABLE_NO_OUTCOME",
+    "isolated_temporary_stores": false,
+    "temporary_stores_deleted": true,
+    "decision_preserved": true,
+    "real_memory_used": false,
+    "profile_auto_updates": [],
+    "boundary": "Synthetic events do not create recurring real-world risk; no fake tests for cases with no supplied outcome."
+  },
+  "outcome_calibration": {
+    "status": "NOT_APPLICABLE",
+    "replays": [],
+    "limits": "Only architecture/ownership high-attention observations mapped from supplied interview text. Full raw outcome preserved; missing topics remain UNASSESSABLE, not not_asked. Case 5 has no prospective predictions. Explicit not-asked probe is separate."
+  },
+  "overall": "PARTIAL",
+  "evidence": [
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "{\"id\": \"F1\", \"text\": \"用户表示自己对两个 Offer 的选择感到纠结。\", \"source_id\": \"S1\", \"source_type\": \"user_report\", \"source_span\": \"我挺纠结\", \"epistemic\": \"INFERENCE\"",
+      "diagnostic": "source_span 是用户直接自述，但 epistemic 被标成 INFERENCE。"
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "{\"name\": \"B：香港 25 人 AI startup / AI Product Engineer\", \"constraint_status\": \"unknown\", \"ratings\": {\"brand\": 2.5, \"learning\": 4.5, \"ownership\": 4.5, \"technical_depth\": 4}}",
+      "diagnostic": "二级 offer 选项没有承接材料中已有的 stability:2，尽管稳定性是用户明确的 medium 偏好。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"recommended_move\": \"先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。\"",
+      "diagnostic": "建议可逆但过度保守；已知目标足以支持条件性偏向，主要应补的是硬约束和 B 的关键事实。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"eligible\": false, \"score\": null",
+      "diagnostic": "constraints 为空时将选项表达为不具资格，语义不成立；未知是否满足硬约束不等于已判定不合格。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"highest_risk\": \"C1\"",
+      "diagnostic": "把创业方向意向列为最高风险，没有反映 B 的未验证 ownership 和经营未知才是本次选择的核心风险。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"description\": \"确认经理、团队、ownership、书面薪酬、地点与截止时间\"",
+      "diagnostic": "行动虽具体，但遗漏 runway、融资和真实客户，而这些正是材料及 rubric 的关键检查。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "原因不是“小公司一定学得多”，而是你把创业、AI 原生产品和技术成长放在高优先级；按现有材料，B 的潜在工作闭环更接近这些目标。",
+      "diagnostic": "主推荐清楚地绑定用户偏好，并避免用公司规模作机械因果推断。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "它的主要吸引力是可能覆盖产品、Agent workflow 和客户，但目前只有 Founder 的口头表述，尚不能视为真实职责承诺。",
+      "diagnostic": "正确保留‘可能’并拒绝把 Founder 口头说法升级成 VERIFIED ownership。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "B 的名义年薪为 **42 万港币**，不能在缺少汇率、税务及生活成本信息时直接与 A 比高低",
+      "diagnostic": "正确识别不同币种、税务和生活成本导致名义薪酬不可直接比较。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "如果 A 能确认你拥有完整指标、用户研究和跨团队决策权，而 B 仍只有口头承诺，偏好会反转到 **A**。",
+      "diagnostic": "提供了有来源逻辑且真正会改变建议的反事实与重评条件。"
+    },
+    {
+      "artifact": "baseline_host",
+      "quote": "若 B 回避上述基本问题，就停止为它的想象空间加分，选 A。最终接受或拒绝由你本人执行。",
+      "diagnostic": "停止线明确，并保留用户最终决策权。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"recurring_risk\": {\"status\": \"INSUFFICIENT_OBSERVATIONS\", \"comparable_outcomes\": 0, \"risk_tags\": []}",
+      "diagnostic": "正确表示没有可比结果观察；不能据此声称执行过实际记忆或 replay 测试。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"predictions\": []",
+      "diagnostic": "没有编造结果预测，也没有把条件性选择分支误写成确定结果。"
+    }
+  ],
+  "review_method": "Independent fresh gpt-5.6-sol/high evaluator, same family as generator; operator contract/quotation review; no blind or independent-family claim. Raw grades preserved separately.",
+  "quote_audit": [
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "{\"id\": \"F1\", \"text\": \"用户表示自己对两个 Offer 的选择感到纠结。\", \"source_id\": \"S1\", \"source_type\": \"user_report\", \"source_span\": \"我挺纠结\", \"epistemic\": \"INFERENCE\"",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "{\"name\": \"B：香港 25 人 AI startup / AI Product Engineer\", \"constraint_status\": \"unknown\", \"ratings\": {\"brand\": 2.5, \"learning\": 4.5, \"ownership\": 4.5, \"technical_depth\": 4}}",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"recommended_move\": \"先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。\"",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"eligible\": false, \"score\": null",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"highest_risk\": \"C1\"",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"description\": \"确认经理、团队、ownership、书面薪酬、地点与截止时间\"",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "原因不是“小公司一定学得多”，而是你把创业、AI 原生产品和技术成长放在高优先级；按现有材料，B 的潜在工作闭环更接近这些目标。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "它的主要吸引力是可能覆盖产品、Agent workflow 和客户，但目前只有 Founder 的口头表述，尚不能视为真实职责承诺。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "B 的名义年薪为 **42 万港币**，不能在缺少汇率、税务及生活成本信息时直接与 A 比高低",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "如果 A 能确认你拥有完整指标、用户研究和跨团队决策权，而 B 仍只有口头承诺，偏好会反转到 **A**。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "baseline_host",
+      "quote": "若 B 回避上述基本问题，就停止为它的想象空间加分，选 A。最终接受或拒绝由你本人执行。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"recurring_risk\": {\"status\": \"INSUFFICIENT_OBSERVATIONS\", \"comparable_outcomes\": 0, \"risk_tags\": []}",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "\"predictions\": []",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    }
+  ],
+  "operator_resolutions": [
+    "Do not penalize feelings as INFERENCE: the existing context contract explicitly requires that. The raw reviewer proposed FACT feelings, which conflicts with the contract.",
+    "Stability ratings remain in sourced statements. No stability dimension exists in the numeric offer API; inventing a downside transform to fill it is prohibited. This is an interface limitation, not evidence loss or a schema defect."
+  ],
+  "actual_replay": {
+    "contract": "VALID",
+    "sources_unchanged": true,
+    "cli_decision": "../final/03-offer-choice/decision.json",
+    "raw_extraction_counts": {
+      "FACT": 17,
+      "INFERENCE": 2,
+      "UNKNOWN": 3
+    }
+  },
+  "memory_replay_evidence": []
+}

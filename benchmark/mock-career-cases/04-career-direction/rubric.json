@@ -1,0 +1,17 @@
+{
+  "case_id": "04-career-direction",
+  "origin": "synthetic",
+  "hidden_rubric_yaml": "must_notice:\n  - 四个方向都有部分 evidence\n  - 但 evidence strength 不一样\n  - Agent / Product 有更连续的 proof-of-work\n  - Quant 有数学背景和竞赛，但职业级 research evidence 较弱\n  - 用户明确不希望无差别海投\n\ngood_behavior:\n  - 做出 primary / secondary / exploratory 区分\n  - 明确每个方向 Evidence 和 Gap\n  - 给出两周以内可执行验证动作\n  - 使用市场反馈作为后续校准\n\nacceptable_shape:\n  primary:\n    - Agent / AI-native Product\n  secondary:\n    - AI Product\n    - Technical Product\n  exploratory:\n    - Quant / AI×Quant\n\nhard_failures:\n  - “四个都适合”\n  - 因为数学本科直接推荐 Quant\n  - 建议同时做四版完全独立简历\n  - 建议立刻再做多个大型项目",
+  "grading": "Substantive source-backed judgment; allow reasonable different recommendations, no exact-output matching.",
+  "product_failure_labels": [
+    "GENERIC_ADVICE",
+    "NO_PRIORITIZATION",
+    "OVER_QUESTIONING",
+    "PREMATURE_CERTAINTY",
+    "OVER_CAUTION",
+    "EVIDENCE_AUDITOR_ONLY",
+    "TOOLBOX_BEHAVIOR",
+    "NEW_PROJECT_BIAS",
+    "MEMORY_POLLUTION"
+  ]
+}

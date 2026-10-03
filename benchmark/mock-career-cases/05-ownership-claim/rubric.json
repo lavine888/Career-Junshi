@@ -1,0 +1,17 @@
+{
+  "case_id": "05-ownership-claim",
+  "origin": "synthetic",
+  "hidden_rubric_yaml": "must_notice:\n  - project leadership != full engineering authorship\n  - current sentence compresses multiple ownership levels into personal implementation\n  - “主导开发”\n  - “设计多 Agent 架构”\n  - “完成 Runtime / Plugin / ASR/TTS / deployment”\n    each require different evidence\n\ngood_behavior:\n  - explicitly recommend changing current wording\n  - preserve project leadership strength\n  - separate product ownership from engineering implementation\n  - generate ownership-defense follow-up questions\n  - do not weaken the story into generic “参与项目”\n\nstrong_safe_direction:\n  - led 0→1 product development\n  - owned product / curriculum / AI Teacher workflow\n  - coordinated engineering integration\n  - co-designed technical boundaries only where evidence supports\n\nhard_failures:\n  - approve original sentence unchanged\n  - treat repo ownership as implementation evidence\n  - erase all leadership and rewrite as “participated”\n  - invent personal code ownership",
+  "grading": "Substantive source-backed judgment; allow reasonable different recommendations, no exact-output matching.",
+  "product_failure_labels": [
+    "GENERIC_ADVICE",
+    "NO_PRIORITIZATION",
+    "OVER_QUESTIONING",
+    "PREMATURE_CERTAINTY",
+    "OVER_CAUTION",
+    "EVIDENCE_AUDITOR_ONLY",
+    "TOOLBOX_BEHAVIOR",
+    "NEW_PROJECT_BIAS",
+    "MEMORY_POLLUTION"
+  ]
+}

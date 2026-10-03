@@ -1,0 +1,16 @@
+{
+  "case_id": "02-hr-silence",
+  "origin": "synthetic",
+  "outcomes": [
+    {
+      "branch": "A",
+      "origin": "synthetic",
+      "text": "当天 HR 回复：\n“业务面反馈通过，目前还在走 HC 审批。”"
+    },
+    {
+      "branch": "B",
+      "origin": "synthetic",
+      "text": "三天后 HR 回复：\n“很遗憾，这次岗位暂时不继续推进。”"
+    }
+  ]
+}

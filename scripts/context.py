@@ -90,8 +90,10 @@ def statement(value: dict, sources: dict) -> dict:
         raise ContractError("user interpretation belongs to INFERENCE")
     if epistemic == "FACT" and confidence in {"interpretation", "unknown"}:
         raise ContractError("interpretation / unknown cannot be FACT")
-    if source_type in {"resume", "user_report"} and kind == "claim" and confidence != "self_reported":
-        raise ContractError("resume / narration accomplishment is self_reported")
+    if source_type in {"resume", "user_report"} and kind == "claim":
+        allowed_confidence = {"unknown", "self_reported"} if epistemic == "UNKNOWN" else {"self_reported"}
+        if confidence not in allowed_confidence:
+            raise ContractError("resume / narration accomplishment is self_reported; unresolved claims use unknown or self_reported")
     if kind == "requirement" and modality == "required" and re.search(r"preferred|nice.to.have|优先|加分|优选", excerpt, re.I):
         raise ContractError("preferred clause cannot become hard requirement")
     if kind == "claim" and re.search(r"sole|独立完成|所有代码", content, re.I) and not re.search(r"sole|独立完成|所有代码", excerpt, re.I):

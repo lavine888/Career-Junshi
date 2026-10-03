@@ -1,0 +1,806 @@
+{
+  "schema_version": "2",
+  "current_situation": "AI产品经理二面临近；一面已通过且HR称二面将继续深入聊项目。用户今晚约有5小时，需要决定产品题、行为面与技术补强的准备优先级；二面面试官身份未知。",
+  "mode": "interview",
+  "urgency": {
+    "deadline": "2026-10-04T15:00:00+08:00",
+    "hours_remaining": 19.0,
+    "within_72h": true,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户报告明天下午3点参加AI产品经理二面",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S1",
+      "source_span": "我明天下午 3 点 AI 产品经理二面",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户说明已提供简历和JD",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F2",
+      "source_id": "S1",
+      "source_span": "这是我的简历和 JD。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告一面主要讨论了其AI教育项目",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F3",
+      "source_id": "S1",
+      "source_span": "一面主要聊了我的 AI 教育项目",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告一面被问及Agent控制Minecraft、模型乱说和多人同时上课",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F4",
+      "source_id": "S1",
+      "source_span": "面试官问了挺多技术问题，包括 Agent 怎么控制 Minecraft、模型乱说怎么办、多人同时上课怎么处理。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告今晚大概还有5小时准备时间",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S1",
+      "source_span": "我今晚大概还有 5 个小时。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户希望在产品题、行为面和继续补技术之间确定准备重点",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F9",
+      "source_id": "S1",
+      "source_span": "我应该刷产品题、准备行为面，还是继续补技术？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "简历列出AI原生Minecraft英语学习平台项目",
+      "source": "S2",
+      "source_type": "resume",
+      "id": "F11",
+      "source_id": "S2",
+      "source_span": "Project: AI-native Minecraft English Learning Platform",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "JD岗位为AI Product Manager",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F17",
+      "source_id": "S3",
+      "source_span": "AI Product Manager",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "岗位要求设计AI原生用户体验",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F18",
+      "source_id": "S3",
+      "source_span": "Design AI-native user experiences",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "岗位要求与工程和研究团队合作",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F19",
+      "source_id": "S3",
+      "source_span": "Work with engineering and research teams",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "岗位要求定义评估指标",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F20",
+      "source_id": "S3",
+      "source_span": "Define evaluation metrics",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "岗位要求交付由LLM驱动的产品",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F21",
+      "source_id": "S3",
+      "source_span": "Ship LLM-powered products",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "JD偏好熟悉Agent系统",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F22",
+      "source_id": "S3",
+      "source_span": "Familiar with agent systems",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "JD偏好较强的产品判断力",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F23",
+      "source_id": "S3",
+      "source_span": "Strong product sense",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "JD偏好能够讨论技术取舍",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F24",
+      "source_id": "S3",
+      "source_span": "Able to discuss technical tradeoffs",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "HR消息明确称一面已通过",
+      "source": "S4",
+      "source_type": "hr_chat",
+      "id": "F25",
+      "source_id": "S4",
+      "source_span": "一面通过了",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "HR消息称二面会继续深入讨论项目",
+      "source": "S4",
+      "source_type": "hr_chat",
+      "id": "F26",
+      "source_id": "S4",
+      "source_span": "二面会继续深入聊项目",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F5",
+      "text": "用户感觉自己一面的技术部分回答一般",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我感觉自己技术部分答得一般",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "id": "F6",
+      "text": "用户感觉自己一面的产品部分聊得还可以",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "但产品部分聊得还可以。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "id": "F27",
+      "text": "用户再次表达技术回答一般的感觉",
+      "source": "S5",
+      "source_id": "S5",
+      "source_type": "user_report",
+      "source_span": "我感觉技术答得一般。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "label": "INFERENCE",
+      "text": "强 Claim 的证据与个人贡献缺口可能成为追问风险；不是已知面试题"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "用户不知道二面面试官是谁"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "简历自述为CityU计算机科学硕士，但就读或授予状态未说明"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "简历自述从0到1领导该产品"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "简历自述设计了AI Teacher交互流程"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "简历自述协调了一个小型跨职能团队"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "简历自述集成了LLM、ASR/TTS和Minecraft运行时"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "简历自述构建了多学生协作学习体验"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C1-product-leadership 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C2-interaction-design 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C3-team-coordination 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C4-stack-integration 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C5-multi-student-experience 的强表述与个人贡献仍需补证"
+    }
+  ],
+  "current_goal": "确定未来约5小时的二面准备重点，守住AI教育项目的产品判断与技术追问。",
+  "claims": [
+    {
+      "id": "C1-product-leadership",
+      "claim": "Led the product from 0→1",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "简历写有“Led the product from 0→1”。"
+        }
+      ],
+      "ownership": {
+        "scope": "team",
+        "contribution": "自述承担产品从0到1的领导职责；结合跨职能团队表述，不推定为独立完成，也不推定具体工程代码作者身份。"
+      },
+      "stage": "completed",
+      "risk": [
+        "领导范围、关键个人决策和交付结果未给出可核验细节",
+        "不能据此推定独立完成、生产使用或工程实现作者身份",
+        "missing_evidence:leadership"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：自述承担产品从0到1的领导职责；结合跨职能团队表述，不推定为独立完成，也不推定具体工程代码作者身份。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C2-interaction-design",
+      "claim": "Designed AI Teacher interaction workflow",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "authorship"
+          ],
+          "summary": "简历写有“Designed AI Teacher interaction workflow”。"
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "自述设计AI Teacher交互流程；未说明独立设计、团队共同设计或具体实现边界。"
+      },
+      "stage": "completed",
+      "risk": [
+        "设计过程、取舍、验证方式和结果未提供",
+        "工程实现作者身份及生产状态未知"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：自述设计AI Teacher交互流程；未说明独立设计、团队共同设计或具体实现边界。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C3-team-coordination",
+      "claim": "Coordinated a small cross-functional team",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "简历写有“Coordinated a small cross-functional team”。"
+        }
+      ],
+      "ownership": {
+        "scope": "team",
+        "contribution": "自述协调一个小型跨职能团队；团队构成、管理权限和具体协调成果未说明。"
+      },
+      "stage": "completed",
+      "risk": [
+        "团队规模、成员职责与个人决策权限未核验",
+        "协调团队不等同于独立完成团队产出"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：自述协调一个小型跨职能团队；团队构成、管理权限和具体协调成果未说明。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C4-stack-integration",
+      "claim": "Integrated LLM, ASR/TTS and Minecraft runtime",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "authorship"
+          ],
+          "summary": "简历写有“Integrated LLM, ASR/TTS and Minecraft runtime”。"
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "自述参与或完成LLM、ASR/TTS与Minecraft运行时集成；个人编码、架构决策及团队分工边界未知。"
+      },
+      "stage": "completed",
+      "risk": [
+        "集成架构、个人工程贡献和技术取舍未提供证据",
+        "不能据此推定生产部署、稳定性或真实用户使用"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：自述参与或完成LLM、ASR/TTS与Minecraft运行时集成；个人编码、架构决策及团队分工边界未知。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C5-multi-student-experience",
+      "claim": "Built a multi-student collaborative learning experience",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "authorship"
+          ],
+          "summary": "简历写有“Built a multi-student collaborative learning experience”。"
+        }
+      ],
+      "ownership": {
+        "scope": "team",
+        "contribution": "自述参与构建多学生协作学习体验；结合跨职能团队背景，不推定为独立工程实现。"
+      },
+      "stage": "completed",
+      "risk": [
+        "并发规模、同步机制、课堂使用情况和效果指标未知",
+        "构建体验不证明已进入生产或获得真实世界结果"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：自述参与构建多学生协作学习体验；结合跨职能团队背景，不推定为独立工程实现。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    }
+  ],
+  "highest_risk": "C1-product-leadership",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/01-evidence-and-claims.md",
+    "references/practical/interview.md",
+    "references/practical/project-defense.md"
+  ],
+  "method_plan": [
+    "proof",
+    "position",
+    "interview",
+    "offer"
+  ],
+  "bottleneck": "Evidence",
+  "recommended_move": "先降低 C1-product-leadership 的缺证强表述，按真实阶段与个人贡献练五层防守；今晚不临时开新项目。",
+  "why": [
+    "截止时间附近应优先降低被问穿风险",
+    "真实 ownership 与可解释证据比题目数量有用"
+  ],
+  "actions": [
+    {
+      "kind": "risk_map",
+      "description": "审计 C1-product-leadership：Led the product from 0→1 并生成安全措辞与缺证清单",
+      "execution_mode": "codex",
+      "artifact": "一页面试风险图",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "question_ladder",
+      "description": "针对该项目准备 what / why / alternatives / measurement / failure 五层追问",
+      "execution_mode": "codex",
+      "artifact": "项目防守提纲",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "practice",
+      "description": "练一次 90 秒真实故事，安排休息并参加面试",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "下次面试结束后记录被追问最深的三个问题与原话反馈",
+  "stop_condition": "准备时间到即停；强表述无法补证就降低措辞，今晚不补做大型项目",
+  "pivot_condition": "明确新反馈后调整下一轮准备；单次结果不证明方向或策略因果",
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "interview",
+    "role_family": "ai-product",
+    "stage": "preparation",
+    "situation_type": "claim-defense",
+    "risk_tags": [
+      "architecture",
+      "constraints",
+      "evaluation",
+      "evidence",
+      "ownership",
+      "product-judgment",
+      "production",
+      "timing"
+    ],
+    "situation_tags": [
+      "architecture",
+      "constraints",
+      "evaluation",
+      "evidence",
+      "ownership",
+      "product-judgment",
+      "production",
+      "timing"
+    ]
+  },
+  "recommendation": {
+    "move": "先降低 C1-product-leadership 的缺证强表述，按真实阶段与个人贡献练五层防守；今晚不临时开新项目。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "用户报告明天下午3点参加AI产品经理二面",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户说明已提供简历和JD",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告一面主要讨论了其AI教育项目",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告一面被问及Agent控制Minecraft、模型乱说和多人同时上课",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告今晚大概还有5小时准备时间",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户希望在产品题、行为面和继续补技术之间确定准备重点",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "简历列出AI原生Minecraft英语学习平台项目",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "JD岗位为AI Product Manager",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "岗位要求设计AI原生用户体验",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "岗位要求与工程和研究团队合作",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "岗位要求定义评估指标",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "岗位要求交付由LLM驱动的产品",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "JD偏好熟悉Agent系统",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "JD偏好较强的产品判断力",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "JD偏好能够讨论技术取舍",
+        "source_locator": ""
+      },
+      {
+        "source": "S4",
+        "text": "HR消息明确称一面已通过",
+        "source_locator": ""
+      },
+      {
+        "source": "S4",
+        "text": "HR消息称二面会继续深入讨论项目",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "面试可能更重产品判断或沟通；最强 Claim 不一定会被追问。",
+    "reconsider_if": [
+      "JD、面试安排或可比复盘显示不同考察重点时调整准备优先级。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "AI产品经理二面临近；一面已通过且HR称二面将继续深入聊项目。用户今晚约有5小时，需要决定产品题、行为面与技术补强的准备优先级；二面面试官身份未知。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "用户报告明天下午3点参加AI产品经理二面",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户说明已提供简历和JD",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告一面主要讨论了其AI教育项目",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告一面被问及Agent控制Minecraft、模型乱说和多人同时上课",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告今晚大概还有5小时准备时间",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户希望在产品题、行为面和继续补技术之间确定准备重点",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "简历列出AI原生Minecraft英语学习平台项目",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "JD岗位为AI Product Manager",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "岗位要求设计AI原生用户体验",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "岗位要求与工程和研究团队合作",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "岗位要求定义评估指标",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "岗位要求交付由LLM驱动的产品",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "JD偏好熟悉Agent系统",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "JD偏好较强的产品判断力",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "JD偏好能够讨论技术取舍",
+        "source_locator": ""
+      },
+      {
+        "source": "S4",
+        "text": "HR消息明确称一面已通过",
+        "source_locator": ""
+      },
+      {
+        "source": "S4",
+        "text": "HR消息称二面会继续深入讨论项目",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Evidence",
+    "options_considered": [
+      "先降低 C1-product-leadership 的缺证强表述，按真实阶段与个人贡献练五层防守；今晚不临时开新项目。",
+      "保留一条真实产品取舍故事，同时优先防守证据薄弱处。"
+    ],
+    "chosen": "先降低 C1-product-leadership 的缺证强表述，按真实阶段与个人贡献练五层防守；今晚不临时开新项目。",
+    "rejected_options": [
+      {
+        "option": "保留一条真实产品取舍故事，同时优先防守证据薄弱处。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "截止时间附近应优先降低被问穿风险",
+      "真实 ownership 与可解释证据比题目数量有用"
+    ],
+    "reconsider_if": [
+      "JD、面试安排或可比复盘显示不同考察重点时调整准备优先级。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [
+    {
+      "topic": "architecture",
+      "expectation": "high_attention",
+      "basis": "S1显示一面已追问Agent如何控制Minecraft；S4称二面会继续深入聊项目。"
+    },
+    {
+      "topic": "constraints",
+      "expectation": "high_attention",
+      "basis": "S1显示一面已追问模型乱说和多人同时上课，均涉及系统约束与取舍。"
+    },
+    {
+      "topic": "evaluation",
+      "expectation": "risk_visible",
+      "basis": "S3要求定义评估指标；现有材料未提供该项目的具体指标或评估方法。"
+    },
+    {
+      "topic": "ownership",
+      "expectation": "risk_visible",
+      "basis": "S2同时写有Led、Coordinated和Integrated，但未说明个人产品领导与工程实现的具体边界。"
+    },
+    {
+      "topic": "product-judgment",
+      "expectation": "high_attention",
+      "basis": "S3要求AI原生体验和strong product sense；S4称二面将继续深入聊项目。"
+    }
+  ],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

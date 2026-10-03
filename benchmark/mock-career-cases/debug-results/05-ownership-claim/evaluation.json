@@ -1,0 +1,260 @@
+{
+  "case_id": "05-ownership-claim",
+  "extraction": {
+    "passed": false,
+    "failures": [
+      "次级 situation 字段把多个 claim 的 stage 设为 completed，runtime 又生成“项目阶段：已完成（范围待核实）”，但同一抽取明确承认项目完成程度未提供；这是实质性状态失真。",
+      "Reported activities are excessively marked UNKNOWN rather than FACT of a self-report; completed stages also leave overall project completion ambiguous. Retained as a host extraction weakness, not promoted to verified facts."
+    ],
+    "rating": "PARTIAL"
+  },
+  "decision": {
+    "passed": false,
+    "failures": [
+      "主建议要求“先确认……再改写”，没有利用已提取的贡献边界直接给出可立即采用的安全改写；实际无需等待补证即可改写。",
+      "把缺证项概括为“主导 / production”需降低，既引入原材料没有的 production 表述，也没有区分有依据的项目/产品主导与缺证的技术架构、个人实现。",
+      "supporting_evidence 只引用用户提问和 Git 边界，遗漏 S1/S2 中决定建议内容的产品职责、技术参与及其他贡献者信息，导致结构化推荐的证据链明显弱于完整抽取。",
+      "highest_risk 选择 C1-product-leadership，但材料的核心风险实际是架构设计和主要工程组件的个人作者身份，风险排序失准。",
+      "strongest_counterargument 关于“继续补项目”的说法不是本题主要替代方案或强反论点，未有效比较保留原句、立即安全改写与有证据后升级三种路径。"
+    ],
+    "rating": "PARTIAL"
+  },
+  "host": {
+    "baseline_rating": "PASS",
+    "after_rating": "PARTIAL",
+    "failures": [
+      "Safe rewrite and upgrade gate are present; a usable ownership-defense question ladder is not actually generated in this after response."
+    ],
+    "comparison": "两版都明确反对原句不变，保留产品与项目领导力，区分团队实现和个人技术参与，并给出安全表述、升级条件、追问准备与停止线。after 更直接给出当前采用版本；baseline 的证据边界说明同样完整。相同模型与设置下，不能把措辞差异或单次表现当作补丁改进证据，二者无实质等级差异。"
+  },
+  "must_notice": {
+    "detected": [
+      "项目领导不等于全部工程实现的个人作者身份。",
+      "原句把产品领导、架构设计、组件实现和部署压缩为同一层级的个人 ownership。",
+      "“主导开发”可以保留，但应限定为产品定义、项目推进或交付，而非笼统覆盖全部代码。",
+      "“设计多 Agent 架构”需要具体决策、约束、备选方案和设计记录支持。",
+      "Runtime、Plugin、ASR/TTS、部署等组件的实现归属需要分别核实，不能由项目参与或仓库存在推出。",
+      "Git 仓库存在不能证明个人实现全部主要组件。",
+      "安全改写不能把领导力弱化成泛泛的“参与项目”。",
+      "可用文档尚未实际核验，因此只能作为待检查证据，不能当作已认证证明。"
+    ],
+    "missed": [
+      "结构化抽取和 runtime 决策没有一致保留‘项目完成程度未知’这一边界，反而写入 completed。"
+    ]
+  },
+  "hard_failures": [],
+  "product_failure_labels": [
+    "OVER_CAUTION",
+    "EVIDENCE_AUDITOR_ONLY"
+  ],
+  "recommendation": {
+    "clear": true,
+    "evidence_grounded": true,
+    "actionable": true
+  },
+  "counterfactual": {
+    "present": true,
+    "useful": true
+  },
+  "reconsider_if": {
+    "present": true,
+    "useful": true
+  },
+  "stop_condition": {
+    "present": true,
+    "useful": true
+  },
+  "memory_behavior": {
+    "status": "PASS",
+    "isolated_temporary_stores": true,
+    "temporary_stores_deleted": true,
+    "decision_preserved": true,
+    "real_memory_used": false,
+    "profile_auto_updates": [],
+    "boundary": "Synthetic events do not create recurring real-world risk; no fake tests for cases with no supplied outcome."
+  },
+  "outcome_calibration": {
+    "status": "PASS_BOUNDARIES",
+    "replays": [
+      {
+        "branch": "only",
+        "calibration": [],
+        "causal_status": "UNKNOWN"
+      }
+    ],
+    "limits": "Only architecture/ownership high-attention observations mapped from supplied interview text. Full raw outcome preserved; missing topics remain UNASSESSABLE, not not_asked. Case 5 has no prospective predictions. Explicit not-asked probe is separate."
+  },
+  "overall": "PARTIAL",
+  "evidence": [
+    {
+      "artifact": "after_host",
+      "quote": "不建议原样继续写。问题不在“主导”两个字，而在后半句把你的产品与项目领导责任，写成了个人完成架构设计、各模块实现和部署，面试中很容易被追问穿。",
+      "diagnostic": "主结论清楚，准确识别领导责任与个人工程作者身份被混写的风险。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "主导 AI-native Minecraft 英语教育平台的产品定义与项目交付，负责课程体系、Teacher 行为、核心流程及功能优先级；协调 Runtime、Minecraft Plugin、ASR/TTS 与云端部署的研发、联调和验收，并参与代码评审与集成调试。",
+      "diagnostic": "给出可立即采用的表述，同时保留领导力并限定技术 ownership。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "如果不能不临场编造地回答“哪项架构决策是你做的、为什么、谁实现了什么”，就不要恢复“设计并完成”的说法。",
+      "diagnostic": "提供了具体、可执行的 ownership 防守问题和停止线。"
+    },
+    {
+      "artifact": "baseline_host",
+      "quote": "Git 仓库、文档和项目存在，只能支持项目发生过，不能单独证明你亲自实现了这些模块。",
+      "diagnostic": "正确落实 S4 的证据边界，没有把仓库存在当作个人实现证据。"
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "用户感觉当前表述显得很强。",
+      "diagnostic": "这是对用户原话所表达感受的忠实保留，但被标为 INFERENCE 不准确。"
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "项目完成程度、生产使用、真实用户和效果指标均未提供。",
+      "diagnostic": "抽取自身承认项目阶段和结果未知。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "项目阶段：已完成（范围待核实）",
+      "diagnostic": "与完整抽取中‘项目完成程度未提供’冲突；schema VALID 不能弥补这一语义错误。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+      "diagnostic": "结构化主建议过度审核优先，且笼统降低‘主导’并引入无来源的 production，没有精确区分支持与不支持的 ownership。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "C1-product-leadership",
+      "diagnostic": "被选为 highest_risk，但核心风险更应落在技术架构及组件个人作者身份。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。",
+      "diagnostic": "正确避免未经依据的职业结果预测。"
+    }
+  ],
+  "review_method": "Independent fresh gpt-5.6-sol/high evaluator, same family as generator; operator contract/quotation review; no blind or independent-family claim. Raw grades preserved separately.",
+  "quote_audit": [
+    {
+      "artifact": "after_host",
+      "quote": "不建议原样继续写。问题不在“主导”两个字，而在后半句把你的产品与项目领导责任，写成了个人完成架构设计、各模块实现和部署，面试中很容易被追问穿。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "主导 AI-native Minecraft 英语教育平台的产品定义与项目交付，负责课程体系、Teacher 行为、核心流程及功能优先级；协调 Runtime、Minecraft Plugin、ASR/TTS 与云端部署的研发、联调和验收，并参与代码评审与集成调试。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "如果不能不临场编造地回答“哪项架构决策是你做的、为什么、谁实现了什么”，就不要恢复“设计并完成”的说法。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "baseline_host",
+      "quote": "Git 仓库、文档和项目存在，只能支持项目发生过，不能单独证明你亲自实现了这些模块。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "用户感觉当前表述显得很强。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "项目完成程度、生产使用、真实用户和效果指标均未提供。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "项目阶段：已完成（范围待核实）",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "C1-product-leadership",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    }
+  ],
+  "operator_resolutions": [
+    "Do not penalize feelings as INFERENCE: the existing context contract explicitly requires that. The raw reviewer proposed FACT feelings, which conflicts with the contract.",
+    "Raw reviewer called the response's upgrade evidence checklist follow-up preparation. Operator distinguishes that checklist from the requested actual defense questions, grading host PARTIAL."
+  ],
+  "actual_replay": {
+    "contract": "VALID",
+    "sources_unchanged": true,
+    "cli_decision": "../final/05-ownership-claim/decision.json",
+    "raw_extraction_counts": {
+      "FACT": 2,
+      "INFERENCE": 1,
+      "UNKNOWN": 11
+    }
+  },
+  "memory_replay_evidence": [
+    {
+      "origin": "synthetic",
+      "branch": "only",
+      "decision_preserved": true,
+      "calibration": [],
+      "hard_outcome": "unknown",
+      "observations": [
+        {
+          "topic": "ownership",
+          "attention": "high",
+          "risk_observed": null,
+          "text": "约10分钟持续追问个人贡献；未提供最终招聘结果。",
+          "source": "synthetic:mock-ownership"
+        }
+      ],
+      "learning": "本次观察已记录；仅适用于本次机会，不证明准备策略导致结果。",
+      "feedback": {
+        "recommended_move": "先确认可观察结果和来源，不改写招聘状态。",
+        "learning_scope": "this opportunity only",
+        "causal_status": "UNKNOWN",
+        "profile_auto_updates": [],
+        "review": "REFINE only a supported specific gap; do not PIVOT from one observation."
+      },
+      "similar_pairs": 1,
+      "recurring_risk": {
+        "status": "INSUFFICIENT_OBSERVATIONS",
+        "comparable_outcomes": 0,
+        "risk_tags": []
+      },
+      "memory_changed_preparation": false,
+      "not_asked_controlled_probe": [
+        {
+          "topic": "metrics",
+          "status": "NOT_OBSERVED",
+          "source": "synthetic:guard-probe",
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        }
+      ],
+      "temporary_store_deleted": true,
+      "compatibility": "Decision was a source-aware preparation/follow-up action, not a result forecast"
+    }
+  ]
+}

@@ -1,0 +1,352 @@
+{
+  "case_id": "01-ai-pm-interview",
+  "extraction": {
+    "passed": true,
+    "failures": [],
+    "rating": "PASS"
+  },
+  "decision": {
+    "passed": false,
+    "failures": [
+      "结构化决策把 C1-product-leadership 单独定为最高风险并建议先降低强表述，但材料只显示其贡献边界尚未展开，并不能证明该主张本身最危险或需要弱化；更稳妥的是补齐 ownership 证据并保留领导力。",
+      "三个动作虽数量合适，但项目防守被概括成通用五层追问，没有把一面明确出现的 Minecraft 控制、模型失败、多人课堂以及 JD 的评估闭环落实为独立优先项。",
+      "supporting_evidence 基本罗列全部事实，包含与首选动作关系很弱的条目，证据与结论的对应不够精确。"
+    ],
+    "rating": "PARTIAL"
+  },
+  "host": {
+    "baseline_rating": "PASS",
+    "after_rating": "PARTIAL",
+    "failures": [
+      "after_host 将六段工作分别编号；虽然总计正好五小时且有比例排序，但相对 rubric 要求的 1–3 个高优动作，执行面略碎。",
+      "after_host 断言真正风险是项目主张经不起连续追问；现有材料只能支持贡献边界尚未提供，不能支持主张必然经不起追问，属于轻度提前确定。",
+      "baseline_host 也把未经独立核验的正常简历自述称为最大风险并预测最容易被追问，措辞略强，但随后明确要求划清个人与团队贡献，未否定用户领导力。"
+    ],
+    "comparison": "after_host 更明确地区分了用户主观感受、未知面试官、个人与团队贡献，也给出了更精确的五小时安排；但它把六项任务拆得更碎，并新增了缺乏充分证据的‘真正风险’断言。因此不能据此判定补丁整体优于 baseline；同模型设置下的单次差异也不是改进证据。"
+  },
+  "must_notice": {
+    "detected": [
+      "用户今晚约有5小时",
+      "一面确实深入问过项目技术",
+      "技术答得一般只是用户主观感受",
+      "HR只确认二面继续深入聊项目，面试官身份及面试类型仍未知",
+      "Integrated 不等于用户独立实现全部组件"
+    ],
+    "missed": []
+  },
+  "hard_failures": [],
+  "product_failure_labels": [
+    "PREMATURE_CERTAINTY"
+  ],
+  "recommendation": {
+    "clear": true,
+    "evidence_grounded": true,
+    "actionable": true
+  },
+  "counterfactual": {
+    "present": true,
+    "useful": true
+  },
+  "reconsider_if": {
+    "present": true,
+    "useful": true
+  },
+  "stop_condition": {
+    "present": true,
+    "useful": true
+  },
+  "memory_behavior": {
+    "status": "PASS",
+    "isolated_temporary_stores": true,
+    "temporary_stores_deleted": true,
+    "decision_preserved": true,
+    "real_memory_used": false,
+    "profile_auto_updates": [],
+    "boundary": "Synthetic events do not create recurring real-world risk; no fake tests for cases with no supplied outcome."
+  },
+  "outcome_calibration": {
+    "status": "PASS_BOUNDARIES",
+    "replays": [
+      {
+        "branch": "only",
+        "calibration": [
+          {
+            "topic": "architecture",
+            "status": "SUPPORTED_THIS_CASE",
+            "source": "synthetic:mock-interview",
+            "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+          },
+          {
+            "topic": "constraints",
+            "status": "UNASSESSABLE",
+            "source": null,
+            "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+          },
+          {
+            "topic": "evaluation",
+            "status": "UNASSESSABLE",
+            "source": null,
+            "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+          },
+          {
+            "topic": "ownership",
+            "status": "UNASSESSABLE",
+            "source": "synthetic:mock-interview",
+            "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+          },
+          {
+            "topic": "product-judgment",
+            "status": "UNASSESSABLE",
+            "source": null,
+            "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+          }
+        ],
+        "causal_status": "UNKNOWN"
+      }
+    ],
+    "limits": "Only architecture/ownership high-attention observations mapped from supplied interview text. Full raw outcome preserved; missing topics remain UNASSESSABLE, not not_asked. Case 5 has no prospective predictions. Explicit not-asked probe is separate."
+  },
+  "overall": "PARTIAL",
+  "evidence": [
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "我今晚大概还有 5 个小时。",
+      "diagnostic": "准确保留了可用准备时间。"
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "二面不知道是谁面",
+      "diagnostic": "正确作为 UNKNOWN 保留，没有推断二面一定是技术面。"
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "\"text\": \"JD偏好熟悉Agent系统\", \"source_id\": \"S3\", \"source_type\": \"jd\", \"source_span\": \"Familiar with agent systems\", \"epistemic\": \"FACT\", \"confidence\": \"direct\", \"kind\": \"requirement\", \"modality\": \"preferred\"",
+      "diagnostic": "保留了 preferred，而没有误写成 required。"
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "\"deadline\": \"2026-10-04T15:00:00+08:00\"",
+      "diagnostic": "依据固定场景时钟正确解析了次日15点截止时间。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "先降低 C1-product-leadership 的缺证强表述，按真实阶段与个人贡献练五层防守；今晚不临时开新项目。",
+      "diagnostic": "决策明确且可执行，也避免临时补新项目；但把降低领导力表述置于首位的证据不足。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "真正的风险不是技术知识面不够，而是简历里的项目主张经不起连续追问。",
+      "diagnostic": "把尚未提供佐证升级成‘经不起追问’，超过材料能够支持的强度。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "这些是答题检查项，不代表你已经实现过。没有做过的部分应说“当时没有完成；如果继续做，我会……”。",
+      "diagnostic": "清楚防止把建议架构冒充真实实现，保护了事实边界。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "我负责交互流程、方案取舍和跨团队推进；技术上参与接口定义与联调。具体实现中，我亲自完成的是___，工程同学负责___。",
+      "diagnostic": "提供了可保留产品领导力、同时澄清工程 ownership 的实用表达。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "6. 20 分钟：准备反问和面试开场",
+      "diagnostic": "证明 after_host 将计划拆成六个编号动作，优先级表达不如 1–3 个主动作简洁。"
+    },
+    {
+      "artifact": "baseline_host",
+      "quote": "1. 前 3 小时：项目技术防守",
+      "diagnostic": "baseline 以三个主时间块组织，并把最强相关任务放在首位。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "面试可能更重产品判断或沟通；最强 Claim 不一定会被追问。",
+      "diagnostic": "存在直接挑战首选建议的有用反方情形。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "准备时间到即停；强表述无法补证就降低措辞，今晚不补做大型项目",
+      "diagnostic": "给出了时间和范围两类停止条件。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "明确新反馈后调整下一轮准备；单次结果不证明方向或策略因果",
+      "diagnostic": "明确禁止从单次结果推断策略成功。"
+    }
+  ],
+  "review_method": "Independent fresh gpt-5.6-sol/high evaluator, same family as generator; operator contract/quotation review; no blind or independent-family claim. Raw grades preserved separately.",
+  "quote_audit": [
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "我今晚大概还有 5 个小时。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "二面不知道是谁面",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "\"text\": \"JD偏好熟悉Agent系统\", \"source_id\": \"S3\", \"source_type\": \"jd\", \"source_span\": \"Familiar with agent systems\", \"epistemic\": \"FACT\", \"confidence\": \"direct\", \"kind\": \"requirement\", \"modality\": \"preferred\"",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "\"deadline\": \"2026-10-04T15:00:00+08:00\"",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "先降低 C1-product-leadership 的缺证强表述，按真实阶段与个人贡献练五层防守；今晚不临时开新项目。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "真正的风险不是技术知识面不够，而是简历里的项目主张经不起连续追问。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "这些是答题检查项，不代表你已经实现过。没有做过的部分应说“当时没有完成；如果继续做，我会……”。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "我负责交互流程、方案取舍和跨团队推进；技术上参与接口定义与联调。具体实现中，我亲自完成的是___，工程同学负责___。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "6. 20 分钟：准备反问和面试开场",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "baseline_host",
+      "quote": "1. 前 3 小时：项目技术防守",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "面试可能更重产品判断或沟通；最强 Claim 不一定会被追问。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "准备时间到即停；强表述无法补证就降低措辞，今晚不补做大型项目",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "明确新反馈后调整下一轮准备；单次结果不证明方向或策略因果",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    }
+  ],
+  "operator_resolutions": [
+    "Do not penalize feelings as INFERENCE: the existing context contract explicitly requires that. The raw reviewer proposed FACT feelings, which conflicts with the contract."
+  ],
+  "actual_replay": {
+    "contract": "VALID",
+    "sources_unchanged": true,
+    "cli_decision": "../final/01-ai-pm-interview/decision.json",
+    "raw_extraction_counts": {
+      "FACT": 17,
+      "INFERENCE": 3,
+      "UNKNOWN": 7
+    }
+  },
+  "memory_replay_evidence": [
+    {
+      "origin": "synthetic",
+      "branch": "only",
+      "decision_preserved": true,
+      "calibration": [
+        {
+          "topic": "architecture",
+          "status": "SUPPORTED_THIS_CASE",
+          "source": "synthetic:mock-interview",
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        },
+        {
+          "topic": "constraints",
+          "status": "UNASSESSABLE",
+          "source": null,
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        },
+        {
+          "topic": "evaluation",
+          "status": "UNASSESSABLE",
+          "source": null,
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        },
+        {
+          "topic": "ownership",
+          "status": "UNASSESSABLE",
+          "source": "synthetic:mock-interview",
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        },
+        {
+          "topic": "product-judgment",
+          "status": "UNASSESSABLE",
+          "source": null,
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        }
+      ],
+      "hard_outcome": "passed",
+      "observations": [
+        {
+          "topic": "architecture",
+          "attention": "high",
+          "risk_observed": null,
+          "text": "约15分钟架构追问，重点问ownership及模型失败场景；不等于表现有风险。",
+          "source": "synthetic:mock-interview"
+        },
+        {
+          "topic": "ownership",
+          "attention": "high",
+          "risk_observed": null,
+          "text": "约15分钟架构追问，重点问ownership及模型失败场景；不等于表现有风险。",
+          "source": "synthetic:mock-interview"
+        }
+      ],
+      "learning": "本次观察已记录；仅适用于本次机会，不证明准备策略导致结果。",
+      "feedback": {
+        "recommended_move": "推进下一阶段；保留本次具体追问，不能据通过证明策略因果。",
+        "learning_scope": "this opportunity only",
+        "causal_status": "UNKNOWN",
+        "profile_auto_updates": [],
+        "review": "REFINE only a supported specific gap; do not PIVOT from one observation."
+      },
+      "similar_pairs": 1,
+      "recurring_risk": {
+        "status": "INSUFFICIENT_OBSERVATIONS",
+        "comparable_outcomes": 0,
+        "risk_tags": []
+      },
+      "memory_changed_preparation": false,
+      "not_asked_controlled_probe": [
+        {
+          "topic": "metrics",
+          "status": "NOT_OBSERVED",
+          "source": "synthetic:guard-probe",
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        }
+      ],
+      "temporary_store_deleted": true,
+      "compatibility": "Decision was a source-aware preparation/follow-up action, not a result forecast"
+    }
+  ]
+}

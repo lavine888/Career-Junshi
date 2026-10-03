@@ -1,0 +1,571 @@
+{
+  "schema_version": "2",
+  "current_situation": "在不同时广投所有方向的前提下，为毕业后的 AI 相关求职确定一条清晰的主投主线。",
+  "mode": "positioning",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户自述本科专业为 Mathematics and Applied Mathematics。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S2",
+      "source_span": "bachelor: Mathematics and Applied Mathematics",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述硕士专业为 Computer Science。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F2",
+      "source_id": "S2",
+      "source_span": "master: Computer Science",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述做过 Minecraft AI 教育项目。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F3",
+      "source_id": "S1",
+      "source_span": "我做过 Minecraft AI 教育项目，",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "候选人材料将 Minecraft 项目描述为长期项目。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F4",
+      "source_id": "S2",
+      "source_span": "type: long_term_project",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "候选人材料将 Minecraft 经历的较强方面列为 0_to_1_product、AI_teacher、agent_workflow、curriculum 和 cross_functional_coordination。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F5",
+      "source_id": "S2",
+      "source_span": "strongest:\n    - 0_to_1_product\n    - AI_teacher\n    - agent_workflow\n    - curriculum\n    - cross_functional_coordination",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "候选人材料将 low_level_engineering_ownership 列为 Minecraft 经历中较弱的方面。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F6",
+      "source_id": "S2",
+      "source_span": "weaker:\n    - low_level_engineering_ownership",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述参加过不少黑客松，但没有提供确切数量。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F7",
+      "source_id": "S1",
+      "source_span": "也参加过不少黑客松；",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "候选人材料将黑客松经历的较强方面列为 rapid_build、ambiguity 和 demos。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S2",
+      "source_span": "strongest:\n    - rapid_build\n    - ambiguity\n    - demos",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "候选人材料将 short_duration 列为黑客松经历的弱点。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F9",
+      "source_id": "S2",
+      "source_span": "weakness:\n    - short_duration",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述做过量化 Skill 和 PandaAI 比赛。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F10",
+      "source_id": "S1",
+      "source_span": "还做过量化 Skill 和 PandaAI 比赛。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "候选人材料将 PandaAI 经历的较强方面列为 quant_competition 和 open_source_skills。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F11",
+      "source_id": "S2",
+      "source_span": "strongest:\n    - quant_competition\n    - open_source_skills",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "候选人材料将 career_junshi 的较强方面列为 agent_product、evidence_system 和 open_source_product。",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F12",
+      "source_id": "S2",
+      "source_span": "strongest:\n    - agent_product\n    - evidence_system\n    - open_source_product",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户正在 AI PM、Agent Product、Technical PM 和 Quant 之间选择主投方向。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "P1",
+      "source_id": "S1",
+      "source_span": "我到底应该主投 AI PM、\nAgent Product、\nTechnical PM，\n还是 Quant？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户不希望同时广投所有方向。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "P2",
+      "source_id": "S1",
+      "source_span": "我不想什么都投，",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "用户希望毕业后进入 AI 相关岗位。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "G1",
+      "source_id": "S3",
+      "source_span": "毕业后希望进入 AI 相关岗位。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "用户求职地点优先考虑深圳或香港。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "G2",
+      "source_id": "S3",
+      "source_span": "深圳 / 香港优先。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "用户希望保留未来创业的可能性。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "G3",
+      "source_id": "S3",
+      "source_span": "未来仍希望保留创业可能。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "I1",
+      "text": "用户感觉自己当前的经历方向有些分散。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我现在有点散。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "id": "I2",
+      "text": "用户感觉简历缺少清晰主线。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "感觉这样简历完全没有主线。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "Minecraft 项目中的具体个人所有权范围以及工程实现深度尚不明确。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "专业量化研究深度未知。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "所述目标没有给出实际的求职或准备时间预算。"
+    }
+  ],
+  "current_goal": "在 AI PM、Agent Product、Technical PM 与 Quant 之间确定主投方向，同时优先考虑深圳或香港并保留未来创业可能。",
+  "claims": [],
+  "highest_risk": "关键证据或目标尚未确认",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/01-evidence-and-claims.md",
+    "references/practical/resume.md"
+  ],
+  "method_plan": [
+    "proof",
+    "position",
+    "interview"
+  ],
+  "bottleneck": "Evidence",
+  "recommended_move": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+  "why": [
+    "一句话应经得住五层追问",
+    "措辞升级不能替代证据"
+  ],
+  "actions": [
+    {
+      "kind": "evidence_audit",
+      "description": "核对 Claim、来源、个人贡献与项目阶段",
+      "execution_mode": "codex",
+      "artifact": "Claim 审计卡",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "write_material",
+      "description": "根据已确认贡献产出保守经历表述",
+      "execution_mode": "codex",
+      "artifact": "安全简历句",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "practice",
+      "description": "用五层追问检验表述",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "补证或下一次模拟追问后复核",
+  "stop_condition": "无法确认个人贡献或结果时停止升级措辞",
+  "pivot_condition": "岗位职责变化或新证据出现时重新定位",
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "positioning",
+    "role_family": "unknown",
+    "stage": "unknown",
+    "situation_type": "positioning",
+    "risk_tags": [
+      "evidence"
+    ],
+    "situation_tags": []
+  },
+  "recommendation": {
+    "move": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+    "supporting_evidence": [
+      {
+        "source": "S2",
+        "text": "用户自述本科专业为 Mathematics and Applied Mathematics。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户自述硕士专业为 Computer Science。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述做过 Minecraft AI 教育项目。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 Minecraft 项目描述为长期项目。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 Minecraft 经历的较强方面列为 0_to_1_product、AI_teacher、agent_workflow、curriculum 和 cross_functional_coordination。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 low_level_engineering_ownership 列为 Minecraft 经历中较弱的方面。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述参加过不少黑客松，但没有提供确切数量。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将黑客松经历的较强方面列为 rapid_build、ambiguity 和 demos。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 short_duration 列为黑客松经历的弱点。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述做过量化 Skill 和 PandaAI 比赛。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 PandaAI 经历的较强方面列为 quant_competition 和 open_source_skills。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 career_junshi 的较强方面列为 agent_product、evidence_system 和 open_source_product。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户正在 AI PM、Agent Product、Technical PM 和 Quant 之间选择主投方向。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不希望同时广投所有方向。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户希望毕业后进入 AI 相关岗位。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户求职地点优先考虑深圳或香港。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户希望保留未来创业的可能性。",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "表达问题可能只是没有突出已有贡献，继续补项目未必有用。",
+    "reconsider_if": [
+      "个人贡献、项目阶段或结果来源被纠正时重新审计措辞。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "在不同时广投所有方向的前提下，为毕业后的 AI 相关求职确定一条清晰的主投主线。",
+    "evidence_used": [
+      {
+        "source": "S2",
+        "text": "用户自述本科专业为 Mathematics and Applied Mathematics。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户自述硕士专业为 Computer Science。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述做过 Minecraft AI 教育项目。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 Minecraft 项目描述为长期项目。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 Minecraft 经历的较强方面列为 0_to_1_product、AI_teacher、agent_workflow、curriculum 和 cross_functional_coordination。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 low_level_engineering_ownership 列为 Minecraft 经历中较弱的方面。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述参加过不少黑客松，但没有提供确切数量。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将黑客松经历的较强方面列为 rapid_build、ambiguity 和 demos。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 short_duration 列为黑客松经历的弱点。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述做过量化 Skill 和 PandaAI 比赛。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 PandaAI 经历的较强方面列为 quant_competition 和 open_source_skills。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "候选人材料将 career_junshi 的较强方面列为 agent_product、evidence_system 和 open_source_product。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户正在 AI PM、Agent Product、Technical PM 和 Quant 之间选择主投方向。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不希望同时广投所有方向。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户希望毕业后进入 AI 相关岗位。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户求职地点优先考虑深圳或香港。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户希望保留未来创业的可能性。",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Evidence",
+    "options_considered": [
+      "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+      "先核对个人决策与证据，再只改写一条经历。"
+    ],
+    "chosen": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+    "rejected_options": [
+      {
+        "option": "先核对个人决策与证据，再只改写一条经历。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "一句话应经得住五层追问",
+      "措辞升级不能替代证据"
+    ],
+    "reconsider_if": [
+      "个人贡献、项目阶段或结果来源被纠正时重新审计措辞。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "case_id": "01-ai-pm-interview",
+  "origin": "synthetic",
+  "outcomes": [
+    {
+      "branch": "only",
+      "origin": "synthetic",
+      "text": "二面结束。\n\n实际追问了大约 15 分钟 Minecraft architecture，\n重点问 ownership 和模型失败场景。\n\n产品 case 只问了一题。\n\n最后进入下一轮。"
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "schema_version": "2",
+  "current_situation": "用户报告终面于 2026-10-02 17:30 完成，截至 2026-10-08 10:00 尚未收到 HR 的进一步联系；HR 未承诺反馈日期，用人单位工作日与节假日历未知。",
+  "mode": "recruiting",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户报告上周五终面结束，到本周四 HR 一直没有联系",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S1",
+      "source_span": "上周五终面结束，现在已经周四了，HR 一直没联系。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告终面面试官表示后续由 HR 沟通",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F2",
+      "source_id": "S1",
+      "source_span": "终面结束的时候面试官说：\n“后续让 HR 跟你沟通。”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户希望决定现在是否联系 HR",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F4",
+      "source_id": "S1",
+      "source_span": "我要不要现在问 HR？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户提供的时间线称终面于周五 17:30 完成",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F6",
+      "source_id": "S2",
+      "source_span": "Friday 17:30\nFinal interview completed",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告面试官结束终面时称后续让 HR 沟通",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F7",
+      "source_id": "S2",
+      "source_span": "Interviewer:\n“好的，今天就先到这里，后续让 HR 跟你沟通。”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户提供的时间线称截至周四 10:00 尚无进一步消息",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S2",
+      "source_span": "Thursday 10:00\nNo further message yet",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告终面前 HR 通常当天或第二天回复",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F9",
+      "source_id": "S3",
+      "source_span": "HR 在终面前回复速度通常是当天或第二天。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告 HR 没有承诺具体反馈日期",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F10",
+      "source_id": "S3",
+      "source_span": "HR 没有承诺具体反馈日期。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户此前从未跟进此次流程",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F11",
+      "source_id": "S3",
+      "source_span": "用户从未 follow up。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F3",
+      "text": "用户感觉这次流程可能已经没有希望",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我感觉应该是凉了。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown",
+      "label": "INFERENCE"
+    },
+    {
+      "id": "F5",
+      "text": "用户担心现在联系 HR 会显得特别着急",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "会不会显得特别急？",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown",
+      "label": "INFERENCE"
+    },
+    {
+      "label": "INFERENCE",
+      "text": "可能是排期、审批、比较或优先级变化；沉默不足以确定结果"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "最终评价与候选人排序"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "招聘名额与内部审批状态"
+    }
+  ],
+  "current_goal": "判断现在是否应首次联系 HR，以及此时跟进是否会显得过于着急。",
+  "claims": [],
+  "highest_risk": "关键证据或目标尚未确认",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/03-recruiting-process.md",
+    "references/practical/follow-up.md"
+  ],
+  "method_plan": [
+    "offer",
+    "proof",
+    "interview"
+  ],
+  "bottleneck": "Timing",
+  "recommended_move": "停止联系该招聘者，继续其他机会。",
+  "why": [
+    "以可见流程与明确反馈为依据，不猜招聘者内心",
+    "停止高频追问，保留其他机会"
+  ],
+  "actions": [
+    {
+      "kind": "pipeline_review",
+      "description": "记录对方明确的联系边界，更新机会投入",
+      "execution_mode": "codex",
+      "artifact": "机会记录",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "apply",
+      "description": "继续其他岗位投递",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "按实际承诺日期；未约定时约 3 个工作日（可调整的经验默认，非承诺）",
+  "stop_condition": "明确拒绝 / 要求不联系时停止；一次跟进后再约 3 个工作日无回复，降低投入",
+  "pivot_condition": "真实截止时间变化即调整；同一缺口在 5–10 个可比机会反复出现，再 REFINE / PIVOT",
+  "application_status": "waiting",
+  "draft": null,
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "recruiting",
+    "role_family": "unknown",
+    "stage": "post-interview",
+    "situation_type": "follow-up",
+    "risk_tags": [
+      "timing",
+      "feedback"
+    ],
+    "situation_tags": [
+      "timing",
+      "feedback"
+    ]
+  },
+  "recommendation": {
+    "move": "停止联系该招聘者，继续其他机会。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "用户报告上周五终面结束，到本周四 HR 一直没有联系",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告终面面试官表示后续由 HR 沟通",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户希望决定现在是否联系 HR",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户提供的时间线称终面于周五 17:30 完成",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户报告面试官结束终面时称后续让 HR 沟通",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户提供的时间线称截至周四 10:00 尚无进一步消息",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告终面前 HR 通常当天或第二天回复",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告 HR 没有承诺具体反馈日期",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户此前从未跟进此次流程",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "假期、批量招聘、排期或审批也能解释延迟；无法从沉默辨认原因。",
+    "reconsider_if": [
+      "收到明确结果、联系边界、承诺日期变化或竞争 Offer 截止时间时立即重评。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "用户报告终面于 2026-10-02 17:30 完成，截至 2026-10-08 10:00 尚未收到 HR 的进一步联系；HR 未承诺反馈日期，用人单位工作日与节假日历未知。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "用户报告上周五终面结束，到本周四 HR 一直没有联系",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告终面面试官表示后续由 HR 沟通",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户希望决定现在是否联系 HR",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户提供的时间线称终面于周五 17:30 完成",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户报告面试官结束终面时称后续让 HR 沟通",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户提供的时间线称截至周四 10:00 尚无进一步消息",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告终面前 HR 通常当天或第二天回复",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告 HR 没有承诺具体反馈日期",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户此前从未跟进此次流程",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Timing",
+    "options_considered": [
+      "停止联系该招聘者，继续其他机会。",
+      "继续其他机会，按承诺日期和实际工作日只跟进一次。"
+    ],
+    "chosen": "停止联系该招聘者，继续其他机会。",
+    "rejected_options": [
+      {
+        "option": "继续其他机会，按承诺日期和实际工作日只跟进一次。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "以可见流程与明确反馈为依据，不猜招聘者内心",
+      "停止高频追问，保留其他机会"
+    ],
+    "reconsider_if": [
+      "收到明确结果、联系边界、承诺日期变化或竞争 Offer 截止时间时立即重评。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

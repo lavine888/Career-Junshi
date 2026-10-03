@@ -1,0 +1,45 @@
+{
+  "case_id": "03-offer-choice",
+  "origin": "synthetic",
+  "request": "现在手上两个 Offer，我挺纠结。\n\nA 是深圳某大厂 AI 产品经理，\n月薪 28k × 16，\n团队成熟，\n做 AI 搜索产品，\n但我进去应该负责比较细的一个模块。\n\nB 是香港一家 25 人的 AI startup，\n月薪 HKD 35k × 12，\nTitle 是 AI Product Engineer。\n\nFounder 说进去以后从产品到 Agent workflow 都可以做，\n甚至直接跟客户。\n\n我以后可能还是想创业，\n但大厂品牌也挺重要。\n\n你觉得选哪个？",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Raw user input",
+      "text": "现在手上两个 Offer，我挺纠结。\n\nA 是深圳某大厂 AI 产品经理，\n月薪 28k × 16，\n团队成熟，\n做 AI 搜索产品，\n但我进去应该负责比较细的一个模块。\n\nB 是香港一家 25 人的 AI startup，\n月薪 HKD 35k × 12，\nTitle 是 AI Product Engineer。\n\nFounder 说进去以后从产品到 Agent workflow 都可以做，\n甚至直接跟客户。\n\n我以后可能还是想创业，\n但大厂品牌也挺重要。\n\n你觉得选哪个？"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "user_report",
+      "label": "User goals",
+      "text": "entrepreneurship: high\nai_native_product: high\nbrand: medium\ncompensation: medium\nlocation: Shenzhen_or_HongKong\nstability: medium\ntechnical_growth: high"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "offer",
+      "label": "Offer A",
+      "text": "company_type: large_tech\nlocation: Shenzhen\nrole: AI Product Manager\n\ncompensation:\n  monthly: RMB 28000\n  months: 16\n\nlearning: 3.5\nownership: 2.5\nmanager_quality: unknown\ntechnical_depth: 3\nbrand_signal: 5\nstability: 4"
+    },
+    {
+      "source_id": "S4",
+      "source_type": "offer",
+      "label": "Offer B",
+      "text": "company_type: startup\nlocation: Hong_Kong\nrole: AI Product Engineer\n\ncompensation:\n  monthly: HKD 35000\n  months: 12\n\nlearning: 4.5\nownership: 4.5\nmanager_quality: unknown\ntechnical_depth: 4\nbrand_signal: 2.5\nstability: 2"
+    },
+    {
+      "source_id": "S5",
+      "source_type": "user_report",
+      "label": "Founder statement",
+      "text": "“你来了什么都能做，客户也可以直接见。”"
+    },
+    {
+      "source_id": "S6",
+      "source_type": "user_report",
+      "label": "Missing",
+      "text": "written role scope\nrunway\nfinancing state\nreal customer volume\nmanager quality\nworkload"
+    }
+  ],
+  "as_of": "2026-10-03T20:00:00+08:00",
+  "clock_boundary": "Fixed synthetic scenario clock; no actual appointment or recruiting outcome."
+}

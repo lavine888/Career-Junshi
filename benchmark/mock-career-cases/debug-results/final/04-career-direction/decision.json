@@ -1,0 +1,529 @@
+{
+  "schema_version": "2",
+  "current_situation": "用户的经历横跨 AI 产品、Agent、黑客松和量化，目前需要在四个方向中收束主投方向；具体截止时间和准备时间预算均未提供。",
+  "mode": "job",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户正在比较 AI PM、Agent Product、Technical PM 和 Quant 四个主投方向。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F7",
+      "source_id": "S1",
+      "source_span": "我到底应该主投 AI PM、\nAgent Product、\nTechnical PM，\n还是 Quant？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户不希望同时投递所有方向。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S1",
+      "source_span": "我不想什么都投",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "用户希望毕业后进入 AI 相关岗位。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F20",
+      "source_id": "S3",
+      "source_span": "毕业后希望进入 AI 相关岗位。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "用户优先考虑深圳或香港。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F21",
+      "source_id": "S3",
+      "source_span": "深圳 / 香港优先。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "用户希望未来保留创业可能。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F22",
+      "source_id": "S3",
+      "source_span": "未来仍希望保留创业可能。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F1",
+      "text": "用户感觉自己当前的职业方向有些分散。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我现在有点散。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "id": "F9",
+      "text": "用户感觉当前简历缺少清晰主线。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "感觉这样简历完全没有主线。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述做过 Minecraft AI 教育项目。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述在该项目中负责很多产品和 Agent 相关工作。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述参加过不少黑客松。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述做过量化 Skill 和 PandaAI 比赛。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述具有数学本科和计算机科学硕士背景。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述本科专业为 Mathematics and Applied Mathematics。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述硕士专业为 Computer Science。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "Minecraft 经历被自述为长期项目。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "Minecraft 经历的自述优势包括 0_to_1_product、AI_teacher、agent_workflow、curriculum 和 cross_functional_coordination。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "Minecraft 经历中的低层工程 ownership 被自述为较弱。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "黑客松经历的自述优势包括 rapid_build、ambiguity 和 demos。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "黑客松经历的自述弱点是持续时间短。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "PandaAI 经历的自述优势包括 quant_competition 和 open_source_skills。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户的专业量化研究深度未知。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "Career Junshi 经历的自述优势包括 agent_product、evidence_system 和 open_source_product。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C1-education 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C2-minecraft-product-agent 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C3-hackathons 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C4-pandaai-quant 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C5-career-junshi 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "目标岗位的实际职责与新鲜 JD"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "候选人的可防守证据与关键约束"
+    }
+  ],
+  "current_goal": "在不同时投递所有方向的前提下，从 AI PM、Agent Product、Technical PM 与 Quant 中确定主投方向，并形成清晰的简历主线，同时兼顾深圳或香港优先及未来创业可能。",
+  "claims": [
+    {
+      "id": "C1-education",
+      "claim": "具有 Mathematics and Applied Mathematics 本科与 Computer Science 硕士背景。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户自述“我数学本科、CS 硕士”。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "结构化自述列出本科 Mathematics and Applied Mathematics、硕士 Computer Science。"
+        }
+      ],
+      "ownership": {
+        "scope": "sole",
+        "contribution": "学历背景被用户陈述为其本人经历；未提供证书或学位核验材料。"
+      },
+      "stage": "completed",
+      "risk": [
+        "学历信息尚无独立核验材料。",
+        "missing_evidence:sole_ownership"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：学历背景被用户陈述为其本人经历；未提供证书或学位核验材料。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C2-minecraft-product-agent",
+      "claim": "在长期 Minecraft AI 教育项目中具有 0 到 1 产品、AI teacher、Agent workflow、课程和跨职能协调相关经历；低层工程 ownership 较弱。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户自述做过 Minecraft AI 教育项目并负责很多产品和 Agent 相关工作。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "结构化自述列出 0_to_1_product、AI_teacher、agent_workflow、curriculum、cross_functional_coordination，并标注 low_level_engineering_ownership 较弱。"
+        }
+      ],
+      "ownership": {
+        "scope": "team",
+        "contribution": "用户自述负责很多产品和 Agent 相关工作；未说明个人代码作者范围、独立决策边界或结果指标，并明确标注低层工程 ownership 较弱。"
+      },
+      "stage": "completed",
+      "risk": [
+        "产品领导范围与个人工程作者范围尚未拆分。",
+        "没有提供生产使用、用户规模、成果指标或代码核验材料。"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：用户自述负责很多产品和 Agent 相关工作；未说明个人代码作者范围、独立决策边界或结果指标，并明确标注低层工程 ownership 较弱。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C3-hackathons",
+      "claim": "参加过不少黑客松，相关自述优势是快速构建、处理模糊问题和制作 Demo，弱点是项目持续时间短。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户自述参加过不少黑客松。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "结构化自述列出 rapid_build、ambiguity、demos，并标注 short_duration 为弱点。"
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "用户未说明具体黑客松、团队规模、个人贡献边界、获奖情况或后续落地。"
+      },
+      "stage": "demo",
+      "risk": [
+        "数量、项目名称、个人贡献和结果均未提供。",
+        "参赛不能据此表述为获奖或生产落地。"
+      ],
+      "safe_wording": "项目阶段：原型；已陈述的个人贡献：用户未说明具体黑客松、团队规模、个人贡献边界、获奖情况或后续落地。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C4-pandaai-quant",
+      "claim": "做过量化 Skill 并参加 PandaAI 比赛，相关自述优势是量化竞赛和开源 Skills；专业量化研究深度未知。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户自述做过量化 Skill 和 PandaAI 比赛。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "结构化自述列出 quant_competition、open_source_skills，并将 professional_quant_research_depth 标为 unknown。"
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "用户未说明量化 Skill 的具体个人作者范围、比赛结果、研究方法或真实资金使用情况。"
+      },
+      "stage": "completed",
+      "risk": [
+        "专业量化研究深度未知。",
+        "没有排名、回测质量、实盘、收益指标或作者范围证据。"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：用户未说明量化 Skill 的具体个人作者范围、比赛结果、研究方法或真实资金使用情况。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C5-career-junshi",
+      "claim": "Career Junshi 相关经历的自述优势是 Agent Product、证据系统和开源产品。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "结构化自述列出 agent_product、evidence_system 和 open_source_product。"
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "材料只列出优势方向，未说明用户个人领导范围、工程作者范围、产品阶段或结果。"
+      },
+      "stage": "completed",
+      "risk": [
+        "缺少项目范围、个人贡献、使用情况和结果证据。"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：材料只列出优势方向，未说明用户个人领导范围、工程作者范围、产品阶段或结果。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    }
+  ],
+  "highest_risk": "C1-education",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/02-career-decision.md",
+    "references/practical/jd-analysis.md"
+  ],
+  "method_plan": [
+    "radar",
+    "wedge",
+    "proof",
+    "offer"
+  ],
+  "bottleneck": "Direction",
+  "recommended_move": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。",
+  "why": [
+    "已有证据、职责匹配与机会成本共同决定下一步",
+    "一次反馈不等于市场结论"
+  ],
+  "actions": [
+    {
+      "kind": "evidence_audit",
+      "description": "整理三个真实项目和个人贡献",
+      "execution_mode": "codex",
+      "artifact": "证据卡",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "jd_map",
+      "description": "比较两个岗位假设与五份新鲜 JD，标出 gap 与补齐成本",
+      "execution_mode": "codex",
+      "artifact": "岗位假设对照表",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "apply",
+      "description": "选择一小批岗位验证反馈",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "一周或下 5 个可比机会",
+  "stop_condition": "真实硬约束不满足或补证成本超过当前预算时降低投入",
+  "pivot_condition": "5–10 个同类机会重复同一缺口时 REFINE / PIVOT；一条反馈不作普遍结论",
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "job",
+    "role_family": "unknown",
+    "stage": "exploration",
+    "situation_type": "direction-choice",
+    "risk_tags": [
+      "direction",
+      "evidence",
+      "ownership"
+    ],
+    "situation_tags": [
+      "direction",
+      "evidence",
+      "ownership"
+    ]
+  },
+  "recommendation": {
+    "move": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "用户正在比较 AI PM、Agent Product、Technical PM 和 Quant 四个主投方向。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不希望同时投递所有方向。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户希望毕业后进入 AI 相关岗位。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户优先考虑深圳或香港。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户希望未来保留创业可能。",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "缺口可能来自岗位职责差异，现有项目也可能已能支持更窄的岗位。",
+    "reconsider_if": [
+      "新鲜 JD 显示该项只是优先项，或补证成本、硬约束与可比反馈改变时重新判断。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "用户的经历横跨 AI 产品、Agent、黑客松和量化，目前需要在四个方向中收束主投方向；具体截止时间和准备时间预算均未提供。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "用户正在比较 AI PM、Agent Product、Technical PM 和 Quant 四个主投方向。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不希望同时投递所有方向。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户希望毕业后进入 AI 相关岗位。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户优先考虑深圳或香港。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户希望未来保留创业可能。",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Direction",
+    "options_considered": [
+      "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。",
+      "先主投已有证据更强的相邻岗位，保留小规模目标岗位试验。"
+    ],
+    "chosen": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。",
+    "rejected_options": [
+      {
+        "option": "先主投已有证据更强的相邻岗位，保留小规模目标岗位试验。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "已有证据、职责匹配与机会成本共同决定下一步",
+      "一次反馈不等于市场结论"
+    ],
+    "reconsider_if": [
+      "新鲜 JD 显示该项只是优先项，或补证成本、硬约束与可比反馈改变时重新判断。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

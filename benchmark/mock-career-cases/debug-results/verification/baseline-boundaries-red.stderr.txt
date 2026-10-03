@@ -1,0 +1,55 @@
+test_compound_technical_creation_needs_distinct_authorship (tests.regression.test_mock_boundaries.MockBoundaryTests.test_compound_technical_creation_needs_distinct_authorship) ... 
+  test_compound_technical_creation_needs_distinct_authorship (tests.regression.test_mock_boundaries.MockBoundaryTests.test_compound_technical_creation_needs_distinct_authorship) (words='主导项目并完成客户端插件实现和部署脚本') ... FAIL
+  test_compound_technical_creation_needs_distinct_authorship (tests.regression.test_mock_boundaries.MockBoundaryTests.test_compound_technical_creation_needs_distinct_authorship) (words='主导交付，设计系统架构并实现数据模块') ... FAIL
+test_coordination_preserves_supported_leadership_without_code_credit (tests.regression.test_mock_boundaries.MockBoundaryTests.test_coordination_preserves_supported_leadership_without_code_credit) ... ok
+test_only_the_absent_document_is_requested (tests.regression.test_mock_boundaries.MockBoundaryTests.test_only_the_absent_document_is_requested) ... ok
+test_scoped_authorship_receipt_allows_technical_clause (tests.regression.test_mock_boundaries.MockBoundaryTests.test_scoped_authorship_receipt_allows_technical_clause) ... ok
+test_supplied_interview_documents_without_claims_are_not_missing (tests.regression.test_mock_boundaries.MockBoundaryTests.test_supplied_interview_documents_without_claims_are_not_missing) ... FAIL
+test_unknown_personal_claim_is_not_an_accomplishment_assertion (tests.regression.test_mock_boundaries.MockBoundaryTests.test_unknown_personal_claim_is_not_an_accomplishment_assertion) ... ERROR
+test_unresolved_claim_cannot_use_direct_confidence (tests.regression.test_mock_boundaries.MockBoundaryTests.test_unresolved_claim_cannot_use_direct_confidence) ... ok
+
+======================================================================
+ERROR: test_unknown_personal_claim_is_not_an_accomplishment_assertion (tests.regression.test_mock_boundaries.MockBoundaryTests.test_unknown_personal_claim_is_not_an_accomplishment_assertion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temporary-eval-workspace>/stage/tests/regression/test_mock_boundaries.py", line 41, in test_unknown_personal_claim_is_not_an_accomplishment_assertion
+    result = extract(packet)
+             ^^^^^^^^^^^^^^^
+  File "<baseline-repository>/scripts/context.py", line 129, in extract
+    statements = [statement(s, sources) for s in items(p["statements"], "statements", 30)]
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<baseline-repository>/scripts/context.py", line 129, in <listcomp>
+    statements = [statement(s, sources) for s in items(p["statements"], "statements", 30)]
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "<baseline-repository>/scripts/context.py", line 94, in statement
+    raise ContractError("resume / narration accomplishment is self_reported")
+scripts.models.ContractError: resume / narration accomplishment is self_reported
+
+======================================================================
+FAIL: test_compound_technical_creation_needs_distinct_authorship (tests.regression.test_mock_boundaries.MockBoundaryTests.test_compound_technical_creation_needs_distinct_authorship) (words='主导项目并完成客户端插件实现和部署脚本')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temporary-eval-workspace>/stage/tests/regression/test_mock_boundaries.py", line 22, in test_compound_technical_creation_needs_distinct_authorship
+    self.assertIn("missing_evidence:authorship", result["risk"])
+AssertionError: 'missing_evidence:authorship' not found in []
+
+======================================================================
+FAIL: test_compound_technical_creation_needs_distinct_authorship (tests.regression.test_mock_boundaries.MockBoundaryTests.test_compound_technical_creation_needs_distinct_authorship) (words='主导交付，设计系统架构并实现数据模块')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temporary-eval-workspace>/stage/tests/regression/test_mock_boundaries.py", line 22, in test_compound_technical_creation_needs_distinct_authorship
+    self.assertIn("missing_evidence:authorship", result["risk"])
+AssertionError: 'missing_evidence:authorship' not found in []
+
+======================================================================
+FAIL: test_supplied_interview_documents_without_claims_are_not_missing (tests.regression.test_mock_boundaries.MockBoundaryTests.test_supplied_interview_documents_without_claims_are_not_missing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<temporary-eval-workspace>/stage/tests/regression/test_mock_boundaries.py", line 61, in test_supplied_interview_documents_without_claims_are_not_missing
+    self.assertNotIn("资料尚未给齐", result["recommended_move"])
+AssertionError: '资料尚未给齐' unexpectedly found in '本轮准备先守住 简历上最强、证据最薄的项目表述（资料尚未给齐），再练架构取舍与失败。'
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.047s
+
+FAILED (failures=3, errors=1)

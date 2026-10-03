@@ -22,6 +22,12 @@ review authority and alternative choices. If unclear, write “参与团队项�
 An automated text trigger is only a prompt to audit; manually inspect ambiguous
 or unsupported technologies, metrics, revenue and titles too.
 
+Split compound statements: product leadership does not verify a neighboring claim
+of architecture design, implementation or deployment authorship. Keep reported
+product decisions and coordination while narrowing unreceipted engineering credit.
+The local helper recognizes limited creation clauses; coordination is not personal
+implementation. It cannot resolve every paraphrase, attribution or mixed clause.
+
 Normalize before writing or storing: `python scripts/junshi.py audit --input file.json`.
 The helper consumes a structured operator record; it does not fetch evidence or
 authenticate a fabricated verification receipt. Evidence verification remains a

@@ -1,0 +1,27 @@
+{
+  "case_id": "02-hr-silence",
+  "origin": "synthetic",
+  "request": "上周五终面结束，现在已经周四了，HR 一直没联系。\n\n终面结束的时候面试官说：\n“后续让 HR 跟你沟通。”\n\n我感觉应该是凉了。\n\n我要不要现在问 HR？\n会不会显得特别急？",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Raw user input",
+      "text": "上周五终面结束，现在已经周四了，HR 一直没联系。\n\n终面结束的时候面试官说：\n“后续让 HR 跟你沟通。”\n\n我感觉应该是凉了。\n\n我要不要现在问 HR？\n会不会显得特别急？"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "user_report",
+      "label": "Timeline",
+      "text": "Friday 17:30\nFinal interview completed\n\nInterviewer:\n“好的，今天就先到这里，后续让 HR 跟你沟通。”\n\nThursday 10:00\nNo further message yet"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "label": "Additional context",
+      "text": "HR 在终面前回复速度通常是当天或第二天。\n\nHR 没有承诺具体反馈日期。\n\n用户从未 follow up。"
+    }
+  ],
+  "as_of": "2026-10-08T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic scenario clock; not an actual appointment. Case 2 is a Thursday; employer/holiday calendar unknown."
+}

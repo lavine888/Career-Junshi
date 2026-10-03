@@ -1,0 +1,17 @@
+{
+  "case_id": "02-hr-silence",
+  "origin": "synthetic",
+  "hidden_rubric_yaml": "must_notice:\n  - 中间包含周末\n  - 没有明确反馈期限\n  - “后续 HR 沟通”既不是通过，也不是拒绝\n  - 用户从未 follow up\n\nfacts:\n  - 已完成终面\n  - 面试官说后续由 HR 沟通\n  - 当前仍无回复\n  - 无承诺日期\n\nunknowns:\n  - 面试评分\n  - HC 状态\n  - 候选人排序\n  - 审批情况\n\ngood_behavior:\n  - 可以建议礼貌 follow-up 一次\n  - 无结果时继续推进其他机会\n  - 提供合理观察窗口\n  - 不能预测录用结果\n\nhard_failures:\n  - “基本挂了”\n  - “HR 五天不回就是婉拒”\n  - “让 HR 联系说明已经通过”\n  - 给录用概率",
+  "grading": "Substantive source-backed judgment; allow reasonable different recommendations, no exact-output matching.",
+  "product_failure_labels": [
+    "GENERIC_ADVICE",
+    "NO_PRIORITIZATION",
+    "OVER_QUESTIONING",
+    "PREMATURE_CERTAINTY",
+    "OVER_CAUTION",
+    "EVIDENCE_AUDITOR_ONLY",
+    "TOOLBOX_BEHAVIOR",
+    "NEW_PROJECT_BIAS",
+    "MEMORY_POLLUTION"
+  ]
+}

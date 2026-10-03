@@ -1,0 +1,275 @@
+{
+  "case_id": "02-hr-silence",
+  "extraction": {
+    "passed": true,
+    "failures": [],
+    "rating": "PASS"
+  },
+  "decision": {
+    "passed": false,
+    "failures": [
+      "核心判断正确且有来源支撑，但结构化 action 只要求核对日期、工作日和承诺时间，没有把‘礼貌跟进一次’落实为直接行动或草稿，与 recommended_move 脱节。",
+      "unknowns 将已确认不存在的承诺日期与真正未知的工作日历、外部截止时间混列为未知。",
+      "highest_risk 声称目标尚未确认，但 current_goal 已明确；options、method_plan 和 5–10 个可比机会的 pivot 条件也偏模板化，与当前一次跟进决策关系较弱。"
+    ],
+    "rating": "PARTIAL"
+  },
+  "host": {
+    "baseline_rating": "PASS",
+    "after_rating": "PASS",
+    "failures": [],
+    "comparison": "两版都给出来源一致、不过度预测且可执行的建议。after 更直接地回答可以现在问，并保留工作日历未知这一边界；baseline 对假期条件和用户从未跟进的事实表达得更显式。两次运行语义质量相当，不能把措辞差异或单次输出方差作为补丁改善证据。"
+  },
+  "must_notice": {
+    "detected": [
+      "时间区间包含周末，判断采用工作日而非自然日，并承认节假日历未知。",
+      "HR 没有承诺具体反馈日期。",
+      "‘后续让 HR 跟你沟通’被识别为中性流程表述，既非通过也非拒绝。",
+      "提取结果保留了用户从未 follow up；主机建议只发送一次。"
+    ],
+    "missed": []
+  },
+  "hard_failures": [],
+  "product_failure_labels": [
+    "GENERIC_ADVICE"
+  ],
+  "recommendation": {
+    "clear": true,
+    "evidence_grounded": true,
+    "actionable": true
+  },
+  "counterfactual": {
+    "present": true,
+    "useful": true
+  },
+  "reconsider_if": {
+    "present": true,
+    "useful": true
+  },
+  "stop_condition": {
+    "present": true,
+    "useful": true
+  },
+  "memory_behavior": {
+    "status": "PASS",
+    "isolated_temporary_stores": true,
+    "temporary_stores_deleted": true,
+    "decision_preserved": true,
+    "real_memory_used": false,
+    "profile_auto_updates": [],
+    "boundary": "Synthetic events do not create recurring real-world risk; no fake tests for cases with no supplied outcome."
+  },
+  "outcome_calibration": {
+    "status": "PASS_BOUNDARIES",
+    "replays": [
+      {
+        "branch": "A",
+        "calibration": [],
+        "causal_status": "UNKNOWN"
+      },
+      {
+        "branch": "B",
+        "calibration": [],
+        "causal_status": "UNKNOWN"
+      }
+    ],
+    "limits": "Only architecture/ownership high-attention observations mapped from supplied interview text. Full raw outcome preserved; missing topics remain UNASSESSABLE, not not_asked. Case 5 has no prospective predictions. Explicit not-asked probe is separate."
+  },
+  "overall": "PARTIAL",
+  "evidence": [
+    {
+      "artifact": "after_host",
+      "quote": "可以现在问，不会显得特别急。发一次简短、礼貌的进度确认即可。",
+      "diagnostic": "主建议清楚、直接且保留用户执行权。"
+    },
+    {
+      "artifact": "after_host",
+      "quote": "按通常周一至周五且没有节假日计算，终面后已经过了约 3 个完整工作日；不过本案例的实际工作日安排未知。",
+      "diagnostic": "正确处理周末和未知节假日历，没有把自然日直接当工作日。"
+    },
+    {
+      "artifact": "baseline_host",
+      "quote": "面试官说“后续让 HR 跟你沟通”只是流程性表述，既不能证明通过，也不能证明拒绝。",
+      "diagnostic": "准确校准该招聘信号，没有提前确定结果。"
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "HR 没有承诺具体反馈日期。",
+      "diagnostic": "关键限制条件被忠实保留为 FACT。"
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "用户从未 follow up。",
+      "diagnostic": "首次跟进这一重要背景被提取并保留。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "日历天 / 工作日、承诺日期及真实截止时间",
+      "diagnostic": "该 UNKNOWN 项混入了已知无承诺日期的内容，语义边界不够精确。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "关键证据或目标尚未确认",
+      "diagnostic": "目标其实已经明确，这一最高风险描述过于模板化。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "明确拒绝 / 要求不联系时停止；一次跟进后再约 3 个工作日无回复，降低投入",
+      "diagnostic": "停止线和降级条件明确、可逆且实用。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "假期、批量招聘、排期或审批也能解释延迟；无法从沉默辨认原因。",
+      "diagnostic": "提供了有用的反向解释，避免把沉默推断为拒绝。"
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "同一缺口在 5–10 个可比机会反复出现，再 REFINE / PIVOT",
+      "diagnostic": "这是与当前一次 HR 跟进决策关系较弱的通用流程模板，降低了结构化决策的聚焦度。"
+    }
+  ],
+  "review_method": "Independent fresh gpt-5.6-sol/high evaluator, same family as generator; operator contract/quotation review; no blind or independent-family claim. Raw grades preserved separately.",
+  "quote_audit": [
+    {
+      "artifact": "after_host",
+      "quote": "可以现在问，不会显得特别急。发一次简短、礼貌的进度确认即可。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "after_host",
+      "quote": "按通常周一至周五且没有节假日计算，终面后已经过了约 3 个完整工作日；不过本案例的实际工作日安排未知。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "baseline_host",
+      "quote": "面试官说“后续让 HR 跟你沟通”只是流程性表述，既不能证明通过，也不能证明拒绝。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "HR 没有承诺具体反馈日期。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "complete_extraction_packet",
+      "quote": "用户从未 follow up。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "日历天 / 工作日、承诺日期及真实截止时间",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "关键证据或目标尚未确认",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "明确拒绝 / 要求不联系时停止；一次跟进后再约 3 个工作日无回复，降低投入",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "假期、批量招聘、排期或审批也能解释延迟；无法从沉默辨认原因。",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    },
+    {
+      "artifact": "runtime_api_result",
+      "quote": "同一缺口在 5–10 个可比机会反复出现，再 REFINE / PIVOT",
+      "validated": true,
+      "boundary": "JSON serialization quotation or exact literal response substring; raw review immutable."
+    }
+  ],
+  "operator_resolutions": [
+    "Do not penalize feelings as INFERENCE: the existing context contract explicitly requires that. The raw reviewer proposed FACT feelings, which conflicts with the contract."
+  ],
+  "actual_replay": {
+    "contract": "VALID",
+    "sources_unchanged": true,
+    "cli_decision": "../final/02-hr-silence/decision.json",
+    "raw_extraction_counts": {
+      "FACT": 9,
+      "INFERENCE": 2,
+      "UNKNOWN": 0
+    }
+  },
+  "memory_replay_evidence": [
+    {
+      "origin": "synthetic",
+      "branch": "A",
+      "decision_preserved": true,
+      "calibration": [],
+      "hard_outcome": "passed",
+      "observations": [],
+      "learning": "本次观察已记录；仅适用于本次机会，不证明准备策略导致结果。",
+      "feedback": {
+        "recommended_move": "推进下一阶段；保留本次具体追问，不能据通过证明策略因果。",
+        "learning_scope": "this opportunity only",
+        "causal_status": "UNKNOWN",
+        "profile_auto_updates": [],
+        "review": "REFINE only a supported specific gap; do not PIVOT from one observation."
+      },
+      "similar_pairs": 0,
+      "recurring_risk": {
+        "status": "INSUFFICIENT_OBSERVATIONS",
+        "comparable_outcomes": 0,
+        "risk_tags": []
+      },
+      "memory_changed_preparation": false,
+      "not_asked_controlled_probe": [
+        {
+          "topic": "metrics",
+          "status": "NOT_OBSERVED",
+          "source": "synthetic:guard-probe",
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        }
+      ],
+      "temporary_store_deleted": true,
+      "compatibility": "Decision was a source-aware preparation/follow-up action, not a result forecast"
+    },
+    {
+      "origin": "synthetic",
+      "branch": "B",
+      "decision_preserved": true,
+      "calibration": [],
+      "hard_outcome": "rejected",
+      "observations": [],
+      "learning": "本次观察已记录；仅适用于本次机会，不证明准备策略导致结果。",
+      "feedback": {
+        "recommended_move": "结束此机会；只按明确反馈修正一处，用下一批可比机会验证。",
+        "learning_scope": "this opportunity only",
+        "causal_status": "UNKNOWN",
+        "profile_auto_updates": [],
+        "review": "REFINE only a supported specific gap; do not PIVOT from one observation."
+      },
+      "similar_pairs": 0,
+      "recurring_risk": {
+        "status": "INSUFFICIENT_OBSERVATIONS",
+        "comparable_outcomes": 0,
+        "risk_tags": []
+      },
+      "memory_changed_preparation": false,
+      "not_asked_controlled_probe": [
+        {
+          "topic": "metrics",
+          "status": "NOT_OBSERVED",
+          "source": "synthetic:guard-probe",
+          "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+        }
+      ],
+      "temporary_store_deleted": true,
+      "compatibility": "Decision was a source-aware preparation/follow-up action, not a result forecast"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "origin": "synthetic",
+  "branch": "only",
+  "decision_preserved": true,
+  "calibration": [],
+  "hard_outcome": "unknown",
+  "observations": [
+    {
+      "topic": "ownership",
+      "attention": "high",
+      "risk_observed": null,
+      "text": "约10分钟持续追问个人贡献；未提供最终招聘结果。",
+      "source": "synthetic:mock-ownership"
+    }
+  ],
+  "learning": "本次观察已记录；仅适用于本次机会，不证明准备策略导致结果。",
+  "feedback": {
+    "recommended_move": "先确认可观察结果和来源，不改写招聘状态。",
+    "learning_scope": "this opportunity only",
+    "causal_status": "UNKNOWN",
+    "profile_auto_updates": [],
+    "review": "REFINE only a supported specific gap; do not PIVOT from one observation."
+  },
+  "similar_pairs": 1,
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "memory_changed_preparation": false,
+  "not_asked_controlled_probe": [
+    {
+      "topic": "metrics",
+      "status": "NOT_OBSERVED",
+      "source": "synthetic:guard-probe",
+      "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+    }
+  ],
+  "temporary_store_deleted": true,
+  "compatibility": "Decision was a source-aware preparation/follow-up action, not a result forecast"
+}

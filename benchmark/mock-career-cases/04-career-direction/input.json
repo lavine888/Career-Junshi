@@ -1,0 +1,27 @@
+{
+  "case_id": "04-career-direction",
+  "origin": "synthetic",
+  "request": "我现在有点散。\n\n我做过 Minecraft AI 教育项目，\n负责很多产品和 Agent 相关东西；\n\n也参加过不少黑客松；\n\n还做过量化 Skill 和 PandaAI 比赛。\n\n我数学本科、CS 硕士。\n\n我到底应该主投 AI PM、\nAgent Product、\nTechnical PM，\n还是 Quant？\n\n我不想什么都投，\n感觉这样简历完全没有主线。",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Raw user input",
+      "text": "我现在有点散。\n\n我做过 Minecraft AI 教育项目，\n负责很多产品和 Agent 相关东西；\n\n也参加过不少黑客松；\n\n还做过量化 Skill 和 PandaAI 比赛。\n\n我数学本科、CS 硕士。\n\n我到底应该主投 AI PM、\nAgent Product、\nTechnical PM，\n还是 Quant？\n\n我不想什么都投，\n感觉这样简历完全没有主线。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "user_report",
+      "label": "Candidate context",
+      "text": "education:\n  bachelor: Mathematics and Applied Mathematics\n  master: Computer Science\n\nminecraft:\n  type: long_term_project\n  strongest:\n    - 0_to_1_product\n    - AI_teacher\n    - agent_workflow\n    - curriculum\n    - cross_functional_coordination\n  weaker:\n    - low_level_engineering_ownership\n\nhackathons:\n  strongest:\n    - rapid_build\n    - ambiguity\n    - demos\n  weakness:\n    - short_duration\n\npandaai:\n  strongest:\n    - quant_competition\n    - open_source_skills\n  unknown:\n    - professional_quant_research_depth\n\ncareer_junshi:\n  strongest:\n    - agent_product\n    - evidence_system\n    - open_source_product"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "label": "Goals",
+      "text": "毕业后希望进入 AI 相关岗位。\n\n深圳 / 香港优先。\n\n未来仍希望保留创业可能。"
+    }
+  ],
+  "as_of": "2026-10-03T20:00:00+08:00",
+  "clock_boundary": "Fixed synthetic scenario clock; no actual appointment or recruiting outcome."
+}

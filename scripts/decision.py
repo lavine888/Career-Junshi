@@ -208,10 +208,13 @@ def decide(value: dict, *, now: datetime | None = None, history: list | None = N
     elif mode == "offer":
         plan = offer_plan(value.get("offer", {}), n)
     elif mode == "interview":
-        target = f"{riskiest['id']}：{riskiest['claim']}" if riskiest else "简历上最强、证据最薄的项目表述（资料尚未给齐）"
+        supplied = {f["source_type"] for f in n["facts"]}
+        fallback = "已提供简历中的项目表述（Claim 尚未结构化）" if "resume" in supplied else "简历上最强、证据最薄的项目表述（简历原文待提供）"
+        target = f"{riskiest['id']}：{riskiest['claim']}" if riskiest else fallback
         n["inferences"].append({"label": "INFERENCE", "text": "强 Claim 的证据与个人贡献缺口可能成为追问风险；不是已知面试题"})
         if not claims:
-            n["unknowns"].append("简历 / JD 原文及可核实的个人贡献")
+            n["unknowns"].extend(label for kind, label in (("resume", "简历原文"), ("jd", "JD 原文")) if kind not in supplied)
+            n["unknowns"].append("尚未结构化的项目 Claim 及可核实的个人贡献")
         plan = {"bottleneck": "Evidence" if riskiest and riskiest["risk"] else "Interview",
                 "recommended_move": f"先降低 {riskiest['id']} 的缺证强表述，按真实阶段与个人贡献练五层防守；今晚不临时开新项目。" if riskiest and riskiest["risk"] else f"本轮准备先守住 {target}，再练架构取舍与失败。",
                 "why": ["截止时间附近应优先降低被问穿风险", "真实 ownership 与可解释证据比题目数量有用"],

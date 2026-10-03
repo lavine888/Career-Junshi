@@ -1,0 +1,6 @@
+* -text
+# Immutable raw Markdown keeps hard-break spaces and supplied outer blank lines.
+*/input.md whitespace=-blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+debug-results/*/host-*.md whitespace=-blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+# Preserve raw test runner formatting; its original hash is separately recorded.
+debug-results/verification/*.txt whitespace=-blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol

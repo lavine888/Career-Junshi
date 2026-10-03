@@ -1,0 +1,42 @@
+[
+  {
+    "case_id": "01-ai-pm-interview",
+    "extraction": "PASS",
+    "decision": "PARTIAL",
+    "host": "PARTIAL",
+    "overall": "PARTIAL",
+    "invalid_review_quotes": 0
+  },
+  {
+    "case_id": "02-hr-silence",
+    "extraction": "PASS",
+    "decision": "PARTIAL",
+    "host": "PASS",
+    "overall": "PARTIAL",
+    "invalid_review_quotes": 0
+  },
+  {
+    "case_id": "03-offer-choice",
+    "extraction": "PASS",
+    "decision": "PARTIAL",
+    "host": "PASS",
+    "overall": "PARTIAL",
+    "invalid_review_quotes": 0
+  },
+  {
+    "case_id": "04-career-direction",
+    "extraction": "PARTIAL",
+    "decision": "FAIL",
+    "host": "PARTIAL",
+    "overall": "FAIL",
+    "invalid_review_quotes": 0
+  },
+  {
+    "case_id": "05-ownership-claim",
+    "extraction": "PARTIAL",
+    "decision": "PARTIAL",
+    "host": "PARTIAL",
+    "overall": "PARTIAL",
+    "invalid_review_quotes": 0
+  }
+]

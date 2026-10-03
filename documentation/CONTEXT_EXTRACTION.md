@@ -39,6 +39,25 @@ must be reconciled before constructing the existing Claim model. “还在推进
 passing; “我感觉不喜欢我” belongs to interpretation, not FACT about the interviewer.
 Visible emotions can be reported without declaring another person's inner state.
 
+An unresolved personal claim can use UNKNOWN with unknown or self_reported
+confidence; it is not an accomplishment assertion and never enters FACT. UNKNOWN
+with direct confidence is still rejected for resume / narration claims.
+Clear reported activities may remain FACT/self_reported **of the account**; lack
+of independent verification alone does not make every activity UNKNOWN. Missing
+scope, receipts or project stage stay UNKNOWN. Feelings remain INFERENCE under
+this contract; their literal source wording is still retained.
+Supplied resume / JD facts and structured Claims are separate: an empty Claim list does not
+mean those documents were missing. Preserve sourced contributions, intent, deadlines
+and preparation predictions when repairing a packet; schema validity does not prove
+that the extraction retained its meaning. Choose the primary mode from the request:
+direction / application decisions use job, wording uses positioning.
+
+Optional situation.deadline is an ISO timestamp with timezone; omit it when unknown.
+Mode-specific recruiting.no_contact means an explicit request to stop contacting
+the recruiter, **not** silence or lack of an HR reply. With no such instruction it
+is false. recruiting.working_days is null until actual working days are supported;
+weekends, holidays and unknown employer calendars are not confirmed elapsed days.
+
 v0.2.1 recruiting guards preserve result polarity, pending/conditional wording and
 hearsay attribution. “未通过” / “did not pass” cannot become passed; “if approved”
 cannot become an issued offer. Qualified source reports can remain FACT **of the

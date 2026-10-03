@@ -173,6 +173,10 @@ VERIFIED 需要针对精确主张的真实核查。JSON 核查记录是操作者
 认证虚构记录；文本触发器不能替代语义审计。当前公司、岗位、市场和政策需要新鲜来源。
 真实投递、消息发送、谈薪、面试与接受 / 拒绝 Offer 由你执行。
 
+新增 [五个核心 Mock 决策案例](benchmark/mock-career-cases/README.md)，包含原始合成
+材料、独立评审、失败记录和冻结提取回放。结果及限制见
+[调试报告](documentation/MOCK_CASE_DEBUG_REPORT.md)；脚本检查通过不等于职业判断全部通过。
+
 ## 来源与开源协议
 
 Inspired by / adapted from [Goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi)：

@@ -86,6 +86,18 @@ def evidence_record(value: Any) -> dict:
     return result
 
 
+def technical_authorship(claim: str) -> bool:
+    """Limited creation triggers; coordination is not personal implementation."""
+    if re.search(r"\b(?:authored|implemented|wrote)\b|本人编写|本人实现", claim, re.I):
+        return True
+    for clause in re.split(r"[，,。；;\n]", claim):
+        if re.match(r"\s*(?:协调|组织|推动|参与|协助|团队|共同)", clause) or re.search(r"(?:协调|组织|推动|协助)团队", clause):
+            continue
+        if re.search(r"(?:^|并)\s*(?:设计|实现|编写|开发|搭建|完成|部署).*?(?:代码|源码|程序|脚本|算法|模块|接口|架构|组件|插件|部署)", clause):
+            return True
+    return False
+
+
 def audit_claim(value: Any) -> dict:
     c = obj(value, "claim")
     allowed = {"id", "claim", "confidence", "evidence", "ownership", "stage", "risk"}
@@ -110,7 +122,7 @@ def audit_claim(value: Any) -> dict:
     lower = claim.casefold()
     production = stage == "production" or bool(re.search(r"\bproduction\b|生产环境|生产级|线上用户", lower))
     sole = bool(re.search(r"\bsole\b|独立完成|全部.*(?:实现|编写)|所有代码", lower)) or scope == "sole"
-    authorship = bool(re.search(r"\b(?:authored|implemented|wrote)\b|本人编写|本人实现", lower))
+    authorship = technical_authorship(claim)
     award = bool(re.search(r"\b(?:won|winner|award|ranked)\b|获奖|冠军|第一名|排名", lower))
     real_world = bool(re.search(r"\breal.world\b|实盘|实际盈利", lower))
     metric = bool(re.search(r"\d+(?:\.\d+)?\s*[%％]|\d+\s*(?:用户|收入)|\brevenue\b", lower))

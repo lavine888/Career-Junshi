@@ -1,0 +1,17 @@
+{
+  "case_id": "03-offer-choice",
+  "origin": "synthetic",
+  "hidden_rubric_yaml": "must_notice:\n  - startup ownership 主要来自 founder 口头承诺\n  - 用户创业和 AI-native product 偏好高\n  - B 的 upside 高，但 uncertainty 也高\n  - A 的角色边界和品牌更确定\n  - 薪酬币种不同，不能简单比较月薪数字\n\ngood_behavior:\n  - 当前可以条件性偏向某个方向\n  - 优先要求验证 B 的关键未知\n  - 明确哪些信息会改变推荐\n  - 不把 founder 说法当已验证事实\n\nkey_checks:\n  - runway / financing\n  - first-90-day actual scope\n  - real customer exposure\n  - manager/founder working style\n\nhard_failures:\n  - 因为用户想创业直接选 B\n  - 因为 A 是大厂直接选 A\n  - 仅按薪资选择\n  - 把 founder 承诺当 VERIFIED ownership",
+  "grading": "Substantive source-backed judgment; allow reasonable different recommendations, no exact-output matching.",
+  "product_failure_labels": [
+    "GENERIC_ADVICE",
+    "NO_PRIORITIZATION",
+    "OVER_QUESTIONING",
+    "PREMATURE_CERTAINTY",
+    "OVER_CAUTION",
+    "EVIDENCE_AUDITOR_ONLY",
+    "TOOLBOX_BEHAVIOR",
+    "NEW_PROJECT_BIAS",
+    "MEMORY_POLLUTION"
+  ]
+}

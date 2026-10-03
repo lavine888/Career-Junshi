@@ -1,0 +1,411 @@
+{
+  "schema_version": "2",
+  "current_situation": "判断一条把产品领导、架构设计和主要工程实现合并归于用户的简历表述是否符合实际贡献边界。",
+  "mode": "positioning",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户请求判断当前简历表述是否可以继续使用。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S1",
+      "source_span": "这句话能不能继续这么写？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "材料明确提示，Git 或仓库存在不能证明用户亲自实现了全部主要组件。",
+      "source": "S4",
+      "source_type": "user_report",
+      "id": "F14",
+      "source_id": "S4",
+      "source_span": "Git / repo existence does not prove the user personally implemented all major components.",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F2",
+      "text": "用户感觉当前表述显得很强。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "感觉挺强的。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述当前简历写明其主导开发该平台、设计多 Agent 架构并完成若干技术组件和云端部署。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述其实际主要角色是产品负责人。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述负责课程、Teacher、流程、功能定义和团队协调。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述很多代码由实习生和 Agent 编写。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述会进行代码 review。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户自述参与部分集成调试。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "已知上下文将用户角色列为 product owner 和 project lead。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "已知上下文列出的用户职责包括产品定义、课程结构、Teacher 行为、功能优先级、团队协调、集成和验收。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "已知上下文将 Runtime 实现、Minecraft Plugin、部署和地图实现列为其他贡献者的工作。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "已知上下文称多个贡献者使用了 AI 编码工具。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户报告可用材料包括 PRD、课程文档、Teacher 设计文档、项目计划、QA 文档、Git 仓库和交接文档，但这些材料尚未被检查。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C1-product-leadership 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C2-product-responsibilities 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C3-technical-participation 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C4-project-context 的强表述与个人贡献仍需补证"
+    }
+  ],
+  "current_goal": "形成既保留项目领导价值、又不夸大个人工程作者身份的简历定位。",
+  "claims": [
+    {
+      "id": "C1-product-leadership",
+      "claim": "用户在该 AI-native Minecraft 英语教育平台中主要担任产品负责人和项目负责人。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "用户称自己实际上主要是产品负责人。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "已知上下文列出 product_owner 和 project_lead。"
+        }
+      ],
+      "ownership": {
+        "scope": "team",
+        "contribution": "负责产品与项目领导；现有材料未证明用户是全部主要工程组件的个人作者。"
+      },
+      "stage": "completed",
+      "risk": [
+        "角色和领导范围尚未通过项目文档或他人记录核验。",
+        "不得从项目领导推导为主要代码的个人作者。",
+        "missing_evidence:leadership"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：负责产品与项目领导；现有材料未证明用户是全部主要工程组件的个人作者。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C2-product-responsibilities",
+      "claim": "用户负责产品定义、课程结构、Teacher 行为、流程与功能定义、功能优先级、团队协调、集成和验收。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "用户自述负责课程、Teacher、流程、功能定义和团队协调。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "已知上下文补充了产品定义、课程结构、Teacher 行为、优先级、集成和验收等职责。"
+        },
+        {
+          "source": "S3",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户报告存在相关产品、课程、Teacher、项目、QA 和交接材料；材料尚未检查，不能据此确认作者身份。"
+        }
+      ],
+      "ownership": {
+        "scope": "team",
+        "contribution": "个人贡献集中在产品判断、课程与 Teacher 设计、流程和功能定义、优先级、协调、集成及验收。"
+      },
+      "stage": "completed",
+      "risk": [
+        "各项职责的具体深度、决策权和可验证成果仍未知。",
+        "文档存在本身不证明用户是文档作者或相关成果的唯一负责人。"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：个人贡献集中在产品判断、课程与 Teacher 设计、流程和功能定义、优先级、协调、集成及验收。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C3-technical-participation",
+      "claim": "用户进行代码 review，并参与部分集成调试。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户报告会 review 代码并参与一些集成调试。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "已知上下文把 integration 列入用户职责，同时把 Runtime、Plugin、部署和地图实现列为其他贡献者的工作。"
+        },
+        {
+          "source": "S4",
+          "kind": "self_report",
+          "supports": [
+            "authorship"
+          ],
+          "summary": "明确边界：仓库存在不能证明用户亲自实现所有主要组件。"
+        }
+      ],
+      "ownership": {
+        "scope": "team",
+        "contribution": "技术参与限于用户报告的代码 review 和部分集成调试；没有材料证明其亲自实现 Runtime、Plugin、部署或其他全部主要组件。"
+      },
+      "stage": "completed",
+      "risk": [
+        "review 和集成参与不能表述为主要组件的个人开发或完成。",
+        "架构设计的个人决策范围与工程落地作者身份尚未核验。"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：技术参与限于用户报告的代码 review 和部分集成调试；没有材料证明其亲自实现 Runtime、Plugin、部署或其他全部主要组件。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C4-project-context",
+      "claim": "用户参与的是一个 AI-native Minecraft 英语教育平台项目。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "当前简历表述将项目描述为 AI-native Minecraft 英语教育平台。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "上下文列出用户职责、其他贡献者和多人使用 AI 编码工具。"
+        }
+      ],
+      "ownership": {
+        "scope": "team",
+        "contribution": "用户报告的个人贡献以产品领导、团队协调、集成和验收为主；工程实现由多名贡献者参与。"
+      },
+      "stage": "completed",
+      "risk": [
+        "项目完成程度、生产使用、真实用户和效果指标均未提供。",
+        "不能把团队完成的组件归为用户个人工程成果。"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：用户报告的个人贡献以产品领导、团队协调、集成和验收为主；工程实现由多名贡献者参与。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    }
+  ],
+  "highest_risk": "C1-product-leadership",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/01-evidence-and-claims.md",
+    "references/practical/resume.md"
+  ],
+  "method_plan": [
+    "proof",
+    "position",
+    "interview"
+  ],
+  "bottleneck": "Evidence",
+  "recommended_move": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+  "why": [
+    "一句话应经得住五层追问",
+    "措辞升级不能替代证据"
+  ],
+  "actions": [
+    {
+      "kind": "evidence_audit",
+      "description": "核对 Claim、来源、个人贡献与项目阶段",
+      "execution_mode": "codex",
+      "artifact": "Claim 审计卡",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "write_material",
+      "description": "根据已确认贡献产出保守经历表述",
+      "execution_mode": "codex",
+      "artifact": "安全简历句",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "practice",
+      "description": "用五层追问检验表述",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "补证或下一次模拟追问后复核",
+  "stop_condition": "无法确认个人贡献或结果时停止升级措辞",
+  "pivot_condition": "岗位职责变化或新证据出现时重新定位",
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "positioning",
+    "role_family": "agent-product",
+    "stage": "preparation",
+    "situation_type": "positioning",
+    "risk_tags": [
+      "ownership",
+      "evidence",
+      "architecture",
+      "production"
+    ],
+    "situation_tags": [
+      "ownership",
+      "evidence",
+      "architecture",
+      "product-judgment"
+    ]
+  },
+  "recommendation": {
+    "move": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "用户请求判断当前简历表述是否可以继续使用。",
+        "source_locator": ""
+      },
+      {
+        "source": "S4",
+        "text": "材料明确提示，Git 或仓库存在不能证明用户亲自实现了全部主要组件。",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "表达问题可能只是没有突出已有贡献，继续补项目未必有用。",
+    "reconsider_if": [
+      "个人贡献、项目阶段或结果来源被纠正时重新审计措辞。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "判断一条把产品领导、架构设计和主要工程实现合并归于用户的简历表述是否符合实际贡献边界。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "用户请求判断当前简历表述是否可以继续使用。",
+        "source_locator": ""
+      },
+      {
+        "source": "S4",
+        "text": "材料明确提示，Git 或仓库存在不能证明用户亲自实现了全部主要组件。",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Evidence",
+    "options_considered": [
+      "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+      "先核对个人决策与证据，再只改写一条经历。"
+    ],
+    "chosen": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。",
+    "rejected_options": [
+      {
+        "option": "先核对个人决策与证据，再只改写一条经历。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "一句话应经得住五层追问",
+      "措辞升级不能替代证据"
+    ],
+    "reconsider_if": [
+      "个人贡献、项目阶段或结果来源被纠正时重新审计措辞。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}
