@@ -4,6 +4,12 @@ Evidence status as of 2026-10-03: implementation and structured checks available
 no independent host-model blind evaluation or observed recruiting effectiveness.
 Private real-context dry-run is a builder review, not a real-world outcome study.
 
+v0.2.1 adds 15 regression tests (123 total) and prepares a [15-pair model comparison](../benchmark/host-comparison-plan.json)
+with two new synthetic holdouts. Execution is BLOCKED_MODEL_ACCESS: the CLI's
+ChatGPT login rejected gpt-6.1-sol before any response was generated. Coverage is
+0/30 responses, 0/15 reviewed pairs. No model-quality claim or automatic fallback.
+See [V021_REPORT.md](V021_REPORT.md) for corrected boundaries and remaining work.
+
 ## What is tested
 
 Level 1 checks extraction spans and provenance, explicit epistemic errors, claim

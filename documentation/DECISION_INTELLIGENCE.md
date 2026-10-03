@@ -38,6 +38,12 @@ only an already active store. No consent or database is created implicitly. Matc
 requires the same mode, role family and stage, plus shared tags and a decision no
 older than 180 days. Rank by tag overlap, situation type, recency and stable ID.
 Only the latest outcome per decision counts; at most three pairs enter the decision.
+v0.2.1 filters comparable, recent candidates, then deduplicates reported real event
+IDs and outcome sources **before** applying the three-pair limit. Eligible real events
+take priority over synthetic/unknown records; the remaining slots may show other
+comparable records but those do not count toward recurrent signals. Duplicate A,A,B
+must not crowd out independent C. Original observation sources are still deduplicated
+when counting a specific risk.
 Correction-affected decisions are excluded. Unrelated Quant history cannot change an
 AI Product follow-up. Old untagged records remain visible through administrative view.
 Only history that changes the action enters supporting_evidence and similar_memory.used.
@@ -106,10 +112,22 @@ evidence → story → likely questions. Role translation preserves claim wordin
 `memory_store.py --directory PRIVATE_DIR correct --subject SUBJECT --claim-id ID
 --source SOURCE --input replacement-claim.json` accepts the existing raw claim model.
 The command appends a compressed correction and updates matching current claim
-records atomically, only with active consent. It finds decision records whose
-claim_ids include the corrected claim; their content is untouched and they are
-excluded from similar recall. Historical v0.1 records without claim IDs cannot be
-automatically attributed to a correction. Review those manually. A narrated correction
+records atomically, only with active consent. v0.2.1 input and decision records may
+include claim_refs: `[{"project_id":"project-A","claim_id":"C1"}]`. The correction
+subject is that stable project ID, while decisions may belong to different interview
+or application subjects. Scoped references identify affected decisions across all
+opportunities without confusing another project's C1. Their content is untouched
+and they are excluded from similar recall.
+
+For legacy claim_ids, cross-subject attribution is allowed only when the stored
+claim ID belongs uniquely to the corrected project; same-subject references preserve
+the prior behavior. Ambiguous legacy references are returned as unresolved_decisions
+and excluded from routine recall pending review, not relabeled as confirmed impacts.
+Historical v0.1 records without claim IDs cannot be automatically attributed to a
+correction. Review those manually. Claim refs must refer to actual decision claims
+and cannot assign one claim ID to two projects in a single situation. New decisions
+should use explicit project refs rather than inferring identity from prose.
+A narrated correction
 caps the current claim at SELF_REPORTED (or PLANNED). Keep the new source and weaker wording; request independent
 evidence if upgrading later. If no current claim record exists, the correction holds
 the new claim for review; it does not silently create a new profile record.

@@ -39,6 +39,21 @@ def items(value: Any, label: str, maximum: int = 20) -> list:
     return value
 
 
+def claim_references(value, *, claim_ids=None):
+    refs = []
+    for raw in items(value, "claim_refs", 20):
+        r = obj(raw, "claim reference")
+        if set(r) != {"project_id", "claim_id"}:
+            raise ContractError("claim reference requires project_id and claim_id")
+        refs.append({"project_id": text(r["project_id"], "project_id", 100),
+                     "claim_id": text(r["claim_id"], "claim_id", 80)})
+    if len({r["claim_id"] for r in refs}) != len(refs):
+        raise ContractError("claim_refs must identify each claim unambiguously")
+    if claim_ids is not None and {r["claim_id"] for r in refs} - set(claim_ids):
+        raise ContractError("claim reference must identify an existing decision claim")
+    return refs
+
+
 def number(value: Any, label: str, low: float = 0, high: float = 100) -> float:
     if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or not low <= value <= high:
         raise ContractError(f"{label} must be finite and in [{low}, {high}]")

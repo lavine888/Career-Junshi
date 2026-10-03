@@ -79,6 +79,9 @@ records remain readable without automatic inferred tags. No table migration or
 consent-policy change is required. Optional outcome fields are metadata (must match
 parent), observations, event_id and origin. Their detailed contracts, case calibration,
 correction and hypothesis commands are in [DECISION_INTELLIGENCE.md](DECISION_INTELLIGENCE.md).
+v0.2.1 adds optional claim_refs with stable project_id / claim_id pairs. They let a
+project correction find dependent decisions across different opportunity subjects.
+No database migration, implicit consent or historical record rewrite occurs.
 
 `outcome --subject opportunity-id --input /private/outcome.json` requires these v0.1 fields:
 

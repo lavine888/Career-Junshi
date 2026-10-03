@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from scripts.models import ContractError, audit_claim, choices, items, number, obj, text, timestamp
+from scripts.models import ContractError, audit_claim, claim_references, choices, items, number, obj, text, timestamp
 from scripts.router import route
 from scripts.method_adapter import method_plan
 from scripts.actions import validate_actions
@@ -21,7 +21,7 @@ def action(kind: str, description: str, mode: str, artifact: str = "") -> dict:
 
 def normalize_situation(value: dict, *, now: datetime | None = None) -> dict:
     s = obj(value, "situation")
-    allowed = {"mode", "summary", "goal", "facts", "inferences", "unknowns", "claims", "deadline", "job", "recruiting", "offer", "metadata", "predictions", "project_story", "career_hypothesis"}
+    allowed = {"mode", "summary", "goal", "facts", "inferences", "unknowns", "claims", "deadline", "job", "recruiting", "offer", "metadata", "predictions", "project_story", "career_hypothesis", "claim_refs"}
     if set(s) - allowed:
         raise ContractError(f"unknown situation fields: {sorted(set(s) - allowed)}")
     mode = choices(s.get("mode"), {"job", "positioning", "interview", "recruiting", "offer"}, "mode")
@@ -276,6 +276,7 @@ def decide(value: dict, *, now: datetime | None = None, history: list | None = N
             "method_plan": method_plan(mode, evidence_gap=plan["bottleneck"] == "Evidence", urgent=n["urgency"]["within_72h"]), **plan,
             "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome."}
     result = enrich(result, value, now=now)
+    result["claim_refs"] = claim_references(value.get("claim_refs", []), claim_ids=[c["id"] for c in result["claims"]])
     from scripts.calibration import predictions, apply_history
     result["predictions"] = predictions(value.get("predictions", []))
     apply_history(result, history or [], now=now)

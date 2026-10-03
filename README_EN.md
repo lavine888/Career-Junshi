@@ -19,6 +19,12 @@ career decision Skill for a capable host, with standard-library local helpers.
 
 [中文](README.md) · [Synthetic cases](cases) · [v0.2 report](documentation/V02_REPORT.md) · [Evaluation](documentation/EVAL.md)
 
+v0.2.1 preserves recruiting denial/conditions/hearsay, traces scoped claim corrections
+across opportunities and deduplicates history before the three-pair cap. All 123
+tests pass; the prior 108 remain unchanged. Fifteen synthetic comparison pairs are
+prepared, but the configured model was rejected by the CLI login endpoint; zero
+valid responses and no model-comparison claims. See the [patch report](documentation/V021_REPORT.md).
+
 ## v0.2 · Decision Intelligence
 
 v0.1 established evidence-safe career decisions. v0.2 adds source-located context,

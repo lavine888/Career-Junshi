@@ -14,6 +14,8 @@ def decision_record(decision: dict, *, source: str, expected_outcome: str) -> di
             "pivot_condition": text(d.get("pivot_condition"), "pivot_condition", 400)}
     if "metadata" in d:
         result.update(metadata=d["metadata"], predictions=d.get("predictions", []), claim_ids=[c["id"] for c in d.get("claims", [])])
+    if d.get("claim_refs"):
+        result["claim_refs"] = d["claim_refs"]
     if "decision_trace" in d:
         from scripts.intelligence import memory_trace
         trace = dict(d["decision_trace"])

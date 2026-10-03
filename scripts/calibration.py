@@ -84,7 +84,21 @@ def select_similar(current, pairs, *, now=None):
         score = match_score(current, m)
         if score is not None:
             ranked.append((score, decision["created_at"], decision["id"], p))
-    return [p for _, _, _, p in sorted(ranked, key=lambda row: row[:3], reverse=True)[:3]]
+    ranked.sort(key=lambda row: row[:3], reverse=True)
+    # Eligible real events take priority; duplicate event IDs / recap sources cannot
+    # crowd independent events out of the three-pair window.
+    real, other, seen_events, seen_sources = [], [], set(), set()
+    for _, _, _, p in ranked:
+        o = p["outcome"]["data"]
+        event, source = o.get("event_id"), o.get("source")
+        if o.get("origin") != "real_world" or not event or not source:
+            other.append(p)
+            continue
+        if event in seen_events or source in seen_sources:
+            continue
+        seen_events.add(event); seen_sources.add(source)
+        real.append(p)
+    return (real + other)[:3]
 
 
 def recurrent_signal(pairs):

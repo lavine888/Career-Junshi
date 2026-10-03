@@ -10,6 +10,25 @@ SOURCE_TYPES = {"resume", "jd", "hr_chat", "interview_recap", "project_readme", 
 EPISTEMIC = {"FACT", "INFERENCE", "UNKNOWN"}
 
 
+def recruiting_assertion(value: str) -> tuple[set, set]:
+    """Limited bilingual polarity guards, not a general semantic verifier."""
+    negative = r"(?:尚未|还未|未(?:能)?|没(?:有)?|不(?:能)?)(?:被|确认|确定)?\s*(?:通过|录用|拒绝)|\b(?:not|never|didn['’]t|hasn['’]t|wasn['’]t)\s+(?:yet\s+|been\s+|be\s+)?(?:pass(?:ed)?|hired|accepted|rejected)\b|(?:尚未|还未|没有|未|没|无|不存在)(?:收到|发出|获得|发)?\s*offer|\b(?:no|not)\s+(?:an?\s+)?offer\b"
+    stripped = re.sub(negative, "", value, flags=re.I)
+    states = set()
+    if re.search(r"通过|录用|\b(?:pass(?:ed)?|hired|accepted)\b", stripped, re.I):
+        states.add("passed")
+    if re.search(r"(?:发出|收到|拿到|获得|已发).*offer|\boffer(?:ed)?\b", stripped, re.I):
+        states.add("offer")
+    if re.search(r"拒绝|不予录用|\brejected\b", stripped, re.I) or re.search(r"(?<!尚)(?<!还)未通过|\b(?:not selected|did not pass)\b", value, re.I):
+        states.add("rejected")
+    qualifiers = set()
+    if re.search(r"如果|若|可能|预计|尚未|还未|待审批|未确认|无法确认|不能确认|\b(?:if|might|may|could|would|pending|unconfirmed|not yet)\b", value, re.I):
+        qualifiers.add("conditional_or_pending")
+    if re.search(r"听说|据称|传闻|同事说|\b(?:reportedly|allegedly|rumou?r|someone said)\b", value, re.I):
+        qualifiers.add("hearsay")
+    return states, qualifiers
+
+
 def freshness(value: dict, *, now: datetime | None = None) -> dict:
     f = obj(value, "freshness")
     if set(f) - {"category", "observed_at", "valid_until", "region"}:
@@ -77,8 +96,13 @@ def statement(value: dict, sources: dict) -> dict:
         raise ContractError("preferred clause cannot become hard requirement")
     if kind == "claim" and re.search(r"sole|独立完成|所有代码", content, re.I) and not re.search(r"sole|独立完成|所有代码", excerpt, re.I):
         raise ContractError("leadership or source existence cannot imply sole ownership")
-    if kind == "recruiting_signal" and re.search(r"passed|通过|已录用", content, re.I) and not re.search(r"passed|通过|录用", excerpt, re.I):
-        raise ContractError("process update cannot imply passed")
+    if kind == "recruiting_signal" and epistemic != "UNKNOWN":
+        asserted, qualifications = recruiting_assertion(content)
+        original, original_qualifications = recruiting_assertion(excerpt)
+        if asserted - original or (asserted and original_qualifications - qualifications):
+            raise ContractError("recruiting paraphrase changes result polarity, conditions or attribution; preserve scope or use UNKNOWN")
+        if len(original) > 1 and asserted != original:
+            raise ContractError("conflicting recruiting results need narrower source scope or UNKNOWN")
     result = {"id": text(s.get("id"), "statement id", 80), "text": content, "source": sid,
               "source_id": sid, "source_type": source_type, "source_span": excerpt,
               "source_locator": locator, "epistemic": epistemic, "confidence": confidence,
@@ -105,7 +129,18 @@ def extract(packet: dict, *, now: datetime | None = None) -> dict:
     statements = [statement(s, sources) for s in items(p["statements"], "statements", 30)]
     if len({s["id"] for s in statements}) != len(statements):
         raise ContractError("duplicate statement id")
+    terminal = set()
+    for s in statements:
+        states, qualifiers = recruiting_assertion(s["text"])
+        if s["kind"] == "recruiting_signal" and s["epistemic"] == "FACT" and not qualifiers:
+            terminal.update(states)
+    if "rejected" in terminal and terminal & {"passed", "offer"}:
+        raise ContractError("conflicting current recruiting results: preserve source reports as UNKNOWN until round/date scope is resolved")
     result = dict(obj(p["situation"], "situation"))
+    if result.get("mode") == "recruiting":
+        declared = obj(result.get("recruiting", {}), "recruiting").get("status", "waiting")
+        if declared in {"passed", "rejected", "offer"} and declared not in terminal:
+            raise ContractError("terminal recruiting status requires a matching sourced, unqualified FACT; unknown or conditional reports cannot set it")
     if any(k in result for k in ("facts", "inferences", "unknowns", "sources")):
         raise ContractError("facts / inferences / unknowns must derive from sourced statements")
     result["facts"] = [s for s in statements if s["epistemic"] == "FACT"]

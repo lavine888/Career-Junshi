@@ -39,6 +39,16 @@ must be reconciled before constructing the existing Claim model. “还在推进
 passing; “我感觉不喜欢我” belongs to interpretation, not FACT about the interviewer.
 Visible emotions can be reported without declaring another person's inner state.
 
+v0.2.1 recruiting guards preserve result polarity, pending/conditional wording and
+hearsay attribution. “未通过” / “did not pass” cannot become passed; “if approved”
+cannot become an issued offer. Qualified source reports can remain FACT **of the
+reported message**, not a confirmed outcome. Opposing terminal results in one current
+situation require UNKNOWN until round/date scope is resolved. Historical rounds
+should be extracted separately. These bilingual pattern guards do not solve arbitrary
+negation, sarcasm, indirect speech or chronology; source-faithful host review remains
+required. Unknown results must not be promoted through the separately supplied
+mode-specific status fields.
+
 The validator rejects common explicit violations and unknown fields rather than
 silently filling missing data. The host reviews conflicts, marks unsupported additions
 UNKNOWN and asks only consequential questions. Summary, deadline, goal, numeric days,

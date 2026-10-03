@@ -14,7 +14,7 @@ from pathlib import Path
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from scripts.models import ContractError, audit_claim, choices, items, obj, text
+from scripts.models import ContractError, audit_claim, claim_references, choices, items, obj, text
 
 POLICY_VERSION = "1"
 MAX_RECORDS = 200
@@ -177,7 +177,7 @@ class MemoryStore:
     def record_decision(self, subject: str, data: dict) -> dict:
         d = obj(data, "decision memory")
         required = {"situation", "decision", "why", "expected_outcome", "source", "observation_window", "stop_condition", "pivot_condition"}
-        optional = {"metadata", "predictions", "claim_ids", "decision_trace", "strongest_counterargument"}
+        optional = {"metadata", "predictions", "claim_ids", "claim_refs", "decision_trace", "strongest_counterargument"}
         if not required <= set(d) or set(d) - required - optional:
             raise ContractError(f"Decision memory fields must be {sorted(required)}")
         clean = {k: text(d[k], k, 600 if k in {"decision", "why"} else 400) for k in required}
@@ -187,6 +187,7 @@ class MemoryStore:
             clean["metadata"] = metadata(d["metadata"])
         clean["predictions"] = predictions(d.get("predictions", []))
         clean["claim_ids"] = [text(i, "claim id", 80) for i in items(d.get("claim_ids", []), "claim_ids", 20)]
+        clean["claim_refs"] = claim_references(d.get("claim_refs", []), claim_ids=clean["claim_ids"])
         if "decision_trace" in d:
             from scripts.intelligence import memory_trace
             clean["decision_trace"] = memory_trace(d["decision_trace"])
@@ -249,6 +250,7 @@ class MemoryStore:
             invalidated = set()
             for row in c.execute("SELECT data FROM records WHERE kind='correction'"):
                 invalidated.update(json.loads(row["data"])["affected_decisions"])
+                invalidated.update(json.loads(row["data"]).get("unresolved_decisions", []))
             pairs = []
             for row in c.execute("SELECT * FROM records WHERE kind='decision' ORDER BY created_at DESC LIMIT 30"):
                 if row["id"] in invalidated:
@@ -272,15 +274,27 @@ class MemoryStore:
         audited = audit_claim(replacement)
         with self.connection(write=True) as c:
             self._active(c)
-            affected = [row["id"] for row in c.execute("SELECT id,data FROM records WHERE kind='decision' AND subject=?", (subject,))
-                        if claim_id in json.loads(row["data"]).get("claim_ids", [])]
+            subject = text(subject, "subject / project_id", 100)
+            owners = {row["subject"] for row in c.execute("SELECT subject,data FROM records WHERE kind='claim'")
+                      if json.loads(row["data"])["claim"]["id"] == claim_id}
+            affected, unresolved = [], []
+            for row in c.execute("SELECT id,subject,data FROM records WHERE kind='decision'"):
+                data = json.loads(row["data"])
+                refs = data.get("claim_refs", [])
+                if any(r == {"project_id": subject, "claim_id": claim_id} for r in refs):
+                    affected.append(row["id"])
+                elif claim_id in data.get("claim_ids", []) and not any(r["claim_id"] == claim_id for r in refs):
+                    if row["subject"] == subject or owners == {subject}:
+                        affected.append(row["id"])
+                    else:
+                        unresolved.append(row["id"])
             existing = [dict(row) for row in c.execute("SELECT id,data FROM records WHERE kind='claim' AND subject=?", (subject,))
                         if json.loads(row["data"])["claim"]["id"] == claim_id]
             if c.execute("SELECT COUNT(*) FROM records").fetchone()[0] >= MAX_RECORDS or c.execute("SELECT COUNT(*) FROM records WHERE kind='correction'").fetchone()[0] >= LIMITS["correction"]:
                 raise ContractError("Memory full; review records before correction")
             rid, stamp = uuid.uuid4().hex, now_iso()
             correction = {"claim_id": claim_id, "current_claim": audited, "source": source,
-                          "affected_decisions": affected, "epistemic": "FACT",
+                          "project_id": subject, "affected_decisions": affected, "unresolved_decisions": unresolved, "epistemic": "FACT",
                           "boundary": "Fact of a reported correction, not verified accomplishment; history preserved."}
             serialized = json.dumps(correction, ensure_ascii=False)
             if len(serialized) > 6000:
@@ -291,7 +305,7 @@ class MemoryStore:
             for row in existing:
                 c.execute("UPDATE records SET data=?,updated_at=? WHERE id=?", (json.dumps(clean, ensure_ascii=False), stamp, row["id"]))
         return {"id": rid, "saved": True, "current_claim": audited, "affected_decisions": affected,
-                "history_rewritten": False, "claim_records_updated": len(existing)}
+                "unresolved_decisions": unresolved, "history_rewritten": False, "claim_records_updated": len(existing)}
 
     def read(self, *, kind=None, subject=None, administrative=False, limit=10) -> list:
         if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= MAX_RECORDS:

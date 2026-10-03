@@ -18,6 +18,11 @@
 
 [English](README_EN.md) · [三个合成示例](cases) · [v0.2 报告](documentation/V02_REPORT.md) · [评测边界](documentation/EVAL.md)
 
+v0.2.1 修复招聘语句的否定 / 条件 / 转述边界，按项目 Claim 引用跨机会追踪纠正，
+并在三组历史上限前去重。123 项测试通过，原 108 项保持不变。
+模型对照已准备 15 对合成场景；当前配置模型被 CLI 登录接口拒绝，有效输出为零，
+不声明比较结果。见 [补丁报告](documentation/V021_REPORT.md)。
+
 ## v0.2 · Decision Intelligence
 
 v0.1 建立证据安全的职业决策；v0.2 加入可追溯的材料提取、反对理由和重评条件，

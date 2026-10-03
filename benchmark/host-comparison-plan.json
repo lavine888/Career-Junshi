@@ -1,0 +1,337 @@
+{
+  "schema_version": "1",
+  "status": "BLOCKED_MODEL_ACCESS",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "cli_version": "0.153.0",
+  "fixed_clock": "2026-10-03T12:00:00+08:00",
+  "versions": {
+    "v01": "96174ae688071501b219b0343b557299f8d4a9a9",
+    "v02": "d7a257bb415e414437632c350ee54c6922ebe5c2"
+  },
+  "case_count": 15,
+  "planned_responses": 30,
+  "completed_responses": 0,
+  "failure": {
+    "layer": "model access with Codex CLI ChatGPT login",
+    "message": "The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account."
+  },
+  "policy": "No automatic model fallback; wait for an explicitly selected or permitted evaluator model. Preserve the same model/reasoning on both versions.",
+  "input_boundary": "Only synthetic raw contexts; no canonical answers or rubric in response prompts; no private context, tools, web, external connectors or memory.",
+  "comparison_boundary": "Skill instructions and selected 1-3 references, not installed-skill discovery, Python guard execution or real hiring outcomes.",
+  "cases": [
+    {
+      "case_id": "G01",
+      "situation": "不知道投什么",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G01-S1",
+            "source_type": "user_report",
+            "text": "我有三个原型项目。我不知道该投 AI 产品还是量化。还没有投递和面试反馈。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "job"
+    },
+    {
+      "case_id": "G02",
+      "situation": "SWE转AI产品",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G02-S1",
+            "source_type": "resume",
+            "text": "SWE背景；做过工程项目。个人需求优先级与产品评测决策尚未整理。"
+          },
+          {
+            "source_id": "G02-S2",
+            "source_type": "user_report",
+            "text": "想转AI产品。能用于补证的预算是七天，不希望重新开大项目。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "job"
+    },
+    {
+      "case_id": "G03",
+      "situation": "这份JD值得投吗",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G03-S1",
+            "source_type": "jd",
+            "text": "Requirements: LLM evaluation and ability to explain architecture tradeoffs. Production experience preferred."
+          },
+          {
+            "source_id": "G03-S2",
+            "source_type": "project_readme",
+            "text": "Evaluation prototype; scoped supporting evaluation artifact provided. This artifact is not a production deployment or a personal authorship receipt."
+          },
+          {
+            "source_id": "G03-S3",
+            "source_type": "user_report",
+            "text": "个人评测贡献范围已说明，时间有限，问是否值得小批投。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "job"
+    },
+    {
+      "case_id": "G04",
+      "situation": "原型被写成production",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G04-S1",
+            "source_type": "resume",
+            "text": "Built a production AI assistant with 30% improvement."
+          },
+          {
+            "source_id": "G04-S2",
+            "source_type": "project_readme",
+            "text": "Local prototype only. No production users, comparison baseline or measurement receipt provided."
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "positioning"
+    },
+    {
+      "case_id": "G05",
+      "situation": "团队主导权",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G05-S1",
+            "source_type": "resume",
+            "text": "Led a four-person team."
+          },
+          {
+            "source_id": "G05-S2",
+            "source_type": "user_report",
+            "text": "我负责评测案例。系统由四人协作完成，没有给出主导决策或独立实现证据。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "positioning"
+    },
+    {
+      "case_id": "G06",
+      "situation": "明天一面今晚做什么",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G06-S1",
+            "source_type": "resume",
+            "text": "Built production agent prototype."
+          },
+          {
+            "source_id": "G06-S2",
+            "source_type": "jd",
+            "text": "AI PM: evaluation, architecture tradeoffs, user problem framing."
+          },
+          {
+            "source_id": "G06-S3",
+            "source_type": "user_report",
+            "text": "今天为固定场景时间2026-10-03 12:00 +08:00，明天下午面试。项目是团队原型，今晚准备预算有限。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "interview"
+    },
+    {
+      "case_id": "G07",
+      "situation": "被拒且技术深度反馈",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G07-S1",
+            "source_type": "hr_chat",
+            "text": "本次未通过，技术深度还需要加强。"
+          },
+          {
+            "source_id": "G07-S2",
+            "source_type": "interview_recap",
+            "text": "只有这一次明确反馈，没有其他同类技术拒信；完整评分和岗位比较未知。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "recruiting"
+    },
+    {
+      "case_id": "G08",
+      "situation": "HR五天没有回",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G08-S1",
+            "source_type": "hr_chat",
+            "text": "流程还在推进，有进展联系您。"
+          },
+          {
+            "source_id": "G08-S2",
+            "source_type": "user_report",
+            "text": "终面后五个日历天没回。节假日、承诺日期、工作日数和集中校招情况不清楚，没有其他通过通知。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "recruiting"
+    },
+    {
+      "case_id": "G09",
+      "situation": "两个Offer按目标选择",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G09-S1",
+            "source_type": "user_report",
+            "text": "我的目标优先学习和ownership。地点与薪酬底线均已确认满足。偏好权重：learning 3, ownership 4, compensation 2, brand 1。"
+          },
+          {
+            "source_id": "G09-S2",
+            "source_type": "offer",
+            "text": "A：learning 4, ownership 5, compensation 3, brand 3；B：learning 3, ownership 2, compensation 5, brand 5。这是用户主观评级；经理和实际职责还需核实。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "offer"
+    },
+    {
+      "case_id": "G10",
+      "situation": "谈薪但没有书面条款",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G10-S1",
+            "source_type": "hr_chat",
+            "text": "我们有意向发offer，具体条件再沟通。"
+          },
+          {
+            "source_id": "G10-S2",
+            "source_type": "user_report",
+            "text": "没有书面薪酬、奖金规则或期限，也没有另一份offer。我想先谈薪。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "offer"
+    },
+    {
+      "case_id": "G11",
+      "situation": "方向与硬约束冲突",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G11-S1",
+            "source_type": "user_report",
+            "text": "想尝试量化，但不能搬家，每周只剩10小时。补齐研究和实盘证据估计至少30天，原资料不能当实盘收益。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "job"
+    },
+    {
+      "case_id": "G12",
+      "situation": "项目强但定位弱",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G12-S1",
+            "source_type": "project_readme",
+            "text": "Scoped evaluation project artifact and personal contribution supplied; no adoption or revenue claim."
+          },
+          {
+            "source_id": "G12-S2",
+            "source_type": "resume",
+            "text": "LLM, Python, evaluation, tools."
+          },
+          {
+            "source_id": "G12-S3",
+            "source_type": "user_report",
+            "text": "项目能讲清，但简历只是罗列技术，没有对齐岗位任务。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "positioning"
+    },
+    {
+      "case_id": "G13",
+      "situation": "简历强但面试解释薄",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "G13-S1",
+            "source_type": "resume",
+            "text": "Led architecture decisions."
+          },
+          {
+            "source_id": "G13-S2",
+            "source_type": "interview_recap",
+            "text": "我说不清基线，架构选型是队友决定的。技术面临近，需要划清个人贡献。"
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00",
+        "origin": "synthetic; no real people or recruiting outcomes"
+      },
+      "mode": "interview"
+    },
+    {
+      "case_id": "H01",
+      "situation": "HR明确说未通过，我能理解成通过了吗？今晚还要为下一轮准备吗？",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "H01-HR",
+            "source_type": "hr_chat",
+            "text": "You did not pass this round. No next interview is scheduled."
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00"
+      },
+      "mode": "recruiting"
+    },
+    {
+      "case_id": "H02",
+      "situation": "听说我通过了，HR又说如果审批通过才发offer。我能停止其他投递吗？",
+      "available_context": {
+        "materials": [
+          {
+            "source_id": "H02-HEARSAY",
+            "source_type": "user_report",
+            "text": "同事说听说我通过了。"
+          },
+          {
+            "source_id": "H02-HR",
+            "source_type": "hr_chat",
+            "text": "If headcount and compensation are approved, we would issue an offer. Approval is still pending."
+          }
+        ],
+        "as_of": "2026-10-03T12:00:00+08:00"
+      },
+      "mode": "recruiting"
+    }
+  ]
+}
