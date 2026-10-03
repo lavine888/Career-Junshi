@@ -1,0 +1,1724 @@
+{
+  "run_id": "career-junshi-v01-v021-blind-20261003",
+  "date": "2026-10-03",
+  "timezone": "Asia/Shanghai",
+  "fixed_case_clock": "2026-10-03T12:00:00+08:00",
+  "evaluation_commit": "b30e82c12b3231bc427ba7de3a4ef2dba0fa5ef9",
+  "snapshots": {
+    "v01": "96174ae688071501b219b0343b557299f8d4a9a9",
+    "v021": "b30e82c12b3231bc427ba7de3a4ef2dba0fa5ef9"
+  },
+  "cli_version": "0.153.0",
+  "generation_model": "gpt-5.6-sol",
+  "reasoning_effort": "high",
+  "timeout_seconds": 240,
+  "parallelism": 3,
+  "case_count": 15,
+  "planned_generations": 30,
+  "tools": "disabled: shell, web, apps, multi_agent, remote_plugin, hooks, memories; user config ignored; project document budget 0",
+  "scope": "Skill instructions plus the same 1-3 routed references; no Python guard or installed-skill execution",
+  "invariants": [
+    "same model",
+    "same reasoning",
+    "same synthetic case",
+    "same surrounding instruction",
+    "same reference paths and count budget (up to 3; content from each frozen snapshot)",
+    "same timeout",
+    "same tool configuration"
+  ],
+  "prompts": [
+    {
+      "case_id": "G01",
+      "skill_version": "v01",
+      "path": "prompts/G01-v01.txt",
+      "sha256": "a6302c4aa32d07e0e276226d6046800609f16c886014224f8255eb24191ec8d0",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 5897
+    },
+    {
+      "case_id": "G01",
+      "skill_version": "v021",
+      "path": "prompts/G01-v021.txt",
+      "sha256": "d3c6b2f2cc684f3f27c4b9719f9dbb9787c52c23a74469ace5aa53672378a356",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6927
+    },
+    {
+      "case_id": "G02",
+      "skill_version": "v01",
+      "path": "prompts/G02-v01.txt",
+      "sha256": "ab0eafa7f268cab699793562113d283c5b1cee01a1ebfc33185f6dcab50f6e6a",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 5897
+    },
+    {
+      "case_id": "G02",
+      "skill_version": "v021",
+      "path": "prompts/G02-v021.txt",
+      "sha256": "800001a087d4b8a9b2c73add3716ae45c5b927db08fbb8f27d11f1a5e3958257",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6927
+    },
+    {
+      "case_id": "G03",
+      "skill_version": "v01",
+      "path": "prompts/G03-v01.txt",
+      "sha256": "3c17f29dc50e21e1ef652112cf5eb2081d0896707a9fdd3aabedecce7fc187d8",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 5897
+    },
+    {
+      "case_id": "G03",
+      "skill_version": "v021",
+      "path": "prompts/G03-v021.txt",
+      "sha256": "754aa9335dc5ef0593e7f554d3473a4f691e32de621f51baa9fcd723905c8a35",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6927
+    },
+    {
+      "case_id": "G04",
+      "skill_version": "v01",
+      "path": "prompts/G04-v01.txt",
+      "sha256": "87937b5bb936cceb91d21c1dc20b6ed7181616f1a28c05dd2a089ad6d34d88d8",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/resume.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6259
+    },
+    {
+      "case_id": "G04",
+      "skill_version": "v021",
+      "path": "prompts/G04-v021.txt",
+      "sha256": "0a589dcaf391b07610271fef68528c62dcab25d3683c656695ae9f426abe93d8",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/resume.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 7289
+    },
+    {
+      "case_id": "G05",
+      "skill_version": "v01",
+      "path": "prompts/G05-v01.txt",
+      "sha256": "e6e81c82e545aa9c7c51ac4a38bff699c5333b9f42f62a4a4959428a49648808",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/resume.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6259
+    },
+    {
+      "case_id": "G05",
+      "skill_version": "v021",
+      "path": "prompts/G05-v021.txt",
+      "sha256": "e1435fec01cf42c8d24cbb6f6f6accda3a3790b05171ac1dc5fcf89f637e5ddc",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/resume.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 7289
+    },
+    {
+      "case_id": "G06",
+      "skill_version": "v01",
+      "path": "prompts/G06-v01.txt",
+      "sha256": "9b81d39507fb06f813de46e2ed95ceb306c654128983038154602e6bc8ba974c",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/interview.md",
+        "references/practical/project-defense.md"
+      ],
+      "reference_count": 3,
+      "document_characters": 7240
+    },
+    {
+      "case_id": "G06",
+      "skill_version": "v021",
+      "path": "prompts/G06-v021.txt",
+      "sha256": "cc4cc8112a19684a2a7276fd74228f2c2edb97b1c3e669f42ec22157356203cd",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/interview.md",
+        "references/practical/project-defense.md"
+      ],
+      "reference_count": 3,
+      "document_characters": 8270
+    },
+    {
+      "case_id": "G07",
+      "skill_version": "v01",
+      "path": "prompts/G07-v01.txt",
+      "sha256": "20d4ce9357fe1fc0ae2dfad8f778cace8363f323a7be381a6af8125747a78974",
+      "reference_paths": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 5581
+    },
+    {
+      "case_id": "G07",
+      "skill_version": "v021",
+      "path": "prompts/G07-v021.txt",
+      "sha256": "832fb8868b358cbae52420a510223ad923e73fd2a61a1ea0ec80996e0386cb1e",
+      "reference_paths": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6611
+    },
+    {
+      "case_id": "G08",
+      "skill_version": "v01",
+      "path": "prompts/G08-v01.txt",
+      "sha256": "a0e816330245b2cc5b03485256de93c99b081f25de39bf296b6ab3307ab77846",
+      "reference_paths": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 5581
+    },
+    {
+      "case_id": "G08",
+      "skill_version": "v021",
+      "path": "prompts/G08-v021.txt",
+      "sha256": "bae5dba9978c6275180afa1a2d7379a9ebe60aad993422fa7864d9bc3fe87c49",
+      "reference_paths": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6611
+    },
+    {
+      "case_id": "G09",
+      "skill_version": "v01",
+      "path": "prompts/G09-v01.txt",
+      "sha256": "0894aaac1ce23cf01e5c6fd06a1956dd2e0fbc80fdbc4d3619bc21242048d68c",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/knowledge/06-offer-evaluation.md",
+        "references/practical/offer.md"
+      ],
+      "reference_count": 3,
+      "document_characters": 6929
+    },
+    {
+      "case_id": "G09",
+      "skill_version": "v021",
+      "path": "prompts/G09-v021.txt",
+      "sha256": "2a94875aebc0f6932f1357a1fc14fd3b6df09bd41db51315b6106868a798e500",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/knowledge/06-offer-evaluation.md",
+        "references/practical/offer.md"
+      ],
+      "reference_count": 3,
+      "document_characters": 7959
+    },
+    {
+      "case_id": "G10",
+      "skill_version": "v01",
+      "path": "prompts/G10-v01.txt",
+      "sha256": "98ad47d0a4a34675188b5bded928593d03f793a9242f0585f279e62c1de6f7be",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/knowledge/06-offer-evaluation.md",
+        "references/practical/offer.md"
+      ],
+      "reference_count": 3,
+      "document_characters": 6929
+    },
+    {
+      "case_id": "G10",
+      "skill_version": "v021",
+      "path": "prompts/G10-v021.txt",
+      "sha256": "5a37ae66f5d0cde1ce8829712f7e1cfbef9987c3c811a61993d3d495a8d4dd65",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/knowledge/06-offer-evaluation.md",
+        "references/practical/offer.md"
+      ],
+      "reference_count": 3,
+      "document_characters": 7959
+    },
+    {
+      "case_id": "G11",
+      "skill_version": "v01",
+      "path": "prompts/G11-v01.txt",
+      "sha256": "02726fef837fb6c53348e5c80273c5bf8d78f37cdac33111463bdd9c6a3a72ec",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 5897
+    },
+    {
+      "case_id": "G11",
+      "skill_version": "v021",
+      "path": "prompts/G11-v021.txt",
+      "sha256": "75ce1f5758d2eaa2dba1e2fb30d830e8d191507bfa75f798eb6a0849e5c95601",
+      "reference_paths": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6927
+    },
+    {
+      "case_id": "G12",
+      "skill_version": "v01",
+      "path": "prompts/G12-v01.txt",
+      "sha256": "866fa04b86d3e1cd890dbd150c086b4e6c9f102c89c37bea2203460bfc5bae9f",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/resume.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6259
+    },
+    {
+      "case_id": "G12",
+      "skill_version": "v021",
+      "path": "prompts/G12-v021.txt",
+      "sha256": "5e9c7ef87115ffaa8cda9e2e73cf752ead7e6c972c8392964a769697ea34b918",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/resume.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 7289
+    },
+    {
+      "case_id": "G13",
+      "skill_version": "v01",
+      "path": "prompts/G13-v01.txt",
+      "sha256": "108fd77e071b2925660b89cf4c30be9983abe4de8c5b94f8e5974472a75796c4",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/interview.md",
+        "references/practical/project-defense.md"
+      ],
+      "reference_count": 3,
+      "document_characters": 7240
+    },
+    {
+      "case_id": "G13",
+      "skill_version": "v021",
+      "path": "prompts/G13-v021.txt",
+      "sha256": "12f6b88fb4328c95b40a48eeba2fe29fe9c2191f9a982fcf6beb2dbdbd01df35",
+      "reference_paths": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/interview.md",
+        "references/practical/project-defense.md"
+      ],
+      "reference_count": 3,
+      "document_characters": 8270
+    },
+    {
+      "case_id": "H01",
+      "skill_version": "v01",
+      "path": "prompts/H01-v01.txt",
+      "sha256": "dcbb728dcc8f1bb631afd37755b063b85a3a5b1dad3f923aba3e9db15084f035",
+      "reference_paths": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 5581
+    },
+    {
+      "case_id": "H01",
+      "skill_version": "v021",
+      "path": "prompts/H01-v021.txt",
+      "sha256": "ccbf2c328ec0f65214b4ef09ddc7ed385eae4d5d7e0bdb8fdf8049e2c9ddb840",
+      "reference_paths": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6611
+    },
+    {
+      "case_id": "H02",
+      "skill_version": "v01",
+      "path": "prompts/H02-v01.txt",
+      "sha256": "edd1a2b7ccfd759eaf4c026d061f7a1ae3acc7cd6e45bd3a00f3cd85f81a139b",
+      "reference_paths": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 5581
+    },
+    {
+      "case_id": "H02",
+      "skill_version": "v021",
+      "path": "prompts/H02-v021.txt",
+      "sha256": "e54cbde7eba4b78de41df0a14adadcc06ffd1821169c9e9a69a3e1429e69c734",
+      "reference_paths": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "reference_count": 2,
+      "document_characters": 6611
+    }
+  ],
+  "case_sha256": "6c7141e532dcf8395d78e078e93e812811cd54ccb0c9fd1621f7296931da94f4",
+  "generation_attempts": [
+    {
+      "attempt_id": "G01-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:08:44.649112+00:00",
+      "raw_output_path": "raw/G01-v01.json",
+      "prompt_sha256": "a6302c4aa32d07e0e276226d6046800609f16c886014224f8255eb24191ec8d0",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17615,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 444,
+        "reasoning_output_tokens": 67
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:09:06.740271+00:00",
+      "seconds": 22.08,
+      "raw_sha256": "e9bb973298af018a3c09c25ca79fee0fb8669ca1d48109e1394c6a5ba2c00cbf",
+      "case_id": "G01",
+      "skill_version": "v01",
+      "response_characters": 478
+    },
+    {
+      "attempt_id": "G02-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:08:44.650115+00:00",
+      "raw_output_path": "raw/G02-v021.json",
+      "prompt_sha256": "800001a087d4b8a9b2c73add3716ae45c5b927db08fbb8f27d11f1a5e3958257",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18231,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 426,
+        "reasoning_output_tokens": 73
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:09:15.904431+00:00",
+      "seconds": 31.25,
+      "raw_sha256": "1d163a583523c1c501899f23b81d8877d28a6a6b994af433da8b03ed2e3d5b85",
+      "case_id": "G02",
+      "skill_version": "v021",
+      "response_characters": 431
+    },
+    {
+      "attempt_id": "G01-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:08:44.649112+00:00",
+      "raw_output_path": "raw/G01-v021.json",
+      "prompt_sha256": "d3c6b2f2cc684f3f27c4b9719f9dbb9787c52c23a74469ace5aa53672378a356",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18187,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 692,
+        "reasoning_output_tokens": 324
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:09:19.171895+00:00",
+      "seconds": 34.52,
+      "raw_sha256": "a141b903a38f32b1e10556f8c64aea1daf1db8d036447e7415502ea3347d931b",
+      "case_id": "G01",
+      "skill_version": "v021",
+      "response_characters": 462
+    },
+    {
+      "attempt_id": "G03-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:09:15.905432+00:00",
+      "raw_output_path": "raw/G03-v01.json",
+      "prompt_sha256": "3c17f29dc50e21e1ef652112cf5eb2081d0896707a9fdd3aabedecce7fc187d8",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16600,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 447,
+        "reasoning_output_tokens": 109
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:09:46.712980+00:00",
+      "seconds": 30.81,
+      "raw_sha256": "8d3f378f88133c8ea0d2634940b97166ab802bad7e5e64d11bd1e13d29d1918f",
+      "case_id": "G03",
+      "skill_version": "v01",
+      "response_characters": 431
+    },
+    {
+      "attempt_id": "G02-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:09:06.741271+00:00",
+      "raw_output_path": "raw/G02-v01.json",
+      "prompt_sha256": "ab0eafa7f268cab699793562113d283c5b1cee01a1ebfc33185f6dcab50f6e6a",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16354,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 588,
+        "reasoning_output_tokens": 226
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:09:48.165880+00:00",
+      "seconds": 41.42,
+      "raw_sha256": "4ea154f03a8d8524eaf96f896b4c2db23dc12668f97df7f69adedebaa9450b04",
+      "case_id": "G02",
+      "skill_version": "v01",
+      "response_characters": 492
+    },
+    {
+      "attempt_id": "G03-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:09:19.172895+00:00",
+      "raw_output_path": "raw/G03-v021.json",
+      "prompt_sha256": "754aa9335dc5ef0593e7f554d3473a4f691e32de621f51baa9fcd723905c8a35",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17172,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 428,
+        "reasoning_output_tokens": 103
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:09:52.774327+00:00",
+      "seconds": 33.61,
+      "raw_sha256": "ba236d2f4b6efb313bbdbcc7950c905034c7d18002363fa9efbd24f580a7fbfc",
+      "case_id": "G03",
+      "skill_version": "v021",
+      "response_characters": 441
+    },
+    {
+      "attempt_id": "G05-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:09:52.775326+00:00",
+      "raw_output_path": "raw/G05-v01.json",
+      "prompt_sha256": "e6e81c82e545aa9c7c51ac4a38bff699c5333b9f42f62a4a4959428a49648808",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16671,
+        "cached_input_tokens": 6528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 543,
+        "reasoning_output_tokens": 241
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:10:13.155701+00:00",
+      "seconds": 20.38,
+      "raw_sha256": "03ffdb2586bc61070f007d29658d6f4cde3fe13215b9f930783b4d0bf8e71c4c",
+      "case_id": "G05",
+      "skill_version": "v01",
+      "response_characters": 388
+    },
+    {
+      "attempt_id": "G04-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:09:46.713981+00:00",
+      "raw_output_path": "raw/G04-v021.json",
+      "prompt_sha256": "0a589dcaf391b07610271fef68528c62dcab25d3683c656695ae9f426abe93d8",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17238,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 391,
+        "reasoning_output_tokens": 95
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:10:19.448897+00:00",
+      "seconds": 32.73,
+      "raw_sha256": "b7d892c3b5188a82db65c5d2a9d94ddc006bd7540df4dcf900420308ccef84e6",
+      "case_id": "G04",
+      "skill_version": "v021",
+      "response_characters": 431
+    },
+    {
+      "attempt_id": "G04-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:09:48.166889+00:00",
+      "raw_output_path": "raw/G04-v01.json",
+      "prompt_sha256": "87937b5bb936cceb91d21c1dc20b6ed7181616f1a28c05dd2a089ad6d34d88d8",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16666,
+        "cached_input_tokens": 13824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 506,
+        "reasoning_output_tokens": 198
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:10:45.593706+00:00",
+      "seconds": 57.42,
+      "raw_sha256": "1120492304edaacdadf0968aa4751d81cf5d4fff6aea2b6bfd29660830037ada",
+      "case_id": "G04",
+      "skill_version": "v01",
+      "response_characters": 407
+    },
+    {
+      "attempt_id": "G05-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:10:13.156700+00:00",
+      "raw_output_path": "raw/G05-v021.json",
+      "prompt_sha256": "e1435fec01cf42c8d24cbb6f6f6accda3a3790b05171ac1dc5fcf89f637e5ddc",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17243,
+        "cached_input_tokens": 13824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 379,
+        "reasoning_output_tokens": 76
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:10:52.140462+00:00",
+      "seconds": 38.98,
+      "raw_sha256": "0e86e290b6e36e5b0e26b16d37c85d31521cf979d529771b246eab86aa7f51d5",
+      "case_id": "G05",
+      "skill_version": "v021",
+      "response_characters": 382
+    },
+    {
+      "attempt_id": "G06-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:10:19.449906+00:00",
+      "raw_output_path": "raw/G06-v021.json",
+      "prompt_sha256": "cc4cc8112a19684a2a7276fd74228f2c2edb97b1c3e669f42ec22157356203cd",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17528,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 459,
+        "reasoning_output_tokens": 122
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:11:01.175008+00:00",
+      "seconds": 41.72,
+      "raw_sha256": "d8e89626015991b541b8a38897dd50c8f104f0708f055503b794e36b81279fef",
+      "case_id": "G06",
+      "skill_version": "v021",
+      "response_characters": 458
+    },
+    {
+      "attempt_id": "G07-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:10:52.140462+00:00",
+      "raw_output_path": "raw/G07-v01.json",
+      "prompt_sha256": "20d4ce9357fe1fc0ae2dfad8f778cace8363f323a7be381a6af8125747a78974",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16526,
+        "cached_input_tokens": 13824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 505,
+        "reasoning_output_tokens": 170
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:11:24.636603+00:00",
+      "seconds": 32.5,
+      "raw_sha256": "e8aea1703bbfb2ac649d405b46142a891c789bcb200ae987fc88ef423398a41b",
+      "case_id": "G07",
+      "skill_version": "v01",
+      "response_characters": 423
+    },
+    {
+      "attempt_id": "G07-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:11:01.176007+00:00",
+      "raw_output_path": "raw/G07-v021.json",
+      "prompt_sha256": "832fb8868b358cbae52420a510223ad923e73fd2a61a1ea0ec80996e0386cb1e",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17098,
+        "cached_input_tokens": 6528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 475,
+        "reasoning_output_tokens": 132
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:11:28.131837+00:00",
+      "seconds": 26.95,
+      "raw_sha256": "302aaa664ecd43551540f4e183badef1a94a1479643f8b5ad14766bf4262fe20",
+      "case_id": "G07",
+      "skill_version": "v021",
+      "response_characters": 432
+    },
+    {
+      "attempt_id": "G06-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:10:45.594708+00:00",
+      "raw_output_path": "raw/G06-v01.json",
+      "prompt_sha256": "9b81d39507fb06f813de46e2ed95ceb306c654128983038154602e6bc8ba974c",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18053,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 466,
+        "reasoning_output_tokens": 112
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:11:36.848513+00:00",
+      "seconds": 51.25,
+      "raw_sha256": "00346a8a8b862e7aa940634ab33e3c8d479ff9657b5d9e4ab3fcef6f8fd5d39e",
+      "case_id": "G06",
+      "skill_version": "v01",
+      "response_characters": 488
+    },
+    {
+      "attempt_id": "G08-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:11:28.132837+00:00",
+      "raw_output_path": "raw/G08-v01.json",
+      "prompt_sha256": "a0e816330245b2cc5b03485256de93c99b081f25de39bf296b6ab3307ab77846",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16535,
+        "cached_input_tokens": 13824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 434,
+        "reasoning_output_tokens": 130
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:11:57.600306+00:00",
+      "seconds": 29.45,
+      "raw_sha256": "f1cee4e132cee1f0a3c5fa5fcab95c53baec0eee1dcf2e281fb7f88dfb333e16",
+      "case_id": "G08",
+      "skill_version": "v01",
+      "response_characters": 400
+    },
+    {
+      "attempt_id": "G09-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:11:36.849020+00:00",
+      "raw_output_path": "raw/G09-v01.json",
+      "prompt_sha256": "0894aaac1ce23cf01e5c6fd06a1956dd2e0fbc80fdbc4d3619bc21242048d68c",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16823,
+        "cached_input_tokens": 13824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 413,
+        "reasoning_output_tokens": 92
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:12:08.621231+00:00",
+      "seconds": 31.78,
+      "raw_sha256": "420881c8b6702a12bd51f4e658cc9ce5dca7eb78d186c2ba5f050bc378924bf6",
+      "case_id": "G09",
+      "skill_version": "v01",
+      "response_characters": 441
+    },
+    {
+      "attempt_id": "G08-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:11:24.637604+00:00",
+      "raw_output_path": "raw/G08-v021.json",
+      "prompt_sha256": "bae5dba9978c6275180afa1a2d7379a9ebe60aad993422fa7864d9bc3fe87c49",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17107,
+        "cached_input_tokens": 6528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 410,
+        "reasoning_output_tokens": 101
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:12:13.220086+00:00",
+      "seconds": 48.58,
+      "raw_sha256": "8874d121c96e9938e0d67ac773c38fcc8e68d57bc7ebd40a8f097944cd956987",
+      "case_id": "G08",
+      "skill_version": "v021",
+      "response_characters": 391
+    },
+    {
+      "attempt_id": "G10-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:12:13.221691+00:00",
+      "raw_output_path": "raw/G10-v01.json",
+      "prompt_sha256": "98ad47d0a4a34675188b5bded928593d03f793a9242f0585f279e62c1de6f7be",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16770,
+        "cached_input_tokens": 11264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 431,
+        "reasoning_output_tokens": 99
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:12:40.837573+00:00",
+      "seconds": 27.62,
+      "raw_sha256": "59b94b603fd071d654984d7f4a2fd7ba9d24c3b7276e518974acea2b70811ff6",
+      "case_id": "G10",
+      "skill_version": "v01",
+      "response_characters": 418
+    },
+    {
+      "attempt_id": "G09-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:11:57.601304+00:00",
+      "raw_output_path": "raw/G09-v021.json",
+      "prompt_sha256": "2a94875aebc0f6932f1357a1fc14fd3b6df09bd41db51315b6106868a798e500",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17395,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 397,
+        "reasoning_output_tokens": 89
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:12:54.817485+00:00",
+      "seconds": 57.2,
+      "raw_sha256": "b039fd780f6fe0a38de4f3aecbc8e2b91904509f11458fe9590fd206917c3dab",
+      "case_id": "G09",
+      "skill_version": "v021",
+      "response_characters": 414
+    },
+    {
+      "attempt_id": "G10-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:12:08.622239+00:00",
+      "raw_output_path": "raw/G10-v021.json",
+      "prompt_sha256": "5a37ae66f5d0cde1ce8829712f7e1cfbef9987c3c811a61993d3d495a8d4dd65",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17342,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 545,
+        "reasoning_output_tokens": 182
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:13:14.557295+00:00",
+      "seconds": 65.94,
+      "raw_sha256": "df3dd6529891964fd6738344196007253cfbf12e6aa16e2feee4b2a8a36958b3",
+      "case_id": "G10",
+      "skill_version": "v021",
+      "response_characters": 490
+    },
+    {
+      "attempt_id": "G11-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:12:54.819492+00:00",
+      "raw_output_path": "raw/G11-v021.json",
+      "prompt_sha256": "75ce1f5758d2eaa2dba1e2fb30d830e8d191507bfa75f798eb6a0849e5c95601",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16899,
+        "cached_input_tokens": 6528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 373,
+        "reasoning_output_tokens": 54
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:13:21.683061+00:00",
+      "seconds": 26.86,
+      "raw_sha256": "133bf8520ae336bb5404acad848ea725f43a9867907d42ce97d1a441465abae8",
+      "case_id": "G11",
+      "skill_version": "v021",
+      "response_characters": 388
+    },
+    {
+      "attempt_id": "G11-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:12:40.838569+00:00",
+      "raw_output_path": "raw/G11-v01.json",
+      "prompt_sha256": "02726fef837fb6c53348e5c80273c5bf8d78f37cdac33111463bdd9c6a3a72ec",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16535,
+        "cached_input_tokens": 13824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 452,
+        "reasoning_output_tokens": 118
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:13:41.431952+00:00",
+      "seconds": 60.59,
+      "raw_sha256": "dfeb851d1480659e5681f5d7f179a527d8d1e2e60b99264dec9ee8ac8be6908d",
+      "case_id": "G11",
+      "skill_version": "v01",
+      "response_characters": 412
+    },
+    {
+      "attempt_id": "G12-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:13:21.684060+00:00",
+      "raw_output_path": "raw/G12-v01.json",
+      "prompt_sha256": "866fa04b86d3e1cd890dbd150c086b4e6c9f102c89c37bea2203460bfc5bae9f",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16704,
+        "cached_input_tokens": 13824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 454,
+        "reasoning_output_tokens": 121
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:14:00.005476+00:00",
+      "seconds": 38.31,
+      "raw_sha256": "c038c32e021eb54e0364a00e518916155ed31ded13cb8c4d9669bdbe13bb9804",
+      "case_id": "G12",
+      "skill_version": "v01",
+      "response_characters": 418
+    },
+    {
+      "attempt_id": "G12-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:13:14.558297+00:00",
+      "raw_output_path": "raw/G12-v021.json",
+      "prompt_sha256": "5e9c7ef87115ffaa8cda9e2e73cf752ead7e6c972c8392964a769697ea34b918",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17068,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 680,
+        "reasoning_output_tokens": 364
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:14:19.487891+00:00",
+      "seconds": 64.92,
+      "raw_sha256": "09a435a178ad38f67118b6119728f469a4985160e88a42b227a7481e919181f7",
+      "case_id": "G12",
+      "skill_version": "v021",
+      "response_characters": 417
+    },
+    {
+      "attempt_id": "G13-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:14:00.006059+00:00",
+      "raw_output_path": "raw/G13-v021.json",
+      "prompt_sha256": "12f6b88fb4328c95b40a48eeba2fe29fe9c2191f9a982fcf6beb2dbdbd01df35",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17484,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 489,
+        "reasoning_output_tokens": 133
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:14:31.797239+00:00",
+      "seconds": 31.8,
+      "raw_sha256": "ebf097e65c43d7b5414b7e0db3eb4c10dfd4dac2f8824302f268a4d6f1653285",
+      "case_id": "G13",
+      "skill_version": "v021",
+      "response_characters": 459
+    },
+    {
+      "attempt_id": "G13-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:13:41.432954+00:00",
+      "raw_output_path": "raw/G13-v01.json",
+      "prompt_sha256": "108fd77e071b2925660b89cf4c30be9983abe4de8c5b94f8e5974472a75796c4",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18009,
+        "cached_input_tokens": 6528,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 408,
+        "reasoning_output_tokens": 52
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:14:47.713780+00:00",
+      "seconds": 66.28,
+      "raw_sha256": "9d653daf4c3603a7990ae3a78970c94257f965f65709db46d4777761ca588893",
+      "case_id": "G13",
+      "skill_version": "v01",
+      "response_characters": 450
+    },
+    {
+      "attempt_id": "H02-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:14:47.714289+00:00",
+      "raw_output_path": "raw/H02-v01.json",
+      "prompt_sha256": "edd1a2b7ccfd759eaf4c026d061f7a1ae3acc7cd6e45bd3a00f3cd85f81a139b",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16523,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 355,
+        "reasoning_output_tokens": 47
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:15:35.353311+00:00",
+      "seconds": 47.64,
+      "raw_sha256": "c75c8513fe7ff6323fc7c2ed4e24742eb58df64a9e494d8539223383cdb46772",
+      "case_id": "H02",
+      "skill_version": "v01",
+      "response_characters": 406
+    },
+    {
+      "attempt_id": "H01-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:14:19.488892+00:00",
+      "raw_output_path": "raw/H01-v021.json",
+      "prompt_sha256": "ccbf2c328ec0f65214b4ef09ddc7ed385eae4d5d7e0bdb8fdf8049e2c9ddb840",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18150,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 286,
+        "reasoning_output_tokens": 0
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:15:44.354909+00:00",
+      "seconds": 84.88,
+      "raw_sha256": "e52b9d6b2522c3be37c9af241087e8a56d263c524da9c1d75f16f2d28015f6a2",
+      "case_id": "H01",
+      "skill_version": "v021",
+      "response_characters": 374
+    },
+    {
+      "attempt_id": "H01-v01",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:14:31.798239+00:00",
+      "raw_output_path": "raw/H01-v01.json",
+      "prompt_sha256": "dcbb728dcc8f1bb631afd37755b063b85a3a5b1dad3f923aba3e9db15084f035",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16481,
+        "cached_input_tokens": 11264,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 349,
+        "reasoning_output_tokens": 51
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:16:01.122114+00:00",
+      "seconds": 89.33,
+      "raw_sha256": "efe8984426e5386a0276aa7ce6604f818b1094c4894b9398fb356f9c310a2142",
+      "case_id": "H01",
+      "skill_version": "v01",
+      "response_characters": 376
+    },
+    {
+      "attempt_id": "H02-v021",
+      "model": "gpt-5.6-sol",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 240
+      },
+      "started_at": "2026-10-03T06:15:35.354310+00:00",
+      "raw_output_path": "raw/H02-v021.json",
+      "prompt_sha256": "e54cbde7eba4b78de41df0a14adadcc06ffd1821169c9e9a69a3e1429e69c734",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18192,
+        "cached_input_tokens": 14848,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 403,
+        "reasoning_output_tokens": 70
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:16:03.199790+00:00",
+      "seconds": 27.84,
+      "raw_sha256": "4c3a1bffcf5b471914df7c28ce22faa573f8ce3326a7a8b589d3fb8a09f97191",
+      "case_id": "H02",
+      "skill_version": "v021",
+      "response_characters": 459
+    }
+  ],
+  "probe_attempts": [
+    {
+      "model": "gpt-5.6-sol",
+      "started_at": "2026-10-03T06:05:17.900630+00:00",
+      "completed_at": "2026-10-03T06:05:30.814930+00:00",
+      "status": "AVAILABLE",
+      "error": [],
+      "exit_code": 0,
+      "response": "READY"
+    }
+  ],
+  "prior_blocker": {
+    "model": "gpt-6.1-sol",
+    "status": "MODEL_ERROR",
+    "valid_responses": 0,
+    "message": "The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account."
+  },
+  "coverage_gaps": [
+    "No supplied historical claim_refs or corrected decisions: cross-opportunity Claim identity is not assessable in this fixed set.",
+    "No supplied historical observations: deduplication before three-pair cap is not assessable in this fixed set."
+  ],
+  "status": "MODEL-EVALUATED",
+  "generation_started_at": "2026-10-03T06:08:44.630035+00:00",
+  "generation_completed_at": "2026-10-03T06:16:03.202792+00:00",
+  "valid_generations": 30,
+  "blind_packet_sha256": "6594dacfc0707b0ddfa6e7afe2ababb7c656951160c9e87cb398a3dff2e21050",
+  "mapping_commitment_sha256": "d9ac1e7858226c6190e61f94f72f94a0bc571f7a5724a2c3561b03ff3532a6a2",
+  "rubric_sha256": "48f9aa0167d4b0264a69fb978d26ab813e26ca26e85c66b28f7e77b6205c3bd6",
+  "blinded_at": "2026-10-03T06:16:38.219054+00:00",
+  "reviewer_model": "gpt-6-astra",
+  "reviewer_reasoning_effort": "high",
+  "reviewer_access_probe": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "high",
+    "started_at": "2026-10-03T06:08:50.280430+00:00",
+    "completed_at": "2026-10-03T06:09:00.097939+00:00",
+    "status": "AVAILABLE",
+    "error": [],
+    "response": "READY"
+  },
+  "review_method": "Different model, fresh ephemeral context for every pair; reviewer sees only case, rubric, A and B. No mapping, snapshots, reports or implementation history.",
+  "review_started_at": "2026-10-03T06:16:38.701895+00:00",
+  "review_attempts": [
+    {
+      "attempt_id": "review-G03",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:16:38.864427+00:00",
+      "raw_output_path": "reviews/review-G03.json",
+      "prompt_sha256": "045d074336b133dc372b6b231f2829f17a0c17f7c0703efc808217306f488dbf",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16965,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1527,
+        "reasoning_output_tokens": 108
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:17:48.354853+00:00",
+      "seconds": 69.5,
+      "raw_sha256": "f1f50833231a2b100f3f18e1635eec7fecb01289efee1b4b109d180631c98197",
+      "case_id": "G03"
+    },
+    {
+      "attempt_id": "review-G01",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:16:38.863432+00:00",
+      "raw_output_path": "reviews/review-G01.json",
+      "prompt_sha256": "cbcc34cc8af3d0e3fbff55e4184b71c9678a7d2146b93d49c99c0eb8beb0361d",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18275,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1660,
+        "reasoning_output_tokens": 287
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:17:56.253717+00:00",
+      "seconds": 77.39,
+      "raw_sha256": "c6e77a521b045dd1d8267819131cc38a423fc09317881d3b813959843af8277e",
+      "case_id": "G01"
+    },
+    {
+      "attempt_id": "review-G02",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:16:38.863432+00:00",
+      "raw_output_path": "reviews/review-G02.json",
+      "prompt_sha256": "c182ae29922bb7d3a10cc9ea7e4f418b8c9e930219d762d83db584c9f399ee44",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18283,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1660,
+        "reasoning_output_tokens": 257
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:17:57.011095+00:00",
+      "seconds": 78.16,
+      "raw_sha256": "4de0da4d73fb55525a62c6ad04d89b43a87d07b5149ebfae3aaa2ecd9d5a5da2",
+      "case_id": "G02"
+    },
+    {
+      "attempt_id": "review-G04",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:17:48.355852+00:00",
+      "raw_output_path": "reviews/review-G04.json",
+      "prompt_sha256": "bd3daa9c5798f32bc7f61122cbe9b78e0343fc39aa0c36fbe7c5c3a9ced91b4c",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17039,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1630,
+        "reasoning_output_tokens": 193
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:19:00.240373+00:00",
+      "seconds": 71.88,
+      "raw_sha256": "ef9241eaf52f457bc65bd0e70e46b6075c05cb275cc5dcbe7c4c945e617df228",
+      "case_id": "G04"
+    },
+    {
+      "attempt_id": "review-G05",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:17:56.254716+00:00",
+      "raw_output_path": "reviews/review-G05.json",
+      "prompt_sha256": "25e96e9d3e3f3d21a9840b805ae581e62f03d22dc1040c5a9dbd8c93578cfd36",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17042,
+        "cached_input_tokens": 7936,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1663,
+        "reasoning_output_tokens": 393
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:19:08.826797+00:00",
+      "seconds": 72.58,
+      "raw_sha256": "31b725005842ab015c2a134279d02b8c3e1788fa7edb9ac73b83aeb2a8c67e73",
+      "case_id": "G05"
+    },
+    {
+      "attempt_id": "review-G06",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:17:57.012093+00:00",
+      "raw_output_path": "reviews/review-G06.json",
+      "prompt_sha256": "5a35b15cf774fa5022395f954527a69bff5bbca8cf023a601ad1f9a9ca768496",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17198,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1953,
+        "reasoning_output_tokens": 516
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:19:21.830469+00:00",
+      "seconds": 84.8,
+      "raw_sha256": "fadf5284d930f0b5769255a0b2585769f228f7e5a311f8908a4dda390393398b",
+      "case_id": "G06"
+    },
+    {
+      "attempt_id": "review-G08",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:19:08.827798+00:00",
+      "raw_output_path": "reviews/review-G08.json",
+      "prompt_sha256": "c18356822a6daaa0bc78423347a82a06920e1ec6e7eae27e1f97b9554363146e",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17086,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2220,
+        "reasoning_output_tokens": 660
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:20:06.407929+00:00",
+      "seconds": 57.58,
+      "raw_sha256": "4344a816884cc0233cddde11c005e003192bca5ace94b996483057d8af55e85c",
+      "case_id": "G08"
+    },
+    {
+      "attempt_id": "review-G07",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:19:00.241375+00:00",
+      "raw_output_path": "reviews/review-G07.json",
+      "prompt_sha256": "f16752f010359148ecaba757c37e899cc1ba49ad0537da1d1b1c52457ec14490",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17134,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1721,
+        "reasoning_output_tokens": 292
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:20:19.688740+00:00",
+      "seconds": 79.44,
+      "raw_sha256": "e4a1c78c0e807dfa07b2cfc82c35e224f4c9d1faba9cbfb2837c2aada4ee69e9",
+      "case_id": "G07"
+    },
+    {
+      "attempt_id": "review-G09",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:19:21.831481+00:00",
+      "raw_output_path": "reviews/review-G09.json",
+      "prompt_sha256": "7bac457064400a32c2b9aeff2065141023601a523a13a07608c1f852a3abf64f",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17135,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1681,
+        "reasoning_output_tokens": 261
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:20:37.591587+00:00",
+      "seconds": 75.77,
+      "raw_sha256": "07893835f343d8765e85c2dc53940090a7cc619a49fcd5f2f551b58ab0c7c933",
+      "case_id": "G09"
+    },
+    {
+      "attempt_id": "review-G11",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:20:19.689738+00:00",
+      "raw_output_path": "reviews/review-G11.json",
+      "prompt_sha256": "5938b2876796b519e6eb5badefbf91f62a7e3967c006f8ec5c60b2b7d90a80d8",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17085,
+        "cached_input_tokens": 15232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2189,
+        "reasoning_output_tokens": 673
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:21:18.780129+00:00",
+      "seconds": 59.09,
+      "raw_sha256": "d27d054a576260c41798caef8d22cf2ad7d5917fc69917d3b524f5f530806782",
+      "case_id": "G11"
+    },
+    {
+      "attempt_id": "review-G10",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:20:06.408929+00:00",
+      "raw_output_path": "reviews/review-G10.json",
+      "prompt_sha256": "05c245f3fbe9b52555382c45a88bea16c819f92b27aee018c21d7a0403ee1c7b",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 18261,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1892,
+        "reasoning_output_tokens": 402
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:21:32.344576+00:00",
+      "seconds": 85.94,
+      "raw_sha256": "6cca8f681327e5fe815eebf6203529a12bf29bc21fe7e82f3ed634c5b7ed431e",
+      "case_id": "G10"
+    },
+    {
+      "attempt_id": "review-G12",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:20:37.592585+00:00",
+      "raw_output_path": "reviews/review-G12.json",
+      "prompt_sha256": "e8295694410ce65fa7d42cff09d91f273c290d138d43a9c50990f79ba4b1675d",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17139,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1698,
+        "reasoning_output_tokens": 335
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:21:53.762110+00:00",
+      "seconds": 76.17,
+      "raw_sha256": "0e4d32556663d75d28bb96f0d75eabdaaee5ddbc91a67d96b921085aa8df482f",
+      "case_id": "G12"
+    },
+    {
+      "attempt_id": "review-H01",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:21:32.345579+00:00",
+      "raw_output_path": "reviews/review-H01.json",
+      "prompt_sha256": "2ec5ac71c2dff9823f18a7ba82584e43e103a7e36d928c370d739cf2258511b5",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16872,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1635,
+        "reasoning_output_tokens": 228
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:22:44.982163+00:00",
+      "seconds": 72.64,
+      "raw_sha256": "773681f971b6e436c22770736ea8246320072b8848c7c206154274d71da8e21d",
+      "case_id": "H01"
+    },
+    {
+      "attempt_id": "review-G13",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:21:18.781130+00:00",
+      "raw_output_path": "reviews/review-G13.json",
+      "prompt_sha256": "286d4a86afe8fdbb7ea4475201ef4e21ffcb0b84f5e1449bab57498abd16dd5e",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 17165,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2166,
+        "reasoning_output_tokens": 712
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:22:52.136895+00:00",
+      "seconds": 93.36,
+      "raw_sha256": "2ef4e4b9bae1777e02bd90f23b94a2fad7359ce7c0e0ac34a98084004cc2f0ed",
+      "case_id": "G13"
+    },
+    {
+      "attempt_id": "review-H02",
+      "model": "gpt-6-astra",
+      "settings": {
+        "reasoning_effort": "high",
+        "tools": "disabled",
+        "timeout_seconds": 300
+      },
+      "started_at": "2026-10-03T06:21:53.763108+00:00",
+      "raw_output_path": "reviews/review-H02.json",
+      "prompt_sha256": "c090091733ab5670d0638d6000a5cb25334b8858055b6bfe5748cdac08736470",
+      "error": null,
+      "tool_calls_observed": 0,
+      "exit_code": 0,
+      "usage": {
+        "input_tokens": 16976,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1452,
+        "reasoning_output_tokens": 100
+      },
+      "status": "VALID",
+      "completed_at": "2026-10-03T06:22:58.652377+00:00",
+      "seconds": 64.89,
+      "raw_sha256": "18f8f124f28caeab80cd2b8c6f6a5c1d968c99849c655a5ce3a658325313d14f",
+      "case_id": "H02"
+    }
+  ],
+  "reviews_frozen_at": "2026-10-03T06:22:58.657377+00:00",
+  "unblinded_at": "2026-10-03T06:23:16.220421+00:00",
+  "result_sha256": "5a52b3e7d4a8a69fab3426d728d0f5c653a56ed77d75f7b5aee7acdb426a4c6a"
+}

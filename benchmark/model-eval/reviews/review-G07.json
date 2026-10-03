@@ -1,0 +1,95 @@
+{
+  "case_id": "G07",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "接受本次流程已结束，但先做“针对性补强”，不要因一次反馈立即转方向。",
+      "excerpt_b": "结束本次机会，但先不要据此转方向",
+      "reason": "均识别明确拒绝及单次反馈的有限范围，不据此否定整个职业方向。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "HR给出的理由是“技术深度还需要加强”",
+      "excerpt_b": "HR明确给出“技术深度还需要加强”",
+      "reason": "均准确引用并归因于HR，没有将反馈扩大为已证实的普遍能力缺陷；但都未明确要求保存反馈原话。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "未知的是具体薄弱题目、评分标准、与其他候选人的差距，也不能确认这就是唯一拒绝原因。",
+      "excerpt_b": "但反馈维度、评分标准、岗位横向比较及是否还有其他因素均未知。",
+      "reason": "均将确定的拒绝结果与未知的具体原因、评分和比较区分开。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "优先找出原理、架构取舍、故障排查和个人贡献中最薄弱的1—2项。",
+      "excerpt_b": "优先补最频繁卡住的1—2项",
+      "reason": "均将工作聚焦到面试暴露的具体技术卡点，没有泛化成简历润色或全面转型。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "下一步建议：接受本次流程已结束，但先做“针对性补强”",
+      "excerpt_b": "做一次聚焦复盘，同时继续投递同类岗位。",
+      "reason": "均直接给出结束机会、局部复盘补强的首要建议，无须等待额外研究才能行动。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "A_BETTER",
+      "excerpt_a": "用真实项目准备两轮递进追问，并在下一场同类面试前完成一次模拟讲述",
+      "excerpt_b": "按面试题逐项还原：当时回答、被追问处、未答出的细节，以及哪些内容能由真实项目证据支撑",
+      "reason": "B的复盘可执行；A进一步指定真实项目递进追问与模拟讲述，并提供复盘期限，补强产出更具体。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "B_BETTER",
+      "excerpt_a": "观察接下来5—10个可比机会",
+      "excerpt_b": "做一次聚焦复盘，同时继续投递同类岗位。",
+      "reason": "A暗含后续机会仍会推进；B明确要求复盘与投递并行，更直接保护其他机会，避免准备挤占求职进度。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "也不能确认这就是唯一拒绝原因。",
+      "excerpt_b": "是否还有其他因素均未知。",
+      "reason": "均保留其他拒绝原因的可能性，但都未展开具体替代解释或区分检验，表现相当。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "若同类深度反馈重复出现，再系统调整准备重点或岗位层级",
+      "excerpt_b": "若累计5—10个可比机会反复指出同一具体技术缺口，再系统加强该能力或重新评估岗位匹配。",
+      "reason": "均以多个可比机会中重复出现的技术反馈作为调整建议的可观察条件。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "若对方不再回复，停止追问；本次结果只记为单个样本",
+      "excerpt_b": "若对方不回复，不再催问。",
+      "reason": "均接受机会结束、限制反馈追问，并设置后续可比面试的复盘窗口；没有要求继续争取改判或立即转向。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "本次结果只记为单个样本，不外推为整体能力结论。",
+      "excerpt_b": "单次反馈不足以证明普遍能力缺口，更不足以支持转向。",
+      "reason": "均使用仅有一次明确反馈这一核心背景，没有虚构个人经历、紧迫期限或其他拒信。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "不补写不存在的生产经历或成果。",
+      "excerpt_b": "不临时编造个人贡献或成果。",
+      "reason": "均未添加无来源的成果、指标或经历；面试数量和练习期限属于建议安排，而非事实断言。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "用真实项目准备两轮递进追问，并在下一场同类面试前完成一次模拟讲述",
+  "decisive_excerpt_b": "做一次聚焦复盘，同时继续投递同类岗位。",
+  "review_reason": "两者在关键判断和证据边界上实质等价：接受明确拒绝，将反馈限定为单个样本，有界复盘并等待重复证据再调整。A的项目练习更具体，B对继续机会的安排更明确，优势互补，不足以形成整体胜负。双方均无硬失败。"
+}

@@ -1,0 +1,86 @@
+{
+  "case": {
+    "case_id": "G06",
+    "request": "明天一面今晚做什么",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G06-S1",
+          "source_type": "resume",
+          "text": "Built production agent prototype."
+        },
+        {
+          "source_id": "G06-S2",
+          "source_type": "jd",
+          "text": "AI PM: evaluation, architecture tradeoffs, user problem framing."
+        },
+        {
+          "source_id": "G06-S3",
+          "source_type": "user_report",
+          "text": "今天为固定场景时间2026-10-03 12:00 +08:00，明天下午面试。项目是团队原型，今晚准备预算有限。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "26小时窗口",
+        "高风险Claim"
+      ],
+      "must_not_assume": [
+        "新项目能补真实经验"
+      ],
+      "important_tradeoffs": [
+        "防守收益与睡眠和时间"
+      ],
+      "acceptable_recommendations": [
+        "降低强词并练五层",
+        "先守住个人ownership和失败"
+      ],
+      "bad_recommendations": [
+        "随机50题或连夜新项目"
+      ],
+      "required_actions": [
+        "风险图",
+        "五层追问",
+        "真实故事"
+      ],
+      "required_stop_condition": "准备窗口结束即停"
+    }
+  },
+  "Response A": "首选：今晚不要开新项目，集中修正“Built production agent prototype”这条高风险表述，并围绕岗位要求完成一次限时防守准备。现有材料只支持“参与团队原型”，不能证明生产使用，也不能证明独立完成；具体个人贡献、评估方法和架构决策仍未知。\n\n1.（Codex/材料整理，45分钟）把表述降为真实边界，例如“参与团队智能体原型，负责××”；列出你实际负责、队友负责、工具协助、可出示证据及缺口。××只能填已确认内容。\n2.（Human，60分钟）针对最强项目口述五问：做了什么、为何这样设计、放弃了什么方案、如何评估、哪里失败及如何改；重点准备评估、架构取舍、用户问题定义。\n3.（Human，30分钟）录一遍90秒项目故事，再准备两个问题，询问岗位交付目标和评估标准；随后停止准备并保证睡眠。\n\n明早只复盘卡壳处，不扩展新故事。若某项贡献或“生产”证据无法明确说明，立即降低措辞；若两轮演练仍讲不清核心决策，就把该项目从主打案例降为辅助案例。面试后记录被追问的原话和反馈，再决定是否继续强化。",
+  "Response B": "首选：今晚用约2小时做“项目表述降险＋针对性演练”，不要临时补新项目。当前最大风险是简历写“production agent prototype”，但已知事实仅为团队原型；“生产级”和个人贡献均缺少证据，明天很可能被架构取舍、评估方法与用户问题追问。\n\n1.（human）先把高风险表述改成可守住的版本：“参与团队智能体原型，负责〔仅填写真实职责〕”；只有能说明真实用户、运行环境或运维证据时才保留 production。\n2.（human）逐题口述五遍：我具体做了什么、为何这样设计、放弃了什么方案、如何评估、哪里失败及团队/工具分别做了什么；重点准备评估基线、样本、失败案例和架构约束，不会的明确边界。\n3.（human）准备90秒真实项目故事，以及两个岗位问题：该岗位前三个月交付物是什么、当前最关键的用户问题和评估标准是什么；随后停止准备并保证睡眠。\n\n不确定项是你的实际职责、原型使用情况和测量证据。今晚复核条件：任何一句无法用具体产物或决策解释，就继续降级措辞。练习满2小时或能稳定回答上述五问即停止；明天记录被追问的原句与反馈，再决定是否系统补强架构或评估能力。"
+}

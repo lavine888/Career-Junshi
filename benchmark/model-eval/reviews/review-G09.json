@@ -1,0 +1,95 @@
+{
+  "case_id": "G09",
+  "winner": "B",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "地点与薪酬底线均已满足",
+      "excerpt_b": "且两者均已满足地点和薪酬底线",
+      "reason": "均识别这是已有两个合格Offer后的选择问题，无须重复确认已提供的底线。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "按你给出的权重和主观评级",
+      "excerpt_b": "该分数只是偏好运算，不是客观公司排名",
+      "reason": "均保留评分的主观性质，加权结果41与32均正确，未将评分当作岗位事实。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "当前真正可能逆转选择的不确定项，是经理质量、实际职责与授权边界",
+      "excerpt_b": "目前最大不确定性是经理质量、职责边界及评级是否符合真实岗位",
+      "reason": "均区分当前偏好推导与尚待核实的实际工作条件。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "若 A 能证明职责与授权接近当前评级，选 A",
+      "excerpt_b": "完成一次“经理与实际职责”核实后再决定",
+      "reason": "均抓住学习与ownership能否兑现这一关键瓶颈。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "首选 A，但应视为“待核实后的首选”",
+      "excerpt_b": "首选 A，但在最早截止日前完成一次“经理与实际职责”核实后再决定",
+      "reason": "均明确有条件优先A，没有把建议全部推迟到研究之后。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "哪些决策能独立做、谁评估表现，并要求具体项目例子",
+      "excerpt_b": "独立决策范围、核心项目归属和直属经理反馈方式",
+      "reason": "均提供具体核实问题、书面条款核对及重新比较动作。两者都未明确要求将核实结果整理成书面对照表，但已有书面分数比较与后续更新安排。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "而 B 的薪酬、品牌优势权重较低",
+      "excerpt_b": "A 的优势正好集中在你最看重的学习与 ownership",
+      "reason": "均通过权重体现为学习和ownership放弃部分薪酬、品牌优势的取舍，核实任务也保持有限范围。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "若 ownership 实际降至约 2 分、学习空间也不优于 B，则重新比较",
+      "excerpt_b": "若核实后 A 的 learning 低于 B，或 ownership 降至2及以下，重新比较",
+      "reason": "均考虑A的核心优势不兑现时，B可能成为更好选择；没有仅凭品牌选B。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "若 ownership 实际降至约 2 分、学习空间也不优于 B",
+      "excerpt_b": "若核实后 A 的 learning 低于 B，或 ownership 降至2及以下",
+      "reason": "均给出可以通过岗位核实触发的复核条件。B触发更早，但仅要求重新比较，不构成明显质量差异。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "B_BETTER",
+      "excerpt_a": "若两方答复仍含糊，暂缓定夺至真实截止前",
+      "excerpt_b": "优先争取延期，不能延期则依据现有证据仍偏向 A",
+      "reason": "两者均有硬约束排除线和截止时间意识；B进一步说明截止前仍无法核实时如何收束，A未明确暂缓之后的决策动作。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "你最重视的 ownership（权重 4）和 learning（权重 3）",
+      "excerpt_b": "A 的加权分为 41（学习12、ownership 20、薪酬6、品牌3），B 为 32（9、8、10、5）",
+      "reason": "均正确使用用户权重、评分和已满足的底线，没有添加个人经历或偏好。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "用确认信息重评 learning 与 ownership，不给未知项打中间分",
+      "excerpt_b": "不把未知项按中性分处理",
+      "reason": "均避免虚构岗位质量或把未知项填成事实；核实行动和时间范围均是建议，而非完成声明。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "若两方答复仍含糊，暂缓定夺至真实截止前",
+  "decisive_excerpt_b": "优先争取延期，不能延期则依据现有证据仍偏向 A",
+  "review_reason": "B小幅胜出。两者的算分、条件推荐和证据边界基本等价；实质差异是B补齐了关键职责无法核实时的截止日处理路径，能将核实推进到最终选择。A已有停止与复核条件，不构成硬失败，但其暂缓后的收束动作不够明确。"
+}

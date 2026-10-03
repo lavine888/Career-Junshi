@@ -1,0 +1,95 @@
+{
+  "case_id": "H02",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "不要停止其他投递。",
+      "excerpt_b": "建议：不要停止其他投递，把这次机会视为“条件性积极进展”，而不是已拿到 Offer。",
+      "reason": "均准确识别审批未完成阶段，直接回答是否停投。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "“同事听说你通过了”只是转述，不能等同于正式录用。",
+      "excerpt_b": "你同事转述“通过了”只能说明可能通过了某个评估环节",
+      "reason": "均保留同事消息的转述性质，并以 HR 的条件性表述判断当前状态。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "即使面试评价已通过，审批、预算或岗位优先级仍可能变化，最终结果目前未知。",
+      "excerpt_b": "关键不确定性是 HC、薪酬额度和审批时间，现有材料无法判断最终结果。",
+      "reason": "均区分待审批事实、可能变化和未知结果，没有将条件转成确定录用。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "只有审批通过后才会发 Offer",
+      "excerpt_b": "HR 的原话明确表示 HC 和薪酬仍待审批",
+      "reason": "均抓住编制与薪酬审批这一关键瓶颈。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "你本人继续正常投递和推进现有面试",
+      "excerpt_b": "继续现有投递和面试（human）",
+      "reason": "均明确建议维持并行求职，不因当前消息停止其他流程。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "若没有日期，可在约三个工作日后跟进一次。",
+      "excerpt_b": "询问预计审批完成时间、下一次可确认进度的日期，以及是否还需补充材料",
+      "reason": "均提供可执行的 HR 询问内容、跟进时间和继续求职动作。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "B_BETTER",
+      "excerpt_a": "不必因该机会主动降速",
+      "excerpt_b": "但可暂缓低匹配、准备成本很高的新机会，不撤回已进入流程的申请。",
+      "reason": "两者均保护替代机会；B 进一步按匹配度和准备成本分配精力，兼顾并行投递的成本。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "即使面试评价已通过，审批、预算或岗位优先级仍可能变化",
+      "excerpt_b": "审批也可能延迟、调整或未获通过。",
+      "reason": "均考虑了评估通过但审批不顺利的替代情形，足以支持继续投递。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "只有收到书面 Offer，并核对岗位、薪酬、入职时间及附加条件可接受后，才考虑暂停其他流程",
+      "excerpt_b": "只有收到可核验的书面 Offer，并确认薪资、岗位、地点、入职日期等关键条款可接受后，才考虑停止投递",
+      "reason": "均以收到书面 Offer 且条款可接受作为改变建议的可观察条件。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "跟进一次后再观察约三个工作日，仍无明确进展就降低该机会投入、继续拓展替代选项",
+      "excerpt_b": "一次跟进后仍沉默约三个工作日，就降低投入并继续推进其他机会。",
+      "reason": "均设置有界复查与降低投入的触发点，没有将沉默判为拒绝。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "由你向 HR 礼貌确认预计审批时间",
+      "excerpt_b": "不要把转述当作依据去质问。",
+      "reason": "均围绕用户现有的同事转述和 HR 沟通提供建议，没有虚构个人经历或限制。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "最终结果目前未知。",
+      "excerpt_b": "现有材料无法判断最终结果。",
+      "reason": "均未捏造录用结果、审批概率或执行成果；风险情形明确表述为可能性。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "“同事听说你通过了”只是转述，不能等同于正式录用。",
+  "decisive_excerpt_b": "HR 的原话明确表示 HC 和薪酬仍待审批，正式 Offer 尚未成立",
+  "review_reason": "两者均守住转述、待审批与正式 Offer 的证据边界，给出继续投递、限时跟进和重新考虑停投的明确条件，无硬失败。B 对低匹配、高准备成本机会的取舍更细，但不足以构成整体实质优势，判为平局。"
+}

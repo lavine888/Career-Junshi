@@ -1,0 +1,32 @@
+{
+  "dimensions": {
+    "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+    "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+    "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+    "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+    "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+    "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+    "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+    "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+    "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+    "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+    "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+    "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+  },
+  "hard_failure_definitions": {
+    "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+    "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+    "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+    "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+    "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+    "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+    "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+    "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+    "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+    "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+    "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+    "NO_ACTION": "No concrete feasible next action is given.",
+    "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+  },
+  "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge."
+}

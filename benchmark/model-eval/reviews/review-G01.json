@@ -1,0 +1,95 @@
+{
+  "case_id": "G01",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "先用一周做有边界的方向验证，再确定一个主投方向",
+      "excerpt_b": "先做一周的“双假设、有界测试”，再确定主方向",
+      "reason": "均识别出尚无市场反馈的探索阶段，先验证再选方向；但都未明确澄清用户的求职目标与优先级。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "无法对应的记为缺口，不补写经历",
+      "excerpt_b": "不能把原型写成生产成果",
+      "reason": "均要求将岗位要求映射到真实项目证据，保留原型的证据边界，没有夸大贡献或成果。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "B_BETTER",
+      "excerpt_a": "现在直接选方向依据不足，但也不能据此判定任一方向不适合",
+      "excerpt_b": "项目内容、教育背景、数学/编程能力及岗位硬约束均未知",
+      "reason": "两者均不把证据不足当作不适合；B进一步明确列出影响选择的未知项。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "原型本身不能证明产品判断、量化能力、生产效果或个人贡献",
+      "excerpt_b": "真正瓶颈是证据与岗位匹配尚未核清",
+      "reason": "均将瓶颈定位于能力证据与岗位匹配，未误判为单纯简历措辞问题。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "暂不押注 AI 产品或量化，也不要同时海投",
+      "excerpt_b": "暂不凭兴趣二选一，也不要同时大规模投递",
+      "reason": "均明确建议先审计、比较并小批验证，再选择主方向，没有无证据地偏向 AI 或量化。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "A_BETTER",
+      "excerpt_a": "各投3—5个可比岗位，记录筛选和追问反馈",
+      "excerpt_b": "各做少量同质量投递或从业者交流",
+      "reason": "均给出实质上的项目证据卡和两种方向对照；A进一步限定试投数量，执行边界更清楚。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "选择证据覆盖更高、关键缺口更便宜的方向作为主投",
+      "excerpt_b": "并标记缺口及补齐成本",
+      "reason": "均考虑补齐缺口的成本，限制双方向投入，没有建议先花数月开新项目。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "A_BETTER",
+      "excerpt_a": "并排除岗位层级与市场因素后，才考虑转向",
+      "excerpt_b": "若硬门槛、成本或机会代价持续不利，再转向",
+      "reason": "均保留两个方向作为竞争假设；A额外指出负面反馈可能来自层级或市场，而非方向不适合。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "若一方明显拥有更多强证据且硬缺口较少，就集中投入",
+      "excerpt_b": "若硬门槛、成本或机会代价持续不利，再转向",
+      "reason": "均给出会改变投入方向的新信息，包括证据差异、反复出现的缺口或不利门槛。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "一周或完成上述比较后复盘",
+      "excerpt_b": "满一周或累计评估 5 个可比机会后复盘",
+      "reason": "均满足下一周复核的要求，并明确单次拒绝或无回复不足以支持转向；B的机会计数触发条件更直接，但不存在实质性停损差异。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "逐个审计三个项目",
+      "excerpt_b": "逐个审计三个项目",
+      "reason": "均使用三个原型和暂无投递反馈的既有背景，没有虚构学历、能力、地点偏好或历史经历。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "现在直接选方向依据不足",
+      "excerpt_b": "因此现在不能可靠判定方向",
+      "reason": "均避免宣称用户最适合某岗位，没有编造成就指标、生产部署或已完成的验证结果。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "先用一周做有边界的方向验证，再确定一个主投方向",
+  "decisive_excerpt_b": "先做一周的“双假设、有界测试”，再确定主方向",
+  "review_reason": "两者实质方案相同：先审计项目证据，对照两个方向，再小批验证并于一周复盘。A的试投数量和反馈替代解释更具体，B的未知项说明更完整；这些局部差异不足以决定整体胜负。双方都未充分澄清求职目标，但均无硬失败。"
+}

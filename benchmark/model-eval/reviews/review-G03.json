@@ -1,0 +1,95 @@
+{
+  "case_id": "G03",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "值得投，但应作为“小批量、有边界的试投”",
+      "excerpt_b": "值得小批投，但定位为“有边界的试投”",
+      "reason": "均识别已有窄范围证据、时间有限且正在决定是否小批申请，没有重复索要已提供的信息。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "材料明确不能证明生产部署或完整个人作者身份",
+      "excerpt_b": "现有材料不能证明生产部署或完整作者身份",
+      "reason": "均保留原型、配套产物及个人贡献说明的证据边界，没有把产物当作生产或完整作者身份证明。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "最大不确定性是你能否用真实项目清楚解释架构取舍",
+      "excerpt_b": "这属于核心要求，目前材料尚未给出证据",
+      "reason": "均把架构取舍能力列为待验证项，没有把缺少证据等同于缺少能力。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "以及招聘方实际如何看待非生产原型",
+      "excerpt_b": "最大不确定性是你能否用真实经历解释架构取舍",
+      "reason": "均抓住架构阐述与招聘方对生产经验的实际要求，没有将问题仅归结为简历措辞。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "“Production experience”只是 preferred，并非硬门槛，因此不必自我淘汰",
+      "excerpt_b": "JD 把生产经验写为 preferred，并非明确硬门槛，因此不必因此自我淘汰",
+      "reason": "均明确建议有界试投，正确理解生产经验是优先项，未据此判定不合格。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "把项目整理成一页证据表，逐项对应评测目标、你的决策、架构取舍、结果与限制",
+      "excerpt_b": "从该项目整理一页架构防守稿，覆盖为何这样设计、替代方案、指标选择、失败模式及若上线需补什么",
+      "reason": "A偏重职责与个人证据对齐，B偏重架构追问准备；结合各自的准确贡献表述与小批申请安排，均具体可行。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "不要把它当高确定性主线",
+      "excerpt_b": "用同一定位小批测试 5 个相近岗位",
+      "reason": "均限制投递及准备规模，将长期生产经验缺口留待反馈验证，没有要求先投入大型重建项目。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "若反复明确卡在生产经验，再降低此类岗位优先级并补对应证据",
+      "excerpt_b": "若反复卡在生产经验且岗位普遍将其视为硬门槛",
+      "reason": "均考虑JD虽写优先项、实际筛选却可能重视生产经验的替代情形，并区分架构表达问题与经验门槛。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "若获得面试或反馈集中在架构阐述，继续并补强表达",
+      "excerpt_b": "若多次明确卡在架构表达，先补表达与案例",
+      "reason": "均提供可观察的面试或明确反馈作为调整依据，并另设生产经验反复成为障碍时的降级条件。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "观察一周或累计5个可比机会后复盘",
+      "excerpt_b": "一周或完成 5 个可比机会后复盘",
+      "reason": "均设置约一周或有限样本后的复核，并明确单次拒绝或无回复不足以转向；降优先级与停止扩投均属有界调整。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "且个人贡献范围已有说明",
+      "excerpt_b": "同时只陈述“评测原型、本人具体贡献与边界”",
+      "reason": "均使用已说明个人贡献和时间有限的背景，未虚构履历，也未要求重新证明全部个人经历。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "保持“评测原型、个人负责范围、非生产部署”的准确表述",
+      "excerpt_b": "若上线需补什么",
+      "reason": "均未编造成果指标、生产部署或招聘结果；B的上线内容明确是未来假设，双方数量均为计划预算。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "观察一周或累计5个可比机会后复盘",
+  "decisive_excerpt_b": "一周或完成 5 个可比机会后复盘",
+  "review_reason": "两者实质等价：均依据有限评测证据建议小批申请，正确理解preferred，补充架构阐述并设约一周复核。A的证据表与B的架构稿侧重不同，但不足以构成实质胜负；均无硬失败。"
+}

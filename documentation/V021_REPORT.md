@@ -32,20 +32,26 @@ claim, and conditional / unknown reports cannot set a terminal recruiting status
 
 ## Model comparison scope
 
-The same synthetic raw contexts are supplied to v0.1 and v0.2 Skill snapshots on
-the same configured model, with tool execution disabled. Thirteen fixed cases and
-two new denial/conditional holdouts are prepared. Raw outputs, run metadata and
-version-hidden review evidence are required before making comparative claims.
-Actual execution status: BLOCKED_MODEL_ACCESS. Codex CLI 0.153.0 with ChatGPT login
-rejected configured model gpt-6.1-sol with HTTP 400 before generating a response.
-Effective coverage: 0/30 responses and 0/15 reviewed pairs. No automatic model or
-reasoning switch was made. A different evaluation model requires explicit user choice.
-[Comparison plan and holdouts](../benchmark/host-comparison-plan.json) preserve
-synthetic inputs, snapshot commits, settings, the rejection and zero coverage.
-Initial startup configuration errors were corrected locally before the model-access
-rejection; none produced an output. Raw setup logs remain outside the public repo.
-This compares host instructions and selected references; it does not evaluate a
-live installed-Skill discovery flow, Python guard execution or real hiring outcomes.
+MODEL-EVALUATED: the frozen v0.1 and v0.2.1 snapshots produced 30/30 valid responses
+on gpt-5.6-sol/high, tools disabled, for 13 fixed synthetic cases plus two prepared
+denial/conditional holdouts. A different accessible model, gpt-6-astra/high, reviewed
+15/15 pairs in fresh contexts with random A/B identity hidden. All outputs and
+reviews were hashed and frozen before unblinding. v0.2.1 won 2 pairs, v0.1 won 0,
+and 13 tied. Both versions received one FABRICATED_FACT date-unknown label in G08;
+there was no reduction in hard-failure counts. Labels remain model judgments.
+
+The previous configured gpt-6.1-sol rejection is preserved as a historical
+BLOCKED_MODEL_ACCESS attempt with zero outputs, not a product failure. The user
+explicitly authorized an accessible replacement before this new run. No persistent
+model setting changed and no model changed during generation. The previously prepared
+v0.2 packet was rebuilt against the v0.2.1 commit while preserving all 15 case inputs.
+
+[Model evaluation report](MODEL_EVAL_REPORT.md) and [frozen evidence](../benchmark/model-eval/README.md)
+record setup, exact commits, settings, failures, raw outputs, blind mapping and
+excerpt-backed judgments. This compares host instructions and selected references,
+not live installed-Skill discovery, Python guard execution or real hiring outcomes.
+The fixed inputs contain no cross-opportunity Claim history or duplicate historical
+observations, so these two runtime corrections remain outside model-evaluation coverage.
 
 ## Limits
 
@@ -58,7 +64,8 @@ review or evidence that advice improves employment outcomes.
 ## Delivery and remaining work
 
 IMPLEMENTED / TESTED: three reliability corrections, 15 new regressions and documented
-contracts. MODEL-EVALUATED: not claimed; comparison blocked by model access.
-REAL-WORLD-OBSERVED: no recruiting outcomes or effectiveness evidence. Remaining
-authorized evaluation work is to run the prepared pairs on a user-permitted available
-model, blind response order and record excerpt-backed judgments with failures intact.
+contracts; all 123 tests pass. MODEL-EVALUATED: the limited 15-pair synthetic Skill-plus-
+reference comparison above, with separate-model blind review and immutable evidence.
+REAL-WORLD-OBSERVED: NO. No recruiting outcome or effectiveness evidence. Remaining
+research is independent human review, repeated samples and a separately frozen
+history-focused case set; no product feature or benchmark-specific rule was added.

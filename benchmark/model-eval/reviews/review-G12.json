@@ -1,0 +1,95 @@
+{
+  "case_id": "G12",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "暂不补新项目，先把现有项目按目标岗位的任务重写",
+      "excerpt_b": "先暂停扩充项目，把下一步集中在“岗位任务对齐”",
+      "reason": "均识别已有项目证据与简历语言错位，没有要求重新做项目。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "只写可由产物支撑的贡献，不写采用量、收入或生产效果",
+      "excerpt_b": "采用情况、收入或生产效果也没有证据，不能拔高",
+      "reason": "均保持项目证据的有限范围，没有将产物拔高为采用或商业成果。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "B_BETTER",
+      "excerpt_a": "当前瓶颈是定位而非项目强度",
+      "excerpt_b": "只能确认定位表达偏弱，不能确认岗位匹配度",
+      "reason": "B更明确区分已知的表达问题与未知的岗位适配程度；A对项目强度是否构成瓶颈略显确定。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "招聘方难以判断你解决了什么问题、承担了什么职责",
+      "excerpt_b": "无法让招聘方快速判断你解决了什么问题",
+      "reason": "均把瓶颈定位到任务与贡献没有被简历表达出来，针对性一致。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "选定一个主投岗位族，从3—5份同类JD提炼重复任务与能力要求",
+      "excerpt_b": "选定一个目标岗位族，从真实 JD 提取 3 项高频任务",
+      "reason": "均明确先核对目标职责，再翻译现有项目证据。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "将项目改写为“场景/问题—你的明确职责—关键决策与方法—有边界的结果”",
+      "excerpt_b": "将核心项目改成“任务—个人决策/贡献—可核实结果—阶段边界”的 2–3 条表述",
+      "reason": "均提供可执行的岗位语言映射、受证据约束的表述结构及追问检查；均未给出完整成句的安全示例。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "暂不补新项目",
+      "excerpt_b": "先暂停扩充项目",
+      "reason": "均优先复用已有证据，避免为定位问题投入无必要的新项目建设。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "复查岗位匹配与证据强度",
+      "excerpt_b": "先核查项目证据与市场因素，再调整岗位范围",
+      "reason": "均考虑表达之外的替代解释。B多提市场因素，但未进一步具体化，不构成实质优势。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "若仍普遍无回应，复查岗位匹配与证据强度",
+      "excerpt_b": "若仍反复被认为经验不匹配，先核查项目证据与市场因素，再调整岗位范围",
+      "reason": "均给出可观察的复查条件；A将无回应作为检查信号而非拒绝结论，B使用更直接的匹配反馈。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "若无法提供归属或结果证据，停止升级措辞",
+      "excerpt_b": "证据补不上时停止升级措辞。",
+      "reason": "均设置5—10个同类机会的复盘窗口，并要求证据不足时停止拔高，覆盖无新证据不加指标的原则。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "已提供项目产物和个人贡献说明",
+      "excerpt_b": "现有材料支持你有范围明确的评测项目和个人贡献",
+      "reason": "均使用已提供的产物、个人贡献与技术罗列问题，没有补造个人经历或硬约束。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "暂不能判断是否足以支持“主导”或量化成效",
+      "excerpt_b": "不写未证实的主导、生产落地或商业效果",
+      "reason": "均未虚构头衔、用户、指标或生产经历；B列出的贡献类型属于建议性示例，并非已完成事实。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "暂不补新项目，先把现有项目按目标岗位的任务重写",
+  "decisive_excerpt_b": "先暂停扩充项目，把下一步集中在“岗位任务对齐”",
+  "review_reason": "两者的核心建议、执行步骤和证据止损条件实质等价：先映射岗位职责，再改写现有贡献，不扩项目、不拔高成果。B对岗位匹配未知的表述更审慎，但不足以形成影响实际决策的整体优势，判为平局。"
+}

@@ -1,0 +1,79 @@
+{
+  "case": {
+    "case_id": "G02",
+    "request": "SWE转AI产品",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G02-S1",
+          "source_type": "resume",
+          "text": "SWE背景；做过工程项目。个人需求优先级与产品评测决策尚未整理。"
+        },
+        {
+          "source_id": "G02-S2",
+          "source_type": "user_report",
+          "text": "想转AI产品。能用于补证的预算是七天，不希望重新开大项目。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "可迁移证据",
+        "局部缺口"
+      ],
+      "must_not_assume": [
+        "工程身份自动等于产品ownership"
+      ],
+      "important_tradeoffs": [
+        "短期补证与立即投递"
+      ],
+      "acceptable_recommendations": [
+        "小型补证和副投",
+        "已有证据适配的主投试验"
+      ],
+      "bad_recommendations": [
+        "改头衔代替证据"
+      ],
+      "required_actions": [
+        "指定缺口的最小验证"
+      ],
+      "required_stop_condition": "预算或重复反证触发重评"
+    }
+  },
+  "Response A": "建议：把“技术型 AI 产品经理”作为主假设，先做 7 天有边界的验证，不改写成已具备产品能力，也不重开大项目。你自述有 SWE 和工程项目经历，这能支持技术理解与交付协作，但“需求优先级、用户判断、产品评测决策”尚未整理，当前瓶颈是产品判断证据，而非职位名称。\n\n1. execution_mode: human｜前 2 天选 3 个既有项目，逐个写清用户/问题、方案取舍、优先级依据、评测标准、个人贡献与结果；没有证据的效果降级表述。\n2. execution_mode: human｜第 3—4 天收集 5 个可比 AI 产品 JD，将核心交付逐项映射到上述真实经历，区分硬要求、偏好项和未知职责。\n3. execution_mode: human｜第 5—7 天选择匹配度最高的岗位做少量定向投递或从业者交流，记录被追问点和明确反馈。\n\n第 7 天或累计 5 个可比机会后复盘：若证据能覆盖多数核心交付，继续；若反复出现一个可低成本补齐的缺口，定向完善；若 5—10 个可比机会持续指向同一硬缺口、硬约束不符或补齐成本过高，再暂停并考虑转向。单次拒绝或沉默不足以证明方向错误。",
+  "Response B": "建议：先把“SWE转AI产品”作为一周的有界验证，不急着改头衔，也不重新开大项目。当前最可能的瓶颈是产品判断证据与定位，而非已证明的工程能力不足。已知事实是你有SWE和工程项目背景；你自述可投入七天，且需求优先级、产品评测决策尚未整理。未知的是这些项目里是否有足够强的用户问题、取舍和结果证据。\n\n具体行动：1）human：从现有经历选3个项目，分别写清目标用户、核心问题、你个人做过的优先级判断、方案取舍、评测标准、结果及贡献边界；没有证据的部分明确留空。2）human：找5份同类、日期较新的AI产品JD，拆出交付物和硬性要求，逐项映射上述真实证据，选一个主定位，最多保留一个备选。3）human：用匹配度最高的2—3个岗位做小规模投递或交流，记录具体追问与缺口。\n\n七天或完成5个可比机会后复盘：若证据能覆盖主要交付物，继续该方向；若反复出现同一且可低成本补齐的缺口，收窄定位并补证；若5—10个可比机会持续否定核心假设，且排除市场等混杂因素，再考虑转向。"
+}

@@ -1,0 +1,53 @@
+{
+  "case": {
+    "case_id": "H01",
+    "request": "HR明确说未通过，我能理解成通过了吗？今晚还要为下一轮准备吗？",
+    "context": {
+      "materials": [
+        {
+          "source_id": "H01-HR",
+          "source_type": "hr_chat",
+          "text": "You did not pass this round. No next interview is scheduled."
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "check": "Preserve the supplied denied round result and absence of a next scheduled interview; assess whether actions fit the actual stage."
+    }
+  },
+  "Response A": "不能理解成通过。HR 原话“本轮未通过，未安排下一轮”是该机会当前流程已结束的明确信号；今晚无需再为这家公司的“下一轮”准备。建议把精力立即转向其他机会，但这次结果只说明本轮申请失败，不能推出你不适合该类岗位，也无法据此判断具体能力缺口。\n\n1. 今晚停止针对该公司的专项准备；若没有其他临近面试，休息并恢复节奏。（human）\n2. 保存 HR 原话和面试记录，明天用 20–30 分钟复盘被追问、答得不稳和缺少证据的部分，只记事实，不自行归因。（human）\n3. 继续推进已有投递；如确需反馈，可仅礼貌询问一次是否方便提供改进建议，不争辩结果。（human）\n\n不确定的是淘汰原因和岗位是否仍开放。若 HR 后续明确恢复流程或重新发出面试安排，再重启准备；否则停止跟进该机会。只有在多个可比机会中反复出现同一明确缺口时，才调整定位或重点补强。",
+  "Response B": "不能理解成通过。已确认事实是：HR明确表示“本轮未通过”，且“没有安排下一轮”；这已经终结当前这次申请流程，并非普通的暂缓或沉默。今晚不建议再按这家公司的下一轮面试做专项准备，把时间转给仍在推进的机会更划算。\n\n下一步：1）由你执行：若尚未回复，可简短致谢，并只询问一次是否方便提供改进反馈；不要争辩结果或连续追问。2）由你执行：今晚用30分钟复盘本轮，记录被问到的问题、卡顿点和证据不足处，再选择其中一个高频缺口补强。3）由你执行：继续投递或准备其他已确定的面试，不因一次拒绝推断自己不适合整类岗位。\n\n不确定的是未通过的具体原因，可能涉及能力匹配、比较候选人或岗位因素；没有反馈前不要自行定性。停止条件：对方不回复反馈、明确不便反馈或要求不再联系，就停止跟进。复盘条件：若5—10个可比机会反复出现同一缺口，再判断是优化表达、补证据，还是调整方向。"
+}

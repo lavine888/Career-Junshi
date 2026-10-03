@@ -1,0 +1,80 @@
+{
+  "case": {
+    "case_id": "G09",
+    "request": "两个Offer按目标选择",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G09-S1",
+          "source_type": "user_report",
+          "text": "我的目标优先学习和ownership。地点与薪酬底线均已确认满足。偏好权重：learning 3, ownership 4, compensation 2, brand 1。"
+        },
+        {
+          "source_id": "G09-S2",
+          "source_type": "offer",
+          "text": "A：learning 4, ownership 5, compensation 3, brand 3；B：learning 3, ownership 2, compensation 5, brand 5。这是用户主观评级；经理和实际职责还需核实。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "用户目标和约束",
+        "主观评分"
+      ],
+      "must_not_assume": [
+        "品牌即最佳"
+      ],
+      "important_tradeoffs": [
+        "ownership与薪酬"
+      ],
+      "acceptable_recommendations": [
+        "有条件优先A",
+        "核实ownership兑现后选A"
+      ],
+      "bad_recommendations": [
+        "无视约束按名气排序"
+      ],
+      "required_actions": [
+        "书面比较",
+        "确认经理与权限"
+      ],
+      "required_stop_condition": "deadline前或约束违反即停"
+    }
+  },
+  "Response A": "首选 A，但应视为“待核实后的首选”，不要立即仅凭总分接受。按你给出的权重和主观评级，A 为 41 分，B 为 32 分；差距主要来自你最重视的 ownership（权重 4）和 learning（权重 3），而 B 的薪酬、品牌优势权重较低。地点与薪酬底线均已满足，因此当前真正可能逆转选择的不确定项，是经理质量、实际职责与授权边界，而非品牌。\n\n下一步：1）human：在最早回复期限前，分别向招聘方确认入职后 6—12 个月负责什么、哪些决策能独立做、谁评估表现，并要求具体项目例子；2）human：核对书面薪酬、岗位级别和汇报关系；3）codex：用确认信息重评 learning 与 ownership，不给未知项打中间分。\n\n若 A 能证明职责与授权接近当前评级，选 A；若 ownership 实际降至约 2 分、学习空间也不优于 B，则重新比较。任何选项一旦违反已确认底线即停止考虑；若两方答复仍含糊，暂缓定夺至真实截止前，并把该不确定性视为风险，而非默认乐观解释。",
+  "Response B": "首选 A，但在最早截止日前完成一次“经理与实际职责”核实后再决定。按你给出的权重和主观评级，A 的加权分为 41（学习12、ownership 20、薪酬6、品牌3），B 为 32（9、8、10、5）；A 的优势正好集中在你最看重的学习与 ownership，且两者均已满足地点和薪酬底线。该分数只是偏好运算，不是客观公司排名；目前最大不确定性是经理质量、职责边界及评级是否符合真实岗位。具体行动：1）human：分别询问入职前90天目标、独立决策范围、核心项目归属和直属经理反馈方式；2）human：要求对方确认书面薪酬、岗位与汇报线；3）codex：把回复按原权重重新比较。停止线：任何一项违反硬约束即排除。复核线：若核实后 A 的 learning 低于 B，或 ownership 降至2及以下，重新比较；否则选择 A。若截止前仍无法核实关键职责，不把未知项按中性分处理，优先争取延期，不能延期则依据现有证据仍偏向 A。"
+}

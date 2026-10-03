@@ -1,0 +1,80 @@
+{
+  "case": {
+    "case_id": "G08",
+    "request": "HR五天没有回",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G08-S1",
+          "source_type": "hr_chat",
+          "text": "流程还在推进，有进展联系您。"
+        },
+        {
+          "source_id": "G08-S2",
+          "source_type": "user_report",
+          "text": "终面后五个日历天没回。节假日、承诺日期、工作日数和集中校招情况不清楚，没有其他通过通知。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "日历与工作日不明",
+        "流程混杂"
+      ],
+      "must_not_assume": [
+        "沉默等于拒绝",
+        "已经通过"
+      ],
+      "important_tradeoffs": [
+        "礼貌一次跟进与其他机会"
+      ],
+      "acceptable_recommendations": [
+        "先确认工作日和承诺时间",
+        "有真实截止时简短确认一次"
+      ],
+      "bad_recommendations": [
+        "高频催或停止全部求职"
+      ],
+      "required_actions": [
+        "核对日期与招聘安排"
+      ],
+      "required_stop_condition": "一次跟进窗口后降投入"
+    }
+  },
+  "Response A": "建议：先核对这五个日历天实际包含几个工作日；若终面后已满约三个工作日，下一工作日上午礼貌跟进一次；若尚未满，则等到满三个工作日再发。HR已明确“流程还在推进”，这是当前唯一可确认的流程信号；未给承诺日期，沉默可能来自排期、审批、候选人比较或优先级变化，不能据此认定拒绝，HC与最终结果仍未知。\n\n具体动作：1）human：核对终面日期、周末及节假日，只计算实际工作日；2）human：满足窗口后发送：“您好，想确认一下本次面试的后续进度。如需我补充材料，我可以配合。谢谢。”不要虚构其他Offer或截止期；3）human：跟进后继续投递和准备其他机会，不暂停求职。\n\n观察与停止条件：发送一次后再观察约三个工作日；若仍无回复，降低该机会投入并推进替代选项，但仍不记录为拒绝。若HR给出明确日期，改按该日期等待；若要求不要再联系，立即停止跟进；若出现真实Offer截止，则提前如实告知并请求明确时间表。",
+  "Response B": "建议：先核对这五个日历天里实际经过了几个工作日；若已满约三个工作日，今天礼貌跟进一次；若不足，就等到满三个工作日再发。不要把沉默当成拒绝，也不要继续只押这一家。\n\n具体动作：1）你本人核对终面日期、周末及节假日，并回看 HR 是否给过明确承诺日；若有，以承诺日为准。2）满足跟进条件后，由你发送：“您好，想确认一下本次面试的后续进度。如需我补充材料，我可以配合。谢谢。”3）同时继续投递和推进其他机会，不虚构其他 Offer 或截止时间。\n\n依据是 HR 只说“有进展联系”，没有给确定日期；目前已知仅为五个日历天未回复。流程排期、审批、候选人比较或优先级变化都可能造成沉默，最终结论和 HC 状态仍未知。发出一次跟进后再观察约三个工作日；若仍无回复，就降低该机会投入、继续其他流程，但不记为拒绝。若 HR 明确拒绝或要求不要再联系，则停止跟进；若收到具体时间表，则按新承诺日复核。"
+}

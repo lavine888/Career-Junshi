@@ -1,0 +1,95 @@
+{
+  "case_id": "G13",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "核心风险不是简历吸引力，而是归属与证据不一致。",
+      "excerpt_b": "因此原表述存在归属夸大和被追问击穿的高风险。",
+      "reason": "均识别技术面临近时的归属纠错与可防守性问题，未把强简历当作强理解。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "复盘称架构选型由队友决定、自己说不清基线",
+      "excerpt_b": "你自述说不清基线，且架构选型由队友决定",
+      "reason": "均保留自述来源和队友的选型归属，没有将团队决策据为个人功劳。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "不确定的是你实际拥有的实现和评审范围。",
+      "excerpt_b": "未知的是你是否参与过需求分析、方案评估、模块实现或架构落地",
+      "reason": "均明确个人参与范围未知，将表述强度与待核实贡献关联。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "立即把“Led architecture decisions”降级为可防守的个人贡献表述",
+      "excerpt_b": "立即把简历中的“Led architecture decisions”降级为可证实的个人贡献",
+      "reason": "均优先解决归属与证据缺口，而非单纯润色或教用户圆过去。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "不要继续按“主导架构”准备。",
+      "excerpt_b": "不要继续以“主导架构”应战。",
+      "reason": "第一步均清楚：先降低无法支撑的主导表述，再准备真实贡献。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "A_BETTER",
+      "excerpt_a": "整理一页“主张—证据—缺口—安全措辞”",
+      "excerpt_b": "逐项列出你亲自完成、参与讨论、仅知情的内容，并对应材料或具体细节",
+      "reason": "两者都有贡献核对与演练；A进一步给出可直接检查的风险图，并明确追问测量条件，覆盖本案所需输出更完整。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "用最多两小时核对可指向的代码或材料",
+      "excerpt_b": "用两小时演练五问",
+      "reason": "均采用有限准备投入并停止新增项目，符合临近面试的约束；具体时间是建议预算，并非虚构用户条件。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "若核对出明确决策记录，可有限恢复“参与架构决策”",
+      "excerpt_b": "这决定安全措辞能写到多强。",
+      "reason": "均允许选型虽由队友决定、用户仍有真实参与贡献的可能，没有因不能主张主导就抹去全部贡献。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "A_BETTER",
+      "excerpt_a": "若核对出明确决策记录，可有限恢复“参与架构决策”；若没有，就坚持降级。",
+      "excerpt_b": "只有能说明自己拥有的决策、备选方案和评审权时，才保留“主导”。",
+      "reason": "A以可观察的决策记录作为调整依据，且仅恢复参与表述；B的口头说明与评审权仍不足以单独支持原先宽泛的主导声明。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "B_BETTER",
+      "excerpt_a": "若没有，就坚持降级。",
+      "excerpt_b": "若任一表述仍无法用真实细节回答两轮追问，就继续降级措辞",
+      "reason": "A有证据缺失时降级的条件；B额外给出面试前可执行的两轮追问门槛，更直接落实无法解释就降低强词。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "在面试前改为",
+      "excerpt_b": "面试前停止新增大项目。",
+      "reason": "均围绕已提供的临近技术面、贡献边界和基线解释困难展开，没有杜撰个人履历或招聘结果。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "基线不清就明确说当时未建立可靠基线。",
+      "excerpt_b": "基线不清就坦诚说明当时未建立可靠对照",
+      "reason": "共有缺陷：说不清基线不等于当时没有可靠基线，建议话术应先核实。这里属于条件性建议，不按已完成事实的虚构判硬失败。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "整理一页“主张—证据—缺口—安全措辞”",
+  "decisive_excerpt_b": "若任一表述仍无法用真实细节回答两轮追问，就继续降级措辞",
+  "review_reason": "两者核心决策实质相同：纠正归属、核实贡献、限时演练并降低不可防守的措辞。A的风险图和证据恢复条件更完整，B的追问停止门槛更具体，未形成足以判定整体胜负的差距。两者都需避免把基线解释不清推成基线不存在。"
+}

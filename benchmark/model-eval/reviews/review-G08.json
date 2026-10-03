@@ -1,0 +1,107 @@
+{
+  "case_id": "G08",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "先核对这五个日历天实际包含几个工作日",
+      "excerpt_b": "先核对这五个日历天里实际经过了几个工作日",
+      "reason": "均识别日历天与工作日的区别及终面后等待的问题；均未明确核对是否属于集中校招及其统一安排。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "未给承诺日期",
+      "excerpt_b": "没有给确定日期",
+      "reason": "材料只说承诺日期不清楚，两者均将未知写成没有；现有聊天片段未出现日期，不能证明此前没有承诺。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "沉默可能来自排期、审批、候选人比较或优先级变化",
+      "excerpt_b": "流程排期、审批、候选人比较或优先级变化都可能造成沉默",
+      "reason": "均将沉默原因作为可能解释，并保留最终结果未知；均存在承诺日期未知被写成不存在的问题。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "HC与最终结果仍未知",
+      "excerpt_b": "最终结论和 HC 状态仍未知",
+      "reason": "均把关键问题定位为流程信息不足与跟进时机，没有转向无关的简历修改或能力补课。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "若终面后已满约三个工作日，下一工作日上午礼貌跟进一次",
+      "excerpt_b": "若已满约三个工作日，今天礼貌跟进一次",
+      "reason": "均给出清晰的条件式首次跟进建议。A明确安排在工作日，B随后补充以已有承诺日为准，各有细节优势。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "B_BETTER",
+      "excerpt_a": "核对终面日期、周末及节假日，只计算实际工作日",
+      "excerpt_b": "并回看 HR 是否给过明确承诺日；若有，以承诺日为准。",
+      "reason": "两者均有日期核对和可发送的话术；B额外要求核查已有承诺，能直接修正跟进时间。两者仍缺少招聘批次安排的核查。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "跟进后继续投递和准备其他机会，不暂停求职",
+      "excerpt_b": "同时继续投递和推进其他机会",
+      "reason": "均限制该机会的等待成本，并保持其他求职机会推进。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "排期、审批、候选人比较或优先级变化",
+      "excerpt_b": "流程排期、审批、候选人比较或优先级变化",
+      "reason": "均提供行政延迟及候选人竞争等不同解释，没有把沉默唯一归因为拒绝。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "A_BETTER",
+      "excerpt_a": "若出现真实Offer截止，则提前如实告知并请求明确时间表。",
+      "excerpt_b": "若收到具体时间表，则按新承诺日复核。",
+      "reason": "均会根据明确时间表调整；A还覆盖真实外部截止这一会实质改变等待策略的信息。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "发送一次后再观察约三个工作日；若仍无回复，降低该机会投入并推进替代选项，但仍不记录为拒绝。",
+      "excerpt_b": "发出一次跟进后再观察约三个工作日；若仍无回复，就降低该机会投入、继续其他流程，但不记为拒绝。",
+      "reason": "均满足一次跟进窗口后降低投入的要求，且不将无回复登记为拒绝。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "先核对这五个日历天实际包含几个工作日",
+      "excerpt_b": "先核对这五个日历天里实际经过了几个工作日",
+      "reason": "均使用已给出的五个日历天信息，不虚构其他录用通知或个人经历；B核查承诺日期的优势已体现在行动项。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "未给承诺日期",
+      "excerpt_b": "没有给确定日期",
+      "reason": "两者都有同类的日期信息越界；约三个工作日属于建议的观察预算，不是虚构事实或成就指标。"
+    }
+  ],
+  "hard_failures_a": [
+    {
+      "label": "FABRICATED_FACT",
+      "excerpt": "未给承诺日期",
+      "reason": "G08-S2明确将承诺日期列为未知，A却断言未给；这一信息会影响何时跟进。"
+    }
+  ],
+  "hard_failures_b": [
+    {
+      "label": "FABRICATED_FACT",
+      "excerpt": "没有给确定日期",
+      "reason": "G08-S2未确认是否有承诺日期。B虽要求回看核实，但依据段仍将没有日期写成事实。"
+    }
+  ],
+  "decisive_excerpt_a": "发送一次后再观察约三个工作日；若仍无回复，降低该机会投入并推进替代选项，但仍不记录为拒绝。",
+  "decisive_excerpt_b": "发出一次跟进后再观察约三个工作日；若仍无回复，就降低该机会投入、继续其他流程，但不记为拒绝。",
+  "review_reason": "核心决策实质相同：核对工作日、礼貌跟进一次、继续其他机会，并在有限窗口后降投入，不将沉默视为拒绝。B更明确核查已有承诺，A更明确工作日发送及真实截止时的调整；这些局部优势不足以形成整体胜负。两者共有承诺日期的事实越界，也都未明确核查集中招聘安排。"
+}

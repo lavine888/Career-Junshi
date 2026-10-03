@@ -1,0 +1,95 @@
+{
+  "case_id": "G05",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "主导权仍属未知",
+      "excerpt_b": "也不能把团队成果归为个人独立完成",
+      "reason": "两者均识别团队贡献与个人领导证据的边界，没有把 Led 等同于独立完成。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "现有自述只支持“负责评测案例”，系统由四人协作",
+      "excerpt_b": "现有材料只支持你负责评测案例（G05-S2，自述）",
+      "reason": "两者都保留自述的证据强度，并未将简历中的领导表述视为已获证实。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "主导权仍属未知",
+      "excerpt_b": "出现归属冲突时保持未知，待核对后复审。",
+      "reason": "均区分缺乏领导证据与确定没有领导行为，没有将未知变成否定事实。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "无法提供决策权或领导行为证据",
+      "excerpt_b": "没有证据证明你拥有关键方案决策、任务分工、评审权或整体交付责任",
+      "reason": "均将瓶颈定位于决策权限和责任证据，而非单纯润色措辞。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "立即把“Led a four-person team”降级",
+      "excerpt_b": "暂时不要写“Led a four-person team”",
+      "reason": "首要建议一致且明确：先使用参与团队并注明个人贡献的保守表述。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "B_BETTER",
+      "excerpt_a": "回忆是否拥有方案选择、任务分配、关键评审或最终拍板权",
+      "excerpt_b": "列出项目中的关键决策、提出者、执行者、最终拍板者及可核对材料",
+      "reason": "两者都要求核对分工并提供安全句；B进一步明确决策分工清单的字段，更便于执行和核查。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "NOT_ASSESSABLE",
+      "excerpt_a": "",
+      "excerpt_b": "",
+      "reason": "材料未提供时间预算、紧迫性或竞争机会，无法实质比较机会成本判断。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "再评估“主导”",
+      "excerpt_b": "若能核实你持续负责跨成员决策与交付",
+      "reason": "均保留实际存在领导贡献但目前证据不足的可能，并给出相应处理路径。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "出现会议记录、任务分配、评审意见、提交记录等能证明个人决策和责任边界的直接材料后",
+      "excerpt_b": "若能核实你持续负责跨成员决策与交付",
+      "reason": "均要求新增材料实质支持个人决策或交付责任，才重新考虑领导措辞。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "就保持“参与并负责”，不要升级",
+      "excerpt_b": "若证据仅覆盖评测工作，就停止升级措辞并沿用保守版本",
+      "reason": "均满足贡献未获进一步证实时停止升级的要求。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "参与四人团队完成该系统",
+      "excerpt_b": "你与其他三人的边界",
+      "reason": "均使用四人协作和个人负责评测案例的信息，没有引入个人经历或招聘结果。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "负责评测案例的设计与整理",
+      "excerpt_b": "负责评测案例设计与整理",
+      "reason": "均未声称独立实现、生产部署或量化成绩；但建议句都把“负责评测案例”细化为“设计与整理”，这些具体职责仍应核实后使用。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "无法提供决策权或领导行为证据，就保持“参与并负责”，不要升级。",
+  "decisive_excerpt_b": "若证据仅覆盖评测工作，就停止升级措辞并沿用保守版本",
+  "review_reason": "两者在核心判断、团队与个人边界、保守建议及停止条件上实质等价。B的决策分工清单更具体，但不足以构成整体胜出；两者建议句中“设计与整理”的职责细化也同样需要核实。"
+}

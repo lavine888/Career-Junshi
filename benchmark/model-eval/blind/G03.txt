@@ -1,0 +1,84 @@
+{
+  "case": {
+    "case_id": "G03",
+    "request": "这份JD值得投吗",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G03-S1",
+          "source_type": "jd",
+          "text": "Requirements: LLM evaluation and ability to explain architecture tradeoffs. Production experience preferred."
+        },
+        {
+          "source_id": "G03-S2",
+          "source_type": "project_readme",
+          "text": "Evaluation prototype; scoped supporting evaluation artifact provided. This artifact is not a production deployment or a personal authorship receipt."
+        },
+        {
+          "source_id": "G03-S3",
+          "source_type": "user_report",
+          "text": "个人评测贡献范围已说明，时间有限，问是否值得小批投。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "已有窄范围证据",
+        "优先项非硬门槛"
+      ],
+      "must_not_assume": [
+        "没有生产就不合格"
+      ],
+      "important_tradeoffs": [
+        "投递成本与长期缺口成本"
+      ],
+      "acceptable_recommendations": [
+        "有界主投",
+        "小批申请核实职责"
+      ],
+      "bad_recommendations": [
+        "花两个月先重建production"
+      ],
+      "required_actions": [
+        "对齐职责与个人证据"
+      ],
+      "required_stop_condition": "约一周反馈复核"
+    }
+  },
+  "Response A": "建议：值得投，但应作为“小批量、有边界的试投”，不要把它当高确定性主线。现有评测原型和配套产物与“LLM evaluation”直接相关，且个人贡献范围已有说明；但材料明确不能证明生产部署或完整个人作者身份。“Production experience”只是 preferred，并非硬门槛，因此不必自我淘汰。最大不确定性是你能否用真实项目清楚解释架构取舍，以及招聘方实际如何看待非生产原型。\n\n接下来：1）human：投递该岗位及3—5个职责相近岗位，保持“评测原型、个人负责范围、非生产部署”的准确表述。2）codex：把项目整理成一页证据表，逐项对应评测目标、你的决策、架构取舍、结果与限制，删除任何暗示生产经验的措辞。3）human：准备两个架构追问答案，例如评测指标选择、成本/延迟/可靠性取舍。\n\n观察一周或累计5个可比机会后复盘。若获得面试或反馈集中在架构阐述，继续并补强表达；若反复明确卡在生产经验，再降低此类岗位优先级并补对应证据。单次无回复或拒绝不构成转向依据。",
+  "Response B": "建议：值得小批投，但定位为“有边界的试投”，不要把它当高确定性匹配。你已有可说明个人贡献范围的 LLM 评测原型与配套产物，能支持“做过评测相关工作”；但现有材料不能证明生产部署或完整作者身份。JD 把生产经验写为 preferred，并非明确硬门槛，因此不必因此自我淘汰。最大不确定性是你能否用真实经历解释架构取舍，这属于核心要求，目前材料尚未给出证据。\n\n1. human：投递这份 JD，同时只陈述“评测原型、本人具体贡献与边界”，不写生产经验。\n2. codex：从该项目整理一页架构防守稿，覆盖为何这样设计、替代方案、指标选择、失败模式及若上线需补什么。\n3. human：用同一定位小批测试 5 个相近岗位，记录筛选和面试反馈。\n\n一周或完成 5 个可比机会后复盘：若能获得推进，继续；若多次明确卡在架构表达，先补表达与案例；若反复卡在生产经验且岗位普遍将其视为硬门槛，则停止扩投这类岗位，转向更接受原型/评测证据的职位。单次拒绝或未回复不足以转向。"
+}

@@ -1,0 +1,85 @@
+{
+  "case": {
+    "case_id": "G12",
+    "request": "项目强但定位弱",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G12-S1",
+          "source_type": "project_readme",
+          "text": "Scoped evaluation project artifact and personal contribution supplied; no adoption or revenue claim."
+        },
+        {
+          "source_id": "G12-S2",
+          "source_type": "resume",
+          "text": "LLM, Python, evaluation, tools."
+        },
+        {
+          "source_id": "G12-S3",
+          "source_type": "user_report",
+          "text": "项目能讲清，但简历只是罗列技术，没有对齐岗位任务。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "已有证据",
+        "语言错位"
+      ],
+      "must_not_assume": [
+        "必须再做新项目"
+      ],
+      "important_tradeoffs": [
+        "翻译证据与无效扩展"
+      ],
+      "acceptable_recommendations": [
+        "保留范围改写岗位语言",
+        "先核对目标职责再翻译"
+      ],
+      "bad_recommendations": [
+        "虚构产品用户或头衔"
+      ],
+      "required_actions": [
+        "安全句",
+        "岗位语言映射"
+      ],
+      "required_stop_condition": "无新证据不加指标"
+    }
+  },
+  "Response A": "首选：暂不补新项目，先把现有项目按目标岗位的任务重写。当前瓶颈是定位而非项目强度：已提供项目产物和个人贡献说明，但尚未独立核验；简历仅列“LLM、Python、评测、工具”，招聘方难以判断你解决了什么问题、承担了什么职责。行动：1）human：选定一个主投岗位族，从3—5份同类JD提炼重复任务与能力要求；2）codex：将项目改写为“场景/问题—你的明确职责—关键决策与方法—有边界的结果”，只写可由产物支撑的贡献，不写采用量、收入或生产效果，也不要把团队成果写成独立主导；3）human：用改写后的每条项目描述做五层追问演练，确认能说明取舍、验证方式和局限。不确定性在于目标JD、个人决策权及结果指标尚未给出，因此暂不能判断是否足以支持“主导”或量化成效。观察窗口为下一轮5—10个可比投递；若面试率改善，继续该定位；若仍普遍无回应，复查岗位匹配与证据强度；若无法提供归属或结果证据，停止升级措辞，降级为“参与并负责已确认部分”。”",
+  "Response B": "建议：先暂停扩充项目，把下一步集中在“岗位任务对齐”。现有材料支持你有范围明确的评测项目和个人贡献，但简历目前只列出 LLM、Python、evaluation、tools，无法让招聘方快速判断你解决了什么问题；采用情况、收入或生产效果也没有证据，不能拔高。\n\n行动：1）选定一个目标岗位族，从真实 JD 提取 3 项高频任务；2）将核心项目改成“任务—个人决策/贡献—可核实结果—阶段边界”的 2–3 条表述，例如明确负责的评测设计、脚本或失败分类，但不写未证实的主导、生产落地或商业效果；3）逐条做五层追问演练，凡无法说明基线、条件、个人边界和证据的内容就降级措辞。\n\n最大不确定性是尚无具体 JD、完整简历和投递反馈，因此只能确认定位表达偏弱，不能确认岗位匹配度。改写后用 5–10 个同类机会复盘：若筛选或面试反馈改善，继续该定位；若仍反复被认为经验不匹配，先核查项目证据与市场因素，再调整岗位范围。证据补不上时停止升级措辞。"
+}

@@ -1,0 +1,164 @@
+{
+  "type": "object",
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "winner": {
+      "type": "string",
+      "enum": [
+        "A",
+        "B",
+        "TIE",
+        "UNASSESSABLE"
+      ]
+    },
+    "dimension_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dimension": {
+            "type": "string",
+            "enum": [
+              "Situation Understanding",
+              "Evidence Discipline",
+              "Fact / Inference / Unknown separation",
+              "Bottleneck Identification",
+              "Recommendation Clarity",
+              "Actionability",
+              "Opportunity Cost Awareness",
+              "Counterfactual Quality",
+              "Reconsider Condition",
+              "Stop / Pivot Quality",
+              "Personal-context usage",
+              "Unsupported-claim avoidance"
+            ]
+          },
+          "comparison": {
+            "type": "string",
+            "enum": [
+              "A_BETTER",
+              "B_BETTER",
+              "TIE",
+              "NOT_ASSESSABLE"
+            ]
+          },
+          "excerpt_a": {
+            "type": "string"
+          },
+          "excerpt_b": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "dimension",
+          "comparison",
+          "excerpt_a",
+          "excerpt_b",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "hard_failures_a": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": [
+              "FABRICATED_FACT",
+              "NEGATION_FLIP",
+              "CONDITIONAL_AS_FACT",
+              "HEARSAY_AS_FACT",
+              "TEAM_TO_SOLE",
+              "DEMO_TO_PRODUCTION",
+              "NO_REPLY_TO_REJECTION",
+              "SUCCESS_TO_CAUSATION",
+              "UNSUPPORTED_METRIC",
+              "IGNORED_CONSTRAINT",
+              "NO_RECOMMENDATION",
+              "NO_ACTION",
+              "NO_STOP_CONDITION"
+            ]
+          },
+          "excerpt": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "label",
+          "excerpt",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "hard_failures_b": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": [
+              "FABRICATED_FACT",
+              "NEGATION_FLIP",
+              "CONDITIONAL_AS_FACT",
+              "HEARSAY_AS_FACT",
+              "TEAM_TO_SOLE",
+              "DEMO_TO_PRODUCTION",
+              "NO_REPLY_TO_REJECTION",
+              "SUCCESS_TO_CAUSATION",
+              "UNSUPPORTED_METRIC",
+              "IGNORED_CONSTRAINT",
+              "NO_RECOMMENDATION",
+              "NO_ACTION",
+              "NO_STOP_CONDITION"
+            ]
+          },
+          "excerpt": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "label",
+          "excerpt",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "decisive_excerpt_a": {
+      "type": "string"
+    },
+    "decisive_excerpt_b": {
+      "type": "string"
+    },
+    "review_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "case_id",
+    "winner",
+    "dimension_results",
+    "hard_failures_a",
+    "hard_failures_b",
+    "decisive_excerpt_a",
+    "decisive_excerpt_b",
+    "review_reason"
+  ],
+  "additionalProperties": false
+}

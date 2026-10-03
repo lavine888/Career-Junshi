@@ -1,0 +1,315 @@
+{
+  "G01": {
+    "must_notice": [
+      "证据先于身份",
+      "目标缺失"
+    ],
+    "must_not_assume": [
+      "追AI热度就一定正确"
+    ],
+    "important_tradeoffs": [
+      "测试两种假设而非三个月开新项目"
+    ],
+    "acceptable_recommendations": [
+      "先审计经历并小批验证",
+      "先澄清关键约束再选择主方向"
+    ],
+    "bad_recommendations": [
+      "无证据宣告最适合某岗位"
+    ],
+    "required_actions": [
+      "证据卡",
+      "两种假设对照"
+    ],
+    "required_stop_condition": "下一周或5个同类机会复核"
+  },
+  "G02": {
+    "must_notice": [
+      "可迁移证据",
+      "局部缺口"
+    ],
+    "must_not_assume": [
+      "工程身份自动等于产品ownership"
+    ],
+    "important_tradeoffs": [
+      "短期补证与立即投递"
+    ],
+    "acceptable_recommendations": [
+      "小型补证和副投",
+      "已有证据适配的主投试验"
+    ],
+    "bad_recommendations": [
+      "改头衔代替证据"
+    ],
+    "required_actions": [
+      "指定缺口的最小验证"
+    ],
+    "required_stop_condition": "预算或重复反证触发重评"
+  },
+  "G03": {
+    "must_notice": [
+      "已有窄范围证据",
+      "优先项非硬门槛"
+    ],
+    "must_not_assume": [
+      "没有生产就不合格"
+    ],
+    "important_tradeoffs": [
+      "投递成本与长期缺口成本"
+    ],
+    "acceptable_recommendations": [
+      "有界主投",
+      "小批申请核实职责"
+    ],
+    "bad_recommendations": [
+      "花两个月先重建production"
+    ],
+    "required_actions": [
+      "对齐职责与个人证据"
+    ],
+    "required_stop_condition": "约一周反馈复核"
+  },
+  "G04": {
+    "must_notice": [
+      "stage冲突",
+      "指标缺证"
+    ],
+    "must_not_assume": [
+      "Demo可写production"
+    ],
+    "important_tradeoffs": [
+      "降措辞与补证"
+    ],
+    "acceptable_recommendations": [
+      "先降低强词",
+      "先补精确结果再改写"
+    ],
+    "bad_recommendations": [
+      "升级措辞掩饰缺证"
+    ],
+    "required_actions": [
+      "安全句和缺证清单"
+    ],
+    "required_stop_condition": "无法补证停止升级"
+  },
+  "G05": {
+    "must_notice": [
+      "团队与个人边界"
+    ],
+    "must_not_assume": [
+      "Led等于sole"
+    ],
+    "important_tradeoffs": [
+      "贡献陈述与领导证据"
+    ],
+    "acceptable_recommendations": [
+      "参与团队并明确个人部分",
+      "核对决策权限再用主导"
+    ],
+    "bad_recommendations": [
+      "把源码owner当全部作者"
+    ],
+    "required_actions": [
+      "贡献分工和安全句"
+    ],
+    "required_stop_condition": "贡献不明停止升级"
+  },
+  "G06": {
+    "must_notice": [
+      "26小时窗口",
+      "高风险Claim"
+    ],
+    "must_not_assume": [
+      "新项目能补真实经验"
+    ],
+    "important_tradeoffs": [
+      "防守收益与睡眠和时间"
+    ],
+    "acceptable_recommendations": [
+      "降低强词并练五层",
+      "先守住个人ownership和失败"
+    ],
+    "bad_recommendations": [
+      "随机50题或连夜新项目"
+    ],
+    "required_actions": [
+      "风险图",
+      "五层追问",
+      "真实故事"
+    ],
+    "required_stop_condition": "准备窗口结束即停"
+  },
+  "G07": {
+    "must_notice": [
+      "明确拒绝",
+      "仅一次scope"
+    ],
+    "must_not_assume": [
+      "一次失败证明转型错误"
+    ],
+    "important_tradeoffs": [
+      "局部练习与继续机会"
+    ],
+    "acceptable_recommendations": [
+      "结束机会针对一处补证",
+      "有界复盘再验证下一批"
+    ],
+    "bad_recommendations": [
+      "立刻PIVOT整个职业方向"
+    ],
+    "required_actions": [
+      "原话记录",
+      "项目追问"
+    ],
+    "required_stop_condition": "不继续追逐已结束机会"
+  },
+  "G08": {
+    "must_notice": [
+      "日历与工作日不明",
+      "流程混杂"
+    ],
+    "must_not_assume": [
+      "沉默等于拒绝",
+      "已经通过"
+    ],
+    "important_tradeoffs": [
+      "礼貌一次跟进与其他机会"
+    ],
+    "acceptable_recommendations": [
+      "先确认工作日和承诺时间",
+      "有真实截止时简短确认一次"
+    ],
+    "bad_recommendations": [
+      "高频催或停止全部求职"
+    ],
+    "required_actions": [
+      "核对日期与招聘安排"
+    ],
+    "required_stop_condition": "一次跟进窗口后降投入"
+  },
+  "G09": {
+    "must_notice": [
+      "用户目标和约束",
+      "主观评分"
+    ],
+    "must_not_assume": [
+      "品牌即最佳"
+    ],
+    "important_tradeoffs": [
+      "ownership与薪酬"
+    ],
+    "acceptable_recommendations": [
+      "有条件优先A",
+      "核实ownership兑现后选A"
+    ],
+    "bad_recommendations": [
+      "无视约束按名气排序"
+    ],
+    "required_actions": [
+      "书面比较",
+      "确认经理与权限"
+    ],
+    "required_stop_condition": "deadline前或约束违反即停"
+  },
+  "G10": {
+    "must_notice": [
+      "条款未齐",
+      "真实替代不明"
+    ],
+    "must_not_assume": [
+      "虚构竞价offer"
+    ],
+    "important_tradeoffs": [
+      "争取条件与失去机会风险"
+    ],
+    "acceptable_recommendations": [
+      "先确认书面条款再提出请求",
+      "按真实底线准备有条件谈薪稿"
+    ],
+    "bad_recommendations": [
+      "编造另一份offer施压"
+    ],
+    "required_actions": [
+      "条款核对",
+      "诚实请求和退出线"
+    ],
+    "required_stop_condition": "触达用户真实底线即停止"
+  },
+  "G11": {
+    "must_notice": [
+      "硬约束与补证成本"
+    ],
+    "must_not_assume": [
+      "回测证明实盘成果"
+    ],
+    "important_tradeoffs": [
+      "当前可投证据与远方向"
+    ],
+    "acceptable_recommendations": [
+      "降低该方向投入",
+      "保留有界侧向验证但主投已有证据"
+    ],
+    "bad_recommendations": [
+      "停止当前机会做大型新项目"
+    ],
+    "required_actions": [
+      "对齐预算",
+      "验证真实JD和缺口"
+    ],
+    "required_stop_condition": "预算超限停止扩张"
+  },
+  "G12": {
+    "must_notice": [
+      "已有证据",
+      "语言错位"
+    ],
+    "must_not_assume": [
+      "必须再做新项目"
+    ],
+    "important_tradeoffs": [
+      "翻译证据与无效扩展"
+    ],
+    "acceptable_recommendations": [
+      "保留范围改写岗位语言",
+      "先核对目标职责再翻译"
+    ],
+    "bad_recommendations": [
+      "虚构产品用户或头衔"
+    ],
+    "required_actions": [
+      "安全句",
+      "岗位语言映射"
+    ],
+    "required_stop_condition": "无新证据不加指标"
+  },
+  "G13": {
+    "must_notice": [
+      "ownership纠错",
+      "可防守性"
+    ],
+    "must_not_assume": [
+      "强简历代表强理解"
+    ],
+    "important_tradeoffs": [
+      "降低措辞与有限防守"
+    ],
+    "acceptable_recommendations": [
+      "纠正归属并练五层",
+      "先复核贡献与测量"
+    ],
+    "bad_recommendations": [
+      "教用户圆过去"
+    ],
+    "required_actions": [
+      "风险图",
+      "贡献边界与测量追问"
+    ],
+    "required_stop_condition": "无法解释降低强词"
+  },
+  "H01": {
+    "check": "Preserve the supplied denied round result and absence of a next scheduled interview; assess whether actions fit the actual stage."
+  },
+  "H02": {
+    "check": "Preserve the distinction between second-hand pass report, pending approval and an actual offer; assess parallel application opportunity costs."
+  }
+}

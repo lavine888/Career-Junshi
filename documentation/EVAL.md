@@ -1,14 +1,21 @@
-# Evaluation v0.2
+# Evaluation
 
-Evidence status as of 2026-10-03: implementation and structured checks available;
-no independent host-model blind evaluation or observed recruiting effectiveness.
-Private real-context dry-run is a builder review, not a real-world outcome study.
+Evidence status as of 2026-10-03: IMPLEMENTED / TESTED and MODEL-EVALUATED for the
+limited frozen synthetic host comparison below. REAL-WORLD-OBSERVED: NO.
+Private real-context dry-run remains a builder review, not a recruiting outcome study.
 
-v0.2.1 adds 15 regression tests (123 total) and prepares a [15-pair model comparison](../benchmark/host-comparison-plan.json)
-with two new synthetic holdouts. Execution is BLOCKED_MODEL_ACCESS: the CLI's
-ChatGPT login rejected gpt-6.1-sol before any response was generated. Coverage is
-0/30 responses, 0/15 reviewed pairs. No model-quality claim or automatic fallback.
-See [V021_REPORT.md](V021_REPORT.md) for corrected boundaries and remaining work.
+v0.2.1 has 123 tests and a [completed 15-pair model comparison](MODEL_EVAL_REPORT.md):
+30/30 valid generations on gpt-5.6-sol/high and 15/15 version-hidden reviews by the
+different model gpt-6-astra/high, tools disabled. v0.2.1 wins 2, v0.1 wins 0, ties 13;
+one hard-failure label per version, with no reduction. The exact scope is Skill
+instructions plus the same routed reference paths/count budget, not runtime helper
+execution or installed-Skill discovery. Cross-opportunity identity and deduplication
+are not assessable from these inputs. [Raw evidence and protocol](../benchmark/model-eval/README.md).
+
+The original gpt-6.1-sol model-access rejection remains in the manifest as a zero-output
+historical attempt. Replacement was explicitly authorized and actually probed before
+generation; it stayed fixed for both snapshots. No private context was evaluated.
+See [V021_REPORT.md](V021_REPORT.md) for corrected runtime boundaries.
 
 ## What is tested
 
@@ -63,8 +70,9 @@ python scripts/benchmark.py validate-host --input /private/reviewed-run.json
 
 [Structured report](../benchmark/structured-report.json) records coverage, hard rules,
 field properties and regressions. Repeats use the same clock, cases, Skill revision
-and interpreter. Level 3 and 4 stay NOT_RUN in the structured report. Installed
-runtime excludes development cases; provide `--cases /checkout/benchmark/cases.json`.
+and interpreter. The structured report retains its historical Level 3/4 NOT_RUN markers; the completed
+instruction/reference model diagnostic is recorded separately in benchmark/model-eval.
+Installed runtime excludes development cases; provide `--cases /checkout/benchmark/cases.json`.
 
 For Level 3, run each host-input independently with the installed Skill, with rubric
 hidden. Record model/version/settings, Skill commit, run ID, clock, tools and missing
@@ -74,8 +82,10 @@ and excerpts; it cannot authenticate model execution or reviewer independence.
 
 ## What is not tested and current failures
 
-- No independent blind model run has been executed; ten-dimension semantic quality
-  has not been certified. Empty evaluation coverage is not counted as success.
+- One separate-model blind comparison is complete, with twelve diagnostic dimensions;
+  no independent human certification or repeated-sample reliability claim. Most pairs
+  tied and hard-failure labels did not decline. Cross-opportunity/history cases remain
+  missing from host coverage; exact quote validation does not certify reviewer judgment.
 - Local counterarguments are mode defaults, not a guarantee of situation-specific
   competing options. The host must replace generic wording when context warrants it.
 - The structured planner alone did not select a personalized role order in a private

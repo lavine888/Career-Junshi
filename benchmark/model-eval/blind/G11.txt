@@ -1,0 +1,74 @@
+{
+  "case": {
+    "case_id": "G11",
+    "request": "方向与硬约束冲突",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G11-S1",
+          "source_type": "user_report",
+          "text": "想尝试量化，但不能搬家，每周只剩10小时。补齐研究和实盘证据估计至少30天，原资料不能当实盘收益。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "硬约束与补证成本"
+      ],
+      "must_not_assume": [
+        "回测证明实盘成果"
+      ],
+      "important_tradeoffs": [
+        "当前可投证据与远方向"
+      ],
+      "acceptable_recommendations": [
+        "降低该方向投入",
+        "保留有界侧向验证但主投已有证据"
+      ],
+      "bad_recommendations": [
+        "停止当前机会做大型新项目"
+      ],
+      "required_actions": [
+        "对齐预算",
+        "验证真实JD和缺口"
+      ],
+      "required_stop_condition": "预算超限停止扩张"
+    }
+  },
+  "Response A": "建议：暂不把量化作为立即转职主线，先做30天有边界的可逆验证；现阶段首选保留原职业方向，同时验证“不搬家、每周10小时”下是否存在可行的远程或本地量化岗位。行动：1）human：筛选5个近期可投JD，只保留地点符合硬约束的岗位，拆出研究能力、编程、策略评估与实盘要求；2）codex：将3段最相关经历按“个人贡献—证据—缺口”审计，原资料只表述为研究、回测或模拟，不写成实盘收益；3）human：连续4周每周投入10小时，完成一个可复核的小型研究产物，并尝试3—5次定向交流或投递。关键原因是当前主要瓶颈并非措辞，而是岗位地域供给、时间预算和实盘证据缺口；未知的是符合地点约束的岗位数量，以及现有经历能否迁移。30天或5个可比机会后复盘：若有岗位回应且缺口可低成本补齐，继续并收窄方向；若几乎无合规岗位，或普遍要求短期无法获得的实盘经历，则停止追加投入，转回更符合约束的主线。",
+  "Response B": "建议：先把“量化”作为30天、每周10小时的有界验证，不立即把它当主转型方向，也不投要求搬家的岗位。当前已知仅来自你的自述：不能搬家、时间有限，且现有材料不能证明实盘收益；尚未知本地或远程岗位数量、具体岗位更看重研究、工程还是实盘记录，因此暂不能判断方向本身不适合你。\n\n1. human：筛选5个近期、地点约束可接受的量化岗位，拆出硬门槛与高频交付物；若多数明确要求搬迁，直接排除该细分方向。\n2. human：用约40小时完成一个最小证据闭环：可复现研究、样本外检验、交易成本与风险说明；只能表述为研究或回测，不写成实盘收益。\n3. human：在第30天用5个岗位逐项比对证据，并进行少量投递或从业者沟通，记录重复反馈。\n\n停止或转向条件：地点硬约束使可投机会近乎为空，或30天后仍无法形成可信研究证据，则暂停量化主线。若5个可比机会反复指出同一且可低成本补齐的缺口，再延长一轮；若反馈支持且约束匹配，才升级为主方向。"
+}

@@ -1,0 +1,95 @@
+{
+  "case_id": "G06",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "今晚不要开新项目，集中修正“Built production agent prototype”这条高风险表述",
+      "excerpt_b": "今晚用约2小时做“项目表述降险＋针对性演练”，不要临时补新项目",
+      "reason": "均识别明天面试、今晚预算有限和简历强表述风险，没有重复询问已提供信息。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "A_BETTER",
+      "excerpt_a": "现有材料只支持“参与团队原型”，不能证明生产使用，也不能证明独立完成",
+      "excerpt_b": "只有能说明真实用户、运行环境或运维证据时才保留 production",
+      "reason": "A明确要求生产使用证据。B的条件较宽，真实用户或运行环境本身未必能证明生产部署；但B没有直接断言已经生产部署。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "具体个人贡献、评估方法和架构决策仍未知",
+      "excerpt_b": "不确定项是你的实际职责、原型使用情况和测量证据",
+      "reason": "均明确关键未知，没有把简历措辞当作生产经历证明。B对面试追问使用概率表述，属于基于JD的预测。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "围绕岗位要求完成一次限时防守准备",
+      "excerpt_b": "当前最大风险是简历写“production agent prototype”，但已知事实仅为团队原型",
+      "reason": "均把瓶颈定位为项目真实性、个人贡献边界和追问防守，并未停留在润色简历。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "把表述降为真实边界",
+      "excerpt_b": "先把高风险表述改成可守住的版本",
+      "reason": "第一步均清晰：先降低无法举证的强词，再进行针对性演练。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "列出你实际负责、队友负责、工具协助、可出示证据及缺口",
+      "excerpt_b": "重点准备评估基线、样本、失败案例和架构约束，不会的明确边界",
+      "reason": "A的贡献与证据清单更接近风险图，B的评估准备更具体；两者均提供五问、项目故事和有限准备预算，未声称已执行。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "明早只复盘卡壳处，不扩展新故事",
+      "excerpt_b": "练习满2小时或能稳定回答上述五问即停止",
+      "reason": "均限制投入、排除临时新项目并保护睡眠。A约135分钟与B约120分钟均未明显违反未量化的有限预算。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "今晚不要开新项目",
+      "excerpt_b": "不要临时补新项目",
+      "reason": "均排除紧迫窗口内补新项目这一竞争方案，但未进一步展开替代方案的收益比较，表现相近。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "若某项贡献或“生产”证据无法明确说明，立即降低措辞",
+      "excerpt_b": "任何一句无法用具体产物或决策解释，就继续降级措辞",
+      "reason": "均以可观察的举证失败触发措辞调整；A另有演练失败后调整主打案例的条件。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "若两轮演练仍讲不清核心决策，就把该项目从主打案例降为辅助案例",
+      "excerpt_b": "练习满2小时或能稳定回答上述五问即停止",
+      "reason": "A有分段限时、结束后睡眠及案例降级规则；B有明确总时限和提前结束条件。均提供有界停止机制。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "重点准备评估、架构取舍、用户问题定义",
+      "excerpt_b": "“生产级”和个人贡献均缺少证据",
+      "reason": "均结合团队原型、JD要求和紧迫时间约束，没有虚构个人职责、经历或可用案例。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "××只能填已确认内容",
+      "excerpt_b": "负责〔仅填写真实职责〕",
+      "reason": "均未捏造指标、独立所有权或生产部署事实。B保留production的条件不够严谨，已在证据纪律中体现，不构成已发生部署的断言。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "现有材料只支持“参与团队原型”，不能证明生产使用，也不能证明独立完成",
+  "decisive_excerpt_b": "练习满2小时或能稳定回答上述五问即停止",
+  "review_reason": "两者实质建议相同：守住团队贡献与证据边界，限时练习岗位相关追问和真实故事，停止后保证睡眠。A对生产经历的证据要求更稳健，B的总时限更直接；局部差异不足以改变整体可行性，判平局。"
+}

@@ -1,22 +1,18 @@
 {
   "schema_version": "1",
-  "status": "BLOCKED_MODEL_ACCESS",
-  "model": "gpt-6.1-sol",
+  "status": "MODEL-EVALUATED",
+  "model": "gpt-5.6-sol",
   "reasoning": "high",
   "cli_version": "0.153.0",
   "fixed_clock": "2026-10-03T12:00:00+08:00",
   "versions": {
     "v01": "96174ae688071501b219b0343b557299f8d4a9a9",
-    "v02": "d7a257bb415e414437632c350ee54c6922ebe5c2"
+    "v021": "b30e82c12b3231bc427ba7de3a4ef2dba0fa5ef9"
   },
   "case_count": 15,
   "planned_responses": 30,
-  "completed_responses": 0,
-  "failure": {
-    "layer": "model access with Codex CLI ChatGPT login",
-    "message": "The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account."
-  },
-  "policy": "No automatic model fallback; wait for an explicitly selected or permitted evaluator model. Preserve the same model/reasoning on both versions.",
+  "completed_responses": 30,
+  "policy": "Explicitly authorized replacement, access probed before generation; same fixed model/settings on both frozen snapshots. All raw outputs and blind reviews preserved; mapping released after review freeze.",
   "input_boundary": "Only synthetic raw contexts; no canonical answers or rubric in response prompts; no private context, tools, web, external connectors or memory.",
   "comparison_boundary": "Skill instructions and selected 1-3 references, not installed-skill discovery, Python guard execution or real hiring outcomes.",
   "cases": [
@@ -333,5 +329,27 @@
       },
       "mode": "recruiting"
     }
-  ]
+  ],
+  "reviewer_model": "gpt-6-astra",
+  "evaluation_commit": "b30e82c12b3231bc427ba7de3a4ef2dba0fa5ef9",
+  "reviewed_pairs": 15,
+  "pair_counts": {
+    "v01": 0,
+    "v021": 2,
+    "TIE": 13,
+    "UNASSESSABLE": 0
+  },
+  "manifest": "model-eval/RUN_MANIFEST.json",
+  "result": "model-eval/MODEL_EVAL_RESULT.json",
+  "report": "../documentation/MODEL_EVAL_REPORT.md",
+  "coverage_gaps": [
+    "No supplied historical claim_refs or corrected decisions: cross-opportunity Claim identity is not assessable in this fixed set.",
+    "No supplied historical observations: deduplication before three-pair cap is not assessable in this fixed set."
+  ],
+  "historical_blocked_attempt": {
+    "status": "MODEL_ERROR",
+    "model": "gpt-6.1-sol",
+    "valid_responses": 0,
+    "message": "The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account."
+  }
 }

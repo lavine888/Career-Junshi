@@ -1,0 +1,95 @@
+{
+  "case_id": "G11",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "暂不把量化作为立即转职主线，先做30天有边界的可逆验证",
+      "excerpt_b": "先把“量化”作为30天、每周10小时的有界验证，不立即把它当主转型方向",
+      "reason": "均识别方向探索阶段及时间、地点约束，没有把至少30天的补证估计当作转型成功保证。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "原资料只表述为研究、回测或模拟，不写成实盘收益",
+      "excerpt_b": "只能表述为研究或回测，不写成实盘收益",
+      "reason": "均保留研究与实盘证据的边界，没有升级材料的证明力。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "B_BETTER",
+      "excerpt_a": "未知的是符合地点约束的岗位数量，以及现有经历能否迁移",
+      "excerpt_b": "当前已知仅来自你的自述",
+      "reason": "两者均说明未知项；B进一步明确已知信息来自用户自述，并避免据此判定方向本身不适合。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "岗位地域供给、时间预算和实盘证据缺口",
+      "excerpt_b": "尚未知本地或远程岗位数量、具体岗位更看重研究、工程还是实盘记录",
+      "reason": "均把岗位供给、硬约束和证据要求作为核心问题，并安排JD核验，而非仅修改措辞。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "现阶段首选保留原职业方向",
+      "excerpt_b": "不立即把它当主转型方向，也不投要求搬家的岗位",
+      "reason": "均明确暂缓主线转型，保留有限探索；A对当前主线的表述更直接，但总体建议一致。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "连续4周每周投入10小时，完成一个可复核的小型研究产物，并尝试3—5次定向交流或投递",
+      "excerpt_b": "可复现研究、样本外检验、交易成本与风险说明",
+      "reason": "A明确审计、产物及交流数量，B明确研究产物内容；均有可执行步骤。两者都应把筛岗、研究及沟通合计纳入每周10小时，B约40小时研究尤其缺少余量。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "A_BETTER",
+      "excerpt_a": "将3段最相关经历按“个人贡献—证据—缺口”审计",
+      "excerpt_b": "用约40小时完成一个最小证据闭环",
+      "reason": "A明确保留原方向并先审计已有证据；B把接近全部月度预算安排给新研究，对已有证据利用及其他机会的时间保留较弱。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "验证“不搬家、每周10小时”下是否存在可行的远程或本地量化岗位",
+      "excerpt_b": "因此暂不能判断方向本身不适合你",
+      "reason": "均考虑本地或远程岗位可能使方向可行，没有把约束冲突直接等同于个人不适合量化。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "若有岗位回应且缺口可低成本补齐，继续并收窄方向",
+      "excerpt_b": "若5个可比机会反复指出同一且可低成本补齐的缺口，再延长一轮",
+      "reason": "均用岗位反馈与补证成本作为调整投入的可观察依据，而非无条件继续。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "30天或5个可比机会后复盘",
+      "excerpt_b": "地点硬约束使可投机会近乎为空，或30天后仍无法形成可信研究证据，则暂停量化主线",
+      "reason": "均提供有界复盘和停止条件，不从单次拒绝或沉默推断失败；共同缺少明确的预算超限即停止扩张规则。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "只保留地点符合硬约束的岗位",
+      "excerpt_b": "不能搬家、时间有限，且现有材料不能证明实盘收益",
+      "reason": "均使用了相关个人约束和材料限制，没有虚构履历、地点或招聘结果。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "完成一个可复核的小型研究产物",
+      "excerpt_b": "在第30天用5个岗位逐项比对证据",
+      "reason": "这些均为未来行动安排，不是已完成成果或业绩指标；两者均未声称研究能够证明实盘收益。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "暂不把量化作为立即转职主线，先做30天有边界的可逆验证",
+  "decisive_excerpt_b": "先把“量化”作为30天、每周10小时的有界验证，不立即把它当主转型方向",
+  "review_reason": "两者核心决策实质相同：暂缓主线转型，核验符合地点约束的真实岗位，有限补证并复盘。A更重视现有证据和机会成本，B更明确来源与未知，差异不足以形成决定性胜负。两者都需补充总预算分配及超限停止规则；已有有界复盘条件，因此不构成完全缺失停止条件的硬失败。"
+}

@@ -1,0 +1,95 @@
+{
+  "case_id": "G04",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "原简历陈述与现有材料冲突",
+      "excerpt_b": "已确认材料存在直接冲突",
+      "reason": "均识别出原型与生产表述冲突，以及30%指标缺少凭证。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "README 也不能单独证明具体作者身份和贡献范围",
+      "excerpt_b": "个人贡献、30%的指标定义与测量过程仍未知",
+      "reason": "均按材料强度限制结论，没有用README推导个人所有权或指标真实性。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "这部分仍属未知",
+      "excerpt_b": "目前只能确认项目阶段为原型；个人贡献、30%的指标定义与测量过程仍未知。",
+      "reason": "均区分已提供的项目阶段信息与尚未证实的贡献、测量信息。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "无生产用户，也没有对比基线或测量凭证",
+      "excerpt_b": "仅为本地原型、无生产用户，也未提供对照基线或测量凭证",
+      "reason": "均将关键问题定位为经历边界和证据缺口，而非措辞不够有力。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "立即把简历中的“Built a production AI assistant with 30% improvement”降级为原型表述",
+      "excerpt_b": "立即把“production”和“30% improvement”从简历中撤下",
+      "reason": "首要建议一致且明确：先撤除无证据支持的生产和量化表述。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "参与开发本地 AI 助手原型，负责［仅填写可证明的个人贡献］；尚未投入生产。",
+      "excerpt_b": "参与开发本地AI助手原型，负责［仅填写可证实部分］；尚未投入生产",
+      "reason": "均提供可直接使用的条件式安全句，并列出贡献归属和指标测量的补证清单；没有宣称已经执行。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "删除 30% 指标，除非能提供明确基线、样本、测试条件及测量记录",
+      "excerpt_b": "若要保留30%，补齐基线、样本、测试条件、计算方法和原始结果",
+      "reason": "均先做低成本纠正，将补证作为保留指标的条件，未要求为简历另建生产项目。材料没有更具体的时间或机会约束。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "取得可核验的部署记录、指标口径与归属证据后，再重新评估措辞。",
+      "excerpt_b": "取得可核验材料并校正归属后再审",
+      "reason": "均考虑补证成功后重新评估这一替代路径，没有将当前缺证等同于永远不可能证实。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "取得可核验的部署记录、指标口径与归属证据后",
+      "excerpt_b": "取得可核验材料并校正归属后再审",
+      "reason": "两者均以新增可核验证据和归属校正作为重审条件；结合各自补证清单，条件足够具体。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "在证据补齐前，不升级为“生产”“主导”或量化提升。",
+      "excerpt_b": "若无法补证，永久删除生产与30%的表述。",
+      "reason": "均明确无法补证时停止升级。B的“永久”措辞较绝对，但同时保留了取得新证据后再审的路径，不构成实质决策差异。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "人工逐项核对个人负责的功能、关键决策和协作边界",
+      "excerpt_b": "逐项整理代码、提交记录、设计决策和团队分工，确认自己的实际所有权",
+      "reason": "均围绕本案材料核实个人贡献，没有虚构个人背景、求职历史或时间压力。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "无法证明的内容不补写",
+      "excerpt_b": "不要把“参与”升级为“主导”或“独立完成”",
+      "reason": "均撤除未证实指标和生产状态，限制所有权表述；建议中的占位句不属于已完成事实断言。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "停止线：在证据补齐前，不升级为“生产”“主导”或量化提升。",
+  "decisive_excerpt_b": "建议：立即把“production”和“30% improvement”从简历中撤下，改为边界清楚的原型表述。",
+  "review_reason": "两者在关键决策上实质等价：识别阶段冲突与指标缺证，先降措辞，提供安全句和补证清单，并设置无法补证时停止升级的边界。来源编号、清单详略和表达差异不足以决定胜负，均无硬失败。"
+}

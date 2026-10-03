@@ -1,0 +1,78 @@
+{
+  "case": {
+    "case_id": "G05",
+    "request": "团队主导权",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G05-S1",
+          "source_type": "resume",
+          "text": "Led a four-person team."
+        },
+        {
+          "source_id": "G05-S2",
+          "source_type": "user_report",
+          "text": "我负责评测案例。系统由四人协作完成，没有给出主导决策或独立实现证据。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "团队与个人边界"
+      ],
+      "must_not_assume": [
+        "Led等于sole"
+      ],
+      "important_tradeoffs": [
+        "贡献陈述与领导证据"
+      ],
+      "acceptable_recommendations": [
+        "参与团队并明确个人部分",
+        "核对决策权限再用主导"
+      ],
+      "bad_recommendations": [
+        "把源码owner当全部作者"
+      ],
+      "required_actions": [
+        "贡献分工和安全句"
+      ],
+      "required_stop_condition": "贡献不明停止升级"
+    }
+  },
+  "Response A": "建议：立即把“Led a four-person team”降级，不再声称“主导”。当前最稳妥的表述是：“参与四人团队完成该系统，负责评测案例的设计与整理。”若实际还负责执行、失败分类或结果分析，只能在能说明具体产物后补入。动作：1）human：列出你亲自完成的评测案例、交付物和可追溯材料，并区分个人、队友及工具贡献；2）human：回忆是否拥有方案选择、任务分配、关键评审或最终拍板权，并用五层追问演练；3）codex：拿到材料后可将表述审计为安全版与强表述候选。关键依据是简历称“主导”，但现有自述只支持“负责评测案例”，系统由四人协作；主导权仍属未知。停止线：无法提供决策权或领导行为证据，就保持“参与并负责”，不要升级。复核条件：出现会议记录、任务分配、评审意见、提交记录等能证明个人决策和责任边界的直接材料后，再评估“主导”；若面试演练需临场补故事，也应继续降级。",
+  "Response B": "建议：暂时不要写“Led a four-person team”，改为“参与四人团队项目，负责评测案例设计与整理；系统由团队协作完成”。现有材料只支持你负责评测案例（G05-S2，自述），并能确认简历曾写四人团队（G05-S1）；没有证据证明你拥有关键方案决策、任务分工、评审权或整体交付责任，因此“主导”属于高风险表述，也不能把团队成果归为个人独立完成。\n\n具体行动：1）你本人列出项目中的关键决策、提出者、执行者、最终拍板者及可核对材料；2）检查提交记录、评测文档、会议纪要或同伴确认，寻找能精确支持个人贡献的证据；3）准备五层追问，说明评测目标、案例选择、取舍、结果及你与其他三人的边界。\n\n若证据仅覆盖评测工作，就停止升级措辞并沿用保守版本；若能核实你持续负责跨成员决策与交付，再改为“牵头评测工作”或更窄的主导表述。出现归属冲突时保持未知，待核对后复审。"
+}

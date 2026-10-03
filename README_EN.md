@@ -21,9 +21,10 @@ career decision Skill for a capable host, with standard-library local helpers.
 
 v0.2.1 preserves recruiting denial/conditions/hearsay, traces scoped claim corrections
 across opportunities and deduplicates history before the three-pair cap. All 123
-tests pass; the prior 108 remain unchanged. Fifteen synthetic comparison pairs are
-prepared, but the configured model was rejected by the CLI login endpoint; zero
-valid responses and no model-comparison claims. See the [patch report](documentation/V021_REPORT.md).
+tests pass; the prior 108 remain unchanged. On 15 fixed synthetic pairs generated
+by gpt-5.6-sol and blindly reviewed by a different model, v0.2.1 won 2 and tied 13;
+hard-failure labels did not decline. This does not establish improved hiring outcomes.
+See [evaluation details](documentation/EVAL.md).
 
 ## v0.2 · Decision Intelligence
 
@@ -34,8 +35,8 @@ career hypotheses and five role packs. Role translation preserves achievements a
 personal ownership. A correction updates current claims while preserving history.
 
 This is bounded feedback calibration, not a self-learning AI. The [13 fixed synthetic
-cases](benchmark/cases.json) test contracts and structured decisions. Independent host
-model evaluation and real-world effects are not established. Private context dry-run
+cases](benchmark/cases.json) test contracts and structured decisions. A limited synthetic
+host-model blind comparison is complete; real-world effects are not established. Private context dry-run
 findings are anonymous and do not constitute recruiting outcomes.
 
 ```sh

@@ -1,0 +1,79 @@
+{
+  "case": {
+    "case_id": "G04",
+    "request": "原型被写成production",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G04-S1",
+          "source_type": "resume",
+          "text": "Built a production AI assistant with 30% improvement."
+        },
+        {
+          "source_id": "G04-S2",
+          "source_type": "project_readme",
+          "text": "Local prototype only. No production users, comparison baseline or measurement receipt provided."
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "stage冲突",
+        "指标缺证"
+      ],
+      "must_not_assume": [
+        "Demo可写production"
+      ],
+      "important_tradeoffs": [
+        "降措辞与补证"
+      ],
+      "acceptable_recommendations": [
+        "先降低强词",
+        "先补精确结果再改写"
+      ],
+      "bad_recommendations": [
+        "升级措辞掩饰缺证"
+      ],
+      "required_actions": [
+        "安全句和缺证清单"
+      ],
+      "required_stop_condition": "无法补证停止升级"
+    }
+  },
+  "Response A": "首选：立即把简历中的“Built a production AI assistant with 30% improvement”降级为原型表述，不要继续使用 production 和 30% improvement。建议改成：“参与开发本地 AI 助手原型，负责［仅填写可证明的个人贡献］；尚未投入生产。”\n\n具体动作：1）人工逐项核对个人负责的功能、关键决策和协作边界，无法证明的内容不补写；2）删除 30% 指标，除非能提供明确基线、样本、测试条件及测量记录；3）按五层追问准备项目说明：目标、本人贡献、技术取舍、验证方式、当前局限。\n\n关键依据：项目 README 明确写明仅为本地原型、无生产用户，也没有对比基线或测量凭证，因此原简历陈述与现有材料冲突；但 README 也不能单独证明具体作者身份和贡献范围，这部分仍属未知。停止线：在证据补齐前，不升级为“生产”“主导”或量化提升。复盘条件：取得可核验的部署记录、指标口径与归属证据后，再重新评估措辞。",
+  "Response B": "建议：立即把“production”和“30% improvement”从简历中撤下，改为边界清楚的原型表述。已确认材料存在直接冲突：简历声称生产级并提升30%（G04-S1），README却说明仅为本地原型、无生产用户，也未提供对照基线或测量凭证（G04-S2）。目前只能确认项目阶段为原型；个人贡献、30%的指标定义与测量过程仍未知。\n\n具体动作：1）由本人执行：改写为“参与开发本地AI助手原型，负责［仅填写可证实部分］；尚未投入生产”，不要把“参与”升级为“主导”或“独立完成”。2）由本人执行：逐项整理代码、提交记录、设计决策和团队分工，确认自己的实际所有权。3）由本人执行：若要保留30%，补齐基线、样本、测试条件、计算方法和原始结果，并能连续回答五层追问。\n\n停止线：在生产部署证据或完整指标凭证出现前，不再升级措辞。复核条件：取得可核验材料并校正归属后再审；若无法补证，永久删除生产与30%的表述。"
+}

@@ -1,0 +1,80 @@
+{
+  "case": {
+    "case_id": "G07",
+    "request": "被拒且技术深度反馈",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G07-S1",
+          "source_type": "hr_chat",
+          "text": "本次未通过，技术深度还需要加强。"
+        },
+        {
+          "source_id": "G07-S2",
+          "source_type": "interview_recap",
+          "text": "只有这一次明确反馈，没有其他同类技术拒信；完整评分和岗位比较未知。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "明确拒绝",
+        "仅一次scope"
+      ],
+      "must_not_assume": [
+        "一次失败证明转型错误"
+      ],
+      "important_tradeoffs": [
+        "局部练习与继续机会"
+      ],
+      "acceptable_recommendations": [
+        "结束机会针对一处补证",
+        "有界复盘再验证下一批"
+      ],
+      "bad_recommendations": [
+        "立刻PIVOT整个职业方向"
+      ],
+      "required_actions": [
+        "原话记录",
+        "项目追问"
+      ],
+      "required_stop_condition": "不继续追逐已结束机会"
+    }
+  },
+  "Response A": "下一步建议：接受本次流程已结束，但先做“针对性补强”，不要因一次反馈立即转方向。已确认事实是本次未通过，HR给出的理由是“技术深度还需要加强”；未知的是具体薄弱题目、评分标准、与其他候选人的差距，也不能确认这就是唯一拒绝原因。\n\n1.（human）若尚未回复，可一次性致谢并追问：“方便的话，能否告知技术深度主要体现在哪类问题或项目追问上？我想针对性改进。”不争辩、不要求改判。\n2.（human）在24小时内复盘面试，按“问题—当时回答—卡点—更完整答案—可验证证据”整理，优先找出原理、架构取舍、故障排查和个人贡献中最薄弱的1—2项。\n3.（human）用真实项目准备两轮递进追问，并在下一场同类面试前完成一次模拟讲述；不补写不存在的生产经历或成果。\n\n观察接下来5—10个可比机会：若同类深度反馈重复出现，再系统调整准备重点或岗位层级；若后续表现改善，则保留当前方向。若对方不再回复，停止追问；本次结果只记为单个样本，不外推为整体能力结论。",
+  "Response B": "建议：结束本次机会，但先不要据此转方向；把“技术深度不足”当作需要核实的局部信号，做一次聚焦复盘，同时继续投递同类岗位。\n\n1.（human）在合适情况下只追问一次：“感谢反馈。为便于改进，能否告知主要不足集中在原理理解、架构取舍、编码实现，还是项目追问？”若对方不回复，不再催问。\n2.（human）按面试题逐项还原：当时回答、被追问处、未答出的细节，以及哪些内容能由真实项目证据支撑；优先补最频繁卡住的1—2项，不临时编造个人贡献或成果。\n3.（human）继续推进其他机会，并记录后续可比面试是否出现同类明确反馈。\n\n已确认的是本次未通过，HR明确给出“技术深度还需要加强”；但反馈维度、评分标准、岗位横向比较及是否还有其他因素均未知。单次反馈不足以证明普遍能力缺口，更不足以支持转向。复盘窗口可设为接下来3—5场可比面试；若不再出现同类证据，维持方向，仅优化表达与准备；若累计5—10个可比机会反复指出同一具体技术缺口，再系统加强该能力或重新评估岗位匹配。"
+}

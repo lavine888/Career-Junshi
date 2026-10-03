@@ -1,0 +1,80 @@
+{
+  "case": {
+    "case_id": "G13",
+    "request": "简历强但面试解释薄",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G13-S1",
+          "source_type": "resume",
+          "text": "Led architecture decisions."
+        },
+        {
+          "source_id": "G13-S2",
+          "source_type": "interview_recap",
+          "text": "我说不清基线，架构选型是队友决定的。技术面临近，需要划清个人贡献。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "ownership纠错",
+        "可防守性"
+      ],
+      "must_not_assume": [
+        "强简历代表强理解"
+      ],
+      "important_tradeoffs": [
+        "降低措辞与有限防守"
+      ],
+      "acceptable_recommendations": [
+        "纠正归属并练五层",
+        "先复核贡献与测量"
+      ],
+      "bad_recommendations": [
+        "教用户圆过去"
+      ],
+      "required_actions": [
+        "风险图",
+        "贡献边界与测量追问"
+      ],
+      "required_stop_condition": "无法解释降低强词"
+    }
+  },
+  "Response A": "首选：立即把“Led architecture decisions”降级为可防守的个人贡献表述，不要继续按“主导架构”准备。现有材料已确认简历写了主导，但复盘称架构选型由队友决定、自己说不清基线；这使核心风险不是简历吸引力，而是归属与证据不一致。\n\n1.（human）在面试前改为：“参与团队项目，负责【本人确实完成的部分】；架构方案由队友主导，我参与了【真实评审、实现或验证】。”空缺处不得猜填。\n2.（human）用90秒练清“我做了什么—为何这样实现—如何验证—失败与改进”，并逐项回答替代方案、测量条件、队友及工具贡献；基线不清就明确说当时未建立可靠基线。\n3.（human）用最多两小时核对可指向的代码或材料，整理一页“主张—证据—缺口—安全措辞”，之后停止加新项目并保证休息。\n\n不确定的是你实际拥有的实现和评审范围。若核对出明确决策记录，可有限恢复“参与架构决策”；若没有，就坚持降级。面试后记录被追问的具体句子与反馈；连续5—10个可比机会都暴露同类缺口，再评估是否系统重做定位，而非因一次表现转方向。",
+  "Response B": "建议：立即把简历中的“Led architecture decisions”降级为可证实的个人贡献，不要继续以“主导架构”应战。已确认的是：你自述说不清基线，且架构选型由队友决定；因此原表述存在归属夸大和被追问击穿的高风险。未知的是你是否参与过需求分析、方案评估、模块实现或架构落地，这决定安全措辞能写到多强。\n\n1.（human）今晚逐项列出你亲自完成、参与讨论、仅知情的内容，并对应材料或具体细节；无法举证的归入未知。\n2.（human）将表述改为“参与团队项目，负责［已确认模块/实现］，配合架构方案落地”；只有能说明自己拥有的决策、备选方案和评审权时，才保留“主导”。\n3.（human）用两小时演练五问：做了什么、为何这样做、替代方案、如何衡量、哪里失败；基线不清就坦诚说明当时未建立可靠对照，并说清现在会如何补测。\n\n面试前停止新增大项目。若任一表述仍无法用真实细节回答两轮追问，就继续降级措辞；面试后记录被追问点。若连续5—10个可比机会都暴露同一证据缺口，再考虑系统补项目或调整定位。"
+}

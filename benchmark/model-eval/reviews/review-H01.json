@@ -1,0 +1,95 @@
+{
+  "case_id": "H01",
+  "winner": "A",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "不能理解成通过。",
+      "excerpt_b": "不能理解成通过。",
+      "reason": "两者都保留未通过的明确结果，并据此取消今晚针对下一轮的专项准备。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "HR 原话“本轮未通过，未安排下一轮”",
+      "excerpt_b": "HR明确表示“本轮未通过”，且“没有安排下一轮”",
+      "reason": "两者均准确转述并归因于 HR，没有反转否定结果或虚构面试安排。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "不确定的是淘汰原因和岗位是否仍开放。",
+      "excerpt_b": "不确定的是未通过的具体原因，可能涉及能力匹配、比较候选人或岗位因素",
+      "reason": "两者均将明确结果与未知原因区分；B 的可能原因没有被当作事实。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "今晚无需再为这家公司的“下一轮”准备。",
+      "excerpt_b": "今晚不建议再按这家公司的下一轮面试做专项准备",
+      "reason": "都识别出关键是接受当前结果、停止为未安排的面试投入，而非修改简历或猜测淘汰原因。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "今晚停止针对该公司的专项准备",
+      "excerpt_b": "把时间转给仍在推进的机会更划算。",
+      "reason": "两者均清楚回答今晚是否继续准备，并给出转移精力的建议。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "保存 HR 原话和面试记录，明天用 20–30 分钟复盘",
+      "excerpt_b": "今晚用30分钟复盘本轮，记录被问到的问题、卡顿点和证据不足处",
+      "reason": "两者都有时间有界、产出明确的复盘行动及一次性反馈请求，没有声称已经执行。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "A_BETTER",
+      "excerpt_a": "若没有其他临近面试，休息并恢复节奏。",
+      "excerpt_b": "再选择其中一个高频缺口补强。",
+      "reason": "A 根据是否有临近面试安排今晚投入；B 在缺少重复缺口证据时追加补强任务，投入边界略弱。两者都未违反明确时间约束。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "不能推出你不适合该类岗位，也无法据此判断具体能力缺口。",
+      "excerpt_b": "可能涉及能力匹配、比较候选人或岗位因素；没有反馈前不要自行定性。",
+      "reason": "两者都防止将单次拒绝归结为普遍能力不适配；明确否定结果本身不需要人为制造相反解释。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "A_BETTER",
+      "excerpt_a": "若 HR 后续明确恢复流程或重新发出面试安排，再重启准备",
+      "excerpt_b": "若5—10个可比机会反复出现同一缺口，再判断是优化表达、补证据，还是调整方向。",
+      "reason": "A 指明能直接改变本次准备决策的新证据。B 的条件适用于长期求职调整，没有说明何时重新考虑这家公司的面试准备。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "否则停止跟进该机会。",
+      "excerpt_b": "对方不回复反馈、明确不便反馈或要求不再联系，就停止跟进。",
+      "reason": "两者都提供停止跟进规则，并限制反馈追问；都没有凭一次拒绝要求改变职业方向。B 的不回复仅触发停止追问，并未被用来推断拒绝结果。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "今晚无需再为这家公司的“下一轮”准备。",
+      "excerpt_b": "今晚不建议再按这家公司的下一轮面试做专项准备",
+      "reason": "两者都使用了今晚决策和明确拒绝这两个关键条件，没有编造个人经历。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "只记事实，不自行归因。",
+      "excerpt_b": "没有反馈前不要自行定性。",
+      "reason": "均未虚构淘汰原因、成绩或经历。复盘时长及机会数量是建议阈值，不是未经支持的成果指标。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "若 HR 后续明确恢复流程或重新发出面试安排，再重启准备；否则停止跟进该机会。",
+  "decisive_excerpt_b": "复盘条件：若5—10个可比机会反复出现同一缺口，再判断是优化表达、补证据，还是调整方向。",
+  "review_reason": "A 小幅胜出。两者都正确保留拒绝结果，明确停止专项准备且没有硬性失败。A 更完整地规定了本次决策的重启条件，并为今晚保留休息选项；B 的重新评估条件主要针对长期定位，另有证据尚不足的即时补强建议。"
+}

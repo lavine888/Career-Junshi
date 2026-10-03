@@ -1,0 +1,95 @@
+{
+  "case_id": "G10",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "现在不要把它当成已获得 Offer",
+      "excerpt_b": "也不要把这句话当作正式 Offer",
+      "reason": "均识别当前只有发放意向、条款不完整，未把谈薪阶段误判为已获正式录用。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "HR 仅表示有意向，尚无书面薪酬、奖金规则和决定期限",
+      "excerpt_b": "已确认的是 HR 表达了发 Offer 意向",
+      "reason": "均保留 HR 表述的证据强度，没有将意向升级为确定结果。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "TIE",
+      "excerpt_a": "未知项包括岗位级别、固定薪资、奖金口径、试用期、福利、入职时间及审批状态",
+      "excerpt_b": "现有材料不足以判断合理金额",
+      "reason": "均承认关键条件未知，没有编造金额、期限或审批结果。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "先把“有意向”推进为可核对的完整条件，再进行有依据的谈薪",
+      "excerpt_b": "此刻直接还价容易围绕不完整方案谈判，也无法判断总包和风险",
+      "reason": "均把核心瓶颈定位为条件不完整、尚不能可靠评估方案。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "由你向 HR 表达积极意愿，并询问完整薪酬构成",
+      "excerpt_b": "先把口头“有意向”推进为可核对的完整条件，再进行有依据的谈薪",
+      "reason": "均明确先核对条件，再提出有依据的调整请求，首步清楚可行。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "B_BETTER",
+      "excerpt_a": "最终接受前，要求书面确认所有关键条款",
+      "excerpt_b": "并请对方邮件或书面汇总",
+      "reason": "B 在首次沟通即要求书面输出，并补充 HR 要求先报期望时的具体应对；A 将明确的书面确认要求放在最终接受前。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "A_BETTER",
+      "excerpt_a": "若三至五个工作日仍无明确条件或审批节点，降低投入并继续求职",
+      "excerpt_b": "若始终拒绝提供核心书面条件，则暂停承诺",
+      "reason": "A 更明确限制等待投入并保留求职选项，且未把延迟解释为拒绝；B 主要限制承诺，未明确后续时间投入。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "TIE",
+      "excerpt_a": "若固定预算受限，再谈签字费、奖金保底、职级或调薪评审时间",
+      "excerpt_b": "若 HR 要求先给期望，提供“基于完整职责与总包”的目标区间及理由",
+      "reason": "均考虑了会改变谈判路径的实际分支：A 处理固定预算受限，B 处理对方要求先报价。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "TIE",
+      "excerpt_a": "若固定预算受限，再谈签字费、奖金保底、职级或调薪评审时间",
+      "excerpt_b": "若新增条款足以改变偏好，则重新比较后再决定",
+      "reason": "均给出随新增条件调整策略或决定的触发点；A 更具体，B 覆盖完整方案变化。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "任何方案触碰你的薪资、地点或入职时间硬约束，就停止推进",
+      "excerpt_b": "若完整方案触及你的硬约束，停止推进",
+      "reason": "均以用户真实硬约束作为停止条件，并设置跟进或暂停节点，没有从沉默推断失败。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "没有另一份 Offer 会削弱外部筹码，但仍可依据岗位价值、现有薪酬、稀缺能力和转职成本谈判",
+      "excerpt_b": "没有另一份 Offer 不必虚构，可用相关经验、职责范围和预期贡献支撑",
+      "reason": "均使用没有另一份 Offer 的已知背景，提出真实依据；所列谈判依据是建议，没有声称用户已具备特定经历或能力。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "收到范围后，提出一个有理由支撑的目标区间",
+      "excerpt_b": "关键不确定性是公司预算、岗位级别和奖金兑现条件",
+      "reason": "均未虚构竞价 Offer、薪酬行情、个人成绩或谈判成功率，也未宣称已执行任何行动。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "若三至五个工作日仍无明确条件或审批节点，降低投入并继续求职；任何方案触碰你的薪资、地点或入职时间硬约束，就停止推进。",
+  "decisive_excerpt_b": "若始终拒绝提供核心书面条件，则暂停承诺；若完整方案触及你的硬约束，停止推进",
+  "review_reason": "两者核心决策实质相当：先补齐条件，依据真实理由谈薪，触及硬约束即停止，均无硬失败。B 更早索取书面条款并处理先报价要求；A 更明确控制等待成本、保留求职选项并提供预算受限时的替代请求。这些差异不足以形成整体实质优势。"
+}

@@ -1,0 +1,2095 @@
+{
+  "status": "MODEL-EVALUATED",
+  "scope": "15 fixed synthetic same-host-model pairs, separate-model version-hidden review; not real recruiting outcomes",
+  "generation_model": "gpt-5.6-sol",
+  "review_model": "gpt-6-astra",
+  "valid_generations": 30,
+  "planned_generations": 30,
+  "valid_pairs": 15,
+  "valid_reviews": 15,
+  "generation_status_counts": {
+    "VALID": 30
+  },
+  "review_status_counts": {
+    "VALID": 15
+  },
+  "pair_counts": {
+    "v01": 0,
+    "v021": 2,
+    "TIE": 13,
+    "UNASSESSABLE": 0
+  },
+  "dimension_counts": {
+    "Situation Understanding": {
+      "v01": 0,
+      "v021": 0,
+      "TIE": 15,
+      "NOT_ASSESSABLE": 0
+    },
+    "Evidence Discipline": {
+      "v01": 0,
+      "v021": 1,
+      "TIE": 14,
+      "NOT_ASSESSABLE": 0
+    },
+    "Fact / Inference / Unknown separation": {
+      "v01": 2,
+      "v021": 2,
+      "TIE": 11,
+      "NOT_ASSESSABLE": 0
+    },
+    "Bottleneck Identification": {
+      "v01": 0,
+      "v021": 0,
+      "TIE": 15,
+      "NOT_ASSESSABLE": 0
+    },
+    "Recommendation Clarity": {
+      "v01": 0,
+      "v021": 0,
+      "TIE": 15,
+      "NOT_ASSESSABLE": 0
+    },
+    "Actionability": {
+      "v01": 1,
+      "v021": 5,
+      "TIE": 9,
+      "NOT_ASSESSABLE": 0
+    },
+    "Opportunity Cost Awareness": {
+      "v01": 1,
+      "v021": 4,
+      "TIE": 9,
+      "NOT_ASSESSABLE": 1
+    },
+    "Counterfactual Quality": {
+      "v01": 0,
+      "v021": 2,
+      "TIE": 13,
+      "NOT_ASSESSABLE": 0
+    },
+    "Reconsider Condition": {
+      "v01": 2,
+      "v021": 2,
+      "TIE": 11,
+      "NOT_ASSESSABLE": 0
+    },
+    "Stop / Pivot Quality": {
+      "v01": 1,
+      "v021": 1,
+      "TIE": 13,
+      "NOT_ASSESSABLE": 0
+    },
+    "Personal-context usage": {
+      "v01": 0,
+      "v021": 0,
+      "TIE": 15,
+      "NOT_ASSESSABLE": 0
+    },
+    "Unsupported-claim avoidance": {
+      "v01": 0,
+      "v021": 0,
+      "TIE": 15,
+      "NOT_ASSESSABLE": 0
+    }
+  },
+  "hard_failure_counts": {
+    "v01": {
+      "FABRICATED_FACT": 1,
+      "NEGATION_FLIP": 0,
+      "CONDITIONAL_AS_FACT": 0,
+      "HEARSAY_AS_FACT": 0,
+      "TEAM_TO_SOLE": 0,
+      "DEMO_TO_PRODUCTION": 0,
+      "NO_REPLY_TO_REJECTION": 0,
+      "SUCCESS_TO_CAUSATION": 0,
+      "UNSUPPORTED_METRIC": 0,
+      "IGNORED_CONSTRAINT": 0,
+      "NO_RECOMMENDATION": 0,
+      "NO_ACTION": 0,
+      "NO_STOP_CONDITION": 0
+    },
+    "v021": {
+      "FABRICATED_FACT": 1,
+      "NEGATION_FLIP": 0,
+      "CONDITIONAL_AS_FACT": 0,
+      "HEARSAY_AS_FACT": 0,
+      "TEAM_TO_SOLE": 0,
+      "DEMO_TO_PRODUCTION": 0,
+      "NO_REPLY_TO_REJECTION": 0,
+      "SUCCESS_TO_CAUSATION": 0,
+      "UNSUPPORTED_METRIC": 0,
+      "IGNORED_CONSTRAINT": 0,
+      "NO_RECOMMENDATION": 0,
+      "NO_ACTION": 0,
+      "NO_STOP_CONDITION": 0
+    }
+  },
+  "responses_with_hard_failure": {
+    "v01": 1,
+    "v021": 1
+  },
+  "case_results": [
+    {
+      "case_id": "G01",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者实质方案相同：先审计项目证据，对照两个方向，再小批验证并于一周复盘。A的试投数量和反馈替代解释更具体，B的未知项说明更完整；这些局部差异不足以决定整体胜负。双方都未充分澄清求职目标，但均无硬失败。",
+      "decisive_excerpts": {
+        "v021": "先用一周做有边界的方向验证，再确定一个主投方向",
+        "v01": "先做一周的“双假设、有界测试”，再确定主方向"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别出尚无市场反馈的探索阶段，先验证再选方向；但都未明确澄清用户的求职目标与优先级。",
+          "excerpts": {
+            "v021": "先用一周做有边界的方向验证，再确定一个主投方向",
+            "v01": "先做一周的“双假设、有界测试”，再确定主方向"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均要求将岗位要求映射到真实项目证据，保留原型的证据边界，没有夸大贡献或成果。",
+          "excerpts": {
+            "v021": "无法对应的记为缺口，不补写经历",
+            "v01": "不能把原型写成生产成果"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "v01",
+          "reason": "两者均不把证据不足当作不适合；B进一步明确列出影响选择的未知项。",
+          "excerpts": {
+            "v021": "现在直接选方向依据不足，但也不能据此判定任一方向不适合",
+            "v01": "项目内容、教育背景、数学/编程能力及岗位硬约束均未知"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均将瓶颈定位于能力证据与岗位匹配，未误判为单纯简历措辞问题。",
+          "excerpts": {
+            "v021": "原型本身不能证明产品判断、量化能力、生产效果或个人贡献",
+            "v01": "真正瓶颈是证据与岗位匹配尚未核清"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均明确建议先审计、比较并小批验证，再选择主方向，没有无证据地偏向 AI 或量化。",
+          "excerpts": {
+            "v021": "暂不押注 AI 产品或量化，也不要同时海投",
+            "v01": "暂不凭兴趣二选一，也不要同时大规模投递"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "v021",
+          "reason": "均给出实质上的项目证据卡和两种方向对照；A进一步限定试投数量，执行边界更清楚。",
+          "excerpts": {
+            "v021": "各投3—5个可比岗位，记录筛选和追问反馈",
+            "v01": "各做少量同质量投递或从业者交流"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均考虑补齐缺口的成本，限制双方向投入，没有建议先花数月开新项目。",
+          "excerpts": {
+            "v021": "选择证据覆盖更高、关键缺口更便宜的方向作为主投",
+            "v01": "并标记缺口及补齐成本"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "v021",
+          "reason": "均保留两个方向作为竞争假设；A额外指出负面反馈可能来自层级或市场，而非方向不适合。",
+          "excerpts": {
+            "v021": "并排除岗位层级与市场因素后，才考虑转向",
+            "v01": "若硬门槛、成本或机会代价持续不利，再转向"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均给出会改变投入方向的新信息，包括证据差异、反复出现的缺口或不利门槛。",
+          "excerpts": {
+            "v021": "若一方明显拥有更多强证据且硬缺口较少，就集中投入",
+            "v01": "若硬门槛、成本或机会代价持续不利，再转向"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均满足下一周复核的要求，并明确单次拒绝或无回复不足以支持转向；B的机会计数触发条件更直接，但不存在实质性停损差异。",
+          "excerpts": {
+            "v021": "一周或完成上述比较后复盘",
+            "v01": "满一周或累计评估 5 个可比机会后复盘"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用三个原型和暂无投递反馈的既有背景，没有虚构学历、能力、地点偏好或历史经历。",
+          "excerpts": {
+            "v021": "逐个审计三个项目",
+            "v01": "逐个审计三个项目"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均避免宣称用户最适合某岗位，没有编造成就指标、生产部署或已完成的验证结果。",
+          "excerpts": {
+            "v021": "现在直接选方向依据不足",
+            "v01": "因此现在不能可靠判定方向"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v021": [],
+        "v01": []
+      }
+    },
+    {
+      "case_id": "G02",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者的实质方案相同：利用既有工程经历补齐产品判断证据、映射岗位、在七天内小规模试投并复盘。B的事实与未知区分更严谨，A的重评条件更具体；这些局部差异不足以形成实质胜负，且均无重大证据或约束违规。",
+      "decisive_excerpts": {
+        "v01": "第 5—7 天选择匹配度最高的岗位做少量定向投递或从业者交流",
+        "v021": "用匹配度最高的2—3个岗位做小规模投递或交流"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别转型验证阶段、七天预算和不重开大项目的要求。",
+          "excerpts": {
+            "v01": "先做 7 天有边界的验证",
+            "v021": "先把“SWE转AI产品”作为一周的有界验证"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均要求核对个人贡献与结果证据，没有把工程背景直接写成产品ownership。",
+          "excerpts": {
+            "v01": "个人贡献与结果；没有证据的效果降级表述。",
+            "v021": "结果及贡献边界；没有证据的部分明确留空。"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "v021",
+          "reason": "B明确区分材料未整理与证据是否存在；A把来源未提及的“用户判断”也归入尚未整理，存在轻微外推。",
+          "excerpts": {
+            "v01": "但“需求优先级、用户判断、产品评测决策”尚未整理",
+            "v021": "未知的是这些项目里是否有足够强的用户问题、取舍和结果证据。"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均抓住产品判断证据这一局部缺口，没有把改头衔当作解决方案。",
+          "excerpts": {
+            "v01": "当前瓶颈是产品判断证据，而非职位名称。",
+            "v021": "当前最可能的瓶颈是产品判断证据与定位"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "A先提出可检验定位，B依据岗位映射再收窄定位；均有清楚且有条件的推进方向。",
+          "excerpts": {
+            "v01": "把“技术型 AI 产品经理”作为主假设",
+            "v021": "选一个主定位，最多保留一个备选。"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "均指定围绕现有项目整理产品判断证据，再做岗位映射和小规模外部验证，行动具体且基本符合预算。",
+          "excerpts": {
+            "v01": "逐个写清用户/问题、方案取舍、优先级依据、评测标准、个人贡献与结果",
+            "v021": "你个人做过的优先级判断、方案取舍、评测标准、结果及贡献边界"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均把短期补证与一周内试投结合，避免为转型启动大项目或无限延后投递。",
+          "excerpts": {
+            "v01": "第 5—7 天选择匹配度最高的岗位做少量定向投递或从业者交流",
+            "v021": "用匹配度最高的2—3个岗位做小规模投递或交流"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "v021",
+          "reason": "A提醒反馈不足以否定方向；B进一步提出市场因素这一竞争解释，但未说明如何检验，优势有限。",
+          "excerpts": {
+            "v01": "单次拒绝或沉默不足以证明方向错误。",
+            "v021": "且排除市场等混杂因素，再考虑转向。"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "v01",
+          "reason": "A明确列出缺口、硬约束和补齐成本等重评依据；B的“核心假设”和排除混杂因素较难直接操作。",
+          "excerpts": {
+            "v01": "持续指向同一硬缺口、硬约束不符或补齐成本过高",
+            "v021": "持续否定核心假设，且排除市场等混杂因素"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均有七天复盘边界，并以重复反证而非单次反馈作为转向依据；后续机会数量不取消七天复盘。",
+          "excerpts": {
+            "v01": "第 7 天或累计 5 个可比机会后复盘",
+            "v021": "七天或完成5个可比机会后复盘"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用工程经历作为可迁移证据来源，并针对产品决策材料缺口提出小范围补证。",
+          "excerpts": {
+            "v01": "你自述有 SWE 和工程项目经历",
+            "v021": "已知事实是你有SWE和工程项目背景"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未虚构产品ownership、业绩指标或上线成果；项目和岗位数量属于行动建议，不是已完成经历。",
+          "excerpts": {
+            "v01": "不改写成已具备产品能力",
+            "v021": "没有证据的部分明确留空。"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v01": [],
+        "v021": []
+      }
+    },
+    {
+      "case_id": "G03",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者实质等价：均依据有限评测证据建议小批申请，正确理解preferred，补充架构阐述并设约一周复核。A的证据表与B的架构稿侧重不同，但不足以构成实质胜负；均无硬失败。",
+      "decisive_excerpts": {
+        "v021": "观察一周或累计5个可比机会后复盘",
+        "v01": "一周或完成 5 个可比机会后复盘"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别已有窄范围证据、时间有限且正在决定是否小批申请，没有重复索要已提供的信息。",
+          "excerpts": {
+            "v021": "值得投，但应作为“小批量、有边界的试投”",
+            "v01": "值得小批投，但定位为“有边界的试投”"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均保留原型、配套产物及个人贡献说明的证据边界，没有把产物当作生产或完整作者身份证明。",
+          "excerpts": {
+            "v021": "材料明确不能证明生产部署或完整个人作者身份",
+            "v01": "现有材料不能证明生产部署或完整作者身份"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均把架构取舍能力列为待验证项，没有把缺少证据等同于缺少能力。",
+          "excerpts": {
+            "v021": "最大不确定性是你能否用真实项目清楚解释架构取舍",
+            "v01": "这属于核心要求，目前材料尚未给出证据"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均抓住架构阐述与招聘方对生产经验的实际要求，没有将问题仅归结为简历措辞。",
+          "excerpts": {
+            "v021": "以及招聘方实际如何看待非生产原型",
+            "v01": "最大不确定性是你能否用真实经历解释架构取舍"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均明确建议有界试投，正确理解生产经验是优先项，未据此判定不合格。",
+          "excerpts": {
+            "v021": "“Production experience”只是 preferred，并非硬门槛，因此不必自我淘汰",
+            "v01": "JD 把生产经验写为 preferred，并非明确硬门槛，因此不必因此自我淘汰"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "A偏重职责与个人证据对齐，B偏重架构追问准备；结合各自的准确贡献表述与小批申请安排，均具体可行。",
+          "excerpts": {
+            "v021": "把项目整理成一页证据表，逐项对应评测目标、你的决策、架构取舍、结果与限制",
+            "v01": "从该项目整理一页架构防守稿，覆盖为何这样设计、替代方案、指标选择、失败模式及若上线需补什么"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均限制投递及准备规模，将长期生产经验缺口留待反馈验证，没有要求先投入大型重建项目。",
+          "excerpts": {
+            "v021": "不要把它当高确定性主线",
+            "v01": "用同一定位小批测试 5 个相近岗位"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均考虑JD虽写优先项、实际筛选却可能重视生产经验的替代情形，并区分架构表达问题与经验门槛。",
+          "excerpts": {
+            "v021": "若反复明确卡在生产经验，再降低此类岗位优先级并补对应证据",
+            "v01": "若反复卡在生产经验且岗位普遍将其视为硬门槛"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均提供可观察的面试或明确反馈作为调整依据，并另设生产经验反复成为障碍时的降级条件。",
+          "excerpts": {
+            "v021": "若获得面试或反馈集中在架构阐述，继续并补强表达",
+            "v01": "若多次明确卡在架构表达，先补表达与案例"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均设置约一周或有限样本后的复核，并明确单次拒绝或无回复不足以转向；降优先级与停止扩投均属有界调整。",
+          "excerpts": {
+            "v021": "观察一周或累计5个可比机会后复盘",
+            "v01": "一周或完成 5 个可比机会后复盘"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用已说明个人贡献和时间有限的背景，未虚构履历，也未要求重新证明全部个人经历。",
+          "excerpts": {
+            "v021": "且个人贡献范围已有说明",
+            "v01": "同时只陈述“评测原型、本人具体贡献与边界”"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未编造成果指标、生产部署或招聘结果；B的上线内容明确是未来假设，双方数量均为计划预算。",
+          "excerpts": {
+            "v021": "保持“评测原型、个人负责范围、非生产部署”的准确表述",
+            "v01": "若上线需补什么"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v021": [],
+        "v01": []
+      }
+    },
+    {
+      "case_id": "G04",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者在关键决策上实质等价：识别阶段冲突与指标缺证，先降措辞，提供安全句和补证清单，并设置无法补证时停止升级的边界。来源编号、清单详略和表达差异不足以决定胜负，均无硬失败。",
+      "decisive_excerpts": {
+        "v021": "停止线：在证据补齐前，不升级为“生产”“主导”或量化提升。",
+        "v01": "建议：立即把“production”和“30% improvement”从简历中撤下，改为边界清楚的原型表述。"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别出原型与生产表述冲突，以及30%指标缺少凭证。",
+          "excerpts": {
+            "v021": "原简历陈述与现有材料冲突",
+            "v01": "已确认材料存在直接冲突"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均按材料强度限制结论，没有用README推导个人所有权或指标真实性。",
+          "excerpts": {
+            "v021": "README 也不能单独证明具体作者身份和贡献范围",
+            "v01": "个人贡献、30%的指标定义与测量过程仍未知"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均区分已提供的项目阶段信息与尚未证实的贡献、测量信息。",
+          "excerpts": {
+            "v021": "这部分仍属未知",
+            "v01": "目前只能确认项目阶段为原型；个人贡献、30%的指标定义与测量过程仍未知。"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均将关键问题定位为经历边界和证据缺口，而非措辞不够有力。",
+          "excerpts": {
+            "v021": "无生产用户，也没有对比基线或测量凭证",
+            "v01": "仅为本地原型、无生产用户，也未提供对照基线或测量凭证"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "首要建议一致且明确：先撤除无证据支持的生产和量化表述。",
+          "excerpts": {
+            "v021": "立即把简历中的“Built a production AI assistant with 30% improvement”降级为原型表述",
+            "v01": "立即把“production”和“30% improvement”从简历中撤下"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "均提供可直接使用的条件式安全句，并列出贡献归属和指标测量的补证清单；没有宣称已经执行。",
+          "excerpts": {
+            "v021": "参与开发本地 AI 助手原型，负责［仅填写可证明的个人贡献］；尚未投入生产。",
+            "v01": "参与开发本地AI助手原型，负责［仅填写可证实部分］；尚未投入生产"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均先做低成本纠正，将补证作为保留指标的条件，未要求为简历另建生产项目。材料没有更具体的时间或机会约束。",
+          "excerpts": {
+            "v021": "删除 30% 指标，除非能提供明确基线、样本、测试条件及测量记录",
+            "v01": "若要保留30%，补齐基线、样本、测试条件、计算方法和原始结果"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均考虑补证成功后重新评估这一替代路径，没有将当前缺证等同于永远不可能证实。",
+          "excerpts": {
+            "v021": "取得可核验的部署记录、指标口径与归属证据后，再重新评估措辞。",
+            "v01": "取得可核验材料并校正归属后再审"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "两者均以新增可核验证据和归属校正作为重审条件；结合各自补证清单，条件足够具体。",
+          "excerpts": {
+            "v021": "取得可核验的部署记录、指标口径与归属证据后",
+            "v01": "取得可核验材料并校正归属后再审"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均明确无法补证时停止升级。B的“永久”措辞较绝对，但同时保留了取得新证据后再审的路径，不构成实质决策差异。",
+          "excerpts": {
+            "v021": "在证据补齐前，不升级为“生产”“主导”或量化提升。",
+            "v01": "若无法补证，永久删除生产与30%的表述。"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均围绕本案材料核实个人贡献，没有虚构个人背景、求职历史或时间压力。",
+          "excerpts": {
+            "v021": "人工逐项核对个人负责的功能、关键决策和协作边界",
+            "v01": "逐项整理代码、提交记录、设计决策和团队分工，确认自己的实际所有权"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均撤除未证实指标和生产状态，限制所有权表述；建议中的占位句不属于已完成事实断言。",
+          "excerpts": {
+            "v021": "无法证明的内容不补写",
+            "v01": "不要把“参与”升级为“主导”或“独立完成”"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v021": [],
+        "v01": []
+      }
+    },
+    {
+      "case_id": "G05",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者在核心判断、团队与个人边界、保守建议及停止条件上实质等价。B的决策分工清单更具体，但不足以构成整体胜出；两者建议句中“设计与整理”的职责细化也同样需要核实。",
+      "decisive_excerpts": {
+        "v01": "无法提供决策权或领导行为证据，就保持“参与并负责”，不要升级。",
+        "v021": "若证据仅覆盖评测工作，就停止升级措辞并沿用保守版本"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "两者均识别团队贡献与个人领导证据的边界，没有把 Led 等同于独立完成。",
+          "excerpts": {
+            "v01": "主导权仍属未知",
+            "v021": "也不能把团队成果归为个人独立完成"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "两者都保留自述的证据强度，并未将简历中的领导表述视为已获证实。",
+          "excerpts": {
+            "v01": "现有自述只支持“负责评测案例”，系统由四人协作",
+            "v021": "现有材料只支持你负责评测案例（G05-S2，自述）"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均区分缺乏领导证据与确定没有领导行为，没有将未知变成否定事实。",
+          "excerpts": {
+            "v01": "主导权仍属未知",
+            "v021": "出现归属冲突时保持未知，待核对后复审。"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均将瓶颈定位于决策权限和责任证据，而非单纯润色措辞。",
+          "excerpts": {
+            "v01": "无法提供决策权或领导行为证据",
+            "v021": "没有证据证明你拥有关键方案决策、任务分工、评审权或整体交付责任"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "首要建议一致且明确：先使用参与团队并注明个人贡献的保守表述。",
+          "excerpts": {
+            "v01": "立即把“Led a four-person team”降级",
+            "v021": "暂时不要写“Led a four-person team”"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "v021",
+          "reason": "两者都要求核对分工并提供安全句；B进一步明确决策分工清单的字段，更便于执行和核查。",
+          "excerpts": {
+            "v01": "回忆是否拥有方案选择、任务分配、关键评审或最终拍板权",
+            "v021": "列出项目中的关键决策、提出者、执行者、最终拍板者及可核对材料"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "NOT_ASSESSABLE",
+          "reason": "材料未提供时间预算、紧迫性或竞争机会，无法实质比较机会成本判断。",
+          "excerpts": {
+            "v01": "",
+            "v021": ""
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均保留实际存在领导贡献但目前证据不足的可能，并给出相应处理路径。",
+          "excerpts": {
+            "v01": "再评估“主导”",
+            "v021": "若能核实你持续负责跨成员决策与交付"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均要求新增材料实质支持个人决策或交付责任，才重新考虑领导措辞。",
+          "excerpts": {
+            "v01": "出现会议记录、任务分配、评审意见、提交记录等能证明个人决策和责任边界的直接材料后",
+            "v021": "若能核实你持续负责跨成员决策与交付"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均满足贡献未获进一步证实时停止升级的要求。",
+          "excerpts": {
+            "v01": "就保持“参与并负责”，不要升级",
+            "v021": "若证据仅覆盖评测工作，就停止升级措辞并沿用保守版本"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用四人协作和个人负责评测案例的信息，没有引入个人经历或招聘结果。",
+          "excerpts": {
+            "v01": "参与四人团队完成该系统",
+            "v021": "你与其他三人的边界"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未声称独立实现、生产部署或量化成绩；但建议句都把“负责评测案例”细化为“设计与整理”，这些具体职责仍应核实后使用。",
+          "excerpts": {
+            "v01": "负责评测案例的设计与整理",
+            "v021": "负责评测案例设计与整理"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v01": [],
+        "v021": []
+      }
+    },
+    {
+      "case_id": "G06",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者实质建议相同：守住团队贡献与证据边界，限时练习岗位相关追问和真实故事，停止后保证睡眠。A对生产经历的证据要求更稳健，B的总时限更直接；局部差异不足以改变整体可行性，判平局。",
+      "decisive_excerpts": {
+        "v021": "现有材料只支持“参与团队原型”，不能证明生产使用，也不能证明独立完成",
+        "v01": "练习满2小时或能稳定回答上述五问即停止"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别明天面试、今晚预算有限和简历强表述风险，没有重复询问已提供信息。",
+          "excerpts": {
+            "v021": "今晚不要开新项目，集中修正“Built production agent prototype”这条高风险表述",
+            "v01": "今晚用约2小时做“项目表述降险＋针对性演练”，不要临时补新项目"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "v021",
+          "reason": "A明确要求生产使用证据。B的条件较宽，真实用户或运行环境本身未必能证明生产部署；但B没有直接断言已经生产部署。",
+          "excerpts": {
+            "v021": "现有材料只支持“参与团队原型”，不能证明生产使用，也不能证明独立完成",
+            "v01": "只有能说明真实用户、运行环境或运维证据时才保留 production"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均明确关键未知，没有把简历措辞当作生产经历证明。B对面试追问使用概率表述，属于基于JD的预测。",
+          "excerpts": {
+            "v021": "具体个人贡献、评估方法和架构决策仍未知",
+            "v01": "不确定项是你的实际职责、原型使用情况和测量证据"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均把瓶颈定位为项目真实性、个人贡献边界和追问防守，并未停留在润色简历。",
+          "excerpts": {
+            "v021": "围绕岗位要求完成一次限时防守准备",
+            "v01": "当前最大风险是简历写“production agent prototype”，但已知事实仅为团队原型"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "第一步均清晰：先降低无法举证的强词，再进行针对性演练。",
+          "excerpts": {
+            "v021": "把表述降为真实边界",
+            "v01": "先把高风险表述改成可守住的版本"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "A的贡献与证据清单更接近风险图，B的评估准备更具体；两者均提供五问、项目故事和有限准备预算，未声称已执行。",
+          "excerpts": {
+            "v021": "列出你实际负责、队友负责、工具协助、可出示证据及缺口",
+            "v01": "重点准备评估基线、样本、失败案例和架构约束，不会的明确边界"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均限制投入、排除临时新项目并保护睡眠。A约135分钟与B约120分钟均未明显违反未量化的有限预算。",
+          "excerpts": {
+            "v021": "明早只复盘卡壳处，不扩展新故事",
+            "v01": "练习满2小时或能稳定回答上述五问即停止"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均排除紧迫窗口内补新项目这一竞争方案，但未进一步展开替代方案的收益比较，表现相近。",
+          "excerpts": {
+            "v021": "今晚不要开新项目",
+            "v01": "不要临时补新项目"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均以可观察的举证失败触发措辞调整；A另有演练失败后调整主打案例的条件。",
+          "excerpts": {
+            "v021": "若某项贡献或“生产”证据无法明确说明，立即降低措辞",
+            "v01": "任何一句无法用具体产物或决策解释，就继续降级措辞"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "A有分段限时、结束后睡眠及案例降级规则；B有明确总时限和提前结束条件。均提供有界停止机制。",
+          "excerpts": {
+            "v021": "若两轮演练仍讲不清核心决策，就把该项目从主打案例降为辅助案例",
+            "v01": "练习满2小时或能稳定回答上述五问即停止"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均结合团队原型、JD要求和紧迫时间约束，没有虚构个人职责、经历或可用案例。",
+          "excerpts": {
+            "v021": "重点准备评估、架构取舍、用户问题定义",
+            "v01": "“生产级”和个人贡献均缺少证据"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未捏造指标、独立所有权或生产部署事实。B保留production的条件不够严谨，已在证据纪律中体现，不构成已发生部署的断言。",
+          "excerpts": {
+            "v021": "××只能填已确认内容",
+            "v01": "负责〔仅填写真实职责〕"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v021": [],
+        "v01": []
+      }
+    },
+    {
+      "case_id": "G07",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者在关键判断和证据边界上实质等价：接受明确拒绝，将反馈限定为单个样本，有界复盘并等待重复证据再调整。A的项目练习更具体，B对继续机会的安排更明确，优势互补，不足以形成整体胜负。双方均无硬失败。",
+      "decisive_excerpts": {
+        "v01": "用真实项目准备两轮递进追问，并在下一场同类面试前完成一次模拟讲述",
+        "v021": "做一次聚焦复盘，同时继续投递同类岗位。"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别明确拒绝及单次反馈的有限范围，不据此否定整个职业方向。",
+          "excerpts": {
+            "v01": "接受本次流程已结束，但先做“针对性补强”，不要因一次反馈立即转方向。",
+            "v021": "结束本次机会，但先不要据此转方向"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均准确引用并归因于HR，没有将反馈扩大为已证实的普遍能力缺陷；但都未明确要求保存反馈原话。",
+          "excerpts": {
+            "v01": "HR给出的理由是“技术深度还需要加强”",
+            "v021": "HR明确给出“技术深度还需要加强”"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均将确定的拒绝结果与未知的具体原因、评分和比较区分开。",
+          "excerpts": {
+            "v01": "未知的是具体薄弱题目、评分标准、与其他候选人的差距，也不能确认这就是唯一拒绝原因。",
+            "v021": "但反馈维度、评分标准、岗位横向比较及是否还有其他因素均未知。"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均将工作聚焦到面试暴露的具体技术卡点，没有泛化成简历润色或全面转型。",
+          "excerpts": {
+            "v01": "优先找出原理、架构取舍、故障排查和个人贡献中最薄弱的1—2项。",
+            "v021": "优先补最频繁卡住的1—2项"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均直接给出结束机会、局部复盘补强的首要建议，无须等待额外研究才能行动。",
+          "excerpts": {
+            "v01": "下一步建议：接受本次流程已结束，但先做“针对性补强”",
+            "v021": "做一次聚焦复盘，同时继续投递同类岗位。"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "v01",
+          "reason": "B的复盘可执行；A进一步指定真实项目递进追问与模拟讲述，并提供复盘期限，补强产出更具体。",
+          "excerpts": {
+            "v01": "用真实项目准备两轮递进追问，并在下一场同类面试前完成一次模拟讲述",
+            "v021": "按面试题逐项还原：当时回答、被追问处、未答出的细节，以及哪些内容能由真实项目证据支撑"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "v021",
+          "reason": "A暗含后续机会仍会推进；B明确要求复盘与投递并行，更直接保护其他机会，避免准备挤占求职进度。",
+          "excerpts": {
+            "v01": "观察接下来5—10个可比机会",
+            "v021": "做一次聚焦复盘，同时继续投递同类岗位。"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均保留其他拒绝原因的可能性，但都未展开具体替代解释或区分检验，表现相当。",
+          "excerpts": {
+            "v01": "也不能确认这就是唯一拒绝原因。",
+            "v021": "是否还有其他因素均未知。"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均以多个可比机会中重复出现的技术反馈作为调整建议的可观察条件。",
+          "excerpts": {
+            "v01": "若同类深度反馈重复出现，再系统调整准备重点或岗位层级",
+            "v021": "若累计5—10个可比机会反复指出同一具体技术缺口，再系统加强该能力或重新评估岗位匹配。"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均接受机会结束、限制反馈追问，并设置后续可比面试的复盘窗口；没有要求继续争取改判或立即转向。",
+          "excerpts": {
+            "v01": "若对方不再回复，停止追问；本次结果只记为单个样本",
+            "v021": "若对方不回复，不再催问。"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用仅有一次明确反馈这一核心背景，没有虚构个人经历、紧迫期限或其他拒信。",
+          "excerpts": {
+            "v01": "本次结果只记为单个样本，不外推为整体能力结论。",
+            "v021": "单次反馈不足以证明普遍能力缺口，更不足以支持转向。"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未添加无来源的成果、指标或经历；面试数量和练习期限属于建议安排，而非事实断言。",
+          "excerpts": {
+            "v01": "不补写不存在的生产经历或成果。",
+            "v021": "不临时编造个人贡献或成果。"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v01": [],
+        "v021": []
+      }
+    },
+    {
+      "case_id": "G08",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "核心决策实质相同：核对工作日、礼貌跟进一次、继续其他机会，并在有限窗口后降投入，不将沉默视为拒绝。B更明确核查已有承诺，A更明确工作日发送及真实截止时的调整；这些局部优势不足以形成整体胜负。两者共有承诺日期的事实越界，也都未明确核查集中招聘安排。",
+      "decisive_excerpts": {
+        "v01": "发送一次后再观察约三个工作日；若仍无回复，降低该机会投入并推进替代选项，但仍不记录为拒绝。",
+        "v021": "发出一次跟进后再观察约三个工作日；若仍无回复，就降低该机会投入、继续其他流程，但不记为拒绝。"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别日历天与工作日的区别及终面后等待的问题；均未明确核对是否属于集中校招及其统一安排。",
+          "excerpts": {
+            "v01": "先核对这五个日历天实际包含几个工作日",
+            "v021": "先核对这五个日历天里实际经过了几个工作日"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "材料只说承诺日期不清楚，两者均将未知写成没有；现有聊天片段未出现日期，不能证明此前没有承诺。",
+          "excerpts": {
+            "v01": "未给承诺日期",
+            "v021": "没有给确定日期"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均将沉默原因作为可能解释，并保留最终结果未知；均存在承诺日期未知被写成不存在的问题。",
+          "excerpts": {
+            "v01": "沉默可能来自排期、审批、候选人比较或优先级变化",
+            "v021": "流程排期、审批、候选人比较或优先级变化都可能造成沉默"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均把关键问题定位为流程信息不足与跟进时机，没有转向无关的简历修改或能力补课。",
+          "excerpts": {
+            "v01": "HC与最终结果仍未知",
+            "v021": "最终结论和 HC 状态仍未知"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均给出清晰的条件式首次跟进建议。A明确安排在工作日，B随后补充以已有承诺日为准，各有细节优势。",
+          "excerpts": {
+            "v01": "若终面后已满约三个工作日，下一工作日上午礼貌跟进一次",
+            "v021": "若已满约三个工作日，今天礼貌跟进一次"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "v021",
+          "reason": "两者均有日期核对和可发送的话术；B额外要求核查已有承诺，能直接修正跟进时间。两者仍缺少招聘批次安排的核查。",
+          "excerpts": {
+            "v01": "核对终面日期、周末及节假日，只计算实际工作日",
+            "v021": "并回看 HR 是否给过明确承诺日；若有，以承诺日为准。"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均限制该机会的等待成本，并保持其他求职机会推进。",
+          "excerpts": {
+            "v01": "跟进后继续投递和准备其他机会，不暂停求职",
+            "v021": "同时继续投递和推进其他机会"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均提供行政延迟及候选人竞争等不同解释，没有把沉默唯一归因为拒绝。",
+          "excerpts": {
+            "v01": "排期、审批、候选人比较或优先级变化",
+            "v021": "流程排期、审批、候选人比较或优先级变化"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "v01",
+          "reason": "均会根据明确时间表调整；A还覆盖真实外部截止这一会实质改变等待策略的信息。",
+          "excerpts": {
+            "v01": "若出现真实Offer截止，则提前如实告知并请求明确时间表。",
+            "v021": "若收到具体时间表，则按新承诺日复核。"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均满足一次跟进窗口后降低投入的要求，且不将无回复登记为拒绝。",
+          "excerpts": {
+            "v01": "发送一次后再观察约三个工作日；若仍无回复，降低该机会投入并推进替代选项，但仍不记录为拒绝。",
+            "v021": "发出一次跟进后再观察约三个工作日；若仍无回复，就降低该机会投入、继续其他流程，但不记为拒绝。"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用已给出的五个日历天信息，不虚构其他录用通知或个人经历；B核查承诺日期的优势已体现在行动项。",
+          "excerpts": {
+            "v01": "先核对这五个日历天实际包含几个工作日",
+            "v021": "先核对这五个日历天里实际经过了几个工作日"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "两者都有同类的日期信息越界；约三个工作日属于建议的观察预算，不是虚构事实或成就指标。",
+          "excerpts": {
+            "v01": "未给承诺日期",
+            "v021": "没有给确定日期"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v01": [
+          {
+            "label": "FABRICATED_FACT",
+            "excerpt": "未给承诺日期",
+            "reason": "G08-S2明确将承诺日期列为未知，A却断言未给；这一信息会影响何时跟进。"
+          }
+        ],
+        "v021": [
+          {
+            "label": "FABRICATED_FACT",
+            "excerpt": "没有给确定日期",
+            "reason": "G08-S2未确认是否有承诺日期。B虽要求回看核实，但依据段仍将没有日期写成事实。"
+          }
+        ]
+      }
+    },
+    {
+      "case_id": "G09",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "B",
+      "winner": "v021",
+      "review_reason": "B小幅胜出。两者的算分、条件推荐和证据边界基本等价；实质差异是B补齐了关键职责无法核实时的截止日处理路径，能将核实推进到最终选择。A已有停止与复核条件，不构成硬失败，但其暂缓后的收束动作不够明确。",
+      "decisive_excerpts": {
+        "v01": "若两方答复仍含糊，暂缓定夺至真实截止前",
+        "v021": "优先争取延期，不能延期则依据现有证据仍偏向 A"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别这是已有两个合格Offer后的选择问题，无须重复确认已提供的底线。",
+          "excerpts": {
+            "v01": "地点与薪酬底线均已满足",
+            "v021": "且两者均已满足地点和薪酬底线"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均保留评分的主观性质，加权结果41与32均正确，未将评分当作岗位事实。",
+          "excerpts": {
+            "v01": "按你给出的权重和主观评级",
+            "v021": "该分数只是偏好运算，不是客观公司排名"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均区分当前偏好推导与尚待核实的实际工作条件。",
+          "excerpts": {
+            "v01": "当前真正可能逆转选择的不确定项，是经理质量、实际职责与授权边界",
+            "v021": "目前最大不确定性是经理质量、职责边界及评级是否符合真实岗位"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均抓住学习与ownership能否兑现这一关键瓶颈。",
+          "excerpts": {
+            "v01": "若 A 能证明职责与授权接近当前评级，选 A",
+            "v021": "完成一次“经理与实际职责”核实后再决定"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均明确有条件优先A，没有把建议全部推迟到研究之后。",
+          "excerpts": {
+            "v01": "首选 A，但应视为“待核实后的首选”",
+            "v021": "首选 A，但在最早截止日前完成一次“经理与实际职责”核实后再决定"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "均提供具体核实问题、书面条款核对及重新比较动作。两者都未明确要求将核实结果整理成书面对照表，但已有书面分数比较与后续更新安排。",
+          "excerpts": {
+            "v01": "哪些决策能独立做、谁评估表现，并要求具体项目例子",
+            "v021": "独立决策范围、核心项目归属和直属经理反馈方式"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均通过权重体现为学习和ownership放弃部分薪酬、品牌优势的取舍，核实任务也保持有限范围。",
+          "excerpts": {
+            "v01": "而 B 的薪酬、品牌优势权重较低",
+            "v021": "A 的优势正好集中在你最看重的学习与 ownership"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均考虑A的核心优势不兑现时，B可能成为更好选择；没有仅凭品牌选B。",
+          "excerpts": {
+            "v01": "若 ownership 实际降至约 2 分、学习空间也不优于 B，则重新比较",
+            "v021": "若核实后 A 的 learning 低于 B，或 ownership 降至2及以下，重新比较"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均给出可以通过岗位核实触发的复核条件。B触发更早，但仅要求重新比较，不构成明显质量差异。",
+          "excerpts": {
+            "v01": "若 ownership 实际降至约 2 分、学习空间也不优于 B",
+            "v021": "若核实后 A 的 learning 低于 B，或 ownership 降至2及以下"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "v021",
+          "reason": "两者均有硬约束排除线和截止时间意识；B进一步说明截止前仍无法核实时如何收束，A未明确暂缓之后的决策动作。",
+          "excerpts": {
+            "v01": "若两方答复仍含糊，暂缓定夺至真实截止前",
+            "v021": "优先争取延期，不能延期则依据现有证据仍偏向 A"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均正确使用用户权重、评分和已满足的底线，没有添加个人经历或偏好。",
+          "excerpts": {
+            "v01": "你最重视的 ownership（权重 4）和 learning（权重 3）",
+            "v021": "A 的加权分为 41（学习12、ownership 20、薪酬6、品牌3），B 为 32（9、8、10、5）"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均避免虚构岗位质量或把未知项填成事实；核实行动和时间范围均是建议，而非完成声明。",
+          "excerpts": {
+            "v01": "用确认信息重评 learning 与 ownership，不给未知项打中间分",
+            "v021": "不把未知项按中性分处理"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v01": [],
+        "v021": []
+      }
+    },
+    {
+      "case_id": "G10",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者核心决策实质相当：先补齐条件，依据真实理由谈薪，触及硬约束即停止，均无硬失败。B 更早索取书面条款并处理先报价要求；A 更明确控制等待成本、保留求职选项并提供预算受限时的替代请求。这些差异不足以形成整体实质优势。",
+      "decisive_excerpts": {
+        "v01": "若三至五个工作日仍无明确条件或审批节点，降低投入并继续求职；任何方案触碰你的薪资、地点或入职时间硬约束，就停止推进。",
+        "v021": "若始终拒绝提供核心书面条件，则暂停承诺；若完整方案触及你的硬约束，停止推进"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别当前只有发放意向、条款不完整，未把谈薪阶段误判为已获正式录用。",
+          "excerpts": {
+            "v01": "现在不要把它当成已获得 Offer",
+            "v021": "也不要把这句话当作正式 Offer"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均保留 HR 表述的证据强度，没有将意向升级为确定结果。",
+          "excerpts": {
+            "v01": "HR 仅表示有意向，尚无书面薪酬、奖金规则和决定期限",
+            "v021": "已确认的是 HR 表达了发 Offer 意向"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均承认关键条件未知，没有编造金额、期限或审批结果。",
+          "excerpts": {
+            "v01": "未知项包括岗位级别、固定薪资、奖金口径、试用期、福利、入职时间及审批状态",
+            "v021": "现有材料不足以判断合理金额"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均把核心瓶颈定位为条件不完整、尚不能可靠评估方案。",
+          "excerpts": {
+            "v01": "先把“有意向”推进为可核对的完整条件，再进行有依据的谈薪",
+            "v021": "此刻直接还价容易围绕不完整方案谈判，也无法判断总包和风险"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均明确先核对条件，再提出有依据的调整请求，首步清楚可行。",
+          "excerpts": {
+            "v01": "由你向 HR 表达积极意愿，并询问完整薪酬构成",
+            "v021": "先把口头“有意向”推进为可核对的完整条件，再进行有依据的谈薪"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "v021",
+          "reason": "B 在首次沟通即要求书面输出，并补充 HR 要求先报期望时的具体应对；A 将明确的书面确认要求放在最终接受前。",
+          "excerpts": {
+            "v01": "最终接受前，要求书面确认所有关键条款",
+            "v021": "并请对方邮件或书面汇总"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "v01",
+          "reason": "A 更明确限制等待投入并保留求职选项，且未把延迟解释为拒绝；B 主要限制承诺，未明确后续时间投入。",
+          "excerpts": {
+            "v01": "若三至五个工作日仍无明确条件或审批节点，降低投入并继续求职",
+            "v021": "若始终拒绝提供核心书面条件，则暂停承诺"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均考虑了会改变谈判路径的实际分支：A 处理固定预算受限，B 处理对方要求先报价。",
+          "excerpts": {
+            "v01": "若固定预算受限，再谈签字费、奖金保底、职级或调薪评审时间",
+            "v021": "若 HR 要求先给期望，提供“基于完整职责与总包”的目标区间及理由"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均给出随新增条件调整策略或决定的触发点；A 更具体，B 覆盖完整方案变化。",
+          "excerpts": {
+            "v01": "若固定预算受限，再谈签字费、奖金保底、职级或调薪评审时间",
+            "v021": "若新增条款足以改变偏好，则重新比较后再决定"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均以用户真实硬约束作为停止条件，并设置跟进或暂停节点，没有从沉默推断失败。",
+          "excerpts": {
+            "v01": "任何方案触碰你的薪资、地点或入职时间硬约束，就停止推进",
+            "v021": "若完整方案触及你的硬约束，停止推进"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用没有另一份 Offer 的已知背景，提出真实依据；所列谈判依据是建议，没有声称用户已具备特定经历或能力。",
+          "excerpts": {
+            "v01": "没有另一份 Offer 会削弱外部筹码，但仍可依据岗位价值、现有薪酬、稀缺能力和转职成本谈判",
+            "v021": "没有另一份 Offer 不必虚构，可用相关经验、职责范围和预期贡献支撑"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未虚构竞价 Offer、薪酬行情、个人成绩或谈判成功率，也未宣称已执行任何行动。",
+          "excerpts": {
+            "v01": "收到范围后，提出一个有理由支撑的目标区间",
+            "v021": "关键不确定性是公司预算、岗位级别和奖金兑现条件"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v01": [],
+        "v021": []
+      }
+    },
+    {
+      "case_id": "G11",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者核心决策实质相同：暂缓主线转型，核验符合地点约束的真实岗位，有限补证并复盘。A更重视现有证据和机会成本，B更明确来源与未知，差异不足以形成决定性胜负。两者都需补充总预算分配及超限停止规则；已有有界复盘条件，因此不构成完全缺失停止条件的硬失败。",
+      "decisive_excerpts": {
+        "v021": "暂不把量化作为立即转职主线，先做30天有边界的可逆验证",
+        "v01": "先把“量化”作为30天、每周10小时的有界验证，不立即把它当主转型方向"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别方向探索阶段及时间、地点约束，没有把至少30天的补证估计当作转型成功保证。",
+          "excerpts": {
+            "v021": "暂不把量化作为立即转职主线，先做30天有边界的可逆验证",
+            "v01": "先把“量化”作为30天、每周10小时的有界验证，不立即把它当主转型方向"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均保留研究与实盘证据的边界，没有升级材料的证明力。",
+          "excerpts": {
+            "v021": "原资料只表述为研究、回测或模拟，不写成实盘收益",
+            "v01": "只能表述为研究或回测，不写成实盘收益"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "v01",
+          "reason": "两者均说明未知项；B进一步明确已知信息来自用户自述，并避免据此判定方向本身不适合。",
+          "excerpts": {
+            "v021": "未知的是符合地点约束的岗位数量，以及现有经历能否迁移",
+            "v01": "当前已知仅来自你的自述"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均把岗位供给、硬约束和证据要求作为核心问题，并安排JD核验，而非仅修改措辞。",
+          "excerpts": {
+            "v021": "岗位地域供给、时间预算和实盘证据缺口",
+            "v01": "尚未知本地或远程岗位数量、具体岗位更看重研究、工程还是实盘记录"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均明确暂缓主线转型，保留有限探索；A对当前主线的表述更直接，但总体建议一致。",
+          "excerpts": {
+            "v021": "现阶段首选保留原职业方向",
+            "v01": "不立即把它当主转型方向，也不投要求搬家的岗位"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "A明确审计、产物及交流数量，B明确研究产物内容；均有可执行步骤。两者都应把筛岗、研究及沟通合计纳入每周10小时，B约40小时研究尤其缺少余量。",
+          "excerpts": {
+            "v021": "连续4周每周投入10小时，完成一个可复核的小型研究产物，并尝试3—5次定向交流或投递",
+            "v01": "可复现研究、样本外检验、交易成本与风险说明"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "v021",
+          "reason": "A明确保留原方向并先审计已有证据；B把接近全部月度预算安排给新研究，对已有证据利用及其他机会的时间保留较弱。",
+          "excerpts": {
+            "v021": "将3段最相关经历按“个人贡献—证据—缺口”审计",
+            "v01": "用约40小时完成一个最小证据闭环"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均考虑本地或远程岗位可能使方向可行，没有把约束冲突直接等同于个人不适合量化。",
+          "excerpts": {
+            "v021": "验证“不搬家、每周10小时”下是否存在可行的远程或本地量化岗位",
+            "v01": "因此暂不能判断方向本身不适合你"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均用岗位反馈与补证成本作为调整投入的可观察依据，而非无条件继续。",
+          "excerpts": {
+            "v021": "若有岗位回应且缺口可低成本补齐，继续并收窄方向",
+            "v01": "若5个可比机会反复指出同一且可低成本补齐的缺口，再延长一轮"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均提供有界复盘和停止条件，不从单次拒绝或沉默推断失败；共同缺少明确的预算超限即停止扩张规则。",
+          "excerpts": {
+            "v021": "30天或5个可比机会后复盘",
+            "v01": "地点硬约束使可投机会近乎为空，或30天后仍无法形成可信研究证据，则暂停量化主线"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用了相关个人约束和材料限制，没有虚构履历、地点或招聘结果。",
+          "excerpts": {
+            "v021": "只保留地点符合硬约束的岗位",
+            "v01": "不能搬家、时间有限，且现有材料不能证明实盘收益"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "这些均为未来行动安排，不是已完成成果或业绩指标；两者均未声称研究能够证明实盘收益。",
+          "excerpts": {
+            "v021": "完成一个可复核的小型研究产物",
+            "v01": "在第30天用5个岗位逐项比对证据"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v021": [],
+        "v01": []
+      }
+    },
+    {
+      "case_id": "G12",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者的核心建议、执行步骤和证据止损条件实质等价：先映射岗位职责，再改写现有贡献，不扩项目、不拔高成果。B对岗位匹配未知的表述更审慎，但不足以形成影响实际决策的整体优势，判为平局。",
+      "decisive_excerpts": {
+        "v01": "暂不补新项目，先把现有项目按目标岗位的任务重写",
+        "v021": "先暂停扩充项目，把下一步集中在“岗位任务对齐”"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别已有项目证据与简历语言错位，没有要求重新做项目。",
+          "excerpts": {
+            "v01": "暂不补新项目，先把现有项目按目标岗位的任务重写",
+            "v021": "先暂停扩充项目，把下一步集中在“岗位任务对齐”"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均保持项目证据的有限范围，没有将产物拔高为采用或商业成果。",
+          "excerpts": {
+            "v01": "只写可由产物支撑的贡献，不写采用量、收入或生产效果",
+            "v021": "采用情况、收入或生产效果也没有证据，不能拔高"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "v021",
+          "reason": "B更明确区分已知的表达问题与未知的岗位适配程度；A对项目强度是否构成瓶颈略显确定。",
+          "excerpts": {
+            "v01": "当前瓶颈是定位而非项目强度",
+            "v021": "只能确认定位表达偏弱，不能确认岗位匹配度"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均把瓶颈定位到任务与贡献没有被简历表达出来，针对性一致。",
+          "excerpts": {
+            "v01": "招聘方难以判断你解决了什么问题、承担了什么职责",
+            "v021": "无法让招聘方快速判断你解决了什么问题"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均明确先核对目标职责，再翻译现有项目证据。",
+          "excerpts": {
+            "v01": "选定一个主投岗位族，从3—5份同类JD提炼重复任务与能力要求",
+            "v021": "选定一个目标岗位族，从真实 JD 提取 3 项高频任务"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "均提供可执行的岗位语言映射、受证据约束的表述结构及追问检查；均未给出完整成句的安全示例。",
+          "excerpts": {
+            "v01": "将项目改写为“场景/问题—你的明确职责—关键决策与方法—有边界的结果”",
+            "v021": "将核心项目改成“任务—个人决策/贡献—可核实结果—阶段边界”的 2–3 条表述"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均优先复用已有证据，避免为定位问题投入无必要的新项目建设。",
+          "excerpts": {
+            "v01": "暂不补新项目",
+            "v021": "先暂停扩充项目"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均考虑表达之外的替代解释。B多提市场因素，但未进一步具体化，不构成实质优势。",
+          "excerpts": {
+            "v01": "复查岗位匹配与证据强度",
+            "v021": "先核查项目证据与市场因素，再调整岗位范围"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均给出可观察的复查条件；A将无回应作为检查信号而非拒绝结论，B使用更直接的匹配反馈。",
+          "excerpts": {
+            "v01": "若仍普遍无回应，复查岗位匹配与证据强度",
+            "v021": "若仍反复被认为经验不匹配，先核查项目证据与市场因素，再调整岗位范围"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均设置5—10个同类机会的复盘窗口，并要求证据不足时停止拔高，覆盖无新证据不加指标的原则。",
+          "excerpts": {
+            "v01": "若无法提供归属或结果证据，停止升级措辞",
+            "v021": "证据补不上时停止升级措辞。"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均使用已提供的产物、个人贡献与技术罗列问题，没有补造个人经历或硬约束。",
+          "excerpts": {
+            "v01": "已提供项目产物和个人贡献说明",
+            "v021": "现有材料支持你有范围明确的评测项目和个人贡献"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未虚构头衔、用户、指标或生产经历；B列出的贡献类型属于建议性示例，并非已完成事实。",
+          "excerpts": {
+            "v01": "暂不能判断是否足以支持“主导”或量化成效",
+            "v021": "不写未证实的主导、生产落地或商业效果"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v01": [],
+        "v021": []
+      }
+    },
+    {
+      "case_id": "G13",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者核心决策实质相同：纠正归属、核实贡献、限时演练并降低不可防守的措辞。A的风险图和证据恢复条件更完整，B的追问停止门槛更具体，未形成足以判定整体胜负的差距。两者都需避免把基线解释不清推成基线不存在。",
+      "decisive_excerpts": {
+        "v021": "整理一页“主张—证据—缺口—安全措辞”",
+        "v01": "若任一表述仍无法用真实细节回答两轮追问，就继续降级措辞"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均识别技术面临近时的归属纠错与可防守性问题，未把强简历当作强理解。",
+          "excerpts": {
+            "v021": "核心风险不是简历吸引力，而是归属与证据不一致。",
+            "v01": "因此原表述存在归属夸大和被追问击穿的高风险。"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均保留自述来源和队友的选型归属，没有将团队决策据为个人功劳。",
+          "excerpts": {
+            "v021": "复盘称架构选型由队友决定、自己说不清基线",
+            "v01": "你自述说不清基线，且架构选型由队友决定"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均明确个人参与范围未知，将表述强度与待核实贡献关联。",
+          "excerpts": {
+            "v021": "不确定的是你实际拥有的实现和评审范围。",
+            "v01": "未知的是你是否参与过需求分析、方案评估、模块实现或架构落地"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均优先解决归属与证据缺口，而非单纯润色或教用户圆过去。",
+          "excerpts": {
+            "v021": "立即把“Led architecture decisions”降级为可防守的个人贡献表述",
+            "v01": "立即把简历中的“Led architecture decisions”降级为可证实的个人贡献"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "第一步均清楚：先降低无法支撑的主导表述，再准备真实贡献。",
+          "excerpts": {
+            "v021": "不要继续按“主导架构”准备。",
+            "v01": "不要继续以“主导架构”应战。"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "v021",
+          "reason": "两者都有贡献核对与演练；A进一步给出可直接检查的风险图，并明确追问测量条件，覆盖本案所需输出更完整。",
+          "excerpts": {
+            "v021": "整理一页“主张—证据—缺口—安全措辞”",
+            "v01": "逐项列出你亲自完成、参与讨论、仅知情的内容，并对应材料或具体细节"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "TIE",
+          "reason": "均采用有限准备投入并停止新增项目，符合临近面试的约束；具体时间是建议预算，并非虚构用户条件。",
+          "excerpts": {
+            "v021": "用最多两小时核对可指向的代码或材料",
+            "v01": "用两小时演练五问"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均允许选型虽由队友决定、用户仍有真实参与贡献的可能，没有因不能主张主导就抹去全部贡献。",
+          "excerpts": {
+            "v021": "若核对出明确决策记录，可有限恢复“参与架构决策”",
+            "v01": "这决定安全措辞能写到多强。"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "v021",
+          "reason": "A以可观察的决策记录作为调整依据，且仅恢复参与表述；B的口头说明与评审权仍不足以单独支持原先宽泛的主导声明。",
+          "excerpts": {
+            "v021": "若核对出明确决策记录，可有限恢复“参与架构决策”；若没有，就坚持降级。",
+            "v01": "只有能说明自己拥有的决策、备选方案和评审权时，才保留“主导”。"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "v01",
+          "reason": "A有证据缺失时降级的条件；B额外给出面试前可执行的两轮追问门槛，更直接落实无法解释就降低强词。",
+          "excerpts": {
+            "v021": "若没有，就坚持降级。",
+            "v01": "若任一表述仍无法用真实细节回答两轮追问，就继续降级措辞"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均围绕已提供的临近技术面、贡献边界和基线解释困难展开，没有杜撰个人履历或招聘结果。",
+          "excerpts": {
+            "v021": "在面试前改为",
+            "v01": "面试前停止新增大项目。"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "共有缺陷：说不清基线不等于当时没有可靠基线，建议话术应先核实。这里属于条件性建议，不按已完成事实的虚构判硬失败。",
+          "excerpts": {
+            "v021": "基线不清就明确说当时未建立可靠基线。",
+            "v01": "基线不清就坦诚说明当时未建立可靠对照"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v021": [],
+        "v01": []
+      }
+    },
+    {
+      "case_id": "H01",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "A",
+      "winner": "v021",
+      "review_reason": "A 小幅胜出。两者都正确保留拒绝结果，明确停止专项准备且没有硬性失败。A 更完整地规定了本次决策的重启条件，并为今晚保留休息选项；B 的重新评估条件主要针对长期定位，另有证据尚不足的即时补强建议。",
+      "decisive_excerpts": {
+        "v021": "若 HR 后续明确恢复流程或重新发出面试安排，再重启准备；否则停止跟进该机会。",
+        "v01": "复盘条件：若5—10个可比机会反复出现同一缺口，再判断是优化表达、补证据，还是调整方向。"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "两者都保留未通过的明确结果，并据此取消今晚针对下一轮的专项准备。",
+          "excerpts": {
+            "v021": "不能理解成通过。",
+            "v01": "不能理解成通过。"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "两者均准确转述并归因于 HR，没有反转否定结果或虚构面试安排。",
+          "excerpts": {
+            "v021": "HR 原话“本轮未通过，未安排下一轮”",
+            "v01": "HR明确表示“本轮未通过”，且“没有安排下一轮”"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "两者均将明确结果与未知原因区分；B 的可能原因没有被当作事实。",
+          "excerpts": {
+            "v021": "不确定的是淘汰原因和岗位是否仍开放。",
+            "v01": "不确定的是未通过的具体原因，可能涉及能力匹配、比较候选人或岗位因素"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "都识别出关键是接受当前结果、停止为未安排的面试投入，而非修改简历或猜测淘汰原因。",
+          "excerpts": {
+            "v021": "今晚无需再为这家公司的“下一轮”准备。",
+            "v01": "今晚不建议再按这家公司的下一轮面试做专项准备"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "两者均清楚回答今晚是否继续准备，并给出转移精力的建议。",
+          "excerpts": {
+            "v021": "今晚停止针对该公司的专项准备",
+            "v01": "把时间转给仍在推进的机会更划算。"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "两者都有时间有界、产出明确的复盘行动及一次性反馈请求，没有声称已经执行。",
+          "excerpts": {
+            "v021": "保存 HR 原话和面试记录，明天用 20–30 分钟复盘",
+            "v01": "今晚用30分钟复盘本轮，记录被问到的问题、卡顿点和证据不足处"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "v021",
+          "reason": "A 根据是否有临近面试安排今晚投入；B 在缺少重复缺口证据时追加补强任务，投入边界略弱。两者都未违反明确时间约束。",
+          "excerpts": {
+            "v021": "若没有其他临近面试，休息并恢复节奏。",
+            "v01": "再选择其中一个高频缺口补强。"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "两者都防止将单次拒绝归结为普遍能力不适配；明确否定结果本身不需要人为制造相反解释。",
+          "excerpts": {
+            "v021": "不能推出你不适合该类岗位，也无法据此判断具体能力缺口。",
+            "v01": "可能涉及能力匹配、比较候选人或岗位因素；没有反馈前不要自行定性。"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "v021",
+          "reason": "A 指明能直接改变本次准备决策的新证据。B 的条件适用于长期求职调整，没有说明何时重新考虑这家公司的面试准备。",
+          "excerpts": {
+            "v021": "若 HR 后续明确恢复流程或重新发出面试安排，再重启准备",
+            "v01": "若5—10个可比机会反复出现同一缺口，再判断是优化表达、补证据，还是调整方向。"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "两者都提供停止跟进规则，并限制反馈追问；都没有凭一次拒绝要求改变职业方向。B 的不回复仅触发停止追问，并未被用来推断拒绝结果。",
+          "excerpts": {
+            "v021": "否则停止跟进该机会。",
+            "v01": "对方不回复反馈、明确不便反馈或要求不再联系，就停止跟进。"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "两者都使用了今晚决策和明确拒绝这两个关键条件，没有编造个人经历。",
+          "excerpts": {
+            "v021": "今晚无需再为这家公司的“下一轮”准备。",
+            "v01": "今晚不建议再按这家公司的下一轮面试做专项准备"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未虚构淘汰原因、成绩或经历。复盘时长及机会数量是建议阈值，不是未经支持的成果指标。",
+          "excerpts": {
+            "v021": "只记事实，不自行归因。",
+            "v01": "没有反馈前不要自行定性。"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v021": [],
+        "v01": []
+      }
+    },
+    {
+      "case_id": "H02",
+      "generation_statuses": {
+        "v01": "VALID",
+        "v021": "VALID"
+      },
+      "review_status": "VALID",
+      "blind_winner": "TIE",
+      "winner": "TIE",
+      "review_reason": "两者均守住转述、待审批与正式 Offer 的证据边界，给出继续投递、限时跟进和重新考虑停投的明确条件，无硬失败。B 对低匹配、高准备成本机会的取舍更细，但不足以构成整体实质优势，判为平局。",
+      "decisive_excerpts": {
+        "v01": "“同事听说你通过了”只是转述，不能等同于正式录用。",
+        "v021": "HR 的原话明确表示 HC 和薪酬仍待审批，正式 Offer 尚未成立"
+      },
+      "dimension_results": [
+        {
+          "dimension": "Situation Understanding",
+          "winner": "TIE",
+          "reason": "均准确识别审批未完成阶段，直接回答是否停投。",
+          "excerpts": {
+            "v01": "不要停止其他投递。",
+            "v021": "建议：不要停止其他投递，把这次机会视为“条件性积极进展”，而不是已拿到 Offer。"
+          }
+        },
+        {
+          "dimension": "Evidence Discipline",
+          "winner": "TIE",
+          "reason": "均保留同事消息的转述性质，并以 HR 的条件性表述判断当前状态。",
+          "excerpts": {
+            "v01": "“同事听说你通过了”只是转述，不能等同于正式录用。",
+            "v021": "你同事转述“通过了”只能说明可能通过了某个评估环节"
+          }
+        },
+        {
+          "dimension": "Fact / Inference / Unknown separation",
+          "winner": "TIE",
+          "reason": "均区分待审批事实、可能变化和未知结果，没有将条件转成确定录用。",
+          "excerpts": {
+            "v01": "即使面试评价已通过，审批、预算或岗位优先级仍可能变化，最终结果目前未知。",
+            "v021": "关键不确定性是 HC、薪酬额度和审批时间，现有材料无法判断最终结果。"
+          }
+        },
+        {
+          "dimension": "Bottleneck Identification",
+          "winner": "TIE",
+          "reason": "均抓住编制与薪酬审批这一关键瓶颈。",
+          "excerpts": {
+            "v01": "只有审批通过后才会发 Offer",
+            "v021": "HR 的原话明确表示 HC 和薪酬仍待审批"
+          }
+        },
+        {
+          "dimension": "Recommendation Clarity",
+          "winner": "TIE",
+          "reason": "均明确建议维持并行求职，不因当前消息停止其他流程。",
+          "excerpts": {
+            "v01": "你本人继续正常投递和推进现有面试",
+            "v021": "继续现有投递和面试（human）"
+          }
+        },
+        {
+          "dimension": "Actionability",
+          "winner": "TIE",
+          "reason": "均提供可执行的 HR 询问内容、跟进时间和继续求职动作。",
+          "excerpts": {
+            "v01": "若没有日期，可在约三个工作日后跟进一次。",
+            "v021": "询问预计审批完成时间、下一次可确认进度的日期，以及是否还需补充材料"
+          }
+        },
+        {
+          "dimension": "Opportunity Cost Awareness",
+          "winner": "v021",
+          "reason": "两者均保护替代机会；B 进一步按匹配度和准备成本分配精力，兼顾并行投递的成本。",
+          "excerpts": {
+            "v01": "不必因该机会主动降速",
+            "v021": "但可暂缓低匹配、准备成本很高的新机会，不撤回已进入流程的申请。"
+          }
+        },
+        {
+          "dimension": "Counterfactual Quality",
+          "winner": "TIE",
+          "reason": "均考虑了评估通过但审批不顺利的替代情形，足以支持继续投递。",
+          "excerpts": {
+            "v01": "即使面试评价已通过，审批、预算或岗位优先级仍可能变化",
+            "v021": "审批也可能延迟、调整或未获通过。"
+          }
+        },
+        {
+          "dimension": "Reconsider Condition",
+          "winner": "TIE",
+          "reason": "均以收到书面 Offer 且条款可接受作为改变建议的可观察条件。",
+          "excerpts": {
+            "v01": "只有收到书面 Offer，并核对岗位、薪酬、入职时间及附加条件可接受后，才考虑暂停其他流程",
+            "v021": "只有收到可核验的书面 Offer，并确认薪资、岗位、地点、入职日期等关键条款可接受后，才考虑停止投递"
+          }
+        },
+        {
+          "dimension": "Stop / Pivot Quality",
+          "winner": "TIE",
+          "reason": "均设置有界复查与降低投入的触发点，没有将沉默判为拒绝。",
+          "excerpts": {
+            "v01": "跟进一次后再观察约三个工作日，仍无明确进展就降低该机会投入、继续拓展替代选项",
+            "v021": "一次跟进后仍沉默约三个工作日，就降低投入并继续推进其他机会。"
+          }
+        },
+        {
+          "dimension": "Personal-context usage",
+          "winner": "TIE",
+          "reason": "均围绕用户现有的同事转述和 HR 沟通提供建议，没有虚构个人经历或限制。",
+          "excerpts": {
+            "v01": "由你向 HR 礼貌确认预计审批时间",
+            "v021": "不要把转述当作依据去质问。"
+          }
+        },
+        {
+          "dimension": "Unsupported-claim avoidance",
+          "winner": "TIE",
+          "reason": "均未捏造录用结果、审批概率或执行成果；风险情形明确表述为可能性。",
+          "excerpts": {
+            "v01": "最终结果目前未知。",
+            "v021": "现有材料无法判断最终结果。"
+          }
+        }
+      ],
+      "hard_failures": {
+        "v01": [],
+        "v021": []
+      }
+    }
+  ],
+  "coverage_gaps": [
+    "No supplied historical claim_refs or corrected decisions: cross-opportunity Claim identity is not assessable in this fixed set.",
+    "No supplied historical observations: deduplication before three-pair cap is not assessable in this fixed set."
+  ],
+  "REAL-WORLD-OBSERVED": "NO",
+  "limitations": [
+    "One sample per case and version; no variance estimate or causal isolation of individual rules.",
+    "The shared generation prompt asks for actions and stop/review conditions, so baseline may already perform well.",
+    "Same reference paths/count budget, with naturally different snapshot document lengths; no token matching.",
+    "Different reviewer model and fresh contexts reduce version leakage but do not establish reviewer correctness or independent human confirmation.",
+    "No baseline without a Skill; cannot isolate benefit relative to a bare host model.",
+    "Prepared references were preserved: rejection cases use follow-up, negotiation case uses offer reference; installed routing is not tested.",
+    "Cross-opportunity corrections, historical deduplication, real outcome causation and success calibration are not exercised by these supplied case inputs."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "case_id": "G02",
+  "winner": "TIE",
+  "dimension_results": [
+    {
+      "dimension": "Situation Understanding",
+      "comparison": "TIE",
+      "excerpt_a": "先做 7 天有边界的验证",
+      "excerpt_b": "先把“SWE转AI产品”作为一周的有界验证",
+      "reason": "均识别转型验证阶段、七天预算和不重开大项目的要求。"
+    },
+    {
+      "dimension": "Evidence Discipline",
+      "comparison": "TIE",
+      "excerpt_a": "个人贡献与结果；没有证据的效果降级表述。",
+      "excerpt_b": "结果及贡献边界；没有证据的部分明确留空。",
+      "reason": "均要求核对个人贡献与结果证据，没有把工程背景直接写成产品ownership。"
+    },
+    {
+      "dimension": "Fact / Inference / Unknown separation",
+      "comparison": "B_BETTER",
+      "excerpt_a": "但“需求优先级、用户判断、产品评测决策”尚未整理",
+      "excerpt_b": "未知的是这些项目里是否有足够强的用户问题、取舍和结果证据。",
+      "reason": "B明确区分材料未整理与证据是否存在；A把来源未提及的“用户判断”也归入尚未整理，存在轻微外推。"
+    },
+    {
+      "dimension": "Bottleneck Identification",
+      "comparison": "TIE",
+      "excerpt_a": "当前瓶颈是产品判断证据，而非职位名称。",
+      "excerpt_b": "当前最可能的瓶颈是产品判断证据与定位",
+      "reason": "均抓住产品判断证据这一局部缺口，没有把改头衔当作解决方案。"
+    },
+    {
+      "dimension": "Recommendation Clarity",
+      "comparison": "TIE",
+      "excerpt_a": "把“技术型 AI 产品经理”作为主假设",
+      "excerpt_b": "选一个主定位，最多保留一个备选。",
+      "reason": "A先提出可检验定位，B依据岗位映射再收窄定位；均有清楚且有条件的推进方向。"
+    },
+    {
+      "dimension": "Actionability",
+      "comparison": "TIE",
+      "excerpt_a": "逐个写清用户/问题、方案取舍、优先级依据、评测标准、个人贡献与结果",
+      "excerpt_b": "你个人做过的优先级判断、方案取舍、评测标准、结果及贡献边界",
+      "reason": "均指定围绕现有项目整理产品判断证据，再做岗位映射和小规模外部验证，行动具体且基本符合预算。"
+    },
+    {
+      "dimension": "Opportunity Cost Awareness",
+      "comparison": "TIE",
+      "excerpt_a": "第 5—7 天选择匹配度最高的岗位做少量定向投递或从业者交流",
+      "excerpt_b": "用匹配度最高的2—3个岗位做小规模投递或交流",
+      "reason": "均把短期补证与一周内试投结合，避免为转型启动大项目或无限延后投递。"
+    },
+    {
+      "dimension": "Counterfactual Quality",
+      "comparison": "B_BETTER",
+      "excerpt_a": "单次拒绝或沉默不足以证明方向错误。",
+      "excerpt_b": "且排除市场等混杂因素，再考虑转向。",
+      "reason": "A提醒反馈不足以否定方向；B进一步提出市场因素这一竞争解释，但未说明如何检验，优势有限。"
+    },
+    {
+      "dimension": "Reconsider Condition",
+      "comparison": "A_BETTER",
+      "excerpt_a": "持续指向同一硬缺口、硬约束不符或补齐成本过高",
+      "excerpt_b": "持续否定核心假设，且排除市场等混杂因素",
+      "reason": "A明确列出缺口、硬约束和补齐成本等重评依据；B的“核心假设”和排除混杂因素较难直接操作。"
+    },
+    {
+      "dimension": "Stop / Pivot Quality",
+      "comparison": "TIE",
+      "excerpt_a": "第 7 天或累计 5 个可比机会后复盘",
+      "excerpt_b": "七天或完成5个可比机会后复盘",
+      "reason": "均有七天复盘边界，并以重复反证而非单次反馈作为转向依据；后续机会数量不取消七天复盘。"
+    },
+    {
+      "dimension": "Personal-context usage",
+      "comparison": "TIE",
+      "excerpt_a": "你自述有 SWE 和工程项目经历",
+      "excerpt_b": "已知事实是你有SWE和工程项目背景",
+      "reason": "均使用工程经历作为可迁移证据来源，并针对产品决策材料缺口提出小范围补证。"
+    },
+    {
+      "dimension": "Unsupported-claim avoidance",
+      "comparison": "TIE",
+      "excerpt_a": "不改写成已具备产品能力",
+      "excerpt_b": "没有证据的部分明确留空。",
+      "reason": "均未虚构产品ownership、业绩指标或上线成果；项目和岗位数量属于行动建议，不是已完成经历。"
+    }
+  ],
+  "hard_failures_a": [],
+  "hard_failures_b": [],
+  "decisive_excerpt_a": "第 5—7 天选择匹配度最高的岗位做少量定向投递或从业者交流",
+  "decisive_excerpt_b": "用匹配度最高的2—3个岗位做小规模投递或交流",
+  "review_reason": "两者的实质方案相同：利用既有工程经历补齐产品判断证据、映射岗位、在七天内小规模试投并复盘。B的事实与未知区分更严谨，A的重评条件更具体；这些局部差异不足以形成实质胜负，且均无重大证据或约束违规。"
+}

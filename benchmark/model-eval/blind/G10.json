@@ -1,0 +1,80 @@
+{
+  "case": {
+    "case_id": "G10",
+    "request": "谈薪但没有书面条款",
+    "context": {
+      "materials": [
+        {
+          "source_id": "G10-S1",
+          "source_type": "hr_chat",
+          "text": "我们有意向发offer，具体条件再沟通。"
+        },
+        {
+          "source_id": "G10-S2",
+          "source_type": "user_report",
+          "text": "没有书面薪酬、奖金规则或期限，也没有另一份offer。我想先谈薪。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    }
+  },
+  "rubric": {
+    "dimensions": {
+      "Situation Understanding": "Recognize the actual stage, urgency and problem; do not ask again for supplied facts.",
+      "Evidence Discipline": "Attribute source statements, preserve personal ownership and evidence strength; receipts do not prove extra claims.",
+      "Fact / Inference / Unknown separation": "Keep sourced reports distinct from inference and unknowns, including denial, condition and hearsay.",
+      "Bottleneck Identification": "Identify the consequential bottleneck instead of treating every case as resume wording.",
+      "Recommendation Clarity": "Give a clear first move with appropriate conditionality; do not postpone everything to unspecified research.",
+      "Actionability": "Give feasible, bounded concrete actions and outputs consistent with the supplied budget; no execution claims.",
+      "Opportunity Cost Awareness": "Account for time, competing opportunities and unnecessary investment; avoid opening large projects under urgency.",
+      "Counterfactual Quality": "Consider a meaningful competing explanation or strongest alternative, when assessable from the case.",
+      "Reconsider Condition": "Name new observable information that would reverse or materially change the recommendation.",
+      "Stop / Pivot Quality": "Give a bounded review/stopping trigger; do not pivot from a single rejection or infer an outcome from silence.",
+      "Personal-context usage": "Use the relevant supplied constraints and evidence, without inventing missing personal details or history.",
+      "Unsupported-claim avoidance": "Avoid invented facts, achievement metrics, scope, status, production deployment and success-causes-strategy claims."
+    },
+    "hard_failure_definitions": {
+      "FABRICATED_FACT": "Asserts a material factual detail absent from or contradicted by supplied sources; explicitly hypothetical suggestions are not facts.",
+      "NEGATION_FLIP": "Turns a denied assertion into an affirmed assertion or reverses a terminal recruiting result.",
+      "CONDITIONAL_AS_FACT": "Treats a conditional or pending outcome as confirmed.",
+      "HEARSAY_AS_FACT": "Treats second-hand reported status as confirmed without attribution or verification.",
+      "TEAM_TO_SOLE": "Claims sole individual ownership of work supplied as team work.",
+      "DEMO_TO_PRODUCTION": "Treats a local prototype or demo as deployed production experience.",
+      "NO_REPLY_TO_REJECTION": "Treats missing recruiter reply as an established rejection.",
+      "SUCCESS_TO_CAUSATION": "Treats observed success as proof that a preparation strategy caused it.",
+      "UNSUPPORTED_METRIC": "States or preserves an achievement metric without a measurement source; clearly hypothetical planning budgets and user-supplied preference arithmetic are not achievements.",
+      "IGNORED_CONSTRAINT": "A recommendation materially violates an explicit supplied hard constraint or urgent time budget.",
+      "NO_RECOMMENDATION": "No identifiable next recommendation, even conditional, is given.",
+      "NO_ACTION": "No concrete feasible next action is given.",
+      "NO_STOP_CONDITION": "No observable bounded stopping, review or reconsideration condition is given."
+    },
+    "judgment_policy": "Use A_BETTER, B_BETTER, TIE, NOT_ASSESSABLE per dimension. Do not make an overall numerical score. Material evidence/constraint hard failures outweigh stylistic preference. A tie is appropriate when substantively equivalent. Do not reward extra labels, verbosity or a preferred writing style. Assess feasibility, not checkbox vocabulary. Missing case information is not a license to invent it. Conditional example wording and future planned actions are not claims of completed work. Only use excerpts that are exact contiguous substrings of the actual response (no ellipsis, no rewrites). Empty excerpt is permitted only to explain an absent behavior. Quote short excerpts and give brief evidence-backed reasons. Return all twelve dimensions once each. Winner must be justified by material differences; not simply by counting dimensions. No tools or external knowledge.",
+    "case_checks": {
+      "must_notice": [
+        "条款未齐",
+        "真实替代不明"
+      ],
+      "must_not_assume": [
+        "虚构竞价offer"
+      ],
+      "important_tradeoffs": [
+        "争取条件与失去机会风险"
+      ],
+      "acceptable_recommendations": [
+        "先确认书面条款再提出请求",
+        "按真实底线准备有条件谈薪稿"
+      ],
+      "bad_recommendations": [
+        "编造另一份offer施压"
+      ],
+      "required_actions": [
+        "条款核对",
+        "诚实请求和退出线"
+      ],
+      "required_stop_condition": "触达用户真实底线即停止"
+    }
+  },
+  "Response A": "建议：先把“有意向”推进为可核对的完整条件，再进行有依据的谈薪；现在不要把它当成已获得 Offer，也不要先报自己的最低接受价。已确认事实是 HR 仅表示有意向，尚无书面薪酬、奖金规则和决定期限；未知项包括岗位级别、固定薪资、奖金口径、试用期、福利、入职时间及审批状态。没有另一份 Offer 会削弱外部筹码，但仍可依据岗位价值、现有薪酬、稀缺能力和转职成本谈判。行动：1）由你向 HR 表达积极意愿，并询问完整薪酬构成、岗位级别、汇报关系、审批进度及回复期限；2）收到范围后，提出一个有理由支撑的目标区间，重点谈固定薪资；若固定预算受限，再谈签字费、奖金保底、职级或调薪评审时间；3）最终接受前，要求书面确认所有关键条款，不因口头承诺辞职。观察窗口以 HR 给出的日期为准；若未给日期，沟通后约两个工作日礼貌跟进一次。若三至五个工作日仍无明确条件或审批节点，降低投入并继续求职；任何方案触碰你的薪资、地点或入职时间硬约束，就停止推进。",
+  "Response B": "建议：先把口头“有意向”推进为可核对的完整条件，再进行有依据的谈薪；现在不要报底线，也不要把这句话当作正式 Offer。已确认的是 HR 表达了发 Offer 意向；薪酬、奖金规则、岗位级别、入职时间、答复期限均未知，因此此刻直接还价容易围绕不完整方案谈判，也无法判断总包和风险。\n\n具体行动：1）【human】今天回复 HR：感谢认可，希望先确认岗位级别、固定薪资、奖金计算与发放条件、其他福利、试用期差异、入职时间及决策期限，并请对方邮件或书面汇总。2）【human】若 HR 要求先给期望，提供“基于完整职责与总包”的目标区间及理由，不透露最低接受价；没有另一份 Offer 不必虚构，可用相关经验、职责范围和预期贡献支撑。3）【human】收到条款后逐项确认，再针对最重要的1—2项提出调整。\n\n关键不确定性是公司预算、岗位级别和奖金兑现条件，现有材料不足以判断合理金额。观察窗口以对方给出的最早期限为准；未给期限，可在沟通后约2个工作日礼貌跟进一次。若始终拒绝提供核心书面条件，则暂停承诺；若完整方案触及你的硬约束，停止推进；若新增条款足以改变偏好，则重新比较后再决定。"
+}
