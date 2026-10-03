@@ -41,7 +41,8 @@ Update a known record using `--id`. All ordinary records use exactly:
 ```
 
 Kinds: profile, target_role, project, claim, company, application, interview_event,
-feedback, decision, outcome. Claims add a `claim` field using [EVIDENCE.md](EVIDENCE.md).
+feedback, decision, outcome, hypothesis, correction. Hypotheses use their dedicated
+review contract; corrections use the `correct` command. Claims add a `claim` field using [EVIDENCE.md](EVIDENCE.md).
 Do not feed normalized output back as a raw claim (safe_wording is output-only).
 Only allowlisted fields are accepted. Summary is capped at 400 characters; source
 at 240; total record at 6000. At most 200 records and per-kind limits apply. No silent
@@ -64,14 +65,22 @@ administrative inspection; it is not permission for routine recalled decision co
 
 ## Decision → Outcome
 
-Use `decision --subject opportunity-id --input /private/decision.json` with exactly:
+Use `decision --subject opportunity-id --input /private/decision.json` with required:
 situation, decision, why, expected_outcome, source, observation_window, stop_condition,
 pivot_condition. `feedback_loop.decision_record` creates this compact shape from a
 decision output with an explicitly supplied expectation. Returned stable ID links
 future outcomes. Decision and outcome records are append-only; new recommendations
 create new records. Ordinary updates cannot alter their history.
 
-`outcome --subject opportunity-id --input /private/outcome.json` requires exactly:
+v0.2 allows optional metadata, predictions, claim_ids, decision_trace and
+strongest_counterargument; the handoff includes them
+when present. Tagged decisions can use limited similar recall; untagged historical
+records remain readable without automatic inferred tags. No table migration or
+consent-policy change is required. Optional outcome fields are metadata (must match
+parent), observations, event_id and origin. Their detailed contracts, case calibration,
+correction and hypothesis commands are in [DECISION_INTELLIGENCE.md](DECISION_INTELLIGENCE.md).
+
+`outcome --subject opportunity-id --input /private/outcome.json` requires these v0.1 fields:
 
 ```json
 {

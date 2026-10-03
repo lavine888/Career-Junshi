@@ -1,0 +1,1504 @@
+[
+  {
+    "case_id": "G01",
+    "origin": "synthetic",
+    "situation": "不知道投什么",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G01-S1",
+          "source_type": "user_report",
+          "text": "我有三个原型项目。我不知道该投 AI 产品还是量化。还没有投递和面试反馈。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "证据先于身份",
+      "目标缺失"
+    ],
+    "must_not_assume": [
+      "追AI热度就一定正确"
+    ],
+    "important_tradeoffs": [
+      "测试两种假设而非三个月开新项目"
+    ],
+    "acceptable_recommendations": [
+      "先审计经历并小批验证",
+      "先澄清关键约束再选择主方向"
+    ],
+    "bad_recommendations": [
+      "无证据宣告最适合某岗位"
+    ],
+    "required_actions": [
+      "证据卡",
+      "两种假设对照"
+    ],
+    "required_stop_condition": "下一周或5个同类机会复核",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "job",
+      "summary": "不知道投什么",
+      "goal": "",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": []
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Direction"
+        ]
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "jd_map"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G02",
+    "origin": "synthetic",
+    "situation": "SWE转AI产品",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G02-S1",
+          "source_type": "resume",
+          "text": "SWE背景；做过工程项目。个人需求优先级与产品评测决策尚未整理。"
+        },
+        {
+          "source_id": "G02-S2",
+          "source_type": "user_report",
+          "text": "想转AI产品。能用于补证的预算是七天，不希望重新开大项目。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "可迁移证据",
+      "局部缺口"
+    ],
+    "must_not_assume": [
+      "工程身份自动等于产品ownership"
+    ],
+    "important_tradeoffs": [
+      "短期补证与立即投递"
+    ],
+    "acceptable_recommendations": [
+      "小型补证和副投",
+      "已有证据适配的主投试验"
+    ],
+    "bad_recommendations": [
+      "改头衔代替证据"
+    ],
+    "required_actions": [
+      "指定缺口的最小验证"
+    ],
+    "required_stop_condition": "预算或重复反证触发重评",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "job",
+      "summary": "SWE转AI产品",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [],
+      "job": {
+        "fit": "gap",
+        "gap": "产品问题选择和评测决策",
+        "gap_days": 7
+      }
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Evidence"
+        ]
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "evidence_audit"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G03",
+    "origin": "synthetic",
+    "situation": "这份JD值得投吗",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G03-S1",
+          "source_type": "jd",
+          "text": "Requirements: LLM evaluation and ability to explain architecture tradeoffs. Production experience preferred."
+        },
+        {
+          "source_id": "G03-S2",
+          "source_type": "project_readme",
+          "text": "Evaluation prototype; scoped supporting evaluation artifact provided. This artifact is not a production deployment or a personal authorship receipt."
+        },
+        {
+          "source_id": "G03-S3",
+          "source_type": "user_report",
+          "text": "个人评测贡献范围已说明，时间有限，问是否值得小批投。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "已有窄范围证据",
+      "优先项非硬门槛"
+    ],
+    "must_not_assume": [
+      "没有生产就不合格"
+    ],
+    "important_tradeoffs": [
+      "投递成本与长期缺口成本"
+    ],
+    "acceptable_recommendations": [
+      "有界主投",
+      "小批申请核实职责"
+    ],
+    "bad_recommendations": [
+      "花两个月先重建production"
+    ],
+    "required_actions": [
+      "对齐职责与个人证据"
+    ],
+    "required_stop_condition": "约一周反馈复核",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "job",
+      "summary": "这份JD值得投吗",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [
+        {
+          "id": "C1",
+          "claim": "Evaluation prototype",
+          "stage": "demo",
+          "confidence": "SUPPORTED",
+          "ownership": {
+            "scope": "team",
+            "contribution": "evaluation script"
+          },
+          "evidence": [
+            {
+              "source": "synthetic:project-notes",
+              "kind": "supporting",
+              "supports": [
+                "claim"
+              ]
+            }
+          ]
+        }
+      ],
+      "job": {
+        "fit": "supported"
+      }
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Market"
+        ]
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "jd_map"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G04",
+    "origin": "synthetic",
+    "situation": "原型被写成production",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G04-S1",
+          "source_type": "resume",
+          "text": "Built a production AI assistant with 30% improvement."
+        },
+        {
+          "source_id": "G04-S2",
+          "source_type": "project_readme",
+          "text": "Local prototype only. No production users, comparison baseline or measurement receipt provided."
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "stage冲突",
+      "指标缺证"
+    ],
+    "must_not_assume": [
+      "Demo可写production"
+    ],
+    "important_tradeoffs": [
+      "降措辞与补证"
+    ],
+    "acceptable_recommendations": [
+      "先降低强词",
+      "先补精确结果再改写"
+    ],
+    "bad_recommendations": [
+      "升级措辞掩饰缺证"
+    ],
+    "required_actions": [
+      "安全句和缺证清单"
+    ],
+    "required_stop_condition": "无法补证停止升级",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "positioning",
+      "summary": "原型被写成production",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [
+        {
+          "id": "C1",
+          "claim": "production improved by 30%",
+          "stage": "demo",
+          "confidence": "VERIFIED",
+          "ownership": {
+            "scope": "team",
+            "contribution": "evaluation script"
+          },
+          "evidence": []
+        }
+      ]
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Evidence"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G05",
+    "origin": "synthetic",
+    "situation": "团队主导权",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G05-S1",
+          "source_type": "resume",
+          "text": "Led a four-person team."
+        },
+        {
+          "source_id": "G05-S2",
+          "source_type": "user_report",
+          "text": "我负责评测案例。系统由四人协作完成，没有给出主导决策或独立实现证据。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "团队与个人边界"
+    ],
+    "must_not_assume": [
+      "Led等于sole"
+    ],
+    "important_tradeoffs": [
+      "贡献陈述与领导证据"
+    ],
+    "acceptable_recommendations": [
+      "参与团队并明确个人部分",
+      "核对决策权限再用主导"
+    ],
+    "bad_recommendations": [
+      "把源码owner当全部作者"
+    ],
+    "required_actions": [
+      "贡献分工和安全句"
+    ],
+    "required_stop_condition": "贡献不明停止升级",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "positioning",
+      "summary": "团队主导权",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [
+        {
+          "id": "C1",
+          "claim": "主导独立完成所有代码",
+          "stage": "demo",
+          "confidence": "VERIFIED",
+          "ownership": {
+            "scope": "team",
+            "contribution": "评测脚本"
+          },
+          "evidence": []
+        }
+      ]
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Evidence"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G06",
+    "origin": "synthetic",
+    "situation": "明天一面今晚做什么",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G06-S1",
+          "source_type": "resume",
+          "text": "Built production agent prototype."
+        },
+        {
+          "source_id": "G06-S2",
+          "source_type": "jd",
+          "text": "AI PM: evaluation, architecture tradeoffs, user problem framing."
+        },
+        {
+          "source_id": "G06-S3",
+          "source_type": "user_report",
+          "text": "今天为固定场景时间2026-10-03 12:00 +08:00，明天下午面试。项目是团队原型，今晚准备预算有限。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "26小时窗口",
+      "高风险Claim"
+    ],
+    "must_not_assume": [
+      "新项目能补真实经验"
+    ],
+    "important_tradeoffs": [
+      "防守收益与睡眠和时间"
+    ],
+    "acceptable_recommendations": [
+      "降低强词并练五层",
+      "先守住个人ownership和失败"
+    ],
+    "bad_recommendations": [
+      "随机50题或连夜新项目"
+    ],
+    "required_actions": [
+      "风险图",
+      "五层追问",
+      "真实故事"
+    ],
+    "required_stop_condition": "准备窗口结束即停",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "interview",
+      "summary": "合成候选人明天下午参加 AI PM 一面，简历里有团队 Agent 原型的 production 强表述。",
+      "goal": "今晚优先守住项目贡献、架构取舍和测量边界",
+      "facts": [
+        {
+          "text": "用户说面试在明天下午",
+          "source": "synthetic:interview-invitation",
+          "source_type": "document"
+        },
+        {
+          "text": "JD 要求解释评测、架构取舍与产品判断",
+          "source": "synthetic:JD",
+          "source_type": "document"
+        },
+        {
+          "text": "用户说本人负责评测脚本，队友做服务与 UI，项目仅原型",
+          "source": "synthetic:candidate-account",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "真实线上用户、生产运维和原始指标尚未提供",
+        "面试官将重点考察哪一块"
+      ],
+      "claims": [
+        {
+          "id": "CJ-DEMO-1",
+          "claim": "主导 production Agent 平台，任务成功率提升 30%",
+          "confidence": "VERIFIED",
+          "stage": "demo",
+          "ownership": {
+            "scope": "team",
+            "contribution": "据本人描述：评测脚本与失败分类；队友负责服务与 UI"
+          },
+          "evidence": [
+            {
+              "source": "synthetic:prototype-notes",
+              "kind": "supporting",
+              "supports": [
+                "claim"
+              ],
+              "summary": "原型说明，未有可核实 production 或指标证据"
+            }
+          ]
+        }
+      ],
+      "deadline": "2026-10-04T14:00:00+08:00"
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Evidence",
+          "Interview"
+        ]
+      },
+      {
+        "path": "urgency.within_72h",
+        "op": "equals",
+        "value": true
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "risk_map"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G07",
+    "origin": "synthetic",
+    "situation": "被拒且技术深度反馈",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G07-S1",
+          "source_type": "hr_chat",
+          "text": "本次未通过，技术深度还需要加强。"
+        },
+        {
+          "source_id": "G07-S2",
+          "source_type": "interview_recap",
+          "text": "只有这一次明确反馈，没有其他同类技术拒信；完整评分和岗位比较未知。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "明确拒绝",
+      "仅一次scope"
+    ],
+    "must_not_assume": [
+      "一次失败证明转型错误"
+    ],
+    "important_tradeoffs": [
+      "局部练习与继续机会"
+    ],
+    "acceptable_recommendations": [
+      "结束机会针对一处补证",
+      "有界复盘再验证下一批"
+    ],
+    "bad_recommendations": [
+      "立刻PIVOT整个职业方向"
+    ],
+    "required_actions": [
+      "原话记录",
+      "项目追问"
+    ],
+    "required_stop_condition": "不继续追逐已结束机会",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "recruiting",
+      "summary": "被拒且技术深度反馈",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [],
+      "recruiting": {
+        "status": "rejected",
+        "feedback": "technical depth"
+      }
+    },
+    "decision_properties": [
+      {
+        "path": "application_status",
+        "op": "equals",
+        "value": "rejected"
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "feedback_review"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G08",
+    "origin": "synthetic",
+    "situation": "HR五天没有回",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G08-S1",
+          "source_type": "hr_chat",
+          "text": "流程还在推进，有进展联系您。"
+        },
+        {
+          "source_id": "G08-S2",
+          "source_type": "user_report",
+          "text": "终面后五个日历天没回。节假日、承诺日期、工作日数和集中校招情况不清楚，没有其他通过通知。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "日历与工作日不明",
+      "流程混杂"
+    ],
+    "must_not_assume": [
+      "沉默等于拒绝",
+      "已经通过"
+    ],
+    "important_tradeoffs": [
+      "礼貌一次跟进与其他机会"
+    ],
+    "acceptable_recommendations": [
+      "先确认工作日和承诺时间",
+      "有真实截止时简短确认一次"
+    ],
+    "bad_recommendations": [
+      "高频催或停止全部求职"
+    ],
+    "required_actions": [
+      "核对日期与招聘安排"
+    ],
+    "required_stop_condition": "一次跟进窗口后降投入",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "recruiting",
+      "summary": "HR五天没有回",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [],
+      "recruiting": {}
+    },
+    "decision_properties": [
+      {
+        "path": "application_status",
+        "op": "equals",
+        "value": "waiting"
+      },
+      {
+        "path": "draft",
+        "op": "equals",
+        "value": null
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G09",
+    "origin": "synthetic",
+    "situation": "两个Offer按目标选择",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G09-S1",
+          "source_type": "user_report",
+          "text": "我的目标优先学习和ownership。地点与薪酬底线均已确认满足。偏好权重：learning 3, ownership 4, compensation 2, brand 1。"
+        },
+        {
+          "source_id": "G09-S2",
+          "source_type": "offer",
+          "text": "A：learning 4, ownership 5, compensation 3, brand 3；B：learning 3, ownership 2, compensation 5, brand 5。这是用户主观评级；经理和实际职责还需核实。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "用户目标和约束",
+      "主观评分"
+    ],
+    "must_not_assume": [
+      "品牌即最佳"
+    ],
+    "important_tradeoffs": [
+      "ownership与薪酬"
+    ],
+    "acceptable_recommendations": [
+      "有条件优先A",
+      "核实ownership兑现后选A"
+    ],
+    "bad_recommendations": [
+      "无视约束按名气排序"
+    ],
+    "required_actions": [
+      "书面比较",
+      "确认经理与权限"
+    ],
+    "required_stop_condition": "deadline前或约束违反即停",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "offer",
+      "summary": "两个合成 AI PM Offer，用户更重视学习和 ownership，地点都满足约束。",
+      "goal": "未来两年形成真实的产品 ownership 和技术判断能力",
+      "facts": [
+        {
+          "text": "用户确认不能搬离当前城市，两份书面条件都满足",
+          "source": "synthetic:terms-and-user",
+          "source_type": "document"
+        },
+        {
+          "text": "用户经两次团队交流给出了主观维度评分，A 的 ownership 更明确，B 薪酬更高",
+          "source": "synthetic:user-ratings",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "团队沟通的陈述能否在入职后兑现",
+        "长期组织变化"
+      ],
+      "claims": [],
+      "deadline": "2026-10-06T18:00:00+08:00",
+      "offer": {
+        "constraints": [
+          "保持当前城市",
+          "书面薪酬达到用户最低要求"
+        ],
+        "weights": {
+          "learning": 4,
+          "ownership": 4,
+          "manager": 2,
+          "team": 2,
+          "career_direction": 3,
+          "technical_depth": 2,
+          "brand": 1,
+          "optionality": 2,
+          "compensation": 1,
+          "location": 1,
+          "lifestyle": 1,
+          "downside": 2
+        },
+        "options": [
+          {
+            "name": "合成 Offer A",
+            "constraint_status": "pass",
+            "ratings": {
+              "learning": 5,
+              "ownership": 5,
+              "manager": 4,
+              "team": 4,
+              "career_direction": 5,
+              "technical_depth": 4,
+              "brand": 2,
+              "optionality": 4,
+              "compensation": 3,
+              "location": 5,
+              "lifestyle": 3,
+              "downside": 3
+            }
+          },
+          {
+            "name": "合成 Offer B",
+            "constraint_status": "pass",
+            "ratings": {
+              "learning": 3,
+              "ownership": 2,
+              "manager": 3,
+              "team": 3,
+              "career_direction": 3,
+              "technical_depth": 3,
+              "brand": 5,
+              "optionality": 3,
+              "compensation": 5,
+              "location": 5,
+              "lifestyle": 4,
+              "downside": 4
+            }
+          }
+        ]
+      }
+    },
+    "decision_properties": [
+      {
+        "path": "comparison",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "confirm_terms"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G10",
+    "origin": "synthetic",
+    "situation": "谈薪但没有书面条款",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G10-S1",
+          "source_type": "hr_chat",
+          "text": "我们有意向发offer，具体条件再沟通。"
+        },
+        {
+          "source_id": "G10-S2",
+          "source_type": "user_report",
+          "text": "没有书面薪酬、奖金规则或期限，也没有另一份offer。我想先谈薪。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "条款未齐",
+      "真实替代不明"
+    ],
+    "must_not_assume": [
+      "虚构竞价offer"
+    ],
+    "important_tradeoffs": [
+      "争取条件与失去机会风险"
+    ],
+    "acceptable_recommendations": [
+      "先确认书面条款再提出请求",
+      "按真实底线准备有条件谈薪稿"
+    ],
+    "bad_recommendations": [
+      "编造另一份offer施压"
+    ],
+    "required_actions": [
+      "条款核对",
+      "诚实请求和退出线"
+    ],
+    "required_stop_condition": "触达用户真实底线即停止",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "offer",
+      "summary": "谈薪但没有书面条款",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [],
+      "offer": {}
+    },
+    "decision_properties": [
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "confirm_terms"
+        ]
+      },
+      {
+        "path": "comparison",
+        "op": "equals",
+        "value": []
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G11",
+    "origin": "synthetic",
+    "situation": "方向与硬约束冲突",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G11-S1",
+          "source_type": "user_report",
+          "text": "想尝试量化，但不能搬家，每周只剩10小时。补齐研究和实盘证据估计至少30天，原资料不能当实盘收益。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "硬约束与补证成本"
+    ],
+    "must_not_assume": [
+      "回测证明实盘成果"
+    ],
+    "important_tradeoffs": [
+      "当前可投证据与远方向"
+    ],
+    "acceptable_recommendations": [
+      "降低该方向投入",
+      "保留有界侧向验证但主投已有证据"
+    ],
+    "bad_recommendations": [
+      "停止当前机会做大型新项目"
+    ],
+    "required_actions": [
+      "对齐预算",
+      "验证真实JD和缺口"
+    ],
+    "required_stop_condition": "预算超限停止扩张",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "job",
+      "summary": "方向与硬约束冲突",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [],
+      "job": {
+        "fit": "gap",
+        "gap": "实盘验证与地点约束",
+        "gap_days": 30
+      }
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Evidence"
+        ]
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "jd_map"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G12",
+    "origin": "synthetic",
+    "situation": "项目强但定位弱",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G12-S1",
+          "source_type": "project_readme",
+          "text": "Scoped evaluation project artifact and personal contribution supplied; no adoption or revenue claim."
+        },
+        {
+          "source_id": "G12-S2",
+          "source_type": "resume",
+          "text": "LLM, Python, evaluation, tools."
+        },
+        {
+          "source_id": "G12-S3",
+          "source_type": "user_report",
+          "text": "项目能讲清，但简历只是罗列技术，没有对齐岗位任务。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "已有证据",
+      "语言错位"
+    ],
+    "must_not_assume": [
+      "必须再做新项目"
+    ],
+    "important_tradeoffs": [
+      "翻译证据与无效扩展"
+    ],
+    "acceptable_recommendations": [
+      "保留范围改写岗位语言",
+      "先核对目标职责再翻译"
+    ],
+    "bad_recommendations": [
+      "虚构产品用户或头衔"
+    ],
+    "required_actions": [
+      "安全句",
+      "岗位语言映射"
+    ],
+    "required_stop_condition": "无新证据不加指标",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "positioning",
+      "summary": "项目强但定位弱",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [
+        {
+          "id": "C1",
+          "claim": "Evaluation prototype",
+          "stage": "demo",
+          "confidence": "SUPPORTED",
+          "ownership": {
+            "scope": "team",
+            "contribution": "evaluation script"
+          },
+          "evidence": [
+            {
+              "source": "synthetic:review-notes",
+              "kind": "supporting",
+              "supports": [
+                "claim"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Positioning"
+        ]
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "write_material"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  },
+  {
+    "case_id": "G13",
+    "origin": "synthetic",
+    "situation": "简历强但面试解释薄",
+    "available_context": {
+      "materials": [
+        {
+          "source_id": "G13-S1",
+          "source_type": "resume",
+          "text": "Led architecture decisions."
+        },
+        {
+          "source_id": "G13-S2",
+          "source_type": "interview_recap",
+          "text": "我说不清基线，架构选型是队友决定的。技术面临近，需要划清个人贡献。"
+        }
+      ],
+      "as_of": "2026-10-03T12:00:00+08:00",
+      "origin": "synthetic; no real people or recruiting outcomes"
+    },
+    "must_notice": [
+      "ownership纠错",
+      "可防守性"
+    ],
+    "must_not_assume": [
+      "强简历代表强理解"
+    ],
+    "important_tradeoffs": [
+      "降低措辞与有限防守"
+    ],
+    "acceptable_recommendations": [
+      "纠正归属并练五层",
+      "先复核贡献与测量"
+    ],
+    "bad_recommendations": [
+      "教用户圆过去"
+    ],
+    "required_actions": [
+      "风险图",
+      "贡献边界与测量追问"
+    ],
+    "required_stop_condition": "无法解释降低强词",
+    "evaluation_dimensions": [
+      "Situation Understanding",
+      "Evidence Discipline",
+      "Bottleneck Identification",
+      "Recommendation Clarity",
+      "Actionability",
+      "Opportunity Cost Awareness",
+      "Uncertainty Calibration",
+      "Stop / Pivot Quality",
+      "Personal Context Usage",
+      "Outcome Learnability"
+    ],
+    "input": {
+      "mode": "interview",
+      "summary": "简历强但面试解释薄",
+      "goal": "选择下一步",
+      "facts": [
+        {
+          "text": "用户提供三个项目但未选岗位",
+          "source": "synthetic:user",
+          "source_type": "user_report"
+        }
+      ],
+      "unknowns": [
+        "岗位实际职责与结果未知"
+      ],
+      "claims": [
+        {
+          "id": "C1",
+          "claim": "主导架构",
+          "stage": "demo",
+          "confidence": "VERIFIED",
+          "ownership": {
+            "scope": "unclear",
+            "contribution": ""
+          },
+          "evidence": []
+        }
+      ]
+    },
+    "decision_properties": [
+      {
+        "path": "bottleneck",
+        "op": "in",
+        "value": [
+          "Evidence",
+          "Interview"
+        ]
+      },
+      {
+        "path": "actions",
+        "op": "includes_action",
+        "value": [
+          "question_ladder"
+        ]
+      },
+      {
+        "path": "recommendation.strongest_counterargument",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "recommendation.reconsider_if",
+        "op": "nonempty",
+        "value": true
+      },
+      {
+        "path": "decision_trace.rejected_options",
+        "op": "nonempty",
+        "value": true
+      }
+    ]
+  }
+]

@@ -35,6 +35,7 @@ def install(target: Path, *, source: Path = ROOT) -> Path:
         staging.mkdir()
         paths = RUNTIME_FILES + [f"scripts/{s}" for s in SCRIPTS]
         paths += [str(f.relative_to(source)) for f in (source / "references").rglob("*.md")]
+        paths += ["references/role-packs.json"]
         for name in paths:
             src = source / name
             if src.is_symlink():

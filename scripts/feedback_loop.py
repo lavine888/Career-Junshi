@@ -4,7 +4,7 @@ from scripts.models import choices, obj, text
 
 def decision_record(decision: dict, *, source: str, expected_outcome: str) -> dict:
     d = obj(decision, "decision")
-    return {"situation": text(d.get("current_situation"), "situation", 400),
+    result = {"situation": text(d.get("current_situation"), "situation", 400),
             "decision": text(d.get("recommended_move"), "decision", 600),
             "why": text("；".join(d.get("why", [])), "why", 600),
             "expected_outcome": text(expected_outcome, "expected_outcome", 400),
@@ -12,6 +12,15 @@ def decision_record(decision: dict, *, source: str, expected_outcome: str) -> di
             "observation_window": text(d.get("observation_window"), "observation_window", 400),
             "stop_condition": text(d.get("stop_condition"), "stop_condition", 400),
             "pivot_condition": text(d.get("pivot_condition"), "pivot_condition", 400)}
+    if "metadata" in d:
+        result.update(metadata=d["metadata"], predictions=d.get("predictions", []), claim_ids=[c["id"] for c in d.get("claims", [])])
+    if "decision_trace" in d:
+        from scripts.intelligence import memory_trace
+        trace = dict(d["decision_trace"])
+        trace["evidence_used"] = list(dict.fromkeys(e["source"] for e in trace["evidence_used"]))[:6]
+        result["decision_trace"] = memory_trace(trace)
+        result["strongest_counterargument"] = text(d["recommendation"]["strongest_counterargument"], "counterargument", 400)
+    return result
 
 
 def feedback_next_move(outcome: dict) -> dict:

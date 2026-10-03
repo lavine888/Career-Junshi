@@ -8,7 +8,7 @@ Memory is optional; saying “remember” must still be interpreted within the u
 Store only future-decision information: profile, target roles, projects, claims,
 companies, applications, interview events, feedback, decisions and outcomes. Carry
 source, timestamp, FACT / INFERENCE / UNKNOWN and confidence where relevant.
-Do not store full resumes, JDs, messages or emails in the MVP. Show a compact change
+Do not store full resumes, JDs, messages or emails. Show a compact change
 summary and explain view / pause / revoke / delete after a successful write.
 
 Recall by relevant subject / kind, not the entire database. A stored claim is not a
@@ -16,3 +16,9 @@ new proof source. Correct a mistaken record explicitly; decision history is appe
 and later observations refer to its stable ID. Outcome learning retains unknown causes.
 Pause blocks recall and updates; view remains available for inspection. Revocation
 disables automatic use and keeps data only until deletion or renewed explicit consent.
+
+For v0.2, use at most three recent same-role/stage/tag pairs; unrelated history is
+not context. Prediction calibration and recurring signals affect preparation only,
+never claim confidence. Corrections update current claims and exclude affected
+decisions from recall without rewriting history. Contracts and finite tags are in
+[../../documentation/DECISION_INTELLIGENCE.md](../../documentation/DECISION_INTELLIGENCE.md).

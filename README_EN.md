@@ -17,7 +17,33 @@ Career Junshi asks what is limiting your progress, then recommends one move,
 1–3 actions, an observation window and stop / pivot conditions. It is a stateful
 career decision Skill for a capable host, with standard-library local helpers.
 
-[中文](README.md) · [Synthetic cases](cases) · [MVP report](documentation/MVP_REPORT.md)
+[中文](README.md) · [Synthetic cases](cases) · [v0.2 report](documentation/V02_REPORT.md) · [Evaluation](documentation/EVAL.md)
+
+## v0.2 · Decision Intelligence
+
+v0.1 established evidence-safe career decisions. v0.2 adds source-located context,
+counterarguments and reconsideration conditions, at most three comparable memory
+pairs, topic prediction calibration, guarded recurring preparation signals, lightweight
+career hypotheses and five role packs. Role translation preserves achievements and
+personal ownership. A correction updates current claims while preserving history.
+
+This is bounded feedback calibration, not a self-learning AI. The [13 fixed synthetic
+cases](benchmark/cases.json) test contracts and structured decisions. Independent host
+model evaluation and real-world effects are not established. Private context dry-run
+findings are anonymous and do not constitute recruiting outcomes.
+
+```sh
+python -m unittest discover -v
+python scripts/benchmark.py run
+python scripts/benchmark.py packet --output /new/private/eval-packet
+python scripts/junshi.py decide --extraction /private/session-packet.json --format json
+```
+
+See [extraction](documentation/CONTEXT_EXTRACTION.md) and [decision contracts](documentation/DECISION_INTELLIGENCE.md).
+Memory remains off unless explicitly consented. `decide --input /private/situation.json
+--use-similar --memory-directory /private/memory` requires an already active store;
+it cannot initialize consent. Narrative judgment and factual source review remain
+host responsibilities; local tests cannot evaluate natural-language wisdom.
 
 ## Install and ask
 

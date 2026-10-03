@@ -17,6 +17,8 @@ from scripts.feedback_loop import feedback_next_move
 from scripts.method_adapter import review_pattern
 from scripts.models import ContractError, audit_claim, items, obj, timestamp
 from scripts.router import ROUTES, route
+from scripts.context import extract
+from scripts.memory_store import MemoryStore
 
 
 def load_input(path: str):
@@ -31,28 +33,43 @@ def main(argv=None) -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     r = sub.add_parser("route")
     r.add_argument("--mode", required=True, choices=sorted(ROUTES)); r.add_argument("--rejected", action="store_true")
-    for cmd in ("decide", "audit", "feedback", "pattern"):
-        p = sub.add_parser(cmd); p.add_argument("--input", required=True)
+    for cmd in ("decide", "extract", "audit", "feedback", "pattern"):
+        p = sub.add_parser(cmd)
+        if cmd == "decide":
+            inputs = p.add_mutually_exclusive_group(required=True)
+            inputs.add_argument("--input"); inputs.add_argument("--extraction")
+        else:
+            p.add_argument("--input", required=True)
         if cmd == "decide":
             p.add_argument("--now", help="Explicit ISO timestamp for reproducible scenarios")
             p.add_argument("--format", choices=["json", "markdown"], default="markdown")
+            p.add_argument("--details", action="store_true", help="Show sourced facts and inference detail in Markdown")
             p.add_argument("--artifacts-dir", help="Explicit output directory; existing files are preserved")
+            p.add_argument("--use-similar", action="store_true", help="Recall only from already active, explicitly consented memory")
+            p.add_argument("--memory-directory", help="Private memory directory")
     args = parser.parse_args(argv)
     try:
         if args.command == "route":
             result = route(args.mode, rejected=args.rejected)
         else:
-            data = load_input(args.input)
+            data = load_input(args.extraction if args.command == "decide" and args.extraction else args.input)
             if args.command == "decide":
                 now = datetime.fromisoformat(timestamp(args.now, "now").replace("Z", "+00:00")) if args.now else None
+                if args.extraction:
+                    data = extract(obj(data, "extraction"), now=now)
                 result = decide(obj(data, "situation"), now=now)
+                if args.use_similar:
+                    pairs = MemoryStore(args.memory_directory).similar(result["metadata"], now=now)
+                    result = decide(data, now=now, history=pairs)
                 if args.artifacts_dir:
                     result["generated_artifacts"] = write_artifacts(result, args.artifacts_dir)
                 if args.format == "markdown":
-                    print(render(result), end="")
+                    print(render(result, details=args.details), end="")
                     if args.artifacts_dir:
                         print("\n已生成：\n" + "\n".join(result["generated_artifacts"]))
                     return 0
+            elif args.command == "extract":
+                result = extract(obj(data, "extraction"))
             elif args.command == "audit":
                 claims = data.get("claims", [data]) if isinstance(data, dict) else data
                 result = [audit_claim(c) for c in items(claims, "claims", 20)]

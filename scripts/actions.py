@@ -34,6 +34,12 @@ def artifact_contents(decision: dict) -> dict[str, str]:
     contents = {"decision.md": "# 当前判断\n\n" + decision["recommended_move"] + "\n\n"
                 + "来源边界：根据提供的结构化材料生成，脚本没有独立核查外部来源。\n\n"
                 + f"观察：{decision['observation_window']}\n\n停止：{decision['stop_condition']}\n\n转向：{decision['pivot_condition']}\n"}
+    if "recommendation" in decision:
+        r = decision["recommendation"]
+        contents["decision.md"] += "\n最强反对理由：" + r["strongest_counterargument"] + "\n\n重评：" + "；".join(r["reconsider_if"]) + "\n"
+    if "project_mapping" in decision:
+        m = decision["project_mapping"]
+        contents["decision.md"] += "\n项目映射：" + m["project_id"] + " → " + " / ".join(m["claim_ids"]) + "\n\n岗位侧重：" + "；".join(m["role_emphasis"]) + "\n\n故事待补：" + "；".join(m["gaps"]) + "\n"
     kinds = {a["kind"] for a in decision["actions"]}
     claims = decision["claims"]
     if kinds & {"risk_map", "evidence_audit", "write_material"}:

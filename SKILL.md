@@ -46,6 +46,28 @@ Next Actions → Observation Window → Stop / Pivot Condition。
 4. 给明确首选和依据、不确定性，收束到 1–3 个动作。只展示有帮助的推理字段。
 5. 说明接下来观察什么，什么信号触发继续、停止或转向；结果回来再更新。
 
+### v0.2 决策检查
+
+原材料按 [context extraction](references/practical/context-extraction.md) 提取：每条重要
+事实保留 source_id、source_type、原文范围 / 定位、epistemic 与自述边界；不永久保存原文。
+每个重要建议内部检查替代解释、缺失证据、最强备选和什么会推翻建议。保留可审阅
+decision_trace；不暴露私有思考，不提供录用概率。首屏先给建议和动作，再给必要依据。
+当前 JD、HC、市场、薪资与政策单独检查日期 / 地区；旧个人经历可用，旧市场判断须重查。
+
+已同意记忆时按同模式、岗位族、阶段、标签和近 180 天取最多三组 Decision / Outcome；
+只有改变判断的历史进入依据。无关 Quant 历史不影响 AI 产品跟进。先记录准备预测，再与
+实际观察比：SUPPORTED_THIS_CASE / CONTRADICTED_THIS_CASE / NOT_OBSERVED / UNASSESSABLE。
+未问到不等于风险不存在；通过不等于准备有效。至少三个独立可比真实结果、其中两次同类
+明确风险才提高准备优先级；合成案例、重复复盘、自我解释不计，不自动贴能力标签。
+
+轻量 Career Hypothesis 保留支持、反证和复盘窗口；单次拒信 KEEP，重复局部缺口 REFINE；
+核心假设多次受可比反证且更好替代、硬约束和混杂因素均核查后，才讨论 PIVOT。
+纠正贡献时更新当前 Claim 和新来源，提示受影响决定，保留旧 Decision 不覆盖。
+需岗位翻译时只看 [role packs](references/role-packs.json) 中相关的一项，不增加项目成果。
+项目 → Claim → Evidence → Story → Question；故事必须有张力、个人决定、贡献边界、
+取舍、结果证据和学习。只有团队材料不能写成强个人故事。契约细节见
+[decision intelligence](documentation/DECISION_INTELLIGENCE.md)；总参考仍限制 1–3 份，替换本次不必要的参考。
+
 ## Reference router
 
 | 局势 | 只读这些起点 |
@@ -66,7 +88,7 @@ Next Actions → Observation Window → Stop / Pivot Condition。
 不开记忆也能完整使用。跨聊天记忆先检查状态，明确同意后才写压缩信息；
 按当前对象召回，沿用 provenance 与 confidence，不从记忆检索提升可信度。
 脚本在本机用户数据目录存储；不要在公开仓库中建数据库。完整简历、JD、邮件和聊天
-默认不持久保存；MVP 仅支持压缩字段。写入成功后才说已保存，失败说明没有保存。
+默认不持久保存；仅支持压缩字段。写入成功后才说已保存，失败说明没有保存。
 用户可 view / recall / update / pause / revoke / delete；pause 禁自动读写，view 仍可审阅。
 撤销后保留的数据只能用户 view/delete，重新明确同意才能恢复。删除不承诺安全擦除备份。
 

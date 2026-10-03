@@ -16,7 +16,34 @@
 1–3 个行动、观察窗口和停止 / 转向条件。证据薄就补证或降低表述；
 拿到真实反馈后，修正判断。
 
-[English](README_EN.md) · [三个合成示例](cases) · [MVP 交付报告](documentation/MVP_REPORT.md)
+[English](README_EN.md) · [三个合成示例](cases) · [v0.2 报告](documentation/V02_REPORT.md) · [评测边界](documentation/EVAL.md)
+
+## v0.2 · Decision Intelligence
+
+v0.1 建立证据安全的职业决策；v0.2 加入可追溯的材料提取、反对理由和重评条件，
+让经授权的相似历史与实际观察校准下一次准备。它是有限的反馈校准，不是自动自我学习。
+
+- 每条重要事实定位到来源；优先项、团队成果、流程推进与主观感受分别处理。
+- 建议保留最强反对理由、备选和 `reconsider_if`；过期市场 / 岗位信息先复核。
+- 相似记忆最多三组；至少三个可比真实结果才可能提高重复风险的防守优先级。
+- 预测面试关注点，与观察比较；未问到不算证伪，面试通过不证明准备有效。
+- 五个轻量岗位包将现有项目映射为 Claim、证据、故事与追问，保持个人贡献范围。
+
+固定 [13 个合成 benchmark](benchmark/cases.json) 可重复跑规则与结构化决策检查。
+宿主模型盲评和真实求职结果评测单独记录，当前没有独立模型盲评或现实效果证明。
+本地真实上下文试读只用于检查边界，公开报告只含匿名结论。
+
+```sh
+python -m unittest discover -v
+python scripts/benchmark.py run
+python scripts/benchmark.py packet --output /new/private/eval-packet
+python scripts/junshi.py decide --extraction /private/session-packet.json --format json
+```
+
+原材料格式见 [提取契约](documentation/CONTEXT_EXTRACTION.md)，反馈、纠正和匹配格式见
+[决策契约](documentation/DECISION_INTELLIGENCE.md)。记忆仍默认关闭；只有已明确同意并处于
+active 状态时，`decide --input /private/situation.json --use-similar --memory-directory /private/memory`
+才可召回。JSON 输出保留审阅摘要；对话首屏仍只给建议、动作和必要理由。
 
 ## 四个核心能力
 
@@ -119,7 +146,7 @@ CLI 不抓取岗位、验证远端来源、发送消息或自动做职业决定�
 你明确同意压缩信息在本机持久保存后，才执行 `consent --yes`。之后支持
 recall / update / view / pause / revoke / delete；暂停禁自动读写，撤销需要重新同意，
 删除清除记录并撤销同意。默认存用户数据目录，绝不存安装目录。
-完整简历、JD、邮件与聊天默认不保存，MVP 仅接受压缩字段。
+完整简历、JD、邮件与聊天默认不保存，仅接受压缩字段。
 Decision 与 Outcome 关联，结果、观察、解释与因果未知分别保存。
 
 详见 [记忆命令](documentation/MEMORY.md)。数据库未加密，删除是逻辑删除，
@@ -135,7 +162,7 @@ python scripts/validate_skill.py
 
 回归覆盖十个指定情境，以及计划、团队、Demo、源码作者、回测、奖项、HR 沉默、
 因果推断、主观权重、记忆并发、Decision → Outcome 和安装后独立 CLI。
-运行证据见 [MVP 报告](documentation/MVP_REPORT.md)。
+运行证据见 [v0.2 报告](documentation/V02_REPORT.md)；原 [MVP 报告](documentation/MVP_REPORT.md) 保留为 v0.1 历史记录。
 
 VERIFIED 需要针对精确主张的真实核查。JSON 核查记录是操作者声明，脚本无法
 认证虚构记录；文本触发器不能替代语义审计。当前公司、岗位、市场和政策需要新鲜来源。

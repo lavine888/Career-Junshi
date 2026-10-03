@@ -16,11 +16,11 @@ if __package__ in {None, ""}:
 from scripts.router import ROUTES, route
 
 ROOT = Path(__file__).resolve().parents[1]
-RUNTIME_DOCS = ["ARCHITECTURE.md", "EVIDENCE.md", "MEMORY.md", "INTEGRATION.md", "ACTIONS.md"]
+RUNTIME_DOCS = ["ARCHITECTURE.md", "EVIDENCE.md", "MEMORY.md", "INTEGRATION.md", "ACTIONS.md", "CONTEXT_EXTRACTION.md", "DECISION_INTELLIGENCE.md"]
 RUNTIME_FILES = ["SKILL.md", "LICENSE", "agents/openai.yaml", "documentation/ATTRIBUTION.md"] + [f"documentation/{name}" for name in RUNTIME_DOCS] + [
     "documentation/licenses/Goutoujunshi.txt", "documentation/licenses/Career-Alpha.txt"]
 SCRIPTS = ["__init__.py", "models.py", "router.py", "decision.py", "memory_store.py", "feedback_loop.py",
-           "method_adapter.py", "actions.py", "junshi.py", "validate_skill.py", "install_skill.py"]
+           "method_adapter.py", "actions.py", "junshi.py", "validate_skill.py", "install_skill.py", "context.py", "intelligence.py", "calibration.py", "hypothesis.py", "role_story.py", "benchmark.py"]
 
 
 def validate(root: Path, *, runtime_only=False) -> list[str]:
@@ -29,6 +29,7 @@ def validate(root: Path, *, runtime_only=False) -> list[str]:
     required = RUNTIME_FILES + [f"scripts/{s}" for s in SCRIPTS]
     required += list(dict.fromkeys(p for refs in ROUTES.values() for p in refs))
     required += ["references/practical/rejection.md", "references/practical/00-router.md", "references/practical/career-memory.md"]
+    required += ["references/role-packs.json", "references/practical/context-extraction.md"]
     if not runtime_only:
         required += ["README.md", "README_EN.md", "documentation/ATTRIBUTION.md", "documentation/MVP_REPORT.md",
                      "tests/scenarios/test_scenarios.py", "tests/regression/test_evidence.py"]

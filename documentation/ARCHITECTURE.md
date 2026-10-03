@@ -28,6 +28,12 @@ user materials / consented task memory
 | feedback_loop.py | Decision snapshot / next-move handoff | No causal proof from success |
 | install_skill.py | Validated whitelist runtime copy | No overwrite, auto-enable memory or environment setup |
 | validate_skill.py | Inventory, links, syntax, routing and context budget | No assertion of model behavior |
+| context.py | Session spans, extraction types and freshness | No arbitrary NLP or source authentication |
+| intelligence.py | Counterarguments, rationale summaries and finite tags | Conservative mode defaults require host adaptation |
+| calibration.py | Comparable memory, topic calibration and preparation signals | No probability, causal inference or capability label |
+| hypothesis.py | KEEP / REFINE / guarded PIVOT review | No automatic direction switch or statistical effect estimate |
+| role_story.py | Existing claim → evidence → story → role questions | Never adds accomplishments; prose remains host-dependent |
+| benchmark.py | Repeatable structured checks and blinded host packets | Does not grade natural-language decision quality |
 
 SQLite was chosen over rewriting whole JSON files: standard-library transactions,
 bounded reads, foreign keys and concurrent updates reduce corruption risk without
@@ -41,3 +47,7 @@ CLI is a guardrail / reproducible demonstration, not a substitute for that reaso
 Only synthetic materials are distributed. Optional integration is described in
 [INTEGRATION.md](INTEGRATION.md); evidence and memory rules are in
 [EVIDENCE.md](EVIDENCE.md) and [MEMORY.md](MEMORY.md).
+v0.2 contracts are in [CONTEXT_EXTRACTION.md](CONTEXT_EXTRACTION.md) and
+[DECISION_INTELLIGENCE.md](DECISION_INTELLIGENCE.md). Golden cases and development
+evaluation reports stay in the checkout; runtime-only benchmark use needs an explicit
+`--cases` path. Installation still has no development or private-memory dependency.

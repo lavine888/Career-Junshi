@@ -7,6 +7,8 @@ from scripts.models import ContractError, audit_claim, choices, items, number, o
 from scripts.router import route
 from scripts.method_adapter import method_plan
 from scripts.actions import validate_actions
+from scripts.context import SOURCE_TYPES
+from scripts.intelligence import enrich
 
 DIMENSIONS = {"learning", "ownership", "manager", "team", "career_direction", "technical_depth",
               "brand", "optionality", "compensation", "location", "lifestyle", "downside"}
@@ -19,19 +21,31 @@ def action(kind: str, description: str, mode: str, artifact: str = "") -> dict:
 
 def normalize_situation(value: dict, *, now: datetime | None = None) -> dict:
     s = obj(value, "situation")
-    allowed = {"mode", "summary", "goal", "facts", "inferences", "unknowns", "claims", "deadline", "job", "recruiting", "offer"}
+    allowed = {"mode", "summary", "goal", "facts", "inferences", "unknowns", "claims", "deadline", "job", "recruiting", "offer", "metadata", "predictions", "project_story", "career_hypothesis"}
     if set(s) - allowed:
         raise ContractError(f"unknown situation fields: {sorted(set(s) - allowed)}")
     mode = choices(s.get("mode"), {"job", "positioning", "interview", "recruiting", "offer"}, "mode")
     facts = []
     for f in items(s.get("facts", []), "facts", 30):
         f = obj(f, "fact")
-        if set(f) - {"text", "source", "source_type"}:
+        if set(f) - {"text", "source", "source_type", "id", "source_id", "source_span", "source_locator", "epistemic", "confidence", "kind", "modality", "freshness"}:
             raise ContractError("unknown fact fields")
+        if f.get("epistemic", "FACT") != "FACT":
+            raise ContractError("fact must have FACT epistemic status")
+        if f.get("kind") == "feeling" or f.get("confidence") in {"interpretation", "unknown"}:
+            raise ContractError("interpretation or feeling cannot enter facts")
         facts.append({"label": "FACT", "text": text(f.get("text"), "fact", 400),
                       "source": text(f.get("source"), "fact source", 240),
-                      "source_type": choices(f.get("source_type", "user_report"), {"user_report", "document", "tool"}, "source_type")})
-    inferences = [{"label": "INFERENCE", "text": text(v, "inference", 400)} for v in items(s.get("inferences", []), "inferences")]
+                      "source_type": choices(f.get("source_type", "user_report"), SOURCE_TYPES, "source_type"),
+                      **{k: f[k] for k in ("id", "source_id", "source_span", "source_locator", "epistemic", "confidence", "kind", "modality", "freshness") if k in f}})
+    inferences = []
+    for v in items(s.get("inferences", []), "inferences"):
+        if isinstance(v, dict):
+            if v.get("epistemic") != "INFERENCE":
+                raise ContractError("structured inference must have INFERENCE status")
+            inferences.append({**v, "label": "INFERENCE", "text": text(v.get("text"), "inference", 400)})
+        else:
+            inferences.append({"label": "INFERENCE", "text": text(v, "inference", 400)})
     unknowns = [text(v, "unknown", 240) for v in items(s.get("unknowns", []), "unknowns")]
     if not facts:
         unknowns.append("尚未提供可追溯的局势事实")
@@ -184,7 +198,7 @@ def offer_plan(value: dict, normalized: dict) -> dict:
             "comparison": scores, "constraints": constraints}
 
 
-def decide(value: dict, *, now: datetime | None = None) -> dict:
+def decide(value: dict, *, now: datetime | None = None, history: list | None = None) -> dict:
     n = normalize_situation(value, now=now)
     mode = n["mode"]
     claims = sorted(n["claims"], key=lambda c: (len(c["risk"]), c["confidence"] in {"PLANNED", "SELF_REPORTED"}), reverse=True)
@@ -252,7 +266,7 @@ def decide(value: dict, *, now: datetime | None = None) -> dict:
     n["unknowns"] = list(dict.fromkeys(n["unknowns"]))
     validate_actions(plan["actions"])
     routing = route(mode, rejected=mode == "recruiting" and plan.get("application_status") == "rejected")
-    return {"schema_version": "1", "current_situation": n["summary"], "mode": mode,
+    result = {"schema_version": "1", "current_situation": n["summary"], "mode": mode,
             "urgency": n["urgency"], "facts": n["facts"], "inferences": n["inferences"],
             "unknowns": [{"label": "UNKNOWN", "text": v} for v in n["unknowns"]],
             "current_goal": n["goal"] or "待确认；先处理可逆的下一步", "claims": n["claims"],
@@ -261,18 +275,32 @@ def decide(value: dict, *, now: datetime | None = None) -> dict:
             "references": routing["references"],
             "method_plan": method_plan(mode, evidence_gap=plan["bottleneck"] == "Evidence", urgent=n["urgency"]["within_72h"]), **plan,
             "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome."}
+    result = enrich(result, value, now=now)
+    from scripts.calibration import predictions, apply_history
+    result["predictions"] = predictions(value.get("predictions", []))
+    apply_history(result, history or [], now=now)
+    if "project_story" in value:
+        from scripts.role_story import map_story
+        result["project_mapping"] = map_story(value["project_story"], result["claims"], result["metadata"]["role_family"])
+    if "career_hypothesis" in value:
+        from scripts.hypothesis import review_hypothesis
+        result["career_hypothesis"] = review_hypothesis(value["career_hypothesis"])
+    return result
 
 
-def render(decision: dict) -> str:
+def render(decision: dict, *, details: bool = False) -> str:
     d = decision
-    lines = [d["recommended_move"], "", "为什么：" + "；".join(d["why"]), "", "当前局面：" + d["current_situation"], "", "现在最值得做："]
+    lines = [d["recommended_move"], "", "现在最值得做："]
     for i, a in enumerate(d["actions"], 1):
         actor = "Codex 可做" if a["execution_mode"] == "codex" else "你来执行"
         lines.append(f"{i}. {a['description']}（{actor}）")
-    if d["facts"]:
+    lines.extend(["", "为什么：" + "；".join(d["why"]), "风险：" + d["highest_risk"],
+                  "重评：" + "；".join(d["recommendation"]["reconsider_if"])])
+    if details and d["facts"]:
         lines.extend(["", "已知："] + [f"- {f['text']}（来源：{f['source']}；{f['source_type']}）" for f in d["facts"]])
-    if d["inferences"]:
+    if details and d["inferences"]:
         lines.extend(["", "推测："] + [f"- {v['text']}" for v in d["inferences"]])
-    lines.extend(["", "仍未知："] + [f"- {v['text']}" for v in d["unknowns"]])
+    consequential = d["unknowns"] if details else d["unknowns"][:2]
+    lines.extend(["", "仍需确认："] + [f"- {v['text']}" for v in consequential])
     lines.extend(["", "观察：" + d["observation_window"], "停止：" + d["stop_condition"], "转向：" + d["pivot_condition"]])
     return "\n".join(lines) + "\n"

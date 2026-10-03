@@ -19,9 +19,9 @@ from scripts.models import ContractError, audit_claim, choices, items, obj, text
 POLICY_VERSION = "1"
 MAX_RECORDS = 200
 LIMITS = {"profile": 10, "target_role": 10, "project": 25, "claim": 40, "company": 20,
-          "application": 40, "interview_event": 30, "feedback": 30, "decision": 30, "outcome": 30}
+          "application": 40, "interview_event": 30, "feedback": 30, "decision": 30, "outcome": 30, "correction": 20, "hypothesis": 10}
 STATES = {"active", "paused", "revoked"}
-IMMUTABLE = {"decision", "outcome"}
+IMMUTABLE = {"decision", "outcome", "correction"}
 
 
 def now_iso() -> str:
@@ -123,6 +123,9 @@ class MemoryStore:
     def normalize_record(cls, kind: str, data: dict) -> dict:
         choices(kind, set(LIMITS), "memory kind")
         d = obj(data, "data")
+        if kind == "hypothesis":
+            from scripts.hypothesis import review_hypothesis
+            return review_hypothesis(d)
         if kind == "claim":
             if set(d) != {"summary", "source", "epistemic", "claim"}:
                 raise ContractError("claim memory requires compact provenance and the raw claim model")
@@ -174,16 +177,29 @@ class MemoryStore:
     def record_decision(self, subject: str, data: dict) -> dict:
         d = obj(data, "decision memory")
         required = {"situation", "decision", "why", "expected_outcome", "source", "observation_window", "stop_condition", "pivot_condition"}
-        if set(d) != required:
+        optional = {"metadata", "predictions", "claim_ids", "decision_trace", "strongest_counterargument"}
+        if not required <= set(d) or set(d) - required - optional:
             raise ContractError(f"Decision memory fields must be {sorted(required)}")
         clean = {k: text(d[k], k, 600 if k in {"decision", "why"} else 400) for k in required}
+        from scripts.intelligence import metadata
+        from scripts.calibration import predictions
+        if "metadata" in d:
+            clean["metadata"] = metadata(d["metadata"])
+        clean["predictions"] = predictions(d.get("predictions", []))
+        clean["claim_ids"] = [text(i, "claim id", 80) for i in items(d.get("claim_ids", []), "claim_ids", 20)]
+        if "decision_trace" in d:
+            from scripts.intelligence import memory_trace
+            clean["decision_trace"] = memory_trace(d["decision_trace"])
+        if "strongest_counterargument" in d:
+            clean["strongest_counterargument"] = text(d["strongest_counterargument"], "counterargument", 400)
         clean["epistemic"] = "INFERENCE"
         return self._put("decision", subject, clean)
 
     def record_outcome(self, subject: str, data: dict) -> dict:
         d = obj(data, "outcome memory")
         required = {"decision_id", "hard_outcome", "observed_facts", "user_interpretation", "agent_interpretation", "unknowns", "source"}
-        if set(d) != required:
+        optional = {"metadata", "observations", "event_id", "origin"}
+        if not required <= set(d) or set(d) - required - optional:
             raise ContractError(f"Outcome memory fields must be {sorted(required)}")
         parent = text(d["decision_id"], "decision_id", 80)
         outcome = choices(d["hard_outcome"], {"passed", "rejected", "offer", "waiting", "withdrawn", "freeze", "unknown"}, "hard_outcome")
@@ -198,12 +214,84 @@ class MemoryStore:
                  "agent_interpretation": text(d["agent_interpretation"], "agent_interpretation", 400, empty=True),
                  "unknowns": [text(u, "unknown", 240) for u in items(d["unknowns"], "unknowns", 5)],
                  "source": text(d["source"], "source", 240), "epistemic": "FACT"}
+        from scripts.intelligence import metadata
+        from scripts.calibration import observations, calibrate
+        with self.connection() as c:
+            self._active(c)
+            row = c.execute("SELECT data,kind,subject FROM records WHERE id=?", (parent,)).fetchone()
+            if not row or row["kind"] != "decision" or row["subject"] != subject:
+                raise ContractError("Outcome must reference a Decision for the same subject")
+            previous = json.loads(row["data"])
+        if "metadata" in previous:
+            clean["metadata"] = previous["metadata"]
+        if "metadata" in d and metadata(d["metadata"]) != previous.get("metadata"):
+            raise ContractError("outcome metadata must match its decision")
+        clean["observations"] = observations(d.get("observations", []))
+        clean["calibration"] = calibrate(previous.get("predictions", []), clean["observations"])
+        clean["origin"] = choices(d.get("origin", "unknown"), {"unknown", "synthetic", "real_world"}, "origin")
+        clean["event_id"] = text(d.get("event_id", ""), "event_id", 100, empty=True)
+        if clean["origin"] == "real_world" and not clean["event_id"]:
+            raise ContractError("reported real outcome requires a distinct event_id")
         # The engine creates a bounded learning, never promotes interpretations to facts.
         clean["learning"] = "本次观察已记录；仅适用于本次机会，不证明准备策略导致结果。"
         clean["unknowns"] = list(dict.fromkeys(clean["unknowns"] + ["结果的因果原因与策略效果仍未知"]))
         if not facts:
             clean["unknowns"].append("缺少具体观察，无法判断哪项准备相关")
         return self._put("outcome", subject, clean, parent_id=parent)
+
+    def similar(self, current: dict, *, now=None) -> list:
+        """At most three recent comparable pairs; no cross-role recall or unconsented read."""
+        from scripts.calibration import select_similar
+        from scripts.intelligence import metadata
+        current = metadata(current)
+        with self.connection() as c:
+            self._active(c)
+            invalidated = set()
+            for row in c.execute("SELECT data FROM records WHERE kind='correction'"):
+                invalidated.update(json.loads(row["data"])["affected_decisions"])
+            pairs = []
+            for row in c.execute("SELECT * FROM records WHERE kind='decision' ORDER BY created_at DESC LIMIT 30"):
+                if row["id"] in invalidated:
+                    continue
+                outcome = c.execute("SELECT * FROM records WHERE kind='outcome' AND parent_id=? ORDER BY created_at DESC,id DESC LIMIT 1", (row["id"],)).fetchone()
+                if outcome:
+                    pairs.append({"decision": {**dict(row), "data": json.loads(row["data"])},
+                                  "outcome": {**dict(outcome), "data": json.loads(outcome["data"])}})
+        return select_similar(current, pairs, now=now)
+
+    def correct_claim(self, subject: str, claim_id: str, replacement: dict, *, source: str) -> dict:
+        """Append correction before updating current claim; historical decisions stay immutable."""
+        claim_id, source = text(claim_id, "claim_id", 80), text(source, "source", 240)
+        replacement = obj(replacement, "replacement")
+        if replacement.get("id") != claim_id:
+            raise ContractError("replacement must identify the corrected claim")
+        # A correction is a new narrated boundary, not a new evidence verification.
+        replacement = dict(replacement)
+        if replacement.get("confidence") in {"SUPPORTED", "VERIFIED"}:
+            replacement["confidence"] = "SELF_REPORTED"
+        audited = audit_claim(replacement)
+        with self.connection(write=True) as c:
+            self._active(c)
+            affected = [row["id"] for row in c.execute("SELECT id,data FROM records WHERE kind='decision' AND subject=?", (subject,))
+                        if claim_id in json.loads(row["data"]).get("claim_ids", [])]
+            existing = [dict(row) for row in c.execute("SELECT id,data FROM records WHERE kind='claim' AND subject=?", (subject,))
+                        if json.loads(row["data"])["claim"]["id"] == claim_id]
+            if c.execute("SELECT COUNT(*) FROM records").fetchone()[0] >= MAX_RECORDS or c.execute("SELECT COUNT(*) FROM records WHERE kind='correction'").fetchone()[0] >= LIMITS["correction"]:
+                raise ContractError("Memory full; review records before correction")
+            rid, stamp = uuid.uuid4().hex, now_iso()
+            correction = {"claim_id": claim_id, "current_claim": audited, "source": source,
+                          "affected_decisions": affected, "epistemic": "FACT",
+                          "boundary": "Fact of a reported correction, not verified accomplishment; history preserved."}
+            serialized = json.dumps(correction, ensure_ascii=False)
+            if len(serialized) > 6000:
+                raise ContractError("correction exceeds compact budget")
+            c.execute("INSERT INTO records VALUES (?,?,?,?,?,?,?)", (rid, "correction", text(subject, "subject", 100), serialized, None, stamp, stamp))
+            clean = self.normalize_record("claim", {"summary": "current corrected claim", "source": source,
+                                                   "epistemic": "UNKNOWN", "claim": replacement})
+            for row in existing:
+                c.execute("UPDATE records SET data=?,updated_at=? WHERE id=?", (json.dumps(clean, ensure_ascii=False), stamp, row["id"]))
+        return {"id": rid, "saved": True, "current_claim": audited, "affected_decisions": affected,
+                "history_rewritten": False, "claim_records_updated": len(existing)}
 
     def read(self, *, kind=None, subject=None, administrative=False, limit=10) -> list:
         if isinstance(limit, bool) or not isinstance(limit, int) or not 1 <= limit <= MAX_RECORDS:
@@ -262,12 +350,17 @@ def main(argv=None) -> int:
         cmd = sub.add_parser(name)
         cmd.add_argument("--kind", choices=sorted(LIMITS)); cmd.add_argument("--subject")
         cmd.add_argument("--limit", type=int, default=10)
-    for name in ("update", "decision", "outcome"):
+    for name in ("update", "decision", "outcome", "similar", "correct"):
         cmd = sub.add_parser(name)
-        cmd.add_argument("--subject", required=True); cmd.add_argument("--input", required=True)
+        if name != "similar":
+            cmd.add_argument("--subject", required=True)
+        cmd.add_argument("--input", required=True)
         if name == "update":
             cmd.add_argument("--kind", required=True, choices=sorted(LIMITS))
             cmd.add_argument("--id")
+        if name == "correct":
+            cmd.add_argument("--claim-id", required=True)
+            cmd.add_argument("--source", required=True)
     args = p.parse_args(argv)
     try:
         store = MemoryStore(args.directory)
@@ -287,6 +380,10 @@ def main(argv=None) -> int:
                 result = store.put(args.kind, args.subject, data, record_id=args.id)
             elif args.command == "decision":
                 result = store.record_decision(args.subject, data)
+            elif args.command == "similar":
+                result = store.similar(data)
+            elif args.command == "correct":
+                result = store.correct_claim(args.subject, args.claim_id, data, source=args.source)
             else:
                 result = store.record_outcome(args.subject, data)
         print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))

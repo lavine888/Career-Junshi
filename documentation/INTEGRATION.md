@@ -37,5 +37,6 @@ vault by guessed paths or send its content to external retrieval services.
 
 Output handoff: an explicit compact Decision record and separately sourced Outcomes,
 with expectation, observations, interpretations and unknown causes. The user reviews
-and decides whether to write it back through their own system. Planned v0.2 work
-may add a narrow schema validator; this contract is not executable sync.
+and decides whether to write it back through their own system. v0.2 adds a separate
+[session extraction validator](CONTEXT_EXTRACTION.md) and [decision extensions](DECISION_INTELLIGENCE.md).
+The LavineOS snapshot shape above remains a documented interface, not executable sync.
