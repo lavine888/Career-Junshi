@@ -1,0 +1,35 @@
+{
+  "case_id": "02-hr-silence",
+  "status": "BLOCKED_BY_HOST",
+  "skill_reads_requested": 1,
+  "skill_reads_succeeded": 0,
+  "requested_references": [],
+  "successfully_read_references": [],
+  "reference_count": 0,
+  "irrelevant_references_loaded": false,
+  "error": "exec_command failed before process creation: rejected: blocked by policy",
+  "attempt": {
+    "name": "host-retrieval-final-02-hr-silence",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "started_at": "2026-10-03T15:35:11.936495+00:00",
+    "timeout": 180,
+    "tools": "installed Skill read-only shell",
+    "prompt_sha256": "f7f8608f8cb69f937a840e27937289a789019f137727aa9c35cc3a0d258a2d5f",
+    "commands": [],
+    "usage": {
+      "input_tokens": 38271,
+      "cached_input_tokens": 18560,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 817,
+      "reasoning_output_tokens": 162
+    },
+    "status": "VALID",
+    "error": [],
+    "completed_at": "2026-10-03T15:35:47.219402+00:00",
+    "seconds": 35.28,
+    "raw_sha256": "79bc0cc52f432e8f61e61c5db907674f656bc0533213a73fc929fe59619379e6"
+  },
+  "stderr_original_sha256": "f5740c01d97fe6e4a1e359e6d0fafff51be8f838a47f869e0bc92f5d5fae9cc8",
+  "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+}

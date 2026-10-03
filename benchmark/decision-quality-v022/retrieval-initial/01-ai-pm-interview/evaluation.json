@@ -1,0 +1,35 @@
+{
+  "case_id": "01-ai-pm-interview",
+  "status": "BLOCKED_BY_HOST",
+  "skill_reads_requested": 1,
+  "skill_reads_succeeded": 0,
+  "requested_references": [],
+  "successfully_read_references": [],
+  "reference_count": 0,
+  "irrelevant_references_loaded": false,
+  "error": "exec_command failed before process creation: rejected: blocked by policy",
+  "attempt": {
+    "name": "host-retrieval-01-ai-pm-interview",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "started_at": "2026-10-03T15:20:51.827504+00:00",
+    "timeout": 180,
+    "tools": "installed Skill read-only shell",
+    "prompt_sha256": "f3252842fde479141fe105f6852c46e90e3a2c566a25497c67d249fde601014a",
+    "commands": [],
+    "usage": {
+      "input_tokens": 38598,
+      "cached_input_tokens": 18816,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 672,
+      "reasoning_output_tokens": 335
+    },
+    "status": "VALID",
+    "error": [],
+    "completed_at": "2026-10-03T15:21:26.019531+00:00",
+    "seconds": 34.19,
+    "raw_sha256": "5db6314ce9d24f6938eff257fc505043de8478e5e4ac4c4cf4ef571eab9fb529"
+  },
+  "stderr_original_sha256": "97a55854b7578543172b9dfcb4f86fe99621ef8a741c2390db4164ad49698da0",
+  "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+}

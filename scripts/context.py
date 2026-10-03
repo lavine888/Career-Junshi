@@ -143,11 +143,12 @@ def extract(packet: dict, *, now: datetime | None = None) -> dict:
         declared = obj(result.get("recruiting", {}), "recruiting").get("status", "waiting")
         if declared in {"passed", "rejected", "offer"} and declared not in terminal:
             raise ContractError("terminal recruiting status requires a matching sourced, unqualified FACT; unknown or conditional reports cannot set it")
-    if any(k in result for k in ("facts", "inferences", "unknowns", "sources")):
+    if any(k in result for k in ("facts", "inferences", "unknowns", "sources", "context_sources")):
         raise ContractError("facts / inferences / unknowns must derive from sourced statements")
     result["facts"] = [s for s in statements if s["epistemic"] == "FACT"]
     result["inferences"] = [s for s in statements if s["epistemic"] == "INFERENCE"]
     result["unknowns"] = [s["text"] for s in statements if s["epistemic"] == "UNKNOWN"]
+    result["context_sources"] = [{"source_id": sid, "source_type": source["source_type"]} for sid, source in sources.items()]
     for s in statements:
         if s.get("freshness"):
             check = freshness(s["freshness"], now=now)

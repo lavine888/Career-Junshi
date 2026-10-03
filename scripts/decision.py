@@ -9,6 +9,8 @@ from scripts.method_adapter import method_plan
 from scripts.actions import validate_actions
 from scripts.context import SOURCE_TYPES
 from scripts.intelligence import enrich
+from scripts.decision_quality import (direction_plan, conditional_offer, interview_focus,
+                                     communication, ownership_pack, decision_state, fields)
 
 DIMENSIONS = {"learning", "ownership", "manager", "team", "career_direction", "technical_depth",
               "brand", "optionality", "compensation", "location", "lifestyle", "downside"}
@@ -21,9 +23,12 @@ def action(kind: str, description: str, mode: str, artifact: str = "") -> dict:
 
 def normalize_situation(value: dict, *, now: datetime | None = None) -> dict:
     s = obj(value, "situation")
-    allowed = {"mode", "summary", "goal", "facts", "inferences", "unknowns", "claims", "deadline", "job", "recruiting", "offer", "metadata", "predictions", "project_story", "career_hypothesis", "claim_refs"}
+    allowed = {"mode", "summary", "goal", "facts", "inferences", "unknowns", "claims", "deadline", "job", "recruiting", "offer", "metadata", "predictions", "project_story", "career_hypothesis", "claim_refs", "direction", "interview", "ownership", "context_sources"}
     if set(s) - allowed:
         raise ContractError(f"unknown situation fields: {sorted(set(s) - allowed)}")
+    for key, required_mode in (("direction", "job"), ("interview", "interview"), ("ownership", "positioning")):
+        if key in s and s.get("mode") != required_mode:
+            raise ContractError(f"{key} is only valid in {required_mode} mode")
     mode = choices(s.get("mode"), {"job", "positioning", "interview", "recruiting", "offer"}, "mode")
     facts = []
     for f in items(s.get("facts", []), "facts", 30):
@@ -63,7 +68,14 @@ def normalize_situation(value: dict, *, now: datetime | None = None) -> dict:
         due = timestamp(s["deadline"], "deadline")
         hours = (datetime.fromisoformat(due.replace("Z", "+00:00")) - now).total_seconds() / 3600
         urgency = {"deadline": due, "hours_remaining": round(hours, 2), "within_72h": 0 <= hours <= 72, "overdue": hours < 0}
-    return {"mode": mode, "summary": text(s.get("summary"), "summary", 600),
+    source_ids = {f.get("source_id", f["source"]) for f in facts}
+    source_ids.update(v.get("source_id", v.get("source", "")) for v in inferences)
+    for source in items(s.get("context_sources", []), "context sources", 12):
+        source = fields(source, {"source_id", "source_type"}, "context source")
+        choices(source.get("source_type"), SOURCE_TYPES, "context source type")
+        source_ids.add(text(source.get("source_id"), "context source ID", 80))
+    source_ids.discard("")
+    return {"mode": mode, "summary": text(s.get("summary"), "summary", 600), "_source_ids": source_ids,
             "goal": text(s.get("goal", ""), "goal", 400, empty=True), "facts": facts,
             "inferences": inferences, "unknowns": list(dict.fromkeys(unknowns)), "claims": claims,
             "urgency": urgency}
@@ -71,7 +83,7 @@ def normalize_situation(value: dict, *, now: datetime | None = None) -> dict:
 
 def recruiting_plan(value: dict, normalized: dict) -> dict:
     r = obj(value, "recruiting")
-    if set(r) - {"status", "working_days", "promised_date", "promised_date_passed", "followups", "no_contact", "feedback"}:
+    if set(r) - {"status", "working_days", "promised_date", "promised_date_passed", "followups", "no_contact", "feedback", "communication"}:
         raise ContractError("unknown recruiting fields")
     status = choices(r.get("status", "waiting"), {"waiting", "rejected", "passed", "offer", "freeze"}, "recruiting status")
     days = r.get("working_days")
@@ -94,6 +106,8 @@ def recruiting_plan(value: dict, normalized: dict) -> dict:
     else:
         unknowns.append("本次结果的完整原因与策略因果效果")
     draft = "您好，想确认一下本次面试的后续进度。如需我补充材料，我可以配合。谢谢。"
+    if "communication" in r:
+        draft = communication(r["communication"], normalized)
     window = "按实际承诺日期；未约定时约 3 个工作日（可调整的经验默认，非承诺）"
     if r.get("no_contact"):
         recommendation = "停止联系该招聘者，继续其他机会。"
@@ -130,18 +144,26 @@ def recruiting_plan(value: dict, normalized: dict) -> dict:
         recommendation = "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。"
         unknowns.append("日历天 / 工作日、承诺日期及真实截止时间")
         acts = [action("pipeline_review", "核对最后联系日期、工作日与承诺时间", "codex", "跟进时间计划")]
-    return {"bottleneck": "Timing" if status == "waiting" else "Market" if status == "freeze" else "Interview",
+    can_send = any(a["kind"] == "send_message" for a in acts)
+    prepare_draft = "communication" in r and status == "waiting" and not r.get("no_contact") and not followups
+    if prepare_draft and not any(a["kind"] == "draft_message" for a in acts):
+        acts.insert(0, action("draft_message", draft, "codex", "条件满足后可发送的草稿"))
+    follow_up = {"action": "do_not_contact" if r.get("no_contact") or status != "waiting" else "send_now" if can_send else "wait",
+                 "timing": recommendation, "window": window,
+                 "draft": draft if any(a["kind"] == "draft_message" for a in acts) else None}
+    plan = {"bottleneck": "Timing" if status == "waiting" else "Market" if status == "freeze" else "Interview",
             "recommended_move": recommendation, "why": ["以可见流程与明确反馈为依据，不猜招聘者内心", "停止高频追问，保留其他机会"],
             "actions": acts, "observation_window": window,
             "stop_condition": "明确拒绝 / 要求不联系时停止；一次跟进后再约 3 个工作日无回复，降低投入",
             "pivot_condition": "真实截止时间变化即调整；同一缺口在 5–10 个可比机会反复出现，再 REFINE / PIVOT",
-            "application_status": status, "draft": draft if any(a["kind"] == "draft_message" for a in acts) else None}
+            "application_status": status, "draft": follow_up["draft"], "follow_up": follow_up}
+    return decision_state(plan, "SUFFICIENT" if can_send or r.get("no_contact") or status != "waiting" else "CONDITIONAL", "按明确联系边界、承诺日期和已知工作日编译一次跟进；不预测结果", reversing=["实际工作日、承诺日期或竞争机会截止时间改变"])
 
 
 def offer_plan(value: dict, normalized: dict) -> dict:
     offer = obj(value, "offer")
     normalized["inferences"].append({"label": "INFERENCE", "text": "用户提供的偏好评分可提示当前选择，但不保证入职后的真实体验"})
-    if set(offer) - {"weights", "constraints", "options"}:
+    if set(offer) - {"weights", "constraints", "options", "priorities", "source_ids", "critical_unknowns"}:
         raise ContractError("unknown offer fields")
     options = items(offer.get("options", []), "options", 5)
     weights = obj(offer.get("weights", {}), "weights")
@@ -173,13 +195,13 @@ def offer_plan(value: dict, normalized: dict) -> dict:
             missing.append(f"{name}: {', '.join(gaps) if gaps else '硬约束是否满足'}")
         total = sum(weights.values())
         score = sum(weights[k] * ratings[k] for k in weights if k in ratings) / total if total and not gaps and status == "pass" else None
-        scores.append({"name": name, "eligible": status == "pass", "score": round(score, 3) if score is not None else None,
+        scores.append({"name": name, "eligible": None if status == "unknown" else status == "pass", "score": round(score, 3) if score is not None else None,
                        "ratings": ratings, "reason": "用户主观偏好的加权比较，非公司客观质量"})
     enough = bool(normalized["goal"] and "constraints" in offer and sum(weights.values()) > 0 and len(options) >= 2 and not missing)
     ranked = sorted([s for s in scores if s["eligible"] and s["score"] is not None], key=lambda x: x["score"], reverse=True)
     if not enough:
         recommendation = "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
-        normalized["unknowns"].extend(missing + ["足以改变选择的目标、硬约束或用户权重仍未确认"])
+        normalized["unknowns"].extend(missing + (["硬约束或关键条款仍需确认"] if offer.get("priorities") else ["足以改变选择的目标、硬约束或用户权重仍未确认"]))
     elif not ranked:
         recommendation = "目前没有满足硬约束的选项，先确认条件或寻找替代，暂不接受。"
     elif len(ranked) > 1 and ranked[0]["score"] - ranked[1]["score"] <= 0.25:
@@ -187,7 +209,7 @@ def offer_plan(value: dict, normalized: dict) -> dict:
         normalized["unknowns"].append("接近分数下的权重敏感性与关键条件是否真实")
     else:
         recommendation = f"按你提供的目标、权重和已确认约束，首选 {ranked[0]['name']}；接受前核对书面条款与关键团队信息。"
-    return {"bottleneck": "Direction", "recommended_move": recommendation,
+    plan = {"bottleneck": "Direction", "recommended_move": recommendation,
             "why": ["目标与硬约束优先于公司品牌", "评分仅计算用户提供的偏好；未知不补平均分"],
             "actions": [action("offer_comparison", "整理确认条件、未知与偏好敏感点", "codex", "Offer 比较表"),
                         action("confirm_terms", "确认经理、团队、ownership、书面薪酬、地点与截止时间", "human"),
@@ -196,17 +218,32 @@ def offer_plan(value: dict, normalized: dict) -> dict:
             "stop_condition": "任一硬约束不满足则停止接受该选项；目标未明确先暂停排名",
             "pivot_condition": "确认信息或权重变化足以改变首选时重新比较",
             "comparison": scores, "constraints": constraints}
+    conditional = conditional_offer(offer, normalized, scores, DIMENSIONS)
+    if conditional:
+        plan.update(conditional)
+        if conditional["decision_unknowns"]:
+            description = "核实：" + "；".join(u["unknown"] + "（" + u["how_to_verify"] + "）" for u in conditional["decision_unknowns"])
+            if len(description) > 1000:
+                # Keep complete methods/reversals in the comparison, not a clipped instruction.
+                description = "核实比较表中的前三项未知；完整核实办法、来源及反转条件见 Offer 比较表。"
+            plan["actions"][1]["description"] = description
+        return decision_state(plan, conditional["recommendation_type"], "按有来源的定性优先级比较已提供维度，缺失条件可反转首选", blocking=[] if conditional["current_preference"] else ["能区分取舍的目标、约束或比较维度"], reversing=conditional["reversal_conditions"])
+    plan.update(current_preference=ranked[0]["name"] if enough and ranked else None,
+                reversal_conditions=["用户目标、硬约束、权重或关键条款变化时重新比较"], decision_unknowns=[])
+    return decision_state(plan, "SUFFICIENT" if enough and ranked else "BLOCKED", "使用已有数字权重契约，不补造评分", blocking=[] if enough and ranked else missing or ["足以排名的目标、约束或权重"])
 
 
 def decide(value: dict, *, now: datetime | None = None, history: list | None = None) -> dict:
     n = normalize_situation(value, now=now)
     mode = n["mode"]
-    claims = sorted(n["claims"], key=lambda c: (len(c["risk"]), c["confidence"] in {"PLANNED", "SELF_REPORTED"}), reverse=True)
+    claims = sorted(n["claims"], key=lambda c: (any("authorship" in r or "sole_ownership" in r or "stage_conflict" in r for r in c["risk"]), len(c["risk"]), c["confidence"] in {"PLANNED", "SELF_REPORTED"}), reverse=True)
     riskiest = claims[0] if claims else None
     if mode == "recruiting":
         plan = recruiting_plan(value.get("recruiting", {}), n)
     elif mode == "offer":
         plan = offer_plan(value.get("offer", {}), n)
+    elif mode == "job" and "direction" in value:
+        plan = direction_plan(value["direction"], n, action)
     elif mode == "interview":
         supplied = {f["source_type"] for f in n["facts"]}
         fallback = "已提供简历中的项目表述（Claim 尚未结构化）" if "resume" in supplied else "简历上最强、证据最薄的项目表述（简历原文待提供）"
@@ -224,6 +261,17 @@ def decide(value: dict, *, now: datetime | None = None, history: list | None = N
                 "observation_window": "下次面试结束后记录被追问最深的三个问题与原话反馈",
                 "stop_condition": "准备时间到即停；强表述无法补证就降低措辞，今晚不补做大型项目",
                 "pivot_condition": "明确新反馈后调整下一轮准备；单次结果不证明方向或策略因果"}
+        focus = interview_focus(value.get("interview", {}), n)
+        plan.update(focus)
+        if focus["top_risk_hypotheses"]:
+            topics = " / ".join(s["topic"] for s in focus["top_risk_hypotheses"])
+            plan["recommended_move"] = f"当前优先防守 {topics} 的项目追问；这是基于现有信号的准备假设，不是已确认的能力弱点。"
+            plan["actions"][0]["description"] = "整理真实个人决定、团队贡献和阶段边界，保留有依据的产品领导力"
+            plan["actions"][1]["description"] = f"围绕 {topics} 准备架构、取舍、失败与评估的连续追问，子步骤合并在这项行动内"
+            plan["why"] = [s["basis"] for s in focus["top_risk_hypotheses"]] + ["主观感受不是面试官评价；未知面试官身份不妨碍有限时间内优先防守"]
+        else:
+            plan["recommended_move"] = f"优先补齐 {target} 的贡献边界并练项目防守；缺证是风险假设，先保留已有贡献，不自动否定主导。"
+        decision_state(plan, "SUFFICIENT" if n["facts"] and (n["urgency"]["within_72h"] or focus["top_risk_hypotheses"]) else "CONDITIONAL", "有限时间内项目防守是可逆且有依据的首选", reversing=["明确面试安排或直接反馈显示不同考察重点"])
     elif mode == "positioning":
         plan = {"bottleneck": "Evidence" if not riskiest or riskiest["risk"] else "Positioning",
                 "recommended_move": "先确认真实个人贡献和项目阶段，再改写；当前缺证的‘主导 / production’表述先降低。" if not riskiest or riskiest["risk"] else "用已有证据翻译岗位语言，保持原有 scope 与 ownership。",
@@ -234,6 +282,11 @@ def decide(value: dict, *, now: datetime | None = None, history: list | None = N
                 "observation_window": "补证或下一次模拟追问后复核",
                 "stop_condition": "无法确认个人贡献或结果时停止升级措辞",
                 "pivot_condition": "岗位职责变化或新证据出现时重新定位"}
+        pack = ownership_pack(value.get("ownership", {}), n["claims"], n["facts"])
+        plan["ownership_defense"] = pack
+        plan["recommended_move"] = "现在采用有边界的表述：" + pack["safe_claim"]
+        plan["actions"][1]["description"] = "产出安全表述、贡献边界与最相关的 3–5 个追问；待补证后再升级工程作者范围"
+        decision_state(plan, "CONDITIONAL" if n["claims"] else "BLOCKED", "现有贡献可以保守改写；缺少工程作者证据仅阻止升级", blocking=[] if n["claims"] else ["具体个人贡献"], reversing=["新证据改变个人作者范围或独立阶段判断"])
     else:
         j = obj(value.get("job", {}), "job")
         if set(j) - {"fit", "gap", "gap_days", "role"}:
@@ -266,6 +319,10 @@ def decide(value: dict, *, now: datetime | None = None, history: list | None = N
     if n["urgency"]["overdue"]:
         n["unknowns"].append("截止时间已过；需要确认机会是否仍可处理")
         plan["recommended_move"] = "先确认已过期的面试 / Offer / 机会是否仍有效，再执行下面的准备或比较。"
+        decision_state(plan, "BLOCKED", "真实截止时间已过，先确认机会有效", blocking=["机会是否仍有效"])
+        if "current_preference" in plan: plan["current_preference"] = None
+    if "recommendation_type" not in plan:
+        decision_state(plan, "CONDITIONAL", "既有模式的可逆下一步；条件变化时重评", reversing=n["unknowns"][:3])
     n["unknowns"] = list(dict.fromkeys(n["unknowns"]))
     validate_actions(plan["actions"])
     routing = route(mode, rejected=mode == "recruiting" and plan.get("application_status") == "rejected")
@@ -300,6 +357,11 @@ def render(decision: dict, *, details: bool = False) -> str:
         lines.append(f"{i}. {a['description']}（{actor}）")
     lines.extend(["", "为什么：" + "；".join(d["why"]), "风险：" + d["highest_risk"],
                   "重评：" + "；".join(d["recommendation"]["reconsider_if"])])
+    if d.get("draft"):
+        lines.extend(["", "可用草稿（核对发送时机后由你发送）：", d["draft"]])
+    if "ownership_defense" in d:
+        p = d["ownership_defense"]
+        lines.extend(["", "贡献边界：" + p["boundary"], "整体项目阶段：" + p["project_stage"], "最相关的追问："] + ["- " + q for q in p["defense_questions"]])
     if details and d["facts"]:
         lines.extend(["", "已知："] + [f"- {f['text']}（来源：{f['source']}；{f['source_type']}）" for f in d["facts"]])
     if details and d["inferences"]:

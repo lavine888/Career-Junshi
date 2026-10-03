@@ -1,0 +1,31 @@
+{
+  "case_id": "05-ownership-claim",
+  "origin": "synthetic",
+  "reviewer": "operator semantic review, not independent model blind grading",
+  "reviewed_at": "2026-10-03T15:20:06.946696+00:00",
+  "before": "PARTIAL",
+  "after": "PARTIAL",
+  "levels": {
+    "extraction": "PASS",
+    "structured_decision": "PARTIAL",
+    "host": "PARTIAL"
+  },
+  "properties": {
+    "actions_bounded": true,
+    "no_verified_claims": true,
+    "decision_sufficiency_present": true,
+    "raw_source_identity": true,
+    "defense_questions_bounded": true,
+    "independent_project_stage": true
+  },
+  "host_exact_quotes": [
+    "不能原样继续写。",
+    "担任 AI-native Minecraft 英语教育平台产品/项目负责人",
+    "面试前至少能守住这五问：",
+    "Git 仓库存在也不能证明个人作者范围。"
+  ],
+  "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+  "diagnostic": "Preserves product leadership, rejects compound engineering authorship, gives five defense questions. Compiler exposes project_stage unknown and distinct per-claim/personal declared stages without upgrading confidence.",
+  "remaining_issue": "Compiler rewrite concatenates an audit explanation into a long safe claim. Host omits explicit project/claim/personal stage disclosure. Completion fields are extractor self-report interpretations, not verified engineering completion.",
+  "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+}

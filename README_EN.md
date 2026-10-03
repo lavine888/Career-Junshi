@@ -19,6 +19,16 @@ career decision Skill for a capable host, with standard-library local helpers.
 
 [中文](README.md) · [Synthetic cases](cases) · [v0.2 report](documentation/V02_REPORT.md) · [Evaluation](documentation/EVAL.md)
 
+**v0.2.2 · Decision Quality Patch** adds decision sufficiency, sourced direction
+hierarchies, conditional Offer preferences and reversal checks, contextual follow-up
+drafts and ownership defense packs. 154 tests pass, with no regression in the original
+13 benchmarks or five frozen property replays. Fresh operator review gives three
+PASS and two PARTIAL; Direction moves from FAIL to PASS. Autonomous reference
+reads were BLOCKED_BY_HOST and remain unverified. See the
+[decision report](documentation/V022_DECISION_QUALITY_REPORT.md) and
+[retrieval experiment](documentation/REFERENCE_RETRIEVAL_EVAL.md). No real hiring
+effect is established.
+
 v0.2.1 preserves recruiting denial/conditions/hearsay, traces scoped claim corrections
 across opportunities and deduplicates history before the three-pair cap. All 123
 tests pass; the prior 108 remain unchanged. On 15 fixed synthetic pairs generated

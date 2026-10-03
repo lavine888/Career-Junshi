@@ -1,0 +1,550 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "text": "我现在有点散。\n\n我做过 Minecraft AI 教育项目，\n负责很多产品和 Agent 相关东西；\n\n也参加过不少黑客松；\n\n还做过量化 Skill 和 PandaAI 比赛。\n\n我数学本科、CS 硕士。\n\n我到底应该主投 AI PM、\nAgent Product、\nTechnical PM，\n还是 Quant？\n\n我不想什么都投，\n感觉这样简历完全没有主线。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "user_report",
+      "text": "education:\n  bachelor: Mathematics and Applied Mathematics\n  master: Computer Science\n\nminecraft:\n  type: long_term_project\n  strongest:\n    - 0_to_1_product\n    - AI_teacher\n    - agent_workflow\n    - curriculum\n    - cross_functional_coordination\n  weaker:\n    - low_level_engineering_ownership\n\nhackathons:\n  strongest:\n    - rapid_build\n    - ambiguity\n    - demos\n  weakness:\n    - short_duration\n\npandaai:\n  strongest:\n    - quant_competition\n    - open_source_skills\n  unknown:\n    - professional_quant_research_depth\n\ncareer_junshi:\n  strongest:\n    - agent_product\n    - evidence_system\n    - open_source_product"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "text": "毕业后希望进入 AI 相关岗位。\n\n深圳 / 香港优先。\n\n未来仍希望保留创业可能。"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "用户感觉当前职业方向有些分散",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我现在有点散。",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户报告做过 Minecraft AI 教育项目",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我做过 Minecraft AI 教育项目",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "用户报告在该项目中负责很多产品和 Agent 相关工作",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "负责很多产品和 Agent 相关东西",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "用户报告参加过不少黑客松",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "也参加过不少黑客松",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "用户报告做过量化 Skill 并参加过 PandaAI 比赛",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "还做过量化 Skill 和 PandaAI 比赛",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户报告拥有数学本科和 CS 硕士背景",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我数学本科、CS 硕士。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户正在比较 AI PM、Agent Product、Technical PM 和 Quant 四个主投方向",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我到底应该主投 AI PM、\nAgent Product、\nTechnical PM，\n还是 Quant？",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户不希望同时广投所有方向",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我不想什么都投",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F9",
+      "text": "用户感觉当前简历缺少主线",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "感觉这样简历完全没有主线。",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "本科专业被报告为 Mathematics and Applied Mathematics",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "bachelor: Mathematics and Applied Mathematics",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "硕士专业被报告为 Computer Science",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "master: Computer Science",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "Minecraft 经历被描述为长期项目",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "type: long_term_project",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F13",
+      "text": "Minecraft 经历列出的强项包括 0 到 1 产品、AI 教师、Agent 工作流、课程和跨职能协调",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "strongest:\n    - 0_to_1_product\n    - AI_teacher\n    - agent_workflow\n    - curriculum\n    - cross_functional_coordination",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F14",
+      "text": "低层工程 ownership 被列为 Minecraft 经历的较弱项",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "weaker:\n    - low_level_engineering_ownership",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F15",
+      "text": "黑客松经历列出的强项是快速构建、处理模糊性和制作 Demo",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "strongest:\n    - rapid_build\n    - ambiguity\n    - demos",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F16",
+      "text": "黑客松经历的弱点被列为持续时间短",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "weakness:\n    - short_duration",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F17",
+      "text": "PandaAI 经历列出的强项是量化比赛和开源 Skills",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "strongest:\n    - quant_competition\n    - open_source_skills",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F18",
+      "text": "用户的专业量化研究深度尚不明确",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "unknown:\n    - professional_quant_research_depth",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "claim",
+      "modality": "unknown"
+    },
+    {
+      "id": "F19",
+      "text": "Career Junshi 相关经历列出的强项是 Agent Product、证据系统和开源产品",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "strongest:\n    - agent_product\n    - evidence_system\n    - open_source_product",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F20",
+      "text": "用户毕业后希望进入 AI 相关岗位",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "毕业后希望进入 AI 相关岗位。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F21",
+      "text": "用户优先考虑深圳或香港",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "深圳 / 香港优先。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F22",
+      "text": "用户希望未来保留创业可能",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "未来仍希望保留创业可能。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    }
+  ],
+  "situation": {
+    "mode": "job",
+    "summary": "用户希望从 AI PM、Agent Product、Technical PM 和 Quant 中确定聚焦方向，避免简历与投递缺少主线。",
+    "goal": "确定主投方向及有限的次要方向，同时保留进入 AI 岗位、深圳或香港优先以及未来创业可能等目标。",
+    "claims": [
+      {
+        "id": "C1",
+        "claim": "参与长期 Minecraft AI 教育项目，并报告负责多项产品和 Agent 相关工作；相关强项包括 0 到 1 产品、AI 教师、Agent 工作流、课程与跨职能协调。",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "报告的个人贡献集中于产品领导、Agent 相关工作、课程与跨职能协调；低层工程 ownership 较弱，个人工程作者范围未明确。"
+        },
+        "evidence": [
+          {
+            "source": "S1 Raw user input",
+            "kind": "self_report",
+            "supports": [
+              "claim",
+              "leadership"
+            ],
+            "summary": "用户报告做过 Minecraft AI 教育项目并负责很多产品和 Agent 相关工作。"
+          },
+          {
+            "source": "S2 Candidate context",
+            "kind": "self_report",
+            "supports": [
+              "claim",
+              "leadership"
+            ],
+            "summary": "该经历被描述为长期项目，并列出产品、AI 教师、Agent 工作流、课程和跨职能协调等强项。"
+          }
+        ],
+        "risk": [
+          "个人工程作者范围不明确",
+          "整体项目是否达到生产阶段不明确",
+          "缺少独立核验的结果或指标"
+        ]
+      },
+      {
+        "id": "C2",
+        "claim": "参加过不少黑客松，相关强项被描述为快速构建、处理模糊性和制作 Demo。",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "报告了参赛经历及快速构建、处理模糊性和 Demo 能力；具体团队分工和个人作者范围未说明。"
+        },
+        "evidence": [
+          {
+            "source": "S1 Raw user input",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "用户报告参加过不少黑客松。"
+          },
+          {
+            "source": "S2 Candidate context",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "列出的强项为 rapid_build、ambiguity 和 demos，弱点为 short_duration。"
+          }
+        ],
+        "risk": [
+          "项目持续时间短",
+          "未提供奖项、结果指标或个人 ownership 范围"
+        ]
+      },
+      {
+        "id": "C3",
+        "claim": "参与过 PandaAI 量化比赛，并有量化 Skill 和开源 Skills 相关经历。",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "报告了量化 Skill、开源 Skills 和量化比赛相关参与；专业量化研究深度、具体作者范围和比赛结果未明确。"
+        },
+        "evidence": [
+          {
+            "source": "S1 Raw user input",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "用户报告做过量化 Skill 和 PandaAI 比赛。"
+          },
+          {
+            "source": "S2 Candidate context",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "PandaAI 部分列出 quant_competition 和 open_source_skills，并将 professional_quant_research_depth 标为未知。"
+          }
+        ],
+        "risk": [
+          "专业量化研究深度未知",
+          "未报告比赛排名或获奖结果",
+          "Skill 的个人作者范围和实际使用情况未知"
+        ]
+      },
+      {
+        "id": "C4",
+        "claim": "拥有 Mathematics and Applied Mathematics 本科及 Computer Science 硕士教育背景。",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "sole",
+          "contribution": "用户报告的个人教育经历。"
+        },
+        "evidence": [
+          {
+            "source": "S1 Raw user input",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "用户报告数学本科、CS 硕士。"
+          },
+          {
+            "source": "S2 Candidate context",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "列出本科 Mathematics and Applied Mathematics、硕士 Computer Science。"
+          }
+        ],
+        "risk": [
+          "学历材料未独立核验"
+        ]
+      },
+      {
+        "id": "C5",
+        "claim": "Career Junshi 相关经历被描述为以 Agent Product、证据系统和开源产品为强项。",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "材料仅报告相关强项，未明确个人作者范围、工程深度或整体项目阶段。"
+        },
+        "evidence": [
+          {
+            "source": "S2 Candidate context",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "Career Junshi 部分列出 agent_product、evidence_system 和 open_source_product。"
+          }
+        ],
+        "risk": [
+          "具体个人贡献边界未知",
+          "整体项目阶段和外部使用证据未知"
+        ]
+      }
+    ],
+    "metadata": {
+      "mode": "job",
+      "role_family": "unknown",
+      "stage": "exploration",
+      "situation_type": "direction-choice",
+      "risk_tags": [
+        "direction",
+        "evidence",
+        "ownership",
+        "market"
+      ],
+      "situation_tags": [
+        "direction",
+        "evidence",
+        "ownership",
+        "market"
+      ]
+    },
+    "job": {
+      "fit": "unknown",
+      "gap": "尚无具体 JD、当前市场证据、项目结果指标或足以核实专业量化研究深度与工程 ownership 的材料。",
+      "gap_days": null,
+      "role": "AI PM / Agent Product / Technical PM / Quant 方向选择"
+    },
+    "direction": {
+      "candidates": [
+        {
+          "name": "AI PM",
+          "role_family": "ai-product",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "assessment": {
+            "evidence_strength": "medium",
+            "continuity": "high",
+            "defensibility": "medium",
+            "role_relevance": "high",
+            "goal_fit": "high",
+            "gap_cost": "medium",
+            "optionality": "high",
+            "market_testability": "high"
+          },
+          "strongest_proof": "长期 Minecraft AI 教育项目中的 0 到 1 产品、AI 教师、课程与跨职能协调经历。",
+          "largest_gap": "缺少具体 JD 对照、产品结果指标和经核验的个人 ownership 边界。",
+          "resume_case": "可围绕 AI 教育产品与 Agent 工作流形成主线，但目前证据仍是自述，不能扩大为独立完成全部工程。",
+          "market_test": "需要用深圳或香港的具体 AI PM JD 检验产品判断、指标和行业要求是否匹配。",
+          "constraint_status": "unknown"
+        },
+        {
+          "name": "Agent Product",
+          "role_family": "agent-product",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "assessment": {
+            "evidence_strength": "high",
+            "continuity": "high",
+            "defensibility": "medium",
+            "role_relevance": "high",
+            "goal_fit": "high",
+            "gap_cost": "low",
+            "optionality": "high",
+            "market_testability": "high"
+          },
+          "strongest_proof": "Minecraft 经历包含 Agent 工作流，Career Junshi 相关经历又列出 Agent Product、证据系统和开源产品。",
+          "largest_gap": "低层工程 ownership 较弱，个人工程作者范围、生产阶段与真实使用结果均未明确。",
+          "resume_case": "现有经历能形成 Agent 产品主线，同时必须把产品领导与工程作者身份分开表述。",
+          "market_test": "需要用具体 Agent Product JD 检验其对评测、生产落地、技术深度和产品结果的要求。",
+          "constraint_status": "unknown"
+        },
+        {
+          "name": "Technical PM",
+          "role_family": "technical-product",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "assessment": {
+            "evidence_strength": "medium",
+            "continuity": "medium",
+            "defensibility": "medium",
+            "role_relevance": "medium",
+            "goal_fit": "high",
+            "gap_cost": "medium",
+            "optionality": "high",
+            "market_testability": "high"
+          },
+          "strongest_proof": "Computer Science 硕士背景，加上 Agent 工作流、证据系统和跨职能协调经历。",
+          "largest_gap": "材料明确把低层工程 ownership 列为较弱项，尚无系统设计深度或个人工程交付范围证据。",
+          "resume_case": "可以形成技术理解与产品协调结合的叙事，但不能仅凭学历或项目存在宣称深度工程 ownership。",
+          "market_test": "需要以具体 Technical PM JD 区分其偏产品协调、系统设计还是工程交付，并逐项核对证据。",
+          "constraint_status": "unknown"
+        },
+        {
+          "name": "Quant",
+          "role_family": "quant-ai",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "assessment": {
+            "evidence_strength": "medium",
+            "continuity": "medium",
+            "defensibility": "low",
+            "role_relevance": "medium",
+            "goal_fit": "medium",
+            "gap_cost": "unknown",
+            "optionality": "medium",
+            "market_testability": "medium"
+          },
+          "strongest_proof": "数学与应用数学本科背景，以及量化 Skill、开源 Skills 和 PandaAI 量化比赛经历。",
+          "largest_gap": "专业量化研究深度被明确标为未知，且没有策略、回测、实盘、排名或研究结果证据。",
+          "resume_case": "可陈述量化相关探索和参赛经历，但当前材料不足以把它扩大为专业量化研究能力或比赛成绩。",
+          "market_test": "需要先用具体 Quant JD 和可检查的研究产物确认要求与深度；当前没有足够材料判断补齐成本。",
+          "constraint_status": "unknown"
+        }
+      ]
+    }
+  }
+}

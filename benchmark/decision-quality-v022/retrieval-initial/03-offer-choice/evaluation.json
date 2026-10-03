@@ -1,0 +1,35 @@
+{
+  "case_id": "03-offer-choice",
+  "status": "BLOCKED_BY_HOST",
+  "skill_reads_requested": 1,
+  "skill_reads_succeeded": 0,
+  "requested_references": [],
+  "successfully_read_references": [],
+  "reference_count": 0,
+  "irrelevant_references_loaded": false,
+  "error": "exec_command failed before process creation: rejected: blocked by policy",
+  "attempt": {
+    "name": "host-retrieval-03-offer-choice",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "started_at": "2026-10-03T15:21:27.726008+00:00",
+    "timeout": 180,
+    "tools": "installed Skill read-only shell",
+    "prompt_sha256": "d65e36666a32bea324156ef8222acec3d9bbf2b498d1393a96c3eab4f83d202d",
+    "commands": [],
+    "usage": {
+      "input_tokens": 38889,
+      "cached_input_tokens": 18944,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 710,
+      "reasoning_output_tokens": 308
+    },
+    "status": "VALID",
+    "error": [],
+    "completed_at": "2026-10-03T15:21:50.319216+00:00",
+    "seconds": 22.59,
+    "raw_sha256": "17cc8789121e448472b76bc7b006dd97eea8524b68a7bf0b9d6c9e4b2b1af65d"
+  },
+  "stderr_original_sha256": "5a0078de1b5f2c85e4d9dd346664100702082131dbed309c5f12bd027e353a1e",
+  "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+}

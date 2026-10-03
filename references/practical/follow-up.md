@@ -13,3 +13,9 @@ Draft: “您好，想确认一下本次面试的后续进度。如需我补充�
 Codex drafts; the human sends. After one follow-up, observe about three more working
 days, then lower opportunity investment and continue other applications. Stop
 repeated messages or contact if asked. Silence is never a rejection record.
+
+Compile a usable message from known stage, last event, tone and promised date.
+If working days are unknown, prepare the message with a conditional send time;
+do not invent holidays or claim it was sent. Keep message, observation window and
+stop condition together. no_contact means an explicit request not to contact,
+not the absence of an HR reply. Avoid implying repeated chasing when none occurred.

@@ -89,3 +89,15 @@ this decision; market needs a date, salary a region/date/source, policy a curren
 authority check. The helper marks missing or expired time bounds CHECK_REQUIRED /
 STALE; its default age bounds are conservative heuristics, not laws. Retrieval never
 makes stale assertions current. Unknown chronology is never silently refreshed.
+
+## v0.2.2 decision profiles
+
+Optional mode-specific direction, interview, recruiting.communication, Offer
+priorities/critical_unknowns and ownership stages are described in
+[Decision Quality contracts](DECISION_QUALITY.md). Preserve explicit reported
+history as FACT/self_reported; its verification, scope and depth may separately
+remain UNKNOWN. The extractor supplies an ID/type-only context_sources registry
+from original sources, including sources represented by UNKNOWN statements.
+The host cannot inject this registry or facts/inferences/unknowns in situation.
+Profiles reference existing source IDs; binding alone does not verify a host
+interpretation. No raw source text is added to persisted decision memory.

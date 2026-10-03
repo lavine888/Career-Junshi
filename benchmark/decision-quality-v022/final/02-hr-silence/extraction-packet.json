@@ -1,0 +1,159 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "text": "上周五终面结束，现在已经周四了，HR 一直没联系。\n\n终面结束的时候面试官说：\n“后续让 HR 跟你沟通。”\n\n我感觉应该是凉了。\n\n我要不要现在问 HR？\n会不会显得特别急？"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "user_report",
+      "text": "Friday 17:30\nFinal interview completed\n\nInterviewer:\n“好的，今天就先到这里，后续让 HR 跟你沟通。”\n\nThursday 10:00\nNo further message yet"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "text": "HR 在终面前回复速度通常是当天或第二天。\n\nHR 没有承诺具体反馈日期。\n\n用户从未 follow up。"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "用户报告终面于上周五 17:30 完成",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "Friday 17:30\nFinal interview completed",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户报告截至周四 10:00 仍未收到进一步消息",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "Thursday 10:00\nNo further message yet",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "据用户转述，面试官在终面结束时表示后续由 HR 沟通",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "“好的，今天就先到这里，后续让 HR 跟你沟通。”",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "用户感觉这次流程可能已经没有希望",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我感觉应该是凉了。",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown"
+    },
+    {
+      "id": "F5",
+      "text": "用户当前要决定是否现在联系 HR，并担心跟进会显得特别着急",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我要不要现在问 HR？\n会不会显得特别急？",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户报告 HR 在终面前通常会在当天或第二天回复",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "HR 在终面前回复速度通常是当天或第二天。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "HR 没有承诺具体反馈日期",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "HR 没有承诺具体反馈日期。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户尚未进行过 follow up",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "用户从未 follow up。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "当前材料无法确认终面结果是通过、拒绝、offer 或 freeze",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "No further message yet",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "recruiting_signal",
+      "modality": "unknown"
+    }
+  ],
+  "situation": {
+    "mode": "recruiting",
+    "summary": "用户报告上周五 17:30 完成终面，截至周四 10:00 尚未收到 HR 的进一步消息；HR 未承诺反馈日期，当前流程结果未知。",
+    "goal": "判断是否现在首次跟进 HR，以及跟进是否会显得过于着急。",
+    "claims": [],
+    "metadata": {
+      "mode": "recruiting",
+      "role_family": "unknown",
+      "stage": "post-interview",
+      "situation_type": "follow-up",
+      "risk_tags": [
+        "timing",
+        "feedback"
+      ],
+      "situation_tags": [
+        "timing",
+        "feedback"
+      ]
+    },
+    "recruiting": {
+      "status": "waiting",
+      "working_days": null,
+      "promised_date": "",
+      "promised_date_passed": false,
+      "followups": 0,
+      "no_contact": false,
+      "feedback": "",
+      "communication": {
+        "stage": "final",
+        "tone": "neutral",
+        "last_event": "终面结束时面试官表示后续由 HR 沟通；截至周四 10:00 未收到进一步消息。",
+        "source_ids": [
+          "S1",
+          "S2"
+        ]
+      }
+    }
+  }
+}

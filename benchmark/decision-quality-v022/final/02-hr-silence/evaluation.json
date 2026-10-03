@@ -1,0 +1,32 @@
+{
+  "case_id": "02-hr-silence",
+  "origin": "synthetic",
+  "reviewer": "operator semantic review, not independent model blind grading",
+  "reviewed_at": "2026-10-03T15:20:06.894342+00:00",
+  "before": "PARTIAL",
+  "after": "PASS",
+  "levels": {
+    "extraction": "PASS",
+    "structured_decision": "PASS",
+    "host": "PASS"
+  },
+  "properties": {
+    "actions_bounded": true,
+    "no_verified_claims": true,
+    "decision_sufficiency_present": true,
+    "raw_source_identity": true,
+    "follow_up_artifact": true,
+    "status_preserved": true
+  },
+  "host_exact_quotes": [
+    "如果周一到周三都是该公司的正常工作日",
+    "若中间有假期，就等到终面后的第 3 个实际工作日再发。",
+    "您好，想跟进一下上周五终面的后续进展。",
+    "发出后观察约 3 个工作日，不重复催。",
+    "沉默仍不记作正式拒绝。"
+  ],
+  "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+  "diagnostic": "Usable conditional timing, draft, window and stop. No fabricated working-day count or passing/rejection status.",
+  "remaining_issue": "Calendar remains unknown; send time is conditional. General social reassurance is stronger than a verified reaction.",
+  "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+}

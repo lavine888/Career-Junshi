@@ -131,3 +131,11 @@ A narrated correction
 caps the current claim at SELF_REPORTED (or PLANNED). Keep the new source and weaker wording; request independent
 evidence if upgrading later. If no current claim record exists, the correction holds
 the new claim for review; it does not silently create a new profile record.
+
+## Decision Quality v0.2.2
+
+Optional [decision profiles](DECISION_QUALITY.md) add sufficient/conditional/blocked
+moves, job direction hierarchies, qualitative Offer preferences and reversal
+checks, contextual follow-up drafts and ownership defense packs. Existing
+metadata, numerical weighting, consent, calibration and append-only history
+contracts remain valid. No universal scoring engine or new mode is introduced.

@@ -1,0 +1,4 @@
+* -text
+final/*/host-*.md whitespace=-blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+retrieval/*/response.redacted.md whitespace=-blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+retrieval-initial/*/response.redacted.md whitespace=-blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,1 @@
+2026-10-03T15:21:18.281780Z ERROR codex_core::tools::router: error=exec_command failed: CreateProcess { message: "Rejected(\"`\"[HOST_POWERSHELL]\" -NoProfile -Command \"Get-Content -LiteralPath '[INSTALLED_SKILL]\SKILL.md' -Raw\"` rejected: blocked by policy\")" }

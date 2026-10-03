@@ -1,0 +1,23 @@
+{
+  "situation_keys": "mode, summary, goal, claims; optional deadline, metadata, predictions and only matching mode's job/recruiting/offer/direction/interview/ownership. facts/inferences/unknowns/context_sources derive from statements and sources; never supply these in situation.",
+  "direction_job_only": {
+    "candidates": "Up to 6 candidate roles actually contemplated by user, labels <=45 chars, mapped to existing role families. Each exact keys: name, role_family, source_ids (existing IDs), assessment, strongest_proof, largest_gap, resume_case, market_test (texts <=400), constraint_status(pass/fail/unknown). assessment exact 8 keys evidence_strength, continuity, defensibility, role_relevance, goal_fit, gap_cost, optionality, market_testability: each unknown/low/medium/high. These are disclosed host qualitative interpretations, not verified scores. Evaluate supplied evidence and one-resume defensibility; don't give every candidate identical generic values or assume a universal role order. Unprovided facts remain unknown; reported experiences are usable but not independently verified."
+  },
+  "offer_new_optional_keys": {
+    "priorities": "allowed dimension -> high/medium/low qualitative goal interpretation, no numeric weight invention",
+    "source_ids": "existing source IDs justifying stated goal interpretation",
+    "critical_unknowns": "Up to8 objects: unknown,option(existing exact offer name or empty for shared),priority(decisive/important/confidence_only),why_it_matters,how_to_verify (texts<=400),reversal_condition(text<=240),source_ids(existing IDs). Only decision relevant uncertainties; no universal runway threshold."
+  },
+  "interview_optional": {
+    "available_hours": "provided numeric 0-72, omit if absent",
+    "signals": "Up to5 {topic(existing TAGS),basis(sourced description<=160),source_ids(existing IDs),kind(observed_signal/risk_hypothesis)}. A prior question is observed_signal for topic attention, NOT proof of weakness. Feelings are INFERENCE."
+  },
+  "recruiting_additional_key": {
+    "communication": "Optional {stage(application/interview/final/unknown),tone(formal/neutral/warm),last_event(sourced timeline<=120),source_ids(existing IDs)}. Calendar unknown => working_days:null. no_contact means explicit contact prohibition, NOT silence."
+  },
+  "ownership_positioning_only": {
+    "project_stage": "unknown/planned/demo/backtest/completed/production, independently justified overall stage",
+    "contributions": "Up to20 {claim_id(existing),claim_stage,user_contribution_stage}, both use same stages incl unknown. Completion of reported product leadership does not prove overall project production or personal engineering completion. Do not infer these three from old Claim.stage. Preserve self-reported product leadership separately from unsafe engineering authorship."
+  },
+  "self_reported_history": "Explicit statements about own participation/experience are FACT/self_reported. Verification, ranking, professional depth may be separate UNKNOWN; never demote the explicit reported participation itself to UNKNOWN. Claims remain SELF_REPORTED, documents existing are not checked receipts."
+}

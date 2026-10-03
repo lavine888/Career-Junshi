@@ -1,0 +1,37 @@
+{
+  "frozen_semantic_integrity": true,
+  "cases": [
+    {
+      "case_id": "01-ai-pm-interview",
+      "source_identity": true,
+      "property_pass": true,
+      "frozen_operator_grade": "PASS"
+    },
+    {
+      "case_id": "02-hr-silence",
+      "source_identity": true,
+      "property_pass": true,
+      "frozen_operator_grade": "PASS"
+    },
+    {
+      "case_id": "03-offer-choice",
+      "source_identity": true,
+      "property_pass": true,
+      "frozen_operator_grade": "PARTIAL"
+    },
+    {
+      "case_id": "04-career-direction",
+      "source_identity": true,
+      "property_pass": true,
+      "frozen_operator_grade": "PASS"
+    },
+    {
+      "case_id": "05-ownership-claim",
+      "source_identity": true,
+      "property_pass": true,
+      "frozen_operator_grade": "PARTIAL"
+    }
+  ],
+  "regressions": [],
+  "boundary": "Properties and retained quote integrity only; semantic grades are frozen operator judgments, not automatically reassigned."
+}

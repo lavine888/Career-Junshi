@@ -1,0 +1,180 @@
+{
+  "results": [
+    {
+      "case_id": "01-ai-pm-interview",
+      "status": "BLOCKED_BY_HOST",
+      "skill_reads_requested": 1,
+      "skill_reads_succeeded": 0,
+      "requested_references": [],
+      "successfully_read_references": [],
+      "reference_count": 0,
+      "irrelevant_references_loaded": false,
+      "error": "exec_command failed before process creation: rejected: blocked by policy",
+      "attempt": {
+        "name": "host-retrieval-final-01-ai-pm-interview",
+        "model": "gpt-5.6-sol",
+        "effort": "high",
+        "started_at": "2026-10-03T15:35:11.940494+00:00",
+        "timeout": 180,
+        "tools": "installed Skill read-only shell",
+        "prompt_sha256": "989772847f23f3509f0a1ac63a7bf5332461b5dddd6f675ec318152b435d687c",
+        "commands": [],
+        "usage": {
+          "input_tokens": 38574,
+          "cached_input_tokens": 18816,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 695,
+          "reasoning_output_tokens": 299
+        },
+        "status": "VALID",
+        "error": [],
+        "completed_at": "2026-10-03T15:35:45.416737+00:00",
+        "seconds": 33.48,
+        "raw_sha256": "269ac2865cf63b206367f694138fd91051f51eb0b2687b7b6a0cfc8b30b4da3a"
+      },
+      "stderr_original_sha256": "a568e950a74783eeb4244ecb102f9235477706a68bdfe9f90bfcb123fc9ad664",
+      "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+    },
+    {
+      "case_id": "02-hr-silence",
+      "status": "BLOCKED_BY_HOST",
+      "skill_reads_requested": 1,
+      "skill_reads_succeeded": 0,
+      "requested_references": [],
+      "successfully_read_references": [],
+      "reference_count": 0,
+      "irrelevant_references_loaded": false,
+      "error": "exec_command failed before process creation: rejected: blocked by policy",
+      "attempt": {
+        "name": "host-retrieval-final-02-hr-silence",
+        "model": "gpt-5.6-sol",
+        "effort": "high",
+        "started_at": "2026-10-03T15:35:11.936495+00:00",
+        "timeout": 180,
+        "tools": "installed Skill read-only shell",
+        "prompt_sha256": "f7f8608f8cb69f937a840e27937289a789019f137727aa9c35cc3a0d258a2d5f",
+        "commands": [],
+        "usage": {
+          "input_tokens": 38271,
+          "cached_input_tokens": 18560,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 817,
+          "reasoning_output_tokens": 162
+        },
+        "status": "VALID",
+        "error": [],
+        "completed_at": "2026-10-03T15:35:47.219402+00:00",
+        "seconds": 35.28,
+        "raw_sha256": "79bc0cc52f432e8f61e61c5db907674f656bc0533213a73fc929fe59619379e6"
+      },
+      "stderr_original_sha256": "f5740c01d97fe6e4a1e359e6d0fafff51be8f838a47f869e0bc92f5d5fae9cc8",
+      "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+    },
+    {
+      "case_id": "03-offer-choice",
+      "status": "BLOCKED_BY_HOST",
+      "skill_reads_requested": 1,
+      "skill_reads_succeeded": 0,
+      "requested_references": [],
+      "successfully_read_references": [],
+      "reference_count": 0,
+      "irrelevant_references_loaded": false,
+      "error": "exec_command failed before process creation: rejected: blocked by policy",
+      "attempt": {
+        "name": "host-retrieval-final-03-offer-choice",
+        "model": "gpt-5.6-sol",
+        "effort": "high",
+        "started_at": "2026-10-03T15:35:46.946634+00:00",
+        "timeout": 180,
+        "tools": "installed Skill read-only shell",
+        "prompt_sha256": "c69c1a89296092720b3b0c3f58d566a419fa4e0f4e8e7323fb797de7ae5528dd",
+        "commands": [],
+        "usage": {
+          "input_tokens": 36562,
+          "cached_input_tokens": 17792,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 674,
+          "reasoning_output_tokens": 256
+        },
+        "status": "VALID",
+        "error": [],
+        "completed_at": "2026-10-03T15:36:11.868207+00:00",
+        "seconds": 24.92,
+        "raw_sha256": "517aaca7723f32765ce6f38edf83c42590a7ef0c9653de2b775d2cfe4ce47424"
+      },
+      "stderr_original_sha256": "59f0aed2024330cc89a3e0855c01c338c2b754fae6da3fc2b3320eb3aa5bdac5",
+      "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+    },
+    {
+      "case_id": "04-career-direction",
+      "status": "BLOCKED_BY_HOST",
+      "skill_reads_requested": 1,
+      "skill_reads_succeeded": 0,
+      "requested_references": [],
+      "successfully_read_references": [],
+      "reference_count": 0,
+      "irrelevant_references_loaded": false,
+      "error": "exec_command failed before process creation: rejected: blocked by policy",
+      "attempt": {
+        "name": "host-retrieval-final-04-career-direction",
+        "model": "gpt-5.6-sol",
+        "effort": "high",
+        "started_at": "2026-10-03T15:35:48.929574+00:00",
+        "timeout": 180,
+        "tools": "installed Skill read-only shell",
+        "prompt_sha256": "986de641d2855ac808b6985169260ab1864beaabe4ff4307e237882e51ffd971",
+        "commands": [],
+        "usage": {
+          "input_tokens": 36329,
+          "cached_input_tokens": 17664,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 742,
+          "reasoning_output_tokens": 342
+        },
+        "status": "VALID",
+        "error": [],
+        "completed_at": "2026-10-03T15:36:18.452573+00:00",
+        "seconds": 29.53,
+        "raw_sha256": "7594308cd34c90a21182c083b309a29e8094a92455364fcde51a009e5ca619fc"
+      },
+      "stderr_original_sha256": "6d725fb3444cfe5eb5f6f9acd8e89b5c58e23be73a4cab372baf6359c1641e49",
+      "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+    },
+    {
+      "case_id": "05-ownership-claim",
+      "status": "BLOCKED_BY_HOST",
+      "skill_reads_requested": 1,
+      "skill_reads_succeeded": 0,
+      "requested_references": [],
+      "successfully_read_references": [],
+      "reference_count": 0,
+      "irrelevant_references_loaded": false,
+      "error": "exec_command failed before process creation: rejected: blocked by policy",
+      "attempt": {
+        "name": "host-retrieval-final-05-ownership-claim",
+        "model": "gpt-5.6-sol",
+        "effort": "high",
+        "started_at": "2026-10-03T15:36:13.493201+00:00",
+        "timeout": 180,
+        "tools": "installed Skill read-only shell",
+        "prompt_sha256": "fd58f921aa68854d4462b646bc0817c403f37373ee5ea57cdbdf0ed1fbdac899",
+        "commands": [],
+        "usage": {
+          "input_tokens": 38552,
+          "cached_input_tokens": 25728,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 735,
+          "reasoning_output_tokens": 273
+        },
+        "status": "VALID",
+        "error": [],
+        "completed_at": "2026-10-03T15:36:44.628800+00:00",
+        "seconds": 31.12,
+        "raw_sha256": "fb0d9bb673e7d602e2b94bf5d1bcb0ebf24a852db88d49e8ab379782d21e110f"
+      },
+      "stderr_original_sha256": "5be4ef30a0a0cff69b7f87402afcb2fac9c56ff205b61e525e8a605c8d9c255f",
+      "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+    }
+  ],
+  "semantic_scope": "Excluded. Frozen semantic outputs unchanged."
+}

@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-03T15:45:13.930763+00:00",
+  "scope": "Final target checkout after documentation packaging synchronization",
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -q",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/benchmark.py run",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/validate_skill.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python benchmark/mock-career-cases/replay.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python benchmark/decision-quality-v022/replay.py",
+      "exit_code": 0
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 # Tonight's interview preparation
 
-Start: “今晚先守住最危险的项目表述和个人贡献，再准备一个失败与取舍故事。”
+Start with the current priority and relevant observed signals; do not declare a
+technical weakness from the user's feeling alone. Unknown interviewer identity
+does not prevent choosing bounded project defense based on previous probing and JD.
 Adapt to the actual resume and JD; do not use this line if another bottleneck is evident.
 
 1. Audit the highest-risk sentence and produce a one-page risk map with sources.
@@ -12,3 +14,7 @@ Codex can create the risk map and drill from supplied materials. The human pract
 and attends. Use a bounded block (for example two hours) and preserve sleep; no new
 large project tonight. Observe which claim was challenged and exact feedback tomorrow.
 If the evidence cannot be defended, lower wording instead of rehearsing a bluff.
+
+Maximum three primary actions, with timing/practice/metrics as substeps, not six
+separate tasks. Strong risk wording requires direct feedback; otherwise call it
+a preparation hypothesis and retain product leadership while clarifying ownership.

@@ -1,0 +1,32 @@
+{
+  "case_id": "03-offer-choice",
+  "origin": "synthetic",
+  "reviewer": "operator semantic review, not independent model blind grading",
+  "reviewed_at": "2026-10-03T15:20:06.912373+00:00",
+  "before": "PARTIAL",
+  "after": "PARTIAL",
+  "levels": {
+    "extraction": "PASS",
+    "structured_decision": "PASS",
+    "host": "PARTIAL"
+  },
+  "properties": {
+    "actions_bounded": true,
+    "no_verified_claims": true,
+    "decision_sufficiency_present": true,
+    "raw_source_identity": true,
+    "conditional_preference": true,
+    "top_unknowns_bounded": true,
+    "reversal_conditions": true
+  },
+  "host_exact_quotes": [
+    "**当前条件性首选 B。**",
+    "目前只是口头表述",
+    "## 接受前只核实三件事",
+    "若两项以上仍含糊，选 A"
+  ],
+  "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+  "diagnostic": "Compiler gives sourced qualitative preference and three reversal checks, no invented weights. Host also recommends conditionally and respects currency differences.",
+  "remaining_issue": "Host invents a two-unresolved-items fallback threshold without marking it adjustable or user supplied; manager working style is only partially explored.",
+  "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+}

@@ -1,0 +1,610 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "text": "现在手上两个 Offer，我挺纠结。\n\nA 是深圳某大厂 AI 产品经理，\n月薪 28k × 16，\n团队成熟，\n做 AI 搜索产品，\n但我进去应该负责比较细的一个模块。\n\nB 是香港一家 25 人的 AI startup，\n月薪 HKD 35k × 12，\nTitle 是 AI Product Engineer。\n\nFounder 说进去以后从产品到 Agent workflow 都可以做，\n甚至直接跟客户。\n\n我以后可能还是想创业，\n但大厂品牌也挺重要。\n\n你觉得选哪个？"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "user_report",
+      "text": "entrepreneurship: high\nai_native_product: high\nbrand: medium\ncompensation: medium\nlocation: Shenzhen_or_HongKong\nstability: medium\ntechnical_growth: high"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "offer",
+      "text": "company_type: large_tech\nlocation: Shenzhen\nrole: AI Product Manager\n\ncompensation:\n  monthly: RMB 28000\n  months: 16\n\nlearning: 3.5\nownership: 2.5\nmanager_quality: unknown\ntechnical_depth: 3\nbrand_signal: 5\nstability: 4"
+    },
+    {
+      "source_id": "S4",
+      "source_type": "offer",
+      "text": "company_type: startup\nlocation: Hong_Kong\nrole: AI Product Engineer\n\ncompensation:\n  monthly: HKD 35000\n  months: 12\n\nlearning: 4.5\nownership: 4.5\nmanager_quality: unknown\ntechnical_depth: 4\nbrand_signal: 2.5\nstability: 2"
+    },
+    {
+      "source_id": "S5",
+      "source_type": "user_report",
+      "text": "“你来了什么都能做，客户也可以直接见。”"
+    },
+    {
+      "source_id": "S6",
+      "source_type": "user_report",
+      "text": "written role scope\nrunway\nfinancing state\nreal customer volume\nmanager quality\nworkload"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "The user reports currently holding two offers.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "现在手上两个 Offer",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "The user feels conflicted about the choice.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我挺纠结",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "The user describes A as an AI Product Manager role at a large technology company in Shenzhen.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "A 是深圳某大厂 AI 产品经理",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "The user describes A's team as mature.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "团队成熟",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "The user reports that A works on an AI search product.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "做 AI 搜索产品",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "The user expects, but does not confirm, that A would assign a relatively narrow module.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "但我进去应该负责比较细的一个模块",
+      "epistemic": "UNKNOWN",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "unknown"
+    },
+    {
+      "id": "F7",
+      "text": "The user describes B as a 25-person AI startup in Hong Kong.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "B 是香港一家 25 人的 AI startup",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "The user reports B's title as AI Product Engineer.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "Title 是 AI Product Engineer",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "The user reports that B's founder described prospective scope spanning product, Agent workflow, and direct customer contact.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "Founder 说进去以后从产品到 Agent workflow 都可以做，\n甚至直接跟客户。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "The user says entrepreneurship may be a future goal.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我以后可能还是想创业",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F11",
+      "text": "The user says large-company brand is also important.",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "大厂品牌也挺重要",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F12",
+      "text": "Entrepreneurship is recorded as a high preference.",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "entrepreneurship: high",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F13",
+      "text": "AI-native product work is recorded as a high preference.",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "ai_native_product: high",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F14",
+      "text": "Brand is recorded as a medium preference.",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "brand: medium",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F15",
+      "text": "Compensation is recorded as a medium preference.",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "compensation: medium",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F16",
+      "text": "The location preference names Shenzhen or Hong Kong without stating a hard constraint.",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "location: Shenzhen_or_HongKong",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F17",
+      "text": "Stability is recorded as a medium preference.",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "stability: medium",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F18",
+      "text": "Technical growth is recorded as a high preference.",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "technical_growth: high",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F19",
+      "text": "The Offer A material identifies a large-tech AI Product Manager role in Shenzhen.",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "company_type: large_tech\nlocation: Shenzhen\nrole: AI Product Manager",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F20",
+      "text": "Offer A lists monthly compensation of RMB 28,000 for 16 months.",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "compensation:\n  monthly: RMB 28000\n  months: 16",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F21",
+      "text": "Offer A provides learning 3.5 and ownership 2.5 ratings.",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "learning: 3.5\nownership: 2.5",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F22",
+      "text": "Offer A's manager quality is unknown.",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "manager_quality: unknown",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F23",
+      "text": "Offer A provides technical depth 3, brand signal 5, and stability 4 ratings.",
+      "source_id": "S3",
+      "source_type": "offer",
+      "source_span": "technical_depth: 3\nbrand_signal: 5\nstability: 4",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F24",
+      "text": "The Offer B material identifies a startup AI Product Engineer role in Hong Kong.",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "company_type: startup\nlocation: Hong_Kong\nrole: AI Product Engineer",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F25",
+      "text": "Offer B lists monthly compensation of HKD 35,000 for 12 months.",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "compensation:\n  monthly: HKD 35000\n  months: 12",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F26",
+      "text": "Offer B provides learning 4.5 and ownership 4.5 ratings.",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "learning: 4.5\nownership: 4.5",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F27",
+      "text": "Offer B's manager quality is unknown.",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "manager_quality: unknown",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F28",
+      "text": "Offer B provides technical depth 4, brand signal 2.5, and stability 2 ratings.",
+      "source_id": "S4",
+      "source_type": "offer",
+      "source_span": "technical_depth: 4\nbrand_signal: 2.5\nstability: 2",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F29",
+      "text": "The user reports the founder's statement that the user could do everything and meet customers directly; this is a reported verbal statement, not verified future scope.",
+      "source_id": "S5",
+      "source_type": "user_report",
+      "source_span": "“你来了什么都能做，客户也可以直接见。”",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F30",
+      "text": "The supplied materials identify written role scope, runway, financing state, real customer volume, manager quality, and workload as missing information.",
+      "source_id": "S6",
+      "source_type": "user_report",
+      "source_span": "written role scope\nrunway\nfinancing state\nreal customer volume\nmanager quality\nworkload",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "situation": {
+    "mode": "offer",
+    "summary": "Compare two current offers while preserving uncertainty about actual scope, startup fundamentals, manager quality, and workload.",
+    "goal": "Choose between Offer A and Offer B in light of entrepreneurship, AI-native product work, technical growth, brand, compensation, location, and stability preferences.",
+    "claims": [
+      {
+        "id": "C1",
+        "claim": "Offer A is reported as a Shenzhen large-tech AI Product Manager role paying RMB 28,000 × 16, on a mature AI search team, with expected responsibility for a relatively narrow module.",
+        "confidence": "SUPPORTED",
+        "stage": "planned",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "Prospective responsibility is reported as a relatively narrow module; no completed personal contribution or engineering authorship is asserted."
+        },
+        "evidence": [
+          {
+            "source": "S1",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "User reports the team, product area, compensation, and expected narrow module."
+          },
+          {
+            "source": "S3",
+            "kind": "direct",
+            "supports": [
+              "claim"
+            ],
+            "summary": "Offer material lists company type, location, role, and compensation."
+          }
+        ],
+        "risk": [
+          "Actual module scope is expressed as expected rather than confirmed.",
+          "Manager quality is unknown."
+        ]
+      },
+      {
+        "id": "C2",
+        "claim": "Offer B is reported as a Hong Kong 25-person AI startup role titled AI Product Engineer, paying HKD 35,000 × 12.",
+        "confidence": "SUPPORTED",
+        "stage": "planned",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "The title and prospective role are reported; actual product leadership, engineering authorship, and delivered scope are not established."
+        },
+        "evidence": [
+          {
+            "source": "S1",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "User reports startup size, location, title, and compensation."
+          },
+          {
+            "source": "S4",
+            "kind": "direct",
+            "supports": [
+              "claim"
+            ],
+            "summary": "Offer material lists startup type, Hong Kong location, role, and compensation."
+          }
+        ],
+        "risk": [
+          "Runway, financing state, real customer volume, manager quality, and workload are missing."
+        ]
+      },
+      {
+        "id": "C3",
+        "claim": "B's founder reportedly said the prospective role could cover product through Agent workflow and include direct customer contact.",
+        "confidence": "SELF_REPORTED",
+        "stage": "planned",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "This is a verbal description of possible future scope, not evidence of completed personal leadership or engineering authorship."
+        },
+        "evidence": [
+          {
+            "source": "S1",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "User recounts the founder's description of broad scope and customer contact."
+          },
+          {
+            "source": "S5",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "Reported founder quote says the user could do everything and meet customers directly."
+          }
+        ],
+        "risk": [
+          "Written role scope is missing.",
+          "The verbal statement does not establish actual authority, engineering ownership, production responsibility, or customer volume."
+        ]
+      }
+    ],
+    "metadata": {
+      "mode": "offer",
+      "role_family": "unknown",
+      "stage": "decision",
+      "situation_type": "offer-choice",
+      "risk_tags": [
+        "constraints",
+        "direction",
+        "manager",
+        "ownership",
+        "salary"
+      ],
+      "situation_tags": [
+        "constraints",
+        "direction",
+        "manager",
+        "ownership",
+        "salary"
+      ]
+    },
+    "offer": {
+      "weights": {},
+      "priorities": {
+        "career_direction": "high",
+        "optionality": "high",
+        "technical_depth": "high",
+        "brand": "medium",
+        "compensation": "medium"
+      },
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "constraints": [],
+      "options": [
+        {
+          "name": "A",
+          "constraint_status": "unknown",
+          "ratings": {
+            "learning": 3.5,
+            "ownership": 2.5,
+            "technical_depth": 3,
+            "brand": 5
+          }
+        },
+        {
+          "name": "B",
+          "constraint_status": "unknown",
+          "ratings": {
+            "learning": 4.5,
+            "ownership": 4.5,
+            "technical_depth": 4,
+            "brand": 2.5
+          }
+        }
+      ],
+      "critical_unknowns": [
+        {
+          "unknown": "A's actual module scope and decision authority",
+          "option": "A",
+          "priority": "important",
+          "why_it_matters": "The user currently describes the narrow scope only as an expectation, so actual ownership and learning exposure remain uncertain.",
+          "how_to_verify": "Obtain a concrete role scope, decision rights, interfaces, and near-term deliverables from the hiring manager.",
+          "reversal_condition": "Verified scope materially differs from the expected narrow-module description.",
+          "source_ids": [
+            "S1"
+          ]
+        },
+        {
+          "unknown": "B's written role scope",
+          "option": "B",
+          "priority": "decisive",
+          "why_it_matters": "The founder's broad verbal description does not establish actual product leadership, engineering authorship, or customer responsibility.",
+          "how_to_verify": "Request written responsibilities, decision rights, engineering expectations, customer duties, and ownership boundaries.",
+          "reversal_condition": "Written scope materially narrows or contradicts the founder's verbal statement.",
+          "source_ids": [
+            "S5",
+            "S6"
+          ]
+        },
+        {
+          "unknown": "B's runway",
+          "option": "B",
+          "priority": "decisive",
+          "why_it_matters": "Runway is explicitly missing and affects the downside of joining a 25-person startup.",
+          "how_to_verify": "Ask for the current runway basis and the assumptions used to calculate it.",
+          "reversal_condition": "Verified runway changes the startup downside assessment materially.",
+          "source_ids": [
+            "S1",
+            "S6"
+          ]
+        },
+        {
+          "unknown": "B's financing state",
+          "option": "B",
+          "priority": "important",
+          "why_it_matters": "Financing state is explicitly missing and may affect role continuity and company plans.",
+          "how_to_verify": "Ask what financing is closed, pending, or merely planned and what documentation can be shared.",
+          "reversal_condition": "Confirmed financing status materially changes the startup risk picture.",
+          "source_ids": [
+            "S6"
+          ]
+        },
+        {
+          "unknown": "B's real customer volume",
+          "option": "B",
+          "priority": "important",
+          "why_it_matters": "Direct customer access is promised, but actual customer volume is missing.",
+          "how_to_verify": "Ask for the number and type of active customers the role would actually interact with, without treating pipeline as live usage.",
+          "reversal_condition": "Verified customer access materially differs from the verbal promise.",
+          "source_ids": [
+            "S5",
+            "S6"
+          ]
+        },
+        {
+          "unknown": "Manager quality for both offers",
+          "option": "",
+          "priority": "decisive",
+          "why_it_matters": "Both offer records mark manager quality as unknown, and the user values growth and future optionality.",
+          "how_to_verify": "Speak with each direct manager about feedback cadence, decision rights, expectations, and examples of team-member growth.",
+          "reversal_condition": "A material manager-quality difference is established between the options.",
+          "source_ids": [
+            "S3",
+            "S4",
+            "S6"
+          ]
+        },
+        {
+          "unknown": "Workload expectations",
+          "option": "",
+          "priority": "important",
+          "why_it_matters": "Workload is explicitly missing and may affect the practical value of learning, compensation, and stability preferences.",
+          "how_to_verify": "Ask each side for normal and peak schedules, on-call or customer escalation duties, travel, and workload examples.",
+          "reversal_condition": "Verified workload differs materially between A and B.",
+          "source_ids": [
+            "S6"
+          ]
+        }
+      ]
+    }
+  }
+}

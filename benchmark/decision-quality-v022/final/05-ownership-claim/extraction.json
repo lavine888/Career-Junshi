@@ -1,0 +1,337 @@
+{
+  "mode": "positioning",
+  "summary": "判断当前简历的工程 ownership 表述能否保留，并区分真实的产品领导力与尚未确认的个人工程作者范围。",
+  "goal": "形成准确、可防守且不削弱真实产品领导力的项目表述。",
+  "claims": [
+    {
+      "id": "C1-product-leadership",
+      "claim": "担任该项目的产品负责人和项目负责人，负责产品定义、课程结构、Teacher 行为、流程与功能定义、功能优先级、团队协调、集成和验收。",
+      "confidence": "SELF_REPORTED",
+      "stage": "completed",
+      "ownership": {
+        "scope": "team",
+        "contribution": "产品与项目领导、课程和 Teacher 设计、功能决策、团队协调、集成及验收；不等同于独立完成主要工程组件。"
+      },
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "用户明确报告自己主要是产品负责人，并列出课程、Teacher、流程、功能定义和团队协调职责。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "已知上下文将用户列为 product_owner 和 project_lead，并列出产品、协调、集成和验收职责。"
+        }
+      ],
+      "risk": [
+        "职责和材料均为自述，尚未独立核验",
+        "产品主导不能自动扩展为主要工程组件的个人作者身份"
+      ]
+    },
+    {
+      "id": "C2-review-integration",
+      "claim": "进行代码 review，并参与一些集成调试。",
+      "confidence": "SELF_REPORTED",
+      "stage": "completed",
+      "ownership": {
+        "scope": "team",
+        "contribution": "代码 review 和部分集成调试；未声称独立完成 Runtime、Plugin、ASR/TTS 或部署。"
+      },
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户明确报告会 review，并参与一些集成调试。"
+        }
+      ],
+      "risk": [
+        "review 的范围和深度尚未说明",
+        "集成调试涉及的具体组件尚未说明"
+      ]
+    },
+    {
+      "id": "C3-current-resume-wording",
+      "claim": "当前简历声称：主导开发 AI-native Minecraft 英语教育平台，设计多 Agent 架构并完成 Runtime、Plugin、ASR/TTS 与云端部署。",
+      "confidence": "SELF_REPORTED",
+      "stage": "completed",
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "该句把产品主导、架构设计和多个工程组件的完成合并在一起，未区分用户贡献与其他贡献者的实现。"
+      },
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "用户逐字提供了当前简历表述，但随后说明自己主要是产品负责人，很多代码由实习生和 Agent 编写。"
+        }
+      ],
+      "risk": [
+        "可能被理解为用户亲自完成主要工程实现",
+        "Runtime、Plugin 和部署被列为其他贡献者的工作",
+        "ASR/TTS 的个人实现范围未说明",
+        "多 Agent 架构的个人设计深度尚未确认",
+        "Git 仓库存在不能证明全部主要组件由用户本人实现"
+      ]
+    }
+  ],
+  "metadata": {
+    "mode": "positioning",
+    "role_family": "ai-product",
+    "stage": "application",
+    "situation_type": "claim-defense",
+    "risk_tags": [
+      "ownership",
+      "evidence",
+      "architecture",
+      "production"
+    ],
+    "situation_tags": [
+      "ownership",
+      "evidence",
+      "architecture",
+      "product-judgment"
+    ]
+  },
+  "ownership": {
+    "project_stage": "unknown",
+    "contributions": [
+      {
+        "claim_id": "C1-product-leadership",
+        "claim_stage": "completed",
+        "user_contribution_stage": "completed"
+      },
+      {
+        "claim_id": "C2-review-integration",
+        "claim_stage": "completed",
+        "user_contribution_stage": "completed"
+      },
+      {
+        "claim_id": "C3-current-resume-wording",
+        "claim_stage": "completed",
+        "user_contribution_stage": "unknown"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "text": "当前简历使用了主导平台开发、设计多 Agent 架构并完成多个工程组件和云端部署的表述。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "“主导开发 AI-native Minecraft 英语教育平台，\n设计多 Agent 架构并完成 Runtime、Plugin、\nASR/TTS 与云端部署。”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "用户报告自己主要是产品负责人。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "但实际上我主要是产品负责人。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "用户报告自己负责课程、Teacher、流程、功能定义和团队协调。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "课程、Teacher、流程、功能定义、团队协调这些是我负责；",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "用户报告很多代码由实习生和 Agent 编写。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "代码很多是实习生和 Agent 写的，",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户报告自己会进行代码 review。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我会 review，",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户报告自己参与了一些集成调试。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "也参与一些集成调试。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户希望判断当前简历表述能否继续使用。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "这句话能不能继续这么写？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "已知上下文将用户角色列为产品负责人和项目负责人。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "user_role:\n  - product_owner\n  - project_lead",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "已知上下文列出的用户职责包括产品定义、课程结构、Teacher 行为、功能优先级、团队协调、集成和验收。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "user_responsibilities:\n  - product_definition\n  - curriculum_structure\n  - teacher_behavior\n  - feature_prioritization\n  - team_coordination\n  - integration\n  - acceptance",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "已知上下文将 Runtime 实现、Minecraft Plugin、部署和地图实现列为其他贡献者的工作。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "other_contributors:\n  - runtime_implementation\n  - minecraft_plugin\n  - deployment\n  - map_implementation",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "AI 编码工具由多名贡献者使用。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "user_report",
+      "source_span": "ai_coding_tools:\n  used_by_multiple_contributors",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F13",
+      "text": "用户报告现有材料包括 PRD、课程文档、Teacher 设计文档、项目计划、QA 文档、Git 仓库和交接文档；这些材料尚未被检查。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "PRD\ncourse docs\nTeacher design docs\nproject plans\nQA documents\nGit repo\nhandoff documents",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F14",
+      "text": "Git 或仓库存在不能证明用户亲自实现了所有主要组件。",
+      "source": "S4",
+      "source_id": "S4",
+      "source_type": "user_report",
+      "source_span": "Git / repo existence does not prove the user personally implemented all major components.",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F2",
+      "text": "用户感觉当前表述挺强。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "感觉挺强的。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "self_reported",
+      "kind": "feeling",
+      "modality": "observed"
+    }
+  ],
+  "unknowns": [
+    "用户本人对 Runtime、Minecraft Plugin 与部署的工程实现范围尚未确认。"
+  ],
+  "context_sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "user_report"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report"
+    },
+    {
+      "source_id": "S4",
+      "source_type": "user_report"
+    }
+  ]
+}

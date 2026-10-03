@@ -63,6 +63,10 @@ def enrich(d, value, *, now=None):
         "recruiting": ("假期、批量招聘、排期或审批也能解释延迟；无法从沉默辨认原因。", "继续其他机会，按承诺日期和实际工作日只跟进一次。", "收到明确结果、联系边界、承诺日期变化或竞争 Offer 截止时间时立即重评。"),
         "offer": ("高分来自当前主观权重；团队和经理信息误差可能使低分选项更合适。", "先核实最能改变排序的书面条款、经理与个人负责范围。", "关键条款、硬约束或权重变化导致首选改变时重新比较；接近评分不能当确定优势。"),
     }[mode]
+    counter = d.pop("quality_counterargument", counter)
+    alternative = d.pop("quality_alternative", alternative)
+    reconsider_if = d.pop("quality_reconsider_if", [reconsider])
+    decision_sources = d.pop("decision_source_ids", [])
     usable = []
     for fact in d["facts"]:
         if "freshness" in fact:
@@ -71,6 +75,8 @@ def enrich(d, value, *, now=None):
             if state["status"] not in {"CURRENT_SOURCE", "STABLE_HISTORY"}:
                 d["unknowns"].append({"label": "UNKNOWN", "text": f"来源 {fact['source']} 的当前有效性需复核（{state['status']}）"})
                 continue
+        if decision_sources and fact.get("source_id", fact["source"]) not in decision_sources:
+            continue
         usable.append({"source": fact["source"], "text": fact["text"],
                        "source_locator": fact.get("source_locator", "legacy:unlocated")})
     stale = [f for f in d["facts"] if f.get("freshness_assessment", {}).get("status") in {"STALE", "CHECK_REQUIRED"}]
@@ -87,12 +93,12 @@ def enrich(d, value, *, now=None):
                 a["description"] = "确认当前 JD / 名额有效后，再选择一小批岗位验证反馈"
     d["metadata"] = situation_metadata(value, d)
     d["recommendation"] = {"move": d["recommended_move"], "supporting_evidence": usable,
-                           "strongest_counterargument": counter, "reconsider_if": [reconsider],
+                           "strongest_counterargument": counter, "reconsider_if": reconsider_if,
                            "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"}
     d["decision_trace"] = {"situation": d["current_situation"], "evidence_used": usable,
                            "bottleneck": d["bottleneck"], "options_considered": [d["recommended_move"], alternative],
                            "chosen": d["recommended_move"],
                            "rejected_options": [{"option": alternative, "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"}],
-                           "why": d["why"], "reconsider_if": [reconsider]}
+                           "why": d["why"], "reconsider_if": reconsider_if}
     d["schema_version"] = "2"
     return d

@@ -1,0 +1,164 @@
+{
+  "run_id": "v022-decision-quality-20261003",
+  "baseline_commit": "eea9f0aca97b95e0fee06d7bbc0b761889c7dcb0",
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "results": [
+    {
+      "case_id": "01-ai-pm-interview",
+      "origin": "synthetic",
+      "reviewer": "operator semantic review, not independent model blind grading",
+      "reviewed_at": "2026-10-03T15:20:06.875832+00:00",
+      "before": "PARTIAL",
+      "after": "PASS",
+      "levels": {
+        "extraction": "PASS",
+        "structured_decision": "PASS",
+        "host": "PASS"
+      },
+      "properties": {
+        "actions_bounded": true,
+        "no_verified_claims": true,
+        "decision_sufficiency_present": true,
+        "raw_source_identity": true
+      },
+      "host_exact_quotes": [
+        "### 1. 用 3 小时做项目防守",
+        "### 2. 用 75 分钟准备一个主故事和三类行为题",
+        "### 3. 用 45 分钟无稿口述，之后停止补新知识",
+        "“我感觉技术答得一般”只是你的感受，不是招聘方已确认的能力缺口。"
+      ],
+      "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+      "diagnostic": "Three primary actions total five hours, grounded in prior questions/JD. Weakness is not asserted; implementation/planned controls separated.",
+      "remaining_issue": "Detailed substeps are lengthy; compiler topic preparation is less concrete than host prose.",
+      "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+    },
+    {
+      "case_id": "02-hr-silence",
+      "origin": "synthetic",
+      "reviewer": "operator semantic review, not independent model blind grading",
+      "reviewed_at": "2026-10-03T15:20:06.894342+00:00",
+      "before": "PARTIAL",
+      "after": "PASS",
+      "levels": {
+        "extraction": "PASS",
+        "structured_decision": "PASS",
+        "host": "PASS"
+      },
+      "properties": {
+        "actions_bounded": true,
+        "no_verified_claims": true,
+        "decision_sufficiency_present": true,
+        "raw_source_identity": true,
+        "follow_up_artifact": true,
+        "status_preserved": true
+      },
+      "host_exact_quotes": [
+        "如果周一到周三都是该公司的正常工作日",
+        "若中间有假期，就等到终面后的第 3 个实际工作日再发。",
+        "您好，想跟进一下上周五终面的后续进展。",
+        "发出后观察约 3 个工作日，不重复催。",
+        "沉默仍不记作正式拒绝。"
+      ],
+      "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+      "diagnostic": "Usable conditional timing, draft, window and stop. No fabricated working-day count or passing/rejection status.",
+      "remaining_issue": "Calendar remains unknown; send time is conditional. General social reassurance is stronger than a verified reaction.",
+      "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+    },
+    {
+      "case_id": "03-offer-choice",
+      "origin": "synthetic",
+      "reviewer": "operator semantic review, not independent model blind grading",
+      "reviewed_at": "2026-10-03T15:20:06.912373+00:00",
+      "before": "PARTIAL",
+      "after": "PARTIAL",
+      "levels": {
+        "extraction": "PASS",
+        "structured_decision": "PASS",
+        "host": "PARTIAL"
+      },
+      "properties": {
+        "actions_bounded": true,
+        "no_verified_claims": true,
+        "decision_sufficiency_present": true,
+        "raw_source_identity": true,
+        "conditional_preference": true,
+        "top_unknowns_bounded": true,
+        "reversal_conditions": true
+      },
+      "host_exact_quotes": [
+        "**当前条件性首选 B。**",
+        "目前只是口头表述",
+        "## 接受前只核实三件事",
+        "若两项以上仍含糊，选 A"
+      ],
+      "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+      "diagnostic": "Compiler gives sourced qualitative preference and three reversal checks, no invented weights. Host also recommends conditionally and respects currency differences.",
+      "remaining_issue": "Host invents a two-unresolved-items fallback threshold without marking it adjustable or user supplied; manager working style is only partially explored.",
+      "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+    },
+    {
+      "case_id": "04-career-direction",
+      "origin": "synthetic",
+      "reviewer": "operator semantic review, not independent model blind grading",
+      "reviewed_at": "2026-10-03T15:20:06.930056+00:00",
+      "before": "FAIL",
+      "after": "PASS",
+      "levels": {
+        "extraction": "PASS",
+        "structured_decision": "PASS",
+        "host": "PASS"
+      },
+      "properties": {
+        "actions_bounded": true,
+        "no_verified_claims": true,
+        "decision_sufficiency_present": true,
+        "raw_source_identity": true,
+        "explicit_hierarchy": true
+      },
+      "host_exact_quotes": [
+        "**主投：Agent Product / AI Agent 产品经理**",
+        "**副投：偏 AI 平台、工作流或开发者工具的 Technical PM**",
+        "**暂不主投：纯 Quant / Quant Research**",
+        "当前没有新鲜岗位材料",
+        "参加比赛”也不能写成获奖、盈利或实盘能力"
+      ],
+      "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+      "diagnostic": "Both compiler and host establish a meaningful hierarchy, name strongest proof/gaps, downgrade weaker research path and propose bounded market tests. Different secondary choices are acceptable, not exact-answer matching.",
+      "remaining_issue": "Ordinal assessments depend on host interpretation; fresh JD availability and actual research depth remain unverified.",
+      "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+    },
+    {
+      "case_id": "05-ownership-claim",
+      "origin": "synthetic",
+      "reviewer": "operator semantic review, not independent model blind grading",
+      "reviewed_at": "2026-10-03T15:20:06.946696+00:00",
+      "before": "PARTIAL",
+      "after": "PARTIAL",
+      "levels": {
+        "extraction": "PASS",
+        "structured_decision": "PARTIAL",
+        "host": "PARTIAL"
+      },
+      "properties": {
+        "actions_bounded": true,
+        "no_verified_claims": true,
+        "decision_sufficiency_present": true,
+        "raw_source_identity": true,
+        "defense_questions_bounded": true,
+        "independent_project_stage": true
+      },
+      "host_exact_quotes": [
+        "不能原样继续写。",
+        "担任 AI-native Minecraft 英语教育平台产品/项目负责人",
+        "面试前至少能守住这五问：",
+        "Git 仓库存在也不能证明个人作者范围。"
+      ],
+      "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+      "diagnostic": "Preserves product leadership, rejects compound engineering authorship, gives five defense questions. Compiler exposes project_stage unknown and distinct per-claim/personal declared stages without upgrading confidence.",
+      "remaining_issue": "Compiler rewrite concatenates an audit explanation into a long safe claim. Host omits explicit project/claim/personal stage disclosure. Completion fields are extractor self-report interpretations, not verified engineering completion.",
+      "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+    }
+  ],
+  "boundary": "Five synthetic cases, operator review. New extraction assembly profiles and explicit installed-SKILL preload are disclosed harness changes; these are not code-only causal gains or hiring results."
+}

@@ -127,3 +127,20 @@ All rates require explicit counts, dates, denominators and uncertainty; do not i
 percentages before collecting observations. Offer-success rate is not the primary
 metric. Delays, role mix, market, candidate experience and action execution confound
 outcomes. Collect useful decision evidence before making any effectiveness claim.
+
+## v0.2.2 Decision Quality reevaluation
+
+Baseline eea9f0a: 135 tests. Current: 154 tests, no regression in the original
+13 structured benchmarks or five frozen property replays. Five fresh synthetic
+model extractions and installed-Skill/reference-preloaded host outputs use
+gpt-5.6-sol/high, Codex CLI 0.153.0; generation excludes rubrics and outcomes.
+Operator semantic review gives Interview PASS, HR PASS, Offer PARTIAL, Direction
+PASS and Ownership PARTIAL. This is not independent blind preference grading
+or proof of hiring improvement. New extraction profiles and explicit SKILL
+preload are disclosed harness changes. See the
+[report](V022_DECISION_QUALITY_REPORT.md) and
+[frozen results](../benchmark/decision-quality-v022/semantic-summary.json).
+Autonomous reads were separately BLOCKED_BY_HOST on initial SKILL.md access,
+including a recheck after the final compiler boundary fix. See
+[retrieval evidence](REFERENCE_RETRIEVAL_EVAL.md); preload results do not certify
+autonomous reference routing.

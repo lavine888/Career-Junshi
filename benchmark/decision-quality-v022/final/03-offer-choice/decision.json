@@ -1,0 +1,910 @@
+{
+  "schema_version": "2",
+  "current_situation": "Compare two current offers while preserving uncertainty about actual scope, startup fundamentals, manager quality, and workload.",
+  "mode": "offer",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "The user reports currently holding two offers.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S1",
+      "source_span": "现在手上两个 Offer",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The user describes A as an AI Product Manager role at a large technology company in Shenzhen.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F3",
+      "source_id": "S1",
+      "source_span": "A 是深圳某大厂 AI 产品经理",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The user describes A's team as mature.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F4",
+      "source_id": "S1",
+      "source_span": "团队成熟",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The user reports that A works on an AI search product.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F5",
+      "source_id": "S1",
+      "source_span": "做 AI 搜索产品",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The user describes B as a 25-person AI startup in Hong Kong.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F7",
+      "source_id": "S1",
+      "source_span": "B 是香港一家 25 人的 AI startup",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The user reports B's title as AI Product Engineer.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S1",
+      "source_span": "Title 是 AI Product Engineer",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The user reports that B's founder described prospective scope spanning product, Agent workflow, and direct customer contact.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F9",
+      "source_id": "S1",
+      "source_span": "Founder 说进去以后从产品到 Agent workflow 都可以做，\n甚至直接跟客户。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The user says entrepreneurship may be a future goal.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F10",
+      "source_id": "S1",
+      "source_span": "我以后可能还是想创业",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "The user says large-company brand is also important.",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F11",
+      "source_id": "S1",
+      "source_span": "大厂品牌也挺重要",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "Entrepreneurship is recorded as a high preference.",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F12",
+      "source_id": "S2",
+      "source_span": "entrepreneurship: high",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "AI-native product work is recorded as a high preference.",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F13",
+      "source_id": "S2",
+      "source_span": "ai_native_product: high",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "Brand is recorded as a medium preference.",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F14",
+      "source_id": "S2",
+      "source_span": "brand: medium",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "Compensation is recorded as a medium preference.",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F15",
+      "source_id": "S2",
+      "source_span": "compensation: medium",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "The location preference names Shenzhen or Hong Kong without stating a hard constraint.",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F16",
+      "source_id": "S2",
+      "source_span": "location: Shenzhen_or_HongKong",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "Stability is recorded as a medium preference.",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F17",
+      "source_id": "S2",
+      "source_span": "stability: medium",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "Technical growth is recorded as a high preference.",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F18",
+      "source_id": "S2",
+      "source_span": "technical_growth: high",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "The Offer A material identifies a large-tech AI Product Manager role in Shenzhen.",
+      "source": "S3",
+      "source_type": "offer",
+      "id": "F19",
+      "source_id": "S3",
+      "source_span": "company_type: large_tech\nlocation: Shenzhen\nrole: AI Product Manager",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "Offer A lists monthly compensation of RMB 28,000 for 16 months.",
+      "source": "S3",
+      "source_type": "offer",
+      "id": "F20",
+      "source_id": "S3",
+      "source_span": "compensation:\n  monthly: RMB 28000\n  months: 16",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "Offer A provides learning 3.5 and ownership 2.5 ratings.",
+      "source": "S3",
+      "source_type": "offer",
+      "id": "F21",
+      "source_id": "S3",
+      "source_span": "learning: 3.5\nownership: 2.5",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "Offer A provides technical depth 3, brand signal 5, and stability 4 ratings.",
+      "source": "S3",
+      "source_type": "offer",
+      "id": "F23",
+      "source_id": "S3",
+      "source_span": "technical_depth: 3\nbrand_signal: 5\nstability: 4",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The Offer B material identifies a startup AI Product Engineer role in Hong Kong.",
+      "source": "S4",
+      "source_type": "offer",
+      "id": "F24",
+      "source_id": "S4",
+      "source_span": "company_type: startup\nlocation: Hong_Kong\nrole: AI Product Engineer",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "Offer B lists monthly compensation of HKD 35,000 for 12 months.",
+      "source": "S4",
+      "source_type": "offer",
+      "id": "F25",
+      "source_id": "S4",
+      "source_span": "compensation:\n  monthly: HKD 35000\n  months: 12",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "Offer B provides learning 4.5 and ownership 4.5 ratings.",
+      "source": "S4",
+      "source_type": "offer",
+      "id": "F26",
+      "source_id": "S4",
+      "source_span": "learning: 4.5\nownership: 4.5",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "Offer B provides technical depth 4, brand signal 2.5, and stability 2 ratings.",
+      "source": "S4",
+      "source_type": "offer",
+      "id": "F28",
+      "source_id": "S4",
+      "source_span": "technical_depth: 4\nbrand_signal: 2.5\nstability: 2",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The user reports the founder's statement that the user could do everything and meet customers directly; this is a reported verbal statement, not verified future scope.",
+      "source": "S5",
+      "source_type": "user_report",
+      "id": "F29",
+      "source_id": "S5",
+      "source_span": "“你来了什么都能做，客户也可以直接见。”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "The supplied materials identify written role scope, runway, financing state, real customer volume, manager quality, and workload as missing information.",
+      "source": "S6",
+      "source_type": "user_report",
+      "id": "F30",
+      "source_id": "S6",
+      "source_span": "written role scope\nrunway\nfinancing state\nreal customer volume\nmanager quality\nworkload",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F2",
+      "text": "The user feels conflicted about the choice.",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我挺纠结",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "label": "INFERENCE",
+      "text": "用户提供的偏好评分可提示当前选择，但不保证入职后的真实体验"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "The user expects, but does not confirm, that A would assign a relatively narrow module."
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "Offer A's manager quality is unknown."
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "Offer B's manager quality is unknown."
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C1 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C2 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C3 的强表述与个人贡献仍需补证"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "A: 硬约束是否满足"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "B: 硬约束是否满足"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "硬约束或关键条款仍需确认"
+    }
+  ],
+  "current_goal": "Choose between Offer A and Offer B in light of entrepreneurship, AI-native product work, technical growth, brand, compensation, location, and stability preferences.",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "Offer A is reported as a Shenzhen large-tech AI Product Manager role paying RMB 28,000 × 16, on a mature AI search team, with expected responsibility for a relatively narrow module.",
+      "confidence": "PLANNED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "User reports the team, product area, compensation, and expected narrow module."
+        },
+        {
+          "source": "S3",
+          "kind": "direct",
+          "supports": [
+            "claim"
+          ],
+          "summary": "Offer material lists company type, location, role, and compensation."
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "Prospective responsibility is reported as a relatively narrow module; no completed personal contribution or engineering authorship is asserted."
+      },
+      "stage": "planned",
+      "risk": [
+        "Actual module scope is expressed as expected rather than confirmed.",
+        "Manager quality is unknown.",
+        "planned_work_is_not_completed"
+      ],
+      "safe_wording": "计划中的项目；尚不能作为已完成经历或结果。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C2",
+      "claim": "Offer B is reported as a Hong Kong 25-person AI startup role titled AI Product Engineer, paying HKD 35,000 × 12.",
+      "confidence": "PLANNED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "User reports startup size, location, title, and compensation."
+        },
+        {
+          "source": "S4",
+          "kind": "direct",
+          "supports": [
+            "claim"
+          ],
+          "summary": "Offer material lists startup type, Hong Kong location, role, and compensation."
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "The title and prospective role are reported; actual product leadership, engineering authorship, and delivered scope are not established."
+      },
+      "stage": "planned",
+      "risk": [
+        "Runway, financing state, real customer volume, manager quality, and workload are missing.",
+        "planned_work_is_not_completed"
+      ],
+      "safe_wording": "计划中的项目；尚不能作为已完成经历或结果。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    },
+    {
+      "id": "C3",
+      "claim": "B's founder reportedly said the prospective role could cover product through Agent workflow and include direct customer contact.",
+      "confidence": "PLANNED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "User recounts the founder's description of broad scope and customer contact."
+        },
+        {
+          "source": "S5",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "Reported founder quote says the user could do everything and meet customers directly."
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "This is a verbal description of possible future scope, not evidence of completed personal leadership or engineering authorship."
+      },
+      "stage": "planned",
+      "risk": [
+        "Written role scope is missing.",
+        "The verbal statement does not establish actual authority, engineering ownership, production responsibility, or customer volume.",
+        "planned_work_is_not_completed"
+      ],
+      "safe_wording": "计划中的项目；尚不能作为已完成经历或结果。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    }
+  ],
+  "highest_risk": "C1",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/02-career-decision.md",
+    "references/knowledge/06-offer-evaluation.md",
+    "references/practical/offer.md"
+  ],
+  "method_plan": [
+    "wedge",
+    "offer"
+  ],
+  "bottleneck": "Direction",
+  "recommended_move": "当前条件性首选 B；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。",
+  "why": [
+    "目标与硬约束优先于公司品牌",
+    "评分仅计算用户提供的偏好；未知不补平均分"
+  ],
+  "actions": [
+    {
+      "kind": "offer_comparison",
+      "description": "整理确认条件、未知与偏好敏感点",
+      "execution_mode": "codex",
+      "artifact": "Offer 比较表",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "confirm_terms",
+      "description": "核实：B's written role scope（Request written responsibilities, decision rights, engineering expectations, customer duties, and ownership boundaries.）；B's runway（Ask for the current runway basis and the assumptions used to calculate it.）；Manager quality for both offers（Speak with each direct manager about feedback cadence, decision rights, expectations, and examples of team-member growth.）",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "career_decision",
+      "description": "关键未知确认后由你接受或拒绝",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "最早的真实 Offer 截止时间之前",
+  "stop_condition": "任一硬约束不满足则停止接受该选项；目标未明确先暂停排名",
+  "pivot_condition": "确认信息或权重变化足以改变首选时重新比较",
+  "comparison": [
+    {
+      "name": "A",
+      "eligible": null,
+      "score": null,
+      "ratings": {
+        "learning": 3.5,
+        "ownership": 2.5,
+        "technical_depth": 3.0,
+        "brand": 5.0
+      },
+      "reason": "用户主观偏好的加权比较，非公司客观质量"
+    },
+    {
+      "name": "B",
+      "eligible": null,
+      "score": null,
+      "ratings": {
+        "learning": 4.5,
+        "ownership": 4.5,
+        "technical_depth": 4.0,
+        "brand": 2.5
+      },
+      "reason": "用户主观偏好的加权比较，非公司客观质量"
+    }
+  ],
+  "constraints": [],
+  "current_preference": "B",
+  "offer_priorities": {
+    "career_direction": "high",
+    "optionality": "high",
+    "technical_depth": "high",
+    "brand": "medium",
+    "compensation": "medium"
+  },
+  "decision_unknowns": [
+    {
+      "option": "B",
+      "priority": "decisive",
+      "source_ids": [
+        "S5",
+        "S6"
+      ],
+      "unknown": "B's written role scope",
+      "why_it_matters": "The founder's broad verbal description does not establish actual product leadership, engineering authorship, or customer responsibility.",
+      "how_to_verify": "Request written responsibilities, decision rights, engineering expectations, customer duties, and ownership boundaries.",
+      "reversal_condition": "Written scope materially narrows or contradicts the founder's verbal statement."
+    },
+    {
+      "option": "B",
+      "priority": "decisive",
+      "source_ids": [
+        "S1",
+        "S6"
+      ],
+      "unknown": "B's runway",
+      "why_it_matters": "Runway is explicitly missing and affects the downside of joining a 25-person startup.",
+      "how_to_verify": "Ask for the current runway basis and the assumptions used to calculate it.",
+      "reversal_condition": "Verified runway changes the startup downside assessment materially."
+    },
+    {
+      "option": "",
+      "priority": "decisive",
+      "source_ids": [
+        "S3",
+        "S4",
+        "S6"
+      ],
+      "unknown": "Manager quality for both offers",
+      "why_it_matters": "Both offer records mark manager quality as unknown, and the user values growth and future optionality.",
+      "how_to_verify": "Speak with each direct manager about feedback cadence, decision rights, expectations, and examples of team-member growth.",
+      "reversal_condition": "A material manager-quality difference is established between the options."
+    }
+  ],
+  "reversal_conditions": [
+    "Written scope materially narrows or contradicts the founder's verbal statement.",
+    "Verified runway changes the startup downside assessment materially.",
+    "A material manager-quality difference is established between the options."
+  ],
+  "recommendation_type": "CONDITIONAL",
+  "decision_sufficiency": {
+    "state": "DECISION_CONDITIONAL",
+    "basis": "按有来源的定性优先级比较已提供维度，缺失条件可反转首选",
+    "blocking_unknowns": [],
+    "reversal_unknowns": [
+      "Written scope materially narrows or contradicts the founder's verbal statement.",
+      "Verified runway changes the startup downside assessment materially.",
+      "A material manager-quality difference is established between the options."
+    ]
+  },
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "offer",
+    "role_family": "unknown",
+    "stage": "decision",
+    "situation_type": "offer-choice",
+    "risk_tags": [
+      "constraints",
+      "direction",
+      "manager",
+      "ownership",
+      "salary"
+    ],
+    "situation_tags": [
+      "constraints",
+      "direction",
+      "manager",
+      "ownership",
+      "salary"
+    ]
+  },
+  "recommendation": {
+    "move": "当前条件性首选 B；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "The user reports currently holding two offers.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user describes A as an AI Product Manager role at a large technology company in Shenzhen.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user describes A's team as mature.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user reports that A works on an AI search product.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user describes B as a 25-person AI startup in Hong Kong.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user reports B's title as AI Product Engineer.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user reports that B's founder described prospective scope spanning product, Agent workflow, and direct customer contact.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user says entrepreneurship may be a future goal.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user says large-company brand is also important.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Entrepreneurship is recorded as a high preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "AI-native product work is recorded as a high preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Brand is recorded as a medium preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Compensation is recorded as a medium preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "The location preference names Shenzhen or Hong Kong without stating a hard constraint.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Stability is recorded as a medium preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Technical growth is recorded as a high preference.",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "当前优势来自已提供的偏好与维度；口头职责、经理或经营条件的不确定性可能使备选更合适。",
+    "reconsider_if": [
+      "Written scope materially narrows or contradicts the founder's verbal statement.",
+      "Verified runway changes the startup downside assessment materially.",
+      "A material manager-quality difference is established between the options."
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "Compare two current offers while preserving uncertainty about actual scope, startup fundamentals, manager quality, and workload.",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "The user reports currently holding two offers.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user describes A as an AI Product Manager role at a large technology company in Shenzhen.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user describes A's team as mature.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user reports that A works on an AI search product.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user describes B as a 25-person AI startup in Hong Kong.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user reports B's title as AI Product Engineer.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user reports that B's founder described prospective scope spanning product, Agent workflow, and direct customer contact.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user says entrepreneurship may be a future goal.",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "The user says large-company brand is also important.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Entrepreneurship is recorded as a high preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "AI-native product work is recorded as a high preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Brand is recorded as a medium preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Compensation is recorded as a medium preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "The location preference names Shenzhen or Hong Kong without stating a hard constraint.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Stability is recorded as a medium preference.",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Technical growth is recorded as a high preference.",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Direction",
+    "options_considered": [
+      "当前条件性首选 B；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。",
+      "先核实最能改变排序的书面条款、经理与个人负责范围。"
+    ],
+    "chosen": "当前条件性首选 B；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。",
+    "rejected_options": [
+      {
+        "option": "先核实最能改变排序的书面条款、经理与个人负责范围。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "目标与硬约束优先于公司品牌",
+      "评分仅计算用户提供的偏好；未知不补平均分"
+    ],
+    "reconsider_if": [
+      "Written scope materially narrows or contradicts the founder's verbal statement.",
+      "Verified runway changes the startup downside assessment materially.",
+      "A material manager-quality difference is established between the options."
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "schema_version": "2",
+  "current_situation": "用户报告上周五 17:30 完成终面，截至周四 10:00 尚未收到 HR 的进一步消息；HR 未承诺反馈日期，当前流程结果未知。",
+  "mode": "recruiting",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户报告终面于上周五 17:30 完成",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S2",
+      "source_span": "Friday 17:30\nFinal interview completed",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告截至周四 10:00 仍未收到进一步消息",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F2",
+      "source_id": "S2",
+      "source_span": "Thursday 10:00\nNo further message yet",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "据用户转述，面试官在终面结束时表示后续由 HR 沟通",
+      "source": "S2",
+      "source_type": "user_report",
+      "id": "F3",
+      "source_id": "S2",
+      "source_span": "“好的，今天就先到这里，后续让 HR 跟你沟通。”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户当前要决定是否现在联系 HR，并担心跟进会显得特别着急",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F5",
+      "source_id": "S1",
+      "source_span": "我要不要现在问 HR？\n会不会显得特别急？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告 HR 在终面前通常会在当天或第二天回复",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F6",
+      "source_id": "S3",
+      "source_span": "HR 在终面前回复速度通常是当天或第二天。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "HR 没有承诺具体反馈日期",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F7",
+      "source_id": "S3",
+      "source_span": "HR 没有承诺具体反馈日期。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户尚未进行过 follow up",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S3",
+      "source_span": "用户从未 follow up。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F4",
+      "text": "用户感觉这次流程可能已经没有希望",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我感觉应该是凉了。",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown",
+      "label": "INFERENCE"
+    },
+    {
+      "label": "INFERENCE",
+      "text": "可能是排期、审批、比较或优先级变化；沉默不足以确定结果"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "当前材料无法确认终面结果是通过、拒绝、offer 或 freeze"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "最终评价与候选人排序"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "招聘名额与内部审批状态"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "日历天 / 工作日、承诺日期及真实截止时间"
+    }
+  ],
+  "current_goal": "判断是否现在首次跟进 HR，以及跟进是否会显得过于着急。",
+  "claims": [],
+  "highest_risk": "关键证据或目标尚未确认",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/03-recruiting-process.md",
+    "references/practical/follow-up.md"
+  ],
+  "method_plan": [
+    "offer",
+    "proof",
+    "interview"
+  ],
+  "bottleneck": "Timing",
+  "recommended_move": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。",
+  "why": [
+    "以可见流程与明确反馈为依据，不猜招聘者内心",
+    "停止高频追问，保留其他机会"
+  ],
+  "actions": [
+    {
+      "kind": "draft_message",
+      "description": "你好，想跟进一下终面结束时面试官表示后续由 HR 沟通；截至周四 10:00 未收到进一步消息。后的进展。如果目前仍在流程中也没关系，有后续安排或需要补充的材料，麻烦告知，谢谢。",
+      "execution_mode": "codex",
+      "artifact": "条件满足后可发送的草稿",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "pipeline_review",
+      "description": "核对最后联系日期、工作日与承诺时间",
+      "execution_mode": "codex",
+      "artifact": "跟进时间计划",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "按实际承诺日期；未约定时约 3 个工作日（可调整的经验默认，非承诺）",
+  "stop_condition": "明确拒绝 / 要求不联系时停止；一次跟进后再约 3 个工作日无回复，降低投入",
+  "pivot_condition": "真实截止时间变化即调整；同一缺口在 5–10 个可比机会反复出现，再 REFINE / PIVOT",
+  "application_status": "waiting",
+  "draft": "你好，想跟进一下终面结束时面试官表示后续由 HR 沟通；截至周四 10:00 未收到进一步消息。后的进展。如果目前仍在流程中也没关系，有后续安排或需要补充的材料，麻烦告知，谢谢。",
+  "follow_up": {
+    "action": "wait",
+    "timing": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。",
+    "window": "按实际承诺日期；未约定时约 3 个工作日（可调整的经验默认，非承诺）",
+    "draft": "你好，想跟进一下终面结束时面试官表示后续由 HR 沟通；截至周四 10:00 未收到进一步消息。后的进展。如果目前仍在流程中也没关系，有后续安排或需要补充的材料，麻烦告知，谢谢。"
+  },
+  "recommendation_type": "CONDITIONAL",
+  "decision_sufficiency": {
+    "state": "DECISION_CONDITIONAL",
+    "basis": "按明确联系边界、承诺日期和已知工作日编译一次跟进；不预测结果",
+    "blocking_unknowns": [],
+    "reversal_unknowns": [
+      "实际工作日、承诺日期或竞争机会截止时间改变"
+    ]
+  },
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "recruiting",
+    "role_family": "unknown",
+    "stage": "post-interview",
+    "situation_type": "follow-up",
+    "risk_tags": [
+      "timing",
+      "feedback"
+    ],
+    "situation_tags": [
+      "timing",
+      "feedback"
+    ]
+  },
+  "recommendation": {
+    "move": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。",
+    "supporting_evidence": [
+      {
+        "source": "S2",
+        "text": "用户报告终面于上周五 17:30 完成",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户报告截至周四 10:00 仍未收到进一步消息",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "据用户转述，面试官在终面结束时表示后续由 HR 沟通",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户当前要决定是否现在联系 HR，并担心跟进会显得特别着急",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告 HR 在终面前通常会在当天或第二天回复",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "HR 没有承诺具体反馈日期",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户尚未进行过 follow up",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "假期、批量招聘、排期或审批也能解释延迟；无法从沉默辨认原因。",
+    "reconsider_if": [
+      "收到明确结果、联系边界、承诺日期变化或竞争 Offer 截止时间时立即重评。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "用户报告上周五 17:30 完成终面，截至周四 10:00 尚未收到 HR 的进一步消息；HR 未承诺反馈日期，当前流程结果未知。",
+    "evidence_used": [
+      {
+        "source": "S2",
+        "text": "用户报告终面于上周五 17:30 完成",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户报告截至周四 10:00 仍未收到进一步消息",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "据用户转述，面试官在终面结束时表示后续由 HR 沟通",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户当前要决定是否现在联系 HR，并担心跟进会显得特别着急",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告 HR 在终面前通常会在当天或第二天回复",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "HR 没有承诺具体反馈日期",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户尚未进行过 follow up",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Timing",
+    "options_considered": [
+      "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。",
+      "继续其他机会，按承诺日期和实际工作日只跟进一次。"
+    ],
+    "chosen": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。",
+    "rejected_options": [
+      {
+        "option": "继续其他机会，按承诺日期和实际工作日只跟进一次。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "以可见流程与明确反馈为依据，不猜招聘者内心",
+      "停止高频追问，保留其他机会"
+    ],
+    "reconsider_if": [
+      "收到明确结果、联系边界、承诺日期变化或竞争 Offer 截止时间时立即重评。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

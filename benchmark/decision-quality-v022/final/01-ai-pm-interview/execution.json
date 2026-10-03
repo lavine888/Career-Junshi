@@ -1,0 +1,55 @@
+{
+  "origin": "synthetic",
+  "attempts": [
+    {
+      "name": "extraction-complete-01-ai-pm-interview",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T15:05:19.889404+00:00",
+      "timeout": 360,
+      "tools": "disabled",
+      "prompt_sha256": "486ab83a613a6d09411d7c87e84dd5f047009a4afdb649888b39139fd9716e29",
+      "commands": [],
+      "usage": {
+        "input_tokens": 20673,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6902,
+        "reasoning_output_tokens": 3578
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T15:08:19.021868+00:00",
+      "seconds": 179.12,
+      "raw_sha256": "146dbdb3ca3071c2f307123f35b43ec9b81c86ffbb7faadf409b4b5890cd9260"
+    },
+    {
+      "name": "host-semantic-01-ai-pm-interview",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T15:13:57.039128+00:00",
+      "timeout": 360,
+      "tools": "disabled",
+      "prompt_sha256": "dbed61df47986c549eb1e6e9f458fd4e2915cbe2a0078e0a6fbd4b6d1dfe993e",
+      "commands": [],
+      "usage": {
+        "input_tokens": 21708,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3515,
+        "reasoning_output_tokens": 1981
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T15:15:34.026081+00:00",
+      "seconds": 97.0,
+      "raw_sha256": "4321533554fe1166f91bd5f8e00161a4d026e289a82913b577ce8cbebbd31b8c"
+    }
+  ],
+  "generation_excludes": [
+    "rubric",
+    "outcome",
+    "expected answer"
+  ],
+  "reference_loading": "Installed SKILL.md and 2-3 relevant references explicitly preloaded. Autonomous retrieval not tested by this run."
+}

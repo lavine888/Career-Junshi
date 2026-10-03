@@ -37,6 +37,20 @@ def artifact_contents(decision: dict) -> dict[str, str]:
     if "recommendation" in decision:
         r = decision["recommendation"]
         contents["decision.md"] += "\n最强反对理由：" + r["strongest_counterargument"] + "\n\n重评：" + "；".join(r["reconsider_if"]) + "\n"
+    if "direction" in decision:
+        d = decision["direction"]
+        contents["direction-comparison.md"] = "# 当前岗位主线\n\n" + decision["recommended_move"] + "\n\n" + "\n".join(
+            f"## {c['name']}\n\n已有证据：{c['strongest_proof']}\n\n最大缺口：{c['largest_gap']}\n\n成本与可验证性：{c['assessment']['gap_cost']} / {c['market_test']}\n\n一版简历保留：{c['resume_case']}\n\n来源：{' / '.join(c['source_ids'])}\n"
+            for c in d["comparison"]) + "\n判断依据是宿主有来源的定性比较，不是市场核验或客观分数。\n"
+    if "ownership_defense" in decision:
+        p = decision["ownership_defense"]
+        lines = ["# Ownership Defense Pack", "", p["safe_claim"], "", p["boundary"], "",
+                 "整体项目阶段：" + p["project_stage"], ""]
+        lines += ["", "## Reported personal contributions", ""] + ["- " + v for v in p["reported_contributions"]]
+        lines += [f"- {c['claim_id']}：主张阶段 {c['claim_stage']}；个人贡献阶段 {c['user_contribution_stage']}" for c in p["contributions"]]
+        lines += ["", p["stage_boundary"], "", "## 最相关的追问", ""]
+        lines += [f"{i}. {q}" for i, q in enumerate(p["defense_questions"], 1)]
+        contents["ownership-defense.md"] = "\n".join(lines) + "\n"
     if "project_mapping" in decision:
         m = decision["project_mapping"]
         contents["decision.md"] += "\n项目映射：" + m["project_id"] + " → " + " / ".join(m["claim_ids"]) + "\n\n岗位侧重：" + "；".join(m["role_emphasis"]) + "\n\n故事待补：" + "；".join(m["gaps"]) + "\n"
@@ -51,7 +65,8 @@ def artifact_contents(decision: dict) -> dict[str, str]:
             if missing:
                 lines.append("待提供：" + "、".join(missing) + "。")
         for c in claims:
-            lines.extend([f"## {c['id']}", "", f"原表述：{c['claim']}", "", f"安全表述：{c['safe_wording']}", "",
+            safe = decision["ownership_defense"]["safe_claim"] if "ownership_defense" in decision else c["safe_wording"]
+            lines.extend([f"## {c['id']}", "", f"原表述：{c['claim']}", "", f"安全表述：{safe}", "",
                           f"个人贡献：{c['ownership']['contribution'] or '未知'}；ownership：{c['ownership']['scope']}", "",
                           "风险：" + "；".join(c["risk"] or ["仍需人工检验五层追问"]), "",
                           "来源：" + "；".join(e["source"] for e in c["evidence"]) if c["evidence"] else "来源：仅用户陈述 / 未给证据", ""])
@@ -69,14 +84,23 @@ def artifact_contents(decision: dict) -> dict[str, str]:
         contents["project-defense.md"] = "\n".join(lines) + "\n"
     if "draft_message" in kinds:
         draft = next(a["description"] for a in decision["actions"] if a["kind"] == "draft_message")
-        contents["follow-up-draft.md"] = "# 跟进草稿\n\n" + draft + "\n\n由你核对事实后发送。这里只生成文件，没有发送消息。\n"
+        follow = decision.get("follow_up", {})
+        contents["follow-up-draft.md"] = "# 跟进草稿\n\n发送时机：" + follow.get("timing", decision["recommended_move"]) + "\n\n" + draft + "\n\n观察：" + decision["observation_window"] + "\n\n停止：" + decision["stop_condition"] + "\n\n由你核对事实后发送。这里只生成文件，没有发送消息。\n"
     if "offer_comparison" in kinds:
         lines = ["# Offer 比较", "", decision["recommended_move"], "", "主观权重计算仅用于偏好比较，不代表客观公司价值。", "",
                  "| 选项 | 硬约束通过 | 偏好得分 | 已提供维度 |", "| --- | --- | --- | --- |"]
         for row in decision.get("comparison", []):
             def cell(value): return str(value).replace("|", "\\|").replace("\n", " ")
             lines.append(f"| {cell(row['name'])} | {row['eligible']} | {row['score'] if row['score'] is not None else '待核实'} | {cell(row.get('ratings', {}))} |")
-        lines.extend(["", "需要确认："] + ["- " + v["text"] for v in decision["unknowns"]])
+        if "offer_priorities" in decision:
+            lines[4] = "按已陈述目标的定性优先级比较已有维度；没有补造数字权重或综合分数。"
+            lines += ["", "## 最可能改变选择的未知（最多三项）", ""]
+            for u in decision["decision_unknowns"]:
+                lines += ["- " + u["unknown"], "  - 为什么：" + u["why_it_matters"],
+                          "  - 核实：" + u["how_to_verify"], "  - 反转：" + u["reversal_condition"]]
+            lines += ["", "## 反转条件", ""] + ["- " + v for v in decision["reversal_conditions"]]
+        else:
+            lines.extend(["", "需要确认："] + ["- " + v["text"] for v in decision["unknowns"]])
         contents["offer-comparison.md"] = "\n".join(lines) + "\n"
     if "jd_map" in kinds:
         contents["role-hypotheses.md"] = "# 岗位假设对照\n\n" + decision["recommended_move"] + "\n\n需用实际的五份当前 JD，逐一记录职责、来源和日期、对应的个人证据、缺口与补齐成本。\n资料未给齐，不能声称已核查市场或匹配完成。\n"

@@ -1,0 +1,35 @@
+{
+  "case_id": "05-ownership-claim",
+  "status": "BLOCKED_BY_HOST",
+  "skill_reads_requested": 1,
+  "skill_reads_succeeded": 0,
+  "requested_references": [],
+  "successfully_read_references": [],
+  "reference_count": 0,
+  "irrelevant_references_loaded": false,
+  "error": "exec_command failed before process creation: rejected: blocked by policy",
+  "attempt": {
+    "name": "host-retrieval-05-ownership-claim",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "started_at": "2026-10-03T15:21:51.902639+00:00",
+    "timeout": 180,
+    "tools": "installed Skill read-only shell",
+    "prompt_sha256": "d042a34568db6cd2ec27d53aac800882ae61b2555acd4c735967d83119f7d0c1",
+    "commands": [],
+    "usage": {
+      "input_tokens": 36449,
+      "cached_input_tokens": 17792,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 620,
+      "reasoning_output_tokens": 231
+    },
+    "status": "VALID",
+    "error": [],
+    "completed_at": "2026-10-03T15:22:17.336635+00:00",
+    "seconds": 25.44,
+    "raw_sha256": "c7e5f72382fe8ff3d61893ae956d4438a54a696e381b4d163f35446f79063bdc"
+  },
+  "stderr_original_sha256": "f2114837f67c4dd7a4564a491c7725c4e713cfd1cc3e30b5cae3bfda790efd8b",
+  "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+}

@@ -1,0 +1,31 @@
+{
+  "case_id": "04-career-direction",
+  "origin": "synthetic",
+  "reviewer": "operator semantic review, not independent model blind grading",
+  "reviewed_at": "2026-10-03T15:20:06.930056+00:00",
+  "before": "FAIL",
+  "after": "PASS",
+  "levels": {
+    "extraction": "PASS",
+    "structured_decision": "PASS",
+    "host": "PASS"
+  },
+  "properties": {
+    "actions_bounded": true,
+    "no_verified_claims": true,
+    "decision_sufficiency_present": true,
+    "raw_source_identity": true,
+    "explicit_hierarchy": true
+  },
+  "host_exact_quotes": [
+    "**主投：Agent Product / AI Agent 产品经理**",
+    "**副投：偏 AI 平台、工作流或开发者工具的 Technical PM**",
+    "**暂不主投：纯 Quant / Quant Research**",
+    "当前没有新鲜岗位材料",
+    "参加比赛”也不能写成获奖、盈利或实盘能力"
+  ],
+  "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+  "diagnostic": "Both compiler and host establish a meaningful hierarchy, name strongest proof/gaps, downgrade weaker research path and propose bounded market tests. Different secondary choices are acceptable, not exact-answer matching.",
+  "remaining_issue": "Ordinal assessments depend on host interpretation; fresh JD availability and actual research depth remain unverified.",
+  "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+}

@@ -1,0 +1,79 @@
+{
+  "origin": "synthetic",
+  "branch": "only",
+  "decision_preserved": true,
+  "calibration": [
+    {
+      "topic": "architecture",
+      "status": "SUPPORTED_THIS_CASE",
+      "source": "synthetic:mock-interview",
+      "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+    },
+    {
+      "topic": "evaluation",
+      "status": "UNASSESSABLE",
+      "source": null,
+      "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+    },
+    {
+      "topic": "constraints",
+      "status": "UNASSESSABLE",
+      "source": null,
+      "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+    },
+    {
+      "topic": "ownership",
+      "status": "UNASSESSABLE",
+      "source": "synthetic:mock-interview",
+      "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+    },
+    {
+      "topic": "product-judgment",
+      "status": "UNASSESSABLE",
+      "source": null,
+      "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+    }
+  ],
+  "hard_outcome": "passed",
+  "observations": [
+    {
+      "topic": "architecture",
+      "attention": "high",
+      "risk_observed": null,
+      "text": "约15分钟架构追问，重点问ownership及模型失败场景；不等于表现有风险。",
+      "source": "synthetic:mock-interview"
+    },
+    {
+      "topic": "ownership",
+      "attention": "high",
+      "risk_observed": null,
+      "text": "约15分钟架构追问，重点问ownership及模型失败场景；不等于表现有风险。",
+      "source": "synthetic:mock-interview"
+    }
+  ],
+  "learning": "本次观察已记录；仅适用于本次机会，不证明准备策略导致结果。",
+  "feedback": {
+    "recommended_move": "推进下一阶段；保留本次具体追问，不能据通过证明策略因果。",
+    "learning_scope": "this opportunity only",
+    "causal_status": "UNKNOWN",
+    "profile_auto_updates": [],
+    "review": "REFINE only a supported specific gap; do not PIVOT from one observation."
+  },
+  "similar_pairs": 1,
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "memory_changed_preparation": false,
+  "not_asked_controlled_probe": [
+    {
+      "topic": "metrics",
+      "status": "NOT_OBSERVED",
+      "source": "synthetic:guard-probe",
+      "boundary": "Topic observation in this case; not proof of ability, strategy effect or hiring probability."
+    }
+  ],
+  "temporary_store_deleted": true,
+  "compatibility": "Decision was a source-aware preparation/follow-up action, not a result forecast"
+}

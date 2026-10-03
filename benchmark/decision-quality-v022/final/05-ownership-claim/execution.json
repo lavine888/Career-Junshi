@@ -1,0 +1,55 @@
+{
+  "origin": "synthetic",
+  "attempts": [
+    {
+      "name": "extraction-complete-05-ownership-claim",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T15:10:25.212265+00:00",
+      "timeout": 360,
+      "tools": "disabled",
+      "prompt_sha256": "65dc26ca53c1dfbdd8d0be6c23bdfd46821b54d0bf653aa222e214da5a514bed",
+      "commands": [],
+      "usage": {
+        "input_tokens": 20651,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6224,
+        "reasoning_output_tokens": 3734
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T15:11:51.933961+00:00",
+      "seconds": 86.72,
+      "raw_sha256": "cc1befa29333a0f2131628e35a3ec4bdc294dd917013b17627181cbd3ee00170"
+    },
+    {
+      "name": "host-semantic-05-ownership-claim",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T15:15:35.509342+00:00",
+      "timeout": 360,
+      "tools": "disabled",
+      "prompt_sha256": "51c99c548a0c4f9cad17c4e89438f7e5e28558e7e7b5f6c68c76f08241f46241",
+      "commands": [],
+      "usage": {
+        "input_tokens": 20700,
+        "cached_input_tokens": 6016,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1602,
+        "reasoning_output_tokens": 946
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T15:16:20.678785+00:00",
+      "seconds": 45.16,
+      "raw_sha256": "f55d4ff2555cec9d6d1a625401e673bedcd4d106619503569e3887920e753fec"
+    }
+  ],
+  "generation_excludes": [
+    "rubric",
+    "outcome",
+    "expected answer"
+  ],
+  "reference_loading": "Installed SKILL.md and 2-3 relevant references explicitly preloaded. Autonomous retrieval not tested by this run."
+}

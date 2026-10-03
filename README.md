@@ -18,6 +18,13 @@
 
 [English](README_EN.md) · [三个合成示例](cases) · [v0.2 报告](documentation/V02_REPORT.md) · [评测边界](documentation/EVAL.md)
 
+**v0.2.2 · Decision Quality Patch**：区分可直接建议、条件性选择和真正阻塞，
+增加岗位主副探索排序、Offer 反转条件、上下文跟进草稿与贡献防守包。
+154 项测试通过，原 13 个基准及五例冻结检查无回归；五例新语义审阅为 3 PASS、
+2 PARTIAL，方向从 FAIL 升为 PASS。自主参考读取被宿主策略阻止，尚未验证。
+见 [决策质量报告](documentation/V022_DECISION_QUALITY_REPORT.md) 和
+[参考读取实验](documentation/REFERENCE_RETRIEVAL_EVAL.md)。这不证明现实求职效果。
+
 v0.2.1 修复招聘语句的否定 / 条件 / 转述边界，按项目 Claim 引用跨机会追踪纠正，
 并在三组历史上限前去重。123 项测试通过，原 108 项保持不变。
 15 对固定合成场景已用 `gpt-5.6-sol` 生成、由另一模型盲评：v0.2.1 胜 2 对、平局 13 对，

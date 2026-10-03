@@ -1,0 +1,29 @@
+{
+  "case_id": "01-ai-pm-interview",
+  "origin": "synthetic",
+  "reviewer": "operator semantic review, not independent model blind grading",
+  "reviewed_at": "2026-10-03T15:20:06.875832+00:00",
+  "before": "PARTIAL",
+  "after": "PASS",
+  "levels": {
+    "extraction": "PASS",
+    "structured_decision": "PASS",
+    "host": "PASS"
+  },
+  "properties": {
+    "actions_bounded": true,
+    "no_verified_claims": true,
+    "decision_sufficiency_present": true,
+    "raw_source_identity": true
+  },
+  "host_exact_quotes": [
+    "### 1. 用 3 小时做项目防守",
+    "### 2. 用 75 分钟准备一个主故事和三类行为题",
+    "### 3. 用 45 分钟无稿口述，之后停止补新知识",
+    "“我感觉技术答得一般”只是你的感受，不是招聘方已确认的能力缺口。"
+  ],
+  "source_reference": "Unchanged input.json sources and hidden rubric.json plus v0.2.2 requested properties; consulted only after generation.",
+  "diagnostic": "Three primary actions total five hours, grounded in prior questions/JD. Weakness is not asserted; implementation/planned controls separated.",
+  "remaining_issue": "Detailed substeps are lengthy; compiler topic preparation is less concrete than host prose.",
+  "outcome_scope": "Supplied outcomes only, isolated consented temporary stores deleted; no success causation or real-world recurrence."
+}

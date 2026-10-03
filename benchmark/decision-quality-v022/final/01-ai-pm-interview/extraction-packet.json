@@ -1,0 +1,539 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "text": "我明天下午 3 点 AI 产品经理二面，这是我的简历和 JD。\n\n一面主要聊了我的 AI 教育项目，面试官问了挺多技术问题，包括 Agent 怎么控制 Minecraft、模型乱说怎么办、多人同时上课怎么处理。\n\n我感觉自己技术部分答得一般，但产品部分聊得还可以。\n\n二面不知道是谁面，我今晚大概还有 5 个小时。\n\n我应该刷产品题、准备行为面，还是继续补技术？"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "resume",
+      "text": "CityU CS Master\n\nProject: AI-native Minecraft English Learning Platform\n\n- Led the product from 0→1\n- Designed AI Teacher interaction workflow\n- Coordinated a small cross-functional team\n- Integrated LLM, ASR/TTS and Minecraft runtime\n- Built a multi-student collaborative learning experience"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "jd",
+      "text": "AI Product Manager\n\nResponsibilities:\n- Design AI-native user experiences\n- Work with engineering and research teams\n- Define evaluation metrics\n- Ship LLM-powered products\n\nPreferred:\n- Familiar with agent systems\n- Strong product sense\n- Able to discuss technical tradeoffs"
+    },
+    {
+      "source_id": "S4",
+      "source_type": "hr_chat",
+      "text": "HR:\n“一面通过了，二面会继续深入聊项目。”"
+    },
+    {
+      "source_id": "S5",
+      "source_type": "user_report",
+      "text": "“我感觉技术答得一般。”"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "用户自述将在明天下午3点参加AI产品经理二面",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我明天下午 3 点 AI 产品经理二面",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "一面主要讨论了用户的AI教育项目",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "一面主要聊了我的 AI 教育项目",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "用户报告一面被问到Agent控制Minecraft、模型乱说和多人同时上课的处理",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "面试官问了挺多技术问题，包括 Agent 怎么控制 Minecraft、模型乱说怎么办、多人同时上课怎么处理",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "用户感觉自己的技术部分回答一般",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我感觉自己技术部分答得一般",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown"
+    },
+    {
+      "id": "F5",
+      "text": "用户感觉产品部分聊得还可以",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "产品部分聊得还可以",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown"
+    },
+    {
+      "id": "F6",
+      "text": "用户不知道二面面试官是谁",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "二面不知道是谁面",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F7",
+      "text": "用户自述今晚大约还有5小时可用于准备",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我今晚大概还有 5 个小时",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户要在产品题、行为面和继续补技术之间决定准备重点",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "我应该刷产品题、准备行为面，还是继续补技术？",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F9",
+      "text": "简历中的学历表述为CityU CS Master",
+      "source_id": "S2",
+      "source_type": "resume",
+      "source_span": "CityU CS Master",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "简历列出AI-native Minecraft English Learning Platform项目",
+      "source_id": "S2",
+      "source_type": "resume",
+      "source_span": "Project: AI-native Minecraft English Learning Platform",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "用户在简历中自述主导产品从0到1",
+      "source_id": "S2",
+      "source_type": "resume",
+      "source_span": "Led the product from 0→1",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "用户在简历中自述设计了AI Teacher交互流程",
+      "source_id": "S2",
+      "source_type": "resume",
+      "source_span": "Designed AI Teacher interaction workflow",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F13",
+      "text": "用户在简历中自述协调了一个小型跨职能团队",
+      "source_id": "S2",
+      "source_type": "resume",
+      "source_span": "Coordinated a small cross-functional team",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F14",
+      "text": "用户在简历中自述集成了LLM、ASR/TTS和Minecraft运行时",
+      "source_id": "S2",
+      "source_type": "resume",
+      "source_span": "Integrated LLM, ASR/TTS and Minecraft runtime",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F15",
+      "text": "用户在简历中自述构建了多学生协作学习体验",
+      "source_id": "S2",
+      "source_type": "resume",
+      "source_span": "Built a multi-student collaborative learning experience",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F16",
+      "text": "JD职位为AI Product Manager",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "AI Product Manager",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F17",
+      "text": "JD要求设计AI原生用户体验",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "Design AI-native user experiences",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F18",
+      "text": "JD要求与工程和研究团队合作",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "Work with engineering and research teams",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F19",
+      "text": "JD要求定义评估指标",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "Define evaluation metrics",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F20",
+      "text": "JD要求交付LLM驱动的产品",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "Ship LLM-powered products",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F21",
+      "text": "JD偏好熟悉Agent系统",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "Familiar with agent systems",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F22",
+      "text": "JD偏好较强的产品感",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "Strong product sense",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F23",
+      "text": "JD偏好能够讨论技术取舍",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "Able to discuss technical tradeoffs",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F24",
+      "text": "HR消息称一面通过",
+      "source_id": "S4",
+      "source_type": "hr_chat",
+      "source_span": "一面通过了",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F25",
+      "text": "HR消息称二面会继续深入聊项目",
+      "source_id": "S4",
+      "source_type": "hr_chat",
+      "source_span": "二面会继续深入聊项目",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F26",
+      "text": "用户再次表示感觉技术回答一般",
+      "source_id": "S5",
+      "source_type": "user_report",
+      "source_span": "我感觉技术答得一般。",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown"
+    }
+  ],
+  "situation": {
+    "mode": "interview",
+    "summary": "AI产品经理二面定于次日下午3点，今晚约有5小时，需要确定准备重心。",
+    "goal": "在有限时间内决定产品题、行为面与技术项目防守的准备优先级。",
+    "deadline": "2026-10-04T15:00:00+08:00",
+    "metadata": {
+      "mode": "interview",
+      "role_family": "ai-product",
+      "stage": "preparation",
+      "situation_type": "gap-check",
+      "risk_tags": [
+        "architecture",
+        "constraints",
+        "evaluation",
+        "ownership",
+        "product-judgment",
+        "production"
+      ],
+      "situation_tags": [
+        "architecture",
+        "constraints",
+        "evaluation",
+        "ownership",
+        "product-judgment",
+        "timing"
+      ]
+    },
+    "predictions": [
+      {
+        "topic": "architecture",
+        "expectation": "high_attention",
+        "basis": "S1显示一面已问Agent如何控制Minecraft；S3偏好熟悉Agent系统并能讨论技术取舍。"
+      },
+      {
+        "topic": "evaluation",
+        "expectation": "high_attention",
+        "basis": "S1显示一面已问模型乱说怎么办；S3明确要求定义评估指标。"
+      },
+      {
+        "topic": "constraints",
+        "expectation": "high_attention",
+        "basis": "S1显示一面已问多人同时上课如何处理，属于当前项目约束与技术取舍话题。"
+      },
+      {
+        "topic": "ownership",
+        "expectation": "risk_visible",
+        "basis": "S2同时使用Led、Integrated、Built并提到跨职能团队；S4称二面会继续深入聊项目，个人贡献边界可能受到关注。"
+      },
+      {
+        "topic": "product-judgment",
+        "expectation": "high_attention",
+        "basis": "S3要求设计AI原生体验并偏好强产品感；S1仅提供用户对产品部分表现的主观判断。"
+      }
+    ],
+    "interview": {
+      "available_hours": 5,
+      "signals": [
+        {
+          "topic": "architecture",
+          "basis": "一面已问Agent怎么控制Minecraft。",
+          "source_ids": [
+            "S1"
+          ],
+          "kind": "observed_signal"
+        },
+        {
+          "topic": "evaluation",
+          "basis": "一面已问模型乱说怎么办，JD要求定义评估指标。",
+          "source_ids": [
+            "S1",
+            "S3"
+          ],
+          "kind": "observed_signal"
+        },
+        {
+          "topic": "constraints",
+          "basis": "一面已问多人同时上课怎么处理。",
+          "source_ids": [
+            "S1"
+          ],
+          "kind": "observed_signal"
+        },
+        {
+          "topic": "ownership",
+          "basis": "HR称二面继续深入聊项目；简历同时写Led、Integrated、Built和跨职能团队。",
+          "source_ids": [
+            "S2",
+            "S4"
+          ],
+          "kind": "risk_hypothesis"
+        },
+        {
+          "topic": "architecture",
+          "basis": "用户感觉技术回答一般，但这是主观感受，不是已确认能力缺口。",
+          "source_ids": [
+            "S1",
+            "S5"
+          ],
+          "kind": "risk_hypothesis"
+        }
+      ]
+    },
+    "claims": [
+      {
+        "id": "C1",
+        "claim": "Led the product from 0→1",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "自述承担0→1产品领导；未说明是否独立完成，也未证明个人工程作者范围。"
+        },
+        "evidence": [
+          {
+            "source": "S2: Led the product from 0→1",
+            "kind": "self_report",
+            "supports": [
+              "claim",
+              "leadership"
+            ]
+          }
+        ],
+        "risk": [
+          "主导不等于独立完成，个人决策与团队执行边界未提供",
+          "项目整体是否达到demo、completed或production未说明"
+        ]
+      },
+      {
+        "id": "C2",
+        "claim": "Designed AI Teacher interaction workflow",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "自述设计AI Teacher交互流程；具体个人决策、验证过程和团队参与范围未说明。"
+        },
+        "evidence": [
+          {
+            "source": "S2: Designed AI Teacher interaction workflow",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ]
+          }
+        ],
+        "risk": [
+          "缺少流程设计细节、取舍和效果证据",
+          "未提供可核验材料"
+        ]
+      },
+      {
+        "id": "C3",
+        "claim": "Coordinated a small cross-functional team",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "team",
+          "contribution": "自述协调小型跨职能团队，支持产品领导参与，不等于完成团队全部工程工作。"
+        },
+        "evidence": [
+          {
+            "source": "S2: Coordinated a small cross-functional team",
+            "kind": "self_report",
+            "supports": [
+              "claim",
+              "leadership"
+            ]
+          }
+        ],
+        "risk": [
+          "团队规模、角色分工和个人决策权限未说明"
+        ]
+      },
+      {
+        "id": "C4",
+        "claim": "Integrated LLM, ASR/TTS and Minecraft runtime",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "自述完成相关集成；个人编码作者范围、团队分工和集成深度未说明。"
+        },
+        "evidence": [
+          {
+            "source": "S2: Integrated LLM, ASR/TTS and Minecraft runtime",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ]
+          }
+        ],
+        "risk": [
+          "不能由简历措辞确认个人工程作者范围",
+          "未证明生产使用、稳定性或真实用户规模"
+        ]
+      },
+      {
+        "id": "C5",
+        "claim": "Built a multi-student collaborative learning experience",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "自述构建多学生协作学习体验；产品领导与个人工程实现的边界未说明。"
+        },
+        "evidence": [
+          {
+            "source": "S2: Built a multi-student collaborative learning experience",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ]
+          }
+        ],
+        "risk": [
+          "未说明并发规模、实现方式或验证结果",
+          "未证明达到生产阶段或由用户独立完成"
+        ]
+      }
+    ]
+  }
+}

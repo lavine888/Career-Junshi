@@ -1,0 +1,35 @@
+{
+  "case_id": "04-career-direction",
+  "status": "BLOCKED_BY_HOST",
+  "skill_reads_requested": 1,
+  "skill_reads_succeeded": 0,
+  "requested_references": [],
+  "successfully_read_references": [],
+  "reference_count": 0,
+  "irrelevant_references_loaded": false,
+  "error": "exec_command failed before process creation: rejected: blocked by policy",
+  "attempt": {
+    "name": "host-retrieval-final-04-career-direction",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "started_at": "2026-10-03T15:35:48.929574+00:00",
+    "timeout": 180,
+    "tools": "installed Skill read-only shell",
+    "prompt_sha256": "986de641d2855ac808b6985169260ab1864beaabe4ff4307e237882e51ffd971",
+    "commands": [],
+    "usage": {
+      "input_tokens": 36329,
+      "cached_input_tokens": 17664,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 742,
+      "reasoning_output_tokens": 342
+    },
+    "status": "VALID",
+    "error": [],
+    "completed_at": "2026-10-03T15:36:18.452573+00:00",
+    "seconds": 29.53,
+    "raw_sha256": "7594308cd34c90a21182c083b309a29e8094a92455364fcde51a009e5ca619fc"
+  },
+  "stderr_original_sha256": "6d725fb3444cfe5eb5f6f9acd8e89b5c58e23be73a4cab372baf6359c1641e49",
+  "boundary": "One rejected initial SKILL.md read confirmed in stderr; completed command event count is zero because execution never started. No preload, alternative tools, bypass or semantic grade. Local path prefixes redacted in public derivatives."
+}
