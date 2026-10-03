@@ -1,0 +1,9 @@
+{
+  "mode": "recruiting",
+  "summary": "终面后 HR 三个工作日未回复，未承诺结果日期，还没有跟进过。",
+  "goal": "确认进度并控制机会投入",
+  "facts": [{"text": "用户报告已过三个工作日且未收到回复", "source": "synthetic:user-report", "source_type": "user_report"}],
+  "unknowns": ["最终评价、其他候选人和 HC 状态"],
+  "claims": [],
+  "recruiting": {"status": "waiting", "working_days": 3, "followups": 0}
+}

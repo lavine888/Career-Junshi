@@ -1,0 +1,20 @@
+{
+  "mode": "interview",
+  "summary": "合成候选人明天下午参加 AI PM 一面，简历里有团队 Agent 原型的 production 强表述。",
+  "goal": "今晚优先守住项目贡献、架构取舍和测量边界",
+  "deadline": "2026-10-04T14:00:00+08:00",
+  "facts": [
+    {"text": "用户说面试在明天下午", "source": "synthetic:interview-invitation", "source_type": "document"},
+    {"text": "JD 要求解释评测、架构取舍与产品判断", "source": "synthetic:JD", "source_type": "document"},
+    {"text": "用户说本人负责评测脚本，队友做服务与 UI，项目仅原型", "source": "synthetic:candidate-account", "source_type": "user_report"}
+  ],
+  "unknowns": ["真实线上用户、生产运维和原始指标尚未提供", "面试官将重点考察哪一块"],
+  "claims": [{
+    "id": "CJ-DEMO-1",
+    "claim": "主导 production Agent 平台，任务成功率提升 30%",
+    "confidence": "VERIFIED",
+    "stage": "demo",
+    "ownership": {"scope": "team", "contribution": "据本人描述：评测脚本与失败分类；队友负责服务与 UI"},
+    "evidence": [{"source": "synthetic:prototype-notes", "kind": "supporting", "supports": ["claim"], "summary": "原型说明，未有可核实 production 或指标证据"}]
+  }]
+}

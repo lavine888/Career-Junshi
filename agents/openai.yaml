@@ -1,0 +1,6 @@
+interface:
+  display_name: "求职军师 · Career Junshi"
+  short_description: "先判断职业局势，再给下一步；用证据守住面试，用反馈修正选择"
+  default_prompt: "请使用 $career-junshi 判断我当前的求职局势，给出首选行动、观察窗口与停止条件。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,20 @@
+{
+  "mode": "offer",
+  "summary": "两个合成 AI PM Offer，用户更重视学习和 ownership，地点都满足约束。",
+  "goal": "未来两年形成真实的产品 ownership 和技术判断能力",
+  "facts": [
+    {"text": "用户确认不能搬离当前城市，两份书面条件都满足", "source": "synthetic:terms-and-user", "source_type": "document"},
+    {"text": "用户经两次团队交流给出了主观维度评分，A 的 ownership 更明确，B 薪酬更高", "source": "synthetic:user-ratings", "source_type": "user_report"}
+  ],
+  "unknowns": ["团队沟通的陈述能否在入职后兑现", "长期组织变化"],
+  "claims": [],
+  "deadline": "2026-10-06T18:00:00+08:00",
+  "offer": {
+    "constraints": ["保持当前城市", "书面薪酬达到用户最低要求"],
+    "weights": {"learning": 4, "ownership": 4, "manager": 2, "team": 2, "career_direction": 3, "technical_depth": 2, "brand": 1, "optionality": 2, "compensation": 1, "location": 1, "lifestyle": 1, "downside": 2},
+    "options": [
+      {"name": "合成 Offer A", "constraint_status": "pass", "ratings": {"learning": 5, "ownership": 5, "manager": 4, "team": 4, "career_direction": 5, "technical_depth": 4, "brand": 2, "optionality": 4, "compensation": 3, "location": 5, "lifestyle": 3, "downside": 3}},
+      {"name": "合成 Offer B", "constraint_status": "pass", "ratings": {"learning": 3, "ownership": 2, "manager": 3, "team": 3, "career_direction": 3, "technical_depth": 3, "brand": 5, "optionality": 3, "compensation": 5, "location": 5, "lifestyle": 4, "downside": 4}}
+    ]
+  }
+}
