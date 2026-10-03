@@ -1,0 +1,369 @@
+{
+  "case_id": "H07-delayed-listing",
+  "phase": "FRESH_AFTER",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "reviewer": "Same human operator; no independent-rater claim",
+  "generation_had_rubric": false,
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "PASS",
+    "L3_Host": "PARTIAL",
+    "L4_Overall": "FAIL"
+  },
+  "main_strength": "L2 protects deadline and host offers a truthful bounded follow-up",
+  "main_failure": "Host opens with definitive not-rejected status although current hidden result is unknown",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        }
+      ]
+    },
+    "Evidence Discipline": {
+      "status": "PARTIAL",
+      "assessment": "Host opens with definitive not-rejected status although current hidden result is unknown",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 38,
+          "excerpt": "## 证据边界"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        },
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+        }
+      ]
+    },
+    "Fact / Inference Separation": {
+      "status": "FAIL",
+      "assessment": "Host opens with definitive not-rejected status although current hidden result is unknown",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 43,
+          "excerpt": "- **未知**：岗位是否关闭、你当前的候选顺位、延期原因、晖岸能否及时作决定。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        },
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+        }
+      ]
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "decision_sufficiency",
+          "excerpt": {
+            "state": "DECISION_SUFFICIENT",
+            "basis": "按明确联系边界、承诺日期和已知工作日编译一次跟进；不预测结果",
+            "blocking_unknowns": [],
+            "reversal_unknowns": [
+              "实际工作日、承诺日期或竞争机会截止时间改变"
+            ]
+          }
+        }
+      ]
+    },
+    "Decision Courage": {
+      "status": "PARTIAL",
+      "assessment": "Host opens with definitive not-rejected status although current hidden result is unknown",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        },
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+        }
+      ]
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 7,
+          "excerpt": "当前真正的瓶颈是时间，不是已经确认的面试失败。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "bottleneck",
+          "excerpt": "Timing"
+        }
+      ]
+    },
+    "Recommendation Clarity": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        }
+      ]
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 11,
+          "excerpt": "1. **10 月 5 日主动联系晖岸，明确告知真实截止时间**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "actions",
+          "excerpt": [
+            {
+              "kind": "draft_message",
+              "description": "你好，想跟进一下内部流程暂时延迟，暂时无法提供新日期；流程仍在处理中，有变化会通知。后的进展。如果目前仍在流程中也没关系，有后续安排或需要补充的材料，麻烦告知，谢谢。 我这边需要在 2026-10-06T16:00:00+08:00 前作出安排，能否在此前告知当前状态或预计时间？不能确认也请直说，我会据现有信息安排。",
+              "execution_mode": "codex",
+              "artifact": "截止前状态确认草稿",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "send_message",
+              "description": "由你核对实际截止时间并发送一次；不要依赖尚未获准的延期",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "pipeline_review",
+              "description": "截止前按已知条件处理现有机会，不无限等待",
+              "execution_mode": "codex",
+              "artifact": "跟进时间计划",
+              "status": "PROPOSED"
+            }
+          ]
+        }
+      ]
+    },
+    "Information Value": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 7,
+          "excerpt": "当前真正的瓶颈是时间，不是已经确认的面试失败。"
+        }
+      ]
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 50,
+          "excerpt": "会推翻当前判断的信号只有几类：晖岸明确拒绝或取消岗位、晖岸发出书面 Offer、沐原明确同意延期，或者你确认沐原 Offer 本身不满足你的硬约束。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        }
+      ]
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 50,
+          "excerpt": "会推翻当前判断的信号只有几类：晖岸明确拒绝或取消岗位、晖岸发出书面 Offer、沐原明确同意延期，或者你确认沐原 Offer 本身不满足你的硬约束。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        }
+      ]
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 46,
+          "excerpt": "## 停止线与反转条件"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "stop_condition",
+          "excerpt": "明确拒绝 / 要求不联系时停止；一次跟进后再约 3 个工作日无回复，降低投入"
+        }
+      ]
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "默认策略：**再等，但只等到书面 Offer 的硬截止前；如果沐原设备的 Offer 本身可以接受，不要为了晖岸尚未确定的流程把它丢掉。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        }
+      ]
+    },
+    "Ownership Integrity": {
+      "status": "NOT_APPLICABLE",
+      "assessment": "No individual authorship or team metric upgrade is requested.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "真实截止时间 2026-10-06T16:00:00+08:00 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        }
+      ]
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H07-delayed-listing/final-runtime/decision.json",
+          "field": "current_goal",
+          "excerpt": "判断当前是否已被拒绝，以及在不因无限等待错过另一份 Offer 的约束下是否继续等待。"
+        }
+      ]
+    }
+  },
+  "decision_courage": {
+    "status": "PARTIAL",
+    "classification": "PREMATURE_CERTAINTY"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "qualification": "Questions target feasibility, decision boundary or claim defense; no irrelevant interviewer biography requested."
+  },
+  "first_screen": {
+    "status": "PARTIAL",
+    "evidence": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+      "line": 3,
+      "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+    },
+    "qualification": "Information priority is judged, not an exact character count. H07 prioritizes a judgment but overstates knowledge."
+  },
+  "hard_failures": [
+    {
+      "code": "PREMATURE_CERTAINTY",
+      "layer": "L3",
+      "evidence": {
+        "layer": "L3",
+        "file": "benchmark/holdout-v023-after/H07-delayed-listing/first-pass/host-response.md",
+        "line": 3,
+        "excerpt": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。"
+      }
+    }
+  ],
+  "failure_classification": [
+    {
+      "category": "B",
+      "finding": "fresh host overstates status in first screen; later uncertainty does not erase opening"
+    },
+    {
+      "category": "C",
+      "finding": "a colloquial no-communicated-rejection reading is possible; strict hidden-status interpretation retained and disclosed"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED"
+}

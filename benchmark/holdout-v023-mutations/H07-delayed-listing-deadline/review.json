@@ -1,0 +1,17 @@
+{
+  "original_case_id": "H07-delayed-listing",
+  "changed_decisive_variable": "deadline",
+  "WHY_CHANGE_IS_EXPECTED": "Remove the competing offer/deadline; deadline-driven escalation should relax, without inferring rejection.",
+  "unchanged_material_source_ids": [
+    "S1",
+    "S2"
+  ],
+  "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation",
+  "ORIGINAL_DECISION": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。",
+  "MUTATED_DECISION": "**不能据此认定被拒。现在先不催；从 10 月 2 日最新回复后，按该公司的实际工作日等待约 3 个工作日，再进行一次有限跟进。**",
+  "host_status": "PASS",
+  "structured_status": "PARTIAL",
+  "structured_decision": "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。",
+  "limitation": "Urgent send_now becomes wait, but extractor retains a superseded timeline inside promised_date; timing precision remains ambiguous.",
+  "causality_boundary": "A controlled evidence/priority change, not a measured real-user outcome."
+}

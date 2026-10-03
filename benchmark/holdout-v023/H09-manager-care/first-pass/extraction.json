@@ -1,0 +1,268 @@
+{
+  "mode": "offer",
+  "summary": "判断如何处理北辰仪器这一岗位和薪酬有吸引力、但经理行为、目标清晰度、团队离职线索及工作时间安排存在风险或未知的 Offer。",
+  "goal": "在稳定成长目标和不可协商的接孩子时间约束下，评估是否选择北辰仪器 Offer。",
+  "claims": [],
+  "metadata": {
+    "mode": "offer",
+    "role_family": "unknown",
+    "stage": "decision",
+    "situation_type": "offer-choice",
+    "risk_tags": [
+      "constraints",
+      "manager",
+      "timing"
+    ],
+    "situation_tags": [
+      "constraints",
+      "manager",
+      "timing"
+    ]
+  },
+  "offer": {
+    "weights": {},
+    "constraints": [
+      "每天 17:30 离开现场接孩子",
+      "不可接受长期临时晚会"
+    ],
+    "options": [
+      {
+        "name": "北辰仪器高级产品岗位",
+        "constraint_status": "unknown",
+        "ratings": {}
+      }
+    ],
+    "priorities": {
+      "career_direction": "high",
+      "lifestyle": "high",
+      "manager": "high",
+      "brand": "low"
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3"
+    ]
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "text": "用户自述其为38岁、在南京且为单亲。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "38 岁，南京，单亲",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户必须每天17:30离开现场接孩子，且称这是不可协商条件。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "需要每天 17:30 离开现场接孩子，这是不可协商条件",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F3",
+      "text": "用户可以在晚间异步补工作。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "可以晚间异步补工作",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F4",
+      "text": "用户不可接受长期临时晚会。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "不可接受长期临时晚会",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F5",
+      "text": "用户的目标是稳定成长，并且不想只追求大公司标签。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "目标稳定成长，不想只追求大公司标签",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F6",
+      "text": "用户报告两次面试中准经理多次打断其提问。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "两次面试中准经理多次打断其提问",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "提供的 Offer 材料写明岗位为北辰仪器高级产品岗位、保证年现金42万元、地点南京。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "北辰仪器高级产品岗位：保证年现金 42 万元、地点南京",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "材料称该产品范围适合用户此前七年经验。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "产品范围适合此前七年经验",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "HR邮件称通常支持弹性。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "HR 邮件说通常支持弹性",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "Offer附件写明工作时间按部门安排。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "Offer 附件写“工作时间按部门安排”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F11",
+      "text": "Offer截止日为2026-10-12。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "截止日 2026-10-12",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F12",
+      "text": "用户提供的职业主页截图节选显示，两位自称曾在该部门的人在过去一年先后离职。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "两位自称曾在该部门的人，在过去一年先后离职",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F13",
+      "text": "用户报告准经理在面试中说，入职后目标自然会明确，忙的时候大家一起顶。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "准经理面试原话：入职后目标自然会明确，忙的时候大家一起顶",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F14",
+      "text": "HR称团队氛围通常很好。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "HR 又说团队氛围通常很好",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "I1",
+      "text": "用户因此觉得准经理可能不尊重人。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "用户因此觉得经理可能不尊重人",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown"
+    }
+  ],
+  "unknowns": [
+    "是否存在可用的员工访谈或匿名评价未知。",
+    "最终直属经理尚未确定。",
+    "是否会书面确认接送孩子的时间安排未知。",
+    "该部门的晚会惯例未知。",
+    "部门原人数、两人离职原因以及截图最新情况未知。",
+    "是否存在来自在职员工的直接材料未知。"
+  ],
+  "context_sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "offer"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "document"
+    }
+  ]
+}

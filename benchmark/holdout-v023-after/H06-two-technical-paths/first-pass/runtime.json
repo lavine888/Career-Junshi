@@ -1,0 +1,9 @@
+{
+  "case_id": "H06-two-technical-paths",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "job",
+  "recommendation": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+}

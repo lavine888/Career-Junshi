@@ -1,0 +1,366 @@
+{
+  "case_id": "H01-years-gate",
+  "phase": "FRESH_AFTER",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "reviewer": "Same human operator; no independent-rater claim",
+  "generation_had_rubric": false,
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "FAIL",
+    "L3_Host": "PASS",
+    "L4_Overall": "FAIL"
+  },
+  "main_strength": "Host preserves required tenure, limited application and no new project",
+  "main_failure": "Fresh extraction changes fit to unknown and L2 returns unrelated role-discovery work",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 26,
+          "excerpt": "- **已有可防守证据**：材料支持你设计过数据拆分与拒识规则；试验也包含阈值敏感性、标签复核和延迟日志。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 27,
+          "excerpt": "- **最大风险**：JD 把三年列为“必需”，且未说明项目可折抵年限。是否严格执行目前是 **UNKNOWN**。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "decision_sufficiency",
+          "excerpt": {
+            "state": "DECISION_CONDITIONAL",
+            "basis": "既有模式的可逆下一步；条件变化时重评",
+            "blocking_unknowns": [],
+            "reversal_unknowns": [
+              "项目经历能否折抵年限要求未知。",
+              "该试验结果本次未经独立重跑，独立复现情况未知。",
+              "该岗位的三年经验要求是否严格执行尚未确认。"
+            ]
+          }
+        }
+      ]
+    },
+    "Decision Courage": {
+      "status": "FAIL",
+      "assessment": "Fresh extraction changes fit to unknown and L2 returns unrelated role-discovery work",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Bottleneck Identification": {
+      "status": "FAIL",
+      "assessment": "Fresh extraction changes fit to unknown and L2 returns unrelated role-discovery work",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "bottleneck",
+          "excerpt": "Direction"
+        }
+      ]
+    },
+    "Recommendation Clarity": {
+      "status": "FAIL",
+      "assessment": "Fresh extraction changes fit to unknown and L2 returns unrelated role-discovery work",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 7,
+          "excerpt": "1. **在下一个一小时窗口内直接投递**（`execution_mode: human`）  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "actions",
+          "excerpt": [
+            {
+              "kind": "evidence_audit",
+              "description": "整理三个真实项目和个人贡献",
+              "execution_mode": "codex",
+              "artifact": "证据卡",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "jd_map",
+              "description": "比较两个岗位假设与五份新鲜 JD，标出 gap 与补齐成本",
+              "execution_mode": "codex",
+              "artifact": "岗位假设对照表",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "apply",
+              "description": "选择一小批岗位验证反馈",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            }
+          ]
+        }
+      ]
+    },
+    "Information Value": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 18,
+          "excerpt": "   > 你好，我准备申请澄湾的应用 AI 工程师。JD 写了 3 年以上相关全职经验，我目前只有 8 个月正式算法应用经历，但维护过工业缺陷识别试验，并负责过数据拆分和拒识规则设计。想确认一下，3 年是系统或团队的硬门槛，还是会结合项目能力评估？如果是硬门槛，也请直接告诉我，谢谢。"
+        }
+      ]
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 36,
+          "excerpt": "推翻当前建议的信号：如果联系人在你提交前明确回复“三年是系统硬门槛，八个月无法进入流程”，就不投；否则按时提交。无论结果如何，单个岗位都不足以判断方向对错；只有在 5–10 个可比岗位中反复得到相同的年限反馈，才值得调整主投范围。以上判断仅基于所给合成材料，未作外部核验。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 36,
+          "excerpt": "推翻当前建议的信号：如果联系人在你提交前明确回复“三年是系统硬门槛，八个月无法进入流程”，就不投；否则按时提交。无论结果如何，单个岗位都不足以判断方向对错；只有在 5–10 个可比岗位中反复得到相同的年限反馈，才值得调整主投范围。以上判断仅基于所给合成材料，未作外部核验。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 20,
+          "excerpt": "3. **投完即停止定制投入**（`execution_mode: human`）  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "stop_condition",
+          "excerpt": "真实硬约束不满足或补证成本超过当前预算时降低投入"
+        }
+      ]
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Ownership Integrity": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "User Goal Alignment": {
+      "status": "PARTIAL",
+      "assessment": "Fresh extraction changes fit to unknown and L2 returns unrelated role-discovery work",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+          "field": "current_goal",
+          "excerpt": "在每天只能投入一小时且不能为单家公司另做项目的约束下，决定是否申请该岗位。"
+        }
+      ]
+    }
+  },
+  "decision_courage": {
+    "status": "FAIL",
+    "classification": "OVER_CAUTION"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "qualification": "Questions target feasibility, decision boundary or claim defense; no irrelevant interviewer biography requested."
+  },
+  "first_screen": {
+    "status": "PASS",
+    "evidence": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023-after/H01-years-gate/first-pass/host-response.md",
+      "line": 1,
+      "excerpt": "我的判断：**该投，但只作为“有上限的试投”，不要把它当主攻机会。**"
+    },
+    "qualification": "Information priority is judged, not an exact character count. H07 prioritizes a judgment but overstates knowledge."
+  },
+  "hard_failures": [
+    {
+      "code": "NO_PRIORITIZATION",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    },
+    {
+      "code": "OVER_CAUTION",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    },
+    {
+      "code": "GENERIC_ADVICE",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023-after/H01-years-gate/final-runtime/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    }
+  ],
+  "failure_classification": [
+    {
+      "category": "B",
+      "finding": "fresh job.fit=unknown changes routing despite unchanged source; same-packet replay remains unchanged"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED"
+}

@@ -1,0 +1,265 @@
+{
+  "case_id": "H09-manager-care",
+  "reviewer": "Human operator (same operator authored corpus); no independent inter-rater reliability claim",
+  "rubric_visibility": "Only after all ten extraction/host outputs were frozen",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "layers": {
+    "L1_Extraction": "PARTIAL",
+    "L2_Structured_Decision": "FAIL",
+    "L3_Host": "PASS",
+    "L4_Overall": "FAIL"
+  },
+  "main_strength": "Host distinguishes observed manager conduct from unproved toxicity/turnover",
+  "main_failure": "Hard care constraint unknown but unscored singleton is called superior preference",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Evidence Discipline": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 北辰仪器高级产品岗位；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ],
+      "assessment": "Hard care constraint unknown but unscored singleton is called superior preference"
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Sufficiency": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 北辰仪器高级产品岗位；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ],
+      "assessment": "Hard care constraint unknown but unscored singleton is called superior preference"
+    },
+    "Decision Courage": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 北辰仪器高级产品岗位；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ],
+      "assessment": "Hard care constraint unknown but unscored singleton is called superior preference"
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Recommendation Clarity": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "现在做三件事："
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Information Value": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "现在做三件事："
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 北辰仪器高级产品岗位；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ],
+      "assessment": "Hard care constraint unknown but unscored singleton is called superior preference"
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 37,
+          "excerpt": "- **仍然未知**：打断是否等于长期不尊重人、该经理是否最终带你、团队真实晚会频率，以及两人离职是否代表异常流失。现有截图不足以证明这些结论。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 37,
+          "excerpt": "- **仍然未知**：打断是否等于长期不尊重人、该经理是否最终带你、团队真实晚会频率，以及两人离职是否代表异常流失。现有截图不足以证明这些结论。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 37,
+          "excerpt": "- **仍然未知**：打断是否等于长期不尊重人、该经理是否最终带你、团队真实晚会频率，以及两人离职是否代表异常流失。现有截图不足以证明这些结论。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 37,
+          "excerpt": "- **仍然未知**：打断是否等于长期不尊重人、该经理是否最终带你、团队真实晚会频率，以及两人离职是否代表异常流失。现有截图不足以证明这些结论。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Ownership Integrity": {
+      "status": "NOT_APPLICABLE",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        }
+      ],
+      "assessment": "No individual authorship upgrade is at issue."
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    }
+  },
+  "first_screen": {
+    "status": "PASS",
+    "priority_assessment": "The opening states a judgment/conditional direction before an inventory of facts and unknowns; subsequent bounded actions are visible. No exact character quota imposed.",
+    "excerpt": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023/H09-manager-care/first-pass/host-response.md",
+      "line": 1,
+      "excerpt": "我的判断：**先不接受，也不急着拒绝；把北辰仪器列为“有条件可接受”**。岗位与现金待遇匹配，但每天 17:30 接孩子是硬约束，而目前公司只给了模糊口头表态。经理风险也值得认真核实，不能用薪酬把它盖过去。"
+    }
+  },
+  "decision_courage": {
+    "status": "FAIL",
+    "classification": "PREMATURE_CERTAINTY"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "decision_relevant_information": [
+      "Written care schedule, reporting manager and near-term expectations"
+    ],
+    "qualification": "H06 travel averaging weakens the exact hard constraint; H09 structured generic questions miss the decisive care schedule."
+  },
+  "hard_failures": [
+    {
+      "code": "PREMATURE_CERTAINTY",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023/H09-manager-care/first-pass/decision.json",
+        "field": "recommended_move",
+        "excerpt": "当前条件性首选 北辰仪器高级产品岗位；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+      }
+    }
+  ],
+  "failure_classification": [
+    {
+      "category": "A",
+      "finding": "same singleton/unknown-hard-constraint defect as H04"
+    },
+    {
+      "category": "B",
+      "finding": "extraction omits useful critical_unknowns but does retain explicit constraints"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED; not inferred",
+  "assembly_notes": "Exact completed agent response restored from JSONL; original writer error and hashes retained."
+}

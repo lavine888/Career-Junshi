@@ -1,0 +1,9 @@
+{
+  "case_id": "H09-manager-care",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "offer",
+  "recommendation": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+}

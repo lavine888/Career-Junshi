@@ -1,0 +1,51 @@
+{
+  "REFERENCE_MODE": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "attempts": [
+    {
+      "name": "extract-H01-years-gate",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:27:58.612735+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "11949c1f0e88ef68afe48866974b6c4181561ed33465500bc9c1b0e245ce7ef8",
+      "commands": [],
+      "usage": {
+        "input_tokens": 22862,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5731,
+        "reasoning_output_tokens": 2821
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:30:30.241160+00:00",
+      "seconds": 151.62,
+      "raw_sha256": "a2784006ab30ad4bece0bbf19b017a9b21f73972f5b456978bef780b8c7f0449"
+    },
+    {
+      "name": "host-H01-years-gate",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:28:54.523010+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "a74444e06a60ada89d39635e7c55f8c6432c048c09706ec590c5862fae981fa1",
+      "commands": [],
+      "usage": {
+        "input_tokens": 20246,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2406,
+        "reasoning_output_tokens": 1551
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:30:02.605508+00:00",
+      "seconds": 68.09,
+      "raw_sha256": "83d5abaf758286a1795244a1212cde1f57341ddb5c09790e0de7da3aabea2965"
+    }
+  ],
+  "boundary": "Missing last-message files were recovered verbatim only when a completed final event existed; original MODEL_ERROR writer records are retained."
+}

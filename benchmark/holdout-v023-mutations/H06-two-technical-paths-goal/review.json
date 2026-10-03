@@ -1,0 +1,17 @@
+{
+  "original_case_id": "H06-two-technical-paths",
+  "changed_decisive_variable": "goal",
+  "WHY_CHANGE_IS_EXPECTED": "Replace founder optionality with deep ML engineering/reliability; same defensible evidence should shift the primary path.",
+  "unchanged_material_source_ids": [
+    "S2",
+    "S3"
+  ],
+  "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation",
+  "ORIGINAL_DECISION": "**主线：工业 AI Solutions / Forward Deployed，但限定为“亲自构建、参与交付、非重销售”的岗位。**  ",
+  "MUTATED_DECISION": "**主线：ML Engineer，聚焦模型工程、数据质量、评估、漂移和可靠性。**  ",
+  "host_status": "PASS",
+  "structured_status": "PASS",
+  "structured_decision": "主投：珀岛设备 ML Engineer；当前降低投入：苔川工业 AI Solutions / Forward Deployed",
+  "limitation": "Goal change reverses the primary role while preserving actual role labels and evidence boundaries.",
+  "causality_boundary": "A controlled evidence/priority change, not a measured real-user outcome."
+}

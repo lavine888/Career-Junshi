@@ -1,0 +1,261 @@
+{
+  "case_id": "H07-delayed-listing",
+  "reviewer": "Human operator (same operator authored corpus); no independent inter-rater reliability claim",
+  "rubric_visibility": "Only after all ten extraction/host outputs were frozen",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "FAIL",
+    "L3_Host": "PASS",
+    "L4_Overall": "FAIL"
+  },
+  "main_strength": "Host protects the real October 6 alternative deadline; listing removal is not rejection",
+  "main_failure": "L2 has the deadline yet follows a three-working-day default",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Courage": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。"
+        }
+      ],
+      "assessment": "L2 has the deadline yet follows a three-working-day default"
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Recommendation Clarity": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Action Compression": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "### 现在做三件事"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。"
+        }
+      ],
+      "assessment": "L2 has the deadline yet follows a three-working-day default"
+    },
+    "Information Value": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "### 现在做三件事"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**目前不能判定被拒，但不应继续被动等待。**职位页面失效只会提高岗位变动风险，不能证明拒绝；最新直接信息仍是 10 月 2 日招聘者所说“流程仍在处理中”。但对方没有新日期，而你有 **10 月 6 日 16:00 的真实 Offer 截止时间**，因此应把晖岸降级为“不确定机会”，不能让它拖掉现有书面 Offer。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**目前不能判定被拒，但不应继续被动等待。**职位页面失效只会提高岗位变动风险，不能证明拒绝；最新直接信息仍是 10 月 2 日招聘者所说“流程仍在处理中”。但对方没有新日期，而你有 **10 月 6 日 16:00 的真实 Offer 截止时间**，因此应把晖岸降级为“不确定机会”，不能让它拖掉现有书面 Offer。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Stop / Pivot Quality": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**目前不能判定被拒，但不应继续被动等待。**职位页面失效只会提高岗位变动风险，不能证明拒绝；最新直接信息仍是 10 月 2 日招聘者所说“流程仍在处理中”。但对方没有新日期，而你有 **10 月 6 日 16:00 的真实 Offer 截止时间**，因此应把晖岸降级为“不确定机会”，不能让它拖掉现有书面 Offer。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。"
+        }
+      ],
+      "assessment": "L2 has the deadline yet follows a three-working-day default"
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**目前不能判定被拒，但不应继续被动等待。**职位页面失效只会提高岗位变动风险，不能证明拒绝；最新直接信息仍是 10 月 2 日招聘者所说“流程仍在处理中”。但对方没有新日期，而你有 **10 月 6 日 16:00 的真实 Offer 截止时间**，因此应把晖岸降级为“不确定机会”，不能让它拖掉现有书面 Offer。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Ownership Integrity": {
+      "status": "NOT_APPLICABLE",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "No individual authorship upgrade is at issue."
+    },
+    "User Goal Alignment": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。"
+        }
+      ],
+      "assessment": "L2 has the deadline yet follows a three-working-day default"
+    }
+  },
+  "first_screen": {
+    "status": "PASS",
+    "priority_assessment": "The opening states a judgment/conditional direction before an inventory of facts and unknowns; subsequent bounded actions are visible. No exact character quota imposed.",
+    "excerpt": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/host-response.md",
+      "line": 1,
+      "excerpt": "## 我的判断"
+    }
+  },
+  "decision_courage": {
+    "status": "FAIL",
+    "classification": "OVER_CAUTION"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "decision_relevant_information": [
+      "Can status be clarified before the competing offer expires?"
+    ],
+    "qualification": "Information would change effort allocation, feasibility or claim wording; unknowns are not a completeness checklist."
+  },
+  "hard_failures": [
+    {
+      "code": "OVER_CAUTION",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023/H07-delayed-listing/first-pass/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。"
+      }
+    }
+  ],
+  "failure_classification": [
+    {
+      "category": "A",
+      "finding": "recruiting compiler ignores supplied competing deadline"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED; not inferred",
+  "assembly_notes": "Exact completed agent response restored from JSONL; original writer error and hashes retained."
+}

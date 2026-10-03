@@ -1,0 +1,8 @@
+{
+  "case_id": "H03-repeated-feedback",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "decision_status": "FAILED",
+  "extraction_status": "FAILED",
+  "error": "resume / narration accomplishment is self_reported; unresolved claims use unknown or self_reported"
+}

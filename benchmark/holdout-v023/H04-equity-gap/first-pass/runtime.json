@@ -1,0 +1,9 @@
+{
+  "case_id": "H04-equity-gap",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "offer",
+  "recommendation": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+}

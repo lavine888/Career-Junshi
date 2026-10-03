@@ -1,0 +1,337 @@
+{
+  "case_id": "H02-title-scope",
+  "phase": "FRESH_AFTER",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "reviewer": "Same human operator; no independent-rater claim",
+  "generation_had_rubric": false,
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "PASS",
+    "L3_Host": "PASS",
+    "L4_Overall": "PASS"
+  },
+  "main_strength": "Written scope and stated qualitative priorities preserve current-role preference",
+  "main_failure": "No new material failure",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 27,
+          "excerpt": "关键证据："
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 32,
+          "excerpt": "- **推断**：长期从事运营支持，可能削弱你下一次应聘“产品负责人”时的连续性与可证明 ownership；这不是必然结果，但风险明显高于留任。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "decision_sufficiency",
+          "excerpt": {
+            "state": "DECISION_CONDITIONAL",
+            "basis": "按有来源的定性优先级比较已提供维度，缺失条件可反转首选",
+            "blocking_unknowns": [],
+            "reversal_unknowns": [
+              "书面职责不支持偏好的交付范围，或任一用户硬约束不满足时重新选择"
+            ]
+          }
+        }
+      ]
+    },
+    "Decision Courage": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "bottleneck",
+          "excerpt": "Direction"
+        }
+      ]
+    },
+    "Recommendation Clarity": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 7,
+          "excerpt": "1. **要求曜原书面澄清或修改职责**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "actions",
+          "excerpt": [
+            {
+              "kind": "offer_comparison",
+              "description": "整理确认条件、未知与偏好敏感点",
+              "execution_mode": "codex",
+              "artifact": "Offer 比较表",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "confirm_terms",
+              "description": "确认经理、团队、ownership、书面薪酬、地点与截止时间",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "career_decision",
+              "description": "关键未知确认后由你接受或拒绝",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            }
+          ]
+        }
+      ]
+    },
+    "Information Value": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 13,
+          "excerpt": "   > 在决定前，我希望确认：是否能在书面职责和考核中加入明确的产品决策责任，例如独立负责某一业务场景、参与路线图、设计实验并对结果负责？如果可以，希望同时明确时间、占比、审批人和考核指标。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "decision_unknowns",
+          "excerpt": []
+        }
+      ]
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 34,
+          "excerpt": "什么会推翻判断："
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 34,
+          "excerpt": "什么会推翻判断："
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 39,
+          "excerpt": "观察窗口到 **2026-10-09**。停止线很明确：如果截止前仍只有口头“以后可能”，而书面职责和工单 KPI 不变，就不要用两年的方向换这次 12 万元加薪。最终决定由你做，但基于现有材料，我会选**留任，不接受当前版本的曜原 Offer**。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "stop_condition",
+          "excerpt": "任一硬约束不满足则停止接受该选项；目标未明确先暂停排名"
+        }
+      ]
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "Ownership Integrity": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 31,
+          "excerpt": "- **个人偏好**：职业方向和 ownership 为高优先级，薪资为中优先级；你给曜原前两项均为 1/5，现职均为 4/5。（S1、S3）"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ]
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "36 万比现职 24 万高 12 万、约 50%，很有吸引力；但你的目标是两年内成为产品负责人，且你明确把职业方向和 ownership 放在薪资之前。曜原的书面职责和考核都指向运营支持，而不是产品决策。“AI 产品专家”这个头衔无法抵消实际工作范围。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H02-title-scope/final-runtime/decision.json",
+          "field": "current_goal",
+          "excerpt": "判断是否为了更高现金接受曜原集团 Offer，同时考虑两年内成为产品负责人的目标。"
+        }
+      ]
+    }
+  },
+  "decision_courage": {
+    "status": "PASS",
+    "classification": "CALIBRATED_COMMITMENT"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "qualification": "Questions target feasibility, decision boundary or claim defense; no irrelevant interviewer biography requested."
+  },
+  "first_screen": {
+    "status": "PASS",
+    "evidence": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023-after/H02-title-scope/first-pass/host-response.md",
+      "line": 1,
+      "excerpt": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**"
+    },
+    "qualification": "Information priority is judged, not an exact character count. H07 prioritizes a judgment but overstates knowledge."
+  },
+  "hard_failures": [],
+  "failure_classification": [],
+  "outcomes": "NOT_SUPPLIED"
+}

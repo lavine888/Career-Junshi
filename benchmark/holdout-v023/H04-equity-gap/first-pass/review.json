@@ -1,0 +1,259 @@
+{
+  "case_id": "H04-equity-gap",
+  "reviewer": "Human operator (same operator authored corpus); no independent inter-rater reliability claim",
+  "rubric_visibility": "Only after all ten extraction/host outputs were frozen",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "FAIL",
+    "L3_Host": "PASS",
+    "L4_Overall": "FAIL"
+  },
+  "main_strength": "Host blocks joining/resigning pending equity and cash feasibility",
+  "main_failure": "One unscored option becomes a superior current preference; binding blocker state lost",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Evidence Discipline": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ],
+      "assessment": "One unscored option becomes a superior current preference; binding blocker state lost"
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Sufficiency": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ],
+      "assessment": "One unscored option becomes a superior current preference; binding blocker state lost"
+    },
+    "Decision Courage": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+        }
+      ],
+      "assessment": "One unscored option becomes a superior current preference; binding blocker state lost"
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Recommendation Clarity": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "现在最值得做的三件事："
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Information Value": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "现在最值得做的三件事："
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 38,
+          "excerpt": "观察窗口以对方给出的正式截止日期为准。在截止日期和核心条款明确前，不辞职、不签署接受文件、不把口头股权计入报酬。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 38,
+          "excerpt": "观察窗口以对方给出的正式截止日期为准。在截止日期和核心条款明确前，不辞职、不签署接受文件、不把口头股权计入报酬。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 38,
+          "excerpt": "观察窗口以对方给出的正式截止日期为准。在截止日期和核心条款明确前，不辞职、不签署接受文件、不把口头股权计入报酬。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 38,
+          "excerpt": "观察窗口以对方给出的正式截止日期为准。在截止日期和核心条款明确前，不辞职、不签署接受文件、不把口头股权计入报酬。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Ownership Integrity": {
+      "status": "NOT_APPLICABLE",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        }
+      ],
+      "assessment": "No individual authorship upgrade is at issue."
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    }
+  },
+  "first_screen": {
+    "status": "PASS",
+    "priority_assessment": "The opening states a judgment/conditional direction before an inventory of facts and unknowns; subsequent bounded actions are visible. No exact character quota imposed.",
+    "excerpt": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/host-response.md",
+      "line": 1,
+      "excerpt": "我的判断：现在不要正式答应，也不要辞职；可以明确表达“有条件的入职意向”。关键不是缺一个小细节，而是两项决定交易性质的核心条件都没落纸：股权是否真实可执行，以及现金能否覆盖未来六个月生活。"
+    }
+  },
+  "decision_courage": {
+    "status": "FAIL",
+    "classification": "PREMATURE_CERTAINTY"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "decision_relevant_information": [
+      "Written approved equity; net cash, necessary costs and reserves"
+    ],
+    "qualification": "Information would change effort allocation, feasibility or claim wording; unknowns are not a completeness checklist."
+  },
+  "hard_failures": [
+    {
+      "code": "PREMATURE_CERTAINTY",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023/H04-equity-gap/first-pass/decision.json",
+        "field": "recommended_move",
+        "excerpt": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+      }
+    }
+  ],
+  "failure_classification": [
+    {
+      "category": "A",
+      "finding": "singleton promotion fabricates comparative support and omits hard-constraint blocker"
+    },
+    {
+      "category": "C",
+      "finding": "nonbinding draft expresses intent; no legal enforceability has been verified"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED; not inferred",
+  "assembly_notes": null
+}

@@ -29,6 +29,8 @@ reads were BLOCKED_BY_HOST and remain unverified. See the
 [retrieval experiment](documentation/REFERENCE_RETRIEVAL_EVAL.md). No real hiring
 effect is established.
 
+**v0.2.3 · Holdout Generalization Evaluation** freezes ten new synthetic cases before three general fixes. End-to-end first pass: 1 PASS / 2 PARTIAL / 7 FAIL; fresh after samples: 3 PASS / 3 PARTIAL / 4 FAIL. All 164 unit tests and existing properties pass, while extraction and semantic failures remain. The direct real-user pilot gates are not met. See the [full evaluation](documentation/V023_HOLDOUT_EVAL.md). No real-world hiring effect is claimed.
+
 v0.2.1 preserves recruiting denial/conditions/hearsay, traces scoped claim corrections
 across opportunities and deduplicates history before the three-pair cap. All 123
 tests pass; the prior 108 remain unchanged. On 15 fixed synthetic pairs generated

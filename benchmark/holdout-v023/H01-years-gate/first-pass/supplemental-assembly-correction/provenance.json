@@ -1,0 +1,7 @@
+{
+  "kind": "ASSEMBLY_CORRECTION_NOT_REGENERATION",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "original_error_preserved": true,
+  "reason": "Harness wrongly rejected an exact additional source copied from the permitted user request. All S1-S3 unchanged. No model output edited, no rerun of generation.",
+  "reference_mode": "CONTROLLED_PRELOAD"
+}

@@ -1,0 +1,27 @@
+{
+  "case_id": "H02-title-scope-priority",
+  "origin": "synthetic",
+  "request": "我的决定目标改了：接下来两年优先增加确定现金和储备，可以接受配置与工单，不要求产品责任。书面薪资差距不变。哪一项更符合现在的目标？",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Goals and current option",
+      "text": "31 岁，现职年现金 24 万元，负责门店补货产品，能独立安排小范围实验。现团队书面确认未来半年继续给产品责任；不是新的招聘承诺。目标接下来两年优先增加确定现金和储备，可以接受配置、巡检和工单，不要求产品责任；没有新增现金硬约束。候选人提供偏好：career_direction low，ownership low，compensation high。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "offer",
+      "label": "Written scope",
+      "text": "曜原集团书面 Offer：年保证现金 36 万元，Title 为 AI 产品专家，工作在成都。岗位附件：70% 规则配置/系统巡检，20% 客户工单，10% 协助需求登记；不负责路线图、实验设计或模型选择。考核是工单处理时效。正常接受截止 2026-10-09。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "label": "Conflicting interview and personal ratings",
+      "text": "面试官口头说日后可能接触创新项目，未给转岗日期或审批标准。用户自己在阅读附件后给出的 0–5 偏好评价：曜原 role career_direction=1, ownership=1, compensation=5；留任 current career_direction=4, ownership=4, compensation=3。这些是个人评价，不是客观公司评分。"
+    }
+  ],
+  "as_of": "2026-10-04T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic clock. Fictional companies and anonymized people; no real hiring outcome or private history."
+}

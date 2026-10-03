@@ -133,6 +133,21 @@ def recruiting_plan(value: dict, normalized: dict) -> dict:
         recommendation = "先停止继续催；按上次跟进后的观察窗口等待，同时继续其他机会。"
         acts = [action("pipeline_review", "记录最后跟进时间和观察窗口", "codex", "机会记录"),
                 action("apply", "继续其他机会，窗口过后降低此机会投入", "human")]
+    elif normalized["urgency"]["within_72h"]:
+        # A real decision deadline outranks a heuristic wait, without inventing
+        # an offer, employer calendar or rejection. Explicit contact bans and
+        # the one-follow-up stop rule above still take precedence.
+        due = normalized["urgency"]["deadline"]
+        recommendation = f"真实截止时间 {due} 优先：现在礼貌确认一次能否在此前给出状态；不要为未知流程错过已可用的机会。"
+        draft += f" 我这边需要在 {due} 前作出安排，能否在此前告知当前状态或预计时间？不能确认也请直说，我会据现有信息安排。"
+        acts = [action("draft_message", draft, "codex", "截止前状态确认草稿"),
+                action("send_message", "由你核对实际截止时间并发送一次；不要依赖尚未获准的延期", "human"),
+                action("pipeline_review", "截止前按已知条件处理现有机会，不无限等待", "codex", "跟进时间计划")]
+        window = f"不晚于真实截止时间 {due}；无法取得更新时依据已知机会作决定"
+    elif normalized["urgency"]["overdue"]:
+        recommendation = "已给截止时间已过；先确认现有机会是否仍可行动，不假定延期，也不把延迟当拒绝。"
+        acts = [action("pipeline_review", "核实截止后的实际可用机会和联系边界", "codex", "机会记录")]
+        window = "立即核对截止后的实际机会状态；不继续套用三工作日等待"
     elif promised and not r.get("promised_date_passed", False):
         recommendation = f"先等到招聘方承诺日期（{promised}），再根据实际截止时间决定跟进。"
         acts = [action("pipeline_review", "记录承诺日期和真实紧迫约束", "codex", "机会记录")]
@@ -227,7 +242,7 @@ def offer_plan(value: dict, normalized: dict) -> dict:
                 # Keep complete methods/reversals in the comparison, not a clipped instruction.
                 description = "核实比较表中的前三项未知；完整核实办法、来源及反转条件见 Offer 比较表。"
             plan["actions"][1]["description"] = description
-        return decision_state(plan, conditional["recommendation_type"], "按有来源的定性优先级比较已提供维度，缺失条件可反转首选", blocking=[] if conditional["current_preference"] else ["能区分取舍的目标、约束或比较维度"], reversing=conditional["reversal_conditions"])
+        return decision_state(plan, conditional["recommendation_type"], "用户硬约束或比较依据尚未充分，接受/排名保持阻塞" if conditional["recommendation_type"] == "BLOCKED" else "按有来源的定性优先级比较已提供维度，缺失条件可反转首选", blocking=conditional["blocking_unknowns"] or ([] if conditional["current_preference"] else ["能区分取舍的目标、约束或比较维度"]), reversing=conditional["reversal_conditions"])
     plan.update(current_preference=ranked[0]["name"] if enough and ranked else None,
                 reversal_conditions=["用户目标、硬约束、权重或关键条款变化时重新比较"], decision_unknowns=[])
     return decision_state(plan, "SUFFICIENT" if enough and ranked else "BLOCKED", "使用已有数字权重契约，不补造评分", blocking=[] if enough and ranked else missing or ["足以排名的目标、约束或权重"])

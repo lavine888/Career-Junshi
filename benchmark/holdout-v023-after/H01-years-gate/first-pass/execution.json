@@ -1,0 +1,54 @@
+{
+  "REFERENCE_MODE": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "phase": "fresh-after",
+  "attempts": [
+    {
+      "name": "after-extract-H01-years-gate",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:55:00.037698+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "bee4381d449742754dda72226d058eb06738a3e7bf798387b99557f1fa7dbe14",
+      "commands": [],
+      "usage": {
+        "input_tokens": 22985,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5879,
+        "reasoning_output_tokens": 3106
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:57:38.488810+00:00",
+      "seconds": 158.45,
+      "raw_sha256": "ff92cacb81d9ac26a619bde3b2097ccc02383336f69d57a871716f29f247fed3"
+    },
+    {
+      "name": "after-host-H01-years-gate",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:55:14.460549+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "a74444e06a60ada89d39635e7c55f8c6432c048c09706ec590c5862fae981fa1",
+      "commands": [],
+      "usage": {
+        "input_tokens": 20251,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3089,
+        "reasoning_output_tokens": 2241
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:56:37.832323+00:00",
+      "seconds": 83.38,
+      "raw_sha256": "a2de620c12acd994c82f15d17afa2a64f34f489bb56f6b5427d4598fc48e978f"
+    }
+  ],
+  "input_sha256": "7066ebb355e4022efb6f4f6c18f36680958d3b95e7f051ba7b96cf921d1afec6",
+  "outcomes": "NOT_SUPPLIED",
+  "contract_assembly_change": "Existing unknown family allowed by patched contract; exact user request source allowed by corrected assembly; no rubric in generation."
+}

@@ -1,0 +1,27 @@
+{
+  "case_id": "H05-metric-credit",
+  "origin": "synthetic",
+  "request": "我申请物流 SaaS 增长岗位。简历写“提升付费转化率 35%”，但当时团队一起改了定价、销售脚本和新用户体验，我只负责 onboarding 的一个实验。这个数字到底要不要删？别把我的贡献全写没了。",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "resume",
+      "label": "Current bullet",
+      "text": "澜屿物流云，增长产品负责人：通过 onboarding 优化提升付费转化率 35%，主导增长策略。未注明团队结果、时间窗或相对/绝对变化。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "document",
+      "label": "Supplied dashboard and experiment excerpt",
+      "text": "同一季度公司看板显示付费转化率由 4.0% 到 5.4%，相对增长 35%，绝对增加 1.4 个百分点。同期更新定价、销售脚本及 onboarding，未做拆因实验。个人 onboarding A/B 分组日志因埋点重构丢失，无法单独估计该实验增量；看板只是提供的节选，未独立核查。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "label": "Owned work and stage",
+      "text": "26 岁，厦门工作，明确自述负责 onboarding 访谈、流程方案、实验假设与上线验收。定价由负责人甲决策，销售脚本由负责人乙负责。团队方案在真实产品运行过，个人流程设计与验收已完成；个人代码由工程同事实现。下周面试，能提供假设文档和方案版本。没有证据证明 onboarding 导致全部变化。"
+    }
+  ],
+  "as_of": "2026-10-04T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic clock. Fictional companies and anonymized people; no real hiring outcome or private history."
+}

@@ -1,0 +1,320 @@
+{
+  "mode": "positioning",
+  "summary": "决定简历中的“提升付费转化率 35%”是否应删除或收窄，同时保留用户可归属的 onboarding 贡献。",
+  "goal": "形成既不把团队整体指标错误归因于个人 onboarding、又不抹去用户真实贡献的简历表述边界。",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "通过 onboarding 优化提升付费转化率 35%",
+      "confidence": "SELF_REPORTED",
+      "stage": "production",
+      "ownership": {
+        "scope": "team",
+        "contribution": "用户自述负责 onboarding 访谈、流程方案、实验假设与上线验收；代码由工程同事实现。同期团队还更新了定价和销售脚本。"
+      },
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim"
+          ],
+          "summary": "当前简历直接使用了 onboarding 导致付费转化率提升 35% 的因果表述。"
+        },
+        {
+          "source": "S2",
+          "kind": "supporting",
+          "supports": [
+            "metric"
+          ],
+          "summary": "所提供但未独立核查的看板节选记录同季度转化率由 4.0% 到 5.4%，同时说明存在多项同期改动且未做拆因实验。"
+        },
+        {
+          "source": "S3",
+          "kind": "self_report",
+          "supports": [
+            "authorship",
+            "production",
+            "real_world"
+          ],
+          "summary": "用户自述完成 onboarding 方案与验收，团队方案在真实产品运行，但没有证据证明 onboarding 导致全部变化。"
+        }
+      ],
+      "risk": [
+        "35% 是团队同期整体结果，无法由现有材料归因给 onboarding 单项实验。",
+        "当前表述未交代相对增长 35% 对应绝对增加 1.4 个百分点。",
+        "个人 A/B 分组日志据称丢失，单项实验增量未知。"
+      ]
+    },
+    {
+      "id": "C2",
+      "claim": "主导增长策略",
+      "confidence": "SELF_REPORTED",
+      "stage": "production",
+      "ownership": {
+        "scope": "team",
+        "contribution": "用户自述负责 onboarding 访谈、流程方案、实验假设与上线验收；定价和销售脚本分别由其他负责人负责。"
+      },
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "leadership"
+          ],
+          "summary": "当前简历写有“主导增长策略”。"
+        },
+        {
+          "source": "S3",
+          "kind": "self_report",
+          "supports": [
+            "authorship"
+          ],
+          "summary": "用户明确报告了其 onboarding 工作范围，并将定价决策和销售脚本归于其他负责人。"
+        }
+      ],
+      "risk": [
+        "“主导增长策略”可能超过已报告的 onboarding 工作边界。",
+        "现有材料不支持用户主导定价或销售脚本。"
+      ]
+    }
+  ],
+  "metadata": {
+    "mode": "positioning",
+    "role_family": "unknown",
+    "stage": "preparation",
+    "situation_type": "claim-defense",
+    "risk_tags": [
+      "metrics",
+      "ownership",
+      "evidence"
+    ],
+    "situation_tags": [
+      "metrics",
+      "ownership",
+      "evidence"
+    ]
+  },
+  "ownership": {
+    "project_stage": "production",
+    "contributions": [
+      {
+        "claim_id": "C1",
+        "claim_stage": "production",
+        "user_contribution_stage": "completed"
+      },
+      {
+        "claim_id": "C2",
+        "claim_stage": "production",
+        "user_contribution_stage": "completed"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "text": "简历将用户列为澜屿物流云增长产品负责人",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "resume",
+      "source_span": "澜屿物流云，增长产品负责人",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "简历声称通过 onboarding 优化提升付费转化率 35%",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "resume",
+      "source_span": "通过 onboarding 优化提升付费转化率 35%",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "简历声称主导增长策略",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "resume",
+      "source_span": "主导增长策略",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "所提供的公司看板节选称同一季度付费转化率由 4.0% 升至 5.4%，相对增长 35%，绝对增加 1.4 个百分点",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "同一季度公司看板显示付费转化率由 4.0% 到 5.4%，相对增长 35%，绝对增加 1.4 个百分点",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "同一时期还更新了定价、销售脚本和 onboarding",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "同期更新定价、销售脚本及 onboarding",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户自述 26 岁并在厦门工作",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "26 岁，厦门工作",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户明确自述负责 onboarding 访谈、流程方案、实验假设与上线验收",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "明确自述负责 onboarding 访谈、流程方案、实验假设与上线验收",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户自述定价由负责人甲决策",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "定价由负责人甲决策",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "用户自述销售脚本由负责人乙负责",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "销售脚本由负责人乙负责",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "用户自述团队方案曾在真实产品中运行",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "团队方案在真实产品运行过",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "用户自述其个人流程设计与验收已经完成",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "个人流程设计与验收已完成",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "用户自述个人方案的代码由工程同事实现",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "个人代码由工程同事实现",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F13",
+      "text": "用户自述下周有面试",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "下周面试",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F14",
+      "text": "用户自述能够提供假设文档和方案版本",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "能提供假设文档和方案版本",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [],
+  "unknowns": [
+    "简历未说明该结果属于团队、统计时间窗以及相对或绝对变化口径",
+    "是否做过能够拆分各项措施贡献的实验缺少肯定证据",
+    "个人 onboarding A/B 分组日志据称已丢失，无法单独估计该实验增量",
+    "提供的看板仅为节选，未被独立核查",
+    "现有材料不能证明 onboarding 导致全部转化率变化"
+  ],
+  "context_sources": [
+    {
+      "source_id": "S1",
+      "source_type": "resume"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "document"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report"
+    }
+  ]
+}

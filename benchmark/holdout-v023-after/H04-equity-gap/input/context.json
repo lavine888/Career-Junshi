@@ -1,0 +1,27 @@
+{
+  "case_id": "H04-equity-gap",
+  "origin": "synthetic",
+  "request": "一家里昂气候科技创业公司邀我从研究岗加入，说以后给有意义的股权。现金低于我当前收入，但我可能愿意为真实创始团队权益让步。可以答应吗？我不想因为缺一个小细节就被劝放弃，但也不能靠承诺付房租。",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Goal and hard boundary",
+      "text": "29 岁，研究员转产品，独身，目前可保留现职至少三个月。愿为可执行且有清楚归属安排的权益承担短期现金下降，但不能让未来六个月的生活现金出现缺口。海外雇佣后的净收入和必要保险支出尚未算清，剩余可动用储备数额没有提供。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "hr_chat",
+      "label": "Founder quotation",
+      "text": "浮叶气候的创始人邮件：你会成为核心团队，之后一定有有意义的股权。先把入职意向定下来，具体比例和文件之后再说。没有股份类别、比例、归属期、批准记录或签署文件。邮件没有说明接受意向是否附带义务。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "offer",
+      "label": "Incomplete written terms",
+      "text": "现有文件只有税前月现金 EUR 2,400、工作城市里昂、拟开始日期 2026-11-02。当地真实市场中位薪酬未核实；用户称其低于自己的当前收入。没有 net pay、雇佣实体、保险支出、股权条款或确定签约截止日。融资和跑道没有提供。不能访问真实财务、税务或法律资料。"
+    }
+  ],
+  "as_of": "2026-10-04T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic clock. Fictional companies and anonymized people; no real hiring outcome or private history."
+}

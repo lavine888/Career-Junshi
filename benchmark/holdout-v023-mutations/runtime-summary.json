@@ -1,0 +1,28 @@
+[
+  {
+    "case_id": "H02-title-scope-priority",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "FAILED",
+    "error": "{\"error\": \"metadata requires mode, role_family, stage, situation_type, risk_tags, situation_tags\"}"
+  },
+  {
+    "case_id": "H06-two-technical-paths-goal",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "job",
+    "recommendation": "主投：珀岛设备 ML Engineer；当前降低投入：苔川工业 AI Solutions / Forward Deployed"
+  },
+  {
+    "case_id": "H07-delayed-listing-deadline",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "recruiting",
+    "recommendation": "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。"
+  }
+]

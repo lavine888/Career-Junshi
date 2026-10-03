@@ -1,0 +1,245 @@
+{
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "cases": [
+    {
+      "case_id": "H01-years-gate",
+      "mode": "job",
+      "extraction": "PASS",
+      "decision": "PARTIAL",
+      "host": "PASS",
+      "overall": "PARTIAL",
+      "main_strength": "Required years remain a gate; bounded honest application",
+      "main_failure": "L2 says verify a years gap rather than clearly apply",
+      "hard_failures": [],
+      "classifications": [
+        {
+          "category": "C",
+          "finding": "assembly rejected an exact request source, not a corrupted extraction"
+        },
+        {
+          "category": "F",
+          "finding": "L2 verification wording is less direct but not a mandate to rebuild"
+        }
+      ]
+    },
+    {
+      "case_id": "H02-title-scope",
+      "mode": "offer",
+      "extraction": "PASS",
+      "decision": "PASS",
+      "host": "PASS",
+      "overall": "PASS",
+      "main_strength": "Written role substance beats compensation and title",
+      "main_failure": "Generic L2 confirmation list rather than role-specific negotiation",
+      "hard_failures": [],
+      "classifications": []
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "mode": "job",
+      "extraction": "PARTIAL",
+      "decision": "FAIL",
+      "host": "PASS",
+      "overall": "FAIL",
+      "main_strength": "Host distinguishes two explicit signals from three rejections",
+      "main_failure": "Structured layer reroutes a specific refinement question into generic discovery",
+      "hard_failures": [
+        "NO_PRIORITIZATION",
+        "OVER_CAUTION",
+        "GENERIC_ADVICE"
+      ],
+      "classifications": [
+        {
+          "category": "B",
+          "finding": "extraction omitted a usable direction comparison"
+        },
+        {
+          "category": "F",
+          "finding": "60/30/10 host allocation is explicitly a heuristic, not an invented objective threshold"
+        }
+      ]
+    },
+    {
+      "case_id": "H04-equity-gap",
+      "mode": "offer",
+      "extraction": "PASS",
+      "decision": "FAIL",
+      "host": "PASS",
+      "overall": "FAIL",
+      "main_strength": "Host blocks joining/resigning pending equity and cash feasibility",
+      "main_failure": "One unscored option becomes a superior current preference; binding blocker state lost",
+      "hard_failures": [
+        "PREMATURE_CERTAINTY"
+      ],
+      "classifications": [
+        {
+          "category": "A",
+          "finding": "singleton promotion fabricates comparative support and omits hard-constraint blocker"
+        },
+        {
+          "category": "C",
+          "finding": "nonbinding draft expresses intent; no legal enforceability has been verified"
+        }
+      ]
+    },
+    {
+      "case_id": "H05-metric-credit",
+      "mode": "positioning",
+      "extraction": "PASS",
+      "decision": "PARTIAL",
+      "host": "PARTIAL",
+      "overall": "FAIL",
+      "main_strength": "Separates team result, personal product leadership and engineering authorship",
+      "main_failure": "Short resume wording asserts joint causation without identification; L2 safe wording duplicated",
+      "hard_failures": [
+        "SUCCESS_TO_CAUSATION"
+      ],
+      "classifications": [
+        {
+          "category": "B",
+          "finding": "host short variant contradicts its own careful long variant; single observed causal slip"
+        },
+        {
+          "category": "A",
+          "finding": "ownership wording duplication recurs, cosmetic/usability defect; no fourth fix under budget"
+        }
+      ]
+    },
+    {
+      "case_id": "H06-two-technical-paths",
+      "mode": "job",
+      "extraction": "PARTIAL",
+      "decision": "FAIL",
+      "host": "PARTIAL",
+      "overall": "FAIL",
+      "main_strength": "Host prioritizes customer-facing technical work for founder goal",
+      "main_failure": "No direction packet outside finite role families; travel question weakens hard cap to average",
+      "hard_failures": [
+        "NO_PRIORITIZATION",
+        "OVER_CAUTION",
+        "GENERIC_ADVICE"
+      ],
+      "classifications": [
+        {
+          "category": "A",
+          "finding": "generic career comparison rejects unknown role_family"
+        },
+        {
+          "category": "B",
+          "finding": "host asks average travel rather than a per-month cap; one observed constraint wording slip"
+        }
+      ]
+    },
+    {
+      "case_id": "H07-delayed-listing",
+      "mode": "recruiting",
+      "extraction": "PASS",
+      "decision": "FAIL",
+      "host": "PASS",
+      "overall": "FAIL",
+      "main_strength": "Host protects the real October 6 alternative deadline; listing removal is not rejection",
+      "main_failure": "L2 has the deadline yet follows a three-working-day default",
+      "hard_failures": [
+        "OVER_CAUTION"
+      ],
+      "classifications": [
+        {
+          "category": "A",
+          "finding": "recruiting compiler ignores supplied competing deadline"
+        }
+      ]
+    },
+    {
+      "case_id": "H08-building-avoidance",
+      "mode": "job",
+      "extraction": "PARTIAL",
+      "decision": "FAIL",
+      "host": "PASS",
+      "overall": "FAIL",
+      "main_strength": "Host says stop the fourth project and apply tonight",
+      "main_failure": "L2 asks another evidence/JD audit despite supplied defensible work and zero applications",
+      "hard_failures": [
+        "NO_PRIORITIZATION",
+        "OVER_CAUTION",
+        "GENERIC_ADVICE",
+        "NO_AVOIDED_ACTION"
+      ],
+      "classifications": [
+        {
+          "category": "B",
+          "finding": "host extraction omitted readiness/job context; compiler receives no fit assessment"
+        },
+        {
+          "category": "F",
+          "finding": "applying three tonight is an adjustable execution batch, not a success threshold"
+        }
+      ]
+    },
+    {
+      "case_id": "H09-manager-care",
+      "mode": "offer",
+      "extraction": "PARTIAL",
+      "decision": "FAIL",
+      "host": "PASS",
+      "overall": "FAIL",
+      "main_strength": "Host distinguishes observed manager conduct from unproved toxicity/turnover",
+      "main_failure": "Hard care constraint unknown but unscored singleton is called superior preference",
+      "hard_failures": [
+        "PREMATURE_CERTAINTY"
+      ],
+      "classifications": [
+        {
+          "category": "A",
+          "finding": "same singleton/unknown-hard-constraint defect as H04"
+        },
+        {
+          "category": "B",
+          "finding": "extraction omits useful critical_unknowns but does retain explicit constraints"
+        }
+      ]
+    },
+    {
+      "case_id": "H10-unknown-systems",
+      "mode": "interview",
+      "extraction": "PASS",
+      "decision": "PARTIAL",
+      "host": "PASS",
+      "overall": "PARTIAL",
+      "main_strength": "Host supplies truthful bridge, hypothetical reasoning and bounded learning",
+      "main_failure": "L2 defense artifacts remain generic; no tailored spoken recovery bridge",
+      "hard_failures": [],
+      "classifications": [
+        {
+          "category": "F",
+          "finding": "exact spoken bridge is available in host; generic structured artifact is a usability limitation, not fabricated experience"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "PARTIAL": 2,
+    "PASS": 1,
+    "FAIL": 7
+  },
+  "host_counts": {
+    "PASS": 8,
+    "PARTIAL": 2
+  },
+  "hard_failure_instances": {
+    "NO_PRIORITIZATION": 3,
+    "OVER_CAUTION": 4,
+    "GENERIC_ADVICE": 3,
+    "PREMATURE_CERTAINTY": 2,
+    "SUCCESS_TO_CAUSATION": 1,
+    "NO_AVOIDED_ACTION": 1
+  },
+  "decision_courage_failure_cases": 6,
+  "over_caution_cases": 4,
+  "unsupported_certainty_cases": 2,
+  "integrity_hard_failure_cases": [
+    "H05-metric-credit"
+  ],
+  "claim_boundary": "Synthetic generalization evaluation only; no real-world effectiveness or independent verification inferred",
+  "assembly_exceptions": "Unsupported source-type aliases normalized before any model run; original authoring attempt retained privately. H01 extra exact request source accepted only in supplemental compilation. H05-H09 writer race responses recovered verbatim, no regeneration. All original exception records retained."
+}

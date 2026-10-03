@@ -1,0 +1,7 @@
+{
+  "source": "Last completed agent_message text verbatim, plus file newline",
+  "reason": "Evaluation harness omitted parent output directory before parallel host/extraction progress; actual CLI turn completed. Not product/model/platform failure.",
+  "original_attempt_status": "MODEL_ERROR",
+  "transcript_sha256": "08b4915e5adda294a1a02277cbbc16b0352b50cb079420cb4fe520ce60d51e78",
+  "recovered_response_sha256": "5cf948cc8d52fae7b4db345e110f86a27dd4cba492e7a8e50e2073923f344f13"
+}

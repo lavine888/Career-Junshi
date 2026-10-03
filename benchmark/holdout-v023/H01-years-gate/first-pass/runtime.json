@@ -1,0 +1,8 @@
+{
+  "case_id": "H01-years-gate",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "decision_status": "FAILED",
+  "extraction_status": "FAILED",
+  "error": "source text identity failed"
+}

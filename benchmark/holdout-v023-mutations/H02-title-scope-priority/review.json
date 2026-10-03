@@ -1,0 +1,17 @@
+{
+  "original_case_id": "H02-title-scope",
+  "changed_decisive_variable": "priority",
+  "WHY_CHANGE_IS_EXPECTED": "Prioritize cash over product ownership; knowing operational scope is acceptable, never relabel it as product ownership.",
+  "unchanged_material_source_ids": [
+    "S2",
+    "S3"
+  ],
+  "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation",
+  "ORIGINAL_DECISION": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**",
+  "MUTATED_DECISION": "**按你现在的目标，曜原集团更符合。**",
+  "host_status": "PASS",
+  "structured_status": "FAIL",
+  "structured_decision": null,
+  "limitation": "L2 rejects partial metadata; no structured acceptance decision produced.",
+  "causality_boundary": "A controlled evidence/priority change, not a measured real-user outcome."
+}

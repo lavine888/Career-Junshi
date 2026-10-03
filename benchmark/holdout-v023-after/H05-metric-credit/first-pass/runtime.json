@@ -1,0 +1,9 @@
+{
+  "case_id": "H05-metric-credit",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "positioning",
+  "recommendation": "现在采用有边界的表述：据本人描述，在团队项目中负责：用户自述负责 onboarding 访谈、流程方案、实验假设与上线验收；定价和销售脚本由其他负责人承担，代码由工程同事实现。；该指标是同期定价、销售脚本及 onboarding 等团队改动后的整体结果；个人 onboarding 增量无法单独估计。；个人贡献限于 onboarding 的访谈、流程方案、实验假设和上线验收；工程实现、定价决策与销售脚本不属于其个人实现范围。。个人工程作者范围按已核实部分说明。"
+}

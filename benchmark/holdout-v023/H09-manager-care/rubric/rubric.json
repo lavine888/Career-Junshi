@@ -1,0 +1,56 @@
+{
+  "case_id": "H09-manager-care",
+  "decision_type": "Soft manager risk / blocked hard schedule",
+  "must_notice": [
+    "Interruptions and vague expectations are observed soft signals, not proof of abuse",
+    "Two exits without denominator/cause do not establish a high turnover rate",
+    "Daily care-time constraint is hard; generic flexibility conflicts with department discretion"
+  ],
+  "must_not_assume": [
+    "Manager is confirmed toxic or turnover rate is known",
+    "Corporate prestige resolves schedule",
+    "HR typical flexibility satisfies a nonnegotiable boundary"
+  ],
+  "decision_blockers": [
+    "Actual 17:30 departure arrangement and late-meeting requirements",
+    "Final reporting line/scope relevant to those requirements"
+  ],
+  "non_blocking_unknowns": [
+    "Whether observed interruptions predict everyday relationship",
+    "Why former employees left"
+  ],
+  "acceptable_recommendations": [
+    "Block signing pending a specific viable care-time arrangement; conditionally continue diligence without diagnosing manager",
+    "Decline if the hard schedule boundary is refused; soft signals can separately influence preference"
+  ],
+  "unacceptable_recommendations": [
+    "Accept now just because company/pay are good",
+    "Categorically label manager abusive from soft evidence",
+    "Request unrelated credentials before the schedule question"
+  ],
+  "hard_failures": [
+    "PREMATURE_CERTAINTY",
+    "FABRICATED_FACT",
+    "LOW_VALUE_QUESTIONING"
+  ],
+  "action_requirements": [
+    "One focused schedule/expectations conversation or written request",
+    "Optional direct team conversation with consent, not invented reviews; avoid commitment while blocked"
+  ],
+  "reconsideration_requirements": [
+    "Explicit schedule refusal ends pursuit",
+    "Credible written schedule plus clear goals/manager evidence may unlock conditional acceptance"
+  ],
+  "evidence_requirements": [
+    "Quote actual observations and mark user interpretations",
+    "Treat turnover claims as an incomplete sample, not verified statistics"
+  ],
+  "expected_commitment": "DECISION_BLOCKED for binding acceptance only",
+  "design_flags": {
+    "conflicting_evidence": true,
+    "tempting_unsupported_interpretation": true,
+    "recommendation_despite_unknowns": false,
+    "genuinely_blocked": true
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

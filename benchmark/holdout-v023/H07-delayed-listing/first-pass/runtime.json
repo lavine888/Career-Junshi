@@ -1,0 +1,9 @@
+{
+  "case_id": "H07-delayed-listing",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "recruiting",
+  "recommendation": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。"
+}

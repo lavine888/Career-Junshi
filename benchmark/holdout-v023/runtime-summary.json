@@ -1,0 +1,91 @@
+[
+  {
+    "case_id": "H01-years-gate",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "decision_status": "FAILED",
+    "extraction_status": "FAILED",
+    "error": "source text identity failed"
+  },
+  {
+    "case_id": "H02-title-scope",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "offer",
+    "recommendation": "当前条件性首选 留任 current；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+  },
+  {
+    "case_id": "H03-repeated-feedback",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "job",
+    "recommendation": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+  },
+  {
+    "case_id": "H04-equity-gap",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "offer",
+    "recommendation": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+  },
+  {
+    "case_id": "H05-metric-credit",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "positioning",
+    "recommendation": "现在采用有边界的表述：据本人描述，在团队项目中负责：用户自述负责 onboarding 访谈、流程方案、实验假设与上线验收；代码由工程同事实现。同期团队还更新了定价和销售脚本。；用户自述负责 onboarding 访谈、流程方案、实验假设与上线验收；定价和销售脚本分别由其他负责人负责。。个人工程作者范围按已核实部分说明。"
+  },
+  {
+    "case_id": "H06-two-technical-paths",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "job",
+    "recommendation": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+  },
+  {
+    "case_id": "H07-delayed-listing",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "recruiting",
+    "recommendation": "先等到约定日期或确认已过约 3 个工作日，再礼貌跟进一次；不能把沉默当拒绝。"
+  },
+  {
+    "case_id": "H08-building-avoidance",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "job",
+    "recommendation": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+  },
+  {
+    "case_id": "H09-manager-care",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "offer",
+    "recommendation": "当前条件性首选 北辰仪器高级产品岗位；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。"
+  },
+  {
+    "case_id": "H10-unknown-systems",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+    "extraction_status": "VALID",
+    "decision_status": "VALID",
+    "mode": "interview",
+    "recommendation": "当前优先防守 architecture / ownership / evidence 的项目追问；这是基于现有信号的准备假设，不是已确认的能力弱点。"
+  }
+]

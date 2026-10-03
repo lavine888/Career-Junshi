@@ -1,0 +1,9 @@
+{
+  "case_id": "H03-repeated-feedback",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "job",
+  "recommendation": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+}

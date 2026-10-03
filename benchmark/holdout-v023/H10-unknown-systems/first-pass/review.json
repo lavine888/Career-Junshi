@@ -1,0 +1,233 @@
+{
+  "case_id": "H10-unknown-systems",
+  "reviewer": "Human operator (same operator authored corpus); no independent inter-rater reliability claim",
+  "rubric_visibility": "Only after all ten extraction/host outputs were frozen",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "PARTIAL",
+    "L3_Host": "PASS",
+    "L4_Overall": "PARTIAL"
+  },
+  "main_strength": "Host supplies truthful bridge, hypothetical reasoning and bounded learning",
+  "main_failure": "L2 defense artifacts remain generic; no tailored spoken recovery bridge",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不要说自己做过公司的索引恢复模块。**材料明确显示该模块由另一组负责，你没有参与实现或设计（S1、S2）。这类经历很容易被继续追问架构选择、故障案例、验证数据和个人决策；一旦答不下去，问题会从“系统知识不足”升级为“经历可信度存疑”。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 27,
+          "excerpt": "### 2. 用四小时补“可讨论能力”，不冒充生产经验"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 27,
+          "excerpt": "### 2. 用四小时补“可讨论能力”，不冒充生产经验"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不要说自己做过公司的索引恢复模块。**材料明确显示该模块由另一组负责，你没有参与实现或设计（S1、S2）。这类经历很容易被继续追问架构选择、故障案例、验证数据和个人决策；一旦答不下去，问题会从“系统知识不足”升级为“经历可信度存疑”。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Courage": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不要说自己做过公司的索引恢复模块。**材料明确显示该模块由另一组负责，你没有参与实现或设计（S1、S2）。这类经历很容易被继续追问架构选择、故障案例、验证数据和个人决策；一旦答不下去，问题会从“系统知识不足”升级为“经历可信度存疑”。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不要说自己做过公司的索引恢复模块。**材料明确显示该模块由另一组负责，你没有参与实现或设计（S1、S2）。这类经历很容易被继续追问架构选择、故障案例、验证数据和个人决策；一旦答不下去，问题会从“系统知识不足”升级为“经历可信度存疑”。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Recommendation Clarity": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不要说自己做过公司的索引恢复模块。**材料明确显示该模块由另一组负责，你没有参与实现或设计（S1、S2）。这类经历很容易被继续追问架构选择、故障案例、验证数据和个人决策；一旦答不下去，问题会从“系统知识不足”升级为“经历可信度存疑”。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "当前优先防守 architecture / ownership / evidence 的项目追问；这是基于现有信号的准备假设，不是已确认的能力弱点。"
+        }
+      ],
+      "assessment": "L2 defense artifacts remain generic; no tailored spoken recovery bridge"
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 11,
+          "excerpt": "## 现在最值得做的三件事"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Information Value": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 11,
+          "excerpt": "## 现在最值得做的三件事"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 80,
+          "excerpt": "- 单次追问不构成转方向依据。只有在约5–10个可比机会中反复出现同一明确缺口，才考虑系统补课、调整岗位组合或改变定位。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 80,
+          "excerpt": "- 单次追问不构成转方向依据。只有在约5–10个可比机会中反复出现同一明确缺口，才考虑系统补课、调整岗位组合或改变定位。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 80,
+          "excerpt": "- 单次追问不构成转方向依据。只有在约5–10个可比机会中反复出现同一明确缺口，才考虑系统补课、调整岗位组合或改变定位。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 80,
+          "excerpt": "- 单次追问不构成转方向依据。只有在约5–10个可比机会中反复出现同一明确缺口，才考虑系统补课、调整岗位组合或改变定位。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Ownership Integrity": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 27,
+          "excerpt": "### 2. 用四小时补“可讨论能力”，不冒充生产经验"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不要说自己做过公司的索引恢复模块。**材料明确显示该模块由另一组负责，你没有参与实现或设计（S1、S2）。这类经历很容易被继续追问架构选择、故障案例、验证数据和个人决策；一旦答不下去，问题会从“系统知识不足”升级为“经历可信度存疑”。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    }
+  },
+  "first_screen": {
+    "status": "PASS",
+    "priority_assessment": "The opening states a judgment/conditional direction before an inventory of facts and unknowns; subsequent bounded actions are visible. No exact character quota imposed.",
+    "excerpt": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023/H10-unknown-systems/first-pass/host-response.md",
+      "line": 3,
+      "excerpt": "**不要说自己做过公司的索引恢复模块。**材料明确显示该模块由另一组负责，你没有参与实现或设计（S1、S2）。这类经历很容易被继续追问架构选择、故障案例、验证数据和个人决策；一旦答不下去，问题会从“系统知识不足”升级为“经历可信度存疑”。"
+    }
+  },
+  "decision_courage": {
+    "status": "PASS",
+    "classification": "CALIBRATED_COMMITMENT"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "decision_relevant_information": [
+      "Clarify assumed consistency/failure semantics while reasoning"
+    ],
+    "qualification": "Information would change effort allocation, feasibility or claim wording; unknowns are not a completeness checklist."
+  },
+  "hard_failures": [],
+  "failure_classification": [
+    {
+      "category": "F",
+      "finding": "exact spoken bridge is available in host; generic structured artifact is a usability limitation, not fabricated experience"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED; not inferred",
+  "assembly_notes": null
+}

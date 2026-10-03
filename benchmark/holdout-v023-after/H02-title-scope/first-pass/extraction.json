@@ -1,0 +1,321 @@
+{
+  "mode": "offer",
+  "summary": "比较接受曜原集团书面 Offer 与留任现职；已提供的核心差异涉及现金、职业方向和产品责任。",
+  "goal": "判断是否为了更高现金接受曜原集团 Offer，同时考虑两年内成为产品负责人的目标。",
+  "claims": [],
+  "offer": {
+    "weights": {},
+    "constraints": [],
+    "options": [
+      {
+        "name": "曜原 role",
+        "constraint_status": "unknown",
+        "ratings": {
+          "career_direction": 1,
+          "ownership": 1,
+          "compensation": 5
+        }
+      },
+      {
+        "name": "留任 current",
+        "constraint_status": "unknown",
+        "ratings": {
+          "career_direction": 4,
+          "ownership": 4,
+          "compensation": 3
+        }
+      }
+    ],
+    "priorities": {
+      "career_direction": "high",
+      "ownership": "high",
+      "compensation": "medium"
+    },
+    "source_ids": [
+      "S1",
+      "S3"
+    ]
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "text": "用户报告自己 31 岁，现职年现金为 24 万元。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "31 岁，现职年现金 24 万元",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户报告现职负责门店补货产品，并能独立安排小范围实验。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "负责门店补货产品，能独立安排小范围实验",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "用户报告现团队已书面确认未来半年继续给予产品责任。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "现团队书面确认未来半年继续给产品责任",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "该书面确认不是新的招聘承诺。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "不是新的招聘承诺",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "用户的目标是在两年内成为产品负责人。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "目标两年内成为产品负责人",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户报告家庭当前支出可覆盖，不存在必须立即加薪的硬约束。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "家庭当前支出可覆盖，不存在必须立即加薪的硬约束",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户提供的定性偏好是 career_direction high、ownership high、compensation medium。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "候选人提供偏好：career_direction high，ownership high，compensation medium",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "preferred"
+    },
+    {
+      "id": "F8",
+      "text": "曜原集团书面 Offer 载明年保证现金 36 万元、Title 为 AI 产品专家、工作地点为成都。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "曜原集团书面 Offer：年保证现金 36 万元，Title 为 AI 产品专家，工作在成都",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "岗位附件写明 70% 的工作是规则配置或系统巡检。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "70% 规则配置/系统巡检",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F10",
+      "text": "岗位附件写明 20% 的工作是客户工单。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "20% 客户工单",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F11",
+      "text": "岗位附件写明 10% 的工作是协助需求登记。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "10% 协助需求登记",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F12",
+      "text": "岗位附件明确该岗位不负责路线图、实验设计或模型选择。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "不负责路线图、实验设计或模型选择",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F13",
+      "text": "书面考核指标是工单处理时效。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "考核是工单处理时效",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F14",
+      "text": "Offer 的正常接受截止日期为 2026-10-09。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "正常接受截止 2026-10-09",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F15",
+      "text": "用户报告面试官口头表示日后可能接触创新项目。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "面试官口头说日后可能接触创新项目",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "unknown"
+    },
+    {
+      "id": "F16",
+      "text": "用户给曜原 role 的个人评分是 career_direction=1、ownership=1、compensation=5。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "曜原 role career_direction=1, ownership=1, compensation=5",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "preferred"
+    },
+    {
+      "id": "F17",
+      "text": "用户给留任 current 的个人评分是 career_direction=4、ownership=4、compensation=3。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "留任 current career_direction=4, ownership=4, compensation=3",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "preferred"
+    },
+    {
+      "id": "F18",
+      "text": "上述评分是用户个人评价，不是客观公司评分。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "这些是个人评价，不是客观公司评分",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "I1",
+      "text": "用户认为现金加薪有吸引力。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "现金加薪有吸引力",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed"
+    },
+    {
+      "id": "I2",
+      "text": "曜原的 AI 产品专家 Title 与附件所列产品决策责任范围存在差异。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "Title 为 AI 产品专家，工作在成都。岗位附件：70% 规则配置/系统巡检，20% 客户工单，10% 协助需求登记；不负责路线图、实验设计或模型选择",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "unknowns": [
+    "现团队在未来半年之后是否继续给予产品责任未知。",
+    "可能接触创新项目所对应的转岗日期和审批标准未知。"
+  ],
+  "context_sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "offer"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report"
+    }
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "schema_version": "2",
+  "current_situation": "决定如何处理北辰仪器高级产品岗位这一有吸引力但在经理、工作时间和团队稳定性方面存在关键未知的 Offer。",
+  "mode": "offer",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户自述自己 38 岁、在南京且为单亲。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S1",
+      "source_span": "38 岁，南京，单亲",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户必须每天 17:30 离开现场接孩子，并明确这是不可协商条件。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F2",
+      "source_id": "S1",
+      "source_span": "需要每天 17:30 离开现场接孩子，这是不可协商条件",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "用户可以晚间异步补工作，但不能接受长期临时晚会。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F3",
+      "source_id": "S1",
+      "source_span": "可以晚间异步补工作，不可接受长期临时晚会",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "用户的目标是稳定成长。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F4",
+      "source_id": "S1",
+      "source_span": "目标稳定成长",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户不想只追求大公司标签。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F5",
+      "source_id": "S1",
+      "source_span": "不想只追求大公司标签",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告准经理在两次面试中多次打断其提问。",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F6",
+      "source_id": "S1",
+      "source_span": "两次面试中准经理多次打断其提问",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "材料载明北辰仪器高级产品岗位保证年现金 42 万元。",
+      "source": "S2",
+      "source_type": "offer",
+      "id": "F9",
+      "source_id": "S2",
+      "source_span": "北辰仪器高级产品岗位：保证年现金 42 万元",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "岗位地点为南京。",
+      "source": "S2",
+      "source_type": "offer",
+      "id": "F10",
+      "source_id": "S2",
+      "source_span": "地点南京",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "HR 邮件称通常支持弹性。",
+      "source": "S2",
+      "source_type": "offer",
+      "id": "F12",
+      "source_id": "S2",
+      "source_span": "HR 邮件说通常支持弹性",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "Offer 附件写明工作时间按部门安排。",
+      "source": "S2",
+      "source_type": "offer",
+      "id": "F13",
+      "source_id": "S2",
+      "source_span": "Offer 附件写“工作时间按部门安排”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "该 Offer 的截止日为 2026-10-12，但具体截止时刻未提供。",
+      "source": "S2",
+      "source_type": "offer",
+      "id": "F17",
+      "source_id": "S2",
+      "source_span": "截止日 2026-10-12",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "用户提供的截图中，两位自称曾在该部门的人据称在过去一年先后离职；其身份及离职事实未被独立核实。",
+      "source": "S3",
+      "source_type": "document",
+      "id": "F18",
+      "source_id": "S3",
+      "source_span": "两位自称曾在该部门的人，在过去一年先后离职",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "材料记录准经理称入职后目标自然会明确，忙时大家一起顶。",
+      "source": "S3",
+      "source_type": "document",
+      "id": "F20",
+      "source_id": "S3",
+      "source_span": "准经理面试原话：入职后目标自然会明确，忙的时候大家一起顶",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "HR 另称团队氛围通常很好。",
+      "source": "S3",
+      "source_type": "document",
+      "id": "F21",
+      "source_id": "S3",
+      "source_span": "HR 又说团队氛围通常很好",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F7",
+      "text": "用户由此感觉经理可能不尊重人；这是用户的解释，不是对经理内心或品格的已确认事实。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "用户因此觉得经理可能不尊重人",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "id": "F11",
+      "text": "材料将产品范围描述为适合用户此前七年经验；适合程度属于尚未独立核实的判断。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "产品范围适合此前七年经验",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "observation",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "label": "INFERENCE",
+      "text": "用户提供的偏好评分可提示当前选择，但不保证入职后的真实体验"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "员工访谈或匿名评价证据缺失。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "最终直属经理尚未确定。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "是否能书面保障接送孩子的时间安排尚未确认。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "部门的晚会惯例尚未确认。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "部门原人数、离职原因以及截图是否仍属最新情况均未知。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "来自在职员工的直接材料缺失。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "北辰仪器高级产品岗位: 硬约束是否满足"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "硬约束或关键条款仍需确认"
+    }
+  ],
+  "current_goal": "在稳定成长与照顾孩子的不可协商条件下，判断是否以及在什么条件下继续推进或接受该 Offer。",
+  "claims": [],
+  "highest_risk": "关键证据或目标尚未确认",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/02-career-decision.md",
+    "references/knowledge/06-offer-evaluation.md",
+    "references/practical/offer.md"
+  ],
+  "method_plan": [
+    "wedge",
+    "offer"
+  ],
+  "bottleneck": "Direction",
+  "recommended_move": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。",
+  "why": [
+    "目标与硬约束优先于公司品牌",
+    "评分仅计算用户提供的偏好；未知不补平均分"
+  ],
+  "actions": [
+    {
+      "kind": "offer_comparison",
+      "description": "整理确认条件、未知与偏好敏感点",
+      "execution_mode": "codex",
+      "artifact": "Offer 比较表",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "confirm_terms",
+      "description": "确认经理、团队、ownership、书面薪酬、地点与截止时间",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "career_decision",
+      "description": "关键未知确认后由你接受或拒绝",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "最早的真实 Offer 截止时间之前",
+  "stop_condition": "任一硬约束不满足则停止接受该选项；目标未明确先暂停排名",
+  "pivot_condition": "确认信息或权重变化足以改变首选时重新比较",
+  "comparison": [
+    {
+      "name": "北辰仪器高级产品岗位",
+      "eligible": null,
+      "score": null,
+      "ratings": {},
+      "reason": "用户主观偏好的加权比较，非公司客观质量"
+    }
+  ],
+  "constraints": [
+    "需要每天 17:30 离开现场接孩子，这是不可协商条件",
+    "不可接受长期临时晚会"
+  ],
+  "current_preference": null,
+  "blocking_unknowns": [
+    "接受前必须确认用户硬约束：需要每天 17:30 离开现场接孩子，这是不可协商条件",
+    "接受前必须确认用户硬约束：不可接受长期临时晚会"
+  ],
+  "offer_priorities": {
+    "career_direction": "high",
+    "lifestyle": "high",
+    "manager": "high",
+    "brand": "low"
+  },
+  "decision_unknowns": [],
+  "reversal_conditions": [],
+  "recommendation_type": "BLOCKED",
+  "decision_sufficiency": {
+    "state": "DECISION_BLOCKED",
+    "basis": "按有来源的定性优先级比较已提供维度，缺失条件可反转首选",
+    "blocking_unknowns": [
+      "接受前必须确认用户硬约束：需要每天 17:30 离开现场接孩子，这是不可协商条件",
+      "接受前必须确认用户硬约束：不可接受长期临时晚会"
+    ],
+    "reversal_unknowns": []
+  },
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "offer",
+    "role_family": "unknown",
+    "stage": "decision",
+    "situation_type": "offer-choice",
+    "risk_tags": [
+      "constraints",
+      "manager",
+      "timing"
+    ],
+    "situation_tags": [
+      "constraints",
+      "manager",
+      "timing"
+    ]
+  },
+  "recommendation": {
+    "move": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "用户自述自己 38 岁、在南京且为单亲。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户必须每天 17:30 离开现场接孩子，并明确这是不可协商条件。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户可以晚间异步补工作，但不能接受长期临时晚会。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户的目标是稳定成长。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不想只追求大公司标签。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告准经理在两次面试中多次打断其提问。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料载明北辰仪器高级产品岗位保证年现金 42 万元。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "岗位地点为南京。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "HR 邮件称通常支持弹性。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Offer 附件写明工作时间按部门安排。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "该 Offer 的截止日为 2026-10-12，但具体截止时刻未提供。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户提供的截图中，两位自称曾在该部门的人据称在过去一年先后离职；其身份及离职事实未被独立核实。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "材料记录准经理称入职后目标自然会明确，忙时大家一起顶。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "HR 另称团队氛围通常很好。",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "当前优势来自已提供的偏好与维度；口头职责、经理或经营条件的不确定性可能使备选更合适。",
+    "reconsider_if": [
+      "补充决定性目标、约束或缺失比较维度后重评"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "决定如何处理北辰仪器高级产品岗位这一有吸引力但在经理、工作时间和团队稳定性方面存在关键未知的 Offer。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "用户自述自己 38 岁、在南京且为单亲。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户必须每天 17:30 离开现场接孩子，并明确这是不可协商条件。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户可以晚间异步补工作，但不能接受长期临时晚会。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户的目标是稳定成长。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不想只追求大公司标签。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户报告准经理在两次面试中多次打断其提问。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料载明北辰仪器高级产品岗位保证年现金 42 万元。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "岗位地点为南京。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "HR 邮件称通常支持弹性。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "Offer 附件写明工作时间按部门安排。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "该 Offer 的截止日为 2026-10-12，但具体截止时刻未提供。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户提供的截图中，两位自称曾在该部门的人据称在过去一年先后离职；其身份及离职事实未被独立核实。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "材料记录准经理称入职后目标自然会明确，忙时大家一起顶。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "HR 另称团队氛围通常很好。",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Direction",
+    "options_considered": [
+      "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。",
+      "先核实最能改变排序的书面条款、经理与个人负责范围。"
+    ],
+    "chosen": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。",
+    "rejected_options": [
+      {
+        "option": "先核实最能改变排序的书面条款、经理与个人负责范围。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "目标与硬约束优先于公司品牌",
+      "评分仅计算用户提供的偏好；未知不补平均分"
+    ],
+    "reconsider_if": [
+      "补充决定性目标、约束或缺失比较维度后重评"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

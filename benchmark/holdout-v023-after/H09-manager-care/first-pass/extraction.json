@@ -1,0 +1,321 @@
+{
+  "mode": "offer",
+  "summary": "决定如何处理北辰仪器高级产品岗位这一有吸引力但在经理、工作时间和团队稳定性方面存在关键未知的 Offer。",
+  "goal": "在稳定成长与照顾孩子的不可协商条件下，判断是否以及在什么条件下继续推进或接受该 Offer。",
+  "claims": [],
+  "metadata": {
+    "mode": "offer",
+    "role_family": "unknown",
+    "stage": "decision",
+    "situation_type": "offer-choice",
+    "risk_tags": [
+      "constraints",
+      "manager",
+      "timing"
+    ],
+    "situation_tags": [
+      "constraints",
+      "manager",
+      "timing"
+    ]
+  },
+  "offer": {
+    "weights": {},
+    "constraints": [
+      "需要每天 17:30 离开现场接孩子，这是不可协商条件",
+      "不可接受长期临时晚会"
+    ],
+    "options": [
+      {
+        "name": "北辰仪器高级产品岗位",
+        "constraint_status": "unknown",
+        "ratings": {}
+      }
+    ],
+    "priorities": {
+      "career_direction": "high",
+      "lifestyle": "high",
+      "manager": "high",
+      "brand": "low"
+    },
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "critical_unknowns": [
+      {
+        "unknown": "能否书面确认用户每天 17:30 离开现场接孩子，并允许晚间异步补工作",
+        "option": "北辰仪器高级产品岗位",
+        "priority": "decisive",
+        "why_it_matters": "这是用户明确不可协商的条件，而现有附件仅写工作时间按部门安排。",
+        "how_to_verify": "要求雇主在书面 Offer、补充说明或可留存的正式邮件中确认具体安排。",
+        "reversal_condition": "若不能明确书面保障每日 17:30 离场，该选项不满足硬约束。",
+        "source_ids": [
+          "S1",
+          "S2"
+        ]
+      },
+      {
+        "unknown": "最终直属经理是谁，以及其目标设定和沟通方式是否符合用户对尊重与稳定成长的要求",
+        "option": "北辰仪器高级产品岗位",
+        "priority": "decisive",
+        "why_it_matters": "用户在两次面试中观察到准经理多次打断，并听到目标入职后自然明确，但最终直属经理尚未确定。",
+        "how_to_verify": "确认最终汇报对象，并就前三至六个月目标、反馈方式和决策边界进行一次针对性沟通。",
+        "reversal_condition": "若最终经理仍无法说明目标机制，或沟通继续触发用户不可接受的管理风险，则不再偏向该 Offer。",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ]
+      },
+      {
+        "unknown": "部门临时晚会和忙时延长现场工作的实际频率与提前通知方式",
+        "option": "北辰仪器高级产品岗位",
+        "priority": "decisive",
+        "why_it_matters": "用户不能接受长期临时晚会，而当前只有通常支持弹性和忙时一起顶的概括表述。",
+        "how_to_verify": "向 HR、最终经理及可接触的在职员工询问最近三个月的实际频率、通常结束时间和提前通知惯例。",
+        "reversal_condition": "若长期或频繁临时晚会是常态且无法兼容 17:30 离场，该选项违反硬约束。",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S3"
+        ]
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "text": "用户自述自己 38 岁、在南京且为单亲。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "38 岁，南京，单亲",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户必须每天 17:30 离开现场接孩子，并明确这是不可协商条件。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "需要每天 17:30 离开现场接孩子，这是不可协商条件",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F3",
+      "text": "用户可以晚间异步补工作，但不能接受长期临时晚会。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "可以晚间异步补工作，不可接受长期临时晚会",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F4",
+      "text": "用户的目标是稳定成长。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "目标稳定成长",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "用户不想只追求大公司标签。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "不想只追求大公司标签",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户报告准经理在两次面试中多次打断其提问。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "两次面试中准经理多次打断其提问",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "材料载明北辰仪器高级产品岗位保证年现金 42 万元。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "北辰仪器高级产品岗位：保证年现金 42 万元",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "岗位地点为南京。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "地点南京",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "HR 邮件称通常支持弹性。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "HR 邮件说通常支持弹性",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F13",
+      "text": "Offer 附件写明工作时间按部门安排。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "Offer 附件写“工作时间按部门安排”",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F17",
+      "text": "该 Offer 的截止日为 2026-10-12，但具体截止时刻未提供。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "截止日 2026-10-12",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F18",
+      "text": "用户提供的截图中，两位自称曾在该部门的人据称在过去一年先后离职；其身份及离职事实未被独立核实。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "两位自称曾在该部门的人，在过去一年先后离职",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F20",
+      "text": "材料记录准经理称入职后目标自然会明确，忙时大家一起顶。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "准经理面试原话：入职后目标自然会明确，忙的时候大家一起顶",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F21",
+      "text": "HR 另称团队氛围通常很好。",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "HR 又说团队氛围通常很好",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F7",
+      "text": "用户由此感觉经理可能不尊重人；这是用户的解释，不是对经理内心或品格的已确认事实。",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "用户因此觉得经理可能不尊重人",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "材料将产品范围描述为适合用户此前七年经验；适合程度属于尚未独立核实的判断。",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "产品范围适合此前七年经验",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "unknowns": [
+    "员工访谈或匿名评价证据缺失。",
+    "最终直属经理尚未确定。",
+    "是否能书面保障接送孩子的时间安排尚未确认。",
+    "部门的晚会惯例尚未确认。",
+    "部门原人数、离职原因以及截图是否仍属最新情况均未知。",
+    "来自在职员工的直接材料缺失。"
+  ],
+  "context_sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "offer"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "document"
+    }
+  ]
+}

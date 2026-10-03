@@ -1,0 +1,51 @@
+{
+  "REFERENCE_MODE": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "attempts": [
+    {
+      "name": "extract-H02-title-scope",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:27:58.609737+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "179dc2fe128b4b8c7555c1ed721c29d484d493ef7f2d0625c7e619866bc40487",
+      "commands": [],
+      "usage": {
+        "input_tokens": 23234,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 4661,
+        "reasoning_output_tokens": 2634
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:30:04.879360+00:00",
+      "seconds": 126.27,
+      "raw_sha256": "8d1a71193065d0191c8c76f59519d4f7e08d571e2235041910ecd4b602750d33"
+    },
+    {
+      "name": "host-H02-title-scope",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:28:54.524016+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "a1183303c2822613932279cfe7719bffcb538e1024640bfc8f87a15b4f68cda5",
+      "commands": [],
+      "usage": {
+        "input_tokens": 20410,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2253,
+        "reasoning_output_tokens": 1316
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:29:57.675513+00:00",
+      "seconds": 63.16,
+      "raw_sha256": "995faa6d4e1ef3faabf3a9e11369b102ad59c115eea09bb7aa74ee8cc9873a64"
+    }
+  ],
+  "boundary": "Missing last-message files were recovered verbatim only when a completed final event existed; original MODEL_ERROR writer records are retained."
+}

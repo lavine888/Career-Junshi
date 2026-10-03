@@ -1,0 +1,10 @@
+{
+  "original_case_id": "H02-title-scope",
+  "changed_decisive_variable": "priority",
+  "WHY_CHANGE_IS_EXPECTED": "Prioritize cash over product ownership; knowing operational scope is acceptable, never relabel it as product ownership.",
+  "unchanged_material_source_ids": [
+    "S2",
+    "S3"
+  ],
+  "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation"
+}

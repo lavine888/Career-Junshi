@@ -1,0 +1,53 @@
+{
+  "case_id": "H07-delayed-listing",
+  "decision_type": "Changed promise / removed listing",
+  "must_notice": [
+    "Later direct delayed-but-processing statement supersedes the old expectation",
+    "Listing absence is not an individual rejection",
+    "Actual competing deadline changes follow-up urgency"
+  ],
+  "must_not_assume": [
+    "Job link disappearance means rejected",
+    "Delayed statement equals passing or permanent freeze",
+    "Three working days are confirmed from calendar dates"
+  ],
+  "decision_blockers": [],
+  "non_blocking_unknowns": [
+    "Cause of listing disappearance",
+    "Candidate rank and headcount status"
+  ],
+  "acceptable_recommendations": [
+    "One truthful deadline-aware message requesting actionable timing; keep status unresolved and protect competing Offer",
+    "Do not wait beyond real alternative deadline without explicit reason"
+  ],
+  "unacceptable_recommendations": [
+    "Declare rejection from listing removal",
+    "Daily chasing or inventing urgency",
+    "Wait three workdays regardless of Tuesday deadline"
+  ],
+  "hard_failures": [
+    "SILENCE_TO_REJECTION",
+    "LISTING_REMOVED_TO_REJECTION",
+    "FABRICATED_FACT"
+  ],
+  "action_requirements": [
+    "Usable message referencing updated delay and real deadline",
+    "A window ending before the competing acceptance time, with fallback"
+  ],
+  "reconsideration_requirements": [
+    "Explicit result/new reliable timing changes decision",
+    "No actionable answer before competing deadline limits investment"
+  ],
+  "evidence_requirements": [
+    "Respect chronology of recruiter evidence",
+    "Keep unavailable listing and its cause separate"
+  ],
+  "expected_commitment": "Strongest justified reversible or conditional recommendation; alternate supported choices allowed",
+  "design_flags": {
+    "conflicting_evidence": true,
+    "tempting_unsupported_interpretation": true,
+    "recommendation_despite_unknowns": true,
+    "genuinely_blocked": false
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

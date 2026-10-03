@@ -1,0 +1,27 @@
+{
+  "case_id": "H09-manager-care",
+  "origin": "synthetic",
+  "request": "北辰仪器的岗位和薪酬都很好，但准直属经理两次不停打断我，还说目标到时候自然就知道。用户给的离职线索有点吓人。我很在意这些，但我每天下午必须接孩子。你会怎么处理？",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Observed interview and interpretation",
+      "text": "38 岁，南京，单亲，需要每天 17:30 离开现场接孩子，这是不可协商条件；可以晚间异步补工作，不可接受长期临时晚会。目标稳定成长，不想只追求大公司标签。两次面试中准经理多次打断其提问，用户因此觉得经理可能不尊重人；没有员工访谈或匿名评价。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "offer",
+      "label": "Attractive but incomplete agreement",
+      "text": "北辰仪器高级产品岗位：保证年现金 42 万元、地点南京，产品范围适合此前七年经验。HR 邮件说通常支持弹性，但 Offer 附件写“工作时间按部门安排”，还未确定最终直属经理。无书面接送孩子时间安排、没有确认晚会惯例；截止日 2026-10-12。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "document",
+      "label": "User-provided turnover clues",
+      "text": "用户提供职业主页截图节选：两位自称曾在该部门的人，在过去一年先后离职；不知道部门原人数、离职原因或截图最新情况。准经理面试原话：入职后目标自然会明确，忙的时候大家一起顶。HR 又说团队氛围通常很好。没有来自在职员工的直接材料。"
+    }
+  ],
+  "as_of": "2026-10-04T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic clock. Fictional companies and anonymized people; no real hiring outcome or private history."
+}

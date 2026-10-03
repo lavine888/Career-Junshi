@@ -1,0 +1,330 @@
+{
+  "mode": "interview",
+  "summary": "决定如何在下一轮搜索应用工程面试前补救分布式索引恢复问题，并处理是否声称做过索引恢复模块的贡献边界",
+  "goal": "保留可信的应用工程定位，同时提高对索引更新、数据一致性和跨团队排障的技术讨论能力",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "个人做过搜索查询接口、排序试验和评估脚本",
+      "confidence": "SELF_REPORTED",
+      "stage": "completed",
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "用户自述个人做过搜索查询接口、排序试验和评估脚本"
+      },
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "authorship"
+          ],
+          "summary": "用户直接陈述个人做过搜索查询接口、排序试验和评估脚本。"
+        },
+        {
+          "source": "S2",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "authorship"
+          ],
+          "summary": "面试复盘称用户当时解释了自己做的查询接口。"
+        }
+      ],
+      "risk": [
+        "该经历不覆盖索引存储与恢复的实现或设计",
+        "个人贡献范围和深度未获独立核验"
+      ]
+    }
+  ],
+  "metadata": {
+    "mode": "interview",
+    "role_family": "unknown",
+    "stage": "preparation",
+    "situation_type": "claim-defense",
+    "risk_tags": [
+      "architecture",
+      "evidence",
+      "ownership"
+    ],
+    "situation_tags": [
+      "architecture",
+      "evidence",
+      "ownership"
+    ]
+  },
+  "interview": {
+    "available_hours": 4,
+    "signals": [
+      {
+        "topic": "architecture",
+        "basis": "上一场面试实际追问多节点索引故障恢复，以及如何避免重复写和丢失更新。",
+        "source_ids": [
+          "S2"
+        ],
+        "kind": "observed_signal"
+      },
+      {
+        "topic": "ownership",
+        "basis": "用户明确称索引存储与恢复由另一组负责，自己未参与实现或设计。",
+        "source_ids": [
+          "S1",
+          "S2"
+        ],
+        "kind": "risk_hypothesis"
+      },
+      {
+        "topic": "evidence",
+        "basis": "用户只有四小时准备时间，并明确认为无法在此期间补成生产经验。",
+        "source_ids": [
+          "S1"
+        ],
+        "kind": "risk_hypothesis"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "text": "用户自述为 27 岁、在杭州，有两年应用工程经历",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "27 岁，杭州，两年应用工程",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户自述个人做过搜索查询接口、排序试验和评估脚本",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "个人做过搜索查询接口、排序试验和评估脚本",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "用户自述索引存储与恢复由另一组负责，自己未参与实现或设计",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "索引存储与恢复由另一组负责，未参与实现或设计",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "用户自述 2026-10-09 将面试另一家公司",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "2026-10-09 再面一家不同公司",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "用户自述今晚到后天可用准备时间总计四小时",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "今晚到后天总共四小时",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F6",
+      "text": "用户复述面试官询问多节点写索引时的节点故障恢复、重复写和更新丢失问题",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "面试官问：多节点写索引时节点故障，如何恢复，同时避免重复写和丢失更新？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户自述当时解释了自己做的查询接口，并说明存储层由平台团队负责",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "用户解释了自己做的查询接口，然后说存储层由平台团队负责",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户自述随后尝试推测恢复方案",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "随后尝试推测恢复方案",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "下一岗位是烛溪知识系统搜索应用工程师，职责包括维护查询 API、检索评估和线上问题定位",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "烛溪知识系统搜索应用工程师：维护查询 API、检索评估、线上问题定位",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F10",
+      "text": "该岗位优先考虑对索引更新与数据一致性的理解",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "理解索引更新与数据一致性优先",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F11",
+      "text": "所提供的岗位摘要写明没有要求独立建设分布式存储",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "没有要求独立建设分布式存储",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "所提供的岗位摘要预计会讨论跨团队排障",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "预计会讨论跨团队排障",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F13",
+      "text": "用户想保留可信的应用工程定位，同时提高技术讨论能力",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "用户想保留可信的应用工程定位，同时提高技术讨论能力",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "I1",
+      "text": "用户自觉昨天没有答好",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "自觉没答好",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed"
+    },
+    {
+      "id": "I2",
+      "text": "用户认为下一场面试可能出现同类系统问题",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "同类系统问题可能出现",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "I3",
+      "text": "用户判断四小时内不可能补成生产经验",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "不可能补成生产经验",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "I4",
+      "text": "用户认为当时没有讲清恢复方案",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "但没讲清",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed"
+    }
+  ],
+  "unknowns": [
+    "昨天面试的招聘方评价未知",
+    "该次面试是否获得评价或拒信未知"
+  ],
+  "context_sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "interview_recap"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "jd"
+    }
+  ]
+}

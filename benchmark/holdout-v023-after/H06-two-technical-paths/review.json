@@ -1,0 +1,331 @@
+{
+  "case_id": "H06-two-technical-paths",
+  "phase": "FRESH_AFTER",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "reviewer": "Same human operator; no independent-rater claim",
+  "generation_had_rubric": false,
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "PASS",
+    "L3_Host": "PASS",
+    "L4_Overall": "PASS"
+  },
+  "main_strength": "Unknown-family ML role can enter hierarchy; host and L2 prioritize founder-goal customer work conditionally",
+  "main_failure": "Ordinal judgments remain host interpretations, not verified abilities",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 59,
+          "excerpt": "- **Solutions 主线的最强证据：** 你已经做过两个工业客户的需求拆解、接口联调、集成开发和验收，并主持问题复盘。材料支持这些个人贡献，但未独立审查全部仓库。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但限定为“亲自构建、参与交付、非重销售”的岗位。**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但限定为“亲自构建、参与交付、非重销售”的岗位。**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "decision_sufficiency",
+          "excerpt": {
+            "state": "DECISION_CONDITIONAL",
+            "basis": "有来源的定性比较足以形成可逆的投递主线",
+            "blocking_unknowns": [],
+            "reversal_unknowns": [
+              "协议允许按客户需要调整出差且上限未确认；与每月出差偏好和长期出差硬约束能否兼容未知。"
+            ]
+          }
+        }
+      ]
+    },
+    "Decision Courage": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但限定为“亲自构建、参与交付、非重销售”的岗位。**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但限定为“亲自构建、参与交付、非重销售”的岗位。**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "bottleneck",
+          "excerpt": "Direction"
+        }
+      ]
+    },
+    "Recommendation Clarity": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但限定为“亲自构建、参与交付、非重销售”的岗位。**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 20,
+          "excerpt": "1. **用一版简历服务主副线**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "actions",
+          "excerpt": [
+            {
+              "kind": "write_material",
+              "description": "按当前主线整理一版真实简历，只突出已有个人决策与贡献",
+              "execution_mode": "codex",
+              "artifact": "主线经历表述",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "jd_map",
+              "description": "核对当前职责与比较中的最大缺口；给副线和探索线设置小规模验证",
+              "execution_mode": "codex",
+              "artifact": "岗位方向对照",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "apply",
+              "description": "优先验证主线；副线限量，探索线不分散当前主投",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            }
+          ]
+        }
+      ]
+    },
+    "Information Value": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 8,
+          "excerpt": "- **苔川 AI Solutions：条件性主投。** 岗位内容更贴近你三到五年后的工业软件创业目标，但出差上限必须先确认。"
+        }
+      ]
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 75,
+          "excerpt": "反过来，如果 Solutions 岗能够明确保证出差边界，并让你持续负责集成实现、验收标准、失败恢复和客户反馈闭环，那么主线判断会进一步加强。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 67,
+          "excerpt": "## 什么会改变我的判断"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 77,
+          "excerpt": "**停止线：** 不要为两个岗位族制作完全不同的人设，也不要为了 FDE 接受明显违反出差硬约束的职位。若连续五个可比 Solutions 机会都存在同样的驻场冲突，再把 ML 提升为主线；单个岗位不代表整条方向。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "stop_condition",
+          "excerpt": "硬约束不满足、缺口超出预算或无法诚实防守时停止该方向的主投"
+        }
+      ]
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 77,
+          "excerpt": "**停止线：** 不要为两个岗位族制作完全不同的人设，也不要为了 FDE 接受明显违反出差硬约束的职位。若连续五个可比 Solutions 机会都存在同样的驻场冲突，再把 ML 提升为主线；单个岗位不代表整条方向。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "Ownership Integrity": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 27,
+          "excerpt": "   - 明确线上平台由团队负责，不写成个人端到端主导；"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "主投：AI Solutions / Forward Deployed；副投：ML Engineer"
+        }
+      ]
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 57,
+          "excerpt": "现有材料对两条路线都有真实支撑，但对长期目标的价值不同："
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H06-two-technical-paths/final-runtime/decision.json",
+          "field": "current_goal",
+          "excerpt": "确定 ML Engineer 与 AI Solutions / Forward Deployed 的主副线，并保留会改变判断的关键未知。"
+        }
+      ]
+    }
+  },
+  "decision_courage": {
+    "status": "PASS",
+    "classification": "CALIBRATED_COMMITMENT"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "qualification": "Questions target feasibility, decision boundary or claim defense; no irrelevant interviewer biography requested."
+  },
+  "first_screen": {
+    "status": "PASS",
+    "evidence": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023-after/H06-two-technical-paths/first-pass/host-response.md",
+      "line": 3,
+      "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但限定为“亲自构建、参与交付、非重销售”的岗位。**  "
+    },
+    "qualification": "Information priority is judged, not an exact character count. H07 prioritizes a judgment but overstates knowledge."
+  },
+  "hard_failures": [],
+  "failure_classification": [],
+  "outcomes": "NOT_SUPPLIED"
+}

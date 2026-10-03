@@ -1,0 +1,206 @@
+{
+  "phase": "FRESH_AFTER",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "cases": [
+    {
+      "case_id": "H01-years-gate",
+      "mode": "job",
+      "extraction": "PASS",
+      "decision": "FAIL",
+      "host": "PASS",
+      "overall": "FAIL",
+      "main_strength": "Host preserves required tenure, limited application and no new project",
+      "main_failure": "Fresh extraction changes fit to unknown and L2 returns unrelated role-discovery work",
+      "hard_failures": [
+        "NO_PRIORITIZATION",
+        "OVER_CAUTION",
+        "GENERIC_ADVICE"
+      ],
+      "classifications": [
+        {
+          "category": "B",
+          "finding": "fresh job.fit=unknown changes routing despite unchanged source; same-packet replay remains unchanged"
+        }
+      ]
+    },
+    {
+      "case_id": "H02-title-scope",
+      "mode": "offer",
+      "extraction": "PASS",
+      "decision": "PASS",
+      "host": "PASS",
+      "overall": "PASS",
+      "main_strength": "Written scope and stated qualitative priorities preserve current-role preference",
+      "main_failure": "No new material failure",
+      "hard_failures": [],
+      "classifications": []
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "mode": "job",
+      "extraction": "FAIL",
+      "decision": "FAIL",
+      "host": "PASS",
+      "overall": "FAIL",
+      "main_strength": "Host still recommends KEEP direction / REFINE technical communication",
+      "main_failure": "Extraction labels a friend causal opinion kind=claim with confidence=interpretation; contract rejects it",
+      "hard_failures": [],
+      "classifications": [
+        {
+          "category": "B",
+          "finding": "fresh extraction violates the stated confidence/kind contract; no decision produced and guard not bypassed"
+        }
+      ]
+    },
+    {
+      "case_id": "H04-equity-gap",
+      "mode": "offer",
+      "extraction": "PARTIAL",
+      "decision": "PARTIAL",
+      "host": "PASS",
+      "overall": "PARTIAL",
+      "main_strength": "Binding acceptance remains correctly blocked; no fake comparative preference",
+      "main_failure": "Fresh packet omits qualitative priorities/critical_unknowns, so L2 verification stays generic",
+      "hard_failures": [],
+      "classifications": [
+        {
+          "category": "B",
+          "finding": "missing optional structured priorities/critical_unknowns loses targeted equity/cash check despite good host answer"
+        }
+      ]
+    },
+    {
+      "case_id": "H05-metric-credit",
+      "mode": "positioning",
+      "extraction": "PASS",
+      "decision": "PARTIAL",
+      "host": "PASS",
+      "overall": "PARTIAL",
+      "main_strength": "New host keeps metric as concurrent team observation without assigning isolated causal credit",
+      "main_failure": "Structured ownership sentence remains duplicated and awkward",
+      "hard_failures": [],
+      "classifications": [
+        {
+          "category": "A",
+          "finding": "retained ownership usability defect; no fourth fix"
+        },
+        {
+          "category": "B",
+          "finding": "disappearance of causal slip with unchanged Skill is sample variance, not patch evidence"
+        }
+      ]
+    },
+    {
+      "case_id": "H06-two-technical-paths",
+      "mode": "job",
+      "extraction": "PASS",
+      "decision": "PASS",
+      "host": "PASS",
+      "overall": "PASS",
+      "main_strength": "Unknown-family ML role can enter hierarchy; host and L2 prioritize founder-goal customer work conditionally",
+      "main_failure": "Ordinal judgments remain host interpretations, not verified abilities",
+      "hard_failures": [],
+      "classifications": []
+    },
+    {
+      "case_id": "H07-delayed-listing",
+      "mode": "recruiting",
+      "extraction": "PASS",
+      "decision": "PASS",
+      "host": "PARTIAL",
+      "overall": "FAIL",
+      "main_strength": "L2 protects deadline and host offers a truthful bounded follow-up",
+      "main_failure": "Host opens with definitive not-rejected status although current hidden result is unknown",
+      "hard_failures": [
+        "PREMATURE_CERTAINTY"
+      ],
+      "classifications": [
+        {
+          "category": "B",
+          "finding": "fresh host overstates status in first screen; later uncertainty does not erase opening"
+        },
+        {
+          "category": "C",
+          "finding": "a colloquial no-communicated-rejection reading is possible; strict hidden-status interpretation retained and disclosed"
+        }
+      ]
+    },
+    {
+      "case_id": "H08-building-avoidance",
+      "mode": "job",
+      "extraction": "PARTIAL",
+      "decision": "FAIL",
+      "host": "PASS",
+      "overall": "FAIL",
+      "main_strength": "Host again tells candidate to apply tonight and stop building",
+      "main_failure": "Extractor uses undocumented fit=supported; compiler falls through to generic evidence/JD discovery",
+      "hard_failures": [
+        "NO_PRIORITIZATION",
+        "OVER_CAUTION",
+        "GENERIC_ADVICE",
+        "NO_AVOIDED_ACTION"
+      ],
+      "classifications": [
+        {
+          "category": "B",
+          "finding": "fit should use documented strong/gap/mismatch/unknown vocabulary"
+        },
+        {
+          "category": "A",
+          "finding": "legacy fallback is coarse and permissive for unsupported fit values; retained under the three-fix budget"
+        }
+      ]
+    },
+    {
+      "case_id": "H09-manager-care",
+      "mode": "offer",
+      "extraction": "PASS",
+      "decision": "PASS",
+      "host": "PASS",
+      "overall": "PASS",
+      "main_strength": "Acceptance blocked pending care schedule; final compiler preserves decisive questions even without winner",
+      "main_failure": "Manager signals still require targeted human confirmation",
+      "hard_failures": [],
+      "classifications": []
+    },
+    {
+      "case_id": "H10-unknown-systems",
+      "mode": "interview",
+      "extraction": "PASS",
+      "decision": "PARTIAL",
+      "host": "PASS",
+      "overall": "PARTIAL",
+      "main_strength": "Actionable truthful interview bridge with explicit hypothetical systems reasoning",
+      "main_failure": "Structured artifact remains generic compared with tailored spoken host answer",
+      "hard_failures": [],
+      "classifications": [
+        {
+          "category": "F",
+          "finding": "preferred spoken format not patched; generic structured usability limit remains"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "FAIL": 4,
+    "PASS": 3,
+    "PARTIAL": 3
+  },
+  "host_counts": {
+    "PASS": 9,
+    "PARTIAL": 1
+  },
+  "hard_failure_instances": {
+    "NO_PRIORITIZATION": 2,
+    "OVER_CAUTION": 2,
+    "GENERIC_ADVICE": 2,
+    "PREMATURE_CERTAINTY": 1,
+    "NO_AVOIDED_ACTION": 1
+  },
+  "decision_courage_failure_cases": 3,
+  "over_caution_cases": 2,
+  "unsupported_certainty_cases": 1,
+  "integrity_hard_failure_cases": [],
+  "attribution_boundary": "Fresh samples/re-extraction changed. Host Skill and reference bytes are unchanged; L3 differences are variance, not evidence of patch causation. Compare paired-runtime separately.",
+  "retained_runtime_failure": "H03 rejected inference-as-claim confidence; no output repaired, guard bypassed or failed check skipped."
+}

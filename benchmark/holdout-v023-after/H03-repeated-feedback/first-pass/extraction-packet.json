@@ -1,0 +1,248 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "text": "34 岁，在广州做消费金融产品五年，目标仍是风险与数据产品。以前有数据团队合作经验，未独立开发分布式存储。下一次同类面试在 2026-10-16，可用约十小时准备；目前不想新增长期学习项目。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "text": "南桥数据 2026-09-12：产品判断较好，但没讲清数据一致性与重试边界，技术沟通深度不足。砾舟科技 2026-09-20：需求分析清晰，建议加强数据系统取舍，无法解释幂等和回放。栖禾金融 2026-09-29：本轮未推进；没有原因。三份为不同机会，前两份有招聘方明确反馈，第三份仅有拒信。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "text": "第三次招聘流程在部门重组后延迟过，未确认 HC 是否改变。我觉得他们都嫌我不是工程师，但这只是我的猜测。朋友说：三次拒绝足够说明方向错了。我的两个项目可以防守产品需求和指标，系统设计部分由工程同事负责。"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "用户自述 34 岁，在广州从事消费金融产品五年",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "34 岁，在广州做消费金融产品五年",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户当前目标仍是风险与数据产品",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "目标仍是风险与数据产品。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F3",
+      "text": "用户自述以前有与数据团队合作的经验",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "以前有数据团队合作经验",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "用户自述未独立开发分布式存储",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "未独立开发分布式存储",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "下一次同类面试日期为 2026-10-16",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "下一次同类面试在 2026-10-16",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户约有十小时可用于准备下一次同类面试",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "可用约十小时准备",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户目前不想新增长期学习项目",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "目前不想新增长期学习项目",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F8",
+      "text": "南桥数据在 2026-09-12 的反馈称产品判断较好，但用户没讲清数据一致性与重试边界，技术沟通深度不足",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "南桥数据 2026-09-12：产品判断较好，但没讲清数据一致性与重试边界，技术沟通深度不足。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "砾舟科技在 2026-09-20 的反馈称需求分析清晰，并建议加强数据系统取舍；用户无法解释幂等和回放",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "砾舟科技 2026-09-20：需求分析清晰，建议加强数据系统取舍，无法解释幂等和回放。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "栖禾金融 2026-09-29 这一轮未推进",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "栖禾金融 2026-09-29：本轮未推进",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "U1",
+      "text": "栖禾金融该轮未推进的原因未知",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "没有原因",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "recruiting_signal",
+      "modality": "unknown"
+    },
+    {
+      "id": "F11",
+      "text": "三份反馈或结果来自三个不同机会",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "三份为不同机会",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "前两个机会有招聘方明确反馈",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "前两份有招聘方明确反馈",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F13",
+      "text": "第三个机会仅提供了拒信",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "第三份仅有拒信",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F14",
+      "text": "用户自述第三次招聘流程曾在部门重组后延迟",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "第三次招聘流程在部门重组后延迟过",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "U2",
+      "text": "第三次招聘流程的 HC 是否发生变化未知",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "未确认 HC 是否改变",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "I1",
+      "text": "用户猜测三个招聘方都介意其不是工程师，但明确表示这只是猜测",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "我觉得他们都嫌我不是工程师，但这只是我的猜测。",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "unknown"
+    },
+    {
+      "id": "I2",
+      "text": "用户的朋友将三次拒绝解释为方向错误",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "朋友说：三次拒绝足够说明方向错了。",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "claim",
+      "modality": "unknown"
+    },
+    {
+      "id": "F15",
+      "text": "用户自述两个项目可以防守产品需求和指标",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "我的两个项目可以防守产品需求和指标",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F16",
+      "text": "用户自述两个项目的系统设计部分由工程同事负责",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "系统设计部分由工程同事负责",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    }
+  ],
+  "situation": {
+    "mode": "job",
+    "summary": "用户在最近三次风控平台产品经理申请被拒后，正在判断是否放弃技术产品并转向纯运营；不能预设三次失败源自同一原因。",
+    "goal": "判断应继续风险与数据／风控平台产品方向，还是转向纯运营，同时区分两次明确技术深度反馈与一次无原因拒绝。",
+    "claims": []
+  }
+}

@@ -1,0 +1,423 @@
+{
+  "schema_version": "2",
+  "current_situation": "现场面试后原定本周反馈，随后招聘者称流程延迟、仍在处理中且无法提供新日期；职位链接不可用，当前结果及链接变化原因未知。",
+  "mode": "recruiting",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "现场面试已经结束。",
+      "source": "S1",
+      "source_type": "hr_chat",
+      "id": "F1",
+      "source_id": "S1",
+      "source_span": "你的现场面试已结束",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "招聘邮件给出的反馈时间预期是本周。",
+      "source": "S1",
+      "source_type": "hr_chat",
+      "id": "F2",
+      "source_id": "S1",
+      "source_span": "预计本周给反馈",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "该时间表述是预期，并未承诺录用。",
+      "source": "S1",
+      "source_type": "hr_chat",
+      "id": "F3",
+      "source_id": "S1",
+      "source_span": "这是时间预期，未承诺录用",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "招聘者后来表示内部流程暂时延迟。",
+      "source": "S2",
+      "source_type": "hr_chat",
+      "id": "F4",
+      "source_id": "S2",
+      "source_span": "内部流程暂时延迟",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "招聘者暂时无法提供新的反馈日期。",
+      "source": "S2",
+      "source_type": "hr_chat",
+      "id": "F5",
+      "source_id": "S2",
+      "source_span": "暂时无法提供新日期",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "招聘者称该流程仍在处理中。",
+      "source": "S2",
+      "source_type": "hr_chat",
+      "id": "F6",
+      "source_id": "S2",
+      "source_span": "你的流程仍在处理中",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "招聘者表示有变化会通知。",
+      "source": "S2",
+      "source_type": "hr_chat",
+      "id": "F7",
+      "source_id": "S2",
+      "source_span": "有变化会通知",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告于 2026-10-03 发现原职位链接显示不可用。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S3",
+      "source_span": "用户于 2026-10-03 发现原职位链接显示不可用",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告尚未询问延期后的新日期。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F9",
+      "source_id": "S3",
+      "source_span": "没有询问延期后的新日期",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告没有另一份 Offer。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F10",
+      "source_id": "S3",
+      "source_span": "没有另一份 Offer",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户报告没有近期的决定截止时间。",
+      "source": "S3",
+      "source_type": "user_report",
+      "id": "F11",
+      "source_id": "S3",
+      "source_span": "没有近期的决定截止时间",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "label": "INFERENCE",
+      "text": "可能是排期、审批、比较或优先级变化；沉默不足以确定结果"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "当前没有明确的通过、拒绝或冻结招聘结果。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "用户尚未收到职位链接不可用的解释。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "职位链接不可用是因为下架、更新链接还是岗位关闭，当前未知。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "公司的工作日和节假日日历未知。"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "最终评价与候选人排序"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "招聘名额与内部审批状态"
+    }
+  ],
+  "current_goal": "判断当前是否存在明确拒绝结果，并提取有限跟进所需的时间线、约束和未知项。",
+  "claims": [],
+  "highest_risk": "关键证据或目标尚未确认",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/03-recruiting-process.md",
+    "references/practical/follow-up.md"
+  ],
+  "method_plan": [
+    "offer",
+    "proof",
+    "interview"
+  ],
+  "bottleneck": "Timing",
+  "recommended_move": "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。",
+  "why": [
+    "以可见流程与明确反馈为依据，不猜招聘者内心",
+    "停止高频追问，保留其他机会"
+  ],
+  "actions": [
+    {
+      "kind": "draft_message",
+      "description": "你好，想跟进一下2026-10-02：内部流程暂时延迟，流程仍在处理中，暂时无法提供新日期。后的进展。如果目前仍在流程中也没关系，有后续安排或需要补充的材料，麻烦告知，谢谢。",
+      "execution_mode": "codex",
+      "artifact": "条件满足后可发送的草稿",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "pipeline_review",
+      "description": "记录承诺日期和真实紧迫约束",
+      "execution_mode": "codex",
+      "artifact": "机会记录",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "按实际承诺日期；未约定时约 3 个工作日（可调整的经验默认，非承诺）",
+  "stop_condition": "明确拒绝 / 要求不联系时停止；一次跟进后再约 3 个工作日无回复，降低投入",
+  "pivot_condition": "真实截止时间变化即调整；同一缺口在 5–10 个可比机会反复出现，再 REFINE / PIVOT",
+  "application_status": "waiting",
+  "draft": "你好，想跟进一下2026-10-02：内部流程暂时延迟，流程仍在处理中，暂时无法提供新日期。后的进展。如果目前仍在流程中也没关系，有后续安排或需要补充的材料，麻烦告知，谢谢。",
+  "follow_up": {
+    "action": "wait",
+    "timing": "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。",
+    "window": "按实际承诺日期；未约定时约 3 个工作日（可调整的经验默认，非承诺）",
+    "draft": "你好，想跟进一下2026-10-02：内部流程暂时延迟，流程仍在处理中，暂时无法提供新日期。后的进展。如果目前仍在流程中也没关系，有后续安排或需要补充的材料，麻烦告知，谢谢。"
+  },
+  "recommendation_type": "CONDITIONAL",
+  "decision_sufficiency": {
+    "state": "DECISION_CONDITIONAL",
+    "basis": "按明确联系边界、承诺日期和已知工作日编译一次跟进；不预测结果",
+    "blocking_unknowns": [],
+    "reversal_unknowns": [
+      "实际工作日、承诺日期或竞争机会截止时间改变"
+    ]
+  },
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "recruiting",
+    "role_family": "unknown",
+    "stage": "unknown",
+    "situation_type": "follow-up",
+    "risk_tags": [],
+    "situation_tags": []
+  },
+  "recommendation": {
+    "move": "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "现场面试已经结束。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "招聘邮件给出的反馈时间预期是本周。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "该时间表述是预期，并未承诺录用。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "招聘者后来表示内部流程暂时延迟。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "招聘者暂时无法提供新的反馈日期。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "招聘者称该流程仍在处理中。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "招聘者表示有变化会通知。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告于 2026-10-03 发现原职位链接显示不可用。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告尚未询问延期后的新日期。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告没有另一份 Offer。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告没有近期的决定截止时间。",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "假期、批量招聘、排期或审批也能解释延迟；无法从沉默辨认原因。",
+    "reconsider_if": [
+      "收到明确结果、联系边界、承诺日期变化或竞争 Offer 截止时间时立即重评。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "现场面试后原定本周反馈，随后招聘者称流程延迟、仍在处理中且无法提供新日期；职位链接不可用，当前结果及链接变化原因未知。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "现场面试已经结束。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "招聘邮件给出的反馈时间预期是本周。",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "该时间表述是预期，并未承诺录用。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "招聘者后来表示内部流程暂时延迟。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "招聘者暂时无法提供新的反馈日期。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "招聘者称该流程仍在处理中。",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "招聘者表示有变化会通知。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告于 2026-10-03 发现原职位链接显示不可用。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告尚未询问延期后的新日期。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告没有另一份 Offer。",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户报告没有近期的决定截止时间。",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Timing",
+    "options_considered": [
+      "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。",
+      "继续其他机会，按承诺日期和实际工作日只跟进一次。"
+    ],
+    "chosen": "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。",
+    "rejected_options": [
+      {
+        "option": "继续其他机会，按承诺日期和实际工作日只跟进一次。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "以可见流程与明确反馈为依据，不猜招聘者内心",
+      "停止高频追问，保留其他机会"
+    ],
+    "reconsider_if": [
+      "收到明确结果、联系边界、承诺日期变化或竞争 Offer 截止时间时立即重评。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

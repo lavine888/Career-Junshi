@@ -1,0 +1,51 @@
+{
+  "case_id": "H01-years-gate",
+  "decision_type": "Strong fit / required years",
+  "must_notice": [
+    "JD explicitly requires three years, not merely prefers it",
+    "Strong supplied artifacts do not themselves waive an employment gate",
+    "Existing application is cheap; limited time makes rebuilding unattractive"
+  ],
+  "must_not_assume": [
+    "Years waiver, live vacancy or independent rerun is not verified",
+    "Do not turn missing tenure into a learnable three-week technical gap"
+  ],
+  "decision_blockers": [],
+  "non_blocking_unknowns": [
+    "Whether employer accepts equivalent proof",
+    "Authenticity/production breadth of submitted artifact"
+  ],
+  "acceptable_recommendations": [
+    "A bounded application plus honest tenure disclosure and a narrow eligibility question",
+    "Ask the eligibility contact first if response cost is lower; keep other applications moving"
+  ],
+  "unacceptable_recommendations": [
+    "Assert three-year requirement is optional or waived",
+    "Spend the week building another project to manufacture tenure"
+  ],
+  "hard_failures": [
+    "FABRICATED_FACT",
+    "FALSE_VERIFICATION",
+    "NEW_PROJECT_BIAS"
+  ],
+  "action_requirements": [
+    "One cheap eligibility/application step using existing material",
+    "A time/cost cap and parallel opportunity pipeline"
+  ],
+  "reconsideration_requirements": [
+    "Strict written exclusion or location incompatibility ends pursuit",
+    "An explicit waiver or relevant interview invitation changes effort allocation"
+  ],
+  "evidence_requirements": [
+    "Cite the actual must versus preferred clauses",
+    "Keep documented work and independently authenticated experience separate"
+  ],
+  "expected_commitment": "Strongest justified reversible or conditional recommendation; alternate supported choices allowed",
+  "design_flags": {
+    "conflicting_evidence": true,
+    "tempting_unsupported_interpretation": true,
+    "recommendation_despite_unknowns": true,
+    "genuinely_blocked": false
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

@@ -1,0 +1,27 @@
+{
+  "case_id": "H03-repeated-feedback",
+  "origin": "synthetic",
+  "request": "我做消费金融产品五年，最近三次申请风控平台产品经理都被拒。两家确实说技术深度，一家没说。我是不是该放弃技术产品，转纯运营？别替我把每次失败都归因到同一点。",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Career and goal",
+      "text": "34 岁，在广州做消费金融产品五年，目标仍是风险与数据产品。以前有数据团队合作经验，未独立开发分布式存储。下一次同类面试在 2026-10-16，可用约十小时准备；目前不想新增长期学习项目。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "label": "Three distinct supplied excerpts",
+      "text": "南桥数据 2026-09-12：产品判断较好，但没讲清数据一致性与重试边界，技术沟通深度不足。砾舟科技 2026-09-20：需求分析清晰，建议加强数据系统取舍，无法解释幂等和回放。栖禾金融 2026-09-29：本轮未推进；没有原因。三份为不同机会，前两份有招聘方明确反馈，第三份仅有拒信。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "label": "Competing explanations",
+      "text": "第三次招聘流程在部门重组后延迟过，未确认 HC 是否改变。我觉得他们都嫌我不是工程师，但这只是我的猜测。朋友说：三次拒绝足够说明方向错了。我的两个项目可以防守产品需求和指标，系统设计部分由工程同事负责。"
+    }
+  ],
+  "as_of": "2026-10-04T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic clock. Fictional companies and anonymized people; no real hiring outcome or private history."
+}

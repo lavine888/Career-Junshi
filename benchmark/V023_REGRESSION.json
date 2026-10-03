@@ -1,0 +1,863 @@
+{
+  "unit_tests": {
+    "baseline": 154,
+    "current": 164,
+    "passed": 164,
+    "failed": 0,
+    "new_behavioral_tests": 10,
+    "command": "python -m unittest discover -v",
+    "log_sha256": "2b405d18723bc482ea341de30097d5371b7025cd46157577f17ab99c8057e68a"
+  },
+  "original_13": {
+    "schema_version": "1",
+    "case_coverage": 13,
+    "levels": {
+      "1": {
+        "scope": "deterministic output integrity rules",
+        "pass": true
+      },
+      "2": {
+        "scope": "structured decision regression, not semantic quality",
+        "pass": true
+      },
+      "3": {
+        "status": "NOT_RUN",
+        "scope": "host model evaluation requires separate outputs and reviewers"
+      },
+      "4": {
+        "status": "NOT_RUN",
+        "scope": "real-world outcome protocol; no hiring causality claim"
+      }
+    },
+    "regressions": [],
+    "cases": [
+      {
+        "case_id": "G01",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Direction"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "jd_map"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Direction"
+      },
+      {
+        "case_id": "G02",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Evidence"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "evidence_audit"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Evidence"
+      },
+      {
+        "case_id": "G03",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Market"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "jd_map"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Market"
+      },
+      {
+        "case_id": "G04",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Evidence"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Evidence"
+      },
+      {
+        "case_id": "G05",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Evidence"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Evidence"
+      },
+      {
+        "case_id": "G06",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Evidence",
+                "Interview"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "urgency.within_72h",
+              "op": "equals",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "risk_map"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Evidence"
+      },
+      {
+        "case_id": "G07",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "application_status",
+              "op": "equals",
+              "value": "rejected"
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "feedback_review"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Interview"
+      },
+      {
+        "case_id": "G08",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "application_status",
+              "op": "equals",
+              "value": "waiting"
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "draft",
+              "op": "equals",
+              "value": null
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Timing"
+      },
+      {
+        "case_id": "G09",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "comparison",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "confirm_terms"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Direction"
+      },
+      {
+        "case_id": "G10",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "confirm_terms"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "comparison",
+              "op": "equals",
+              "value": []
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Direction"
+      },
+      {
+        "case_id": "G11",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Evidence"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "jd_map"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Evidence"
+      },
+      {
+        "case_id": "G12",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Positioning"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "write_material"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Positioning"
+      },
+      {
+        "case_id": "G13",
+        "origin": "synthetic",
+        "hard_rule_pass": true,
+        "decision_properties": [
+          {
+            "rule": {
+              "path": "bottleneck",
+              "op": "in",
+              "value": [
+                "Evidence",
+                "Interview"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "actions",
+              "op": "includes_action",
+              "value": [
+                "question_ladder"
+              ]
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.strongest_counterargument",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "recommendation.reconsider_if",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          },
+          {
+            "rule": {
+              "path": "decision_trace.rejected_options",
+              "op": "nonempty",
+              "value": true
+            },
+            "pass": true
+          }
+        ],
+        "property_pass": true,
+        "bottleneck": "Evidence"
+      }
+    ],
+    "boundary": "No composite Career Score. Fixture checks cannot grade natural-language decision quality."
+  },
+  "previous_5_frozen": {
+    "cases": [
+      {
+        "case_id": "01-ai-pm-interview",
+        "source_identity": true,
+        "property_pass": true,
+        "checks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "semantic_scope": "No automatic semantic PASS; read evaluation.json and report."
+      },
+      {
+        "case_id": "02-hr-silence",
+        "source_identity": true,
+        "property_pass": true,
+        "checks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "semantic_scope": "No automatic semantic PASS; read evaluation.json and report."
+      },
+      {
+        "case_id": "03-offer-choice",
+        "source_identity": true,
+        "property_pass": true,
+        "checks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "semantic_scope": "No automatic semantic PASS; read evaluation.json and report."
+      },
+      {
+        "case_id": "04-career-direction",
+        "source_identity": true,
+        "property_pass": true,
+        "checks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "semantic_scope": "No automatic semantic PASS; read evaluation.json and report."
+      },
+      {
+        "case_id": "05-ownership-claim",
+        "source_identity": true,
+        "property_pass": true,
+        "checks": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "semantic_scope": "No automatic semantic PASS; read evaluation.json and report."
+      }
+    ],
+    "regressions": [],
+    "boundary": "Frozen extraction integrity/properties, not a fresh host/model evaluation or hiring outcome."
+  },
+  "v022_frozen_semantic_integrity": {
+    "frozen_semantic_integrity": true,
+    "cases": [
+      {
+        "case_id": "01-ai-pm-interview",
+        "source_identity": true,
+        "property_pass": true,
+        "frozen_operator_grade": "PASS"
+      },
+      {
+        "case_id": "02-hr-silence",
+        "source_identity": true,
+        "property_pass": true,
+        "frozen_operator_grade": "PASS"
+      },
+      {
+        "case_id": "03-offer-choice",
+        "source_identity": true,
+        "property_pass": true,
+        "frozen_operator_grade": "PARTIAL"
+      },
+      {
+        "case_id": "04-career-direction",
+        "source_identity": true,
+        "property_pass": true,
+        "frozen_operator_grade": "PASS"
+      },
+      {
+        "case_id": "05-ownership-claim",
+        "source_identity": true,
+        "property_pass": true,
+        "frozen_operator_grade": "PARTIAL"
+      }
+    ],
+    "regressions": [],
+    "boundary": "Properties and retained quote integrity only; semantic grades are frozen operator judgments, not automatically reassigned."
+  },
+  "new_10_first_pass": {
+    "PARTIAL": 2,
+    "PASS": 1,
+    "FAIL": 7
+  },
+  "new_10_fresh_after": {
+    "FAIL": 4,
+    "PASS": 3,
+    "PARTIAL": 3
+  },
+  "paired_runtime_boundary": "Original packets compiled with actual final CLI; isolated changes are H04/H09 binding block and H07 deadline. H06 missing packet is not repaired retrospectively.",
+  "new_10_after_runtime_failures": [
+    "H03-repeated-feedback"
+  ],
+  "mutations": {
+    "FAIL": 1,
+    "PASS": 1,
+    "PARTIAL": 1
+  },
+  "frozen_manifests_verified": true,
+  "model_calls": {
+    "first_pass": 20,
+    "fresh_after": 20,
+    "mutations": 6,
+    "separate_semantic_grader_calls": 0
+  },
+  "host_prompts_before_after": "All 10 hash-identical; Skill and allowed reference content unchanged",
+  "outcomes": "NOT_SUPPLIED",
+  "boundary": "Unit/property success is not a semantic 10/10 or real-world efficacy claim.",
+  "semantic_reviewer": "Current Codex AI assistant; frozen human-operator metadata label corrected by documentation/V023_EVALUATOR_PROVENANCE.json"
+}

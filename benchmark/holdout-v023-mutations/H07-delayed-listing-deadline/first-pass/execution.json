@@ -1,0 +1,54 @@
+{
+  "REFERENCE_MODE": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "phase": "controlled-mutation",
+  "attempts": [
+    {
+      "name": "after-extract-H07-delayed-listing-deadline",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:59:40.613796+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "89df5bfdae82df174e1e62c5c4fd2305fe49d3bdacd5f8434ce67850c5d82cad",
+      "commands": [],
+      "usage": {
+        "input_tokens": 21806,
+        "cached_input_tokens": 6016,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3881,
+        "reasoning_output_tokens": 2406
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T17:01:21.067478+00:00",
+      "seconds": 100.45,
+      "raw_sha256": "f419208455cc4b6a91086465efd858bc584f5aba6bb3840d9c4edaa02d2cb5c8"
+    },
+    {
+      "name": "after-host-H07-delayed-listing-deadline",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:59:23.471748+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "e987695046f87fb76bfe2fbeb9aae0c7439ced9ca054d5649e2160ef0fdb1641",
+      "commands": [],
+      "usage": {
+        "input_tokens": 19829,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1709,
+        "reasoning_output_tokens": 1034
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T17:00:12.582952+00:00",
+      "seconds": 49.11,
+      "raw_sha256": "1f7e842ced9a0351e4ae78b8cc5d2fc16b42225213a0d96764a36b99f2d30500"
+    }
+  ],
+  "input_sha256": "eb174d5e583a7decf65c16ef9367037b688b5a40b6f8d90ec15589e473aac012",
+  "outcomes": "NOT_SUPPLIED",
+  "contract_assembly_change": "Existing unknown family allowed by patched contract; exact user request source allowed by corrected assembly; no rubric in generation."
+}

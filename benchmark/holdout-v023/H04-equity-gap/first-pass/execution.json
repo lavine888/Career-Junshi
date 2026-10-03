@@ -1,0 +1,51 @@
+{
+  "REFERENCE_MODE": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "attempts": [
+    {
+      "name": "extract-H04-equity-gap",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:30:30.248912+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "9be0a965d39f8b1623855c624f15fb65299bbc0bf7351d54ad010236f1136cf4",
+      "commands": [],
+      "usage": {
+        "input_tokens": 22215,
+        "cached_input_tokens": 6016,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 6404,
+        "reasoning_output_tokens": 4100
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:33:13.843289+00:00",
+      "seconds": 163.59,
+      "raw_sha256": "9d5057046e7f195d074aca52be12fb105f891f884c12a8c9b09c3aacafe2ac6b"
+    },
+    {
+      "name": "host-H04-equity-gap",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:30:04.336495+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "62d6f37789ca18d40e56ee6558e32a7ac52655e79b7043c5de4cce06f5780d59",
+      "commands": [],
+      "usage": {
+        "input_tokens": 20406,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1351,
+        "reasoning_output_tokens": 464
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:30:34.452666+00:00",
+      "seconds": 30.12,
+      "raw_sha256": "4ec43f465d7c1d6da2e0396223f24effe8bd2d8d000f81a8992720ddfdfcbb62"
+    }
+  ],
+  "boundary": "Missing last-message files were recovered verbatim only when a completed final event existed; original MODEL_ERROR writer records are retained."
+}

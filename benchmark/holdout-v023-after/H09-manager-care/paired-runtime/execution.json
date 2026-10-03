@@ -1,0 +1,12 @@
+{
+  "phase": "SAME_PACKET_CURRENT_CLI",
+  "baseline_packet_sha256": "efeaf21d472e4d4a3bafda70173ea51408dcd190d0ca9f53efc0dfacfdc9e0c9",
+  "product_sha256": {
+    "scripts/decision.py": "46774f4f6479575ab2c7b0b1df8d9b81cf306e2ea66c85cff3440e58bbc3572d",
+    "scripts/decision_quality.py": "2b61c9342b2ae518f94d49fc033e8b2ecf827b4bd2948de7ba6fd104e045354a",
+    "documentation/DECISION_QUALITY.md": "364717ccb510e615a16290d7b07eee2128638d8104cae5cdc2ccc353eadc863c",
+    "SKILL.md": "c32d26a61ab4670ca550250ffa8c3cfb6a21a32073f4b79d98c4f9ccb04bb124"
+  },
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "host": "Original response retained separately; not regenerated for this paired comparison"
+}

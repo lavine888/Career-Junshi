@@ -1,0 +1,349 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "resume",
+      "text": "澜屿物流云，增长产品负责人：通过 onboarding 优化提升付费转化率 35%，主导增长策略。未注明团队结果、时间窗或相对/绝对变化。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "document",
+      "text": "同一季度公司看板显示付费转化率由 4.0% 到 5.4%，相对增长 35%，绝对增加 1.4 个百分点。同期更新定价、销售脚本及 onboarding，未做拆因实验。个人 onboarding A/B 分组日志因埋点重构丢失，无法单独估计该实验增量；看板只是提供的节选，未独立核查。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "text": "26 岁，厦门工作，明确自述负责 onboarding 访谈、流程方案、实验假设与上线验收。定价由负责人甲决策，销售脚本由负责人乙负责。团队方案在真实产品运行过，个人流程设计与验收已完成；个人代码由工程同事实现。下周面试，能提供假设文档和方案版本。没有证据证明 onboarding 导致全部变化。"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "简历将付费转化率提升 35% 归因于 onboarding 优化，并写有主导增长策略。",
+      "source_id": "S1",
+      "source_type": "resume",
+      "source_span": "澜屿物流云，增长产品负责人：通过 onboarding 优化提升付费转化率 35%，主导增长策略。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "U1",
+      "text": "当前简历条目是否充分说明团队结果、时间窗及相对或绝对变化未知。",
+      "source_id": "S1",
+      "source_type": "resume",
+      "source_span": "未注明团队结果、时间窗或相对/绝对变化。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F2",
+      "text": "提供的看板节选记载，同一季度付费转化率由 4.0% 升至 5.4%，相对增长 35%，绝对增加 1.4 个百分点。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "同一季度公司看板显示付费转化率由 4.0% 到 5.4%，相对增长 35%，绝对增加 1.4 个百分点。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "提供的材料记载，同期更新了定价、销售脚本及 onboarding。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "同期更新定价、销售脚本及 onboarding",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "U2",
+      "text": "是否存在可拆分各项改动影响的实验未知。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "未做拆因实验",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "U3",
+      "text": "个人 onboarding A/B 分组日志现已不可用。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "个人 onboarding A/B 分组日志因埋点重构丢失",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "U4",
+      "text": "个人 onboarding 实验的独立增量未知。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "无法单独估计该实验增量",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "claim",
+      "modality": "unknown"
+    },
+    {
+      "id": "U5",
+      "text": "提供的看板节选未被独立核查。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "看板只是提供的节选，未独立核查。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F4",
+      "text": "用户自述 26 岁并在厦门工作。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "26 岁，厦门工作",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "用户明确自述负责 onboarding 访谈、流程方案、实验假设与上线验收。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "明确自述负责 onboarding 访谈、流程方案、实验假设与上线验收。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户自述定价由负责人甲决策。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "定价由负责人甲决策",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户自述销售脚本由负责人乙负责。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "销售脚本由负责人乙负责。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户自述团队方案在真实产品运行过。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "团队方案在真实产品运行过",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "用户自述个人流程设计与验收已完成。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "个人流程设计与验收已完成",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "用户自述个人代码由工程同事实现。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "个人代码由工程同事实现。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "用户自述下周有面试。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "下周面试",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "用户自述能提供假设文档和方案版本。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "能提供假设文档和方案版本。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "U6",
+      "text": "没有证据证明 onboarding 导致全部变化。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "没有证据证明 onboarding 导致全部变化。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "claim",
+      "modality": "unknown"
+    }
+  ],
+  "situation": {
+    "mode": "positioning",
+    "summary": "物流 SaaS 增长岗位简历中的 35% 转化率指标存在团队同期改动与个人因果归因边界。",
+    "goal": "决定是否保留、删除或收窄 35% 指标表述，同时保留用户可支持的 onboarding 产品贡献。",
+    "claims": [
+      {
+        "id": "C1",
+        "claim": "通过 onboarding 优化提升付费转化率 35%，主导增长策略。",
+        "confidence": "SELF_REPORTED",
+        "stage": "production",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "用户自述负责 onboarding 访谈、流程方案、实验假设与上线验收；定价和销售脚本由其他负责人承担，代码由工程同事实现。"
+        },
+        "evidence": [
+          {
+            "source": "S1",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "当前简历中的原始表述。"
+          },
+          {
+            "source": "S2",
+            "kind": "supporting",
+            "supports": [
+              "metric",
+              "real_world"
+            ],
+            "summary": "提供的看板节选记载同期转化率变化，但同时存在多项改动、没有拆因实验，且节选未独立核查。"
+          },
+          {
+            "source": "S3",
+            "kind": "self_report",
+            "supports": [
+              "authorship",
+              "real_world"
+            ],
+            "summary": "用户自述其 onboarding 工作边界及团队方案已在真实产品运行。"
+          }
+        ],
+        "risk": [
+          "35% 的个人因果归因缺少拆因证据",
+          "主导增长策略可能覆盖其他负责人的定价和销售脚本贡献",
+          "指标缺少时间窗及相对增长与百分点变化说明"
+        ]
+      },
+      {
+        "id": "C2",
+        "claim": "同一季度公司看板显示付费转化率由 4.0% 到 5.4%，相对增长 35%，绝对增加 1.4 个百分点。",
+        "confidence": "SUPPORTED",
+        "stage": "production",
+        "ownership": {
+          "scope": "team",
+          "contribution": "该指标是同期定价、销售脚本及 onboarding 等团队改动后的整体结果；个人 onboarding 增量无法单独估计。"
+        },
+        "evidence": [
+          {
+            "source": "S2",
+            "kind": "supporting",
+            "supports": [
+              "claim",
+              "metric",
+              "real_world"
+            ],
+            "summary": "看板节选提供了起止值和两种变化口径，但未独立核查。"
+          },
+          {
+            "source": "S3",
+            "kind": "self_report",
+            "supports": [
+              "real_world"
+            ],
+            "summary": "用户自述团队方案在真实产品运行过。"
+          }
+        ],
+        "risk": [
+          "看板只是提供的节选，未独立核查",
+          "无法把团队整体指标归因于个人 onboarding 实验"
+        ]
+      },
+      {
+        "id": "C3",
+        "claim": "负责 onboarding 访谈、流程方案、实验假设与上线验收；个人流程设计与验收已完成，代码由工程同事实现。",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "team",
+          "contribution": "个人贡献限于 onboarding 的访谈、流程方案、实验假设和上线验收；工程实现、定价决策与销售脚本不属于其个人实现范围。"
+        },
+        "evidence": [
+          {
+            "source": "S3",
+            "kind": "self_report",
+            "supports": [
+              "claim",
+              "authorship"
+            ],
+            "summary": "用户对个人产品工作、他人职责和工程实现边界的明确自述。"
+          }
+        ],
+        "risk": [
+          "可提供的假设文档和方案版本尚未独立核查",
+          "个人实验的独立增量未知"
+        ]
+      }
+    ],
+    "ownership": {
+      "project_stage": "production",
+      "contributions": [
+        {
+          "claim_id": "C1",
+          "claim_stage": "production",
+          "user_contribution_stage": "completed"
+        },
+        {
+          "claim_id": "C2",
+          "claim_stage": "production",
+          "user_contribution_stage": "unknown"
+        },
+        {
+          "claim_id": "C3",
+          "claim_stage": "completed",
+          "user_contribution_stage": "completed"
+        }
+      ]
+    }
+  }
+}

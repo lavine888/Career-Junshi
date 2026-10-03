@@ -1,1 +1,18 @@
 * text=auto eol=lf
+
+# Frozen evaluation evidence must retain the bytes referenced by its hashes.
+benchmark/holdout-v023/** -text -eol whitespace=cr-at-eol
+benchmark/holdout-v023-after/** -text -eol whitespace=cr-at-eol
+benchmark/holdout-v023-mutations/** -text -eol whitespace=cr-at-eol
+benchmark/holdout-v023-runner/** -text -eol whitespace=cr-at-eol
+
+# Markdown hard breaks in captured responses/messages are part of the evidence.
+benchmark/holdout-v023/**/*.md whitespace=cr-at-eol,-blank-at-eol
+benchmark/holdout-v023-after/**/*.md whitespace=cr-at-eol,-blank-at-eol
+benchmark/holdout-v023-mutations/**/*.md whitespace=cr-at-eol,-blank-at-eol
+benchmark/holdout-v023-runner/**/*.txt whitespace=cr-at-eol,-blank-at-eol
+
+# Generated artifact output is retained verbatim, including its final blank line.
+benchmark/holdout-v023/**/artifacts/*.md whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/holdout-v023-after/**/artifacts/*.md whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+benchmark/holdout-v023-mutations/**/artifacts/*.md whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof

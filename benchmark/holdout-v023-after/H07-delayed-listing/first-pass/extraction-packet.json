@@ -1,0 +1,211 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "hr_chat",
+      "text": "晖岸医疗器械招聘邮件 2026-09-28：你的现场面试已结束，预计本周给反馈。这是时间预期，未承诺录用。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "hr_chat",
+      "text": "同一招聘者 2026-10-02：内部流程暂时延迟，暂时无法提供新日期。你的流程仍在处理中，有变化会通知。这条更新晚于前面的本周预期，没有明确通过/拒绝/冻结招聘。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "text": "用户于 2026-10-03 发现原职位链接显示不可用，未收到解释；不知道是下架、更新链接还是岗位关闭。没有询问延期后的新日期。另有沐原设备正式 Offer，接受期限 2026-10-06 16:00，不准备谎称提前截止。可等到周一 2026-10-05，但不能因为无限等待错过另一份 Offer。公司工作日/节假日日历未提供。"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "现场面试已结束",
+      "source_id": "S1",
+      "source_type": "hr_chat",
+      "source_span": "你的现场面试已结束",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "招聘方预计本周给反馈",
+      "source_id": "S1",
+      "source_type": "hr_chat",
+      "source_span": "预计本周给反馈",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "本周反馈只是时间预期，未承诺录用",
+      "source_id": "S1",
+      "source_type": "hr_chat",
+      "source_span": "这是时间预期，未承诺录用。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "招聘方后来表示内部流程暂时延迟，暂时无法提供新日期",
+      "source_id": "S2",
+      "source_type": "hr_chat",
+      "source_span": "内部流程暂时延迟，暂时无法提供新日期。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "招聘方表示流程仍在处理中，有变化会通知",
+      "source_id": "S2",
+      "source_type": "hr_chat",
+      "source_span": "你的流程仍在处理中，有变化会通知。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "延期更新晚于此前的本周反馈预期",
+      "source_id": "S2",
+      "source_type": "hr_chat",
+      "source_span": "这条更新晚于前面的本周预期",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "U1",
+      "text": "当前没有明确通过、拒绝或冻结招聘的结果",
+      "source_id": "S2",
+      "source_type": "hr_chat",
+      "source_span": "没有明确通过/拒绝/冻结招聘。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "recruiting_signal",
+      "modality": "unknown"
+    },
+    {
+      "id": "F7",
+      "text": "用户于 2026-10-03 发现原职位链接显示不可用",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "用户于 2026-10-03 发现原职位链接显示不可用",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "U2",
+      "text": "用户未收到职位链接不可用的解释",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "未收到解释",
+      "epistemic": "UNKNOWN",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "U3",
+      "text": "职位链接不可用的原因未知，可能是下架、更新链接或岗位关闭",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "不知道是下架、更新链接还是岗位关闭。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "U4",
+      "text": "用户没有询问延期后的新日期",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "没有询问延期后的新日期。",
+      "epistemic": "UNKNOWN",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F8",
+      "text": "用户另有沐原设备正式 Offer，接受期限为 2026-10-06 16:00",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "另有沐原设备正式 Offer，接受期限 2026-10-06 16:00",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "required"
+    },
+    {
+      "id": "F9",
+      "text": "用户不准备谎称 Offer 提前截止",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "不准备谎称提前截止。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F10",
+      "text": "用户可等到周一 2026-10-05，但不能因无限等待错过另一份 Offer",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "可等到周一 2026-10-05，但不能因为无限等待错过另一份 Offer。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "U5",
+      "text": "公司工作日和节假日日历未知",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "公司工作日/节假日日历未提供。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    }
+  ],
+  "situation": {
+    "mode": "recruiting",
+    "summary": "招聘方在原定反馈期内告知流程延期且职位链接不可用，但尚无明确终局结果；用户同时面临另一份书面 Offer 的接受期限。",
+    "goal": "判断当前是否已被拒绝，以及在不因无限等待错过另一份 Offer 的约束下是否继续等待。",
+    "claims": [],
+    "deadline": "2026-10-06T16:00:00+08:00",
+    "recruiting": {
+      "status": "waiting",
+      "working_days": null,
+      "promised_date": "",
+      "promised_date_passed": false,
+      "followups": 0,
+      "no_contact": false,
+      "feedback": "内部流程暂时延迟，暂时无法提供新日期。你的流程仍在处理中，有变化会通知。",
+      "communication": {
+        "stage": "interview",
+        "tone": "neutral",
+        "last_event": "内部流程暂时延迟，暂时无法提供新日期；流程仍在处理中，有变化会通知。",
+        "source_ids": [
+          "S2"
+        ]
+      }
+    }
+  }
+}

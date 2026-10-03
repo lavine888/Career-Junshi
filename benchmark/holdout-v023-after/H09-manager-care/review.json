@@ -1,0 +1,381 @@
+{
+  "case_id": "H09-manager-care",
+  "phase": "FRESH_AFTER",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "reviewer": "Same human operator; no independent-rater claim",
+  "generation_had_rubric": false,
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "PASS",
+    "L3_Host": "PASS",
+    "L4_Overall": "PASS"
+  },
+  "main_strength": "Acceptance blocked pending care schedule; final compiler preserves decisive questions even without winner",
+  "main_failure": "Manager signals still require targeted human confirmation",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不因高薪直接拒绝；把它当成“有吸引力但尚未过硬约束”的 Offer。** 当前首选是要求补充核实。若公司不能在截止日前书面保障每天 17:30 离场，并明确直属经理和晚会惯例，我会建议放弃。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 49,
+          "excerpt": "- **会推翻当前谨慎判断的证据**：最终经理并非面试中的准经理，且书面安排、在职员工描述和具体管理机制相互印证。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 43,
+          "excerpt": "- **仍属未知**：准经理是否就是最终经理、真实晚会频率、两人离职的原因，以及部门能否稳定兑现弹性安排。HR 所说“氛围通常很好”也没有解决这些具体问题。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不因高薪直接拒绝；把它当成“有吸引力但尚未过硬约束”的 Offer。** 当前首选是要求补充核实。若公司不能在截止日前书面保障每天 17:30 离场，并明确直属经理和晚会惯例，我会建议放弃。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "decision_sufficiency",
+          "excerpt": {
+            "state": "DECISION_BLOCKED",
+            "basis": "用户硬约束或比较依据尚未充分，接受/排名保持阻塞",
+            "blocking_unknowns": [
+              "接受前必须确认用户硬约束：需要每天 17:30 离开现场接孩子，这是不可协商条件",
+              "接受前必须确认用户硬约束：不可接受长期临时晚会"
+            ],
+            "reversal_unknowns": [
+              "若不能明确书面保障每日 17:30 离场，该选项不满足硬约束。",
+              "若最终经理仍无法说明目标机制，或沟通继续触发用户不可接受的管理风险，则不再偏向该 Offer。",
+              "若长期或频繁临时晚会是常态且无法兼容 17:30 离场，该选项违反硬约束。"
+            ]
+          }
+        }
+      ]
+    },
+    "Decision Courage": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不因高薪直接拒绝；把它当成“有吸引力但尚未过硬约束”的 Offer。** 当前首选是要求补充核实。若公司不能在截止日前书面保障每天 17:30 离场，并明确直属经理和晚会惯例，我会建议放弃。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "真正的瓶颈不是薪酬，而是管理方式和育儿安排是否长期兼容。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "bottleneck",
+          "excerpt": "Direction"
+        }
+      ]
+    },
+    "Recommendation Clarity": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不因高薪直接拒绝；把它当成“有吸引力但尚未过硬约束”的 Offer。** 当前首选是要求补充核实。若公司不能在截止日前书面保障每天 17:30 离场，并明确直属经理和晚会惯例，我会建议放弃。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 7,
+          "excerpt": "1. **要求书面确认硬约束**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "actions",
+          "excerpt": [
+            {
+              "kind": "offer_comparison",
+              "description": "整理确认条件、未知与偏好敏感点",
+              "execution_mode": "codex",
+              "artifact": "Offer 比较表",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "confirm_terms",
+              "description": "核实：能否书面确认用户每天 17:30 离开现场接孩子，并允许晚间异步补工作（要求雇主在书面 Offer、补充说明或可留存的正式邮件中确认具体安排。）；最终直属经理是谁，以及其目标设定和沟通方式是否符合用户对尊重与稳定成长的要求（确认最终汇报对象，并就前三至六个月目标、反馈方式和决策边界进行一次针对性沟通。）；部门临时晚会和忙时延长现场工作的实际频率与提前通知方式（向 HR、最终经理及可接触的在职员工询问最近三个月的实际频率、通常结束时间和提前通知惯例。）",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "career_decision",
+              "description": "关键未知确认后由你接受或拒绝",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            }
+          ]
+        }
+      ]
+    },
+    "Information Value": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 7,
+          "excerpt": "1. **要求书面确认硬约束**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "decision_unknowns",
+          "excerpt": [
+            {
+              "option": "北辰仪器高级产品岗位",
+              "priority": "decisive",
+              "source_ids": [
+                "S1",
+                "S2"
+              ],
+              "unknown": "能否书面确认用户每天 17:30 离开现场接孩子，并允许晚间异步补工作",
+              "why_it_matters": "这是用户明确不可协商的条件，而现有附件仅写工作时间按部门安排。",
+              "how_to_verify": "要求雇主在书面 Offer、补充说明或可留存的正式邮件中确认具体安排。",
+              "reversal_condition": "若不能明确书面保障每日 17:30 离场，该选项不满足硬约束。"
+            },
+            {
+              "option": "北辰仪器高级产品岗位",
+              "priority": "decisive",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "unknown": "最终直属经理是谁，以及其目标设定和沟通方式是否符合用户对尊重与稳定成长的要求",
+              "why_it_matters": "用户在两次面试中观察到准经理多次打断，并听到目标入职后自然明确，但最终直属经理尚未确定。",
+              "how_to_verify": "确认最终汇报对象，并就前三至六个月目标、反馈方式和决策边界进行一次针对性沟通。",
+              "reversal_condition": "若最终经理仍无法说明目标机制，或沟通继续触发用户不可接受的管理风险，则不再偏向该 Offer。"
+            },
+            {
+              "option": "北辰仪器高级产品岗位",
+              "priority": "decisive",
+              "source_ids": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "unknown": "部门临时晚会和忙时延长现场工作的实际频率与提前通知方式",
+              "why_it_matters": "用户不能接受长期临时晚会，而当前只有通常支持弹性和忙时一起顶的概括表述。",
+              "how_to_verify": "向 HR、最终经理及可接触的在职员工询问最近三个月的实际频率、通常结束时间和提前通知惯例。",
+              "reversal_condition": "若长期或频繁临时晚会是常态且无法兼容 17:30 离场，该选项违反硬约束。"
+            }
+          ]
+        }
+      ]
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 49,
+          "excerpt": "- **会推翻当前谨慎判断的证据**：最终经理并非面试中的准经理，且书面安排、在职员工描述和具体管理机制相互印证。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 49,
+          "excerpt": "- **会推翻当前谨慎判断的证据**：最终经理并非面试中的准经理，且书面安排、在职员工描述和具体管理机制相互印证。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 45,
+          "excerpt": "停止线与反转条件："
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "stop_condition",
+          "excerpt": "任一硬约束不满足则停止接受该选项；目标未明确先暂停排名"
+        }
+      ]
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 32,
+          "excerpt": "   重点观察对方是否让你完整提问、能否给出具体事实、是否尊重明确边界。不要只听“没问题”“到时再说”。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "Ownership Integrity": {
+      "status": "NOT_APPLICABLE",
+      "assessment": "No individual authorship or team metric upgrade is requested.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "我的判断：**先不接受，也不因高薪直接拒绝；把它当成“有吸引力但尚未过硬约束”的 Offer。** 当前首选是要求补充核实。若公司不能在截止日前书面保障每天 17:30 离场，并明确直属经理和晚会惯例，我会建议放弃。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。"
+        }
+      ]
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+          "line": 37,
+          "excerpt": "   问实际下班节奏、晚会频率、目标如何确定、经理如何处理不同意见。两名自述前员工一年内离职只是线索：不知道团队规模和离职原因，不能据此认定团队高流失。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H09-manager-care/final-runtime/decision.json",
+          "field": "current_goal",
+          "excerpt": "在稳定成长与照顾孩子的不可协商条件下，判断是否以及在什么条件下继续推进或接受该 Offer。"
+        }
+      ]
+    }
+  },
+  "decision_courage": {
+    "status": "PASS",
+    "classification": "CALIBRATED_COMMITMENT"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "qualification": "Questions target feasibility, decision boundary or claim defense; no irrelevant interviewer biography requested."
+  },
+  "first_screen": {
+    "status": "PASS",
+    "evidence": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023-after/H09-manager-care/first-pass/host-response.md",
+      "line": 1,
+      "excerpt": "我的判断：**先不接受，也不因高薪直接拒绝；把它当成“有吸引力但尚未过硬约束”的 Offer。** 当前首选是要求补充核实。若公司不能在截止日前书面保障每天 17:30 离场，并明确直属经理和晚会惯例，我会建议放弃。"
+    },
+    "qualification": "Information priority is judged, not an exact character count. H07 prioritizes a judgment but overstates knowledge."
+  },
+  "hard_failures": [],
+  "failure_classification": [],
+  "outcomes": "NOT_SUPPLIED"
+}

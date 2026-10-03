@@ -1,0 +1,660 @@
+{
+  "schema_version": "2",
+  "current_situation": "下一轮面试前，如何在不虚构索引恢复模块经历的前提下补救分布式索引一致性问题的回答。",
+  "mode": "interview",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "27 岁",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S1",
+      "source_span": "27 岁",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "杭州",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F2",
+      "source_id": "S1",
+      "source_span": "杭州",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "两年应用工程",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F3",
+      "source_id": "S1",
+      "source_span": "两年应用工程",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "个人做过搜索查询接口、排序试验和评估脚本",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F4",
+      "source_id": "S1",
+      "source_span": "个人做过搜索查询接口、排序试验和评估脚本",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "索引存储与恢复由另一组负责",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F5",
+      "source_id": "S1",
+      "source_span": "索引存储与恢复由另一组负责",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "未参与实现或设计",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F6",
+      "source_id": "S1",
+      "source_span": "未参与实现或设计",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "2026-10-09 再面一家不同公司",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F9",
+      "source_id": "S1",
+      "source_span": "2026-10-09 再面一家不同公司",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "今晚到后天总共四小时",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F11",
+      "source_id": "S1",
+      "source_span": "今晚到后天总共四小时",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "不可能补成生产经验",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F12",
+      "source_id": "S1",
+      "source_span": "不可能补成生产经验",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "面试官问：多节点写索引时节点故障，如何恢复，同时避免重复写和丢失更新？",
+      "source": "S2",
+      "source_type": "interview_recap",
+      "id": "F13",
+      "source_id": "S2",
+      "source_span": "面试官问：多节点写索引时节点故障，如何恢复，同时避免重复写和丢失更新？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户解释了自己做的查询接口",
+      "source": "S2",
+      "source_type": "interview_recap",
+      "id": "F14",
+      "source_id": "S2",
+      "source_span": "用户解释了自己做的查询接口",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "存储层由平台团队负责",
+      "source": "S2",
+      "source_type": "interview_recap",
+      "id": "F15",
+      "source_id": "S2",
+      "source_span": "存储层由平台团队负责",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "随后尝试推测恢复方案但没讲清",
+      "source": "S2",
+      "source_type": "interview_recap",
+      "id": "F16",
+      "source_id": "S2",
+      "source_span": "随后尝试推测恢复方案但没讲清",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "烛溪知识系统搜索应用工程师",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F18",
+      "source_id": "S3",
+      "source_span": "烛溪知识系统搜索应用工程师",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "维护查询 API、检索评估、线上问题定位",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F19",
+      "source_id": "S3",
+      "source_span": "维护查询 API、检索评估、线上问题定位",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "理解索引更新与数据一致性优先",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F20",
+      "source_id": "S3",
+      "source_span": "理解索引更新与数据一致性优先",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "用户想保留可信的应用工程定位，同时提高技术讨论能力",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F23",
+      "source_id": "S3",
+      "source_span": "用户想保留可信的应用工程定位，同时提高技术讨论能力",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F8",
+      "text": "自觉没答好",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "自觉没答好",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    },
+    {
+      "id": "F10",
+      "text": "同类系统问题可能出现",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "同类系统问题可能出现",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "observation",
+      "modality": "unknown",
+      "label": "INFERENCE"
+    },
+    {
+      "id": "F22",
+      "text": "预计会讨论跨团队排障",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "预计会讨论跨团队排障",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "requirement",
+      "modality": "unknown",
+      "label": "INFERENCE"
+    },
+    {
+      "label": "INFERENCE",
+      "text": "强 Claim 的证据与个人贡献缺口可能成为追问风险；不是已知面试题"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "对昨天结果没有招聘方评价"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "他没有拿到评价或拒信"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "没有要求独立建设分布式存储"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "C1 的强表述与个人贡献仍需补证"
+    }
+  ],
+  "current_goal": "保留可信的应用工程定位，并提高对索引恢复与一致性的技术讨论能力。",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "两年应用工程，个人做过搜索查询接口、排序试验和评估脚本。",
+      "confidence": "SELF_REPORTED",
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "authorship"
+          ],
+          "summary": "个人经历叙述，未独立核验作者范围或项目深度。"
+        }
+      ],
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "个人做过搜索查询接口、排序试验和评估脚本。"
+      },
+      "stage": "completed",
+      "risk": [
+        "索引存储与恢复由另一组负责，未参与实现或设计。"
+      ],
+      "safe_wording": "项目阶段：已完成（范围待核实）；已陈述的个人贡献：个人做过搜索查询接口、排序试验和评估脚本。。具体结果与强表述需补证。",
+      "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."
+    }
+  ],
+  "highest_risk": "C1",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/01-evidence-and-claims.md",
+    "references/practical/interview.md",
+    "references/practical/project-defense.md"
+  ],
+  "method_plan": [
+    "proof",
+    "position",
+    "interview",
+    "offer"
+  ],
+  "bottleneck": "Evidence",
+  "recommended_move": "当前优先防守 architecture / ownership 的项目追问；这是基于现有信号的准备假设，不是已确认的能力弱点。",
+  "why": [
+    "面试官询问多节点写索引时的故障恢复，以及如何避免重复写和丢失更新。",
+    "索引存储与恢复由另一组负责，用户未参与实现或设计。",
+    "主观感受不是面试官评价；未知面试官身份不妨碍有限时间内优先防守"
+  ],
+  "actions": [
+    {
+      "kind": "risk_map",
+      "description": "整理真实个人决定、团队贡献和阶段边界，保留有依据的产品领导力",
+      "execution_mode": "codex",
+      "artifact": "一页面试风险图",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "question_ladder",
+      "description": "围绕 architecture / ownership 准备架构、取舍、失败与评估的连续追问，子步骤合并在这项行动内",
+      "execution_mode": "codex",
+      "artifact": "项目防守提纲",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "practice",
+      "description": "练一次 90 秒真实故事，安排休息并参加面试",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "下次面试结束后记录被追问最深的三个问题与原话反馈",
+  "stop_condition": "准备时间到即停；强表述无法补证就降低措辞，今晚不补做大型项目",
+  "pivot_condition": "明确新反馈后调整下一轮准备；单次结果不证明方向或策略因果",
+  "available_hours": 4.0,
+  "top_risk_hypotheses": [
+    {
+      "topic": "architecture",
+      "basis": "面试官询问多节点写索引时的故障恢复，以及如何避免重复写和丢失更新。",
+      "source_ids": [
+        "S2"
+      ],
+      "signal_kind": "observed_signal",
+      "status": "RISK_HYPOTHESIS"
+    },
+    {
+      "topic": "ownership",
+      "basis": "索引存储与恢复由另一组负责，用户未参与实现或设计。",
+      "source_ids": [
+        "S1"
+      ],
+      "signal_kind": "risk_hypothesis",
+      "status": "RISK_HYPOTHESIS"
+    }
+  ],
+  "recommendation_type": "SUFFICIENT",
+  "decision_sufficiency": {
+    "state": "DECISION_SUFFICIENT",
+    "basis": "有限时间内项目防守是可逆且有依据的首选",
+    "blocking_unknowns": [],
+    "reversal_unknowns": [
+      "明确面试安排或直接反馈显示不同考察重点"
+    ]
+  },
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "interview",
+    "role_family": "unknown",
+    "stage": "unknown",
+    "situation_type": "claim-defense",
+    "risk_tags": [
+      "evidence"
+    ],
+    "situation_tags": []
+  },
+  "recommendation": {
+    "move": "当前优先防守 architecture / ownership 的项目追问；这是基于现有信号的准备假设，不是已确认的能力弱点。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "27 岁",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "杭州",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "两年应用工程",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "个人做过搜索查询接口、排序试验和评估脚本",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "索引存储与恢复由另一组负责",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "未参与实现或设计",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "2026-10-09 再面一家不同公司",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "今晚到后天总共四小时",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "不可能补成生产经验",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "面试官问：多节点写索引时节点故障，如何恢复，同时避免重复写和丢失更新？",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户解释了自己做的查询接口",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "存储层由平台团队负责",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "随后尝试推测恢复方案但没讲清",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "烛溪知识系统搜索应用工程师",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "维护查询 API、检索评估、线上问题定位",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "理解索引更新与数据一致性优先",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户想保留可信的应用工程定位，同时提高技术讨论能力",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "面试可能更重产品判断或沟通；最强 Claim 不一定会被追问。",
+    "reconsider_if": [
+      "JD、面试安排或可比复盘显示不同考察重点时调整准备优先级。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "下一轮面试前，如何在不虚构索引恢复模块经历的前提下补救分布式索引一致性问题的回答。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "27 岁",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "杭州",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "两年应用工程",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "个人做过搜索查询接口、排序试验和评估脚本",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "索引存储与恢复由另一组负责",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "未参与实现或设计",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "2026-10-09 再面一家不同公司",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "今晚到后天总共四小时",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "不可能补成生产经验",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "面试官问：多节点写索引时节点故障，如何恢复，同时避免重复写和丢失更新？",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "用户解释了自己做的查询接口",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "存储层由平台团队负责",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "随后尝试推测恢复方案但没讲清",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "烛溪知识系统搜索应用工程师",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "维护查询 API、检索评估、线上问题定位",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "理解索引更新与数据一致性优先",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户想保留可信的应用工程定位，同时提高技术讨论能力",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Evidence",
+    "options_considered": [
+      "当前优先防守 architecture / ownership 的项目追问；这是基于现有信号的准备假设，不是已确认的能力弱点。",
+      "保留一条真实产品取舍故事，同时优先防守证据薄弱处。"
+    ],
+    "chosen": "当前优先防守 architecture / ownership 的项目追问；这是基于现有信号的准备假设，不是已确认的能力弱点。",
+    "rejected_options": [
+      {
+        "option": "保留一条真实产品取舍故事，同时优先防守证据薄弱处。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "面试官询问多节点写索引时的故障恢复，以及如何避免重复写和丢失更新。",
+      "索引存储与恢复由另一组负责，用户未参与实现或设计。",
+      "主观感受不是面试官评价；未知面试官身份不妨碍有限时间内优先防守"
+    ],
+    "reconsider_if": [
+      "JD、面试安排或可比复盘显示不同考察重点时调整准备优先级。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [
+    {
+      "topic": "architecture",
+      "expectation": "high_attention",
+      "basis": "2026-10-09 再面一家不同公司，同类系统问题可能出现。"
+    }
+  ],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

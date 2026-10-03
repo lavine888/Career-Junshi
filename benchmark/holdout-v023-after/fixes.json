@@ -1,0 +1,38 @@
+{
+  "budget": 3,
+  "fix_count": 3,
+  "first_pass_frozen_before_product_changes": true,
+  "fixes": [
+    {
+      "failure_cluster": "Unsupported singleton Offer superiority / hard acceptance boundary",
+      "cases_affected": [
+        "H04-equity-gap",
+        "H09-manager-care"
+      ],
+      "root_cause": "A singleton was promoted without any rating or comparative evidence; unknown explicit hard constraints were returned only as reversal risks.",
+      "general_rule": "No comparative superiority from an unscored singleton. Unknown explicit hard constraints block binding acceptance; preserve a sourced comparative tilt when it exists and allow nonbinding discussion.",
+      "why_not_overfit": "No company, compensation, equity or care-schedule string matching. Uses existing options, ratings, constraints and eligibility for any industry. Ordinary nonblocking unknowns still permit conditional comparison.",
+      "new_regression": "test_unscored_singleton_is_not_comparative_evidence; test_known_comparison_retains_tilt_but_unknown_hard_constraint_blocks_acceptance; test_nonblocking_unknowns_do_not_block_evidence_based_comparison; test_single_feasible_survivor_of_real_comparison_is_not_lost"
+    },
+    {
+      "failure_cluster": "Contemplated career outside the finite family catalog",
+      "cases_affected": [
+        "H06-two-technical-paths"
+      ],
+      "root_cause": "Direction contract excluded the existing unknown family; ML engineering could neither be faithfully represented nor legitimately relabeled as product/Quant.",
+      "general_rule": "Allow existing role_family=unknown in direction candidates; keep supplied actual names and source-bound assessments.",
+      "why_not_overfit": "No new family or role packs. Arbitrary clinical, energy and supply-chain roles, reordered and renamed, remain comparable; unsupported assessments still block.",
+      "new_regression": "test_outside_catalog_labels_compare_without_false_family; test_unknown_family_is_not_a_claim_of_evidence"
+    },
+    {
+      "failure_cluster": "Follow-up heuristic outranks supplied deadline",
+      "cases_affected": [
+        "H07-delayed-listing"
+      ],
+      "root_cause": "L1 retained the Oct 6 competing deadline, but recruiting compiler did not inspect normalized urgency before waiting.",
+      "general_rule": "A real deadline within 72h outranks heuristic waiting, with one truthful status request and bounded decision window. Explicit contact ban and prior follow-up still prevail; expired deadline triggers availability review, never invented extension.",
+      "why_not_overfit": "Uses timezone-aware existing urgency; tests vary hours, event labels, industries and contact boundaries. Draft never invents another Offer.",
+      "new_regression": "test_deadline_overrides_wait_across_names_calendars_and_hours; test_deadline_does_not_override_contact_ban_or_repeat_followup; test_overdue_deadline_does_not_create_extension"
+    }
+  ]
+}

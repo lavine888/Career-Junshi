@@ -1,0 +1,9 @@
+{
+  "case_id": "H10-unknown-systems",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "interview",
+  "recommendation": "当前优先防守 architecture / ownership 的项目追问；这是基于现有信号的准备假设，不是已确认的能力弱点。"
+}

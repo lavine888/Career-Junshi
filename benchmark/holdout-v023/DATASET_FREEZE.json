@@ -1,0 +1,28 @@
+{
+  "frozen_at": "2026-10-03T16:27:40.436816+00:00",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "sha256": {
+    "dataset-design.json": "748f47104ece42d231bd2900dc82da535f531538b0d38be7893e98fb5db49a42",
+    "H01-years-gate/input/context.json": "7066ebb355e4022efb6f4f6c18f36680958d3b95e7f051ba7b96cf921d1afec6",
+    "H01-years-gate/rubric/rubric.json": "dbe220a7767268a21929d6ae6b48cf5b312d91e9416dc4bbfeaa3dda040b33b4",
+    "H02-title-scope/input/context.json": "69a14222f58eb49f461edf9403da763756d598aa33729ec1a6f8f919678ed78b",
+    "H02-title-scope/rubric/rubric.json": "3a6ac472e63150dbf010ecce2849cc498305c16ab08b3e8b663d29904b5c8379",
+    "H03-repeated-feedback/input/context.json": "369bb9dc3d30f1ecf9192cae95870379e15ac60c083081833a03a5444b009eca",
+    "H03-repeated-feedback/rubric/rubric.json": "a2ec2f55049c73f138dfaf42b21ceba425b35796376fafdb5d412c843414beba",
+    "H04-equity-gap/input/context.json": "6cbb679f9e3e954975e088a90811a2db67b0715ee238f88f6b41ff7c8a482529",
+    "H04-equity-gap/rubric/rubric.json": "f05d19211a24f5e7e6f10d7b229b55e1fe092099b70fb7beb892d933628cf88b",
+    "H05-metric-credit/input/context.json": "77f4706b7ce5d88ce0dea065e326bbdb9f077ca9fb0c4113095c2f9c94afae93",
+    "H05-metric-credit/rubric/rubric.json": "c6e8b305a6c830be84d7015d9f174ca7da186ab99c6f3155e14a8f72c0f2681c",
+    "H06-two-technical-paths/input/context.json": "6d3c7f7996066bfcf7acdc6e549e4afe4a5f3131c002d8c37606f4bb34453406",
+    "H06-two-technical-paths/rubric/rubric.json": "ed4024ca3f24b8b49e9bac1408e4594a1c1c11a74db19ea869f990b9388b17b4",
+    "H07-delayed-listing/input/context.json": "0baf2e98f28f62675a2e0ca6cec34f9b033d17509a27507b6dc9ad11db1cfbd7",
+    "H07-delayed-listing/rubric/rubric.json": "92ff8d32d32545b3ab0503ab36ecafe0d8c60c6ce55f02a75115284986e75f3b",
+    "H08-building-avoidance/input/context.json": "12f7e171787390cad7a0f389c0b13f6836c8e5bcf5b56982b53bbd9aa2461e44",
+    "H08-building-avoidance/rubric/rubric.json": "b49496e7db1637b7af1cabd2efc3ac688121a592e01ad95ca62c972aae01333e",
+    "H09-manager-care/input/context.json": "1cab54e57f4fc03a60941cfb607ed926ddeebe6b79eb9ea844d0534ec210300b",
+    "H09-manager-care/rubric/rubric.json": "b3cdf51378fdfacc8a96a986814c96b886478dadbd7f295d29f78f4fed595f5f",
+    "H10-unknown-systems/input/context.json": "9535c80c4416615a64d5cb0857b0c2e7c4e84744f1abdff21762523271b82720",
+    "H10-unknown-systems/rubric/rubric.json": "dedea0ddd0e81b1f95eaa44d4e740a019297aebca8d79fcb298444ca87a25d9d"
+  },
+  "boundary": "Inputs and rubrics immutable from this point; no changes to improve results. Output freeze follows all ten evaluations."
+}

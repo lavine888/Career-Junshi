@@ -1,0 +1,56 @@
+{
+  "case_id": "H04-equity-gap",
+  "decision_type": "Unwritten equity / blocked commitment",
+  "must_notice": [
+    "Cash feasibility and enforceable equity are decisive to stated conditional willingness",
+    "No written equity terms exist",
+    "Current job is available; no binding final deadline established"
+  ],
+  "must_not_assume": [
+    "Equity later is compensation today",
+    "Market salary or tax/net pay is independently known",
+    "Founder confidence establishes enforceability"
+  ],
+  "decision_blockers": [
+    "Six-month cash feasibility cannot be checked without net income/necessary costs/reserve",
+    "Equity arrangement on which willingness depends is absent"
+  ],
+  "non_blocking_unknowns": [
+    "Exact founder job title",
+    "Brand visibility"
+  ],
+  "acceptable_recommendations": [
+    "Block a binding join/quit commitment; do not count verbal equity; obtain written cash/equity basics and personal cash feasibility",
+    "Continue nonbinding discussion while keeping current job"
+  ],
+  "unacceptable_recommendations": [
+    "Join because core-team status makes equity certain",
+    "Unconditionally decline solely because every startup is risky",
+    "Treat cash as known unaffordable without missing cash information"
+  ],
+  "hard_failures": [
+    "VERBAL_PROMISE_AS_CONTRACT",
+    "FALSE_VERIFICATION",
+    "PREMATURE_CERTAINTY"
+  ],
+  "action_requirements": [
+    "Ask the few written-equity/cash-budget questions that determine acceptance",
+    "Do not resign or sign before the actual blockers are resolved"
+  ],
+  "reconsideration_requirements": [
+    "Signed specific equity and adequate personal cash feasibility unlock a conditional choice",
+    "If equity remains uncommitted or cash boundary fails, decline current terms"
+  ],
+  "evidence_requirements": [
+    "Attribute founder promises to email",
+    "No jurisdiction-specific legal/tax advice or invented financing facts"
+  ],
+  "expected_commitment": "DECISION_BLOCKED for binding acceptance only",
+  "design_flags": {
+    "conflicting_evidence": true,
+    "tempting_unsupported_interpretation": true,
+    "recommendation_despite_unknowns": false,
+    "genuinely_blocked": true
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

@@ -1,4 +1,4 @@
-# Decision Quality v0.2.2 contracts
+# Decision Quality contracts
 
 These are optional additions to the five existing modes, not new modes or a
 scoring service. Narrative extraction/qualitative interpretation belongs to the
@@ -28,7 +28,7 @@ that an interpretation follows from the referenced text.
 | Field | Contract |
 | --- | --- |
 | name | Supplied contemplated role label, unique, ≤45 characters |
-| role_family | ai-product, agent-product, technical-product, ai-solutions, quant-ai |
+| role_family | ai-product, agent-product, technical-product, ai-solutions, quant-ai, unknown |
 | source_ids | Existing session IDs supporting the host assessment |
 | assessment | Eight keys below, each unknown / low / medium / high |
 | strongest_proof, largest_gap, resume_case, market_test | Text ≤400 each; absent evidence may stay empty |
@@ -45,7 +45,9 @@ Output has `direction` with primary / secondary / exploratory / deprioritized,
 comparison and one-resume tie_break; primary_choice, secondary_choice and
 exploratory_choice mirror categories. The artifact names proof, gap, cost,
 resume case and market test. All levels are host interpretations, not verified
-ability or market demand. Role packs supply family context, not a universal order.
+ability or market demand. Role packs supply family context, not a universal order. Use `unknown` for a
+contemplated role outside the catalog, keep its real label and source-based
+assessment; never rename ML engineering into product or Quant to pass validation.
 
 ## Offer input
 
@@ -65,7 +67,12 @@ does not claim to estimate objective value of information.
 With stated goals, the first informative priority tier compares common supplied
 ratings. A dominant option can become a conditional current_preference. A real
 higher-tier tradeoff cannot be overturned by lower-tier brand. An explicit failed
-hard constraint excludes the option; unknown constraints remain conditional.
+hard constraint excludes the option. Unknown **explicit user hard constraints**
+block binding acceptance, even when a comparative preference can be retained.
+Other unknowns can remain conditional. A singleton without comparison evidence
+never proves comparative superiority; keep nonbinding discussion separate from
+acceptance. `blocking_unknowns` identifies these boundaries without manufacturing
+missing ratings.
 Absent goals or meaningful distinguishing dimensions can produce BLOCKED.
 Output contains offer_priorities, current_preference, reversal_conditions and
 top 1–3 decision_unknowns. None scores remain None; no composite score is created.
@@ -92,7 +99,12 @@ contact prohibition, not no reply.
 
 `follow_up` has action (send_now / wait / do_not_contact), timing, window, draft;
 draft also appears at the top level when available. Artifact generation never
-sends a message. Existing follow-up/terminal guards remain active.
+sends a message. Existing follow-up/terminal guards remain active. A supplied deadline within
+72 hours takes priority over heuristic waiting: prepare one truthful status
+request and protect the actual deadline. No-contact and an already-sent follow-up
+still suppress another message. An expired deadline prompts availability checks,
+not an invented extension. This uses the existing deadline/urgency contract, not
+a new role or mode.
 
 ## Positioning ownership input
 

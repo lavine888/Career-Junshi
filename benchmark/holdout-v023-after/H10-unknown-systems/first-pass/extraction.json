@@ -1,0 +1,342 @@
+{
+  "mode": "interview",
+  "summary": "下一轮面试前，如何在不虚构索引恢复模块经历的前提下补救分布式索引一致性问题的回答。",
+  "goal": "保留可信的应用工程定位，并提高对索引恢复与一致性的技术讨论能力。",
+  "claims": [
+    {
+      "id": "C1",
+      "claim": "两年应用工程，个人做过搜索查询接口、排序试验和评估脚本。",
+      "confidence": "SELF_REPORTED",
+      "stage": "completed",
+      "ownership": {
+        "scope": "unclear",
+        "contribution": "个人做过搜索查询接口、排序试验和评估脚本。"
+      },
+      "evidence": [
+        {
+          "source": "S1",
+          "kind": "self_report",
+          "supports": [
+            "claim",
+            "authorship"
+          ],
+          "summary": "个人经历叙述，未独立核验作者范围或项目深度。"
+        }
+      ],
+      "risk": [
+        "索引存储与恢复由另一组负责，未参与实现或设计。"
+      ]
+    }
+  ],
+  "predictions": [
+    {
+      "topic": "architecture",
+      "expectation": "high_attention",
+      "basis": "2026-10-09 再面一家不同公司，同类系统问题可能出现。"
+    }
+  ],
+  "interview": {
+    "available_hours": 4,
+    "signals": [
+      {
+        "topic": "architecture",
+        "basis": "面试官询问多节点写索引时的故障恢复，以及如何避免重复写和丢失更新。",
+        "source_ids": [
+          "S2"
+        ],
+        "kind": "observed_signal"
+      },
+      {
+        "topic": "ownership",
+        "basis": "索引存储与恢复由另一组负责，用户未参与实现或设计。",
+        "source_ids": [
+          "S1"
+        ],
+        "kind": "risk_hypothesis"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "text": "27 岁",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "27 岁",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "杭州",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "杭州",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "两年应用工程",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "两年应用工程",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "个人做过搜索查询接口、排序试验和评估脚本",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "个人做过搜索查询接口、排序试验和评估脚本",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "索引存储与恢复由另一组负责",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "索引存储与恢复由另一组负责",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "未参与实现或设计",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "未参与实现或设计",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "2026-10-09 再面一家不同公司",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "2026-10-09 再面一家不同公司",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "今晚到后天总共四小时",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "今晚到后天总共四小时",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F12",
+      "text": "不可能补成生产经验",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "不可能补成生产经验",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F13",
+      "text": "面试官问：多节点写索引时节点故障，如何恢复，同时避免重复写和丢失更新？",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "面试官问：多节点写索引时节点故障，如何恢复，同时避免重复写和丢失更新？",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "observed"
+    },
+    {
+      "id": "F14",
+      "text": "用户解释了自己做的查询接口",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "用户解释了自己做的查询接口",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F15",
+      "text": "存储层由平台团队负责",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "存储层由平台团队负责",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F16",
+      "text": "随后尝试推测恢复方案但没讲清",
+      "source": "S2",
+      "source_id": "S2",
+      "source_type": "interview_recap",
+      "source_span": "随后尝试推测恢复方案但没讲清",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F18",
+      "text": "烛溪知识系统搜索应用工程师",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "烛溪知识系统搜索应用工程师",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F19",
+      "text": "维护查询 API、检索评估、线上问题定位",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "维护查询 API、检索评估、线上问题定位",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F20",
+      "text": "理解索引更新与数据一致性优先",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "理解索引更新与数据一致性优先",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F23",
+      "text": "用户想保留可信的应用工程定位，同时提高技术讨论能力",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "用户想保留可信的应用工程定位，同时提高技术讨论能力",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "F8",
+      "text": "自觉没答好",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "自觉没答好",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "同类系统问题可能出现",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "同类系统问题可能出现",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F22",
+      "text": "预计会讨论跨团队排障",
+      "source": "S3",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "预计会讨论跨团队排障",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "requirement",
+      "modality": "unknown"
+    }
+  ],
+  "unknowns": [
+    "对昨天结果没有招聘方评价",
+    "他没有拿到评价或拒信",
+    "没有要求独立建设分布式存储"
+  ],
+  "context_sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "interview_recap"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "jd"
+    }
+  ]
+}

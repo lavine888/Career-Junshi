@@ -1,0 +1,9 @@
+{
+  "case_id": "H06-two-technical-paths-goal",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "job",
+  "recommendation": "主投：珀岛设备 ML Engineer；当前降低投入：苔川工业 AI Solutions / Forward Deployed"
+}

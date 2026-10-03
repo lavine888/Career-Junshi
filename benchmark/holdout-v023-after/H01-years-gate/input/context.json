@@ -1,0 +1,27 @@
+{
+  "case_id": "H01-years-gate",
+  "origin": "synthetic",
+  "request": "我刚转行，在苏州只有八个月正式工作经历。澄湾工业软件的应用 AI 岗写必须三年经验，但技术工作我大部分做过。周三截止，我是否该投？我每天只能拿出一小时，不能为一家公司另做项目。",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Candidate account",
+      "text": "28 岁，原为机械专业研究生，八个月正式算法应用经历。自述独立维护过工厂缺陷识别试验，能解释采样、标签误差和拒识策略。允许苏州混合办公，不愿搬迁。求职目标是做有现场反馈的 AI 应用。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "jd",
+      "label": "JD excerpt",
+      "text": "澄湾工业软件｜应用 AI 工程师｜苏州混合办公。必需：3 年以上相关全职经验；Python、评估与部署故障分析。工业领域经历优先；硕士学历优先。未写项目可折抵年限。申请截止 2026-10-07 18:00。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "document",
+      "label": "Supplied proof excerpt",
+      "text": "候选人提供脱敏试验说明：同一缺陷识别任务有训练/留出集隔离、拒识阈值敏感性、标签复核和延迟日志。文档记载该候选人设计了数据拆分与拒识规则；运行截图显示留出集测试，但本次没有独立重跑。岗位申请只需现成简历，约 25 分钟；内推联系人可回答年限是否严格，尚未询问。"
+    }
+  ],
+  "as_of": "2026-10-04T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic clock. Fictional companies and anonymized people; no real hiring outcome or private history."
+}

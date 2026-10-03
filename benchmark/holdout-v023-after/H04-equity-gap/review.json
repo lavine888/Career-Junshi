@@ -1,0 +1,342 @@
+{
+  "case_id": "H04-equity-gap",
+  "phase": "FRESH_AFTER",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "reviewer": "Same human operator; no independent-rater claim",
+  "generation_had_rubric": false,
+  "layers": {
+    "L1_Extraction": "PARTIAL",
+    "L2_Structured_Decision": "PARTIAL",
+    "L3_Host": "PASS",
+    "L4_Overall": "PARTIAL"
+  },
+  "main_strength": "Binding acceptance remains correctly blocked; no fake comparative preference",
+  "main_failure": "Fresh packet omits qualitative priorities/critical_unknowns, so L2 verification stays generic",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**现在不要正式答应入职，但也不应因此放弃机会。首选是：表达强烈兴趣，同时把接受设为书面股权和六个月现金可行性两个前置条件。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "目前的“有意义的股权”只是创始人的书面承诺，不是可估值、可执行的 Offer 条款。在条款补齐前，决策时应暂按 **股权价值为零** 处理。EUR 2,400 税前现金能否守住生活底线也仍未知，因此现在接受会越过你的硬约束。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**现在不要正式答应入职，但也不应因此放弃机会。首选是：表达强烈兴趣，同时把接受设为书面股权和六个月现金可行性两个前置条件。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "decision_sufficiency",
+          "excerpt": {
+            "state": "DECISION_BLOCKED",
+            "basis": "使用已有数字权重契约，不补造评分",
+            "blocking_unknowns": [
+              "浮叶气候: 硬约束是否满足"
+            ],
+            "reversal_unknowns": []
+          }
+        }
+      ]
+    },
+    "Decision Courage": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**现在不要正式答应入职，但也不应因此放弃机会。首选是：表达强烈兴趣，同时把接受设为书面股权和六个月现金可行性两个前置条件。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**现在不要正式答应入职，但也不应因此放弃机会。首选是：表达强烈兴趣，同时把接受设为书面股权和六个月现金可行性两个前置条件。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "bottleneck",
+          "excerpt": "Direction"
+        }
+      ]
+    },
+    "Recommendation Clarity": {
+      "status": "PARTIAL",
+      "assessment": "Fresh packet omits qualitative priorities/critical_unknowns, so L2 verification stays generic",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**现在不要正式答应入职，但也不应因此放弃机会。首选是：表达强烈兴趣，同时把接受设为书面股权和六个月现金可行性两个前置条件。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 11,
+          "excerpt": "1. **索要可执行的股权条款**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "actions",
+          "excerpt": [
+            {
+              "kind": "offer_comparison",
+              "description": "整理确认条件、未知与偏好敏感点",
+              "execution_mode": "codex",
+              "artifact": "Offer 比较表",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "confirm_terms",
+              "description": "确认经理、团队、ownership、书面薪酬、地点与截止时间",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "career_decision",
+              "description": "关键未知确认后由你接受或拒绝",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            }
+          ]
+        }
+      ]
+    },
+    "Information Value": {
+      "status": "PARTIAL",
+      "assessment": "Fresh packet omits qualitative priorities/critical_unknowns, so L2 verification stays generic",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 14,
+          "excerpt": "   至少确认："
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "decision_unknowns",
+          "excerpt": []
+        }
+      ]
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 70,
+          "excerpt": "**会推翻当前“不接受”的条件：**股权数量与归属安排形成清楚的书面机制、批准路径可信，且税后现金与储备测算能够覆盖前六个月。满足这些条件后，这个机会才值得进入正式接受比较。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 70,
+          "excerpt": "**会推翻当前“不接受”的条件：**股权数量与归属安排形成清楚的书面机制、批准路径可信，且税后现金与储备测算能够覆盖前六个月。满足这些条件后，这个机会才值得进入正式接受比较。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 59,
+          "excerpt": "## 观察窗口与停止线"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "stop_condition",
+          "excerpt": "任一硬约束不满足则停止接受该选项；目标未明确先暂停排名"
+        }
+      ]
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**现在不要正式答应入职，但也不应因此放弃机会。首选是：表达强烈兴趣，同时把接受设为书面股权和六个月现金可行性两个前置条件。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "Ownership Integrity": {
+      "status": "NOT_APPLICABLE",
+      "assessment": "No individual authorship or team metric upgrade is requested.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**现在不要正式答应入职，但也不应因此放弃机会。首选是：表达强烈兴趣，同时把接受设为书面股权和六个月现金可行性两个前置条件。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+        }
+      ]
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+          "line": 68,
+          "excerpt": "- 实际岗位没有足够的产品职责，无法支持你的转型目标。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H04-equity-gap/final-runtime/decision.json",
+          "field": "current_goal",
+          "excerpt": "判断是否可以答应，同时守住未来六个月生活现金不出现缺口，并要求所承担现金下降对应可执行且归属清楚的权益，不让非关键小细节单独阻断决定。"
+        }
+      ]
+    }
+  },
+  "decision_courage": {
+    "status": "PASS",
+    "classification": "CALIBRATED_COMMITMENT"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "qualification": "Fresh packet omits qualitative priorities/critical_unknowns, so L2 verification stays generic"
+  },
+  "first_screen": {
+    "status": "PASS",
+    "evidence": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023-after/H04-equity-gap/first-pass/host-response.md",
+      "line": 3,
+      "excerpt": "**现在不要正式答应入职，但也不应因此放弃机会。首选是：表达强烈兴趣，同时把接受设为书面股权和六个月现金可行性两个前置条件。**"
+    },
+    "qualification": "Information priority is judged, not an exact character count. H07 prioritizes a judgment but overstates knowledge."
+  },
+  "hard_failures": [],
+  "failure_classification": [
+    {
+      "category": "B",
+      "finding": "missing optional structured priorities/critical_unknowns loses targeted equity/cash check despite good host answer"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED"
+}

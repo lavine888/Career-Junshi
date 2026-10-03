@@ -1,0 +1,9 @@
+{
+  "case_id": "H05-metric-credit",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "positioning",
+  "recommendation": "现在采用有边界的表述：据本人描述，在团队项目中负责：用户自述负责 onboarding 访谈、流程方案、实验假设与上线验收；代码由工程同事实现。同期团队还更新了定价和销售脚本。；用户自述负责 onboarding 访谈、流程方案、实验假设与上线验收；定价和销售脚本分别由其他负责人负责。。个人工程作者范围按已核实部分说明。"
+}

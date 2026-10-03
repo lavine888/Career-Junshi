@@ -1,0 +1,27 @@
+{
+  "case_id": "H07-delayed-listing",
+  "origin": "synthetic",
+  "request": "一家公司说本周给结果，后来又说流程延期，职位页面现在没了。我是不是被拒了？我要不要继续等？我还有一个下周二截止的书面 Offer。",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "hr_chat",
+      "label": "Earlier timeline",
+      "text": "晖岸医疗器械招聘邮件 2026-09-28：你的现场面试已结束，预计本周给反馈。这是时间预期，未承诺录用。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "hr_chat",
+      "label": "Later update",
+      "text": "同一招聘者 2026-10-02：内部流程暂时延迟，暂时无法提供新日期。你的流程仍在处理中，有变化会通知。这条更新晚于前面的本周预期，没有明确通过/拒绝/冻结招聘。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "label": "Listing and competing deadline",
+      "text": "用户于 2026-10-03 发现原职位链接显示不可用，未收到解释；不知道是下架、更新链接还是岗位关闭。没有询问延期后的新日期。另有沐原设备正式 Offer，接受期限 2026-10-06 16:00，不准备谎称提前截止。可等到周一 2026-10-05，但不能因为无限等待错过另一份 Offer。公司工作日/节假日日历未提供。"
+    }
+  ],
+  "as_of": "2026-10-04T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic clock. Fictional companies and anonymized people; no real hiring outcome or private history."
+}

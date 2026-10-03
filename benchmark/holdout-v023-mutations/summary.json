@@ -1,0 +1,62 @@
+{
+  "mutations": [
+    {
+      "original_case_id": "H02-title-scope",
+      "changed_decisive_variable": "priority",
+      "WHY_CHANGE_IS_EXPECTED": "Prioritize cash over product ownership; knowing operational scope is acceptable, never relabel it as product ownership.",
+      "unchanged_material_source_ids": [
+        "S2",
+        "S3"
+      ],
+      "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation",
+      "ORIGINAL_DECISION": "我的判断：**不要只为了加薪接受。当前首选是留任，同时把曜原 Offer 当作一次限时谈判机会。**",
+      "MUTATED_DECISION": "**按你现在的目标，曜原集团更符合。**",
+      "host_status": "PASS",
+      "structured_status": "FAIL",
+      "structured_decision": null,
+      "limitation": "L2 rejects partial metadata; no structured acceptance decision produced.",
+      "causality_boundary": "A controlled evidence/priority change, not a measured real-user outcome."
+    },
+    {
+      "original_case_id": "H06-two-technical-paths",
+      "changed_decisive_variable": "goal",
+      "WHY_CHANGE_IS_EXPECTED": "Replace founder optionality with deep ML engineering/reliability; same defensible evidence should shift the primary path.",
+      "unchanged_material_source_ids": [
+        "S2",
+        "S3"
+      ],
+      "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation",
+      "ORIGINAL_DECISION": "**主线：工业 AI Solutions / Forward Deployed，但限定为“亲自构建、参与交付、非重销售”的岗位。**  ",
+      "MUTATED_DECISION": "**主线：ML Engineer，聚焦模型工程、数据质量、评估、漂移和可靠性。**  ",
+      "host_status": "PASS",
+      "structured_status": "PASS",
+      "structured_decision": "主投：珀岛设备 ML Engineer；当前降低投入：苔川工业 AI Solutions / Forward Deployed",
+      "limitation": "Goal change reverses the primary role while preserving actual role labels and evidence boundaries.",
+      "causality_boundary": "A controlled evidence/priority change, not a measured real-user outcome."
+    },
+    {
+      "original_case_id": "H07-delayed-listing",
+      "changed_decisive_variable": "deadline",
+      "WHY_CHANGE_IS_EXPECTED": "Remove the competing offer/deadline; deadline-driven escalation should relax, without inferring rejection.",
+      "unchanged_material_source_ids": [
+        "S1",
+        "S2"
+      ],
+      "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation",
+      "ORIGINAL_DECISION": "**你还没有被拒。**职位页面消失只是弱信号，不能覆盖 HR 在 2026-10-02 明确给出的“流程仍在处理中”。但这家公司已经无法按原时间表给结果，因此也**不值得无限等待**。",
+      "MUTATED_DECISION": "**不能据此认定被拒。现在先不催；从 10 月 2 日最新回复后，按该公司的实际工作日等待约 3 个工作日，再进行一次有限跟进。**",
+      "host_status": "PASS",
+      "structured_status": "PARTIAL",
+      "structured_decision": "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。",
+      "limitation": "Urgent send_now becomes wait, but extractor retains a superseded timeline inside promised_date; timing precision remains ambiguous.",
+      "causality_boundary": "A controlled evidence/priority change, not a measured real-user outcome."
+    }
+  ],
+  "host_changes": "3/3 changed in the expected decision-relevant way",
+  "structured_results": {
+    "FAIL": 1,
+    "PASS": 1,
+    "PARTIAL": 1
+  },
+  "boundary": "Do not convert host sensitivity into a three-layer perfect result; failed and partial structured outputs retained."
+}

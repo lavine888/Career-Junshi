@@ -1,0 +1,54 @@
+{
+  "REFERENCE_MODE": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "phase": "controlled-mutation",
+  "attempts": [
+    {
+      "name": "after-extract-H06-two-technical-paths-goal",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:57:37.027541+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "aa78e6be23bcb11b1127d2e687f0644c2b7986221295f0dde2617dcc9ec7b71f",
+      "commands": [],
+      "usage": {
+        "input_tokens": 24003,
+        "cached_input_tokens": 22272,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5358,
+        "reasoning_output_tokens": 2141
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T17:01:11.151495+00:00",
+      "seconds": 214.12,
+      "raw_sha256": "b79558d66c8379e3b1d646fc534eb8cebb3e29c8fc979b83297d92f048b4cc5b"
+    },
+    {
+      "name": "after-host-H06-two-technical-paths-goal",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:57:52.311100+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "42cfcab11affd32d4b2e165991a9fdd78f3f752fc754cf1ecf32d7278db645d9",
+      "commands": [],
+      "usage": {
+        "input_tokens": 21868,
+        "cached_input_tokens": 20736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1145,
+        "reasoning_output_tokens": 0
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:59:31.328011+00:00",
+      "seconds": 99.02,
+      "raw_sha256": "cc6b29cb42290ad1bbee7a3f76b0f2a78459bbb6e3959f0982c558d233ad306e"
+    }
+  ],
+  "input_sha256": "73894abeed196b65d76d9477acd37c67b7d21371c36c589c5bf66426596cbf78",
+  "outcomes": "NOT_SUPPLIED",
+  "contract_assembly_change": "Existing unknown family allowed by patched contract; exact user request source allowed by corrected assembly; no rubric in generation."
+}

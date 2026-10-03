@@ -1,0 +1,53 @@
+{
+  "case_id": "H06-two-technical-paths",
+  "decision_type": "ML engineering / forward deployed",
+  "must_notice": [
+    "Both paths have continuous defensible proof",
+    "Founder goal distinguishes customer learning from technical depth",
+    "Travel upper bound is a real user constraint; example schedules are not guarantees"
+  ],
+  "must_not_assume": [
+    "ML Engineer is Quant or a product-manager role",
+    "Solutions necessarily teaches selling or grants product decision rights",
+    "Unknown travel ceiling automatically makes it a confirmed failed constraint"
+  ],
+  "decision_blockers": [],
+  "non_blocking_unknowns": [
+    "Written travel cap can reverse priority",
+    "Final actual team scope"
+  ],
+  "acceptable_recommendations": [
+    "Conditionally prioritize forward-deployed/solutions given founder goal and travel cap; ML remains genuine backup",
+    "Prioritize ML if travel risk is unacceptable or technical founder path is better argued using supplied goals; give an explicit hierarchy"
+  ],
+  "unacceptable_recommendations": [
+    "Treat both as equally suitable with no hierarchy",
+    "Invent a taxonomy label/skill receipt or numeric role-fit score",
+    "Assume travel cap is confirmed"
+  ],
+  "hard_failures": [
+    "NO_PRIORITIZATION",
+    "FALSE_VERIFICATION",
+    "FABRICATED_FACT"
+  ],
+  "action_requirements": [
+    "One primary positioning and a bounded adjacent backup",
+    "Confirm travel ceiling and compare real work examples without creating unrelated new projects"
+  ],
+  "reconsideration_requirements": [
+    "Unacceptable travel or lack of customer/product responsibility can reverse",
+    "User goal change toward research depth can favor ML"
+  ],
+  "evidence_requirements": [
+    "Keep role names as supplied without claiming unsupported taxonomy equivalence",
+    "Separate actual code, team platform work and absent sales ownership"
+  ],
+  "expected_commitment": "Strongest justified reversible or conditional recommendation; alternate supported choices allowed",
+  "design_flags": {
+    "conflicting_evidence": true,
+    "tempting_unsupported_interpretation": false,
+    "recommendation_despite_unknowns": true,
+    "genuinely_blocked": false
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

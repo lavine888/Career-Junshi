@@ -1,0 +1,295 @@
+{
+  "case_id": "H06-two-technical-paths",
+  "reviewer": "Human operator (same operator authored corpus); no independent inter-rater reliability claim",
+  "rubric_visibility": "Only after all ten extraction/host outputs were frozen",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "layers": {
+    "L1_Extraction": "PARTIAL",
+    "L2_Structured_Decision": "FAIL",
+    "L3_Host": "PARTIAL",
+    "L4_Overall": "FAIL"
+  },
+  "main_strength": "Host prioritizes customer-facing technical work for founder goal",
+  "main_failure": "No direction packet outside finite role families; travel question weakens hard cap to average",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但只投“技术构建 + 客户问题定义 + 交付闭环”且出差边界明确的岗位。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 22,
+          "excerpt": "- **Solutions 证据为 SUPPORTED：**参与两个工业客户的需求拆解、接口联调和验收；个人编写集成模块并主持复盘（S2）。这是客户工作、技术实现和交付闭环的组合证据。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 22,
+          "excerpt": "- **Solutions 证据为 SUPPORTED：**参与两个工业客户的需求拆解、接口联调和验收；个人编写集成模块并主持复盘（S2）。这是客户工作、技术实现和交付闭环的组合证据。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但只投“技术构建 + 客户问题定义 + 交付闭环”且出差边界明确的岗位。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Courage": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但只投“技术构建 + 客户问题定义 + 交付闭环”且出差边界明确的岗位。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ],
+      "assessment": "No direction packet outside finite role families; travel question weakens hard cap to average"
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但只投“技术构建 + 客户问题定义 + 交付闭环”且出差边界明确的岗位。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Recommendation Clarity": {
+      "status": "FAIL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但只投“技术构建 + 客户问题定义 + 交付闭环”且出差边界明确的岗位。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ],
+      "assessment": "No direction packet outside finite role families; travel question weakens hard cap to average"
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 28,
+          "excerpt": "## 现在最值得做的三件事"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Information Value": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 28,
+          "excerpt": "## 现在最值得做的三件事"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        },
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 44,
+          "excerpt": "   > 这个岗位过去六个月实际每月出差天数和过夜次数大致是多少？高峰期会持续多久？团队能否把长期平均出差控制在每月五天以内，且不出现常态化每周四晚出差？"
+        }
+      ],
+      "assessment": "No direction packet outside finite role families; travel question weakens hard cap to average"
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 53,
+          "excerpt": "## 什么会改变判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 53,
+          "excerpt": "## 什么会改变判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 53,
+          "excerpt": "## 什么会改变判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 53,
+          "excerpt": "## 什么会改变判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Ownership Integrity": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 22,
+          "excerpt": "- **Solutions 证据为 SUPPORTED：**参与两个工业客户的需求拆解、接口联调和验收；个人编写集成模块并主持复盘（S2）。这是客户工作、技术实现和交付闭环的组合证据。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "User Goal Alignment": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但只投“技术构建 + 客户问题定义 + 交付闭环”且出差边界明确的岗位。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        },
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+          "line": 44,
+          "excerpt": "   > 这个岗位过去六个月实际每月出差天数和过夜次数大致是多少？高峰期会持续多久？团队能否把长期平均出差控制在每月五天以内，且不出现常态化每周四晚出差？"
+        }
+      ],
+      "assessment": "No direction packet outside finite role families; travel question weakens hard cap to average"
+    }
+  },
+  "first_screen": {
+    "status": "PASS",
+    "priority_assessment": "The opening states a judgment/conditional direction before an inventory of facts and unknowns; subsequent bounded actions are visible. No exact character quota imposed.",
+    "excerpt": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/host-response.md",
+      "line": 3,
+      "excerpt": "**主线：工业 AI Solutions / Forward Deployed，但只投“技术构建 + 客户问题定义 + 交付闭环”且出差边界明确的岗位。**"
+    }
+  },
+  "decision_courage": {
+    "status": "FAIL",
+    "classification": "OVER_CAUTION"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "decision_relevant_information": [
+      "Travel ceiling and actual technical responsibility"
+    ],
+    "qualification": "H06 travel averaging weakens the exact hard constraint; H09 structured generic questions miss the decisive care schedule."
+  },
+  "hard_failures": [
+    {
+      "code": "NO_PRIORITIZATION",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    },
+    {
+      "code": "OVER_CAUTION",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    },
+    {
+      "code": "GENERIC_ADVICE",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023/H06-two-technical-paths/first-pass/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    }
+  ],
+  "failure_classification": [
+    {
+      "category": "A",
+      "finding": "generic career comparison rejects unknown role_family"
+    },
+    {
+      "category": "B",
+      "finding": "host asks average travel rather than a per-month cap; one observed constraint wording slip"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED; not inferred",
+  "assembly_notes": "Exact completed agent response restored from JSONL; original writer error and hashes retained."
+}

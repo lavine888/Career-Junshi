@@ -1,0 +1,490 @@
+{
+  "schema_version": "2",
+  "current_situation": "用户在决定是否接受浮叶气候的里昂岗位邀请；现金低于其当前收入，股权目前只有未来承诺且具体条款缺失。",
+  "mode": "offer",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户自述年龄为 29 岁",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S1",
+      "source_span": "29 岁",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述正在从研究员转向产品",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F2",
+      "source_id": "S1",
+      "source_span": "研究员转产品",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述目前独身",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F3",
+      "source_id": "S1",
+      "source_span": "独身",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述目前至少可以保留现职三个月",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F4",
+      "source_id": "S1",
+      "source_span": "目前可保留现职至少三个月",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户愿为可执行且归属安排清楚的权益承担短期现金下降",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F5",
+      "source_id": "S1",
+      "source_span": "愿为可执行且有清楚归属安排的权益承担短期现金下降",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "label": "FACT",
+      "text": "用户不能接受未来六个月的生活现金出现缺口",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F6",
+      "source_id": "S1",
+      "source_span": "不能让未来六个月的生活现金出现缺口",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "浮叶气候创始人的邮件称用户会成为核心团队，之后一定有有意义的股权",
+      "source": "S2",
+      "source_type": "hr_chat",
+      "id": "F9",
+      "source_id": "S2",
+      "source_span": "浮叶气候的创始人邮件：你会成为核心团队，之后一定有有意义的股权。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "创始人要求先确定入职意向，具体股权比例和文件以后再谈",
+      "source": "S2",
+      "source_type": "hr_chat",
+      "id": "F10",
+      "source_id": "S2",
+      "source_span": "先把入职意向定下来，具体比例和文件之后再说。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "现有文件列明税前月现金 EUR 2,400、工作城市里昂和拟开始日期 2026-11-02",
+      "source": "S3",
+      "source_type": "offer",
+      "id": "F13",
+      "source_id": "S3",
+      "source_span": "现有文件只有税前月现金 EUR 2,400、工作城市里昂、拟开始日期 2026-11-02。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户称该现金收入低于自己的当前收入",
+      "source": "S3",
+      "source_type": "offer",
+      "id": "F15",
+      "source_id": "S3",
+      "source_span": "用户称其低于自己的当前收入。",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "label": "INFERENCE",
+      "text": "用户提供的偏好评分可提示当前选择，但不保证入职后的真实体验"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "海外雇佣后的净收入和必要保险支出尚未算清"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "剩余可动用储备数额未知"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "股份类别、比例、归属期、批准记录和签署文件均未提供"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "接受入职意向是否附带义务未知"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "里昂当地真实市场中位薪酬未核实"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "net pay、雇佣实体、保险支出、股权条款和确定签约截止日均未知"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "公司融资和跑道未知"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "真实财务、税务和法律资料当前不可访问"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "浮叶气候: 硬约束是否满足"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "硬约束或关键条款仍需确认"
+    }
+  ],
+  "current_goal": "判断是否可以接受，并区分真正影响决定的关键缺口与不应单独导致放弃的小细节，同时守住未来六个月生活现金不出现缺口的边界。",
+  "claims": [],
+  "highest_risk": "关键证据或目标尚未确认",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/02-career-decision.md",
+    "references/knowledge/06-offer-evaluation.md",
+    "references/practical/offer.md"
+  ],
+  "method_plan": [
+    "wedge",
+    "offer"
+  ],
+  "bottleneck": "Direction",
+  "recommended_move": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。",
+  "why": [
+    "目标与硬约束优先于公司品牌",
+    "评分仅计算用户提供的偏好；未知不补平均分"
+  ],
+  "actions": [
+    {
+      "kind": "offer_comparison",
+      "description": "整理确认条件、未知与偏好敏感点",
+      "execution_mode": "codex",
+      "artifact": "Offer 比较表",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "confirm_terms",
+      "description": "核实：未来六个月的生活现金是否会出现缺口（核算海外雇佣后的净收入、必要保险支出、六个月生活支出和可动用储备。）；承诺的股权是否会形成可执行、归属清楚且已获批准的书面安排（取得并核对正式股权条款、股份类别、比例、归属安排、批准记录和签署文件。）；接受入职意向是否附带义务，以及是否存在确定签约截止日（要求对方书面说明意向回复是否具有约束力及实际签约截止日。）",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "career_decision",
+      "description": "关键未知确认后由你接受或拒绝",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "最早的真实 Offer 截止时间之前",
+  "stop_condition": "任一硬约束不满足则停止接受该选项；目标未明确先暂停排名",
+  "pivot_condition": "确认信息或权重变化足以改变首选时重新比较",
+  "comparison": [
+    {
+      "name": "浮叶气候",
+      "eligible": null,
+      "score": null,
+      "ratings": {},
+      "reason": "用户主观偏好的加权比较，非公司客观质量"
+    }
+  ],
+  "constraints": [
+    "不能让未来六个月的生活现金出现缺口"
+  ],
+  "current_preference": "浮叶气候",
+  "offer_priorities": {
+    "compensation": "high",
+    "downside": "high",
+    "ownership": "high"
+  },
+  "decision_unknowns": [
+    {
+      "option": "浮叶气候",
+      "priority": "decisive",
+      "source_ids": [
+        "S1",
+        "S3"
+      ],
+      "unknown": "未来六个月的生活现金是否会出现缺口",
+      "why_it_matters": "这是用户明确的硬约束；净收入、必要保险支出和可动用储备均未确定。",
+      "how_to_verify": "核算海外雇佣后的净收入、必要保险支出、六个月生活支出和可动用储备。",
+      "reversal_condition": "核算结果显示接受后未来六个月会出现生活现金缺口。"
+    },
+    {
+      "option": "浮叶气候",
+      "priority": "decisive",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "unknown": "承诺的股权是否会形成可执行、归属清楚且已获批准的书面安排",
+      "why_it_matters": "用户只愿为可执行且归属清楚的权益承担现金下降；当前缺少股份类别、比例、归属期、批准记录和签署文件。",
+      "how_to_verify": "取得并核对正式股权条款、股份类别、比例、归属安排、批准记录和签署文件。",
+      "reversal_condition": "无法在承诺现金让步前形成可执行且归属清楚的书面股权安排。"
+    },
+    {
+      "option": "浮叶气候",
+      "priority": "important",
+      "source_ids": [
+        "S2",
+        "S3"
+      ],
+      "unknown": "接受入职意向是否附带义务，以及是否存在确定签约截止日",
+      "why_it_matters": "创始人要求先确定意向，但邮件未说明义务，现有文件也没有确定签约截止日。",
+      "how_to_verify": "要求对方书面说明意向回复是否具有约束力及实际签约截止日。",
+      "reversal_condition": "意向回复会产生尚未评估或不可接受的约束。"
+    }
+  ],
+  "reversal_conditions": [
+    "核算结果显示接受后未来六个月会出现生活现金缺口。",
+    "无法在承诺现金让步前形成可执行且归属清楚的书面股权安排。",
+    "意向回复会产生尚未评估或不可接受的约束。"
+  ],
+  "recommendation_type": "CONDITIONAL",
+  "decision_sufficiency": {
+    "state": "DECISION_CONDITIONAL",
+    "basis": "按有来源的定性优先级比较已提供维度，缺失条件可反转首选",
+    "blocking_unknowns": [],
+    "reversal_unknowns": [
+      "核算结果显示接受后未来六个月会出现生活现金缺口。",
+      "无法在承诺现金让步前形成可执行且归属清楚的书面股权安排。",
+      "意向回复会产生尚未评估或不可接受的约束。"
+    ]
+  },
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "offer",
+    "role_family": "unknown",
+    "stage": "decision",
+    "situation_type": "offer-choice",
+    "risk_tags": [
+      "constraints",
+      "ownership",
+      "salary"
+    ],
+    "situation_tags": [
+      "constraints",
+      "ownership",
+      "salary"
+    ]
+  },
+  "recommendation": {
+    "move": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "用户自述年龄为 29 岁",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述正在从研究员转向产品",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述目前独身",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述目前至少可以保留现职三个月",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户愿为可执行且归属安排清楚的权益承担短期现金下降",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不能接受未来六个月的生活现金出现缺口",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "浮叶气候创始人的邮件称用户会成为核心团队，之后一定有有意义的股权",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "创始人要求先确定入职意向，具体股权比例和文件以后再谈",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "现有文件列明税前月现金 EUR 2,400、工作城市里昂和拟开始日期 2026-11-02",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户称该现金收入低于自己的当前收入",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "当前优势来自已提供的偏好与维度；口头职责、经理或经营条件的不确定性可能使备选更合适。",
+    "reconsider_if": [
+      "核算结果显示接受后未来六个月会出现生活现金缺口。",
+      "无法在承诺现金让步前形成可执行且归属清楚的书面股权安排。",
+      "意向回复会产生尚未评估或不可接受的约束。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "用户在决定是否接受浮叶气候的里昂岗位邀请；现金低于其当前收入，股权目前只有未来承诺且具体条款缺失。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "用户自述年龄为 29 岁",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述正在从研究员转向产品",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述目前独身",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述目前至少可以保留现职三个月",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户愿为可执行且归属安排清楚的权益承担短期现金下降",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不能接受未来六个月的生活现金出现缺口",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "浮叶气候创始人的邮件称用户会成为核心团队，之后一定有有意义的股权",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "创始人要求先确定入职意向，具体股权比例和文件以后再谈",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "现有文件列明税前月现金 EUR 2,400、工作城市里昂和拟开始日期 2026-11-02",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "用户称该现金收入低于自己的当前收入",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Direction",
+    "options_considered": [
+      "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。",
+      "先核实最能改变排序的书面条款、经理与个人负责范围。"
+    ],
+    "chosen": "当前条件性首选 浮叶气候；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。",
+    "rejected_options": [
+      {
+        "option": "先核实最能改变排序的书面条款、经理与个人负责范围。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "目标与硬约束优先于公司品牌",
+      "评分仅计算用户提供的偏好；未知不补平均分"
+    ],
+    "reconsider_if": [
+      "核算结果显示接受后未来六个月会出现生活现金缺口。",
+      "无法在承诺现金让步前形成可执行且归属清楚的书面股权安排。",
+      "意向回复会产生尚未评估或不可接受的约束。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

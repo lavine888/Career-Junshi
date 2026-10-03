@@ -1,0 +1,122 @@
+{
+  "origin": "synthetic",
+  "cases": [
+    {
+      "case_id": "H01-years-gate",
+      "reference_route_mode": "job",
+      "decision_type": "Strong fit / required years",
+      "design_flags": {
+        "conflicting_evidence": true,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": true,
+        "genuinely_blocked": false
+      }
+    },
+    {
+      "case_id": "H02-title-scope",
+      "reference_route_mode": "offer",
+      "decision_type": "High cash / weak ownership",
+      "design_flags": {
+        "conflicting_evidence": true,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": true,
+        "genuinely_blocked": false
+      }
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "reference_route_mode": "interview",
+      "decision_type": "Two explicit signals / three rejections",
+      "design_flags": {
+        "conflicting_evidence": true,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": true,
+        "genuinely_blocked": false
+      }
+    },
+    {
+      "case_id": "H04-equity-gap",
+      "reference_route_mode": "offer",
+      "decision_type": "Unwritten equity / blocked commitment",
+      "design_flags": {
+        "conflicting_evidence": true,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": false,
+        "genuinely_blocked": true
+      }
+    },
+    {
+      "case_id": "H05-metric-credit",
+      "reference_route_mode": "positioning",
+      "decision_type": "Metric / concurrent team changes",
+      "design_flags": {
+        "conflicting_evidence": true,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": true,
+        "genuinely_blocked": false
+      }
+    },
+    {
+      "case_id": "H06-two-technical-paths",
+      "reference_route_mode": "job",
+      "decision_type": "ML engineering / forward deployed",
+      "design_flags": {
+        "conflicting_evidence": true,
+        "tempting_unsupported_interpretation": false,
+        "recommendation_despite_unknowns": true,
+        "genuinely_blocked": false
+      }
+    },
+    {
+      "case_id": "H07-delayed-listing",
+      "reference_route_mode": "recruiting",
+      "decision_type": "Changed promise / removed listing",
+      "design_flags": {
+        "conflicting_evidence": true,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": true,
+        "genuinely_blocked": false
+      }
+    },
+    {
+      "case_id": "H08-building-avoidance",
+      "reference_route_mode": "job",
+      "decision_type": "Three proofs / no market exposure",
+      "design_flags": {
+        "conflicting_evidence": false,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": true,
+        "genuinely_blocked": false
+      }
+    },
+    {
+      "case_id": "H09-manager-care",
+      "reference_route_mode": "offer",
+      "decision_type": "Soft manager risk / blocked hard schedule",
+      "design_flags": {
+        "conflicting_evidence": true,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": false,
+        "genuinely_blocked": true
+      }
+    },
+    {
+      "case_id": "H10-unknown-systems",
+      "reference_route_mode": "interview",
+      "decision_type": "Unknown question / honest recovery",
+      "design_flags": {
+        "conflicting_evidence": false,
+        "tempting_unsupported_interpretation": true,
+        "recommendation_despite_unknowns": true,
+        "genuinely_blocked": false
+      }
+    }
+  ],
+  "coverage": {
+    "conflicting_evidence": 8,
+    "tempting_unsupported_interpretation": 9,
+    "recommendation_despite_unknowns": 8,
+    "genuinely_blocked": 2
+  },
+  "authorship": "Operator-authored fresh scenarios before any holdout output; never read private candidate history. Names, industries, stages and constraints differ from prior five."
+}

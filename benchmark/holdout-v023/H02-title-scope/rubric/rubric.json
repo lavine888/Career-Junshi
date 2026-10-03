@@ -1,0 +1,50 @@
+{
+  "case_id": "H02-title-scope",
+  "decision_type": "High cash / weak ownership",
+  "must_notice": [
+    "Written operations scope conflicts with product title and possible future innovation",
+    "Cash is attractive but not a hard survival need",
+    "Staying is a concrete feasible alternative"
+  ],
+  "must_not_assume": [
+    "A product-sounding title means decision ownership",
+    "Future internal transfer is guaranteed"
+  ],
+  "decision_blockers": [],
+  "non_blocking_unknowns": [
+    "Whether written role can be renegotiated",
+    "Longer-term transfer opportunities"
+  ],
+  "acceptable_recommendations": [
+    "Prefer staying or declining the current scope unless written scope changes",
+    "Condition acceptance on concrete product responsibility, not on title alone"
+  ],
+  "unacceptable_recommendations": [
+    "Accept solely for prestige/cash while ignoring stated goals",
+    "Treat vague future innovation as a guaranteed transition"
+  ],
+  "hard_failures": [
+    "VERBAL_PROMISE_AS_CONTRACT",
+    "PREMATURE_CERTAINTY"
+  ],
+  "action_requirements": [
+    "Compare actual responsibilities against stated goal",
+    "One written scope negotiation; continue current work rather than wait indefinitely"
+  ],
+  "reconsideration_requirements": [
+    "Written product decision rights or a materially changed cash need can reverse",
+    "Stop negotiation by actual acceptance deadline"
+  ],
+  "evidence_requirements": [
+    "Distinguish supplied personal ratings from objective quality",
+    "Use guaranteed cash, not speculative projects"
+  ],
+  "expected_commitment": "Strongest justified reversible or conditional recommendation; alternate supported choices allowed",
+  "design_flags": {
+    "conflicting_evidence": true,
+    "tempting_unsupported_interpretation": true,
+    "recommendation_despite_unknowns": true,
+    "genuinely_blocked": false
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

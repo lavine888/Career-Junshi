@@ -1,0 +1,459 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "text": "32 岁，鹿特丹工作，四年数据/应用工程经历。目标三到五年尝试工业软件创业，最看重真实客户问题、产品闭环与保留技术构建能力。希望总出差不超过每月五天，不能长期每周四晚出差。愿意继续学，但现在只有一版简历的投递预算。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "document",
+      "text": "证据 A：主导一个设备异常检测模型的特征流水线、离线评估和漂移告警，能解释数据泄漏控制和回滚；由团队负责线上平台。证据 B：为两个工业客户完成现场需求拆解、接口联调和验收，个人写了集成模块并主持问题复盘；没有独立销售签单记录。两份含候选人的设计/提交节选，未独立审查全部仓库，连续投入均约十八个月。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "jd",
+      "text": "珀岛设备 ML Engineer：模型训练、数据质量、漂移与线上性能，主要内部合作，出差每月一天。苔川工业 AI Solutions / Forward Deployed：客户需求拆解、快速原型和现场落地；样例排班每月四天出差，但协议写“客户需要时调整”，上限尚未确认。两角色学习空间都被候选人认为较强，未提供数字评分。ML 工作较窄但技术深；现场角色覆盖客户但有出差风险。"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "32 岁，鹿特丹工作，四年数据/应用工程经历。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "32 岁，鹿特丹工作，四年数据/应用工程经历。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "目标三到五年尝试工业软件创业",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "目标三到五年尝试工业软件创业",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "preferred"
+    },
+    {
+      "id": "F3",
+      "text": "最看重真实客户问题、产品闭环与保留技术构建能力。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "最看重真实客户问题、产品闭环与保留技术构建能力。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F4",
+      "text": "希望总出差不超过每月五天",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "希望总出差不超过每月五天",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "F5",
+      "text": "不能长期每周四晚出差。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "不能长期每周四晚出差。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F6",
+      "text": "愿意继续学",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "愿意继续学",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "现在只有一版简历的投递预算。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "现在只有一版简历的投递预算。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F8",
+      "text": "主导一个设备异常检测模型的特征流水线、离线评估和漂移告警",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "主导一个设备异常检测模型的特征流水线、离线评估和漂移告警",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "能解释数据泄漏控制和回滚",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "能解释数据泄漏控制和回滚",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "由团队负责线上平台。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "由团队负责线上平台。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "为两个工业客户完成现场需求拆解、接口联调和验收",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "为两个工业客户完成现场需求拆解、接口联调和验收",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F12",
+      "text": "个人写了集成模块并主持问题复盘",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "个人写了集成模块并主持问题复盘",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "U1",
+      "text": "没有独立销售签单记录。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "没有独立销售签单记录。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F13",
+      "text": "两份含候选人的设计/提交节选",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "两份含候选人的设计/提交节选",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "U2",
+      "text": "未独立审查全部仓库",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "未独立审查全部仓库",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F14",
+      "text": "连续投入均约十八个月。",
+      "source_id": "S2",
+      "source_type": "document",
+      "source_span": "连续投入均约十八个月。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F15",
+      "text": "珀岛设备 ML Engineer：模型训练、数据质量、漂移与线上性能，主要内部合作",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "珀岛设备 ML Engineer：模型训练、数据质量、漂移与线上性能，主要内部合作",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "F16",
+      "text": "出差每月一天。",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "出差每月一天。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "observed",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "F17",
+      "text": "苔川工业 AI Solutions / Forward Deployed：客户需求拆解、快速原型和现场落地",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "苔川工业 AI Solutions / Forward Deployed：客户需求拆解、快速原型和现场落地",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "F18",
+      "text": "样例排班每月四天出差",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "样例排班每月四天出差",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "observed",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "F19",
+      "text": "协议写“客户需要时调整”",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "协议写“客户需要时调整”",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "U3",
+      "text": "上限尚未确认。",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "上限尚未确认。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "requirement",
+      "modality": "unknown",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "I1",
+      "text": "两角色学习空间都被候选人认为较强",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "两角色学习空间都被候选人认为较强",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "U4",
+      "text": "未提供数字评分。",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "未提供数字评分。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "I2",
+      "text": "ML 工作较窄但技术深",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "ML 工作较窄但技术深",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "observation",
+      "modality": "observed",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    },
+    {
+      "id": "I3",
+      "text": "现场角色覆盖客户但有出差风险。",
+      "source_id": "S3",
+      "source_type": "jd",
+      "source_span": "现场角色覆盖客户但有出差风险。",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "observation",
+      "modality": "observed",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00"
+      }
+    }
+  ],
+  "situation": {
+    "mode": "job",
+    "summary": "在只有一版简历投递预算、长期工业软件创业目标及出差约束下，比较 ML Engineer 与 AI Solutions / Forward Deployed 两条技术路线。",
+    "goal": "确定 ML Engineer 与 AI Solutions / Forward Deployed 的主副线，并保留会改变判断的关键未知。",
+    "claims": [
+      {
+        "id": "C1",
+        "claim": "主导一个设备异常检测模型的特征流水线、离线评估和漂移告警，能解释数据泄漏控制和回滚；由团队负责线上平台。",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "team",
+          "contribution": "主导特征流水线、离线评估和漂移告警，并能解释数据泄漏控制和回滚；线上平台由团队负责。"
+        },
+        "evidence": [
+          {
+            "source": "S2",
+            "kind": "self_report",
+            "supports": [
+              "claim",
+              "leadership"
+            ],
+            "summary": "材料报告候选人的相关贡献，并称含设计/提交节选；全部仓库未被独立审查。"
+          }
+        ],
+        "risk": [
+          "线上平台由团队负责，个人在线平台贡献范围未确认",
+          "不得将离线评估或团队平台表述为个人独立生产系统"
+        ]
+      },
+      {
+        "id": "C2",
+        "claim": "为两个工业客户完成现场需求拆解、接口联调和验收，个人写了集成模块并主持问题复盘；没有独立销售签单记录。",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "个人写了集成模块并主持问题复盘；整体客户交付的团队边界未说明。"
+        },
+        "evidence": [
+          {
+            "source": "S2",
+            "kind": "self_report",
+            "supports": [
+              "claim",
+              "authorship",
+              "leadership",
+              "real_world"
+            ],
+            "summary": "材料报告两个工业客户的需求拆解、接口联调和验收经历，并称含设计/提交节选；未独立审查全部仓库。"
+          }
+        ],
+        "risk": [
+          "独立销售签单记录未知",
+          "整体客户交付的个人 ownership 边界未说明"
+        ]
+      }
+    ],
+    "direction": {
+      "candidates": [
+        {
+          "name": "ML Engineer",
+          "role_family": "unknown",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "assessment": {
+            "evidence_strength": "medium",
+            "continuity": "high",
+            "defensibility": "medium",
+            "role_relevance": "high",
+            "goal_fit": "medium",
+            "gap_cost": "unknown",
+            "optionality": "medium",
+            "market_testability": "high"
+          },
+          "strongest_proof": "自述连续约十八个月主导设备异常检测的特征流水线、离线评估和漂移告警，并能解释数据泄漏控制与回滚。",
+          "largest_gap": "线上平台由团队负责；个人在线平台贡献范围及对线上性能职责的覆盖深度未确认。",
+          "resume_case": "设备异常检测特征流水线、离线评估、漂移告警及泄漏控制与回滚；线上平台明确为团队责任。",
+          "market_test": "",
+          "constraint_status": "pass"
+        },
+        {
+          "name": "AI Solutions / Forward Deployed",
+          "role_family": "ai-solutions",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "assessment": {
+            "evidence_strength": "medium",
+            "continuity": "high",
+            "defensibility": "high",
+            "role_relevance": "high",
+            "goal_fit": "high",
+            "gap_cost": "unknown",
+            "optionality": "high",
+            "market_testability": "medium"
+          },
+          "strongest_proof": "自述连续约十八个月为两个工业客户完成现场需求拆解、接口联调和验收，个人编写集成模块并主持问题复盘。",
+          "largest_gap": "协议允许按客户需要调整出差且上限未确认；与每月出差偏好和长期出差硬约束能否兼容未知。",
+          "resume_case": "两个工业客户的需求拆解、接口联调、验收、个人集成模块与问题复盘；独立销售签单记录未知。",
+          "market_test": "",
+          "constraint_status": "unknown"
+        }
+      ]
+    }
+  }
+}

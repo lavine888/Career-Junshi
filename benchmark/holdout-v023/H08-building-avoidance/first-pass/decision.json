@@ -1,0 +1,627 @@
+{
+  "schema_version": "2",
+  "current_situation": "用户需要在今晚两小时内决定继续写项目还是开始投递；现有材料报告三个公共项目、已修改的简历、零投递记录和紧张的生活现金预算。",
+  "mode": "job",
+  "urgency": {
+    "deadline": null,
+    "hours_remaining": null,
+    "within_72h": false,
+    "overdue": false
+  },
+  "facts": [
+    {
+      "label": "FACT",
+      "text": "用户自述年龄为 24 岁，所在地为西安",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F1",
+      "source_id": "S1",
+      "source_span": "24 岁，西安",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "目标是初级数据应用/AI 交付岗位，可接受当地或远程",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F2",
+      "source_id": "S1",
+      "source_span": "目标是初级数据应用/AI 交付岗位，可以接受当地或远程",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述已毕业六个月",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F3",
+      "source_id": "S1",
+      "source_span": "已毕业六个月",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述近四周申请发送数为零",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F4",
+      "source_id": "S1",
+      "source_span": "近四周申请发送数为零",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户表示愿意投递",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F5",
+      "source_id": "S1",
+      "source_span": "愿意投递",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "用户自述本月生活现金预算紧张",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F6",
+      "source_id": "S1",
+      "source_span": "月生活现金预算紧张",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "用户不能继续投入六周无收入时间做第四个项目",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F7",
+      "source_id": "S1",
+      "source_span": "不能继续花六周无收入做第四个项目",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "用户今晚可用两小时",
+      "source": "S1",
+      "source_type": "user_report",
+      "id": "F8",
+      "source_id": "S1",
+      "source_span": "今晚可用两小时",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "材料报告项目一为文档检索评估，并有测试集、失败案例和自述贡献边界",
+      "source": "S2",
+      "source_type": "document",
+      "id": "F9",
+      "source_id": "S2",
+      "source_span": "项目一：文档检索评估，有测试集、失败案例和自述贡献边界",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "材料报告项目二为能源监测数据管线，并有数据质量、重复处理测试和回放说明",
+      "source": "S2",
+      "source_type": "document",
+      "id": "F10",
+      "source_id": "S2",
+      "source_span": "项目二：能源监测数据管线，有数据质量/重复处理测试和回放说明",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "材料报告项目三为客服标签工具，并有用户访谈节选、可运行演示和权限边界",
+      "source": "S2",
+      "source_type": "document",
+      "id": "F11",
+      "source_id": "S2",
+      "source_span": "项目三：客服标签工具，有用户访谈节选、可运行演示与权限边界",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "材料称三个 README 均标注了个人实现模块及团队或现成库归属",
+      "source": "S2",
+      "source_type": "document",
+      "id": "F12",
+      "source_id": "S2",
+      "source_span": "三个 README 均有个人实现模块及团队/现成库归属",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "材料称两次模拟面试记录覆盖 what、why、alternatives、measurement 和 failure 的回答",
+      "source": "S2",
+      "source_type": "document",
+      "id": "F13",
+      "source_id": "S2",
+      "source_span": "两次模拟面试记录能回答 what/why/alternatives/measurement/failure",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "所给材料仅被只读查看，未被独立核查",
+      "source": "S2",
+      "source_type": "document",
+      "id": "F14",
+      "source_id": "S2",
+      "source_span": "本次只读所给节选，未独立核查",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "三个岗位摘录均为用户给出的虚构岗位摘录",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F15",
+      "source_id": "S3",
+      "source_span": "用户给出的三个虚构岗位摘录",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "label": "FACT",
+      "text": "禾径数据助理要求 Python、SQL 和数据质量，个人项目可",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F16",
+      "source_id": "S3",
+      "source_span": "禾径数据助理要求 Python/SQL/数据质量，个人项目可",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "星栈能源 AI 交付助理要求接口联调、评估和现场问题复盘",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F17",
+      "source_id": "S3",
+      "source_span": "星栈能源 AI 交付助理要求接口联调、评估、现场问题复盘",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "浔木工具初级应用工程要求可演示工具与调试说明",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F18",
+      "source_id": "S3",
+      "source_span": "浔木工具初级应用工程要求可演示工具与调试说明",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "label": "FACT",
+      "text": "材料称简历已有与三个岗位对应的条目",
+      "source": "S3",
+      "source_type": "jd",
+      "id": "F19",
+      "source_id": "S3",
+      "source_span": "简历已有这三项对应条目",
+      "source_locator": "",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    }
+  ],
+  "inferences": [
+    {
+      "id": "I1",
+      "text": "用户担心在追问中无法回答",
+      "source": "S1",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "怕被问倒",
+      "source_locator": "",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "observed",
+      "label": "INFERENCE"
+    }
+  ],
+  "unknowns": [
+    {
+      "label": "UNKNOWN",
+      "text": "是否受应届身份限制未知"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "是否确实不存在无法说明的核心主张仍未知"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "完整岗位是否要求新项目或生产级大规模系统经验仍待确认"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "三个岗位摘录在投递时是否仍然有效未知"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "目标岗位的实际职责与新鲜 JD"
+    },
+    {
+      "label": "UNKNOWN",
+      "text": "候选人的可防守证据与关键约束"
+    }
+  ],
+  "current_goal": "决定今晚应继续写项目还是开始投递初级数据应用/AI 交付岗位。",
+  "claims": [],
+  "highest_risk": "关键证据或目标尚未确认",
+  "options": [
+    "执行首选的可逆动作",
+    "补足会改变建议的信息后重评",
+    "触发停止线时降低投入"
+  ],
+  "references": [
+    "references/knowledge/02-career-decision.md",
+    "references/practical/jd-analysis.md"
+  ],
+  "method_plan": [
+    "radar",
+    "wedge",
+    "proof",
+    "offer"
+  ],
+  "bottleneck": "Direction",
+  "recommended_move": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。",
+  "why": [
+    "已有证据、职责匹配与机会成本共同决定下一步",
+    "一次反馈不等于市场结论"
+  ],
+  "actions": [
+    {
+      "kind": "evidence_audit",
+      "description": "整理三个真实项目和个人贡献",
+      "execution_mode": "codex",
+      "artifact": "证据卡",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "jd_map",
+      "description": "比较两个岗位假设与五份新鲜 JD，标出 gap 与补齐成本",
+      "execution_mode": "codex",
+      "artifact": "岗位假设对照表",
+      "status": "PROPOSED"
+    },
+    {
+      "kind": "apply",
+      "description": "选择一小批岗位验证反馈",
+      "execution_mode": "human",
+      "artifact": "",
+      "status": "PROPOSED"
+    }
+  ],
+  "observation_window": "一周或下 5 个可比机会",
+  "stop_condition": "真实硬约束不满足或补证成本超过当前预算时降低投入",
+  "pivot_condition": "5–10 个同类机会重复同一缺口时 REFINE / PIVOT；一条反馈不作普遍结论",
+  "recommendation_type": "CONDITIONAL",
+  "decision_sufficiency": {
+    "state": "DECISION_CONDITIONAL",
+    "basis": "既有模式的可逆下一步；条件变化时重评",
+    "blocking_unknowns": [],
+    "reversal_unknowns": [
+      "是否受应届身份限制未知",
+      "是否确实不存在无法说明的核心主张仍未知",
+      "完整岗位是否要求新项目或生产级大规模系统经验仍待确认"
+    ]
+  },
+  "boundary": "Deterministic structured support; not a verified prediction, authenticated receipt or career outcome.",
+  "metadata": {
+    "mode": "job",
+    "role_family": "unknown",
+    "stage": "unknown",
+    "situation_type": "direction-choice",
+    "risk_tags": [],
+    "situation_tags": []
+  },
+  "recommendation": {
+    "move": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。",
+    "supporting_evidence": [
+      {
+        "source": "S1",
+        "text": "用户自述年龄为 24 岁，所在地为西安",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "目标是初级数据应用/AI 交付岗位，可接受当地或远程",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述已毕业六个月",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述近四周申请发送数为零",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户表示愿意投递",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述本月生活现金预算紧张",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不能继续投入六周无收入时间做第四个项目",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户今晚可用两小时",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料报告项目一为文档检索评估，并有测试集、失败案例和自述贡献边界",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料报告项目二为能源监测数据管线，并有数据质量、重复处理测试和回放说明",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料报告项目三为客服标签工具，并有用户访谈节选、可运行演示和权限边界",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料称三个 README 均标注了个人实现模块及团队或现成库归属",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料称两次模拟面试记录覆盖 what、why、alternatives、measurement 和 failure 的回答",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "所给材料仅被只读查看，未被独立核查",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "三个岗位摘录均为用户给出的虚构岗位摘录",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "禾径数据助理要求 Python、SQL 和数据质量，个人项目可",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "星栈能源 AI 交付助理要求接口联调、评估和现场问题复盘",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "浔木工具初级应用工程要求可演示工具与调试说明",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "材料称简历已有与三个岗位对应的条目",
+        "source_locator": ""
+      }
+    ],
+    "strongest_counterargument": "缺口可能来自岗位职责差异，现有项目也可能已能支持更窄的岗位。",
+    "reconsider_if": [
+      "新鲜 JD 显示该项只是优先项，或补证成本、硬约束与可比反馈改变时重新判断。"
+    ],
+    "confidence_basis": "有界规则建议，依据上述来源报告与未确认条件；不提供录用概率。"
+  },
+  "decision_trace": {
+    "situation": "用户需要在今晚两小时内决定继续写项目还是开始投递；现有材料报告三个公共项目、已修改的简历、零投递记录和紧张的生活现金预算。",
+    "evidence_used": [
+      {
+        "source": "S1",
+        "text": "用户自述年龄为 24 岁，所在地为西安",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "目标是初级数据应用/AI 交付岗位，可接受当地或远程",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述已毕业六个月",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述近四周申请发送数为零",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户表示愿意投递",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户自述本月生活现金预算紧张",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户不能继续投入六周无收入时间做第四个项目",
+        "source_locator": ""
+      },
+      {
+        "source": "S1",
+        "text": "用户今晚可用两小时",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料报告项目一为文档检索评估，并有测试集、失败案例和自述贡献边界",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料报告项目二为能源监测数据管线，并有数据质量、重复处理测试和回放说明",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料报告项目三为客服标签工具，并有用户访谈节选、可运行演示和权限边界",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料称三个 README 均标注了个人实现模块及团队或现成库归属",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "材料称两次模拟面试记录覆盖 what、why、alternatives、measurement 和 failure 的回答",
+        "source_locator": ""
+      },
+      {
+        "source": "S2",
+        "text": "所给材料仅被只读查看，未被独立核查",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "三个岗位摘录均为用户给出的虚构岗位摘录",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "禾径数据助理要求 Python、SQL 和数据质量，个人项目可",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "星栈能源 AI 交付助理要求接口联调、评估和现场问题复盘",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "浔木工具初级应用工程要求可演示工具与调试说明",
+        "source_locator": ""
+      },
+      {
+        "source": "S3",
+        "text": "材料称简历已有与三个岗位对应的条目",
+        "source_locator": ""
+      }
+    ],
+    "bottleneck": "Direction",
+    "options_considered": [
+      "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。",
+      "先主投已有证据更强的相邻岗位，保留小规模目标岗位试验。"
+    ],
+    "chosen": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。",
+    "rejected_options": [
+      {
+        "option": "先主投已有证据更强的相邻岗位，保留小规模目标岗位试验。",
+        "why": "可保留作备选；当前目标、风险和停止线优先支持首选的可逆动作。"
+      }
+    ],
+    "why": [
+      "已有证据、职责匹配与机会成本共同决定下一步",
+      "一次反馈不等于市场结论"
+    ],
+    "reconsider_if": [
+      "新鲜 JD 显示该项只是优先项，或补证成本、硬约束与可比反馈改变时重新判断。"
+    ]
+  },
+  "claim_refs": [],
+  "predictions": [],
+  "recurring_risk": {
+    "status": "INSUFFICIENT_OBSERVATIONS",
+    "comparable_outcomes": 0,
+    "risk_tags": []
+  },
+  "similar_memory": {
+    "considered": 0,
+    "used": [],
+    "changed": false
+  }
+}

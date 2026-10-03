@@ -1,0 +1,17 @@
+{
+  "correction_type": "REVIEWER_IDENTITY_ERRATUM",
+  "actual_reviewer": "The current Codex AI assistant, which also authored the synthetic corpus",
+  "not_claimed": [
+    "Independent human review",
+    "Independent second-model adjudication",
+    "Inter-rater reliability"
+  ],
+  "affected_records": [
+    "benchmark/holdout-v023/*/first-pass/review.json reviewer field",
+    "benchmark/holdout-v023-after/*/review.json reviewer field"
+  ],
+  "incorrect_frozen_label": "Human operator / same human operator",
+  "resolution": "Frozen files, grades, inputs, rubrics and hashes remain unchanged. This explicit external erratum overrides the mistaken reviewer-identity label. Reports accurately identify AI operator judgment.",
+  "grading_method": "Rubric-informed semantic assessment by the same Codex assistant after generation froze; all grades remain contestable operator judgments, not objectively measured wisdom.",
+  "additional_semantic_grader_model_calls": 0
+}

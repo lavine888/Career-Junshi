@@ -1,0 +1,379 @@
+{
+  "case_id": "H08-building-avoidance",
+  "phase": "FRESH_AFTER",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "reviewer": "Same human operator; no independent-rater claim",
+  "generation_had_rubric": false,
+  "layers": {
+    "L1_Extraction": "PARTIAL",
+    "L2_Structured_Decision": "FAIL",
+    "L3_Host": "PASS",
+    "L4_Overall": "FAIL"
+  },
+  "main_strength": "Host again tells candidate to apply tonight and stop building",
+  "main_failure": "Extractor uses undocumented fit=supported; compiler falls through to generic evidence/JD discovery",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 34,
+          "excerpt": "- **降低投入：**任何需要连续数周、不能迅速产生投递证据的第四个大项目。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 40,
+          "excerpt": "- 没有回复：先检查岗位有效性、匹配度和投递渠道，**不能直接推断缺项目**。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**今晚开始投，不再写第四个大项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "decision_sufficiency",
+          "excerpt": {
+            "state": "DECISION_CONDITIONAL",
+            "basis": "既有模式的可逆下一步；条件变化时重评",
+            "blocking_unknowns": [],
+            "reversal_unknowns": [
+              "是否存在应届身份限制未知，因为用户没有相关资料",
+              "三个岗位当前是否仍有效尚待投递时确认",
+              "目标岗位的实际职责与新鲜 JD"
+            ]
+          }
+        }
+      ]
+    },
+    "Decision Courage": {
+      "status": "FAIL",
+      "assessment": "Extractor uses undocumented fit=supported; compiler falls through to generic evidence/JD discovery",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**今晚开始投，不再写第四个大项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Bottleneck Identification": {
+      "status": "FAIL",
+      "assessment": "Extractor uses undocumented fit=supported; compiler falls through to generic evidence/JD discovery",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "你当前的瓶颈不是项目数量，而是**零投递、零真实市场反馈**。在生活预算紧张的情况下，再花六周做项目，属于用高成本准备回避低成本验证。"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "bottleneck",
+          "excerpt": "Direction"
+        }
+      ]
+    },
+    "Recommendation Clarity": {
+      "status": "FAIL",
+      "assessment": "Extractor uses undocumented fit=supported; compiler falls through to generic evidence/JD discovery",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**今晚开始投，不再写第四个大项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 9,
+          "excerpt": "1. **15 分钟：核对三个岗位是否仍有效**  "
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "actions",
+          "excerpt": [
+            {
+              "kind": "evidence_audit",
+              "description": "整理三个真实项目和个人贡献",
+              "execution_mode": "codex",
+              "artifact": "证据卡",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "jd_map",
+              "description": "比较两个岗位假设与五份新鲜 JD，标出 gap 与补齐成本",
+              "execution_mode": "codex",
+              "artifact": "岗位假设对照表",
+              "status": "PROPOSED"
+            },
+            {
+              "kind": "apply",
+              "description": "选择一小批岗位验证反馈",
+              "execution_mode": "human",
+              "artifact": "",
+              "status": "PROPOSED"
+            }
+          ]
+        }
+      ]
+    },
+    "Information Value": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 11,
+          "excerpt": "   只检查是否可投、硬性要求、地点/远程条件。材料里的岗位是虚构摘录，有效性尚未核实。"
+        }
+      ]
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**今晚开始投，不再写第四个大项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**今晚开始投，不再写第四个大项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 36,
+          "excerpt": "## 观察与停止线"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "stop_condition",
+          "excerpt": "真实硬约束不满足或补证成本超过当前预算时降低投入"
+        }
+      ]
+    },
+    "Avoided Action": {
+      "status": "FAIL",
+      "assessment": "Extractor uses undocumented fit=supported; compiler falls through to generic evidence/JD discovery",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**今晚开始投，不再写第四个大项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "Ownership Integrity": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 24,
+          "excerpt": "- S2 显示：已有三个能被追问的项目，具备测试、失败案例、演示、贡献边界等材料；两次模拟面试也未暴露无法解释的核心主张。**这是材料支持的结论，并非独立核验。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+        }
+      ]
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "assessment": "Quoted source-bounded response addresses this dimension; use the input and allowed recommendation range, not exact phrase matching.",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**今晚开始投，不再写第四个大项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+          "field": "current_goal",
+          "excerpt": "在现金预算紧张且尚未投递的情况下，选择今晚的求职行动"
+        }
+      ]
+    }
+  },
+  "decision_courage": {
+    "status": "FAIL",
+    "classification": "OVER_CAUTION"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "qualification": "Extractor uses undocumented fit=supported; compiler falls through to generic evidence/JD discovery"
+  },
+  "first_screen": {
+    "status": "PASS",
+    "evidence": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023-after/H08-building-avoidance/first-pass/host-response.md",
+      "line": 3,
+      "excerpt": "**今晚开始投，不再写第四个大项目。**"
+    },
+    "qualification": "Information priority is judged, not an exact character count. H07 prioritizes a judgment but overstates knowledge."
+  },
+  "hard_failures": [
+    {
+      "code": "NO_PRIORITIZATION",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    },
+    {
+      "code": "OVER_CAUTION",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    },
+    {
+      "code": "GENERIC_ADVICE",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    },
+    {
+      "code": "NO_AVOIDED_ACTION",
+      "layer": "L2",
+      "evidence": {
+        "file": "benchmark/holdout-v023-after/H08-building-avoidance/final-runtime/decision.json",
+        "field": "recommended_move",
+        "excerpt": "先从三个真实经历形成两个岗位假设，对照五份当前 JD，选一个主投试验；现在不凭热度定方向。"
+      }
+    }
+  ],
+  "failure_classification": [
+    {
+      "category": "B",
+      "finding": "fit should use documented strong/gap/mismatch/unknown vocabulary"
+    },
+    {
+      "category": "A",
+      "finding": "legacy fallback is coarse and permissive for unsupported fit values; retained under the three-fix budget"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED"
+}

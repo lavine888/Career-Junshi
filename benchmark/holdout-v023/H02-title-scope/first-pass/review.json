@@ -1,0 +1,222 @@
+{
+  "case_id": "H02-title-scope",
+  "reviewer": "Human operator (same operator authored corpus); no independent inter-rater reliability claim",
+  "rubric_visibility": "Only after all ten extraction/host outputs were frozen",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "PASS",
+    "L3_Host": "PASS",
+    "L4_Overall": "PASS"
+  },
+  "main_strength": "Written role substance beats compensation and title",
+  "main_failure": "Generic L2 confirmation list rather than role-specific negotiation",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Courage": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Recommendation Clarity": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 7,
+          "excerpt": "### 现在最值得做的三件事"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Information Value": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 7,
+          "excerpt": "### 现在最值得做的三件事"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 1,
+          "excerpt": "## 我的判断"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Ownership Integrity": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    }
+  },
+  "first_screen": {
+    "status": "PASS",
+    "priority_assessment": "The opening states a judgment/conditional direction before an inventory of facts and unknowns; subsequent bounded actions are visible. No exact character quota imposed.",
+    "excerpt": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023/H02-title-scope/first-pass/host-response.md",
+      "line": 3,
+      "excerpt": "**不建议为了钱接受曜原当前版本的 Offer。首选是留任，同时给曜原一次“书面改职责”的机会。**"
+    }
+  },
+  "decision_courage": {
+    "status": "PASS",
+    "classification": "CALIBRATED_COMMITMENT"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "decision_relevant_information": [
+      "Written roadmap/experiment responsibility"
+    ],
+    "qualification": "Information would change effort allocation, feasibility or claim wording; unknowns are not a completeness checklist."
+  },
+  "hard_failures": [],
+  "failure_classification": [],
+  "outcomes": "NOT_SUPPLIED; not inferred",
+  "assembly_notes": null
+}

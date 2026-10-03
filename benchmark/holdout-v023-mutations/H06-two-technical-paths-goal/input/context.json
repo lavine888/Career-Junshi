@@ -1,0 +1,27 @@
+{
+  "case_id": "H06-two-technical-paths-goal",
+  "origin": "synthetic",
+  "request": "我有 ML Engineer 和 AI Solutions / Forward Deployed 两条路线的现有证据。现在目标是长期做模型工程和可靠性，不计划创业，也不追求客户问题发现作为主线。请给主副线及反转条件。",
+  "materials": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "label": "Career and priorities",
+      "text": "32 岁，鹿特丹工作，四年数据/应用工程经历。目标长期深耕模型工程、数据质量与可靠性，不计划创业；技术深度最重要，客户问题发现不是主目标。希望总出差不超过每月五天，不能长期每周四晚出差。愿意继续学，但现在只有一版简历的投递预算。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "document",
+      "label": "Two comparable supplied evidence packets",
+      "text": "证据 A：主导一个设备异常检测模型的特征流水线、离线评估和漂移告警，能解释数据泄漏控制和回滚；由团队负责线上平台。证据 B：为两个工业客户完成现场需求拆解、接口联调和验收，个人写了集成模块并主持问题复盘；没有独立销售签单记录。两份含候选人的设计/提交节选，未独立审查全部仓库，连续投入均约十八个月。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "jd",
+      "label": "Role descriptions and unresolved boundary",
+      "text": "珀岛设备 ML Engineer：模型训练、数据质量、漂移与线上性能，主要内部合作，出差每月一天。苔川工业 AI Solutions / Forward Deployed：客户需求拆解、快速原型和现场落地；样例排班每月四天出差，但协议写“客户需要时调整”，上限尚未确认。两角色学习空间都被候选人认为较强，未提供数字评分。ML 工作较窄但技术深；现场角色覆盖客户但有出差风险。"
+    }
+  ],
+  "as_of": "2026-10-04T10:00:00+08:00",
+  "clock_boundary": "Fixed synthetic clock. Fictional companies and anonymized people; no real hiring outcome or private history."
+}

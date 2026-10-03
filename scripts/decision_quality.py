@@ -38,7 +38,7 @@ def direction_plan(value, n, action):
         assessment = fields(c.get("assessment", {}), CRITERIA, "direction assessment")
         levels = {k: choices(assessment.get(k, "unknown"), {"unknown", "low", "medium", "high"}, k) for k in CRITERIA}
         candidates.append({"name": text(c.get("name"), "direction name", 45),
-                           "role_family": choices(c.get("role_family"), FAMILIES - {"unknown"}, "direction role family"),
+                           "role_family": choices(c.get("role_family"), FAMILIES, "direction role family"),
                            "source_ids": source_ids(c.get("source_ids", []), n), "assessment": levels,
                            "constraint_status": choices(c.get("constraint_status", "unknown"), {"pass", "fail", "unknown"}, "direction constraints"),
                            **{k: text(c.get(k, ""), k, 400, empty=True) for k in ("strongest_proof", "largest_gap", "resume_case", "market_test")}})
@@ -103,8 +103,8 @@ def conditional_offer(value, n, comparison, dimensions):
     refs = source_ids(value.get("source_ids", []), n) if priorities else []
     unknowns = []
     names = {c["name"] for c in comparison}
-    for value in items(value.get("critical_unknowns", []), "critical offer unknowns", 8):
-        u = fields(value, {"unknown", "option", "priority", "why_it_matters", "how_to_verify", "reversal_condition", "source_ids"}, "offer unknown")
+    for raw_unknown in items(value.get("critical_unknowns", []), "critical offer unknowns", 8):
+        u = fields(raw_unknown, {"unknown", "option", "priority", "why_it_matters", "how_to_verify", "reversal_condition", "source_ids"}, "offer unknown")
         option = text(u.get("option", ""), "unknown option", 120, empty=True)
         if option and option not in names: raise ContractError("offer unknown refers to absent option")
         unknowns.append({"option": option, "priority": choices(u.get("priority", "important"), {"decisive", "important", "confidence_only"}, "information priority"),
@@ -123,19 +123,26 @@ def conditional_offer(value, n, comparison, dimensions):
             # An actual tradeoff at a higher priority cannot be overridden by brand
             # or another lower tier. Identical higher tiers permit the next tier.
             if winner or any(len({c["ratings"][k] for c in available}) > 1 for k in common): break
-    elif n["goal"] and len(available) == 1:
-        winner = available[0]
+    elif n["goal"] and len(available) == 1 and len(comparison) > 1:
+        # A remaining feasible option may survive exclusion, but one supplied
+        # unscored option is not evidence of comparative superiority.
+        remaining = available[0]
+        if remaining.get("ratings"):
+            winner = remaining
     preference = winner["name"] if winner else None
-    relevant = [u for u in unknowns if not u["option"] or u["option"] == preference]
+    blockers = []
+    if value.get("constraints") and (not winner or winner.get("eligible") is None):
+        blockers = ["接受前必须确认用户硬约束：" + c for c in value["constraints"]][:3]
+    relevant = [u for u in unknowns if preference is None or not u["option"] or u["option"] == preference]
     relevant.sort(key=lambda u: ("decisive", "important", "confidence_only").index(u["priority"]))
     top = relevant[:3]
     reversals = [u["reversal_condition"] for u in top]
     if winner and not reversals:
         reversals = ["书面职责不支持偏好的交付范围，或任一用户硬约束不满足时重新选择"]
-    return {"current_preference": preference, "offer_priorities": priorities, "decision_unknowns": top, "reversal_conditions": reversals,
-            "recommendation_type": "CONDITIONAL" if winner else "BLOCKED",
-            "recommended_move": f"当前条件性首选 {preference}；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。" if winner else "先确认能打破取舍的目标或硬约束；现有维度尚不能给出有依据的首选。",
-            "quality_counterargument": "当前优势来自已提供的偏好与维度；口头职责、经理或经营条件的不确定性可能使备选更合适。",
+    return {"current_preference": preference, "blocking_unknowns": blockers, "offer_priorities": priorities, "decision_unknowns": top, "reversal_conditions": reversals,
+            "recommendation_type": "CONDITIONAL" if winner and not blockers else "BLOCKED",
+            "recommended_move": (f"比较暂倾向 {preference}，但接受决策被尚未确认的用户硬约束阻止；先核实，不签署或辞职。" if winner and blockers else f"当前条件性首选 {preference}；已提供维度更符合你的高优先级目标，关键未知确认前不承诺接受。" if winner else "现在不承诺接受；先核实用户硬约束与决定性条款。单个未评分选项不证明更符合目标，可继续非承诺性讨论。" if blockers else "先确认能打破取舍的目标或比较证据；现有维度尚不能给出有依据的首选。"),
+            "quality_counterargument": "当前优势来自已提供的偏好与维度；口头职责、经理或经营条件的不确定性可能使备选更合适。" if winner else "当前缺少接受或比较依据；补齐决定性条款后可能支持这项机会，未知不等于已知不合适。",
             "quality_reconsider_if": reversals or ["补充决定性目标、约束或缺失比较维度后重评"],
             "decision_source_ids": refs}
 

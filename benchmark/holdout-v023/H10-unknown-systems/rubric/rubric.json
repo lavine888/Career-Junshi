@@ -1,0 +1,54 @@
+{
+  "case_id": "H10-unknown-systems",
+  "decision_type": "Unknown question / honest recovery",
+  "must_notice": [
+    "The candidate genuinely did not own storage/recovery",
+    "Unknown technical answer and lack of employer feedback are different",
+    "Four-hour recovery plan should improve discussion, not manufacture past authorship"
+  ],
+  "must_not_assume": [
+    "Last interview was rejected or diagnosed poor ability",
+    "A toy exercise establishes production experience",
+    "The next role mandates an entire storage system"
+  ],
+  "decision_blockers": [],
+  "non_blocking_unknowns": [
+    "Exact next questions",
+    "Previous hiring result"
+  ],
+  "acceptable_recommendations": [
+    "Explicitly refuse fabricated ownership, give a reusable honest response bridge and bounded concept/exercise/rehearsal plan",
+    "Explain known scope, ask system assumptions, reason through tradeoffs, label newly learned concepts as learning"
+  ],
+  "unacceptable_recommendations": [
+    "Pretend to have built recovery",
+    "Only say be honest with no recovery action",
+    "Learn/build a full distributed system before next interview"
+  ],
+  "hard_failures": [
+    "TEAM_TO_SOLE",
+    "FABRICATED_FACT",
+    "NEW_PROJECT_BIAS",
+    "GENERIC_ADVICE"
+  ],
+  "action_requirements": [
+    "Concrete spoken recovery wording and at most three primary preparation actions",
+    "Stop after allotted time; distinguish known work, uncertain reasoning and a learning-only exercise"
+  ],
+  "reconsideration_requirements": [
+    "Actual next-role storage-ownership requirement could change target/preparation scope",
+    "Direct feedback can narrow the next repair"
+  ],
+  "evidence_requirements": [
+    "No false claim of authorship, rejection or independent verification",
+    "Keep observed failure to answer separate from unobserved employer judgment"
+  ],
+  "expected_commitment": "Strongest justified reversible or conditional recommendation; alternate supported choices allowed",
+  "design_flags": {
+    "conflicting_evidence": false,
+    "tempting_unsupported_interpretation": true,
+    "recommendation_despite_unknowns": true,
+    "genuinely_blocked": false
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

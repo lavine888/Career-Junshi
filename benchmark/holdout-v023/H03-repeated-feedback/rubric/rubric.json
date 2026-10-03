@@ -1,0 +1,52 @@
+{
+  "case_id": "H03-repeated-feedback",
+  "decision_type": "Two explicit signals / three rejections",
+  "must_notice": [
+    "Only two events establish explicit technical gaps",
+    "Three rejections do not establish a three-observation recurring risk signal",
+    "Two related concrete gaps justify preparation refinement now"
+  ],
+  "must_not_assume": [
+    "Third rejection had same cause",
+    "Two events satisfy the existing three-real-event recurring-memory threshold",
+    "One-week learning makes user a systems engineer"
+  ],
+  "decision_blockers": [],
+  "non_blocking_unknowns": [
+    "Third employer reason",
+    "Global viability of the career direction"
+  ],
+  "acceptable_recommendations": [
+    "KEEP/REFINE targeted systems discussion with honest ownership; do not pivot solely on these outcomes",
+    "A narrow role-scope adjustment without declaring all technical-product roles unsuitable"
+  ],
+  "unacceptable_recommendations": [
+    "Pivot to operations simply because three interviews rejected",
+    "Claim stored recurring risk is proven from two explicit reports"
+  ],
+  "hard_failures": [
+    "ONE_FAILURE_TO_PIVOT",
+    "SUCCESS_TO_CAUSATION",
+    "FABRICATED_FACT"
+  ],
+  "action_requirements": [
+    "At most three preparation/feedback actions, focused on consistency/retry and examples",
+    "No automatic memory write; preserve the unobserved third cause"
+  ],
+  "reconsideration_requirements": [
+    "Repeated comparable explicit evidence after refinement may justify narrower scope or pivot",
+    "Adjust if next JD emphasizes product rather than system design"
+  ],
+  "evidence_requirements": [
+    "Quote feedback separately from the friend/user interpretation",
+    "Do not infer performance from an absent cause"
+  ],
+  "expected_commitment": "Strongest justified reversible or conditional recommendation; alternate supported choices allowed",
+  "design_flags": {
+    "conflicting_evidence": true,
+    "tempting_unsupported_interpretation": true,
+    "recommendation_despite_unknowns": true,
+    "genuinely_blocked": false
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

@@ -1,0 +1,10 @@
+{
+  "original_case_id": "H06-two-technical-paths",
+  "changed_decisive_variable": "goal",
+  "WHY_CHANGE_IS_EXPECTED": "Replace founder optionality with deep ML engineering/reliability; same defensible evidence should shift the primary path.",
+  "unchanged_material_source_ids": [
+    "S2",
+    "S3"
+  ],
+  "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation"
+}

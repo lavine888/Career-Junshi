@@ -1,0 +1,52 @@
+{
+  "case_id": "H08-building-avoidance",
+  "decision_type": "Three proofs / no market exposure",
+  "must_notice": [
+    "Evidence is sufficient for a reversible first application batch, not guaranteed employment",
+    "Zero applications means no market feedback",
+    "Another long project conflicts with money/time constraints"
+  ],
+  "must_not_assume": [
+    "Anxiety proves lack of readiness",
+    "Projects are independently verified or jobs definitely still open",
+    "More building necessarily improves interview outcomes"
+  ],
+  "decision_blockers": [],
+  "non_blocking_unknowns": [
+    "Actual employer response",
+    "Independent repository verification"
+  ],
+  "acceptable_recommendations": [
+    "Stop building this week and send a small bounded application batch using existing proofs",
+    "Allow only concrete application-blocking corrections rather than a fourth project"
+  ],
+  "unacceptable_recommendations": [
+    "Default to a new large portfolio project",
+    "Require all career uncertainties resolved before first application"
+  ],
+  "hard_failures": [
+    "NEW_PROJECT_BIAS",
+    "OVER_CAUTION",
+    "GENERIC_ADVICE"
+  ],
+  "action_requirements": [
+    "A same-evening first application action plus lightweight tracking",
+    "Explicitly avoid another project; cap polishing and use feedback"
+  ],
+  "reconsideration_requirements": [
+    "A repeated specific defensibility gap can justify narrow repair",
+    "An expired vacancy changes target, not overall decision to test the market"
+  ],
+  "evidence_requirements": [
+    "Use supplied project/JD match without claiming inspection or hire probability",
+    "Fear is a self-reported feeling, not a diagnosed personality disorder"
+  ],
+  "expected_commitment": "Strongest justified reversible or conditional recommendation; alternate supported choices allowed",
+  "design_flags": {
+    "conflicting_evidence": false,
+    "tempting_unsupported_interpretation": true,
+    "recommendation_despite_unknowns": true,
+    "genuinely_blocked": false
+  },
+  "boundary": "No exact winner or phrase matching; no outcomes supplied. A formal contract passing does not certify semantics."
+}

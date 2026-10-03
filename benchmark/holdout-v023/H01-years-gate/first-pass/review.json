@@ -1,0 +1,243 @@
+{
+  "case_id": "H01-years-gate",
+  "reviewer": "Human operator (same operator authored corpus); no independent inter-rater reliability claim",
+  "rubric_visibility": "Only after all ten extraction/host outputs were frozen",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "layers": {
+    "L1_Extraction": "PASS",
+    "L2_Structured_Decision": "PARTIAL",
+    "L3_Host": "PASS",
+    "L4_Overall": "PARTIAL"
+  },
+  "main_strength": "Required years remain a gate; bounded honest application",
+  "main_failure": "L2 says verify a years gap rather than clearly apply",
+  "dimensions": {
+    "Situation Understanding": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Evidence Discipline": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "默认策略：先问内推联系人“三年是否为硬门槛”；除非对方明确说会硬性淘汰，否则最迟 **2026-10-06 晚上**提交，不要等到 10 月 7 日 18:00 截止前才处理。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Fact / Inference Separation": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "默认策略：先问内推联系人“三年是否为硬门槛”；除非对方明确说会硬性淘汰，否则最迟 **2026-10-06 晚上**提交，不要等到 10 月 7 日 18:00 截止前才处理。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Sufficiency": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Decision Courage": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/supplemental-assembly-correction/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先补或验证这个具体缺口：JD 写明必需 3 年以上相关全职经验，候选人自述只有八个月正式算法应用经历；年限是否严格及项目能否折抵均未知；把该方向作为有界副投试验，不立即重开大项目。"
+        }
+      ],
+      "assessment": "L2 says verify a years gap rather than clearly apply"
+    },
+    "Bottleneck Identification": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Recommendation Clarity": {
+      "status": "PARTIAL",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+        },
+        {
+          "layer": "L2",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/supplemental-assembly-correction/decision.json",
+          "field": "recommended_move",
+          "excerpt": "先补或验证这个具体缺口：JD 写明必需 3 年以上相关全职经验，候选人自述只有八个月正式算法应用经历；年限是否严格及项目能否折抵均未知；把该方向作为有界副投试验，不立即重开大项目。"
+        }
+      ],
+      "assessment": "L2 says verify a years gap rather than clearly apply"
+    },
+    "Action Compression": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Information Value": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Counterfactual Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 22,
+          "excerpt": "   > 你好，我准备申请应用 AI 工程师。JD 写了 3 年以上相关全职经验，我目前只有 8 个月正式算法应用经历，但做过工业缺陷识别试验中的数据拆分和拒识规则设计，也能解释标签误差、阈值敏感性及延迟日志。想确认一下，3 年是系统或招聘的硬门槛，还是可以结合实际项目证据评估？如果不是硬门槛，我会在周三截止前提交。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Reconsideration Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 22,
+          "excerpt": "   > 你好，我准备申请应用 AI 工程师。JD 写了 3 年以上相关全职经验，我目前只有 8 个月正式算法应用经历，但做过工业缺陷识别试验中的数据拆分和拒识规则设计，也能解释标签误差、阈值敏感性及延迟日志。想确认一下，3 年是系统或招聘的硬门槛，还是可以结合实际项目证据评估？如果不是硬门槛，我会在周三截止前提交。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Stop / Pivot Quality": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 22,
+          "excerpt": "   > 你好，我准备申请应用 AI 工程师。JD 写了 3 年以上相关全职经验，我目前只有 8 个月正式算法应用经历，但做过工业缺陷识别试验中的数据拆分和拒识规则设计，也能解释标签误差、阈值敏感性及延迟日志。想确认一下，3 年是系统或招聘的硬门槛，还是可以结合实际项目证据评估？如果不是硬门槛，我会在周三截止前提交。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Avoided Action": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 22,
+          "excerpt": "   > 你好，我准备申请应用 AI 工程师。JD 写了 3 年以上相关全职经验，我目前只有 8 个月正式算法应用经历，但做过工业缺陷识别试验中的数据拆分和拒识规则设计，也能解释标签误差、阈值敏感性及延迟日志。想确认一下，3 年是系统或招聘的硬门槛，还是可以结合实际项目证据评估？如果不是硬门槛，我会在周三截止前提交。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "Ownership Integrity": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 5,
+          "excerpt": "默认策略：先问内推联系人“三年是否为硬门槛”；除非对方明确说会硬性淘汰，否则最迟 **2026-10-06 晚上**提交，不要等到 10 月 7 日 18:00 截止前才处理。"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    },
+    "User Goal Alignment": {
+      "status": "PASS",
+      "evidence": [
+        {
+          "layer": "L3",
+          "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+          "line": 3,
+          "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+        }
+      ],
+      "assessment": "Supplied evidence supports bounded advice on this applicable dimension; see quoted response and rubric."
+    }
+  },
+  "first_screen": {
+    "status": "PASS",
+    "priority_assessment": "The opening states a judgment/conditional direction before an inventory of facts and unknowns; subsequent bounded actions are visible. No exact character quota imposed.",
+    "excerpt": {
+      "layer": "L3",
+      "file": "benchmark/holdout-v023/H01-years-gate/first-pass/host-response.md",
+      "line": 3,
+      "excerpt": "**该投，但把它当作“主方向内的有界尝试”，总投入控制在 1 小时左右，不另做项目。**"
+    }
+  },
+  "decision_courage": {
+    "status": "PARTIAL",
+    "classification": "CALIBRATED_COMMITMENT"
+  },
+  "information_value": {
+    "classification": "HIGH_VALUE_QUESTION",
+    "decision_relevant_information": [
+      "Whether three years is strictly exclusionary"
+    ],
+    "qualification": "Information would change effort allocation, feasibility or claim wording; unknowns are not a completeness checklist."
+  },
+  "hard_failures": [],
+  "failure_classification": [
+    {
+      "category": "C",
+      "finding": "assembly rejected an exact request source, not a corrupted extraction"
+    },
+    {
+      "category": "F",
+      "finding": "L2 verification wording is less direct but not a mandate to rebuild"
+    }
+  ],
+  "outcomes": "NOT_SUPPLIED; not inferred",
+  "assembly_notes": "Original harness error retained; supplemental compilation uses the exact unchanged packet, with the exact user request accepted as an additional source."
+}

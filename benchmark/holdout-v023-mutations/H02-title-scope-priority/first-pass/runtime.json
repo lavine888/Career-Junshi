@@ -1,0 +1,8 @@
+{
+  "case_id": "H02-title-scope-priority",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "FAILED",
+  "error": "{\"error\": \"metadata requires mode, role_family, stage, situation_type, risk_tags, situation_tags\"}"
+}

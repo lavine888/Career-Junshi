@@ -1,0 +1,9 @@
+{
+  "case_id": "H04-equity-gap",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "offer",
+  "recommendation": "先确认你的目标、硬约束和缺失的关键 Offer 条件，再选；现在先不接受任何一方。"
+}

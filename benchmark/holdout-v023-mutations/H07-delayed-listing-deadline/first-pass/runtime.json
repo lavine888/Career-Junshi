@@ -1,0 +1,9 @@
+{
+  "case_id": "H07-delayed-listing-deadline",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "outcomes": "NOT_SUPPLIED; no outcome/memory replay fabricated",
+  "extraction_status": "VALID",
+  "decision_status": "VALID",
+  "mode": "recruiting",
+  "recommendation": "先等到招聘方承诺日期（预计本周给反馈（2026-10-02 后更新为暂时无法提供新日期）），再根据实际截止时间决定跟进。"
+}

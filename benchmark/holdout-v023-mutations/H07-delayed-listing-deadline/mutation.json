@@ -1,0 +1,10 @@
+{
+  "original_case_id": "H07-delayed-listing",
+  "changed_decisive_variable": "deadline",
+  "WHY_CHANGE_IS_EXPECTED": "Remove the competing offer/deadline; deadline-driven escalation should relax, without inferring rejection.",
+  "unchanged_material_source_ids": [
+    "S1",
+    "S2"
+  ],
+  "request_rewording": "Only to keep the changed priority/deadline coherent; no expected recommendation sent to generation"
+}

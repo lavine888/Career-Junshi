@@ -1,0 +1,54 @@
+{
+  "REFERENCE_MODE": "CONTROLLED_PRELOAD",
+  "baseline_commit": "d6994a95d0d1ce2427a0f0f503e2c28a73cfb9b5",
+  "phase": "fresh-after",
+  "attempts": [
+    {
+      "name": "after-extract-H04-equity-gap",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:57:38.496881+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "4a3c0ab1f81d6deeca82c85a05629c3c562312272941877c9486a2a46abe29d3",
+      "commands": [],
+      "usage": {
+        "input_tokens": 23738,
+        "cached_input_tokens": 22016,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3080,
+        "reasoning_output_tokens": 1274
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T17:00:17.084162+00:00",
+      "seconds": 158.58,
+      "raw_sha256": "26af749052c996817d44d55d7136490efa4b05e028cfa971f478c8a68284cea1"
+    },
+    {
+      "name": "after-host-H04-equity-gap",
+      "model": "gpt-5.6-sol",
+      "effort": "high",
+      "started_at": "2026-10-03T16:56:39.620866+00:00",
+      "timeout": 480,
+      "tools": "disabled",
+      "prompt_sha256": "62d6f37789ca18d40e56ee6558e32a7ac52655e79b7043c5de4cce06f5780d59",
+      "commands": [],
+      "usage": {
+        "input_tokens": 20619,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2297,
+        "reasoning_output_tokens": 1075
+      },
+      "status": "VALID",
+      "error": [],
+      "completed_at": "2026-10-03T16:57:41.197605+00:00",
+      "seconds": 61.58,
+      "raw_sha256": "732ddab43779d31a2ea55c63828761e67af20431403e463834b74366ed52de9b"
+    }
+  ],
+  "input_sha256": "6cbb679f9e3e954975e088a90811a2db67b0715ee238f88f6b41ff7c8a482529",
+  "outcomes": "NOT_SUPPLIED",
+  "contract_assembly_change": "Existing unknown family allowed by patched contract; exact user request source allowed by corrected assembly; no rubric in generation."
+}

@@ -25,6 +25,8 @@
 见 [决策质量报告](documentation/V022_DECISION_QUALITY_REPORT.md) 和
 [参考读取实验](documentation/REFERENCE_RETRIEVAL_EVAL.md)。这不证明现实求职效果。
 
+**v0.2.3 · Holdout Generalization Evaluation**：十个新合成场景先评测、冻结，再做三个通用修补。首轮四层综合为 1 PASS / 2 PARTIAL / 7 FAIL；新上下文复测为 3 PASS / 3 PARTIAL / 4 FAIL。164 项单元测试与既有基准无回归，但提取失败和语义弱点仍保留，尚未达到直接真实用户试点门槛。见 [完整评测](documentation/V023_HOLDOUT_EVAL.md)；不能据此声称现实求职效果。
+
 v0.2.1 修复招聘语句的否定 / 条件 / 转述边界，按项目 Claim 引用跨机会追踪纠正，
 并在三组历史上限前去重。123 项测试通过，原 108 项保持不变。
 15 对固定合成场景已用 `gpt-5.6-sol` 生成、由另一模型盲评：v0.2.1 胜 2 对、平局 13 对，

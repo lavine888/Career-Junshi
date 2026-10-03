@@ -1,0 +1,80 @@
+[
+  {
+    "name": "after-extract-H02-title-scope-priority",
+    "file": "benchmark/holdout-v023-runner/mutations-prompts/after-extract-H02-title-scope-priority.txt",
+    "sha256": "25773a8d7b182b0a239bc12064e4cdd04ee55301ace2eeea0b73a6753424f17d",
+    "recorded_prompt_sha256": "25773a8d7b182b0a239bc12064e4cdd04ee55301ace2eeea0b73a6753424f17d",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "tools": "disabled",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "rubric_included": false,
+    "serialized_file_sha256": "9598ddecaa64369674b0e0fb1ecceda75a4d3aabe4ea88c6b68d28950e7d327f",
+    "message_hash_boundary": "sha256 is the UTF-8 message after universal newline decoding, exactly as sent by Python; serialized_file_sha256 protects stored bytes."
+  },
+  {
+    "name": "after-host-H02-title-scope-priority",
+    "file": "benchmark/holdout-v023-runner/mutations-prompts/after-host-H02-title-scope-priority.txt",
+    "sha256": "c4c26dd17ef7f0f8a4a64f954e0ec79992ac4e2bebe9c28126bdc9e8a33a56aa",
+    "recorded_prompt_sha256": "c4c26dd17ef7f0f8a4a64f954e0ec79992ac4e2bebe9c28126bdc9e8a33a56aa",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "tools": "disabled",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "rubric_included": false,
+    "serialized_file_sha256": "8fbc9a27a1a636501f28237b766161c1a753bb3d54e3856f0c99120e8b46795a",
+    "message_hash_boundary": "sha256 is the UTF-8 message after universal newline decoding, exactly as sent by Python; serialized_file_sha256 protects stored bytes."
+  },
+  {
+    "name": "after-extract-H06-two-technical-paths-goal",
+    "file": "benchmark/holdout-v023-runner/mutations-prompts/after-extract-H06-two-technical-paths-goal.txt",
+    "sha256": "aa78e6be23bcb11b1127d2e687f0644c2b7986221295f0dde2617dcc9ec7b71f",
+    "recorded_prompt_sha256": "aa78e6be23bcb11b1127d2e687f0644c2b7986221295f0dde2617dcc9ec7b71f",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "tools": "disabled",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "rubric_included": false,
+    "serialized_file_sha256": "06b2225296e7566ebf5e167cdee01e293a301ee0225647c9450e83737e9cb3ff",
+    "message_hash_boundary": "sha256 is the UTF-8 message after universal newline decoding, exactly as sent by Python; serialized_file_sha256 protects stored bytes."
+  },
+  {
+    "name": "after-host-H06-two-technical-paths-goal",
+    "file": "benchmark/holdout-v023-runner/mutations-prompts/after-host-H06-two-technical-paths-goal.txt",
+    "sha256": "42cfcab11affd32d4b2e165991a9fdd78f3f752fc754cf1ecf32d7278db645d9",
+    "recorded_prompt_sha256": "42cfcab11affd32d4b2e165991a9fdd78f3f752fc754cf1ecf32d7278db645d9",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "tools": "disabled",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "rubric_included": false,
+    "serialized_file_sha256": "470cdbc37c64cf35377f1550f6f0d7b5cd0d98c63dbfd3c547cd949ee0f863f4",
+    "message_hash_boundary": "sha256 is the UTF-8 message after universal newline decoding, exactly as sent by Python; serialized_file_sha256 protects stored bytes."
+  },
+  {
+    "name": "after-extract-H07-delayed-listing-deadline",
+    "file": "benchmark/holdout-v023-runner/mutations-prompts/after-extract-H07-delayed-listing-deadline.txt",
+    "sha256": "89df5bfdae82df174e1e62c5c4fd2305fe49d3bdacd5f8434ce67850c5d82cad",
+    "recorded_prompt_sha256": "89df5bfdae82df174e1e62c5c4fd2305fe49d3bdacd5f8434ce67850c5d82cad",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "tools": "disabled",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "rubric_included": false,
+    "serialized_file_sha256": "5a71a1aa2ca28d80bacc0d0f790ba427ccb0d5f94024efca3a273e36f14a143d",
+    "message_hash_boundary": "sha256 is the UTF-8 message after universal newline decoding, exactly as sent by Python; serialized_file_sha256 protects stored bytes."
+  },
+  {
+    "name": "after-host-H07-delayed-listing-deadline",
+    "file": "benchmark/holdout-v023-runner/mutations-prompts/after-host-H07-delayed-listing-deadline.txt",
+    "sha256": "e987695046f87fb76bfe2fbeb9aae0c7439ced9ca054d5649e2160ef0fdb1641",
+    "recorded_prompt_sha256": "e987695046f87fb76bfe2fbeb9aae0c7439ced9ca054d5649e2160ef0fdb1641",
+    "model": "gpt-5.6-sol",
+    "effort": "high",
+    "tools": "disabled",
+    "reference_mode": "CONTROLLED_PRELOAD",
+    "rubric_included": false,
+    "serialized_file_sha256": "7ddd35c46e002c6e3d7e44257752569e987d70f1d4cc1ddcac84a5624d867fc4",
+    "message_hash_boundary": "sha256 is the UTF-8 message after universal newline decoding, exactly as sent by Python; serialized_file_sha256 protects stored bytes."
+  }
+]
