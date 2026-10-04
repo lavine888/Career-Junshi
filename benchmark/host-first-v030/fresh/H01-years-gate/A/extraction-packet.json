@@ -1,0 +1,473 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "REQ-001",
+      "source_type": "user_report",
+      "text": "我刚转行，在苏州只有八个月正式工作经历。澄湾工业软件的应用 AI 岗写必须三年经验，但技术工作我大部分做过。周三截止，我是否该投？我每天只能拿出一小时，不能为一家公司另做项目。"
+    },
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "text": "28 岁，原为机械专业研究生，八个月正式算法应用经历。自述独立维护过工厂缺陷识别试验，能解释采样、标签误差和拒识策略。允许苏州混合办公，不愿搬迁。求职目标是做有现场反馈的 AI 应用。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "jd",
+      "text": "澄湾工业软件｜应用 AI 工程师｜苏州混合办公。必需：3 年以上相关全职经验；Python、评估与部署故障分析。工业领域经历优先；硕士学历优先。未写项目可折抵年限。申请截止 2026-10-07 18:00。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "document",
+      "text": "候选人提供脱敏试验说明：同一缺陷识别任务有训练/留出集隔离、拒识阈值敏感性、标签复核和延迟日志。文档记载该候选人设计了数据拆分与拒识规则；运行截图显示留出集测试，但本次没有独立重跑。岗位申请只需现成简历，约 25 分钟；内推联系人可回答年限是否严格，尚未询问。"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "用户自述刚转行",
+      "source_id": "REQ-001",
+      "source_type": "user_report",
+      "source_span": "我刚转行",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户自述在苏州只有八个月正式工作经历",
+      "source_id": "REQ-001",
+      "source_type": "user_report",
+      "source_span": "在苏州只有八个月正式工作经历",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "用户自述技术工作大部分做过",
+      "source_id": "REQ-001",
+      "source_type": "user_report",
+      "source_span": "但技术工作我大部分做过",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "U1",
+      "text": "用户所说的技术工作与该岗位各项必需技术要求的具体对应程度未知",
+      "source_id": "REQ-001",
+      "source_type": "user_report",
+      "source_span": "但技术工作我大部分做过",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "claim",
+      "modality": "unknown"
+    },
+    {
+      "id": "F4",
+      "text": "用户每天只能投入一小时",
+      "source_id": "REQ-001",
+      "source_type": "user_report",
+      "source_span": "我每天只能拿出一小时",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F5",
+      "text": "用户不能为一家公司另做项目",
+      "source_id": "REQ-001",
+      "source_type": "user_report",
+      "source_span": "不能为一家公司另做项目",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F6",
+      "text": "用户自述为 28 岁",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "28 岁",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F7",
+      "text": "用户自述原为机械专业研究生",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "原为机械专业研究生",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户自述有八个月正式算法应用经历",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "八个月正式算法应用经历",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F9",
+      "text": "用户自述独立维护过工厂缺陷识别试验",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "自述独立维护过工厂缺陷识别试验",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "用户自述能解释采样、标签误差和拒识策略",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "能解释采样、标签误差和拒识策略",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F11",
+      "text": "用户允许苏州混合办公",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "允许苏州混合办公",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F12",
+      "text": "用户不愿搬迁",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "不愿搬迁",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F13",
+      "text": "用户的求职目标是做有现场反馈的 AI 应用",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "求职目标是做有现场反馈的 AI 应用",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F14",
+      "text": "岗位是澄湾工业软件的应用 AI 工程师，工作方式为苏州混合办公",
+      "source_id": "S2",
+      "source_type": "jd",
+      "source_span": "澄湾工业软件｜应用 AI 工程师｜苏州混合办公",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "F15",
+      "text": "岗位把三年以上相关全职经验列为必需条件",
+      "source_id": "S2",
+      "source_type": "jd",
+      "source_span": "必需：3 年以上相关全职经验",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "F16",
+      "text": "Python、评估与部署故障分析属于岗位必需条件",
+      "source_id": "S2",
+      "source_type": "jd",
+      "source_span": "Python、评估与部署故障分析",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "F17",
+      "text": "工业领域经历为优先条件",
+      "source_id": "S2",
+      "source_type": "jd",
+      "source_span": "工业领域经历优先",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "F18",
+      "text": "硕士学历为优先条件",
+      "source_id": "S2",
+      "source_type": "jd",
+      "source_span": "硕士学历优先",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "preferred",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "U2",
+      "text": "项目是否可以折抵三年经验要求未知",
+      "source_id": "S2",
+      "source_type": "jd",
+      "source_span": "未写项目可折抵年限",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "requirement",
+      "modality": "unknown",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "F19",
+      "text": "申请截止时间是 2026-10-07 18:00",
+      "source_id": "S2",
+      "source_type": "jd",
+      "source_span": "申请截止 2026-10-07 18:00",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "F20",
+      "text": "候选人提供了脱敏试验说明",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "候选人提供脱敏试验说明",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F21",
+      "text": "所提供说明记载同一缺陷识别任务包含训练/留出集隔离、拒识阈值敏感性、标签复核和延迟日志",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "同一缺陷识别任务有训练/留出集隔离、拒识阈值敏感性、标签复核和延迟日志",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F22",
+      "text": "所提供文档记载该候选人设计了数据拆分与拒识规则",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "文档记载该候选人设计了数据拆分与拒识规则",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F23",
+      "text": "运行截图显示留出集测试，但本次没有独立重跑",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "运行截图显示留出集测试，但本次没有独立重跑",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F24",
+      "text": "岗位申请只需现成简历，预计约 25 分钟",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "岗位申请只需现成简历，约 25 分钟",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    },
+    {
+      "id": "U3",
+      "text": "三年经验要求是否严格执行未知；内推联系人尚未被询问",
+      "source_id": "S3",
+      "source_type": "document",
+      "source_span": "内推联系人可回答年限是否严格，尚未询问",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "requirement",
+      "modality": "unknown",
+      "freshness": {
+        "category": "current_jd",
+        "observed_at": "2026-10-04T10:00:00+08:00",
+        "valid_until": "2026-10-07T18:00:00+08:00"
+      }
+    }
+  ],
+  "situation": {
+    "mode": "job",
+    "summary": "判断是否在三年相关全职经验必需条件下，于截止前申请澄湾工业软件的应用 AI 工程师岗位",
+    "goal": "决定是否投递，同时遵守每天只能投入一小时且不为单一公司另做项目的约束",
+    "deadline": "2026-10-07T18:00:00+08:00",
+    "metadata": {
+      "mode": "job",
+      "role_family": "unknown",
+      "stage": "application",
+      "situation_type": "gap-check",
+      "risk_tags": [
+        "constraints",
+        "evidence",
+        "timing"
+      ],
+      "situation_tags": [
+        "constraints",
+        "direction",
+        "evidence",
+        "timing"
+      ]
+    },
+    "claims": [
+      {
+        "id": "C1-formal-algorithm-experience",
+        "claim": "八个月正式算法应用经历",
+        "confidence": "SELF_REPORTED",
+        "stage": "completed",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "自述拥有八个月正式算法应用经历"
+        },
+        "evidence": [
+          {
+            "source": "S1",
+            "kind": "self_report",
+            "supports": [
+              "claim"
+            ],
+            "summary": "八个月正式算法应用经历"
+          }
+        ],
+        "risk": [
+          "经历范围、工作深度及与岗位要求的逐项对应关系未独立核实"
+        ]
+      },
+      {
+        "id": "C2-defect-trial-maintenance",
+        "claim": "独立维护过工厂缺陷识别试验，能解释采样、标签误差和拒识策略",
+        "confidence": "SELF_REPORTED",
+        "stage": "demo",
+        "ownership": {
+          "scope": "sole",
+          "contribution": "自述独立承担该试验的维护，并能解释采样、标签误差和拒识策略"
+        },
+        "evidence": [
+          {
+            "source": "S1",
+            "kind": "self_report",
+            "supports": [
+              "claim",
+              "sole_ownership"
+            ],
+            "summary": "自述独立维护过工厂缺陷识别试验，能解释采样、标签误差和拒识策略"
+          }
+        ],
+        "risk": [
+          "独立维护仅适用于该项表述，不证明整个项目由候选人独立完成",
+          "生产使用情况未知"
+        ]
+      },
+      {
+        "id": "C3-split-and-rejection-rules",
+        "claim": "设计了缺陷识别试验的数据拆分与拒识规则；现有截图显示留出集测试，但本次未独立重跑",
+        "confidence": "SUPPORTED",
+        "stage": "demo",
+        "ownership": {
+          "scope": "unclear",
+          "contribution": "所提供文档记载候选人设计了数据拆分与拒识规则"
+        },
+        "evidence": [
+          {
+            "source": "S3",
+            "kind": "supporting",
+            "supports": [
+              "claim",
+              "authorship"
+            ],
+            "summary": "脱敏说明记载数据拆分与拒识规则，运行截图显示留出集测试；本次没有独立重跑"
+          }
+        ],
+        "risk": [
+          "本次没有独立重跑",
+          "文档与截图不证明生产使用或整个工程的个人所有权"
+        ]
+      }
+    ],
+    "job": {
+      "fit": "gap",
+      "gap": "候选人自述的八个月正式经历未达到 JD 明列的三年以上相关全职经验；Python、评估与部署故障分析的逐项覆盖程度以及年限要求是否严格仍未知",
+      "gap_days": null,
+      "role": "澄湾工业软件｜应用 AI 工程师"
+    }
+  }
+}

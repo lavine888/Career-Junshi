@@ -1,0 +1,55 @@
+{
+  "cases": [
+    {
+      "case": "H01-years-gate",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    },
+    {
+      "case": "H02-title-scope",
+      "generation": "COMPLETE"
+    },
+    {
+      "case": "H03-repeated-feedback",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    },
+    {
+      "case": "H04-equity-gap",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    },
+    {
+      "case": "H05-metric-credit",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    },
+    {
+      "case": "H06-two-technical-paths",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    },
+    {
+      "case": "H07-delayed-listing",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    },
+    {
+      "case": "H08-building-avoidance",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    },
+    {
+      "case": "H09-manager-care",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    },
+    {
+      "case": "H10-unknown-systems",
+      "generation": "FAILED",
+      "error": "Model transport failed or unauthorized tools; raw log retained privately"
+    }
+  ],
+  "actual_generations": 9,
+  "boundary": "Completion is transport only, not semantic PASS."
+}

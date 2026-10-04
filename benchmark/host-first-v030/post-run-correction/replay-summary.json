@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "case_id": "H01-years-gate",
+      "exit_code": 0,
+      "input_envelope_sha256": "a477a665cf0c30d8202ae1c7ba9d6a8ca323ea152e3eee8d51e80e0b7c6a2001",
+      "original_generation_retained": true,
+      "new_model_calls": 0,
+      "repair_budget_consumed_before_replay": 0,
+      "boundary": "Exact retained envelope replay after general negation-guard correction; not another host repair or fresh generation."
+    },
+    {
+      "case_id": "H02-title-scope",
+      "exit_code": 0,
+      "input_envelope_sha256": "75e128c780b5effe3a7512dfd0d28d5df9835358d465cdbd975993f6ef73d716",
+      "original_generation_retained": true,
+      "new_model_calls": 0,
+      "repair_budget_consumed_before_replay": 1,
+      "boundary": "Exact retained envelope replay after general negation-guard correction; not another host repair or fresh generation."
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "exit_code": 0,
+      "input_envelope_sha256": "3eefda4dabab9c3204154079431b0bc5e89ebfddc3ad712e07a08ccfaca30c6f",
+      "original_generation_retained": true,
+      "new_model_calls": 0,
+      "repair_budget_consumed_before_replay": 1,
+      "boundary": "Exact retained envelope replay after general negation-guard correction; not another host repair or fresh generation."
+    }
+  ],
+  "runtime_envelope_sha256": "6f3c3d4d8c81677fc5a8e91bed41d2cb1abd3b36c3d5167a8b6db53acf30cc5c"
+}

@@ -1,0 +1,53 @@
+{
+  "cases": [
+    {
+      "case_id": "H01-years-gate",
+      "status": "ACCEPT",
+      "exit_code": 0,
+      "input_envelope_sha256": "a477a665cf0c30d8202ae1c7ba9d6a8ca323ea152e3eee8d51e80e0b7c6a2001",
+      "new_model_calls": 0,
+      "historical_host_repairs": 0,
+      "move_preserved_exactly": true
+    },
+    {
+      "case_id": "H02-title-scope",
+      "status": "ACCEPT",
+      "exit_code": 0,
+      "input_envelope_sha256": "75e128c780b5effe3a7512dfd0d28d5df9835358d465cdbd975993f6ef73d716",
+      "new_model_calls": 0,
+      "historical_host_repairs": 1,
+      "move_preserved_exactly": true
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "status": "ACCEPT",
+      "exit_code": 0,
+      "input_envelope_sha256": "3eefda4dabab9c3204154079431b0bc5e89ebfddc3ad712e07a08ccfaca30c6f",
+      "new_model_calls": 0,
+      "historical_host_repairs": 1,
+      "move_preserved_exactly": true
+    }
+  ],
+  "runtime_files_sha256": {
+    "scripts/__init__.py": "a784034f067854e3ac4dd655054e5665ed43c965d7d00e99be6f46e03503ecf4",
+    "scripts/actions.py": "4065b32f6a11ea2083a02eebfe2b7c3d4c35bc54c7c7888cc66555d03f118a75",
+    "scripts/benchmark.py": "24672737f139aeaec83e899d1d7d2a6c4132f140b68dfdd69162456d26674a41",
+    "scripts/calibration.py": "e1582aecfe9194787b9e0ceb7cf7df07db188fc2add0dd74c839338c7c930bff",
+    "scripts/context.py": "cc18c8ef0122a7c5c48108539a7d6e5936d6808223d875219990ee041a9208e7",
+    "scripts/decision.py": "46774f4f6479575ab2c7b0b1df8d9b81cf306e2ea66c85cff3440e58bbc3572d",
+    "scripts/decision_quality.py": "2b61c9342b2ae518f94d49fc033e8b2ecf827b4bd2948de7ba6fd104e045354a",
+    "scripts/envelope.py": "718145ad8acb850e4d99572621d0e1dbd101115b46a6169acdda7f86f1301aa3",
+    "scripts/feedback_loop.py": "8a94ca41f57bfc959aec9aa4a41feb536e34b6b5b3ea605a078ed36683df506e",
+    "scripts/hypothesis.py": "9610e1476b06b162c7cdefed6120e81ede587e808f83c0942ab517986c497795",
+    "scripts/install_skill.py": "d8e6aebb89069af18c651a55de523d94c22896786fe2b500e1c483bf6a4705ee",
+    "scripts/intelligence.py": "1544c5a434e046b267ef76dd3db71468ae2578a21ff824ba9dbdc8f9245ce4ad",
+    "scripts/junshi.py": "a9f4fb2a185a92b5ab06eb146a371ce9d1641d260e52d9e5b8a0fe709eb6760b",
+    "scripts/memory_store.py": "e54dda4011813cda5b2c73cfd97e191105e2d60954b17d4b53ac7cc37e966b9d",
+    "scripts/method_adapter.py": "1b0a90874bb6822f2ddc72323fe454ecdc525a9fc28eaae6d5473d5d67189d55",
+    "scripts/models.py": "ca94295ac0e8d287f1a94efc6a837b6d4f49d700d6d5cd449673201816599ff1",
+    "scripts/role_story.py": "f2107bec3fc2933ce846916ee3fb79c4ebbb26cc3a2a83e435f8dd40cfbdcb20",
+    "scripts/router.py": "e0bd5d802bc529e093e87cbb7ee435f82c50cd753b5abb16e147bb983d65d01a",
+    "scripts/validate_skill.py": "898d3cd4ea044b63cd606f89c918658b890861c66b066d5f5cb3df5666e39044"
+  },
+  "boundary": "Retained envelope replay only, not a fresh generation or additional repair."
+}

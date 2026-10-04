@@ -1,0 +1,251 @@
+{
+  "status": "REPAIR_REQUIRED",
+  "issues": [
+    {
+      "code": "CORE_SCHEMA",
+      "severity": "REPAIR_REQUIRED",
+      "field": "envelope",
+      "explanation": "reconsider must be a list of at most 3"
+    }
+  ],
+  "safe_fields": [
+    "actions",
+    "alternatives",
+    "bottleneck",
+    "facts",
+    "inferences",
+    "recommendation",
+    "schema_version",
+    "situation",
+    "unknowns",
+    "urgency"
+  ],
+  "envelope": {
+    "schema_version": "2",
+    "situation": {
+      "summary": "三次风控平台产品经理申请未推进，其中两次明确指出数据系统取舍与技术沟通不足，第三次原因未知且流程曾受部门重组影响。当前需要决定是修正岗位组合与面试防守，还是放弃技术产品转纯运营。",
+      "mode": "job",
+      "goal": "在不启动长期学习项目的前提下，为 2026-10-16 的同类面试完成一次十小时的方向与面试修正实验，并判断是否继续风险与数据产品路线。"
+    },
+    "urgency": {
+      "deadline": null,
+      "hours_remaining": null
+    },
+    "facts": [
+      {
+        "id": "F1",
+        "statement": "用户自述在广州从事消费金融产品五年，目标仍是风险与数据产品。",
+        "source_ids": [
+          "S1"
+        ],
+        "source_spans": [
+          {
+            "source_id": "S1",
+            "quote": "34 岁，在广州做消费金融产品五年，目标仍是风险与数据产品。"
+          }
+        ],
+        "epistemic": "FACT",
+        "confidence": "self_reported"
+      },
+      {
+        "id": "F2",
+        "statement": "最近两个不同机会的明确反馈都指向数据系统取舍与技术沟通深度，但肯定了产品判断或需求分析。",
+        "source_ids": [
+          "S2"
+        ],
+        "source_spans": [
+          {
+            "source_id": "S2",
+            "quote": "南桥数据 2026-09-12：产品判断较好，但没讲清数据一致性与重试边界，技术沟通深度不足。砾舟科技 2026-09-20：需求分析清晰，建议加强数据系统取舍，无法解释幂等和回放。"
+          }
+        ],
+        "epistemic": "FACT",
+        "confidence": "self_reported"
+      },
+      {
+        "id": "F3",
+        "statement": "第三个机会只确认未推进，没有给出原因；该流程曾在部门重组后延迟，HC 是否变化未确认。",
+        "source_ids": [
+          "S2",
+          "S3"
+        ],
+        "source_spans": [
+          {
+            "source_id": "S2",
+            "quote": "栖禾金融 2026-09-29：本轮未推进；没有原因。"
+          },
+          {
+            "source_id": "S3",
+            "quote": "第三次招聘流程在部门重组后延迟过，未确认 HC 是否改变。"
+          }
+        ],
+        "epistemic": "FACT",
+        "confidence": "self_reported"
+      },
+      {
+        "id": "F4",
+        "statement": "用户自述两个项目能够防守产品需求和指标，但系统设计由工程同事负责。",
+        "source_ids": [
+          "S3"
+        ],
+        "source_spans": [
+          {
+            "source_id": "S3",
+            "quote": "我的两个项目可以防守产品需求和指标，系统设计部分由工程同事负责。"
+          }
+        ],
+        "epistemic": "FACT",
+        "confidence": "self_reported"
+      },
+      {
+        "id": "F5",
+        "statement": "用户有与数据团队合作的经验，但没有独立开发分布式存储。",
+        "source_ids": [
+          "S1"
+        ],
+        "source_spans": [
+          {
+            "source_id": "S1",
+            "quote": "以前有数据团队合作经验，未独立开发分布式存储。"
+          }
+        ],
+        "epistemic": "FACT",
+        "confidence": "self_reported"
+      },
+      {
+        "id": "F6",
+        "statement": "下一次同类面试在 2026-10-16，用户可投入约十小时，且目前不希望新增长期学习项目。",
+        "source_ids": [
+          "S1"
+        ],
+        "source_spans": [
+          {
+            "source_id": "S1",
+            "quote": "下一次同类面试在 2026-10-16，可用约十小时准备；目前不想新增长期学习项目。"
+          }
+        ],
+        "epistemic": "FACT",
+        "confidence": "self_reported"
+      }
+    ],
+    "inferences": [
+      {
+        "id": "I1",
+        "statement": "两次独立且具体的反馈足以支持修正技术沟通与系统边界防守，但只证明一个重复出现的局部缺口，不足以证明整个技术产品方向错误。",
+        "basis": [
+          "F2"
+        ]
+      },
+      {
+        "id": "I2",
+        "statement": "第三次拒绝不能归入同一技术原因，因为没有反馈且存在流程与 HC 变化这一竞争性解释。",
+        "basis": [
+          "F3"
+        ]
+      },
+      {
+        "id": "I3",
+        "statement": "用户现有优势更贴近风险场景、需求、指标和跨团队协作；当前证据支持调整目标岗位的技术所有权要求，而不是直接转向纯运营。",
+        "basis": [
+          "F1",
+          "F4",
+          "F5"
+        ]
+      },
+      {
+        "id": "I4",
+        "statement": "十小时更适合验证能否解释产品相关的系统取舍和贡献边界，不适合临时补成分布式系统工程师或启动大型项目。",
+        "basis": [
+          "F4",
+          "F5",
+          "F6"
+        ]
+      }
+    ],
+    "unknowns": [
+      {
+        "id": "U1",
+        "statement": "第三次未推进的真实原因以及部门重组是否影响 HC。",
+        "decision_relevance": "confidence_only"
+      },
+      {
+        "id": "U2",
+        "statement": "下一场岗位要求产品经理亲自承担到什么程度的架构设计，而非定义业务、数据与验收边界。",
+        "decision_relevance": "reversal"
+      },
+      {
+        "id": "U3",
+        "statement": "用户经过一次聚焦准备后，能否用真实项目解释一致性、幂等、重试和回放的产品影响与协作边界。",
+        "decision_relevance": "reversal"
+      },
+      {
+        "id": "U4",
+        "statement": "纯运营路线是否更符合用户对工作内容、收入与长期成长的硬约束。",
+        "decision_relevance": "confidence_only"
+      }
+    ],
+    "bottleneck": {
+      "type": "Interview",
+      "explanation": "眼前瓶颈不是五年产品经历失效，而是面对平台型岗位时，无法把一致性、幂等、重试和回放讲到产品后果、验收规则及个人贡献边界；同时又不能把工程同事完成的系统设计说成自己的实现。"
+    },
+    "recommendation": {
+      "type": "CONDITIONAL",
+      "move": "现在不要放弃技术产品或直接转纯运营。继续主投风险与数据产品岗位；将强调基础设施架构所有权的风控平台岗降为副投，并用下一场面试做一次十小时的聚焦修正实验。",
+      "why": [
+        "两次明确反馈重复指向同一局部缺口，应该修正，但反馈同时认可产品判断或需求分析。",
+        "第三次没有原因，不能为了凑成三次相同失败而强行归因。",
+        "用户的真实经历支持产品、指标和跨数据团队协作，不支持包装成分布式系统实施者；调整岗位匹配和表达比整体转纯运营更符合现有证据。",
+        "该建议可逆：先用一次面试和后续可比反馈检验，再决定是否进一步降低平台型岗位投入。"
+      ],
+      "avoided_action": [
+        "因三次拒绝立即永久转向纯运营",
+        "把第三次拒绝虚构成技术深度问题",
+        "临时启动长期工程项目或冒充独立完成系统架构"
+      ],
+      "basis_ids": [
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "I1",
+        "I2",
+        "I3",
+        "I4"
+      ]
+    },
+    "alternatives": [
+      {
+        "option": "立即转纯运营",
+        "why_not_now": "没有证据显示用户的产品方向整体失配，也缺少纯运营更符合其硬约束的材料；当前转向会把一个可能可修正的面试缺口误判为职业方向错误。"
+      },
+      {
+        "option": "继续无差别主投所有风控平台岗位",
+        "why_not_now": "部分岗位可能要求产品经理承担较深的基础设施架构所有权，与用户当前经历边界不匹配；应先筛选 JD 和核实实际职责。"
+      },
+      {
+        "option": "补一个长期分布式系统项目后再求职",
+        "why_not_now": "不符合用户当前意愿和十小时窗口，也不能在短期内真实替代生产系统经验。"
+      }
+    ],
+    "actions": [
+      {
+        "description": "用 4 小时把两个真实项目各整理成一页：业务目标、数据流、失败场景、一致性要求、重复请求处理、重试与回放规则、验收指标，以及本人和工程同事分别负责什么；没有参与的设计明确说不知道或由工程负责。",
+        "execution_mode": "human",
+        "priority": 1
+      },
+      {
+        "description": "用 4 小时完成两轮口述演练：先讲 90 秒项目故事，再依次回答为什么这样取舍、替代方案、如何测量、哪里失败、团队如何分工；每次只修正无法用项目事实支撑的部分。",
+        "execution_mode": "human",
+        "priority": 2
+      },
+      {
+        "description": "用 2 小时核对下一岗位的 JD，并在面试中确认该岗位期待产品经理负责业务与数据边界，还是亲自承担架构设计；面试后原样记录被追问内容和明确反馈。",
+        "execution_mode": "human",
+        "priority": 3
+      }
+    ]
+  },
+  "boundary": "Source anchors and finite integrity checks, not complete semantic verification or source authentication."
+}

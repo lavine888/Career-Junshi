@@ -19,6 +19,8 @@ career decision Skill for a capable host, with standard-library local helpers.
 
 [中文](README.md) · [Synthetic cases](cases) · [v0.2 report](documentation/V02_REPORT.md) · [Evaluation](documentation/EVAL.md)
 
+**v0.3 · Host-First experiment** moves semantic judgment to the host and keeps source/integrity validation, one bounded repair, action compilation and consented memory in code. All 186 tests pass. Model quota interrupted the ten-case fresh comparison after one complete pair; outperformance is unestablished, the alternate path stays experimental, and no real-user pilot starts. See [architecture](documentation/V030_ARCHITECTURE.md), [incomplete report](documentation/V030_HOST_FIRST_REPORT.md) and [resume tools](benchmark/host-first-v030/README.md).
+
 **v0.2.2 · Decision Quality Patch** adds decision sufficiency, sourced direction
 hierarchies, conditional Offer preferences and reversal checks, contextual follow-up
 drafts and ownership defense packs. 154 tests pass, with no regression in the original

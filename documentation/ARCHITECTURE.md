@@ -34,6 +34,7 @@ user materials / consented task memory
 | hypothesis.py | KEEP / REFINE / guarded PIVOT review | No automatic direction switch or statistical effect estimate |
 | role_story.py | Existing claim → evidence → story → role questions | Never adds accomplishments; prose remains host-dependent |
 | benchmark.py | Repeatable structured checks and blinded host packets | Does not grade natural-language decision quality |
+| envelope.py | Host-owned judgment validation, bounded repair and faithful artifact/memory handoff | No career ranking, generic fallback or complete semantic authentication |
 
 SQLite was chosen over rewriting whole JSON files: standard-library transactions,
 bounded reads, foreign keys and concurrent updates reduce corruption risk without
@@ -51,3 +52,8 @@ v0.2 contracts are in [CONTEXT_EXTRACTION.md](CONTEXT_EXTRACTION.md) and
 [DECISION_INTELLIGENCE.md](DECISION_INTELLIGENCE.md). Golden cases and development
 evaluation reports stay in the checkout; runtime-only benchmark use needs an explicit
 `--cases` path. Installation still has no development or private-memory dependency.
+
+The [host-first architecture](V030_ARCHITECTURE.md) and
+[Decision Envelope v2](DECISION_ENVELOPE.md) describe the experimental judgment flow.
+The frozen A/B report in the development checkout controls adoption; legacy
+`decide` remains available for regression and comparison.

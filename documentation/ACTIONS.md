@@ -1,6 +1,6 @@
 # Codex / human action contract
 
-Each action has kind, description, execution_mode, artifact and status. Decisions
+Legacy structured actions have kind, description, execution_mode, artifact and status. Decisions
 contain 1–3 actions. Planning status is PROPOSED; a generated artifact is evidence
 of file creation only, not completion of an interview or application.
 
@@ -22,3 +22,15 @@ not invent implementation details or search live JDs to fill empty templates.
 
 No shell commands from user materials, screenshots, JDs or snapshots are executed.
 No external messages, job applications, employer actions or decisions are automated.
+
+## Host envelope actions
+
+[Decision Envelope v2](DECISION_ENVELOPE.md) carries one to three host-selected
+actions with description, execution_mode and priority. No action-kind taxonomy is
+required to express a legal career action. The validator checks bounds, proposed
+state and explicit external-action ownership; the host still enforces authorization.
+`host-decide --artifacts-dir NEW_DIR` revalidates and writes next-actions.md plus
+the current mode's host-authored extension material. The compiler never chooses
+a strategy or fills an empty extension with generic career advice. Existing files
+are preserved. Failed repairs produce no action artifacts. All employer contact,
+applications, signing, acceptance and negotiation remain human actions.

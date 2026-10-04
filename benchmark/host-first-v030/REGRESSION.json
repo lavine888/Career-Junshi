@@ -1,0 +1,115 @@
+{
+  "unit_tests": {
+    "passing": 186,
+    "original_tests_unchanged": 164,
+    "new_tests": 22,
+    "log": "verification/unit-tests.txt",
+    "verification_status": "TARGET_RUN_PASS",
+    "raw_log_sha256": "c4cb7b4158b5c5145d8a5b2008cefc953b6b008a1a73f9ada2a1840a312fb4a9",
+    "public_log_sha256": "c4cf13a1721378dd548f9355d8e6692ee86f1f6b27b01a1f05f8ad8ff78d8f18"
+  },
+  "original13": {
+    "pass": true,
+    "source": "scripts/benchmark.py run"
+  },
+  "old5": {
+    "pass": true,
+    "type": "Frozen property/source replay, not new generation",
+    "retained_semantic_grades": {
+      "PASS": 3,
+      "PARTIAL": 2
+    }
+  },
+  "frozen_manifests": {
+    "holdout-v023": 138,
+    "holdout-v023-after": 206,
+    "holdout-v023-mutations": 50
+  },
+  "new_model_comparison": "INCOMPLETE_QUOTA",
+  "legacy_test_files_byte_identical": [
+    "tests/__init__.py",
+    "tests/extraction/test_contract.py",
+    "tests/extraction/__init__.py",
+    "tests/regression/test_actions.py",
+    "tests/regression/test_adapter.py",
+    "tests/regression/test_decision.py",
+    "tests/regression/test_decision_quality.py",
+    "tests/regression/test_evidence.py",
+    "tests/regression/test_holdout_generalization.py",
+    "tests/regression/test_install_cli.py",
+    "tests/regression/test_loop.py",
+    "tests/regression/test_memory.py",
+    "tests/regression/test_mock_boundaries.py",
+    "tests/regression/test_mock_goldens.py",
+    "tests/regression/test_v021.py",
+    "tests/regression/__init__.py",
+    "tests/scenarios/test_scenarios.py",
+    "tests/scenarios/__init__.py",
+    "tests/v02/test_intelligence.py",
+    "tests/v02/__init__.py"
+  ],
+  "runtime_replays": [
+    {
+      "case_id": "H01-years-gate",
+      "status": "ACCEPT",
+      "exit_code": 0,
+      "input_envelope_sha256": "a477a665cf0c30d8202ae1c7ba9d6a8ca323ea152e3eee8d51e80e0b7c6a2001",
+      "new_model_calls": 0,
+      "historical_host_repairs": 0,
+      "move_preserved_exactly": true
+    },
+    {
+      "case_id": "H02-title-scope",
+      "status": "ACCEPT",
+      "exit_code": 0,
+      "input_envelope_sha256": "75e128c780b5effe3a7512dfd0d28d5df9835358d465cdbd975993f6ef73d716",
+      "new_model_calls": 0,
+      "historical_host_repairs": 1,
+      "move_preserved_exactly": true
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "status": "ACCEPT",
+      "exit_code": 0,
+      "input_envelope_sha256": "3eefda4dabab9c3204154079431b0bc5e89ebfddc3ad712e07a08ccfaca30c6f",
+      "new_model_calls": 0,
+      "historical_host_repairs": 1,
+      "move_preserved_exactly": true
+    }
+  ],
+  "boundary": "No semantic success inferred from unit/property checks.",
+  "executed_checks": {
+    "packaging": {
+      "exit_code": 0,
+      "result": "verification/packaging.json"
+    },
+    "original13": {
+      "exit_code": 0,
+      "result": "verification/original13.json"
+    },
+    "old5": {
+      "exit_code": 0,
+      "result": "verification/old5.json"
+    },
+    "v023-first-freeze": {
+      "exit_code": 0,
+      "result": "verification/v023-first-freeze.json"
+    }
+  },
+  "frozen_manifest_checks": {
+    "holdout-v023": {
+      "verified": true,
+      "files": 138
+    },
+    "holdout-v023-after": {
+      "verified": true,
+      "files": 206
+    },
+    "holdout-v023-mutations": {
+      "verified": true,
+      "files": 50
+    }
+  },
+  "new_original_output_freeze_verified": 109,
+  "verified_at": "2026-10-04T02:14:26.458229+00:00"
+}

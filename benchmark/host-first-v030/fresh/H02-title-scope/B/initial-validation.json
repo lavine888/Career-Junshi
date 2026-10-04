@@ -1,0 +1,29 @@
+{
+  "status": "REPAIR_REQUIRED",
+  "issues": [
+    {
+      "code": "CORE_SCHEMA",
+      "severity": "REPAIR_REQUIRED",
+      "field": "envelope",
+      "explanation": "deadline must include a timezone"
+    }
+  ],
+  "safe_fields": [
+    "schema_version",
+    "situation",
+    "urgency"
+  ],
+  "envelope": {
+    "schema_version": "2",
+    "situation": {
+      "summary": "曜原集团给出更高现金和 AI 产品专家头衔，但书面职责以配置、巡检和工单为主，与用户两年内成为产品负责人的目标明显冲突。",
+      "mode": "offer",
+      "goal": "在不受短期现金压力驱动的前提下，优先积累产品决策与责任证据，两年内成为产品负责人。"
+    },
+    "urgency": {
+      "deadline": null,
+      "hours_remaining": null
+    }
+  },
+  "boundary": "Source anchors and finite integrity checks, not complete semantic verification or source authentication."
+}

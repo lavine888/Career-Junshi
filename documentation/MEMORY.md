@@ -1,5 +1,12 @@
 # Local memory and consent
 
+Host-first decisions use [Envelope v2](DECISION_ENVELOPE.md)'s validated compact
+handoff and the same active-consent/append-only store. `host-decide --save-subject`
+does not grant consent; source transcripts and artifacts are not persisted.
+Comparable recall may inform the host before judgment, but does not invoke the
+legacy automatic risk-priority modifier. Outcomes and unknown causes retain the
+existing contracts below.
+
 Default: no database and no persistent memory. `status` is read-only and does not
 initialize a store. Ask explicit permission for compact local records; declining
 does not reduce the rest of the Skill's functionality. `--yes` represents an already

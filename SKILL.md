@@ -55,6 +55,13 @@ Next Actions → Observation Window → Stop / Pivot Condition。
 4. 给明确首选和依据、不确定性，收束到 1–3 个动作。只展示有帮助的推理字段。
 5. 说明接下来观察什么，什么信号触发继续、停止或转向；结果回来再更新。
 
+### Host-first 实验链路
+
+可用 [Decision Envelope v2](documentation/DECISION_ENVELOPE.md) 将你的判断交给
+`host-decide` 校验来源与边界，再生成你指定的行动材料；脚本不重新选职业方向。
+校验问题只修正一次，保留原始结果；未通过则停止执行。当前仍为实验路径，
+是否替换旧流程以冻结对照报告为准。
+
 ### v0.2 决策检查
 
 原材料按 [context extraction](references/practical/context-extraction.md) 提取：每条重要

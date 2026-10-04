@@ -18,6 +18,8 @@
 
 [English](README_EN.md) · [三个合成示例](cases) · [v0.2 报告](documentation/V02_REPORT.md) · [评测边界](documentation/EVAL.md)
 
+**v0.3 · Host-First 实验**：宿主负责职业判断，代码校验来源与事实边界、最多修正一次、编译行动材料并衔接已有授权记忆。186 项测试通过。指定模型额度耗尽后，十案例新对照仅完成一组，不能宣称架构胜出；当前保留为实验路径，不启动真实用户试点。见 [架构](documentation/V030_ARCHITECTURE.md)、[未完成评估报告](documentation/V030_HOST_FIRST_REPORT.md) 和 [续跑工具](benchmark/host-first-v030/README.md)。
+
 **v0.2.2 · Decision Quality Patch**：区分可直接建议、条件性选择和真正阻塞，
 增加岗位主副探索排序、Offer 反转条件、上下文跟进草稿与贡献防守包。
 154 项测试通过，原 13 个基准及五例冻结检查无回归；五例新语义审阅为 3 PASS、

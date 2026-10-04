@@ -1,0 +1,302 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "source_id": "S1",
+      "source_type": "user_report",
+      "text": "31 岁，现职年现金 24 万元，负责门店补货产品，能独立安排小范围实验。现团队书面确认未来半年继续给产品责任；不是新的招聘承诺。目标两年内成为产品负责人，现金加薪有吸引力，但家庭当前支出可覆盖，不存在必须立即加薪的硬约束。候选人提供偏好：career_direction high，ownership high，compensation medium。"
+    },
+    {
+      "source_id": "S2",
+      "source_type": "offer",
+      "text": "曜原集团书面 Offer：年保证现金 36 万元，Title 为 AI 产品专家，工作在成都。岗位附件：70% 规则配置/系统巡检，20% 客户工单，10% 协助需求登记；不负责路线图、实验设计或模型选择。考核是工单处理时效。正常接受截止 2026-10-09。"
+    },
+    {
+      "source_id": "S3",
+      "source_type": "user_report",
+      "text": "面试官口头说日后可能接触创新项目，未给转岗日期或审批标准。用户自己在阅读附件后给出的 0–5 偏好评价：曜原 role career_direction=1, ownership=1, compensation=5；留任 current career_direction=4, ownership=4, compensation=3。这些是个人评价，不是客观公司评分。"
+    }
+  ],
+  "statements": [
+    {
+      "id": "F1",
+      "text": "用户报告自己 31 岁。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "31 岁",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F2",
+      "text": "用户报告现职年现金为 24 万元。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "现职年现金 24 万元",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F3",
+      "text": "用户报告现职负责门店补货产品，并能独立安排小范围实验。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "负责门店补货产品，能独立安排小范围实验。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "claim",
+      "modality": "observed"
+    },
+    {
+      "id": "F4",
+      "text": "用户报告现团队已书面确认未来半年继续给产品责任。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "现团队书面确认未来半年继续给产品责任",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F5",
+      "text": "该书面确认不是新的招聘承诺。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "不是新的招聘承诺。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F6",
+      "text": "用户的目标是两年内成为产品负责人。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "目标两年内成为产品负责人",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "preferred"
+    },
+    {
+      "id": "I1",
+      "text": "现金加薪对用户有吸引力。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "现金加薪有吸引力",
+      "epistemic": "INFERENCE",
+      "confidence": "interpretation",
+      "kind": "feeling",
+      "modality": "preferred"
+    },
+    {
+      "id": "F7",
+      "text": "用户报告家庭当前支出可覆盖，不存在必须立即加薪的硬约束。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "家庭当前支出可覆盖，不存在必须立即加薪的硬约束。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "requirement",
+      "modality": "observed"
+    },
+    {
+      "id": "F8",
+      "text": "用户提供的定性偏好是 career_direction high、ownership high、compensation medium。",
+      "source_id": "S1",
+      "source_type": "user_report",
+      "source_span": "候选人提供偏好：career_direction high，ownership high，compensation medium。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "preferred"
+    },
+    {
+      "id": "F9",
+      "text": "曜原集团书面 Offer 的年保证现金为 36 万元，Title 为 AI 产品专家，工作在成都。",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "曜原集团书面 Offer：年保证现金 36 万元，Title 为 AI 产品专家，工作在成都。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F10",
+      "text": "岗位附件规定 70% 为规则配置/系统巡检，20% 为客户工单，10% 为协助需求登记。",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "岗位附件：70% 规则配置/系统巡检，20% 客户工单，10% 协助需求登记",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F11",
+      "text": "该岗位不负责路线图、实验设计或模型选择。",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "不负责路线图、实验设计或模型选择。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F12",
+      "text": "该岗位的考核是工单处理时效。",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "考核是工单处理时效。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F13",
+      "text": "书面 Offer 的正常接受截止日期是 2026-10-09。",
+      "source_id": "S2",
+      "source_type": "offer",
+      "source_span": "正常接受截止 2026-10-09。",
+      "epistemic": "FACT",
+      "confidence": "direct",
+      "kind": "requirement",
+      "modality": "required"
+    },
+    {
+      "id": "F14",
+      "text": "用户报告面试官口头说日后可能接触创新项目。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "面试官口头说日后可能接触创新项目",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "recruiting_signal",
+      "modality": "preferred"
+    },
+    {
+      "id": "U1",
+      "text": "创新项目相关转岗日期和审批标准未知。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "未给转岗日期或审批标准。",
+      "epistemic": "UNKNOWN",
+      "confidence": "unknown",
+      "kind": "observation",
+      "modality": "unknown"
+    },
+    {
+      "id": "F15",
+      "text": "用户对曜原 role 的个人评价为 career_direction=1、ownership=1、compensation=5；对留任 current 的个人评价为 career_direction=4、ownership=4、compensation=3。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "用户自己在阅读附件后给出的 0–5 偏好评价：曜原 role career_direction=1, ownership=1, compensation=5；留任 current career_direction=4, ownership=4, compensation=3。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    },
+    {
+      "id": "F16",
+      "text": "这些数值是用户的个人评价，不是客观公司评分。",
+      "source_id": "S3",
+      "source_type": "user_report",
+      "source_span": "这些是个人评价，不是客观公司评分。",
+      "epistemic": "FACT",
+      "confidence": "self_reported",
+      "kind": "observation",
+      "modality": "observed"
+    }
+  ],
+  "situation": {
+    "mode": "offer",
+    "summary": "比较接受曜原集团 AI 产品专家 Offer 与留任现职，判断明显加薪是否值得交换当前及未来的产品责任。",
+    "goal": "在现金加薪有吸引力但并非硬约束的情况下，选择更支持两年内成为产品负责人并负责产品决策的选项。",
+    "claims": [],
+    "metadata": {
+      "mode": "offer",
+      "role_family": "unknown",
+      "stage": "decision",
+      "situation_type": "offer-choice",
+      "risk_tags": [
+        "direction",
+        "ownership",
+        "salary",
+        "timing"
+      ],
+      "situation_tags": [
+        "direction",
+        "ownership",
+        "salary",
+        "timing"
+      ]
+    },
+    "offer": {
+      "weights": {},
+      "constraints": [],
+      "options": [
+        {
+          "name": "曜原 role",
+          "constraint_status": "unknown",
+          "ratings": {
+            "career_direction": 1,
+            "ownership": 1,
+            "compensation": 5
+          }
+        },
+        {
+          "name": "留任 current",
+          "constraint_status": "unknown",
+          "ratings": {
+            "career_direction": 4,
+            "ownership": 4,
+            "compensation": 3
+          }
+        }
+      ],
+      "priorities": {
+        "career_direction": "high",
+        "ownership": "high",
+        "compensation": "medium"
+      },
+      "source_ids": [
+        "S1"
+      ],
+      "critical_unknowns": [
+        {
+          "unknown": "口头所称日后可能接触创新项目能否转化为有明确日期和审批标准的产品决策职责",
+          "option": "曜原 role",
+          "priority": "decisive",
+          "why_it_matters": "书面职责不含路线图、实验设计或模型选择，而用户把职业方向和 ownership 列为高优先级。",
+          "how_to_verify": "要求对方书面说明创新项目的职责范围、转入日期、审批人和审批标准。",
+          "reversal_condition": "若书面条款明确保证在可接受时间内获得实质产品决策职责，可能改变对曜原 role 的比较。",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        },
+        {
+          "unknown": "留任在已确认的未来半年之后能否继续获得产品责任并支持两年内成为产品负责人",
+          "option": "留任 current",
+          "priority": "important",
+          "why_it_matters": "当前书面确认只覆盖未来半年，而用户的目标期限是两年。",
+          "how_to_verify": "向现团队确认半年后的职责路径、决策权限及产品负责人晋升条件。",
+          "reversal_condition": "若半年后产品责任无法延续且没有可信晋升路径，留任的方向优势可能缩小。",
+          "source_ids": [
+            "S1"
+          ]
+        }
+      ]
+    }
+  }
+}

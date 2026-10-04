@@ -1,0 +1,51 @@
+{
+  "baseline_commit": "acf2a34363bda9f67a47f3645fbd772b16f94508",
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "repair_budget": 1,
+  "reviewer": "Current Codex AI assistant; not independent human or second-model review",
+  "runtime_files": {
+    "SKILL.md": "fcdb2a7865f2ecc4e8e9377e64774bcb4f216a6d258ac1f8a42e8cc50a62ef4f",
+    "scripts/envelope.py": "81309c5297c96caf41aa1440df37acdb6b2e815fb17e8a4efac85f8d6d3d1768",
+    "scripts/junshi.py": "a9f4fb2a185a92b5ab06eb146a371ce9d1641d260e52d9e5b8a0fe709eb6760b",
+    "scripts/__init__.py": "a784034f067854e3ac4dd655054e5665ed43c965d7d00e99be6f46e03503ecf4",
+    "scripts/actions.py": "4065b32f6a11ea2083a02eebfe2b7c3d4c35bc54c7c7888cc66555d03f118a75",
+    "scripts/benchmark.py": "24672737f139aeaec83e899d1d7d2a6c4132f140b68dfdd69162456d26674a41",
+    "scripts/calibration.py": "e1582aecfe9194787b9e0ceb7cf7df07db188fc2add0dd74c839338c7c930bff",
+    "scripts/context.py": "cc18c8ef0122a7c5c48108539a7d6e5936d6808223d875219990ee041a9208e7",
+    "scripts/decision.py": "46774f4f6479575ab2c7b0b1df8d9b81cf306e2ea66c85cff3440e58bbc3572d",
+    "scripts/decision_quality.py": "2b61c9342b2ae518f94d49fc033e8b2ecf827b4bd2948de7ba6fd104e045354a",
+    "scripts/feedback_loop.py": "8a94ca41f57bfc959aec9aa4a41feb536e34b6b5b3ea605a078ed36683df506e",
+    "scripts/hypothesis.py": "9610e1476b06b162c7cdefed6120e81ede587e808f83c0942ab517986c497795",
+    "scripts/install_skill.py": "d8e6aebb89069af18c651a55de523d94c22896786fe2b500e1c483bf6a4705ee",
+    "scripts/intelligence.py": "1544c5a434e046b267ef76dd3db71468ae2578a21ff824ba9dbdc8f9245ce4ad",
+    "scripts/memory_store.py": "e54dda4011813cda5b2c73cfd97e191105e2d60954b17d4b53ac7cc37e966b9d",
+    "scripts/method_adapter.py": "1b0a90874bb6822f2ddc72323fe454ecdc525a9fc28eaae6d5473d5d67189d55",
+    "scripts/models.py": "ca94295ac0e8d287f1a94efc6a837b6d4f49d700d6d5cd449673201816599ff1",
+    "scripts/role_story.py": "f2107bec3fc2933ce846916ee3fb79c4ebbb26cc3a2a83e435f8dd40cfbdcb20",
+    "scripts/router.py": "e0bd5d802bc529e093e87cbb7ee435f82c50cd753b5abb16e147bb983d65d01a",
+    "scripts/validate_skill.py": "898d3cd4ea044b63cd606f89c918658b890861c66b066d5f5cb3df5666e39044"
+  },
+  "inputs": {
+    "H01-years-gate": "7066ebb355e4022efb6f4f6c18f36680958d3b95e7f051ba7b96cf921d1afec6",
+    "H02-title-scope": "69a14222f58eb49f461edf9403da763756d598aa33729ec1a6f8f919678ed78b",
+    "H03-repeated-feedback": "369bb9dc3d30f1ecf9192cae95870379e15ac60c083081833a03a5444b009eca",
+    "H04-equity-gap": "6cbb679f9e3e954975e088a90811a2db67b0715ee238f88f6b41ff7c8a482529",
+    "H05-metric-credit": "77f4706b7ce5d88ce0dea065e326bbdb9f077ca9fb0c4113095c2f9c94afae93",
+    "H06-two-technical-paths": "6d3c7f7996066bfcf7acdc6e549e4afe4a5f3131c002d8c37606f4bb34453406",
+    "H07-delayed-listing": "0baf2e98f28f62675a2e0ca6cec34f9b033d17509a27507b6dc9ad11db1cfbd7",
+    "H08-building-avoidance": "12f7e171787390cad7a0f389c0b13f6836c8e5bcf5b56982b53bbd9aa2461e44",
+    "H09-manager-care": "1cab54e57f4fc03a60941cfb607ed926ddeebe6b79eb9ea844d0534ec210300b",
+    "H10-unknown-systems": "9535c80c4416615a64d5cb0857b0c2e7c4e84744f1abdff21762523271b82720"
+  },
+  "generation_has_rubric": false,
+  "A": "fresh extraction + baseline CLI + host presentation",
+  "B": "fresh host envelope + current validator + at most one host repair + compiler",
+  "success_criteria": {
+    "noninferior_integrity": true,
+    "pass_or_strong_partial_minimum": 7,
+    "pure_schema_transport_failures_maximum": 1
+  },
+  "created_at": "2026-10-03T18:12:03.392609+00:00"
+}

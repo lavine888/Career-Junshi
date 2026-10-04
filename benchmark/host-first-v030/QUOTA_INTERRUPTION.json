@@ -1,0 +1,102 @@
+{
+  "status": "INCOMPLETE",
+  "successful_model_generations": 9,
+  "failed_service_attempts": 9,
+  "complete_fresh_pairs": 1,
+  "pending_base_calls": 23,
+  "errors": [
+    {
+      "case_id": "H01-years-gate",
+      "arm": "A",
+      "call": "host",
+      "execution_record": "fresh/H01-years-gate/A/host.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "9c66ed975e7be6ed69593316a34804db4665c3612e293ad14a16e0c8400e581b"
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "arm": "A",
+      "call": "host",
+      "execution_record": "fresh/H03-repeated-feedback/A/host.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "0c9fef3a9706dcdb39db878b47089ba82a26de24e1685d5ee3e3ac6991450beb"
+    },
+    {
+      "case_id": "H04-equity-gap",
+      "arm": "A",
+      "call": "extract",
+      "execution_record": "fresh/H04-equity-gap/A/extract.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "f54927ee44d84bcaf4de09ac5c0830e7227ec124ac653ef9c4408dbe5c59010d"
+    },
+    {
+      "case_id": "H05-metric-credit",
+      "arm": "B",
+      "call": "envelope",
+      "execution_record": "fresh/H05-metric-credit/B/envelope.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "851f9f52d12dc0be898fb066412919fdb8df3014675ca8484a60513832d52666"
+    },
+    {
+      "case_id": "H06-two-technical-paths",
+      "arm": "A",
+      "call": "extract",
+      "execution_record": "fresh/H06-two-technical-paths/A/extract.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "4e8c26a717518b91a12bdf33e55ffd414a2f7fa5059eb97690926ff0f518bac1"
+    },
+    {
+      "case_id": "H07-delayed-listing",
+      "arm": "B",
+      "call": "envelope",
+      "execution_record": "fresh/H07-delayed-listing/B/envelope.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "f224c74b570220f03079322ece6130c2788b2e817865409e0a7bd4e3b68a85d6"
+    },
+    {
+      "case_id": "H08-building-avoidance",
+      "arm": "A",
+      "call": "extract",
+      "execution_record": "fresh/H08-building-avoidance/A/extract.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "36d10169960836d3f8f19805d24c03ede0765a72f376671cccf63cc04c1acd53"
+    },
+    {
+      "case_id": "H09-manager-care",
+      "arm": "B",
+      "call": "envelope",
+      "execution_record": "fresh/H09-manager-care/B/envelope.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "37fb0e0bcb6ac10b04642584ac095e38c4d4af81d757ccb0fb993f24abae4f78"
+    },
+    {
+      "case_id": "H10-unknown-systems",
+      "arm": "A",
+      "call": "extract",
+      "execution_record": "fresh/H10-unknown-systems/A/extract.execution.json",
+      "error_messages": [
+        "You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 5:32 AM."
+      ],
+      "private_event_log_sha256": "9fef1423d66f40250adf4ec2ddad3d81b6a2c48a8bf5c28932d09e84d45ecaca"
+    }
+  ],
+  "cause": "Specified model service usage limit; not an automatic approval rejection or project validator failure.",
+  "reset_time_boundary": "Service mentions 5:32 AM without usable date/timezone here; no reset instant asserted.",
+  "evaluated_at": "2026-10-04T01:16:40.575160+00:00"
+}

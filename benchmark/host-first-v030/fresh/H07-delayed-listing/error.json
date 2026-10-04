@@ -1,0 +1,5 @@
+{
+  "type": "RuntimeError",
+  "error": "Model transport failed or unauthorized tools; raw log retained privately",
+  "boundary": "Failed attempt retained; do not substitute mock output"
+}

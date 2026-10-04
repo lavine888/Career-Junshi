@@ -1,0 +1,411 @@
+{
+  "reviewer": "Current Codex AI assistant; also implementation author; not independent human or second-model judge",
+  "reviewed_at": "2026-10-04T01:25:43.986669+00:00",
+  "generation_output_freeze": "fresh/OUTPUT_FREEZE.json",
+  "reviews": [
+    {
+      "case_id": "H01-years-gate",
+      "arm": "B",
+      "host_judgment_rating": "PASS",
+      "initial_end_to_end_status": "ACCEPT",
+      "final_runtime_replay": "ACCEPT",
+      "dimensions": {
+        "Situation Understanding": {
+          "rating": "PASS",
+          "excerpt": "候选人的正式相关经历明显低于岗位写明的三年门槛，但已有与工业缺陷识别、评估和故障分析相邻的现成证据；申请成本低且截止临近。",
+          "diagnostic": "Keeps explicit required years and bounded application, rather than pretending a waiver.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Evidence Discipline": {
+          "rating": "PASS",
+          "excerpt": "现有脱敏材料记载候选人设计了数据拆分与拒识规则，并展示了留出集测试；本次没有独立重跑。",
+          "diagnostic": "Supplied artifact description remains self-report with no independent rerun.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Fact / Inference Separation": {
+          "rating": "PASS",
+          "excerpt": "三年经验是明显的筛选风险，但现有材料与工业场景、评估和故障分析存在较强任务邻接性，不能仅凭年限差距断定没有申请价值。",
+          "diagnostic": "Inference treats gate enforcement as uncertainty, not a changed JD.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Decision Sufficiency": {
+          "rating": "PASS",
+          "excerpt": "值得投。今天用现成简历完成一次不超过一小时的定向申请，并同步询问内推联系人三年门槛是否不可豁免；不要等待回复才提交。只有在提交前得到明确答复称三年是不可豁免的硬门槛时，才停止这次申请。",
+          "diagnostic": "Conditional application is justified despite tenure unknowns.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Decision Courage": {
+          "rating": "PASS",
+          "excerpt": "值得投。今天用现成简历完成一次不超过一小时的定向申请，并同步询问内推联系人三年门槛是否不可豁免；不要等待回复才提交。只有在提交前得到明确答复称三年是不可豁免的硬门槛时，才停止这次申请。",
+          "diagnostic": "Commits to a cheap application without asserting selection likelihood.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Bottleneck Identification": {
+          "rating": "PASS",
+          "excerpt": "真正瓶颈不是缺少新项目，而是招聘方会不会严格执行三年全职经验门槛；这一点可以用一次低成本申请和内推询问直接测试。",
+          "diagnostic": "Eligibility testing, not a new project, is the bottleneck.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Recommendation Clarity": {
+          "rating": "PASS",
+          "excerpt": "值得投。今天用现成简历完成一次不超过一小时的定向申请，并同步询问内推联系人三年门槛是否不可豁免；不要等待回复才提交。只有在提交前得到明确答复称三年是不可豁免的硬门槛时，才停止这次申请。",
+          "diagnostic": "Judgment and application cap lead the rendered screen.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Action Compression": {
+          "rating": "PASS",
+          "excerpt": "今天用现成简历提交申请；最多只调整摘要和项目要点，使其明确呈现工业场景、数据拆分、拒识规则、标签复核及延迟日志，不新增未经证实的成果。",
+          "diagnostic": "Three human actions remain inside a one-hour bound.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Information Value": {
+          "rating": "PASS",
+          "excerpt": "招聘方是否把三年经验作为系统或人工不可豁免的硬门槛。",
+          "diagnostic": "One eligibility question can reverse pursuit.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Counterfactual Quality": {
+          "rating": "PASS",
+          "excerpt": "尚未确认三年门槛不可豁免，而申请成本很低，直接放弃会失去一次验证真实筛选标准的机会。",
+          "diagnostic": "Rejecting without checking has a real forgone low-cost test.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Reconsideration Quality": {
+          "rating": "PASS",
+          "excerpt": "内推联系人明确确认三年经验是不可豁免的筛选门槛。",
+          "diagnostic": "Explicit strict exclusion triggers reconsideration.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Stop / Pivot Quality": {
+          "rating": "PASS",
+          "excerpt": "申请提交后停止为该岗位继续定制，转回其他可比机会；若提交前收到三年门槛不可豁免的明确答复，则停止本次申请。",
+          "diagnostic": "Stops customization and returns to comparable opportunities.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Avoided Action": {
+          "rating": "PASS",
+          "excerpt": "不为这一家公司新做项目。",
+          "diagnostic": "Avoids building another project.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "Ownership Integrity": {
+          "rating": "PASS",
+          "excerpt": "现有脱敏材料记载候选人设计了数据拆分与拒识规则，并展示了留出集测试；本次没有独立重跑。",
+          "diagnostic": "Reported independent trial maintenance is not inflated into production/system authorship.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        },
+        "User Goal Alignment": {
+          "rating": "PASS",
+          "excerpt": "在不搬迁、不另做项目且每天最多投入一小时的约束下，判断是否申请澄湾工业软件应用 AI 工程师岗位。",
+          "diagnostic": "Protects the one-hour/no-new-project constraint.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H01-years-gate/B/envelope.json"
+        }
+      },
+      "integrity_hard_failures_observed": [],
+      "review_boundary": "Three available judgments only. Raw judgment PASS does not erase original pipeline rejection or missing A host output."
+    },
+    {
+      "case_id": "H02-title-scope",
+      "arm": "B",
+      "host_judgment_rating": "PASS",
+      "initial_end_to_end_status": "ACCEPT",
+      "final_runtime_replay": "ACCEPT",
+      "dimensions": {
+        "Situation Understanding": {
+          "rating": "PASS",
+          "excerpt": "曜原集团给出更高现金和 AI 产品专家头衔，但书面职责以配置、巡检和工单为主，与用户两年内成为产品负责人的目标明显冲突。",
+          "diagnostic": "Understands actual scope versus title/cash.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Evidence Discipline": {
+          "rating": "PASS",
+          "excerpt": "用户现职年现金24万元，负责门店补货产品，并能独立安排小范围实验。",
+          "diagnostic": "Self-report and supplied written scope stay distinct.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Fact / Inference Separation": {
+          "rating": "PASS",
+          "excerpt": "曜原岗位每年多12万元保证现金，但主要交换条件是放弃当前更接近产品决策的职责连续性。",
+          "diagnostic": "Goal-fit comparison is labeled inference.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Decision Sufficiency": {
+          "rating": "PASS",
+          "excerpt": "不要为了加薪接受当前版本的曜原Offer。先要求一次书面改岗；若截止日前没有实质修改，就留任并拒绝。",
+          "diagnostic": "Unknown renegotiation does not block declining the current terms.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Decision Courage": {
+          "rating": "PASS",
+          "excerpt": "不要为了加薪接受当前版本的曜原Offer。先要求一次书面改岗；若截止日前没有实质修改，就留任并拒绝。",
+          "diagnostic": "Makes a firm current decision while permitting written reversal.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Bottleneck Identification": {
+          "rating": "PASS",
+          "excerpt": "真正矛盾不是薪资，而是新岗位的实际责任与考核不产生用户想要的产品决策证据；头衔无法替代职责。",
+          "diagnostic": "Product responsibility, not brand or salary maximization, is central.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Recommendation Clarity": {
+          "rating": "PASS",
+          "excerpt": "不要为了加薪接受当前版本的曜原Offer。先要求一次书面改岗；若截止日前没有实质修改，就留任并拒绝。",
+          "diagnostic": "Clear move plus bounded written request.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Action Compression": {
+          "rating": "PASS",
+          "excerpt": "在2026年10月9日前向曜原提出一次书面修订请求：明确路线图或实验设计责任、决策边界、创新项目切换日期与审批标准，并让考核包含产品结果而非仅工单时效。",
+          "diagnostic": "Three human actions; artifacts provide actual draft and decline wording.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Information Value": {
+          "rating": "PASS",
+          "excerpt": "曜原是否愿意在截止日前把产品路线图、实验设计、决策权及转入创新项目的时间和标准写入正式附件。",
+          "diagnostic": "Written responsibility changes are material; no repeated irrelevant intake.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Counterfactual Quality": {
+          "rating": "PASS",
+          "excerpt": "现金收益明确，但职责和考核与两年目标反向，且用户并无必须立即增收的硬约束。",
+          "diagnostic": "Direct acceptance has known direction cost; alternate remains conditional.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Reconsideration Quality": {
+          "rating": "PASS",
+          "excerpt": "曜原在截止日前提供正式书面修订，明确用户负责路线图或实验设计，并用产品结果作为实质考核。",
+          "diagnostic": "Formal scope/goal changes can reverse.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Stop / Pivot Quality": {
+          "rating": "PASS",
+          "excerpt": "到截止日仍无实质书面改岗，停止围绕头衔和口头可能性继续权衡，拒绝该Offer并把精力转向现职产品成果与下一批更匹配的机会。",
+          "diagnostic": "Actual date bounds negotiation without fabricated hour precision.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Avoided Action": {
+          "rating": "PASS",
+          "excerpt": "不因AI产品专家头衔推断实际拥有产品决策权。",
+          "diagnostic": "Avoids treating title/future possibility as ownership.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "Ownership Integrity": {
+          "rating": "PASS",
+          "excerpt": "面试官只口头表示日后可能接触创新项目，没有给出转岗日期或审批标准。",
+          "diagnostic": "Preserves role substance and reported scope without invented implementation.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        },
+        "User Goal Alignment": {
+          "rating": "PASS",
+          "excerpt": "在不受短期现金压力驱动的前提下，优先积累产品决策与责任证据，两年内成为产品负责人。",
+          "diagnostic": "Uses stated priorities and lack of immediate cash constraint.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H02-title-scope/B/repaired-envelope.json"
+        }
+      },
+      "integrity_hard_failures_observed": [],
+      "review_boundary": "Three available judgments only. Raw judgment PASS does not erase original pipeline rejection or missing A host output."
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "arm": "B",
+      "host_judgment_rating": "PASS",
+      "initial_end_to_end_status": "REPAIR_REQUIRED",
+      "final_runtime_replay": "ACCEPT",
+      "dimensions": {
+        "Situation Understanding": {
+          "rating": "PASS",
+          "excerpt": "三次风控平台产品经理申请未推进，其中两次明确指出数据系统取舍与技术沟通不足，第三次原因未知且流程曾受部门重组影响。当前需要决定是修正岗位组合与面试防守，还是放弃技术产品转纯运营。",
+          "diagnostic": "Separates two explicit local feedback reports from the unknown third cause.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Evidence Discipline": {
+          "rating": "PASS",
+          "excerpt": "用户自述在广州从事消费金融产品五年，目标仍是风险与数据产品。",
+          "diagnostic": "Reported projects and feedback remain self_reported.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Fact / Inference Separation": {
+          "rating": "PASS",
+          "excerpt": "两次独立且具体的反馈足以支持修正技术沟通与系统边界防守，但只证明一个重复出现的局部缺口，不足以证明整个技术产品方向错误。",
+          "diagnostic": "Missing cause stays a competing explanation, not a third technical rejection.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Decision Sufficiency": {
+          "rating": "PASS",
+          "excerpt": "现在不要放弃技术产品或直接转纯运营。继续主投风险与数据产品岗位；将强调基础设施架构所有权的风控平台岗降为副投，并用下一场面试做一次十小时的聚焦修正实验。",
+          "diagnostic": "Specific reversible refinement is justified, not a global pivot.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Decision Courage": {
+          "rating": "PASS",
+          "excerpt": "现在不要放弃技术产品或直接转纯运营。继续主投风险与数据产品岗位；将强调基础设施架构所有权的风控平台岗降为副投，并用下一场面试做一次十小时的聚焦修正实验。",
+          "diagnostic": "Prioritizes current preparation without diagnosing permanent unsuitability.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Bottleneck Identification": {
+          "rating": "PASS",
+          "excerpt": "眼前瓶颈不是五年产品经历失效，而是面对平台型岗位时，无法把一致性、幂等、重试和回放讲到产品后果、验收规则及个人贡献边界；同时又不能把工程同事完成的系统设计说成自己的实现。",
+          "diagnostic": "Interview boundary communication is the bottleneck.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Recommendation Clarity": {
+          "rating": "PASS",
+          "excerpt": "现在不要放弃技术产品或直接转纯运营。继续主投风险与数据产品岗位；将强调基础设施架构所有权的风控平台岗降为副投，并用下一场面试做一次十小时的聚焦修正实验。",
+          "diagnostic": "KEEP/REFINE move and three actions are explicit in the raw judgment.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Action Compression": {
+          "rating": "PASS",
+          "excerpt": "用 4 小时把两个真实项目各整理成一页：业务目标、数据流、失败场景、一致性要求、重复请求处理、重试与回放规则、验收指标，以及本人和工程同事分别负责什么；没有参与的设计明确说不知道或由工程负责。",
+          "diagnostic": "4+4+2 hours respect the supplied ten-hour budget.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Information Value": {
+          "rating": "PASS",
+          "excerpt": "第三次未推进的真实原因以及部门重组是否影响 HC。",
+          "diagnostic": "Next JD/system-ownership expectations can reverse targeting.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Counterfactual Quality": {
+          "rating": "PASS",
+          "excerpt": "没有证据显示用户的产品方向整体失配，也缺少纯运营更符合其硬约束的材料；当前转向会把一个可能可修正的面试缺口误判为职业方向错误。",
+          "diagnostic": "Immediate operations pivot lacks goal/constraint evidence.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Reconsideration Quality": {
+          "rating": "PASS",
+          "excerpt": "完成聚焦准备后，下一场仍被明确指出相同系统边界缺口且招聘方确认这是核心日常职责；或后续 3 至 5 个职责相近的真实机会中，至少两个在认可产品能力的同时仍明确给出相同技术缺口。",
+          "diagnostic": "Comparable feedback after refinement may alter scope; not a recurring-memory assertion.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Stop / Pivot Quality": {
+          "rating": "PASS",
+          "excerpt": "十小时用完后停止继续扩张准备范围，不临时开新项目。若找不到任何亲自参与的系统边界决策或验收事实，停止使用暗示架构主导的表述，并降低高基础设施所有权岗位的投入；只有出现重复、明确且职责可比的反证后，才讨论从风险与数据产品转向纯运营。",
+          "diagnostic": "Stops scope expansion and refuses unsupported architecture wording.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Avoided Action": {
+          "rating": "PASS",
+          "excerpt": "因三次拒绝立即永久转向纯运营",
+          "diagnostic": "Avoids an automatic permanent pivot.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "Ownership Integrity": {
+          "rating": "PASS",
+          "excerpt": "用户有与数据团队合作的经验，但没有独立开发分布式存储。",
+          "diagnostic": "Non-authorship remains explicit; original validator falsely rejected this truthful boundary.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        },
+        "User Goal Alignment": {
+          "rating": "PASS",
+          "excerpt": "在不启动长期学习项目的前提下，为 2026-10-16 的同类面试完成一次十小时的方向与面试修正实验，并判断是否继续风险与数据产品路线。",
+          "diagnostic": "Preserves risk/data product goal while testing a narrow technical discussion gap.",
+          "source_reference": "Original frozen input and rubric; exact retained envelope at fresh/H03-repeated-feedback/B/repaired-envelope.json"
+        }
+      },
+      "integrity_hard_failures_observed": [],
+      "review_boundary": "Three available judgments only. Raw judgment PASS does not erase original pipeline rejection or missing A host output."
+    },
+    {
+      "case_id": "H02-title-scope",
+      "arm": "A",
+      "host_judgment_rating": "PARTIAL",
+      "dimensions": {
+        "Situation Understanding": {
+          "rating": "PASS",
+          "excerpt": "当前条件性首选：留任",
+          "diagnostic": "Understands goal/scope tradeoff.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Evidence Discipline": {
+          "rating": "PARTIAL",
+          "excerpt": "截止日期已有直接证据（S2），但 `urgency.deadline` 被错误写成 `null`",
+          "diagnostic": "Conflates known calendar date with a missing exact timezone-aware timestamp.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Fact / Inference Separation": {
+          "rating": "PARTIAL",
+          "excerpt": "所给基线结果存在明显的管线／证据错误",
+          "diagnostic": "Overstates a timestamp-contract diagnostic as established error.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Decision Sufficiency": {
+          "rating": "PASS",
+          "excerpt": "否则，不建议接受曜原现有版本",
+          "diagnostic": "Supports current refusal despite negotiable unknowns.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Decision Courage": {
+          "rating": "PASS",
+          "excerpt": "不要只为了 12 万元加薪接受曜原",
+          "diagnostic": "Calibrated commitment to goal.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Bottleneck Identification": {
+          "rating": "PASS",
+          "excerpt": "真实风险是**方向与 ownership 的交换**",
+          "diagnostic": "Finds scope tradeoff.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Recommendation Clarity": {
+          "rating": "PASS",
+          "excerpt": "当前条件性首选：留任",
+          "diagnostic": "Preference is immediately readable.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Action Compression": {
+          "rating": "PASS",
+          "excerpt": "现在最值得做的三件事",
+          "diagnostic": "Three primary human steps; some long explanation.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Information Value": {
+          "rating": "PASS",
+          "excerpt": "只问真正可能反转决定的内容",
+          "diagnostic": "Written scope question has high value.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Counterfactual Quality": {
+          "rating": "PASS",
+          "excerpt": "留任并拒绝曜原",
+          "diagnostic": "Alternatives conditioned on actual scope/path evidence.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Reconsideration Quality": {
+          "rating": "PASS",
+          "excerpt": "你的现金需求变化",
+          "diagnostic": "Goal/constraint changes can reverse.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Stop / Pivot Quality": {
+          "rating": "PASS",
+          "excerpt": "如果曜原拒绝修改或书面确认产品决策职责",
+          "diagnostic": "Uses actual written stop boundary.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Avoided Action": {
+          "rating": "PASS",
+          "excerpt": "不要因为头衔中有“AI”而把运营支持经历当成产品负责人路径",
+          "diagnostic": "Avoids title substitution.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "Ownership Integrity": {
+          "rating": "PASS",
+          "excerpt": "不负责路线图、实验设计或模型选择",
+          "diagnostic": "Does not inflate role substance.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        },
+        "User Goal Alignment": {
+          "rating": "PASS",
+          "excerpt": "职业方向高、ownership 高、薪酬中",
+          "diagnostic": "Uses supplied user goals.",
+          "source_reference": "S1-S3 and actual A decision/host response; missing exact deadline time explicitly acknowledged."
+        }
+      },
+      "integrity_hard_failures_observed": [],
+      "review_boundary": "Only complete fresh pair; do not extrapolate an architecture win rate."
+    }
+  ],
+  "missing_case_policy": "NOT_RUN / INCOMPLETE; never fill with historical semantic responses",
+  "aggregate_ten_case_grades": null
+}

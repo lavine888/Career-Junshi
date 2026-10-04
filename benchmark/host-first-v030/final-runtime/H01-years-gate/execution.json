@@ -1,0 +1,9 @@
+{
+  "case_id": "H01-years-gate",
+  "status": "ACCEPT",
+  "exit_code": 0,
+  "input_envelope_sha256": "a477a665cf0c30d8202ae1c7ba9d6a8ca323ea152e3eee8d51e80e0b7c6a2001",
+  "new_model_calls": 0,
+  "historical_host_repairs": 0,
+  "move_preserved_exactly": true
+}

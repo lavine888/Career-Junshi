@@ -1,0 +1,10 @@
+{
+  "input_sha256": "6cbb679f9e3e954975e088a90811a2db67b0715ee238f88f6b41ff7c8a482529",
+  "same_raw_input": true,
+  "same_allowed_reference_payload_sha256": "3d0c73c1335772fb7c0310e06af18a2330c2ca63583122e3f5abc457bd2e2ba4",
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "A_skill_sha256": "c32d26a61ab4670ca550250ffa8c3cfb6a21a32073f4b79d98c4f9ccb04bb124",
+  "B_skill_sha256": "fcdb2a7865f2ecc4e8e9377e64774bcb4f216a6d258ac1f8a42e8cc50a62ef4f"
+}

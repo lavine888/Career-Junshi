@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "prompt_sha256": "7b5565a6afda38c6cc06fa6a681b3a511810c9b5e999e12de8c22797a5f7d427",
+  "started_at": "2026-10-03T18:17:39.970994+00:00",
+  "completed_at": "2026-10-03T18:17:45.630253+00:00",
+  "seconds": 5.66,
+  "exit_code": 1,
+  "event_log_sha256": "4e8c26a717518b91a12bdf33e55ffd414a2f7fa5059eb97690926ff0f518bac1",
+  "usage": [],
+  "tool_invocations": 0,
+  "response_sha256": null,
+  "stderr_present": true,
+  "generation_has_rubric": false
+}

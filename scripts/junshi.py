@@ -33,6 +33,16 @@ def main(argv=None) -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     r = sub.add_parser("route")
     r.add_argument("--mode", required=True, choices=sorted(ROUTES)); r.add_argument("--rejected", action="store_true")
+    h = sub.add_parser("host-decide", help="Validate a host judgment; never choose its career strategy")
+    h.add_argument("--input", required=True, help="Host-produced Decision Envelope v2")
+    h.add_argument("--context", required=True, help="Original session-only source context")
+    h.add_argument("--repair-input", help="One host correction; original attempt retained in debug output")
+    h.add_argument("--now", help="Explicit timezone-aware scenario clock")
+    h.add_argument("--format", choices=["markdown", "json"], default="markdown")
+    h.add_argument("--debug-decision", action="store_true")
+    h.add_argument("--artifacts-dir")
+    h.add_argument("--save-subject", help="Append compressed decision only to an already active consented store")
+    h.add_argument("--memory-directory")
     for cmd in ("decide", "extract", "audit", "feedback", "pattern"):
         p = sub.add_parser(cmd)
         if cmd == "decide":
@@ -49,6 +59,28 @@ def main(argv=None) -> int:
             p.add_argument("--memory-directory", help="Private memory directory")
     args = parser.parse_args(argv)
     try:
+        if args.command == "host-decide":
+            from scripts.envelope import review_with_repair, render_envelope, compile_artifacts, memory_handoff
+            now = datetime.fromisoformat(timestamp(args.now, "now").replace("Z", "+00:00")) if args.now else None
+            raw, context = load_input(args.input), load_input(args.context)
+            repair = (lambda original, issues: load_input(args.repair_input)) if args.repair_input else None
+            result = review_with_repair(raw, context, repair, now=now)
+            if result["status"] != "ACCEPT":
+                if args.debug_decision or args.format == "json":
+                    print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
+                else:
+                    print("材料边界仍需修正；当前建议暂不执行。先核对缺证表述与来源。")
+                return 2
+            e = result["envelope"]
+            if args.artifacts_dir:
+                result["artifacts"] = compile_artifacts(e, context, args.artifacts_dir, now=now)
+            if args.save_subject:
+                result["memory"] = MemoryStore(args.memory_directory).record_decision(args.save_subject, memory_handoff(e, context, now=now))
+            if args.debug_decision or args.format == "json":
+                print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
+            else:
+                print(render_envelope(e), end="")
+            return 0
         if args.command == "route":
             result = route(args.mode, rejected=args.rejected)
         else:

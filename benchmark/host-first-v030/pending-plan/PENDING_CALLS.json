@@ -1,0 +1,127 @@
+{
+  "model": "gpt-5.6-sol",
+  "effort": "high",
+  "reference_mode": "CONTROLLED_PRELOAD",
+  "parent_freeze_sha256": [
+    "65f4d2003508389dbc17caf694b444eab960f4c19be292af8a6d0675f6274d25"
+  ],
+  "pending_base_calls": [
+    {
+      "case": "H01-years-gate",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H03-repeated-feedback",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H04-equity-gap",
+      "arm": "A",
+      "call": "extract"
+    },
+    {
+      "case": "H04-equity-gap",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H04-equity-gap",
+      "arm": "B",
+      "call": "envelope"
+    },
+    {
+      "case": "H05-metric-credit",
+      "arm": "A",
+      "call": "extract"
+    },
+    {
+      "case": "H05-metric-credit",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H05-metric-credit",
+      "arm": "B",
+      "call": "envelope"
+    },
+    {
+      "case": "H06-two-technical-paths",
+      "arm": "A",
+      "call": "extract"
+    },
+    {
+      "case": "H06-two-technical-paths",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H06-two-technical-paths",
+      "arm": "B",
+      "call": "envelope"
+    },
+    {
+      "case": "H07-delayed-listing",
+      "arm": "A",
+      "call": "extract"
+    },
+    {
+      "case": "H07-delayed-listing",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H07-delayed-listing",
+      "arm": "B",
+      "call": "envelope"
+    },
+    {
+      "case": "H08-building-avoidance",
+      "arm": "A",
+      "call": "extract"
+    },
+    {
+      "case": "H08-building-avoidance",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H08-building-avoidance",
+      "arm": "B",
+      "call": "envelope"
+    },
+    {
+      "case": "H09-manager-care",
+      "arm": "A",
+      "call": "extract"
+    },
+    {
+      "case": "H09-manager-care",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H09-manager-care",
+      "arm": "B",
+      "call": "envelope"
+    },
+    {
+      "case": "H10-unknown-systems",
+      "arm": "A",
+      "call": "extract"
+    },
+    {
+      "case": "H10-unknown-systems",
+      "arm": "A",
+      "call": "host"
+    },
+    {
+      "case": "H10-unknown-systems",
+      "arm": "B",
+      "call": "envelope"
+    }
+  ],
+  "additional_repairs": "At most one per B case; existing repairs must be reused, never repeated",
+  "model_calls_in_plan": 0
+}
