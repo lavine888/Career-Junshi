@@ -1,0 +1,61 @@
+{
+  "pre_commit_state": {
+    "branch": "main",
+    "head": "acf2a34363bda9f67a47f3645fbd772b16f94508",
+    "status_porcelain": "M .gitattributes\n M README.md\n M README_EN.md\n M SKILL.md\n M documentation/ACTIONS.md\n M documentation/ARCHITECTURE.md\n M documentation/MEMORY.md\n M scripts/junshi.py\n M scripts/validate_skill.py\n?? benchmark/host-first-v030/\n?? documentation/DECISION_ENVELOPE.md\n?? documentation/V030_ARCHITECTURE.md\n?? documentation/V030_HOST_FIRST_REPORT.md\n?? scripts/envelope.py\n?? tests/regression/test_envelope.py",
+    "remote": "https://github.com/lavine888/Career-Junshi.git",
+    "recorded_at": "2026-10-04T02:41:59.199991+00:00",
+    "modified_files": [
+      ".gitattributes",
+      "README.md",
+      "README_EN.md",
+      "SKILL.md",
+      "documentation/ACTIONS.md",
+      "documentation/ARCHITECTURE.md",
+      "documentation/MEMORY.md",
+      "scripts/junshi.py",
+      "scripts/validate_skill.py"
+    ],
+    "untracked_files": [
+      "benchmark/host-first-v030/",
+      "documentation/DECISION_ENVELOPE.md",
+      "documentation/V030_ARCHITECTURE.md",
+      "documentation/V030_HOST_FIRST_REPORT.md",
+      "scripts/envelope.py",
+      "tests/regression/test_envelope.py"
+    ]
+  },
+  "verified_at": "2026-10-04T02:54:02.301782+00:00",
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -q",
+    "passing": 186,
+    "exit_code": 0,
+    "result": "freeze-validation/unit-tests.txt",
+    "sha256": "d041964945b3893e88a5cf2b2d68fdc9585552ec13a783c17043539fc0c24abe"
+  },
+  "checks": {
+    "benchmark": {
+      "command": "python scripts/benchmark.py run",
+      "exit_code": 0,
+      "result": "freeze-validation/benchmark.json"
+    },
+    "validation": {
+      "command": "python scripts/validate_skill.py",
+      "exit_code": 0,
+      "result": "freeze-validation/validation.json"
+    },
+    "old-five": {
+      "command": "python benchmark/decision-quality-v022/replay.py",
+      "exit_code": 0,
+      "result": "freeze-validation/old-five.json"
+    }
+  },
+  "legacy_freezes_valid": true,
+  "original_v030_artifacts_valid": true,
+  "original_v030_file_count": 154,
+  "original_raw_successful_model_outputs_valid": 9,
+  "completed_pairs_unchanged": 1,
+  "product_semantics_changed_in_this_task": false,
+  "new_model_calls_in_this_task": 0,
+  "privacy": "No private event logs, credentials, account IDs or real user materials; inert exact historical artifact paths retained only for hash/input provenance."
+}

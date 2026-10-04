@@ -1,0 +1,93 @@
+{
+  "repair_limit": 1,
+  "cases": [
+    {
+      "case_id": "H01-years-gate",
+      "initial_envelope_result": "COMPLETED",
+      "initial_validator_result": "ACCEPT",
+      "initial_issue_codes": [
+        "OPTIONAL_METADATA_IGNORED"
+      ],
+      "repair_requested": false,
+      "host_repair_count": 0,
+      "repair_result": "NOT_REQUESTED",
+      "original_final_validator_result": "ACCEPT",
+      "final_runtime_replay_result": "ACCEPT",
+      "recommendation_move_preserved_exactly": true,
+      "false_rejection_candidate": false,
+      "initial_validation_path": "benchmark/host-first-v030/fresh/H01-years-gate/B/initial-validation.json",
+      "original_final_result_path": "benchmark/host-first-v030/fresh/H01-years-gate/B/result.json",
+      "final_replay_path": "benchmark/host-first-v030/final-runtime/H01-years-gate/stdout.json"
+    },
+    {
+      "case_id": "H02-title-scope",
+      "initial_envelope_result": "COMPLETED",
+      "initial_validator_result": "REPAIR_REQUIRED",
+      "initial_issue_codes": [
+        "CORE_SCHEMA"
+      ],
+      "repair_requested": true,
+      "host_repair_count": 1,
+      "repair_result": "COMPLETED",
+      "original_final_validator_result": "ACCEPT",
+      "final_runtime_replay_result": "ACCEPT",
+      "recommendation_move_preserved_exactly": true,
+      "false_rejection_candidate": false,
+      "initial_validation_path": "benchmark/host-first-v030/fresh/H02-title-scope/B/initial-validation.json",
+      "original_final_result_path": "benchmark/host-first-v030/fresh/H02-title-scope/B/result.json",
+      "final_replay_path": "benchmark/host-first-v030/final-runtime/H02-title-scope/stdout.json"
+    },
+    {
+      "case_id": "H03-repeated-feedback",
+      "initial_envelope_result": "COMPLETED",
+      "initial_validator_result": "REPAIR_REQUIRED",
+      "initial_issue_codes": [
+        "CORE_SCHEMA"
+      ],
+      "repair_requested": true,
+      "host_repair_count": 1,
+      "repair_result": "COMPLETED",
+      "original_final_validator_result": "REPAIR_REQUIRED",
+      "final_runtime_replay_result": "ACCEPT",
+      "recommendation_move_preserved_exactly": true,
+      "false_rejection_candidate": true,
+      "initial_validation_path": "benchmark/host-first-v030/fresh/H03-repeated-feedback/B/initial-validation.json",
+      "original_final_result_path": "benchmark/host-first-v030/fresh/H03-repeated-feedback/B/result.json",
+      "final_replay_path": "benchmark/host-first-v030/final-runtime/H03-repeated-feedback/stdout.json"
+    }
+  ],
+  "original_metrics": {
+    "observed_initial_envelopes": 3,
+    "initial_accept_count": 1,
+    "initial_acceptance_rate": {
+      "numerator": 1,
+      "denominator": 3
+    },
+    "repair_required_count": 2,
+    "repair_required_rate": {
+      "numerator": 2,
+      "denominator": 3
+    },
+    "block_count": 0,
+    "block_rate": {
+      "numerator": 0,
+      "denominator": 3
+    },
+    "repairs_attempted": 2,
+    "original_repair_success_count": 1,
+    "original_repair_success_rate": {
+      "numerator": 1,
+      "denominator": 2
+    },
+    "false_rejection_candidates": 1,
+    "recommendation_changed_by_repair_count": 0
+  },
+  "final_runtime_replay_metrics": {
+    "accepted_retained_envelopes": 3,
+    "observed_envelopes": 3,
+    "retained_repairs_accepted": 2,
+    "additional_model_calls": 0,
+    "additional_repairs": 0
+  },
+  "boundary": "Original and final validator epochs are separate; no rate uses ten as denominator until observed."
+}

@@ -1,0 +1,48 @@
+{
+  "tooling_tests": {
+    "passing": 13,
+    "kind": "OFFLINE_ONLY",
+    "actual_model_calls": 0
+  },
+  "offline_runner_integration": {
+    "kind": "OFFLINE_SIMULATED_TRANSPORT_ONLY",
+    "actual_model_calls": 0,
+    "original_model_outputs_reused": 9,
+    "simulated_successful_calls_checkpointed": 2,
+    "second_invocation_skipped_completed": true,
+    "first_failure_stops_each_invocation": true,
+    "simulated_attempt_order": [
+      [
+        "H01-years-gate",
+        "A",
+        "host"
+      ],
+      [
+        "H03-repeated-feedback",
+        "A",
+        "host"
+      ],
+      [
+        "H04-equity-gap",
+        "A",
+        "extract"
+      ],
+      [
+        "H04-equity-gap",
+        "A",
+        "extract"
+      ]
+    ],
+    "product_cli_used_for_retained_envelopes": true
+  },
+  "plan_only": {
+    "pending_base_calls": 23,
+    "completed_model_calls": 9,
+    "actual_model_calls": 0
+  },
+  "product_suite": {
+    "passing": 186,
+    "unchanged_since_required_validation": true
+  },
+  "verified_at": "2026-10-04T02:58:44.576845+00:00"
+}

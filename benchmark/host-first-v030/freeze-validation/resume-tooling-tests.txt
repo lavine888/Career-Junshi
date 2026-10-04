@@ -1,0 +1,18 @@
+test_atomic_checkpoint_keeps_previous_on_failed_replace (__main__.CheckpointTests.test_atomic_checkpoint_keeps_previous_on_failed_replace) ... ok
+test_checkpoint_cannot_drop_pending_calls (__main__.CheckpointTests.test_checkpoint_cannot_drop_pending_calls) ... ok
+test_deterministic_order_rejects_later_case (__main__.CheckpointTests.test_deterministic_order_rejects_later_case) ... ok
+test_exact_inventory_and_completed_skips (__main__.CheckpointTests.test_exact_inventory_and_completed_skips) ... ok
+test_exclusive_run_lock (__main__.CheckpointTests.test_exclusive_run_lock) ... ok
+test_hash_mismatch_stops_without_overwrite (__main__.CheckpointTests.test_hash_mismatch_stops_without_overwrite) ... ok
+test_model_or_reasoning_changes_stop_before_transport (__main__.CheckpointTests.test_model_or_reasoning_changes_stop_before_transport) ... ok
+test_new_repair_is_queued_once_by_frozen_validator (__main__.CheckpointTests.test_new_repair_is_queued_once_by_frozen_validator) ... ok
+test_no_overwrite_even_for_pending_call (__main__.CheckpointTests.test_no_overwrite_even_for_pending_call) ... ok
+test_quota_stops_cleanly_without_model_fallback (__main__.CheckpointTests.test_quota_stops_cleanly_without_model_fallback) ... ok
+test_repair_inventory_preserves_single_round_and_moves (__main__.CheckpointTests.test_repair_inventory_preserves_single_round_and_moves) ... ok
+test_success_is_checkpointed_and_never_rerun (__main__.CheckpointTests.test_success_is_checkpointed_and_never_rerun) ... ok
+test_timeout_is_uncertain_and_cannot_auto_retry (__main__.CheckpointTests.test_timeout_is_uncertain_and_cannot_auto_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.910s
+
+OK

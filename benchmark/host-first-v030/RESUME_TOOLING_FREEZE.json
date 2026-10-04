@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-10-04T02:58:44.599362+00:00",
+  "scope": "Resume metadata/tooling additions only; frozen product and old evaluation are unchanged",
+  "files": {
+    "benchmark/host-first-v030/CALL_ATTEMPTS.json": "113dfc7b39676243ad1f4f1bf3ab742ea1bfbbb7c908c07c04423f7859d3ae33",
+    "benchmark/host-first-v030/COMPLETED_CALLS.json": "e59807ca33aead03bdf5f3eb48792191db5238d39692cf829772ba9e76dde90a",
+    "benchmark/host-first-v030/FREEZE_VALIDATION.json": "aa458233d24568bf8c2e24702f85b635d993c7ab0f6c38ebdf08ba8ad47cb61f",
+    "benchmark/host-first-v030/REMAINING_CALLS.json": "ccb6f4adf0f45b825521d9ebcd94f68c5336f4d303eb9283f8f2bf20fe3b5784",
+    "benchmark/host-first-v030/REPAIR_ACCOUNTING.json": "d5fb3abd1ebeee5bb977e0019baba9f31a52ebca063d7378ecb5e3256e853f6b",
+    "benchmark/host-first-v030/RESUME_EVAL.json": "ea0aa19cac0939323b968a5522d598c2b4cd9fd6d26f9e59c018d8ceab1e1fbd",
+    "benchmark/host-first-v030/RESUME_VERIFICATION.json": "11f40b8cd18d9700a10102d92090b776b11b77fdbc8397357c00529960b438eb",
+    "benchmark/host-first-v030/freeze-validation/benchmark.json": "d9c1928a69527595a86f734bec078d7b173eff111a42e29e1b6cfa0de5f64a51",
+    "benchmark/host-first-v030/freeze-validation/old-five.json": "1acc6e45079b56ebfb46aa642b1a847f3e4e2d620f6d68f413734d379a4ec1f1",
+    "benchmark/host-first-v030/freeze-validation/resume-tooling-tests.txt": "1b2a5428880d4160a275e62b0bc38314e6c876115ce9e50002b1b3fddb7798ed",
+    "benchmark/host-first-v030/freeze-validation/unit-tests.txt": "d041964945b3893e88a5cf2b2d68fdc9585552ec13a783c17043539fc0c24abe",
+    "benchmark/host-first-v030/freeze-validation/validation.json": "d6f6d1c85f2610c329dc8278d59fd5139f5dbfc7e1fc4a3e466de328735d9460",
+    "benchmark/host-first-v030/resume_manifest.py": "5235431abefebcff0c820c36400140df0160f5750c80ad80027cfe3f838dfabe",
+    "benchmark/host-first-v030/test_resume_manifest.py": "b0abc9aab73a62ec0baeeb10f0c8b82e2e17a3395efe3fecc36578c8843cdddf",
+    "documentation/V030_RESUME_EVAL.md": "0a28463da7fbb4d429e17c730b8e8bbea5efb7e7dde5d037325e0fd705d77552"
+  }
+}
