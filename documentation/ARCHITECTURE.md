@@ -3,6 +3,8 @@
 The product is a host-driven Skill with dependency-free local helpers. It is a
 career decision agent, not a resume UI, job scraper, backend or LLM wrapper.
 Python 3.10+ is needed only for helpers; the host provides model, tools and conversation.
+The decision and memory CLIs emit UTF-8 and accept UTF-8 JSON with or without a BOM;
+structured input is bounded to 256 KiB before decoding.
 
 ```text
 user materials / consented task memory
@@ -51,3 +53,14 @@ v0.2 contracts are in [CONTEXT_EXTRACTION.md](CONTEXT_EXTRACTION.md) and
 [DECISION_INTELLIGENCE.md](DECISION_INTELLIGENCE.md). Golden cases and development
 evaluation reports stay in the checkout; runtime-only benchmark use needs an explicit
 `--cases` path. Installation still has no development or private-memory dependency.
+
+## Host-led experiences
+
+Four optional playbooks layer on the existing situation modes: resume defense,
+role translation, evidence sprint and decision review. The host selects the
+experience from the request, reads its relevant references and conducts the work.
+`junshi.py route --mode interview --experience defense` only selects references
+and suggests an artifact filename; it does not run a session or generate a report.
+Legacy route and decide contracts are unchanged. Runtime installation includes the
+playbooks, and validation checks their presence. Public walkthroughs are synthetic
+illustrations; they do not establish behavioral quality or hiring outcomes.

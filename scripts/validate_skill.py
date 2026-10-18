@@ -13,13 +13,13 @@ from urllib.parse import unquote
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from scripts.router import ROUTES, route
+from scripts.router import EXPERIENCES, ROUTES, route
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNTIME_DOCS = ["ARCHITECTURE.md", "EVIDENCE.md", "MEMORY.md", "INTEGRATION.md", "ACTIONS.md", "CONTEXT_EXTRACTION.md", "DECISION_INTELLIGENCE.md", "DECISION_QUALITY.md"]
 RUNTIME_FILES = ["SKILL.md", "LICENSE", "agents/openai.yaml", "documentation/ATTRIBUTION.md"] + [f"documentation/{name}" for name in RUNTIME_DOCS] + [
     "documentation/licenses/Goutoujunshi.txt", "documentation/licenses/Career-Alpha.txt"]
-SCRIPTS = ["__init__.py", "models.py", "router.py", "decision.py", "memory_store.py", "feedback_loop.py",
+SCRIPTS = ["__init__.py", "models.py", "io_utils.py", "router.py", "decision.py", "memory_store.py", "feedback_loop.py", "integration.py",
            "method_adapter.py", "actions.py", "junshi.py", "validate_skill.py", "install_skill.py", "context.py", "intelligence.py", "calibration.py", "hypothesis.py", "role_story.py", "benchmark.py", "decision_quality.py"]
 
 
@@ -28,6 +28,7 @@ def validate(root: Path, *, runtime_only=False) -> list[str]:
     errors = []
     required = RUNTIME_FILES + [f"scripts/{s}" for s in SCRIPTS]
     required += list(dict.fromkeys(p for refs in ROUTES.values() for p in refs))
+    required += list(dict.fromkeys(p for profile in EXPERIENCES.values() for p in profile["references"]))
     required += ["references/practical/rejection.md", "references/practical/00-router.md", "references/practical/career-memory.md"]
     required += ["references/role-packs.json", "references/practical/context-extraction.md"]
     if not runtime_only:
@@ -59,6 +60,10 @@ def validate(root: Path, *, runtime_only=False) -> list[str]:
         refs = route(mode)["references"]
         if not 1 <= len(refs) <= 3:
             errors.append(f"Invalid reference budget: {mode}")
+    for experience, profile in EXPERIENCES.items():
+        for mode in profile["modes"]:
+            if not 1 <= len(route(mode, experience=experience)["references"]) <= 3:
+                errors.append(f"Invalid experience reference budget: {experience}")
     files = [skill] + list((root / "references").rglob("*.md"))
     files += [root / "documentation" / n for n in RUNTIME_DOCS]
     if not runtime_only:

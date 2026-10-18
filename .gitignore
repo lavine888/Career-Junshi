@@ -11,5 +11,8 @@ __pycache__/
 .memory/
 private/
 local-inputs/
+career-context*.md
+career-context*.json
+*session-packet.json
 dist/
 *.egg-info/

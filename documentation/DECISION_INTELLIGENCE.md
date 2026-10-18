@@ -20,8 +20,11 @@ oversized summaries for review rather than silently storing raw material.
 
 Stale / undated current information is excluded from supporting_evidence. A job
 recommendation that would rely on current market fit first requests refreshed JD / HC.
-Personal historical facts remain usable and correctable. Source dates are not proof
-that a position remains open. The host checks current authoritative sources when
+When a selected direction cites stale or undated current information, its ranking
+remains tentative (CONDITIONAL), and applying requires refreshing those sources.
+Stale evidence for an unrelated secondary option does not downgrade a current
+primary choice. Personal historical facts remain usable and correctable.
+Source dates are not proof that a position remains open. The host checks current authoritative sources when
 available and explains remaining uncertainty.
 
 ## Tags and similar memory
@@ -93,6 +96,10 @@ confounders. Alternative contains hypothesis, expected_value (higher / unknown /
 lower), basis, constraints_checked, confounders_checked. PIVOT is a user review
 recommendation, never an executed career switch. Supporting evidence is displayed
 for review; these conservative gates do not statistically weigh contradictions.
+This is the career-direction review contract. The legacy `junshi.py pattern` helper
+only flags a gap reported by five distinct comparable sources; it lacks event and
+origin metadata and cannot authorize a career pivot or replace this review.
+Empty imports do not erase observed gaps; one source counts once per gap.
 
 ## Role and story mapping
 
@@ -101,7 +108,10 @@ typical_signals, common_claim_risks, evidence_patterns, interview_dimensions and
 common_gaps. They supply interview emphasis, not market claims or new achievements.
 Optional project_story has project_id, source, claim_ids and story. Six story fields:
 tension, personal_decision, ownership, tradeoff, result_evidence, learning.
-result_evidence references an existing claim evidence source. Unknown personal
+result_evidence references an existing claim evidence source. Where claim_refs
+explicitly identify a project, every selected claim must belong to project_story.project_id;
+a mismatch is rejected. Legacy claims without a project reference remain accepted
+without inventing their project identity. Unknown personal
 contribution, missing personal decision, incomplete dimensions or risky claims cannot
 produce a defensible draft. Story prose is host-authored and must be source-checked;
 nonempty text alone is not evidence. Mapping returns project → existing claims →

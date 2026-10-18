@@ -181,10 +181,28 @@ def ownership_pack(value, claims, facts):
         cid = text(c.get("claim_id"), "stage claim ID", 80)
         if cid not in ids or cid in stages: raise ContractError("contribution stage requires unique existing Claim")
         stages[cid] = {"claim_id": cid, "claim_stage": choices(c.get("claim_stage", "unknown"), STAGES, "claim stage"), "user_contribution_stage": choices(c.get("user_contribution_stage", "unknown"), STAGES, "personal contribution stage")}
-    bounded = list(dict.fromkeys(c["ownership"]["contribution"] for c in claims if c["ownership"]["contribution"]))
+    contributions = [stages.get(c["id"], {"claim_id": c["id"], "claim_stage": "unknown", "user_contribution_stage": "unknown"}) for c in claims]
+    bounded = []
+    planned = False
+    for c, contribution_stage in zip(claims, contributions):
+        personal = contribution_stage["user_contribution_stage"]
+        is_planned = c["confidence"] == "PLANNED" or c["stage"] == "planned" or "planned" in (contribution_stage["claim_stage"], personal)
+        planned = planned or is_planned
+        label = "计划中，不能作为已完成经历" if is_planned else {
+            "unknown": "自述贡献，个人完成阶段待确认", "demo": "个人贡献处于原型阶段",
+            "backtest": "个人贡献仅到回测阶段", "completed": "自述个人贡献已完成",
+            "production": "自述个人贡献已用于生产，范围按证据确认",
+        }[personal]
+        if c["ownership"]["contribution"]:
+            bounded.append(f"{c['id']}（{label}）：{c['ownership']['contribution']}")
     contribution = "；".join(bounded)
     # Preserve complete contributions separately; never cut a qualifier mid-sentence.
-    safe = "据本人描述，在团队项目中负责：" + contribution + "。个人工程作者范围按已核实部分说明。" if contribution and len(contribution) <= 300 else ("据本人描述，参与团队项目；个人贡献按下列自述逐项说明，工程作者范围按已核实部分说明。" if contribution else "个人贡献尚未明确，先限定为团队项目参与；具体负责部分待确认。")
+    if contribution and len(contribution) <= 300:
+        safe = "据本人描述，贡献按阶段分别说明：" + contribution + "。个人工程作者范围按已核实部分说明。"
+    elif contribution:
+        safe = "个人贡献按下列自述与阶段逐项说明，个人完成阶段未知时保持待确认；计划工作不能作为已完成经历，工程作者范围按已核实部分说明。"
+    else:
+        safe = ("现有 Claim 包含计划工作，不能作为已完成经历；" if planned else "") + "个人贡献尚未明确，具体负责部分与个人完成阶段待确认。"
     target = next((c for c in claims if any("authorship" in r or "sole_ownership" in r for r in c["risk"])), claims[0] if claims else None)
     label = target["claim"][:180] if target else "这条经历"
     questions = [f"在“{label}”中，你个人做了哪些动作，能展示哪些原始产物？",
@@ -197,5 +215,5 @@ def ownership_pack(value, claims, facts):
     if target and any("authorship" in r for r in target["risk"]):
         questions.append("哪项技术细节可以由你本人解释并举证，哪些需要注明实现者？")
     return {"safe_claim": safe, "reported_contributions": bounded, "boundary": "保留已陈述的产品或项目领导贡献；团队、AI 工具与个人工程实现分开归属，文档存在不等于已核查。",
-            "project_stage": project, "contributions": [stages.get(c["id"], {"claim_id": c["id"], "claim_stage": "unknown", "user_contribution_stage": "unknown"}) for c in claims],
+            "project_stage": project, "contributions": contributions,
             "defense_questions": questions[:5], "stage_boundary": "旧 Claim.stage 不推导整体项目阶段或个人工程完成；缺少独立阶段证据时保持未知。"}

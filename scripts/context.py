@@ -12,7 +12,21 @@ EPISTEMIC = {"FACT", "INFERENCE", "UNKNOWN"}
 
 def recruiting_assertion(value: str) -> tuple[set, set]:
     """Limited bilingual polarity guards, not a general semantic verifier."""
-    negative = r"(?:尚未|还未|未(?:能)?|没(?:有)?|不(?:能)?)(?:被|确认|确定)?\s*(?:通过|录用|拒绝)|\b(?:not|never|didn['’]t|hasn['’]t|wasn['’]t)\s+(?:yet\s+|been\s+|be\s+)?(?:pass(?:ed)?|hired|accepted|rejected)\b|(?:尚未|还未|没有|未|没|无|不存在)(?:收到|发出|获得|发)?\s*offer|\b(?:no|not)\s+(?:an?\s+)?offer\b"
+    # Remove the whole denied result, including noun-first reports such as
+    # "an offer has not been issued". Leaving "offer" behind invents a terminal
+    # result even when the host faithfully quotes the denial.
+    negator = r"(?:not|never|(?:do|does|did|has|have|had|is|are|was|were|would|could)n['’]t|won['’]t|can['’]t|cannot)"
+    auxiliaries = r"(?:(?:yet|ever|already|been|be|being|have|has|had|to)\s+)*"
+    result_verb = r"(?:pass(?:ed)?|hir(?:e|ed)|accept(?:ed)?|reject(?:ed)?|offer(?:ed)?)"
+    offer_verb = r"(?:receiv(?:e|ed)|issu(?:e|ed)|extend(?:ed)?|mak(?:e|ing)|made|get|got|giv(?:e|en)|send|sent)"
+    negative = (
+        r"(?:尚未|还未|未(?:能)?|没(?:有)?|不(?:能)?)(?:被|确认|确定)?\s*(?:通过|录用|拒绝)"
+        rf"|\b{negator}\s+{auxiliaries}{result_verb}\b"
+        rf"|\b{negator}\s+{auxiliaries}{offer_verb}\b[^.;!?\n]*?\boffer\b"
+        rf"|\b(?:an?\s+|the\s+)?offer\s+(?:(?:has|have|had|is|was|will|would|can|could)\s+)*{negator}\s+{auxiliaries}(?:issued|extended|made|given|received|sent|approved|confirmed)\b"
+        r"|(?:尚未|还未|没有|未|没|无|不存在)(?:收到|发出|获得|发)?\s*offer"
+        r"|\b(?:no|not)\s+(?:an?\s+)?offer\b"
+    )
     stripped = re.sub(negative, "", value, flags=re.I)
     states = set()
     if re.search(r"通过|录用|\b(?:pass(?:ed)?|hired|accepted)\b", stripped, re.I):
@@ -22,9 +36,9 @@ def recruiting_assertion(value: str) -> tuple[set, set]:
     if re.search(r"拒绝|不予录用|\brejected\b", stripped, re.I) or re.search(r"(?<!尚)(?<!还)未通过|\b(?:not selected|did not pass)\b", value, re.I):
         states.add("rejected")
     qualifiers = set()
-    if re.search(r"如果|若|可能|预计|尚未|还未|待审批|未确认|无法确认|不能确认|\b(?:if|might|may|could|would|pending|unconfirmed|not yet)\b", value, re.I):
+    if re.search(r"如果|若|可能|预计|尚未|还未|待审批|未确认|无法确认|不能确认|\b(?:if|unless|once|might|may|could|would|pending|awaiting|unconfirmed|not yet|subject to|(?:cannot|can't|can’t) confirm|not confirmed)\b", value, re.I):
         qualifiers.add("conditional_or_pending")
-    if re.search(r"听说|据称|传闻|同事说|\b(?:reportedly|allegedly|rumou?r|someone said)\b", value, re.I):
+    if re.search(r"听说|据称|传闻|同事说|\b(?:reportedly|allegedly|rumou?r|someone said|(?:a |my |our )?colleague said|I heard)\b", value, re.I):
         qualifiers.add("hearsay")
     return states, qualifiers
 

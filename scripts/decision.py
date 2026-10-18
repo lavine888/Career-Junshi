@@ -330,7 +330,7 @@ def decide(value: dict, *, now: datetime | None = None, history: list | None = N
                             action("apply", "选择一小批岗位验证反馈", "human")],
                 "observation_window": "一周或下 5 个可比机会",
                 "stop_condition": "真实硬约束不满足或补证成本超过当前预算时降低投入",
-                "pivot_condition": "5–10 个同类机会重复同一缺口时 REFINE / PIVOT；一条反馈不作普遍结论"}
+                "pivot_condition": "重复可比缺口先局部修正；职业转向按 Career Hypothesis 契约核对核心反证、替代与约束，一条反馈不作普遍结论"}
     if n["urgency"]["overdue"]:
         n["unknowns"].append("截止时间已过；需要确认机会是否仍可处理")
         plan["recommended_move"] = "先确认已过期的面试 / Offer / 机会是否仍有效，再执行下面的准备或比较。"
@@ -357,7 +357,8 @@ def decide(value: dict, *, now: datetime | None = None, history: list | None = N
     apply_history(result, history or [], now=now)
     if "project_story" in value:
         from scripts.role_story import map_story
-        result["project_mapping"] = map_story(value["project_story"], result["claims"], result["metadata"]["role_family"])
+        result["project_mapping"] = map_story(value["project_story"], result["claims"], result["metadata"]["role_family"],
+                                              claim_refs=result["claim_refs"])
     if "career_hypothesis" in value:
         from scripts.hypothesis import review_hypothesis
         result["career_hypothesis"] = review_hypothesis(value["career_hypothesis"])

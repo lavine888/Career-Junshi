@@ -1,7 +1,7 @@
 """Translate existing evidence into role emphasis and defensible stories."""
 import json
 from pathlib import Path
-from scripts.models import ContractError, items, obj, text
+from scripts.models import ContractError, claim_references, items, obj, text
 from scripts.intelligence import FAMILIES
 
 
@@ -19,7 +19,7 @@ def role_packs():
     return value
 
 
-def map_story(value, claims, family):
+def map_story(value, claims, family, *, claim_refs=None):
     p = obj(value, "project story")
     required = {"project_id", "source", "claim_ids", "story"}
     if set(p) != required:
@@ -28,6 +28,11 @@ def map_story(value, claims, family):
     by_id = {c["id"]: c for c in claims}
     if not ids or set(ids) - set(by_id) or len(ids) != len(set(ids)):
         raise ContractError("story must map to unique existing claims")
+    project_id = text(p["project_id"], "project_id", 80)
+    refs = claim_references(claim_refs if claim_refs is not None else [], claim_ids=by_id)
+    projects = {r["claim_id"]: r["project_id"] for r in refs}
+    if any(c in projects and projects[c] != project_id for c in ids):
+        raise ContractError("story claims must belong to the story project")
     story = obj(p["story"], "story")
     fields = {"tension", "personal_decision", "ownership", "tradeoff", "result_evidence", "learning"}
     if set(story) != fields:
@@ -45,7 +50,7 @@ def map_story(value, claims, family):
         gaps.append("claim_evidence")
     pack = next((p for p in role_packs() if p["role_family"] == family), None)
     questions = ["你具体决定了什么？团队和你的贡献如何划分？", "为什么采用这个方案，最强备选是什么？", "结果证据支持多大范围，失败与学习是什么？"]
-    return {"project_id": text(p["project_id"], "project_id", 80), "source": text(p["source"], "project source", 240),
+    return {"project_id": project_id, "source": text(p["source"], "project source", 240),
             "claim_ids": ids, "claim_wording": [c["safe_wording"] for c in selected], "evidence": evidence,
             "story": clean, "story_quality": "DEFENSIBLE_DRAFT" if not gaps else "NEEDS_EVIDENCE_OR_PERSONAL_DECISION",
             "gaps": sorted(set(gaps)), "role_family": family,

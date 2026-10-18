@@ -350,6 +350,8 @@ class MemoryStore:
 
 
 def main(argv=None) -> int:
+    from scripts.io_utils import configure_cli_streams, load_json_input
+    configure_cli_streams()
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--directory", help="Private directory outside the Skill installation")
     sub = p.add_subparsers(dest="command", required=True)
@@ -389,7 +391,7 @@ def main(argv=None) -> int:
         elif args.command in {"view", "recall"}:
             result = store.read(kind=args.kind, subject=args.subject, limit=args.limit, administrative=args.command == "view")
         else:
-            data = json.loads(Path(args.input).read_text(encoding="utf-8"))
+            data = load_json_input(args.input)
             if args.command == "update":
                 result = store.put(args.kind, args.subject, data, record_id=args.id)
             elif args.command == "decision":

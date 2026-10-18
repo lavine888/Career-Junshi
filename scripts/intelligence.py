@@ -80,6 +80,21 @@ def enrich(d, value, *, now=None):
         usable.append({"source": fact["source"], "text": fact["text"],
                        "source_locator": fact.get("source_locator", "legacy:unlocated")})
     stale = [f for f in d["facts"] if f.get("freshness_assessment", {}).get("status") in {"STALE", "CHECK_REQUIRED"}]
+    stale_ids = {f.get("source_id", f["source"]) for f in stale}
+    if mode == "job" and "direction" in d and d["recommendation_type"] != "BLOCKED" and stale_ids.intersection(decision_sources):
+        # Keep a reversible working preference, but do not certify a ranking whose
+        # selected sources need a current-market check. Historical facts stay usable.
+        condition = "先核实主线引用的当前 JD / 招聘信息，再据此投递；现有个人经历仍可用于准备。"
+        d["recommended_move"] = "暂定" + d["recommended_move"] + "。" + condition
+        d["recommendation_type"] = "CONDITIONAL"
+        sufficiency = d["decision_sufficiency"]
+        sufficiency.update(state="DECISION_CONDITIONAL", basis="主线比较引用了过期或待核实的当前信息，只支持核实前的暂定方向")
+        sufficiency["reversal_unknowns"] = [condition] + sufficiency["reversal_unknowns"][:2]
+        d["why"].append("当前岗位信息尚需复核，不能将现有比较称为充分的投递依据")
+        reconsider_if = [condition] + reconsider_if[:2]
+        for a in d["actions"]:
+            if a["kind"] == "apply":
+                a["description"] = condition
     for c in d["claims"]:
         if c["confidence"] in {"SUPPORTED", "VERIFIED"}:
             usable.extend({"source": e["source"], "text": c["safe_wording"], "claim_id": c["id"],

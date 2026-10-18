@@ -65,7 +65,7 @@ def artifact_contents(decision: dict) -> dict[str, str]:
             if missing:
                 lines.append("待提供：" + "、".join(missing) + "。")
         for c in claims:
-            safe = decision["ownership_defense"]["safe_claim"] if "ownership_defense" in decision else c["safe_wording"]
+            safe = c["safe_wording"]
             lines.extend([f"## {c['id']}", "", f"原表述：{c['claim']}", "", f"安全表述：{safe}", "",
                           f"个人贡献：{c['ownership']['contribution'] or '未知'}；ownership：{c['ownership']['scope']}", "",
                           "风险：" + "；".join(c["risk"] or ["仍需人工检验五层追问"]), "",

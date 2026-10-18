@@ -1,309 +1,218 @@
 <div align="center">
 
+![Career Junshi — Make every claim defensible](assets/readme-hero.svg)
+
 # Career Junshi · 求职军师
 
-### Go beyond resume edits. Decide what is worth doing next.
+### Turn real experience into a resume you can defend.
 
-**Evidence-grounded Career Decision Agent**
+Start with one project claim. Clarify ownership, build the missing evidence, choose your next move.
 
-<br/>
+[![MIT](https://img.shields.io/badge/License-MIT-D8B466?style=flat-square)](LICENSE)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-627EAA?style=flat-square)
+[![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-83D5BA?style=flat-square)](documentation/MEMORY.md)
 
-![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white&style=flat-square)
-[![MIT License](https://img.shields.io/badge/License-MIT-6B7280?style=flat-square)](LICENSE)
-[![Local-first](https://img.shields.io/badge/Data-local--first-6B7280?style=flat-square)](documentation/MEMORY.md)
-[![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-6B7280?style=flat-square)](documentation/MEMORY.md)
-
-<br/>
-
-[Quick Start](#-quick-start) · [Use cases](#-use-cases) · [Workflow](#-workflow) · [中文](README.md)
+[See it in action](#demo) · [Get started](#start) · [Four experiences](#experiences) · [Evaluation](#evaluation) · [中文](README.md)
 
 </div>
 
-A career decision Skill for Codex and other hosts that support local Skills.
+Career Junshi is a career workflow for Codex and other hosts that support local Skills.
+For candidates explaining real projects, changing roles, preparing for an interview,
+or deciding where to focus their job search.
 
-> Share your resume, JD, project evidence, recruiter messages, interview feedback or offers, then ask:
+**Bring real context. Leave with an evidence-grounded judgment and 1–3 useful next actions.**
+
+<a id="demo"></a>
+
+## Can you defend the next question?
+
+> **Resume claim:** “Independently built a production RAG platform, improving accuracy by 30%.”
 >
-> **“What should I do next?”**
+> **Actual account:** A team course prototype. You wrote evaluation scripts and classified
+> failures; a teammate built the service. Ten internal questions, no baseline, no production users.
 
-Identify the bottleneck, recommend a move and 1–3 actions, then specify when to continue, stop or reconsider.
-
-"What should I prepare tonight?" · "Should I follow up with HR?" · "Which roles should I prioritize?" · "Can I claim leadership?" · "Which offer should I choose?"
-
-## ⚡ Quick Start
-
-### 1. Ask Codex to install it
+Junshi narrows unsupported wording and starts with the work you actually did:
 
 ```text
-Install career-junshi as a local Skill from the main branch of
-https://github.com/lavine888/Career-Junshi, using the repository's installer.
-Check for an existing installation first. Do not overwrite it.
-Validate the installed runtime files. Do not enable persistent memory for me.
+Junshi: For the ten questions you ran, what made an answer count as a failure?
+
+You: My teammate and I agreed on three checks: missing document citations,
+     incorrect cited passages, or an answer contradicting the document.
+     I put those checks in the script and recorded the results.
+
+Junshi: That contribution is clearer. It remains your account;
+        the code and evaluation records have not been checked.
 ```
 
-### 2. Start asking
+You leave with a sentence you can use now:
 
-Open a new chat and attach the resume and JD you are comfortable sharing:
+> Contributed to a team RAG course prototype, owning evaluation scripts and failure
+> classification; evaluated ten internal questions against team-agreed criteria and
+> recorded missing citations, incorrect passages, and contradictions with source documents.
+
+**Keep the contribution. Remove the unsupported independence, production claim, and 30% improvement.**
+Know exactly what evidence to bring back next.
+
+<sub>Translated and condensed from an actual host trial with anonymous synthetic material, not a real candidate or hiring outcome. See the [trial record](documentation/EVOLUTION_EVAL.md). The [full walkthrough](cases/experiences/defense/example.md) is a separately authored illustration.</sub>
+
+<a id="start"></a>
+
+## Start with one sentence
+
+### 1 · Install
+
+Send this to a host that supports local Skills:
 
 ```text
-Use $career-junshi. Here are my resume and JD.
-My second interview is tomorrow afternoon. I have four hours tonight.
-Identify the biggest risk, recommend the 1–3 most useful actions,
-and tell me what preparation I should avoid spending time on.
+Install career-junshi from the main branch of
+https://github.com/lavine888/Career-Junshi using the repository installer.
+Check for an existing installation first; do not overwrite it.
+Validate the installed runtime files. Do not enable persistent memory.
 ```
 
-No complete resume required: describe your stage, goal, experience and deadline.
-Read supplied context first; ask only about gaps that could change the advice.
-[Manual installation](#manual-installation) is below.
+### 2 · Bring one real experience
 
-## 🧭 Use cases
+```text
+Use $career-junshi for a resume defense session.
 
-| 🧭 Direction | 🛡 Interviews | ✍️ Experience |
+My resume says: ...
+What I actually did: ...
+Target role / JD: ...
+Next interview or deadline: ...
+
+Ask one question at a time and follow my actual answers.
+Finish with safe wording, evidence gaps, and the most useful next step.
+```
+
+A complete resume is optional. You can also ask to rewrite a paragraph or prioritize
+tonight's preparation. Supplied materials come first; questions fill only consequential
+gaps. Persistent memory can stay off.
+
+<a id="experiences"></a>
+
+## Four experiences, one evidence loop
+
+| Where you are stuck | Ask this | What you get |
 | --- | --- | --- |
-| **AI Product, Technical PM or Quant?** | **What should I prepare tonight?** | **Can I say I led development?** |
-| Primary / secondary / exploratory targets, evidence gaps and market checks. | Highest risk and contribution, architecture and story defense. | Claim audit, defensible wording and likely follow-up questions. |
+| **🛡 Resume defense** · A project might unravel under questions | “Challenge this claim, one question at a time.” | Clarified points, missing evidence, safe wording, next step |
+| **🎯 Role translation** · One project, different target jobs | “Adapt this project to these two JDs and explain each version.” | Shared fact sheet, role versions, rationale and gaps |
+| **🧩 Evidence sprint** · A gap needs a bounded task | “I have four hours this week. Close one important evidence gap.” | Deliverable, acceptance criteria, time budget and stopping point |
+| **🔄 Decision review** · New feedback changes the picture | “Compare the earlier recommendation with this feedback.” | Prior judgment versus observations, revisions and next action |
 
-| 📬 Recruiting | ⚖️ Offers |
-| --- | --- |
-| **Five days of silence: follow up?** | **Which of two offers should I choose?** |
-| Facts versus inference, a follow-up draft and a stopping condition. | Current preference, decisive unknowns and reversal conditions. |
+Stop a defense session whenever you need. Role versions keep the same facts.
+Sprints fit your actual time. Reviews preserve what was unknown rather than
+inventing predictions after the event.
 
-These are workflow goals, not guaranteed correct recommendations. Facts, contribution scope and action conditions need review.
-
-For students and experienced applicants facing complex choices, people with real projects they struggle to explain,
-and candidates narrowing interview preparation or reviewing directions and feedback.
-Outside its scope: mass applications, interviewing for you, invented experience and offer probabilities.
-You apply, send messages, negotiate and accept or reject offers.
-
-## Why Career Junshi?
-
-This compares workflow priorities, not the capabilities of ChatGPT or other models.
-
-| A one-off resume edit focuses on | Career Junshi's workflow |
-| --- | --- |
-| Better wording | Identify the bottleneck: direction, evidence, positioning, interviews, market or timing |
-| Stronger claims | Preserve personal contribution and project stage; write defensible claims |
-| Possible improvements | Prioritize 1–3 actions and identify effort to avoid |
-| The current deliverable | A preferred move, observation window, stopping point and reversal conditions |
-| This conversation | Optional, consented local Decision → Outcome records for review |
-
-## What you get
-
-| Situation | Evidence boundaries | Action priorities | Reality feedback |
-| --- | --- | --- | --- |
-| Find the bottleneck | Keep claims defensible | Focus on 1–3 actions | Reassess with new feedback |
-
-## 🔁 Workflow
-
-> **Make decisions from evidence. Let reality test the actions.**
->
-> **Evidence → Decision → Action → Reality → Update**
+**Explore the authored synthetic walkthroughs:** [defense](cases/experiences/defense/example.md) ·
+[role translation](cases/experiences/role-translation/example.md) ·
+[evidence sprint](cases/experiences/proof-sprint/example.md) ·
+[decision review](cases/experiences/decision-review/example.md). Walkthroughs are in Chinese.
 
 ```mermaid
 flowchart LR
-    A["📄 Resume / JD / feedback"] --> B["🧭 Situation / bottleneck"]
-    B --> C["🔎 Evidence"]
-    C --> D["⚖️ Preferred move"]
-    D --> E["⚡ 1–3 actions"]
-    E --> F["🌍 Reality"]
-    F --> G["🔁 Update"]
-    G --> B
+    A["One real experience"] --> B["Questions and evidence"]
+    B --> C["Role-specific wording"]
+    C --> D["Build one missing proof"]
+    D --> E["Return with feedback"]
+    E --> B
 ```
 
-Memory is optional. Bring new feedback back into the conversation even without it.
+## Bring the rest of your job search, too
 
-## One complete example
-
-**Synthetic illustration**, not an independent model evaluation or real interview outcome.
-
-### Input
-
-> My second AI product interview is tomorrow. The first interviewer probed our document-retrieval prototype's architecture; I felt my answers were weak.
-> It was a team project: I owned evaluation and failure classification; a teammate built the service. The JD asks for architectural tradeoffs. I have four hours.
-
-### Judgment
-
-**Prioritize the project's architectural tradeoffs, personal contribution and failure modes tonight.**
-The observed questions justify preparation; your impression alone does not establish a technical weakness.
-
-### Tonight's actions
-
-1. **30 minutes: check contribution and stage.** From self-report: “Contributed to a team document-retrieval prototype, responsible for evaluation and failure classification.” Evidence is still needed.
-2. **90 minutes: rehearse five layers.** What, why, alternatives, measurement and failures; explain only what you understand and participated in.
-3. **45 minutes: practice a truthful 90-second story.** Note what you cannot answer; leave the remaining time for rest.
-
-Stop when the preparation block ends. Record actual questions and explicit feedback afterward, then adjust the next round.
-
-### Avoid
-
-Starting another project or learning an entire new agent framework tonight.
-
-### Reconsider if
-
-The recruiter confirms that the second round is a business case.
-
-Complete materials and artifacts: [interview](cases/interview) · [follow-up](cases/follow-up) · [offer](cases/offer) · [all cases](cases).
-
-## 🛡 Evidence First
-
-> Strong claims should survive follow-up questions.
-
-| Looks similar | Does not establish |
+| Your question | Junshi's task |
 | --- | --- |
-| Team results | Sole implementation |
-| Demo | Production |
-| Backtest results | Live trading returns |
-| Participation | An award |
-| HR silence | Rejection |
-| Passing an interview | Preparation caused success |
+| “Which roles should I prioritize?” | Use goals, experience and current JDs to separate primary, secondary and exploratory targets |
+| “Interview tomorrow. Only 90 minutes tonight.” | Narrow preparation to the highest risks and 1–3 actions; identify effort to stop |
+| “Five days without an HR reply. Follow up?” | Check the conversation, promised dates and workdays; provide timing, a draft and a stop rule |
+| “Which offer should I choose?” | Compare personal goals and written terms; identify the preference and unknowns that could reverse it |
 
-Check evidence before polishing wording:
+## The real contribution stays intact
 
-| Claim confidence | Meaning |
-| --- | --- |
-| VERIFIED | Direct evidence checked for the exact claim; wording stays within that scope |
-| SUPPORTED | Supporting material, without complete independent verification |
-| SELF_REPORTED | The candidate's account, not independently verified |
-| PLANNED | Intended or unfinished work, never a completed achievement |
+Team outcomes are not sole implementation. Prototypes are not production. Plans are
+not completed accomplishments. A repository or link alone does not prove authorship,
+users, or impact.
 
-Situations use **FACT / INFERENCE / UNKNOWN**: sourced observations or reports, interpretations, and things not established.
-FACT is not independent truth certification; a link or repository does not prove personal authorship.
+Junshi preserves sources, contribution and stage, separating **observations, inference,
+and unknowns**. Weak evidence leads to narrower wording and a useful evidence task,
+not a candidate score or hiring probability. See the [evidence contract](documentation/EVIDENCE.md).
 
-Narrow weak claims or build evidence. Scripts cannot authenticate invented receipts; text rules cannot replace semantic review.
-See the [evidence contract](documentation/EVIDENCE.md).
+**You control the actions.** Reports can stay in chat; specify a destination when requesting
+files. You apply, send messages, negotiate and choose offers. Shareable drafts use only
+selected content and are never posted automatically.
 
-## 🧠 Memory & privacy
+**Memory is optional.** Explicit consent enables compact local decision and feedback
+records; full resumes, JDs and conversations are excluded by default. View, pause,
+revoke and delete are available. The database is unencrypted; deletion cannot guarantee
+erasure of external backups. Local storage does not mean offline model inference;
+conversation materials remain subject to the host's data policies. See [memory](documentation/MEMORY.md).
 
-**Memory is optional.** The Skill works without it. Explicit consent permits compressed local
-**Situation → Decision → Outcome → Learning** records.
+<a id="evaluation"></a>
 
-Raw resumes, JDs, emails and chats are excluded from memory by default. SQLite lives outside the installation;
-records can be viewed, paused, revoked or deleted. The database is unencrypted; deletion does not guarantee erasure of external backups.
+## What has been checked
 
-Local-first describes helpers and storage. Conversation materials remain subject to the host's data policies;
-model inference is not guaranteed offline. No private vault or LavineOS is required.
-See [memory policy and commands](documentation/MEMORY.md).
+The current implementation has **204 automated tests**, **13 structured synthetic
+benchmark cases**, and limited independent host trials of the four experiences.
+These check software behavior and evidence boundaries; they do not establish improved
+interview or offer rates.
 
-## 🏗 Architecture
+Known weaknesses remain in existing holdouts. Extraction and handoffs can fail, and
+advice can be generic or too cautious. This iteration does not rerun every frozen
+evaluation or claim that the earlier real-user pilot gates have been met. Current
+hiring information still needs fresh sources.
 
-Current main: **User context → Situation / evidence → Decision → Action → Outcome → Consented memory**.
-
-The host understands materials and provides conversational judgment. Python offers structured decision support,
-evidence checks, artifacts and local memory. The CLI does not understand arbitrary resumes, scrape jobs or send messages.
-See [architecture](documentation/ARCHITECTURE.md) and [Decision Intelligence](documentation/DECISION_INTELLIGENCE.md).
-
-## 🧪 Project status
-
-| Version | Focus | Status |
-| --- | --- | --- |
-| [v0.1](documentation/MVP_REPORT.md) | Evidence-safe MVP | Implementation / synthetic checks complete |
-| [v0.2](documentation/V02_REPORT.md) | Decision Intelligence | Implemented / limited evaluation |
-| [v0.2.2](documentation/V022_DECISION_QUALITY_REPORT.md) | Decision Quality | Patch complete / weaknesses remain |
-| [v0.2.3](documentation/V023_HOLDOUT_EVAL.md) | Holdout Generalization | **Current main** |
-| [v0.3](https://github.com/lavine888/Career-Junshi/tree/experiment/v0.3-host-first) | Host-First experiment | **EXPERIMENTAL / evaluation incomplete** |
-
-> **Current stable:** `main / v0.2.3`
->
-> **Experimental:** `experiment/v0.3-host-first`, not merged into main; only 1/10 A/B groups complete. Superiority is not established.
->
-> Synthetic evaluations exist; **real-world hiring effectiveness is not proven**.
-
-See the [experiment freeze and resume instructions](https://github.com/lavine888/Career-Junshi/blob/experiment/v0.3-host-first/documentation/V030_RESUME_EVAL.md).
-
-## Evaluation & limitations
-
-Deterministic tests, synthetic benchmarks and frozen holdouts check integrity and decision behavior.
-**They do not prove better offer or interview pass rates.** The gates for a direct real-user pilot have not been met.
-
-Extraction and structured handoffs can fail; advice can be generic, too cautious or prematurely certain.
-Current vacancies, companies, markets and policies need fresh sources. Autonomous reference reads were blocked by the host
-in the [reference-loading experiment](documentation/REFERENCE_RETRIEVAL_EVAL.md).
-
-[Evaluation protocol](documentation/EVAL.md) · [v0.2.3 holdouts](documentation/V023_HOLDOUT_EVAL.md) ·
-[Mock debugging](documentation/MOCK_CASE_DEBUG_REPORT.md) · [Decision Quality](documentation/V022_DECISION_QUALITY_REPORT.md)
-
-<a id="manual-installation"></a>
+[Evolution plan](documentation/EVOLUTION_PLAN.md) · [Iteration evaluation](documentation/EVOLUTION_EVAL.md) ·
+[Evaluation protocol](documentation/EVAL.md) · [Frozen holdouts](documentation/V023_HOLDOUT_EVAL.md)
 
 <details>
 <summary><b>Manual installation</b></summary>
 
-A host with local Skill support (such as Codex) and Python 3.10+ are required; helpers use only the standard library.
-There is no project-hosted model service or additional API key requirement. The host supplies the model.
-
-Clone **stable main** and validate:
+A host with local Skill support and Python 3.10+ are required. Helpers use only the
+standard library; the project does not run its own model service.
 
 ```sh
 git clone --branch main https://github.com/lavine888/Career-Junshi.git
 cd Career-Junshi
 python scripts/validate_skill.py
+python scripts/install_skill.py --target /path/to/your/skills/career-junshi
+python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-only
 ```
 
-Choose a directory your host discovers. Codex's user-level directory is `~/.agents/skills`; see the
-[official OpenAI Skill documentation](https://learn.chatgpt.com/docs/build-skills). Other hosts use their configured location.
-
-### macOS / Linux
-
-```sh
-python scripts/install_skill.py --target "$HOME/.agents/skills/career-junshi"
-python "$HOME/.agents/skills/career-junshi/scripts/validate_skill.py" --runtime-only
-```
-
-### Windows PowerShell
-
-```powershell
-python scripts/install_skill.py --target "$env:USERPROFILE\.agents\skills\career-junshi"
-python "$env:USERPROFILE\.agents\skills\career-junshi\scripts\validate_skill.py" --runtime-only
-```
-
-Only runtime files and license notices are copied, not tests, examples, `.git` or databases.
-An existing target is refused and preserved; memory stays off. Then use the Quick Start prompt.
+Replace `/path/to/your/skills` with a directory your host discovers, including on Windows.
+The target folder must be named `career-junshi`; existing targets are refused and preserved.
+Installation copies runtime files and license notices, not examples, tests, `.git` or
+databases. It does not enable memory.
 
 </details>
 
 <details>
-<summary><b>Repository & development</b></summary>
+<summary><b>Development, architecture and structured CLI</b></summary>
 
-### Repository structure
-
-```text
-Career-Junshi/
-├─ SKILL.md         → agent behavior
-├─ scripts/         → deterministic helpers
-├─ references/      → career playbooks
-├─ cases/           → synthetic examples
-├─ benchmark/       → evaluations
-├─ documentation/   → design and reports
-└─ tests/           → regression
-```
-
-### Development & tests
+The host understands context and conducts conversations. Python supplies bounded
+structured support, evidence checks, artifacts and optional memory. `route --experience`
+selects references; it does not run a conversation or generate a report.
 
 ```sh
 python -m unittest discover -s tests -v
 python scripts/benchmark.py run
 python scripts/validate_skill.py
+python scripts/junshi.py route --mode interview --experience defense
 ```
 
-### Structured CLI
+The entrypoint is [SKILL.md](SKILL.md), playbooks are in [references](references), synthetic
+materials in [cases](cases), and checks and reports in [tests](tests) and [documentation](documentation).
 
-The host understands materials and extracts sources first; the CLI accepts structured JSON:
+[Architecture](documentation/ARCHITECTURE.md) · [Extraction](documentation/CONTEXT_EXTRACTION.md) ·
+[Decision contracts](documentation/DECISION_INTELLIGENCE.md) · [Optional snapshot import](documentation/INTEGRATION.md) ·
+[Issues and ideas](https://github.com/lavine888/Career-Junshi/issues)
 
-```sh
-python scripts/junshi.py route --mode interview
-python scripts/junshi.py audit --input cases/interview/input.json
-python scripts/junshi.py decide --input cases/interview/input.json --now 2026-10-03T12:00:00+08:00
-```
-
-`--format json` shows internal fields; `--artifacts-dir <new-private-directory>` creates materials without overwriting files.
-See [extraction](documentation/CONTEXT_EXTRACTION.md) and [decision / feedback contracts](documentation/DECISION_INTELLIGENCE.md).
-Passing a script check is not a semantic evaluation result.
+The separate [v0.3 Host-First experiment](https://github.com/lavine888/Career-Junshi/tree/experiment/v0.3-host-first)
+is incomplete and is not evidence of architectural superiority for this iteration.
 
 </details>
 
-## Attribution & license
+---
 
-Inspired by / adapted from [Goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi):
-lightweight kernel, reference routing, local memory, actions, observation windows and stopping conditions.
-Conceptually informed by [Career Alpha](https://github.com/lavine888/career-alpha):
-Evidence First, the Claim–Evidence Ledger, interview defense and market feedback.
-
-[MIT](LICENSE). Upstream notices are retained; see [attribution and reuse scope](documentation/ATTRIBUTION.md).
+[MIT](LICENSE) · [Attribution and reuse scope](documentation/ATTRIBUTION.md).
+The lightweight kernel and reference routing draw from [Goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi);
+evidence and career feedback methods draw from [Career Alpha](https://github.com/lavine888/career-alpha).
+Upstream license notices are retained.

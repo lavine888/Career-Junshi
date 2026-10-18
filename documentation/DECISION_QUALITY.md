@@ -39,7 +39,10 @@ goal_fit, gap_cost, optionality, market_testability. The compiler compares ordin
 assessments in this disclosed order, reversing known gap cost; unknown cost is
 not treated as cheap. A failed constraint or low goal fit deprioritizes; weak
 evidence with high gap cost stays exploratory. Exact top ties remain joint primary
-choices, not alphabetical winners. No usable comparison produces BLOCKED.
+choices, not alphabetical winners. No usable comparison produces BLOCKED. A primary
+direction depending on stale or undated current-market facts remains CONDITIONAL
+until those sources are refreshed;
+stable personal history does not expire with a JD.
 
 Output has `direction` with primary / secondary / exploratory / deprioritized,
 comparison and one-resume tie_break; primary_choice, secondary_choice and
@@ -118,8 +121,11 @@ upgrade core Claim confidence or replace audit evidence requirements.
 `ownership_defense` includes safe_claim, complete reported_contributions, boundary,
 independent stage fields and 3–5 defense_questions. Long contributions stay complete
 in the pack instead of cutting a negative qualifier; the short claim uses a bounded
-description. Documents existing are not checked receipts. The host reviews wording
-for usability and fidelity before the person uses it.
+description. Safe wording separates each claim and personal contribution stage:
+planned work is explicitly planned, and unknown personal completion stays unknown.
+The per-claim risk map preserves each audited safe_wording; the overall ownership
+summary does not replace individual claims. Documents existing are not checked
+receipts. The host reviews wording for usability and fidelity before the person uses it.
 
 ## Evaluation and feedback limits
 

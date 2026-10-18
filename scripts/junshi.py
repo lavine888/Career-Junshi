@@ -16,23 +16,27 @@ from scripts.decision import decide, render
 from scripts.feedback_loop import feedback_next_move
 from scripts.method_adapter import review_pattern
 from scripts.models import ContractError, audit_claim, items, obj, timestamp
-from scripts.router import ROUTES, route
+from scripts.router import EXPERIENCES, ROUTES, route
 from scripts.context import extract
 from scripts.memory_store import MemoryStore
+from scripts.io_utils import configure_cli_streams, load_json_input
 
 
 def load_input(path: str):
-    source = Path(path)
-    if source.stat().st_size > 256 * 1024:
-        raise ContractError("Structured input must be <= 256 KiB; extract compact context first")
-    return json.loads(source.read_text(encoding="utf-8-sig"))
+    return load_json_input(path)
 
 
 def main(argv=None) -> int:
+    configure_cli_streams()
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     r = sub.add_parser("route")
     r.add_argument("--mode", required=True, choices=sorted(ROUTES)); r.add_argument("--rejected", action="store_true")
+    r.add_argument("--experience", choices=sorted(EXPERIENCES), help="Optional host-led experience; selects references without running a session")
+    snapshot = sub.add_parser("import-context", help="adapt an explicitly provided private snapshot to the existing extraction packet")
+    snapshot.add_argument("--input", required=True)
+    snapshot.add_argument("--mode", required=True, choices=sorted(ROUTES))
+    snapshot.add_argument("--output", required=True, help="New private extraction file outside Git repositories")
     for cmd in ("decide", "extract", "audit", "feedback", "pattern"):
         p = sub.add_parser(cmd)
         if cmd == "decide":
@@ -49,8 +53,14 @@ def main(argv=None) -> int:
             p.add_argument("--memory-directory", help="Private memory directory")
     args = parser.parse_args(argv)
     try:
-        if args.command == "route":
-            result = route(args.mode, rejected=args.rejected)
+        if args.command == "import-context":
+            from scripts.integration import adapt_snapshot, write_private_packet
+            packet = adapt_snapshot(load_input(args.input), mode=args.mode)
+            target = write_private_packet(packet, args.output)
+            result = {"status": "CONTEXT_ADAPTED", "output": str(target), "memory_enabled": False,
+                      "boundary": "Source labels preserved; no verification upgrade or semantic decision claimed."}
+        elif args.command == "route":
+            result = route(args.mode, rejected=args.rejected, experience=args.experience)
         else:
             data = load_input(args.extraction if args.command == "decide" and args.extraction else args.input)
             if args.command == "decide":
