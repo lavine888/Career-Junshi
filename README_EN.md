@@ -90,7 +90,7 @@ gaps. Persistent memory can stay off.
 
 <a id="experiences"></a>
 
-## Four experiences, one evidence loop
+## Four core experiences, one evidence loop
 
 | Where you are stuck | Ask this | What you get |
 | --- | --- | --- |
@@ -116,6 +116,22 @@ flowchart LR
     D --> E["Return with feedback"]
     E --> B
 ```
+
+### Three details to try now
+
+| Problem | Ask this | What happens |
+| --- | --- | --- |
+| Does “led” hold up? Does “improved” imply too much? | “Check verbs, ownership and causality. Change only unsupported promises.” | Keep supported leadership; separate before/after observations from personal attribution |
+| Restarting every time a question gets difficult | “Pause and give me a copyable checkpoint.” Paste it next time: “Continue here, one question at a time.” | Preserve the actual question, answer and next question; resume from the supplied record |
+| Explaining everything after learning the result | In a fresh chat without the result: “Review only these interview observations first. I will reveal the outcome later.” | Freeze an initial judgment, then compare new information; known results use ordinary review |
+
+Checkpoints stay in chat unless you request otherwise; they do not enable memory.
+Outcome-blind review requires a context that has not seen the result. Removing text
+cannot make the same conversation forget it, and an outcome alone does not prove causality.
+
+Authored Chinese illustrations: [wording audit](cases/experiences/wording-audit/example.md) ·
+[resume from a checkpoint](cases/experiences/defense-resume/example.md) ·
+[outcome-blind review](cases/experiences/outcome-blind-review/example.md).
 
 ## Bring the rest of your job search, too
 
@@ -150,17 +166,19 @@ conversation materials remain subject to the host's data policies. See [memory](
 
 ## What has been checked
 
-The current implementation has **204 automated tests**, **13 structured synthetic
-benchmark cases**, and limited independent host trials of the four experiences.
+The current implementation has **206 automated tests**, **13 structured synthetic
+benchmark cases**, and limited independent host trials of the four core experiences.
 These check software behavior and evidence boundaries; they do not establish improved
 interview or offer rates.
+The wording audit, checkpoint continuation and two-stage review also received fresh-context
+trials, including a known-outcome boundary check. See the [detail evaluation](documentation/REFINEMENT_EVAL.md).
 
 Known weaknesses remain in existing holdouts. Extraction and handoffs can fail, and
 advice can be generic or too cautious. This iteration does not rerun every frozen
 evaluation or claim that the earlier real-user pilot gates have been met. Current
 hiring information still needs fresh sources.
 
-[Evolution plan](documentation/EVOLUTION_PLAN.md) · [Iteration evaluation](documentation/EVOLUTION_EVAL.md) ·
+[Evolution plan](documentation/EVOLUTION_PLAN.md) · [Core experience evaluation](documentation/EVOLUTION_EVAL.md) ·
 [Evaluation protocol](documentation/EVAL.md) · [Frozen holdouts](documentation/V023_HOLDOUT_EVAL.md)
 
 <details>

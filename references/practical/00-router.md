@@ -36,6 +36,12 @@ practical reference within the same 1–3-resource budget:
 | 岗位表达 / adapt one project to supplied roles | positioning | [role-translation](role-translation.md) |
 | 补证冲刺 / fill one evidence gap within a budget | job or positioning | [evidence-sprint](evidence-sprint.md) |
 | 决策复盘 / compare a prior judgment with new observations | current situation mode | [decision-review](decision-review.md) |
+| 措辞核对 / check ownership, stage and causal wording | positioning | [wording-audit](wording-audit.md) |
+| 隐藏结果复盘 / observations before the result is revealed | current situation mode | [outcome-blind-review](outcome-blind-review.md) |
+
+Defense can pause with a copyable checkpoint and resume one question from the
+supplied record. Outcome-blind review requires a context that has not received the
+result; known results use ordinary review instead. Neither branch saves memory.
 
 For example, `python scripts/junshi.py route --mode interview --experience defense`
 selects the playbook and suggests a report filename. It does not conduct an interview,

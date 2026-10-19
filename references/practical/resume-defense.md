@@ -36,6 +36,41 @@ immediately. Resume from the available conversation when asked; if context is
 missing, request the last summary instead of inventing earlier answers. Do not
 save memory or open private files to restore context without explicit consent.
 
+## Pause with a copyable checkpoint
+
+When stopping early, offer this minimal Markdown checkpoint in chat. A question
+stored for later is a pending plan, not a request to keep answering now. Do not
+write a file or enable persistent memory automatically.
+
+```markdown
+## Resume-defense checkpoint
+- Selected sentence / project or Claim ID:
+- Source and status; project stage / personal contribution stage:
+- Original question (verbatim, or explicitly unavailable):
+- User's original answer (verbatim; unanswered if none):
+- Open gap: expression / fact / evidence / unknown; what remains unverified:
+- One next question, pending until the user resumes:
+- Observe in the next answer:
+- Still-unproven boundary / current safe wording:
+```
+
+Populate only from the conversation or records actually supplied. Keep source
+labels and self-report versus checked-evidence status. Preserve planned work as
+planned; a completed team project does not establish personal completion. If the
+user omits or redacts an earlier answer, say it is unavailable rather than filling
+it in. A short or unclear answer does not prove a capability deficit: gap types
+describe this record, and their explanation may remain unknown.
+
+On resume, use the checkpoint the user actually provides, with any new corrections
+identified separately. Do not claim to remember more history than is visible.
+If it is sufficient, briefly state the carried-over boundary and ask only the one
+pending question, then wait. Do not provide a standard answer or the remaining
+question sequence. If no usable checkpoint or conversation is available, ask one
+necessary recovery question, such as which sentence to resume; do not invent a
+previous question, answer or diagnosis. Preserve genuine product leadership and
+decision ownership when supported; unresolved code authorship is not grounds to
+erase a different, supported contribution.
+
 ## Close with a usable result
 
 Deliver a short `resume-defense.md` report in chat; write a file only when the

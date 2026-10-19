@@ -34,9 +34,31 @@ class ExperienceRoutingTests(unittest.TestCase):
 
     def test_invalid_experience_and_mode_combinations_fail_explicitly(self):
         for mode, experience in (("offer", "defense"), ("interview", "proof-sprint"),
-                                 ("job", "role-translation"), ("interview", "unknown")):
+                                 ("job", "role-translation"), ("interview", "wording-audit"),
+                                 ("interview", "unknown")):
             with self.subTest(mode=mode, experience=experience), self.assertRaises(ContractError):
                 route(mode, experience=experience)
+
+    def test_wording_audit_selects_claim_evidence_without_changing_the_default(self):
+        result = route("positioning", experience="wording-audit")
+        self.assertEqual(result["references"], [
+            "references/knowledge/01-evidence-and-claims.md",
+            "references/practical/wording-audit.md",
+        ])
+        self.assertEqual(result["suggested_artifact"], "wording-audit.md")
+        self.assertIn("references/practical/resume.md", route("positioning")["references"])
+
+    def test_blind_review_is_available_in_each_situation_and_ignores_rejection_shortcut(self):
+        for mode in ROUTES:
+            with self.subTest(mode=mode):
+                ordinary = route(mode, experience="outcome-blind-review")
+                rejected = route(mode, rejected=True, experience="outcome-blind-review")
+                self.assertEqual(ordinary, rejected)
+                self.assertEqual(ordinary["references"], [
+                    "references/knowledge/02-career-decision.md",
+                    "references/practical/outcome-blind-review.md",
+                ])
+                self.assertEqual(ordinary["suggested_artifact"], "outcome-blind-review.md")
 
     def test_returned_references_do_not_mutate_the_catalog(self):
         first = route("interview", experience="defense")

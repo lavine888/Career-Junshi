@@ -4,6 +4,14 @@ Compare an earlier decision with new observations and decide the next bounded
 action. This host-led review works within the current chat; persistent memory is
 optional and remains off unless the user separately consents.
 
+For an explicitly requested review before revealing the interview result, use
+[outcome-blind-review.md](outcome-blind-review.md) instead of the ordinary sequence
+below. Its first stage is post-interview observation review, not a pre-interview
+prediction. If the result is already visible in this chat or already-read memory,
+use ordinary review: removing it from a pasted excerpt does not make it unseen.
+Do not ask the user to repeat a result they already supplied. Load only the
+task-relevant references, within the total 1–3 reference budget.
+
 ## Establish the earlier decision
 
 Use a visible earlier message or a user-provided record. Preserve its date,

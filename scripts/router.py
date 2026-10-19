@@ -11,6 +11,9 @@ ROUTES = {
 }
 
 EXPERIENCES = {
+    "wording-audit": {"modes": {"positioning"},
+                      "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/wording-audit.md"],
+                      "artifact": "wording-audit.md"},
     "defense": {"modes": {"positioning", "interview"},
                 "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/resume-defense.md"],
                 "artifact": "resume-defense.md"},
@@ -23,6 +26,9 @@ EXPERIENCES = {
     "decision-review": {"modes": set(ROUTES),
                         "references": ["references/knowledge/02-career-decision.md", "references/practical/decision-review.md"],
                         "artifact": "decision-review.md"},
+    "outcome-blind-review": {"modes": set(ROUTES),
+                             "references": ["references/knowledge/02-career-decision.md", "references/practical/outcome-blind-review.md"],
+                             "artifact": "outcome-blind-review.md"},
 }
 
 

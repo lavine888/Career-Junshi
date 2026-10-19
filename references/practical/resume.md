@@ -1,8 +1,11 @@
 # Resume and claim wording
 
 Read the exact sentence and evidence before rewriting. Audit ownership, stage,
-numbers and proof. Produce one safe sentence, the risky stronger sentence and the
-minimum evidence needed to justify it; do not use the stronger one prematurely.
+numbers and proof. Produce one usable safe sentence and name the minimum missing
+evidence; do not offer an unsubstantiated stronger sentence as a default alternate.
+For a focused verb or causal-scope check, use [wording-audit](wording-audit.md) in
+place of this practical reference. Check the meaning against sources rather than
+treating verbs as forbidden; retain supported product leadership.
 
 Team demo example: “参与团队 Agent 原型，负责评测脚本与失败分类；原型尚未用于生产。”
 This is an illustrative sentence, not an accomplishment to copy into any candidate's

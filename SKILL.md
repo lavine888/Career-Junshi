@@ -77,8 +77,11 @@ Offer 缺目标或硬约束时先问，给有条件的选择标准，不按公�
 | 岗位表达：同一项目适配目标 JD | [role-translation](references/practical/role-translation.md) | 共同事实底稿、各版表达与删留理由 |
 | 补证冲刺：本周补一个缺口 | [evidence-sprint](references/practical/evidence-sprint.md) | 产物、验收、预算与停止线 |
 | 决策复盘：反馈回来后重评 | [decision-review](references/practical/decision-review.md) | 原判断、实际观察、修正与下一步 |
+| 措辞核对：主导、完成、提升是否有据 | [wording-audit](references/practical/wording-audit.md) | 最小修改、依据与缺口 |
+| 隐藏结果复盘：先看观察再揭晓结果 | [outcome-blind-review](references/practical/outcome-blind-review.md) | 冻结初判、揭晓后对照 |
 
 守城一次只问一个问题，等回答再追；用户停止即可总结，不把轮数当能力或胜率。
+暂停时留可复制断点；恢复依据实际记录，不预填答案。已知结果只能普通复盘，不能声称盲评。
 角色表达数量依已给材料，不硬凑三版；缺失 JD 保持职责假设。
 产物可先在聊天给出；用户要求文件时再写入指定目录，不把建议文件名当已生成。
 分享摘要仅按用户选定内容生成待审稿，不默认包含身份或原文，不自动发布。
