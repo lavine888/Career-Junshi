@@ -1,6 +1,6 @@
 <div align="center">
 
-![Career Junshi — Make every claim defensible](assets/readme-hero-fancy.png)
+![Career Junshi — Evidence-backed experience, actionable next steps](assets/readme-hero-editorial.png)
 
 # Career Junshi · 求职军师
 
