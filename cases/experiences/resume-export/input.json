@@ -1,0 +1,60 @@
+{
+  "schema_version": "1",
+  "language": "zh",
+  "name": "林予川",
+  "target_role": "产品实习",
+  "contacts": [
+    "candidate@example.com"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "description": "用户提供的基本资料与身份对应自述"
+    },
+    {
+      "id": "S2",
+      "description": "团队原型的产品决策和贡献记录节选"
+    }
+  ],
+  "sections": [
+    {
+      "title": "教育经历",
+      "entries": [
+        {
+          "title": "青禾学院",
+          "subtitle": "信息管理",
+          "dates": "2023.09—2027.06（预计）",
+          "source_ids": [
+            "S1"
+          ],
+          "bullets": []
+        }
+      ]
+    },
+    {
+      "title": "项目经历",
+      "entries": [
+        {
+          "title": "团队文档检索原型",
+          "subtitle": "产品方案设计",
+          "dates": "2026.07—2026.09",
+          "source_ids": [
+            "S1",
+            "S2"
+          ],
+          "bullets": [
+            {
+              "text": "主导团队文档检索原型的产品方案设计，在回答来源展示与多文档比较之间确定优先级，选择先展示来源并整理验收检查清单；服务由队友实现。",
+              "source_ids": [
+                "S1",
+                "S2"
+              ],
+              "confidence": "SUPPORTED"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_limit": 1
+}

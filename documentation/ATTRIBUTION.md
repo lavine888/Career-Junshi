@@ -1,6 +1,7 @@
 # Attribution and source audit
 
-Audit date: 2026-10-03. This project is independent of all three sources.
+Initial audit: 2026-10-03; resume-workflow source added 2026-10-20.
+This project is independent of the sources below.
 
 ## Goutoujunshi
 
@@ -37,6 +38,22 @@ code were copied. No public revision could be established for that local source.
 Conceptual influence: bounded task retrieval; separate Situation, Decision and
 Outcome; original-source provenance; retrieval does not upgrade evidence.
 The optional integration is a documented explicit snapshot contract, not sync.
+
+## AI Job Search
+
+[Repository](https://github.com/MadsLorentzen/ai-job-search), inspected commit
+`84808eebc13fa7b781b2ede034120c092776668d` on 2026-10-20.
+Inspected the README, MIT license, apply workflow, application-reviewer instructions,
+example CV, PDF text verifier and layout verifier. The draft / independent-review /
+compile / inspect loop and checking the PDF text layer informed the resume-export
+workflow. The exporter and template are independently written; no upstream scripts,
+candidate profiles or moderncv template code were copied.
+
+Career Junshi retains its own evidence levels, consent boundaries, qualitative
+decisions and configurable page budget. It does not import automatic profile writes,
+a fixed two-page requirement, fit scores, job scraping or account integrations.
+The full MIT notice (2026 Mads Lorentzen) is retained in
+[licenses/ai-job-search.txt](licenses/ai-job-search.txt), including installations.
 
 ## Career Junshi additions
 

@@ -37,6 +37,10 @@ def main(argv=None) -> int:
     snapshot.add_argument("--input", required=True)
     snapshot.add_argument("--mode", required=True, choices=sorted(ROUTES))
     snapshot.add_argument("--output", required=True, help="New private extraction file outside Git repositories")
+    resume = sub.add_parser("resume-export", help="Export reviewed, sourced resume text through a fixed LaTeX template")
+    resume.add_argument("--input", required=True, help="Explicit private resume JSON")
+    resume.add_argument("--output-dir", required=True, help="New private directory outside Git and the Skill installation")
+    resume.add_argument("--compile", action="store_true", dest="compile_pdf", help="Request local XeLaTeX compilation and report actual checks")
     for cmd in ("decide", "extract", "audit", "feedback", "pattern"):
         p = sub.add_parser(cmd)
         if cmd == "decide":
@@ -53,7 +57,15 @@ def main(argv=None) -> int:
             p.add_argument("--memory-directory", help="Private memory directory")
     args = parser.parse_args(argv)
     try:
-        if args.command == "import-context":
+        if args.command == "resume-export":
+            from scripts.resume_export import export_resume
+            exported = export_resume(load_input(args.input), args.output_dir, compile_pdf=args.compile_pdf)
+            result = {key: exported[key] for key in ("status", "directory", "checks")}
+            print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
+            failed = exported["status"] in {"COMPILATION_FAILED", "PDF_CHECKS_FAILED"}
+            unavailable = args.compile_pdf and exported["checks"]["compilation"] != "COMPILED"
+            return 2 if failed or unavailable else 0
+        elif args.command == "import-context":
             from scripts.integration import adapt_snapshot, write_private_packet
             packet = adapt_snapshot(load_input(args.input), mode=args.mode)
             target = write_private_packet(packet, args.output)

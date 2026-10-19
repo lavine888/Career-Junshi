@@ -26,6 +26,7 @@ user materials / consented task memory
 | decision.py | Reproducible conservative structured support | No semantic extraction from resumes or hiring prediction |
 | method_adapter.py | Internal methodology plan and comparable feedback review | No dependency on another installed Skill |
 | actions.py | Action ownership and actual Markdown artifact generation | Does not send messages, apply or decide for the user |
+| resume_export.py | Sourced resume data to escaped fixed-template LaTeX and plain text; optional local XeLaTeX | Does not verify claim truth, upload data or certify ATS compatibility |
 | memory_store.py | Consent-gated SQLite and immutable decision history | Local compact memory, no cloud sync |
 | feedback_loop.py | Decision snapshot / next-move handoff | No causal proof from success |
 | install_skill.py | Validated whitelist runtime copy | No overwrite, auto-enable memory or environment setup |
@@ -56,11 +57,18 @@ evaluation reports stay in the checkout; runtime-only benchmark use needs an exp
 
 ## Host-led experiences
 
-Four optional playbooks layer on the existing situation modes: resume defense,
-role translation, evidence sprint and decision review. The host selects the
+Core playbooks and focused branches layer on the existing situation modes: resume
+defense, role translation, evidence sprint, decision review, wording audit,
+outcome-blind review and resume export. The host selects the
 experience from the request, reads its relevant references and conducts the work.
 `junshi.py route --mode interview --experience defense` only selects references
 and suggests an artifact filename; it does not run a session or generate a report.
 Legacy route and decide contracts are unchanged. Runtime installation includes the
 playbooks, and validation checks their presence. Public walkthroughs are synthetic
 illustrations; they do not establish behavioral quality or hiring outcomes.
+
+Resume export uses a bundled single-column template. The standard-library helper
+has no mandatory TeX dependency: source export remains available without XeLaTeX.
+Requested compilation, page-budget checks, text-layer checks and host visual
+inspection are reported separately. Private outputs must be new directories outside
+Git checkouts and the installed Skill. Only synthetic examples ship in the source.

@@ -133,6 +133,31 @@ Authored Chinese illustrations: [wording audit](cases/experiences/wording-audit/
 [resume from a checkpoint](cases/experiences/defense-resume/example.md) ·
 [outcome-blind review](cases/experiences/outcome-blind-review/example.md).
 
+## From real experience to editable application files
+
+```text
+Use Career Junshi to prepare a Chinese single-column resume for this JD,
+aiming for one page. Explain material cuts and preserve contribution boundaries.
+Export LaTeX and plain text to a new private directory I specify.
+Compile a PDF if local XeLaTeX is available. Report content, compilation,
+PDF text-layer and actual visual checks separately.
+```
+
+The flow draws on [AI Job Search](https://github.com/MadsLorentzen/ai-job-search):
+draft, independent review when the host supports it, compile and inspect.
+Junshi retains its own evidence and consent boundaries. Source export needs no
+LaTeX installation; PDF compilation needs local XeLaTeX, fonts and template packages.
+Missing compilation or visual review is reported rather than treated as success.
+
+The bundle preserves editable source, plain text, sourced content data and a
+verification report. Choose a one- or two-page budget; the helper never silently
+cuts content or shrinks fonts. Text extraction is not universal ATS certification.
+Private files stay outside Git and the installed Skill; export does not enable
+memory, upload documents or submit applications.
+
+[Authored synthetic example](cases/experiences/resume-export/example.md) ·
+[Export workflow](references/practical/resume-export.md)
+
 ## Bring the rest of your job search, too
 
 | Your question | Junshi's task |
@@ -166,12 +191,14 @@ conversation materials remain subject to the host's data policies. See [memory](
 
 ## What has been checked
 
-The current implementation has **206 automated tests**, **13 structured synthetic
+The current implementation has **226 automated tests**, **13 structured synthetic
 benchmark cases**, and limited independent host trials of the four core experiences.
 These check software behavior and evidence boundaries; they do not establish improved
 interview or offer rates.
 The wording audit, checkpoint continuation and two-stage review also received fresh-context
 trials, including a known-outcome boundary check. See the [detail evaluation](documentation/REFINEMENT_EVAL.md).
+Source export, missing-compiler behavior and PDF verification limits are recorded
+in the [resume-export evaluation](documentation/RESUME_EXPORT_EVAL.md).
 
 Known weaknesses remain in existing holdouts. Extraction and handoffs can fail, and
 advice can be generic or too cautious. This iteration does not rerun every frozen
@@ -214,6 +241,7 @@ python -m unittest discover -s tests -v
 python scripts/benchmark.py run
 python scripts/validate_skill.py
 python scripts/junshi.py route --mode interview --experience defense
+python scripts/junshi.py resume-export --input /private/reviewed-resume.json --output-dir /private/new-resume
 ```
 
 The entrypoint is [SKILL.md](SKILL.md), playbooks are in [references](references), synthetic
@@ -233,4 +261,5 @@ is incomplete and is not evidence of architectural superiority for this iteratio
 [MIT](LICENSE) · [Attribution and reuse scope](documentation/ATTRIBUTION.md).
 The lightweight kernel and reference routing draw from [Goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi);
 evidence and career feedback methods draw from [Career Alpha](https://github.com/lavine888/career-alpha).
+The resume-export loop draws from [AI Job Search](https://github.com/MadsLorentzen/ai-job-search).
 Upstream license notices are retained.

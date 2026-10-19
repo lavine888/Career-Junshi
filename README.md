@@ -126,6 +126,29 @@ flowchart LR
 [断点续练示意](cases/experiences/defense-resume/example.md) ·
 [隐藏结果复盘示意](cases/experiences/outcome-blind-review/example.md)
 
+## 从真实经历到可投递文件
+
+现在可以接着说：
+
+```text
+请使用求职军师，按这份 JD 整理中文单栏简历，优先一页。
+保留真实贡献，先说明重要删留；给我 LaTeX 源码和纯文本。
+输出到我指定的新私有目录；本机有 XeLaTeX 时再编译 PDF。
+分别说明内容、编译、PDF 文字层和实际页面的检查结果。
+```
+
+这一流程借鉴 [AI Job Search](https://github.com/MadsLorentzen/ai-job-search)
+的起草、独立审阅和 PDF 验收闭环，沿用军师的贡献与证据边界。
+独立审阅依宿主可用能力进行；源码导出不需要 LaTeX，PDF 编译需要本机 XeLaTeX
+及模板所用字体和宏包。没有编译或视觉检查时会如实标明。
+
+同时保留可编辑源码、纯文本、带来源的内容数据和验收记录。
+页数可选 1 或 2 页，不自动缩字或删除实质内容；检查文字层不代表通用 ATS 认证。
+个人资料输出到仓库和 Skill 安装之外，不自动启用档案、记忆、上传或投递。
+
+[合成输入与源码示意](cases/experiences/resume-export/example.md) ·
+[导出流程](references/practical/resume-export.md)
+
 ## 求职的其他难题，也可以直接问
 
 | 你的问题 | 军师的工作 |
@@ -156,10 +179,11 @@ flowchart LR
 
 ## 已验证什么，还有什么没验证
 
-当前实现有 **206 项自动测试**、**13 个结构化合成基准**，以及四个核心体验的有限独立宿主试用。
+当前实现有 **226 项自动测试**、**13 个结构化合成基准**，以及四个核心体验的有限独立宿主试用。
 覆盖证据边界、决策行为、安装与路由；这些不证明提高面试通过率或 Offer 率。
 新增的措辞核对、断点续练和两阶段复盘另有新上下文试用，包含已知结果时的边界检查；
 范围与实际观察见[本次细节验收](documentation/REFINEMENT_EVAL.md)。
+简历导出的实际源码交付、缺编译器路径和验证边界见[导出验收](documentation/RESUME_EXPORT_EVAL.md)。
 
 既有 holdout 仍保留已知弱点，提取和交接可能失败，建议也可能泛化或过于谨慎。
 本轮没有重新评测全部冻结案例，不宣称已满足直接面向真实用户试点的原有门槛。
@@ -198,6 +222,7 @@ python -m unittest discover -s tests -v
 python scripts/benchmark.py run
 python scripts/validate_skill.py
 python scripts/junshi.py route --mode interview --experience defense
+python scripts/junshi.py resume-export --input /private/reviewed-resume.json --output-dir /private/new-resume
 ```
 
 Skill 入口见 [SKILL.md](SKILL.md)，任务指南在 [references](references)，
@@ -216,4 +241,5 @@ Skill 入口见 [SKILL.md](SKILL.md)，任务指南在 [references](references)�
 
 [MIT](LICENSE) · [来源与复用范围](documentation/ATTRIBUTION.md)。
 轻量内核与参考路由借鉴 [Goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi)，
-证据与职业反馈方法受 [Career Alpha](https://github.com/lavine888/career-alpha) 启发；保留上游许可。
+证据与职业反馈方法受 [Career Alpha](https://github.com/lavine888/career-alpha) 启发；
+简历导出闭环参考 [AI Job Search](https://github.com/MadsLorentzen/ai-job-search)。保留上游许可。

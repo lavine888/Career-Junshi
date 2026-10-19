@@ -30,7 +30,7 @@ class ExperienceRoutingTests(unittest.TestCase):
                     self.assertEqual(r["execution"], "host-led")
                     self.assertTrue(1 <= len(r["references"]) <= 3)
                     self.assertEqual(len(r["references"]), len(set(r["references"])))
-                    self.assertTrue(r["suggested_artifact"].endswith(".md"))
+                    self.assertTrue(r["suggested_artifact"].endswith((".md", ".tex")))
 
     def test_invalid_experience_and_mode_combinations_fail_explicitly(self):
         for mode, experience in (("offer", "defense"), ("interview", "proof-sprint"),

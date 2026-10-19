@@ -38,6 +38,7 @@ practical reference within the same 1–3-resource budget:
 | 决策复盘 / compare a prior judgment with new observations | current situation mode | [decision-review](decision-review.md) |
 | 措辞核对 / check ownership, stage and causal wording | positioning | [wording-audit](wording-audit.md) |
 | 隐藏结果复盘 / observations before the result is revealed | current situation mode | [outcome-blind-review](outcome-blind-review.md) |
+| 简历排版 / reviewed role-specific resume to LaTeX and optional PDF | positioning | [resume-export](resume-export.md) |
 
 Defense can pause with a copyable checkpoint and resume one question from the
 supplied record. Outcome-blind review requires a context that has not received the

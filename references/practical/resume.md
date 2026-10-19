@@ -7,6 +7,10 @@ For a focused verb or causal-scope check, use [wording-audit](wording-audit.md) 
 place of this practical reference. Check the meaning against sources rather than
 treating verbs as forbidden; retain supported product leadership.
 
+For editable LaTeX or a compiled application PDF, replace this practical with
+[resume-export](resume-export.md); source generation and PDF verification are
+separate results.
+
 Team demo example: “参与团队 Agent 原型，负责评测脚本与失败分类；原型尚未用于生产。”
 This is an illustrative sentence, not an accomplishment to copy into any candidate's
 resume. Replace it only with the candidate's confirmed contribution.

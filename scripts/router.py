@@ -11,6 +11,9 @@ ROUTES = {
 }
 
 EXPERIENCES = {
+    "resume-export": {"modes": {"positioning"},
+                      "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/resume-export.md"],
+                      "artifact": "resume.tex"},
     "wording-audit": {"modes": {"positioning"},
                       "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/wording-audit.md"],
                       "artifact": "wording-audit.md"},

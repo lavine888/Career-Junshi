@@ -1,6 +1,6 @@
 ---
 name: career-junshi
-description: 求职军师：根据简历、JD、项目证据、招聘反馈和用户约束判断职业局势，给出下一步、观察窗口和停止条件。用于岗位选择、简历守城、岗位表达、面试准备、HR 跟进、补证与决策复盘或 Offer 比较；支持经同意的本地职业与决策记忆。
+description: 求职军师：根据简历、JD、项目证据、招聘反馈和用户约束判断职业局势，给出下一步、观察窗口和停止条件。用于岗位选择、简历守城、岗位表达与排版导出、面试准备、HR 跟进、补证与决策复盘或 Offer 比较；支持经同意的本地职业与决策记忆。
 ---
 
 # 求职军师 · Career Junshi
@@ -65,11 +65,10 @@ Offer 缺目标或硬约束时先问，给有条件的选择标准，不按公�
 历史不提升 Claim 可信度；纠正需保留项目归属与旧决定，不能覆盖历史。
 需岗位翻译时选 [role packs](references/role-packs.json) 中相关一项；
 项目 → Claim → Evidence → Story → Question，不添加成果、不挪用其他项目的证据。
-上述参考计入本次 1–3 份预算，替换不必要的参考，不全部加载。
 
 ## 可以直接开始的体验
 
-用户直接说体验名即可，无需记命令；普通求职问题仍走下面的局势路由。
+直接说体验名即可；普通求职问题走下面的局势路由。
 
 | 用户想做什么 | 本次替换的 practical 参考 | 交付 |
 | --- | --- | --- |
@@ -79,6 +78,7 @@ Offer 缺目标或硬约束时先问，给有条件的选择标准，不按公�
 | 决策复盘：反馈回来后重评 | [decision-review](references/practical/decision-review.md) | 原判断、实际观察、修正与下一步 |
 | 措辞核对：主导、完成、提升是否有据 | [wording-audit](references/practical/wording-audit.md) | 最小修改、依据与缺口 |
 | 隐藏结果复盘：先看观察再揭晓结果 | [outcome-blind-review](references/practical/outcome-blind-review.md) | 冻结初判、揭晓后对照 |
+| 简历排版：岗位版 LaTeX / PDF | [resume-export](references/practical/resume-export.md) | 源码、纯文本、来源与实际验收 |
 
 守城一次只问一个问题，等回答再追；用户停止即可总结，不把轮数当能力或胜率。
 暂停时留可复制断点；恢复依据实际记录，不预填答案。已知结果只能普通复盘，不能声称盲评。
@@ -118,7 +118,7 @@ Learning 必须保持强度：“本次追问 architecture”支持准备相关�
 
 ## Action output and execution
 
-简单问题直接回答。复杂判断给首选、依据、1–3 个动作与停止 / 转向条件；不用机械展示全部字段。
+简单问题直接回答，不机械展示内部字段。
 内部区分动作由助手或本人执行；向用户说明谁做即可，不展示 execution_mode 等字段。助手可审计 repo / Claim、拆 JD、
 生成风险图和五层追问、整理真实 Mother Story / 架构防守、比较 Offer、修改授权的本地材料。
 投递、发送消息、面试、谈薪、接受 / 拒绝 Offer、重大职业选择由人执行；不声称已替用户完成。
