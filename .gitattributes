@@ -20,3 +20,7 @@ benchmark/holdout-v023-mutations/**/artifacts/*.md whitespace=cr-at-eol,-blank-a
 # Multi-turn trial evidence follows the existing frozen-record byte policy.
 benchmark/mock-users-20261020/** -text -eol whitespace=cr-at-eol
 benchmark/mock-users-20261020/responses/**/*.md whitespace=cr-at-eol,-blank-at-eol
+
+# Export handoff trials retain frozen bytes and Markdown hard breaks.
+benchmark/export-handoff-20261020/** -text -eol whitespace=cr-at-eol
+benchmark/export-handoff-20261020/**/response.md whitespace=cr-at-eol,-blank-at-eol

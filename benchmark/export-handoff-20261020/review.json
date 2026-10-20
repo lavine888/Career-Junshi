@@ -1,0 +1,35 @@
+{
+  "source_commit": "3e81ec1751514d5a79216601ff9ab0c3ff8c19d3",
+  "runtime_reference_sha256": "26215e877b1da24fc775157eb9992a5bd5d0675485147d601d5935de539c9284",
+  "agents": {
+    "A": "/root/export_handoff_trial_a",
+    "B": "/root/export_handoff_trial_b"
+  },
+  "model": "Inherited current host model; exact API model identifier and sampling settings not separately exposed.",
+  "results": {
+    "A": {
+      "primary_file_observed": "resume.txt",
+      "compilation": "UNAVAILABLE",
+      "content_matches_approved_input": true,
+      "pdf_exists": false,
+      "reviewer": "root author; ordinary artifact/behavior review, not blind grading"
+    },
+    "B": {
+      "primary_file_observed": "resume.tex",
+      "compilation": "NOT_REQUESTED",
+      "content_matches_approved_input": true,
+      "pdf_exists": false,
+      "reviewer": "root author; ordinary artifact/behavior review, not blind grading"
+    }
+  },
+  "unit_tests": {
+    "passed": 237,
+    "seconds": 53.333,
+    "command": "python -m unittest discover -s tests -v"
+  },
+  "package_validation": true,
+  "skill_creator_validation": true,
+  "original_five_user_archive": "Unmodified; its 65 archive files and 60 review excerpts verified.",
+  "interruption": "A wrote artifacts and response before quota failure; subsequent recovery delivered the same saved response without regeneration. A separate README synchronization command failed approval due quota, then succeeded through normal approval after user continuation.",
+  "limits": "Two single-sample synthetic forward tests, no same-prompt baseline control, no PDF rendering, real users or hiring-effect validation."
+}

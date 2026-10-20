@@ -127,6 +127,17 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 导出保留 **LaTeX 源码、纯文本、带来源的内容数据和验收记录**。
 内容先起草和审阅，再排版；独立审阅依宿主可用能力进行。
 
+**按下一步操作选择文件。** 军师会在交付时推荐入口：
+
+| 接下来想做什么 | 从这里开始 |
+| --- | --- |
+| 复制文字，继续在 Word 等编辑器里修改 | `resume.txt`，纯文本可直接复制；不会 LaTeX 时优先用它 |
+| 继续改 LaTeX 排版 | `resume.tex`，用 TeX 编辑器打开 |
+| 查看 PDF 排版 | 实际生成后的 `resume.pdf`，同时查看交付时说明的检查状态 |
+
+其余 JSON 用于来源追溯与验收，按需查看。`resume.txt` 是纯文本，并非 Word 文件；
+没有编译器时仍可交付源码和纯文本，实际 PDF 页数与版面保留为未验证。
+
 <details>
 <summary>PDF 编译、页数与文件存放</summary>
 
@@ -210,6 +221,7 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 | 投递实验、行动启动、研究外推 | [研究工作流验收](documentation/RESEARCH_EVOLUTION_EVAL.md) |
 | 参考库、结构化面试、Offer 核验 | [参考库验收](documentation/CAREER_LIBRARY_EVAL.md) |
 | 5个模拟用户、15轮实际交互 | [多轮试用](documentation/MOCK_USER_TRIALS.md) |
+| 导出后的文件选择与新手 / LaTeX 场景复测 | [交付改进验收](documentation/EXPORT_HANDOFF_EVAL.md) |
 
 既有冻结案例仍有提取、交接和建议泛化等弱点，未全部重测，也未宣称达到原有真实用户试点门槛。
 当前招聘、薪资与公司信息仍需新鲜来源，不提供候选人综合分数或录用概率。

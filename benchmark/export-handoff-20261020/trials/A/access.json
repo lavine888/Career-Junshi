@@ -1,0 +1,82 @@
+{
+  "references_read": [
+    "references/practical/resume-export.md"
+  ],
+  "other_reads": [
+    "runtime/career-junshi/SKILL.md",
+    "trials/A/request.md",
+    "<RUN_DIR>\\trials\\A\\approved-input.json",
+    "<RUN_DIR>\\trials\\A\\export\\resume.txt",
+    "<RUN_DIR>\\trials\\A\\export\\resume.tex",
+    "<RUN_DIR>\\trials\\A\\export\\resume-data.json",
+    "<RUN_DIR>\\trials\\A\\export\\verification.json",
+    "trials/A/response.md",
+    "trials/A/access.json"
+  ],
+  "commands": [
+    {
+      "command": "Get-Content -Raw -LiteralPath '<RUN_DIR>\\runtime\\career-junshi/SKILL.md'; Get-Content -Raw -LiteralPath '<RUN_DIR>/trials/A/request.md'",
+      "result": "success"
+    },
+    {
+      "command": "Get-Content -Raw -LiteralPath '<RUN_DIR>\\runtime\\career-junshi/references/practical/resume-export.md'",
+      "result": "success"
+    },
+    {
+      "command": "Get-Content -Raw -LiteralPath '<RUN_DIR>\\trials\\A\\approved-input.json'",
+      "result": "success"
+    },
+    {
+      "command": "python '<RUN_DIR>\\runtime\\career-junshi/scripts/junshi.py' resume-export --input '<RUN_DIR>\\trials\\A\\approved-input.json' --output-dir '<RUN_DIR>\\trials\\A\\export' --compile",
+      "exit_code": 1,
+      "result": "SOURCE_ONLY; xelatex is not on PATH"
+    },
+    {
+      "command": "$exportDir = '<RUN_DIR>\\trials\\A\\export'; Get-ChildItem -LiteralPath $exportDir | Select-Object Name,Length; Get-Content -Raw -LiteralPath (Join-Path $exportDir 'resume.txt'); Get-Content -Raw -LiteralPath (Join-Path $exportDir 'resume.tex'); Get-Content -Raw -LiteralPath (Join-Path $exportDir 'resume-data.json'); Get-Content -Raw -LiteralPath (Join-Path $exportDir 'verification.json')",
+      "result": "success"
+    },
+    {
+      "command": "PowerShell here-string | python -",
+      "purpose": "Compare approved JSON and exported text/source; write content-review.md, response.md and access.json; read back and verify generated records",
+      "result": "success"
+    },
+    {
+      "command": "Get-Content -Raw -Encoding UTF8 -LiteralPath '<RUN_DIR>/trials/A/response.md'; Get-Content -Raw -Encoding UTF8 -LiteralPath '<RUN_DIR>/trials/A/export/content-review.md'",
+      "result": "success; UTF-8 Chinese text confirmed intact"
+    },
+    {
+      "command": "PowerShell Get-Content access.json | ConvertFrom-Json; expand recorded path aliases; append final generated-file readback check; ConvertTo-Json -Depth 30 | Set-Content -Encoding UTF8 access.json",
+      "result": "success"
+    }
+  ],
+  "command_path_expansions": {
+    "<runtime>": "<RUN_DIR>\\runtime\\career-junshi",
+    "<log-root>": "<RUN_DIR>",
+    "<input>": "<RUN_DIR>\\trials\\A\\approved-input.json",
+    "<output>": "<RUN_DIR>\\trials\\A\\export"
+  },
+  "outputs": [
+    "<RUN_DIR>\\trials\\A\\export\\content-review.md",
+    "<RUN_DIR>\\trials\\A\\export\\resume-data.json",
+    "<RUN_DIR>\\trials\\A\\export\\resume.tex",
+    "<RUN_DIR>\\trials\\A\\export\\resume.txt",
+    "<RUN_DIR>\\trials\\A\\export\\verification.json",
+    "<RUN_DIR>\\trials\\A\\response.md",
+    "<RUN_DIR>\\trials\\A\\access.json"
+  ],
+  "checks": {
+    "input_fields_preserved": "PASS",
+    "plain_text_exact_content": "PASS",
+    "source_text_coverage": "PASS",
+    "content_review": "ordinary self-review completed",
+    "independent_review": "NOT_PERFORMED",
+    "compilation": "UNAVAILABLE: xelatex not on PATH",
+    "pdf_exists": false,
+    "observed_page_count": null,
+    "pdf_text_layer": "NOT_PERFORMED",
+    "pdf_visual_review": "NOT_PERFORMED",
+    "dependency_installation": "NOT_PERFORMED",
+    "network": "NOT_USED",
+    "memory": "NOT_USED"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "author": "root evaluation operator, not the generating agent",
+  "event": "quota interruption after the answer and export files had been saved",
+  "recovery": "After the user requested continuation, the same case agent was asked to preserve existing files and return its saved answer, without a new export or answer sample.",
+  "observed_result": "The resumed final answer matched the saved user-facing body. The root operator checked existing export files and the saved response hash before and after recovery.",
+  "response_sha256_before": "795fb1e844b1447f0c5015aa379ef6cd912983d97e64bebb8a9ec62843d530a1",
+  "response_sha256_after": "795fb1e844b1447f0c5015aa379ef6cd912983d97e64bebb8a9ec62843d530a1",
+  "limits": "Operator-authored recovery record, not an authenticated full tool trace or an additional independent test."
+}

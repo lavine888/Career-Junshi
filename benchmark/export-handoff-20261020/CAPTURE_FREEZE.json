@@ -1,0 +1,25 @@
+{
+  "captured_at_utc": "2026-10-20T07:25:43.767751+00:00",
+  "sha256": {
+    "BEFORE_GENERATION_FREEZE.json": "c9d1f6140e2674733eba2191c441c4fde668206bd285211eaa526e159e55ae4f",
+    "review.json": "cc305b6ef346799da566c27fee19f84521737ce6e70268503cc2691031fec222",
+    "trials/A/access.json": "4d5b9f5f4fc276c026f6de1a0c70a59a09ec12ca463db4774917ecc6034f4742",
+    "trials/A/approved-input.json": "b55a8996c0a5463d93fdf9090183470e4e0b99096b6d17d99cf1f92c2c6e7547",
+    "trials/A/export/content-review.md": "c1ddcb2c654666128900e66a6ea53761bdb2975748111e5381bc67b58f7b4829",
+    "trials/A/export/resume-data.json": "1808b23b88aeb4fb3bce05f8c401630418f76b400ff8f9d64be329caf132e9e1",
+    "trials/A/export/resume.tex": "fd457118e4945aec29e51916ec68a6cd95d96f2632e0a1e49b56f1428a18fafc",
+    "trials/A/export/resume.txt": "7e0242a7450876c62ed59f2472ca958b70995ba2bd1edf446d0b2890ba591020",
+    "trials/A/export/verification.json": "9b10bf3dbe6e5232683cb147a8042e27101edb5411234caecaab75f8b8b3834c",
+    "trials/A/request.md": "570b2a68df54e80183ccde8c363c435e939603e1e8f42e7822d94dbb0d9b1cd9",
+    "trials/A/response.md": "795fb1e844b1447f0c5015aa379ef6cd912983d97e64bebb8a9ec62843d530a1",
+    "trials/B/access.json": "f800ac56bf02b0813c11f162cadc07ab11e26791744f89bfa18895e890bc5d3a",
+    "trials/B/approved-input.json": "b55a8996c0a5463d93fdf9090183470e4e0b99096b6d17d99cf1f92c2c6e7547",
+    "trials/B/export/resume-data.json": "1808b23b88aeb4fb3bce05f8c401630418f76b400ff8f9d64be329caf132e9e1",
+    "trials/B/export/resume.tex": "fd457118e4945aec29e51916ec68a6cd95d96f2632e0a1e49b56f1428a18fafc",
+    "trials/B/export/resume.txt": "7e0242a7450876c62ed59f2472ca958b70995ba2bd1edf446d0b2890ba591020",
+    "trials/B/export/verification.json": "18d9bd40fa40f9451560efd84e84fc4bb38f834da56fa14e2e672c38d7284a8b",
+    "trials/B/request.md": "0379f381a433e9c106b9d4577029c8a43e21509a3e9bdc632db4a75a37aeb5a4",
+    "trials/B/response.md": "c7be5df25c1c78af32d2d991584d697b1aeae095b2cd3bf975607c523e298aa0",
+    "trials/checks.json": "d9891ad8aabaa5ffd5ab735b01b6e4a7fb5775d64a17fa17f60e8e3be3485f34"
+  }
+}

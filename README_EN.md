@@ -135,6 +135,18 @@ Report content, compilation, PDF text-layer and actual visual checks separately.
 The export keeps **LaTeX source, plain text, sourced content data and a verification report**.
 Drafting and review precede formatting; independent review depends on host capabilities.
 
+**Choose the file for your next step.** Junshi recommends an entry point for your task:
+
+| Your next step | Start here |
+| --- | --- |
+| Copy or edit the content in Word or another editor | `resume.txt`; the default for people who do not use LaTeX |
+| Continue editing LaTeX layout | `resume.tex`, opened in a TeX editor |
+| View the PDF layout | `resume.pdf`, if actually generated, with its reported verification status |
+
+The JSON files support source tracing and verification; consult them as needed.
+`resume.txt` is plain text, not a Word document. Without a compiler, source and text
+remain available; actual PDF page count and layout remain unverified.
+
 <details>
 <summary>PDF compilation, page budget and file location</summary>
 
@@ -228,6 +240,7 @@ They do not establish improved interview or offer rates.
 | Application trials, action starts and research transfer | [Research-workflow evaluation](documentation/RESEARCH_EVOLUTION_EVAL.md) |
 | Sources, structured interviews and offer checks | [Career-library evaluation](documentation/CAREER_LIBRARY_EVAL.md) |
 | Five synthetic users, 15 assistant turns | [Multi-turn trials](documentation/MOCK_USER_TRIALS.md) |
+| File selection for novice and LaTeX users | [Handoff refinement](documentation/EXPORT_HANDOFF_EVAL.md) |
 
 Existing frozen cases retain extraction, handoff and generalization weaknesses.
 They have not all been rerun, and the earlier real-user pilot gates are not claimed as met.

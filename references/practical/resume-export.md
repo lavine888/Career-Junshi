@@ -115,6 +115,22 @@ and remaining limitations. A source-only bundle is useful but is not a completed
 PDF delivery. Revisit the draft when facts or the target change, not by upgrading
 unverified achievements to fill a page.
 
+## Make the next file choice clear
+
+Lead the handoff with one recommended existing file and what the user can do
+with it. Match their intended next step rather than listing every artifact equally.
+For copying or editing content, especially when the user does not use LaTeX,
+recommend `resume.txt` first and explain that its text can be pasted into Word or
+another editor; it is plain text, not a generated Word document. For an explicit
+LaTeX editing task, lead with `resume.tex` instead.
+
+When the user wants a PDF, identify the actual PDF and its performed checks if
+one exists. If compilation was unavailable or failed, say so up front and offer
+the useful source/text fallback; do not present it as a ready PDF or a verified page count.
+Keep source maps, input JSON and verification records in a short secondary group
+with their purpose. List all files when requested, while keeping the recommended
+next step clear. Every link must point to a file actually produced or checked.
+
 For research support about writing assistance, use R3 in
 [research and application](../knowledge/08-research-and-application.md) within the
 same reference budget. That online-market experiment does not test this Skill,

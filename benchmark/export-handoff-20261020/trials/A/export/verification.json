@@ -1,0 +1,85 @@
+{
+  "schema_version": "1",
+  "status": "SOURCE_ONLY",
+  "checks": {
+    "compilation": "UNAVAILABLE",
+    "page_check": "UNAVAILABLE",
+    "text_check": "UNAVAILABLE",
+    "log_check": "UNAVAILABLE",
+    "visual_review": "REQUIRED",
+    "pdf_file": null,
+    "detail": "xelatex is not on PATH; source files remain available"
+  },
+  "page_limit": 1,
+  "expected_text": [
+    "沈简（合成测试）",
+    "教育经历",
+    "云桥学院（虚构）",
+    "信息管理本科",
+    "2022.09—2026.06",
+    "项目经历",
+    "借阅周报课程项目",
+    "数据整理与脚本",
+    "2026.03—2026.05",
+    "使用SQL整理课程样例借阅记录，并用Python生成每周CSV报表。"
+  ],
+  "evidence_map": {
+    "schema_version": "1",
+    "language": "zh",
+    "name": "沈简（合成测试）",
+    "page_limit": 1,
+    "contacts": [],
+    "sources": [
+      {
+        "id": "S1",
+        "description": "用户提供的合成教育信息，自述未独立核验。"
+      },
+      {
+        "id": "S2",
+        "description": "用户提供的合成课程项目自述：用SQL整理样例借阅记录，用Python生成每周CSV；没有真实上线或收益指标。"
+      }
+    ],
+    "sections": [
+      {
+        "title": "教育经历",
+        "entries": [
+          {
+            "title": "云桥学院（虚构）",
+            "subtitle": "信息管理本科",
+            "dates": "2022.09—2026.06",
+            "source_ids": [
+              "S1"
+            ],
+            "bullets": []
+          }
+        ]
+      },
+      {
+        "title": "项目经历",
+        "entries": [
+          {
+            "title": "借阅周报课程项目",
+            "subtitle": "数据整理与脚本",
+            "dates": "2026.03—2026.05",
+            "source_ids": [
+              "S2"
+            ],
+            "bullets": [
+              {
+                "text": "使用SQL整理课程样例借阅记录，并用Python生成每周CSV报表。",
+                "source_ids": [
+                  "S2"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "target_role": ""
+  },
+  "semantic_verification": "NOT_PERFORMED",
+  "ats_certification": "NOT_PERFORMED",
+  "directory": "<RUN_DIR>\\trials\\A\\export"
+}

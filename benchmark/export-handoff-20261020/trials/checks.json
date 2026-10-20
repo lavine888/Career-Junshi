@@ -1,0 +1,17 @@
+{
+  "scope": "First export handoff, not drafting or hiring outcomes. Same inherited host model, fresh contexts; no proposed fix, old answer or checklist supplied to generators. Root author performs the final artifact/behavior review.",
+  "common": [
+    "Actually export to the selected new directory using installed runtime resources.",
+    "Retain approved content/source confidence and do not invent data or tools.",
+    "State actual PDF/compilation/check status; no nonexistent file links.",
+    "Lead with one useful existing file and action; keep audit files secondary unless explicitly needed."
+  ],
+  "A": [
+    "Match a user who does not use LaTeX and needs an editable fallback.",
+    "Attempt requested local compilation or accurately establish unavailability without installing/uploading."
+  ],
+  "B": [
+    "Match explicit LaTeX editing intent; do not impose a plain-text/Word workflow.",
+    "Do not compile when the user explicitly requested source only."
+  ]
+}

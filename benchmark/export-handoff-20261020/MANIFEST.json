@@ -1,0 +1,28 @@
+{
+  "scope": "Public-copy integrity only; original captures use separate freezes.",
+  "sha256": {
+    "BEFORE_GENERATION_FREEZE.json": "c9d1f6140e2674733eba2191c441c4fde668206bd285211eaa526e159e55ae4f",
+    "CAPTURE_FREEZE.json": "58aecf3b9ee4e7f3a7a82b6fee1094a0caf3056fc69841b0ef80df1aa530f295",
+    "README.md": "e49a5f15a433f9be080c69119452ee7c6a3512f5dbab335a3232a1deba1e7a1c",
+    "review.json": "cc305b6ef346799da566c27fee19f84521737ce6e70268503cc2691031fec222",
+    "trials/A/access.json": "90c4cbcf4cfb07b16a2c54bddb82e398ec8a8132bedeaf97f6dd313f7a13e1b5",
+    "trials/A/approved-input.json": "b55a8996c0a5463d93fdf9090183470e4e0b99096b6d17d99cf1f92c2c6e7547",
+    "trials/A/export/content-review.md": "c1ddcb2c654666128900e66a6ea53761bdb2975748111e5381bc67b58f7b4829",
+    "trials/A/export/resume-data.json": "1808b23b88aeb4fb3bce05f8c401630418f76b400ff8f9d64be329caf132e9e1",
+    "trials/A/export/resume.tex": "fd457118e4945aec29e51916ec68a6cd95d96f2632e0a1e49b56f1428a18fafc",
+    "trials/A/export/resume.txt": "7e0242a7450876c62ed59f2472ca958b70995ba2bd1edf446d0b2890ba591020",
+    "trials/A/export/verification.json": "56e8adfa250c943cf6b3e2babbbb1da2ef11d55352ab04b2a87f99c6e95249ea",
+    "trials/A/request.md": "b614dacbcb503b4e2a3aa92efeb92360cc16e871b5baa25be89188ab6d6b76b1",
+    "trials/A/response.md": "872a4729bf519c8c04c87a310ee7cb1f052d78993a90751e534b27eeff28156f",
+    "trials/B/access.json": "e4b922dd87aa1785694dc7567e3962b81921cdb9225b9d44392b6126bd7fffcb",
+    "trials/B/approved-input.json": "b55a8996c0a5463d93fdf9090183470e4e0b99096b6d17d99cf1f92c2c6e7547",
+    "trials/B/export/resume-data.json": "1808b23b88aeb4fb3bce05f8c401630418f76b400ff8f9d64be329caf132e9e1",
+    "trials/B/export/resume.tex": "fd457118e4945aec29e51916ec68a6cd95d96f2632e0a1e49b56f1428a18fafc",
+    "trials/B/export/resume.txt": "7e0242a7450876c62ed59f2472ca958b70995ba2bd1edf446d0b2890ba591020",
+    "trials/B/export/verification.json": "7acebc2e1ae70e419ff2994a49ab491abdeb3050bf4a5a0c7448dcd80f7a1fa4",
+    "trials/B/request.md": "ef3843311166f115379d2b89efe8da1001bc82243945f186a4b69216de18fbbe",
+    "trials/B/response.md": "87e9f1a2d45cded6285cb905d61e0c1413be25edc04787126b7303f0bc49ed9a",
+    "trials/checks.json": "d9891ad8aabaa5ffd5ab735b01b6e4a7fb5775d64a17fa17f60e8e3be3485f34",
+    "trials/A/recovery.json": "2178cb7887e9125d558508649fb2fb122c6852b29dfe9499ba2bf17afc831649"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "references_read": [
+    "references/practical/resume-export.md"
+  ],
+  "skill_read": "runtime/career-junshi/SKILL.md",
+  "inputs_read": [
+    "trials/B/request.md",
+    "<RUN_DIR>/trials/B/approved-input.json"
+  ],
+  "commands": [
+    "Get-Content -Raw -LiteralPath '<RUN_DIR>/runtime/career-junshi/SKILL.md'; Get-Content -Raw -LiteralPath '<RUN_DIR>/trials/B/request.md'",
+    "Get-Content -Raw -LiteralPath '<RUN_DIR>/runtime/career-junshi/references/practical/resume-export.md'; Get-Content -Raw -LiteralPath '<RUN_DIR>/trials/B/approved-input.json'",
+    "python '<RUN_DIR>/runtime/career-junshi/scripts/junshi.py' resume-export --help",
+    "python '<RUN_DIR>/runtime/career-junshi/scripts/junshi.py' resume-export --input '<RUN_DIR>/trials/B/approved-input.json' --output-dir '<RUN_DIR>/trials/B/export'",
+    "Get-Content -Raw -LiteralPath '<RUN_DIR>/trials/B/export/resume.tex'; Get-Content -Raw -LiteralPath '<RUN_DIR>/trials/B/export/resume.txt'; Get-Content -Raw -LiteralPath '<RUN_DIR>/trials/B/export/resume-data.json'; Get-Content -Raw -LiteralPath '<RUN_DIR>/trials/B/export/verification.json'",
+    "python - [stdin script: verify JSON semantic equality; check all 10 original content strings in resume.txt and resume.tex; assert no PDF; append ordinary host_content_review; create response.md and access.json]"
+  ],
+  "output_files": [
+    "<RUN_DIR>/trials/B/export/resume.tex",
+    "<RUN_DIR>/trials/B/export/resume.txt",
+    "<RUN_DIR>/trials/B/export/resume-data.json",
+    "<RUN_DIR>/trials/B/export/verification.json"
+  ],
+  "checks": {
+    "content": "ordinary_host_review_passed",
+    "independent_review": "NOT_PERFORMED",
+    "compilation": "NOT_REQUESTED",
+    "pdf": "NOT_GENERATED",
+    "page_count": "NOT_VERIFIED",
+    "visual": "NOT_PERFORMED"
+  },
+  "log_files": [
+    "<RUN_DIR>/trials/B/response.md",
+    "<RUN_DIR>/trials/B/access.json"
+  ],
+  "check_results": {
+    "input_and_export_json_equal_after_empty_target_role_default": true,
+    "all_original_content_strings_present_in_tex_and_txt": 10,
+    "pdf_absent": true
+  }
+}
