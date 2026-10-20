@@ -1,0 +1,131 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "id": "R1",
+      "title": "Effectiveness of job search interventions: A meta-analytic review",
+      "authors": "Songqi Liu; Jason L. Huang; Mo Wang",
+      "year": "2014",
+      "kind": "meta_analysis",
+      "topics": ["job_search"],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24588365/",
+      "checked_on": "2026-10-20",
+      "read_depth": "abstract",
+      "setting": "47 experimentally or quasi-experimentally evaluated job-search interventions; country composition unknown from inspected abstract.",
+      "finding": "The abstract reports improved pooled employment odds and differences associated with intervention components. The index read the bibliographic record and abstract, not the full paper or constituent trials.",
+      "use": "Pair practical job-search rehearsal with feasible action support; this pairing in Career Junshi is an untested product adaptation.",
+      "limits": [
+        "Component comparisons do not identify an isolated component's causal effect.",
+        "The reported pooled odds ratio of 2.67 is neither a probability ratio nor an individual hiring multiplier.",
+        "Does not evaluate this Skill or establish current hiring conditions."
+      ],
+      "jurisdiction": "Research, not legal guidance; constituent country distribution not verified.",
+      "version": "Psychological Bulletin 140(4), 1009–1041; DOI 10.1037/a0035923; online first 2014-03-03. Existing abstract-only audit retained."
+    },
+    {
+      "id": "R2",
+      "title": "Job search and employment success: A quantitative review and future research agenda",
+      "authors": "Edwin A. J. van Hooft; John D. Kammeyer-Mueller; Connie R. Wanberg; Ruth Kanfer; Gokce Basbug",
+      "year": "2021",
+      "kind": "meta_analysis",
+      "topics": ["job_search"],
+      "url": "https://carlsonschool.umn.edu/sites/carlsonschool.umn.edu/files/2021-06/VanHooftKammeyerMuellerWanbergKanferBasbug_JAP%202021.pdf",
+      "checked_on": "2026-10-20",
+      "read_depth": "selected_sections",
+      "setting": "378 independent samples, 165,933 participants; entrants and unemployed or employed job seekers. Full country composition not checked.",
+      "finding": "Activity, search quality and employment quality are distinct. Existing audit covered abstract, inclusion/sample description, Table 2 and related results, and discussion of intensity versus quality; not every analysis.",
+      "use": "Separate applications, interviews, offers and job quality. Inspect targeting and constraints before increasing volume; this review workflow is untested.",
+      "limits": [
+        "Associations do not establish that extra applications cause this user's success.",
+        "Does not identify an optimal quota or support diagnosing causes from a short application funnel.",
+        "Search-quality findings draw on fewer studies; individual fit and current demand remain unknown."
+      ],
+      "jurisdiction": "Research, not regional hiring guidance; full country composition not verified.",
+      "version": "Journal of Applied Psychology 106(5), 674–713; DOI 10.1037/apl0000675; online first 2020-07-13, issue 2021. Existing selected-section audit retained."
+    },
+    {
+      "id": "R3",
+      "title": "Algorithmic Writing Assistance on Jobseekers' Resumes Increases Hires",
+      "authors": "Emma van Inwegen; Zanele Munyikwa; John J. Horton",
+      "year": "2023",
+      "kind": "experiment",
+      "topics": ["resume"],
+      "url": "https://arxiv.org/abs/2301.08083v1",
+      "checked_on": "2026-10-20",
+      "read_depth": "selected_sections",
+      "setting": "Online labor market field experiment: 480,948 initially allocated entrants; 194,700 approved entrants with nonempty resumes analyzed. About 14% US-based; complete geography unchecked.",
+      "finding": "Writing assistance increased hiring in this setting. Existing audit covered abstract, intervention/randomization, Section 2.5/Table 1 sample flow and geography, and hiring discussion; no replication.",
+      "use": "Improve clarity while preserving approved facts. Separating evidence, wording and export is an untested product adaptation.",
+      "limits": [
+        "The roughly 8% reported hiring gain is relative, not eight percentage points or a personal forecast.",
+        "Does not evaluate LaTeX, a particular layout, generative embellishment, or Career Junshi.",
+        "Transfer to other occupations, countries or hiring systems is unverified."
+      ],
+      "jurisdiction": "Multi-country platform sample; not jurisdiction-specific guidance.",
+      "version": "arXiv:2301.08083v1, submitted 2023-01-19; PDF title page 2023-01-20. Preprint pinned; existing selected-section audit retained."
+    },
+    {
+      "id": "R4",
+      "title": "Implementation intentions and goal achievement: A meta-analysis of effects and processes",
+      "authors": "Peter M. Gollwitzer; Paschal Sheeran",
+      "year": "2006",
+      "kind": "meta_analysis",
+      "topics": ["job_search"],
+      "url": "https://www.socmot.uni-konstanz.de/publications/implementation-intentions-and-goal-achievement-meta-analysis-effects-and-processes",
+      "checked_on": "2026-10-20",
+      "read_depth": "selected_sections",
+      "setting": "94 independent tests across goal domains; inspected pages do not establish population or country composition. Not direct job-search evidence.",
+      "finding": "The inspected abstract and introduction concern cue-linked implementation intentions and goal achievement. Existing audit read the university record and visually inspected scanned pages 69–70, not full methods or trial reports.",
+      "use": "Offer an optional feasible if–then action. An obstacle fallback and review point are product design choices, not results directly tested here.",
+      "limits": [
+        "Does not establish a guaranteed habit, hiring effect or suitable schedule for this user.",
+        "General goal research cannot validate a career-specific intervention.",
+        "Do not infer diagnosis, motivation deficits or personal ability from failure to act."
+      ],
+      "jurisdiction": "Research across goal domains; population and country composition unverified.",
+      "version": "Advances in Experimental Social Psychology 38, 69–119; DOI 10.1016/S0065-2601(06)38002-1. Existing opening-pages audit retained."
+    },
+    {
+      "id": "R5",
+      "title": "Toward a Unifying Social Cognitive Theory of Career and Academic Interest, Choice, and Performance",
+      "authors": "Robert W. Lent; Steven D. Brown; Gail Hackett",
+      "year": "1994",
+      "kind": "theory",
+      "topics": ["career_choice"],
+      "url": "https://www.researchgate.net/publication/230557657_Toward_a_Unifying_Social_Cognitive_Theory_of_Career_and_Academic_Interest_Choice_and_Performance",
+      "checked_on": "2026-10-20",
+      "read_depth": "abstract",
+      "setting": "Career and academic development framework; participant and country composition of supporting analyses not inspected.",
+      "finding": "The author-uploaded work's abstract proposes relationships among self-efficacy, outcome expectations, goals, learning experiences and contextual supports or constraints. It also mentions a synthesis; its methods and results were not read.",
+      "use": "Separate interests, demonstrated capabilities, expected outcomes and actual constraints before proposing one reversible career exploration step. This conversational use is a product adaptation.",
+      "limits": [
+        "A theoretical framework is not a validated job classifier or personal-fit score.",
+        "Self-reported confidence does not establish skill, opportunity or hiring probability.",
+        "Publisher DOI fetch returned 403; accessible author-upload page abstract was read, not the full paper or its empirical analyses."
+      ],
+      "jurisdiction": "Research framework; applicability to any particular labor market remains unverified.",
+      "version": "Journal of Vocational Behavior 45(1), 79–122; August 1994; DOI 10.1006/jvbe.1994.1027. Author-uploaded publication page, uploaded by Gail Hackett 2018-05-10; abstract only."
+    },
+    {
+      "id": "R6",
+      "title": "Consequences of Individuals' Fit at Work: A Meta-Analysis of Person–Job, Person–Organization, Person–Group, and Person–Supervisor Fit",
+      "authors": "Amy L. Kristof-Brown; Ryan D. Zimmerman; Erin C. Johnson",
+      "year": "2005",
+      "kind": "meta_analysis",
+      "topics": ["career_choice", "offer"],
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1744-6570.2005.00672.x",
+      "checked_on": "2026-10-20",
+      "read_depth": "abstract",
+      "setting": "172 studies and 836 effect sizes on preentry and postentry fit-related outcomes; constituent populations and countries not verified.",
+      "finding": "The publisher abstract synthesizes relationships involving four kinds of fit, employment attitudes and other outcomes, and considers measurement and design differences. Full methods and effect-size tables were not read.",
+      "use": "Distinguish task demands, organizational expectations, team interaction and supervisor working style; request observable information separately rather than one global fit judgment.",
+      "limits": [
+        "Pooled associations and subjective fit perceptions cannot diagnose an individual's actual fit or hiring probability.",
+        "Does not establish causal effects, a personality-based job prescription or validated scoring weights.",
+        "The full-text route redirected to the publisher abstract; no full-text review is claimed."
+      ],
+      "jurisdiction": "Research, not regional hiring guidance; sample geography not inspected.",
+      "version": "Personnel Psychology 58(2), 281–342; version of record online 2005-05-09, issue June 2005; DOI 10.1111/j.1744-6570.2005.00672.x. Publisher abstract only."
+    }
+  ]
+}

@@ -12,3 +12,6 @@ Codex prepares a draft and comparison; the user sends and negotiates. Observe th
 employer's explicit counteroffer. Stop on the user's walk-away condition; only a
 human accepts or rejects. Return confirmed terms to the comparison rather than
 treating a verbal possibility as an agreed contract.
+
+For source-aware verification or a requested rehearsal, use
+[offer-check](offer-check.md). Research effects are not a personal salary guarantee.

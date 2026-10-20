@@ -11,6 +11,12 @@ ROUTES = {
 }
 
 EXPERIENCES = {
+    "structured-interview": {"modes": {"interview"},
+                             "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/structured-interview.md"],
+                             "artifact": "structured-interview.md"},
+    "offer-check": {"modes": {"offer", "recruiting"},
+                    "references": ["references/knowledge/06-offer-evaluation.md", "references/practical/offer-check.md"],
+                    "artifact": "offer-check.md"},
     "job-search-experiment": {"modes": {"job", "positioning", "recruiting"},
                               "references": ["references/knowledge/08-research-and-application.md", "references/practical/job-search-experiment.md"],
                               "artifact": "job-search-experiment.md"},

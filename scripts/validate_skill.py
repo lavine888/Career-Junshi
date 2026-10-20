@@ -14,19 +14,24 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.router import EXPERIENCES, ROUTES, route
+from scripts.source_catalog import CATALOG_FILES, load_catalog
 
 ROOT = Path(__file__).resolve().parents[1]
 RUNTIME_DOCS = ["ARCHITECTURE.md", "EVIDENCE.md", "MEMORY.md", "INTEGRATION.md", "ACTIONS.md", "CONTEXT_EXTRACTION.md", "DECISION_INTELLIGENCE.md", "DECISION_QUALITY.md"]
 RUNTIME_FILES = ["SKILL.md", "LICENSE", "agents/openai.yaml", "documentation/ATTRIBUTION.md"] + [f"documentation/{name}" for name in RUNTIME_DOCS] + [
     "documentation/licenses/Goutoujunshi.txt", "documentation/licenses/Career-Alpha.txt",
-    "documentation/licenses/ai-job-search.txt", "assets/resume/single-column.tex"]
+    "documentation/licenses/ai-job-search.txt", "assets/resume/single-column.tex", *CATALOG_FILES]
 SCRIPTS = ["__init__.py", "models.py", "io_utils.py", "router.py", "decision.py", "memory_store.py", "feedback_loop.py", "integration.py",
-           "method_adapter.py", "actions.py", "junshi.py", "validate_skill.py", "install_skill.py", "context.py", "intelligence.py", "calibration.py", "hypothesis.py", "role_story.py", "benchmark.py", "decision_quality.py", "resume_export.py"]
+           "method_adapter.py", "actions.py", "junshi.py", "validate_skill.py", "install_skill.py", "context.py", "intelligence.py", "calibration.py", "hypothesis.py", "role_story.py", "benchmark.py", "decision_quality.py", "resume_export.py", "source_catalog.py"]
 
 
 def validate(root: Path, *, runtime_only=False) -> list[str]:
     root = root.resolve()
     errors = []
+    try:
+        load_catalog(root)
+    except (ValueError, OSError) as exc:
+        errors.append("Invalid research catalog: " + str(exc))
     required = RUNTIME_FILES + [f"scripts/{s}" for s in SCRIPTS]
     required += list(dict.fromkeys(p for refs in ROUTES.values() for p in refs))
     required += list(dict.fromkeys(p for profile in EXPERIENCES.values() for p in profile["references"]))

@@ -18,3 +18,6 @@ If the evidence cannot be defended, lower wording instead of rehearsing a bluff.
 Maximum three primary actions, with timing/practice/metrics as substeps, not six
 separate tasks. Strong risk wording requires direct feedback; otherwise call it
 a preparation hypothesis and retain product leadership while clarifying ownership.
+
+For a requested JD-based mock interview with declared criteria, replace this
+practical with [structured-interview](structured-interview.md).

@@ -37,6 +37,7 @@ user materials / consented task memory
 | hypothesis.py | KEEP / REFINE / guarded PIVOT review | No automatic direction switch or statistical effect estimate |
 | role_story.py | Existing claim → evidence → story → role questions | Never adds accomplishments; prose remains host-dependent |
 | benchmark.py | Repeatable structured checks and blinded host packets | Does not grade natural-language decision quality |
+| source_catalog.py | Validated distinct source records, computed counts and bounded topic/ID discovery | Offline metadata, not live source authentication or legal advice |
 
 SQLite was chosen over rewriting whole JSON files: standard-library transactions,
 bounded reads, foreign keys and concurrent updates reduce corruption risk without
@@ -78,3 +79,11 @@ The optional research index separates publication design and findings from produ
 adaptations. It is loaded for a relevant question rather than every request.
 Application experiments and start cards remain host-led: routing cannot run an
 experiment, authenticate a study or establish a causal hiring effect.
+
+Source cards live in three runtime JSON catalogs. Identity, type, reading depth,
+version, jurisdiction and limits are required; duplicate IDs, canonical URLs and
+identical normalized titles are rejected. Summary discovery is separate from
+reading one detailed card. Counts are computed from distinct records; topics overlap.
+Structured-interview coaching declares a practice criterion before the answer.
+Offer checks prioritize actual decisive terms and risk signals; the user performs
+external verification and decisions. Neither workflow inherits research validity.

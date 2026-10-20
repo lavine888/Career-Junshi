@@ -1,0 +1,131 @@
+{
+  "schema_version": "1",
+  "sources": [
+    {
+      "id": "R7",
+      "title": "Structured Interviews: A Practical Guide",
+      "authors": "U.S. Office of Personnel Management",
+      "year": "2008",
+      "kind": "official_guidance",
+      "topics": ["interview"],
+      "url": "https://www.opm.gov/policy-data-oversight/assessment-and-selection/structured-interviews/guide.pdf",
+      "checked_on": "2026-10-20",
+      "read_depth": "selected_sections",
+      "setting": "Guidance for U.S. federal hiring; read introduction, job-analysis steps, question design and probing sections.",
+      "finding": "The guide links interview questions to job competencies, distinguishes past-behavior from hypothetical questions, and recommends planned clarification probes and pilot testing.",
+      "use": "Build a practice question from one JD requirement; ask for an actual incident, personal action and observable outcome. Keep hypothetical plans separate from completed experience.",
+      "limits": [
+        "Employer assessment guidance, not a trial of this Skill or a guarantee of candidate success.",
+        "Adaptive coaching does not reproduce a standardized selection interview; do not import its rating scales as personal hiring probabilities.",
+        "Historical U.S. federal guidance; local legal requirements require current local sources."
+      ],
+      "jurisdiction": "United States federal hiring guidance; not Chinese employment law",
+      "version": "September 2008 guide, 36 PDF pages; selected printed pages 3–7 and 12–14 checked"
+    },
+    {
+      "id": "R8",
+      "title": "The Structured Employment Interview: Narrative and Quantitative Review of the Research Literature",
+      "authors": "Julia Levashina; Christopher J. Hartwell; Frederick P. Morgeson; Michael A. Campion",
+      "year": "2014",
+      "kind": "review",
+      "topics": ["interview"],
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/peps.12052",
+      "checked_on": "2026-10-20",
+      "read_depth": "abstract",
+      "setting": "Review of employment-interview research on structure, bias, impression management, question types, rating scales, probing and applicant reactions; abstract read.",
+      "finding": "The review combines narrative discussion with quantitative synthesis where possible and identifies unresolved questions rather than one universally optimal interview format.",
+      "use": "Make the purpose of each practice question explicit, then clarify the user's actual response. Treat probing design as a choice with tradeoffs; identify coached wording separately from new evidence.",
+      "limits": [
+        "Only the publisher abstract was read; do not cite specific subgroup estimates, tables or moderator results from this card.",
+        "Selection-interview research does not establish that LLM coaching improves job offers.",
+        "The abstract does not establish transfer to every country, occupation or candidate group."
+      ],
+      "jurisdiction": "Employment research across reviewed settings; country coverage not established from abstract",
+      "version": "Personnel Psychology 67, 241–293 (2014); online first 10 July 2013; DOI 10.1111/peps.12052"
+    },
+    {
+      "id": "R9",
+      "title": "Revisiting meta-analytic estimates of validity in personnel selection: Addressing systematic overcorrection for restriction of range",
+      "authors": "Paul R. Sackett; Charlene Zhang; Christopher M. Berry; Filip Lievens",
+      "year": "2022",
+      "kind": "meta_analysis",
+      "topics": ["interview"],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34968080/",
+      "checked_on": "2026-10-20",
+      "read_depth": "abstract",
+      "setting": "Reanalysis of earlier personnel-selection validity syntheses, especially corrections for restriction of range; original abstract read through PubMed.",
+      "finding": "The authors identify overcorrection in earlier approaches and report lower revised validity estimates for many selection procedures; structured interviews rank highly in their reanalysis.",
+      "use": "Explain why job-related, structured evidence deserves attention while retaining uncertainty. Check correction methods, outcome definitions and variation before repeating historical rankings.",
+      "limits": [
+        "A predictor–job-performance association is not an individual's probability of passing an interview.",
+        "A meta-analytic ranking is conditional on included evidence and correction choices, not a universal ranking for every employer.",
+        "Abstract-only reading does not settle subsequent methodological debate or subgroup applicability; it does not validate this Skill."
+      ],
+      "jurisdiction": "Personnel-selection literature; do not extrapolate to a particular country or demographic group",
+      "version": "Journal of Applied Psychology 107(11), 2040–2068 (2022); online first 30 December 2021; DOI 10.1037/apl0000994"
+    },
+    {
+      "id": "R10",
+      "title": "A Review of Structure in the Selection Interview",
+      "authors": "Michael A. Campion; David K. Palmer; James E. Campion",
+      "year": "1997",
+      "kind": "review",
+      "topics": ["interview"],
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1744-6570.1997.tb00709.x",
+      "checked_on": "2026-10-20",
+      "read_depth": "abstract",
+      "setting": "Historical review of ways to structure interview content and response evaluation; publisher abstract and bibliographic information checked.",
+      "finding": "The review identifies fifteen components of interview structure and evaluates them against reliability, validity and user reactions; structure comprises multiple design choices.",
+      "use": "Separate what a practice question asks from how its answer is reviewed. Record the target competency and missing observable detail instead of issuing an unexplained global candidate score.",
+      "limits": [
+        "The abstract does not provide enough detail to implement or attribute every component; use the official guide for concrete procedures.",
+        "This historical review is not a current universal effect-size estimate or a validation of conversational coaching.",
+        "Publisher online-posting date differs from the 1997 journal year."
+      ],
+      "jurisdiction": "Selection-interview research; country and occupation coverage not established from abstract",
+      "version": "Personnel Psychology 50(3), 655–702 (1997); publisher webpage posted 7 December 2006; DOI 10.1111/j.1744-6570.1997.tb00709.x"
+    },
+    {
+      "id": "R11",
+      "title": "Test-enhanced learning: taking memory tests improves long-term retention",
+      "authors": "Henry L. Roediger; Jeffrey D. Karpicke",
+      "year": "2006",
+      "kind": "experiment",
+      "topics": ["interview"],
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16507066/",
+      "checked_on": "2026-10-20",
+      "read_depth": "abstract",
+      "setting": "Two experiments with students learning prose passages; immediate free recall versus restudy, followed by retention tests after short or longer delays.",
+      "finding": "Retrieval produced better delayed retention than additional study, whereas restudy performed better at the shortest delay. Confidence after restudy did not imply better delayed recall.",
+      "use": "As an explicitly indirect design hypothesis, let the user attempt an answer before showing a rewrite, then revisit the same evidence gap later. Compare concrete answer details rather than confidence alone.",
+      "limits": [
+        "Student prose-memory experiments are not evidence of improved interview performance or hiring outcomes.",
+        "Remembering a polished sentence neither verifies its claims nor demonstrates job competence.",
+        "Abstract-only reading; country and sample composition are not established here."
+      ],
+      "jurisdiction": "Educational memory experiments; no employment-law applicability",
+      "version": "Psychological Science 17(3), 249–255 (2006); DOI 10.1111/j.1467-9280.2006.01693.x"
+    },
+    {
+      "id": "R12",
+      "title": "The effects of feedback interventions on performance: A historical review, a meta-analysis, and a preliminary feedback intervention theory",
+      "authors": "Avraham N. Kluger; Angelo DeNisi",
+      "year": "1996",
+      "kind": "meta_analysis",
+      "topics": ["interview"],
+      "url": "https://www.researchgate.net/publication/232458848_The_Effects_of_Feedback_Interventions_on_Performance_A_Historical_Review_a_Meta-Analysis_and_a_Preliminary_Feedback_Intervention_Theory",
+      "checked_on": "2026-10-20",
+      "read_depth": "abstract",
+      "setting": "Historical synthesis of feedback effects across performance tasks; original abstract read on the author's uploaded publication page, with bibliography checked on the author's site.",
+      "finding": "Feedback improved performance on average but some effects were negative. The proposed account links effectiveness to where attention is directed, including movement away from the task toward the self.",
+      "use": "As an indirect coaching design choice, identify one answer-specific gap and one retry action. Avoid personality judgments and stop escalating critique when it no longer helps the user's task.",
+      "limits": [
+        "Diverse performance tasks are not direct evidence of improved job-search or interview outcomes.",
+        "Moderator findings do not guarantee that any particular feedback wording will help this user.",
+        "Publisher access failed; only the original abstract and author bibliography were read, not the full meta-analysis."
+      ],
+      "jurisdiction": "Performance-feedback research across tasks; sample geography not established from abstract",
+      "version": "Psychological Bulletin 119(2), 254–284 (1996); DOI 10.1037/0033-2909.119.2.254; author-uploaded abstract accessed"
+    }
+  ]
+}

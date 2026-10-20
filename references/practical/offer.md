@@ -23,3 +23,6 @@ or workload matter only as supported by this context; no universal runway thresh
 Hard constraint failure excludes an option. Unknown constraint status prevents
 acceptance, but can still allow a provisional preference. Missing goals/comparable
 role information may genuinely block ranking. Never treat inference as verified.
+
+For decisive written-term checks, payment/data demands or negotiation preparation,
+replace this practical with [offer-check](offer-check.md).

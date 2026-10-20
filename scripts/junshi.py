@@ -41,6 +41,11 @@ def main(argv=None) -> int:
     resume.add_argument("--input", required=True, help="Explicit private resume JSON")
     resume.add_argument("--output-dir", required=True, help="New private directory outside Git and the Skill installation")
     resume.add_argument("--compile", action="store_true", dest="compile_pdf", help="Request local XeLaTeX compilation and report actual checks")
+    sources = sub.add_parser("sources", help="Browse source summaries or one detailed source card; no network or persistence")
+    selection = sources.add_mutually_exclusive_group()
+    selection.add_argument("--topic", help="job_search, career_choice, resume, interview, negotiation, offer, rights or safety")
+    selection.add_argument("--id", dest="source_id", help="One detailed source card, such as R7")
+    sources.add_argument("--limit", type=int, default=3, help="Maximum summary results, 1..10; catalog order is not a ranking")
     for cmd in ("decide", "extract", "audit", "feedback", "pattern"):
         p = sub.add_parser(cmd)
         if cmd == "decide":
@@ -57,7 +62,10 @@ def main(argv=None) -> int:
             p.add_argument("--memory-directory", help="Private memory directory")
     args = parser.parse_args(argv)
     try:
-        if args.command == "resume-export":
+        if args.command == "sources":
+            from scripts.source_catalog import query_sources
+            result = query_sources(topic=args.topic, source_id=args.source_id, limit=args.limit)
+        elif args.command == "resume-export":
             from scripts.resume_export import export_resume
             exported = export_resume(load_input(args.input), args.output_dir, compile_pdf=args.compile_pdf)
             result = {key: exported[key] for key in ("status", "directory", "checks")}

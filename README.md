@@ -156,6 +156,8 @@ flowchart LR
 | “明天下午二面，今晚只有 90 分钟。” | 收敛最高风险和 1–3 个动作，明确哪些事今晚先停 |
 | “HR 五天没回，要不要催？” | 核对对话、承诺日期和工作日，给时机、草稿与停止等待条件 |
 | “这两个 Offer 怎么选？” | 对照个人目标和书面条件，给当前倾向与最可能反转的未知 |
+| “按这份 JD 带我模拟面试，先说这一题看什么。” | 选定职责与观察标准，一次一问；按实际回答反馈，不把练习当成能力认证 |
+| “这个 Offer 的条件和付款要求，先核验什么？” | 收敛决定性条款、身份与费用风险，给核实路径和可发送草稿 |
 
 ### 投递没进展，或者知道该做什么却没开始
 
@@ -173,6 +175,18 @@ flowchart LR
 [投递实验示意](cases/experiences/job-search-experiment/example.md) ·
 [启动卡示意](cases/experiences/action-start/example.md) ·
 [方法与研究边界](references/knowledge/08-research-and-application.md)
+
+## 职业参考库
+
+首批整理 **18 条独立研究与官方资料**，覆盖求职策略、职业选择、简历表达、
+面试练习、谈判、Offer、劳动权益与求职安全八个主题。同一资料服务多个场景时只计一次。
+
+每条记录研究或资料类型、实际核查深度、使用边界和版本。
+元分析、实验、理论、官方指南与法规分别标注；涉及个人法律问题时仍需核对当前适用规定。
+需要时问“这个建议有什么依据，哪些情况不适用？”，军师会查相关条目并说明限制。
+
+[浏览完整索引](references/knowledge/08-research-and-application.md)。
+资料支持方法选择，尚未证明这个 Skill 能提高录用率。
 
 ## 真实贡献，始终是底线
 
@@ -195,12 +209,13 @@ flowchart LR
 
 ## 已验证什么，还有什么没验证
 
-当前实现有 **228 项自动测试**、**13 个结构化合成基准**，以及四个核心体验的有限独立宿主试用。
+当前实现有 **237 项自动测试**、**13 个结构化合成基准**，以及四个核心体验的有限独立宿主试用。
 覆盖证据边界、决策行为、安装与路由；这些不证明提高面试通过率或 Offer 率。
 新增的措辞核对、断点续练和两阶段复盘另有新上下文试用，包含已知结果时的边界检查；
 范围与实际观察见[本次细节验收](documentation/REFINEMENT_EVAL.md)。
 简历导出的实际源码交付、缺编译器路径和验证边界见[导出验收](documentation/RESUME_EXPORT_EVAL.md)。
 投递实验、行动启动和研究外推边界的独立试用见[本次进化验收](documentation/RESEARCH_EVOLUTION_EVAL.md)。
+职业参考库、结构化面试与 Offer 核验的范围和实际试用见[参考库验收](documentation/CAREER_LIBRARY_EVAL.md)。
 
 既有 holdout 仍保留已知弱点，提取和交接可能失败，建议也可能泛化或过于谨慎。
 本轮没有重新评测全部冻结案例，不宣称已满足直接面向真实用户试点的原有门槛。
@@ -240,6 +255,8 @@ python scripts/benchmark.py run
 python scripts/validate_skill.py
 python scripts/junshi.py route --mode interview --experience defense
 python scripts/junshi.py resume-export --input /private/reviewed-resume.json --output-dir /private/new-resume
+python scripts/junshi.py sources --topic interview
+python scripts/junshi.py sources --id R7
 ```
 
 Skill 入口见 [SKILL.md](SKILL.md)，任务指南在 [references](references)，

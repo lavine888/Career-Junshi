@@ -166,6 +166,8 @@ memory, upload documents or submit applications.
 | “Interview tomorrow. Only 90 minutes tonight.” | Narrow preparation to the highest risks and 1–3 actions; identify effort to stop |
 | “Five days without an HR reply. Follow up?” | Check the conversation, promised dates and workdays; provide timing, a draft and a stop rule |
 | “Which offer should I choose?” | Compare personal goals and written terms; identify the preference and unknowns that could reverse it |
+| “Run a mock interview for this JD. State what this question observes.” | One job criterion and one question at a time; feedback on actual answers without certifying ability |
+| “Which offer terms and payment demands should I verify first?” | Decisive terms, identity and fee risks, verification steps and a reviewable draft |
 
 ### When applications stall or preparation never starts
 
@@ -184,6 +186,20 @@ population and transfer limits. Research effects are not personal hiring odds.
 [Application-trial illustration](cases/experiences/job-search-experiment/example.md) ·
 [Start-card illustration](cases/experiences/action-start/example.md) ·
 [Methods and research boundaries](references/knowledge/08-research-and-application.md)
+
+## Career reference library
+
+The first collection contains **18 distinct studies and official documents**
+across job search, career choice, resumes, interviews, negotiation, offers,
+workplace rights and hiring safety. A work used for multiple topics is counted once.
+
+Each card records source type, actual reading depth, scope limits and version.
+Meta-analyses, experiments, theory, official guidance and legislation are distinguished;
+case-specific legal questions still require current applicable authoritative material.
+Ask “What supports this advice, and where does it not apply?” to retrieve relevant cards.
+
+[Browse the index](references/knowledge/08-research-and-application.md).
+The collection informs workflow design; it does not establish a hiring benefit for this Skill.
 
 ## The real contribution stays intact
 
@@ -209,7 +225,7 @@ conversation materials remain subject to the host's data policies. See [memory](
 
 ## What has been checked
 
-The current implementation has **228 automated tests**, **13 structured synthetic
+The current implementation has **237 automated tests**, **13 structured synthetic
 benchmark cases**, and limited independent host trials of the four core experiences.
 These check software behavior and evidence boundaries; they do not establish improved
 interview or offer rates.
@@ -219,6 +235,8 @@ Source export, missing-compiler behavior and PDF verification limits are recorde
 in the [resume-export evaluation](documentation/RESUME_EXPORT_EVAL.md).
 Independent trials of application experiments, action starts and research transfer
 are recorded in the [research-workflow evaluation](documentation/RESEARCH_EVOLUTION_EVAL.md).
+Source-library checks and fresh-context interview and offer trials are recorded
+in the [career-library evaluation](documentation/CAREER_LIBRARY_EVAL.md).
 
 Known weaknesses remain in existing holdouts. Extraction and handoffs can fail, and
 advice can be generic or too cautious. This iteration does not rerun every frozen
@@ -262,6 +280,8 @@ python scripts/benchmark.py run
 python scripts/validate_skill.py
 python scripts/junshi.py route --mode interview --experience defense
 python scripts/junshi.py resume-export --input /private/reviewed-resume.json --output-dir /private/new-resume
+python scripts/junshi.py sources --topic interview
+python scripts/junshi.py sources --id R7
 ```
 
 The entrypoint is [SKILL.md](SKILL.md), playbooks are in [references](references), synthetic
