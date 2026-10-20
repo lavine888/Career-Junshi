@@ -1,0 +1,12 @@
+{
+  "references_read": [
+    "references/knowledge/01-evidence-and-claims.md",
+    "references/practical/resume.md",
+    "references/practical/wording-audit.md"
+  ],
+  "commands": [
+    "Get-Content -Raw：读取安装后的 SKILL.md 与 inputs/U01/turn-1.md。",
+    "Get-Content -Raw：读取列出的三份运行参考。",
+    "PowerShell：仅新增 responses/U01/turn-1.md 和 access-1.json 评测日志。"
+  ]
+}

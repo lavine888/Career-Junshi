@@ -1,0 +1,11 @@
+{
+  "references_read": [
+    "references/knowledge/02-career-decision.md",
+    "references/practical/jd-analysis.md",
+    "references/role-packs.json"
+  ],
+  "executed_commands": [
+    "Get-Content -LiteralPath '<RUN_DIR>/runtime/career-junshi/SKILL.md' -Raw; Get-Content -LiteralPath '<RUN_DIR>/inputs/U02/turn-1.md' -Raw",
+    "Get-Content -LiteralPath '<RUN_DIR>/runtime/career-junshi/references/knowledge/02-career-decision.md' -Raw; Get-Content -LiteralPath '<RUN_DIR>/runtime/career-junshi/references/practical/jd-analysis.md' -Raw; Get-Content -LiteralPath '<RUN_DIR>/runtime/career-junshi/references/role-packs.json' -Raw"
+  ]
+}

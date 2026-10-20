@@ -1,0 +1,176 @@
+{
+  "user_input_read": "inputs/U05/turn-2.md",
+  "references_read_this_turn": [
+    "references/practical/resume-export.md"
+  ],
+  "reused_context": [
+    "runtime/career-junshi/SKILL.md",
+    "inputs/U05/turn-1.md",
+    "responses/U05/turn-1.md",
+    "references/knowledge/01-evidence-and-claims.md",
+    "references/practical/resume.md",
+    "references/practical/context-extraction.md"
+  ],
+  "installation_files_read": [
+    "scripts/resume_export.py",
+    "scripts/junshi.py (first 100 lines)",
+    "scripts search snippets from rg output"
+  ],
+  "commands": [
+    {
+      "command": "Get-Content -LiteralPath '<RUN_DIR>\\inputs\\U05\\turn-2.md' -Raw",
+      "exit_code": 0
+    },
+    {
+      "command": "Get-Content -LiteralPath '<RUN_DIR>\\runtime\\career-junshi\\references\\practical\\resume-export.md' -Raw",
+      "exit_code": 0
+    },
+    {
+      "command": "rg -n \"resume.export|resume_export|xelatex|verification\" '<RUN_DIR>\\runtime\\career-junshi\\scripts' ",
+      "exit_code": 0
+    },
+    {
+      "command": "Get-Command python,py,xelatex,pdftotext,pdftoppm -ErrorAction SilentlyContinue | Select-Object Name,Source; Test-Path -LiteralPath '<RUN_DIR>\\candidate-artifacts\\U05\\export'",
+      "exit_code": 0
+    },
+    {
+      "command": "Get-Content -LiteralPath '<RUN_DIR>\\runtime\\career-junshi\\scripts\\resume_export.py' -Raw; Get-Content -LiteralPath '<RUN_DIR>\\runtime\\career-junshi\\scripts\\junshi.py' -TotalCount 100",
+      "exit_code": 0
+    },
+    {
+      "command": "$candidateInput = '<RUN_DIR>/candidate-artifacts/U05/reviewed-input.json'\nif (Test-Path -LiteralPath $candidateInput) { throw 'Refusing to overwrite existing input' }\nNew-Item -ItemType Directory -Path (Split-Path -Parent $candidateInput) -Force | Out-Null\n$reviewedJson = @'\n{\n  \"schema_version\": \"1\",\n  \"language\": \"zh\",\n  \"name\": \"顾禾（合成测试）\",\n  \"page_limit\": 1,\n  \"sources\": [\n    {\n      \"id\": \"S1\",\n      \"description\": \"本轮已提供的合成资料 S1：姓名顾禾（合成测试）；虚构的南桥学院，统计学本科，2022.09—2026.06；未提供邮箱或电话。来源为用户自述，未独立核验。\"\n    },\n    {\n      \"id\": \"S2\",\n      \"description\": \"本轮已提供的合成资料 S2：2026.03—2026.05门店周报自动化课程项目；本人用SQL聚合教师提供的脱敏样例销售表，用Python生成周报CSV，覆盖3家样例门店和8周记录；图表由组员制作；发现4条重复订单记录并在清洗脚本中处理；没有真实上线，未统计业务收益或时间节省。来源为用户自述，未独立核验。\"\n    },\n    {\n      \"id\": \"D1\",\n      \"description\": \"用户提供的虚构数据运营助理JD：提取与检查业务数据、维护周报、说明异常；需要SQL、基础Python和清楚的口头说明。仅用于内容选择，不作为个人能力证据。\"\n    }\n  ],\n  \"sections\": [\n    {\n      \"title\": \"教育经历\",\n      \"entries\": [\n        {\n          \"title\": \"南桥学院（虚构）\",\n          \"subtitle\": \"统计学｜本科\",\n          \"dates\": \"2022.09—2026.06\",\n          \"source_ids\": [\n            \"S1\"\n          ],\n          \"bullets\": []\n        }\n      ]\n    },\n    {\n      \"title\": \"项目经历\",\n      \"entries\": [\n        {\n          \"title\": \"门店周报自动化\",\n          \"subtitle\": \"课程团队项目\",\n          \"dates\": \"2026.03—2026.05\",\n          \"source_ids\": [\n            \"S2\"\n          ],\n          \"bullets\": [\n            {\n              \"text\": \"使用 SQL 聚合教师提供的脱敏样例销售数据，覆盖 3 家样例门店、8 周记录。\",\n              \"source_ids\": [\n                \"S2\"\n              ],\n              \"confidence\": \"SELF_REPORTED\"\n            },\n            {\n              \"text\": \"使用 Python 生成周报 CSV，整理样例门店的周度销售数据。\",\n              \"source_ids\": [\n                \"S2\"\n              ],\n              \"confidence\": \"SELF_REPORTED\"\n            },\n            {\n              \"text\": \"在数据检查中发现 4 条重复订单记录，并在清洗脚本中处理。\",\n              \"source_ids\": [\n                \"S2\"\n              ],\n              \"confidence\": \"SELF_REPORTED\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"title\": \"相关技能\",\n      \"entries\": [\n        {\n          \"title\": \"SQL：有销售数据聚合实践。\",\n          \"subtitle\": \"\",\n          \"dates\": \"\",\n          \"source_ids\": [\n            \"S2\"\n          ],\n          \"bullets\": []\n        },\n        {\n          \"title\": \"Python：有基础脚本处理与 CSV 周报生成实践。\",\n          \"subtitle\": \"\",\n          \"dates\": \"\",\n          \"source_ids\": [\n            \"S2\"\n          ],\n          \"bullets\": []\n        },\n        {\n          \"title\": \"数据检查：有重复订单记录识别与清洗处理实践。\",\n          \"subtitle\": \"\",\n          \"dates\": \"\",\n          \"source_ids\": [\n            \"S2\"\n          ],\n          \"bullets\": []\n        }\n      ]\n    }\n  ]\n}\n'@\n[System.IO.File]::WriteAllText($candidateInput, $reviewedJson, [System.Text.UTF8Encoding]::new($false))\nGet-Item -LiteralPath $candidateInput | Select-Object FullName,Length",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B '<RUN_DIR>\\runtime\\career-junshi\\scripts\\junshi.py' resume-export --input '<RUN_DIR>/candidate-artifacts/U05/reviewed-input.json' --output-dir '<RUN_DIR>/candidate-artifacts/U05/export' --compile",
+      "exit_code": 1,
+      "result": "SOURCE_ONLY; xelatex not on PATH; no PDF"
+    },
+    {
+      "command": "Get-Content -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/resume.txt' -Raw\nGet-Content -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/resume.tex' -Raw\nGet-Content -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/verification.json' -Raw\nGet-ChildItem -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export' -File | Select-Object Name,Length",
+      "exit_code": 0
+    },
+    {
+      "command": "$reviewPath = '<RUN_DIR>/candidate-artifacts/U05/export/host-review.json'\nif (Test-Path -LiteralPath $reviewPath) { throw 'Refusing to overwrite existing review' }\n$reviewJson = @'\n{\n  \"schema_version\": \"1\",\n  \"review_type\": \"ordinary_same_context_review\",\n  \"independent_review\": false,\n  \"content_check\": {\n    \"status\": \"PASSED\",\n    \"basis\": \"已实际读取生成的 resume.txt、resume.tex、verification.json，逐项对照首轮用户资料及用户认可的草稿；仅核对表达，不独立认证经历真实性。\",\n    \"checks\": [\n      \"姓名为顾禾（合成测试）\",\n      \"教育日期为2022.09—2026.06\",\n      \"项目日期为2026.03—2026.05\",\n      \"仅有教育经历、该课程团队项目、相关技能\",\n      \"保留教师提供、脱敏样例、3家样例门店、8周记录、4条重复订单记录\",\n      \"未写公司、实习、联系方式、节省比例、上线、业务收益、主导、独立完成或本人制作图表\",\n      \"目标为数据运营助理，JD仅用于选择表达，未作为个人能力证据\"\n    ]\n  },\n  \"compilation\": {\n    \"status\": \"UNAVAILABLE\",\n    \"reason\": \"本地命令发现及导出器检查均未在PATH中找到xelatex；未安装工具或上传材料。\",\n    \"pdf_generated\": false\n  },\n  \"page_count\": {\n    \"status\": \"NOT_PERFORMED\",\n    \"requested_target\": 1,\n    \"observed_pages\": null,\n    \"reason\": \"无生成的PDF\"\n  },\n  \"pdf_text_layer\": {\n    \"status\": \"NOT_PERFORMED\",\n    \"reason\": \"无生成的PDF；纯文本内容核对不等于PDF文本层检查\"\n  },\n  \"compiler_warnings\": {\n    \"status\": \"NOT_PERFORMED\",\n    \"reason\": \"没有运行编译器，不存在可检查的本次编译日志\"\n  },\n  \"visual_review\": {\n    \"status\": \"NOT_PERFORMED\",\n    \"reason\": \"无生成的PDF，未查看任何渲染页；未确认实际分页、字体、缺字或裁切\"\n  },\n  \"ats_certification\": \"NOT_PERFORMED\",\n  \"source_map\": [\n    {\n      \"claim_id\": \"E1\",\n      \"claim\": \"南桥学院（虚构），统计学本科，2022.09—2026.06\",\n      \"source\": \"S1\",\n      \"locator\": \"S1｜学历\",\n      \"confidence\": \"SELF_REPORTED\",\n      \"ownership\": \"教育自述\",\n      \"risk\": \"未核验学历材料\"\n    },\n    {\n      \"claim_id\": \"P0\",\n      \"claim\": \"门店周报自动化，2026.03—2026.05，课程团队项目\",\n      \"source\": \"S2\",\n      \"locator\": \"S2｜2026.03—2026.05做“门店周报自动化”课程项目\",\n      \"confidence\": \"SELF_REPORTED\",\n      \"ownership\": \"参与课程团队项目\",\n      \"risk\": \"未真实上线，不能表述为生产项目\"\n    },\n    {\n      \"claim_id\": \"P1\",\n      \"claim\": \"本人使用SQL聚合教师提供的脱敏样例销售数据，覆盖3家样例门店、8周记录\",\n      \"source\": \"S2\",\n      \"locator\": \"S2｜我用SQL聚合老师给的脱敏样例销售表；覆盖3家样例门店和8周记录\",\n      \"confidence\": \"SELF_REPORTED\",\n      \"ownership\": \"本人SQL聚合\",\n      \"risk\": \"样例范围不是客户数；未检查SQL与原始数据\"\n    },\n    {\n      \"claim_id\": \"P2\",\n      \"claim\": \"本人使用Python生成周报CSV\",\n      \"source\": \"S2\",\n      \"locator\": \"S2｜用Python生成周报CSV\",\n      \"confidence\": \"SELF_REPORTED\",\n      \"ownership\": \"本人CSV周报生成；组员做图表\",\n      \"risk\": \"没有时间节省或业务收益统计\"\n    },\n    {\n      \"claim_id\": \"P3\",\n      \"claim\": \"检查时发现4条重复订单记录并在清洗脚本中处理\",\n      \"source\": \"S2\",\n      \"locator\": \"S2｜检查时找到了4条重复订单记录并在清洗脚本中处理\",\n      \"confidence\": \"SELF_REPORTED\",\n      \"ownership\": \"本人发现并处理\",\n      \"risk\": \"未提供去重规则或脚本，不扩展为完整数据质量体系\"\n    },\n    {\n      \"claim_id\": \"K1-K3\",\n      \"claim\": \"SQL聚合、Python基础脚本及CSV生成、重复记录检查与清洗实践\",\n      \"source\": \"S2\",\n      \"locator\": \"S2｜对应P1-P3的具体个人操作\",\n      \"confidence\": \"SELF_REPORTED\",\n      \"ownership\": \"从用户所述个人操作提炼技能\",\n      \"risk\": \"不增加数据库优化、可视化、口头说明等未有依据的技能\"\n    }\n  ]\n}\n'@\n[System.IO.File]::WriteAllText($reviewPath, $reviewJson, [System.Text.UTF8Encoding]::new($false))\n$actualData = Get-Content -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/resume-data.json' -Raw | ConvertFrom-Json\nif ($actualData.name -ne '顾禾（合成测试）') { throw 'Name mismatch' }\nif ($actualData.sections[1].entries[0].dates -ne '2026.03—2026.05') { throw 'Project date mismatch' }\nif ($actualData.contacts.Count -ne 0) { throw 'Unexpected contacts' }\nif (Test-Path -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/resume.pdf') { throw 'Unexpected PDF' }\nGet-ChildItem -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export' -File | Select-Object Name,Length\nGet-Content -LiteralPath $reviewPath -Raw",
+      "exit_code": 0
+    }
+  ],
+  "orchestration_errors": [
+    {
+      "error": "ReferenceError: btoa is not defined",
+      "effect": "No shell command executed and no file generated by this failed orchestration call; changed to direct UTF-8 PowerShell file writing."
+    }
+  ],
+  "candidate_files_generated": [
+    "<RUN_DIR>/candidate-artifacts/U05/reviewed-input.json",
+    "<RUN_DIR>/candidate-artifacts/U05/export/resume.tex",
+    "<RUN_DIR>/candidate-artifacts/U05/export/resume.txt",
+    "<RUN_DIR>/candidate-artifacts/U05/export/resume-data.json",
+    "<RUN_DIR>/candidate-artifacts/U05/export/verification.json",
+    "<RUN_DIR>/candidate-artifacts/U05/export/host-review.json"
+  ],
+  "candidate_files_modified_or_overwritten": [],
+  "candidate_checks": {
+    "schema_version": "1",
+    "review_type": "ordinary_same_context_review",
+    "independent_review": false,
+    "content_check": {
+      "status": "PASSED",
+      "basis": "已实际读取生成的 resume.txt、resume.tex、verification.json，逐项对照首轮用户资料及用户认可的草稿；仅核对表达，不独立认证经历真实性。",
+      "checks": [
+        "姓名为顾禾（合成测试）",
+        "教育日期为2022.09—2026.06",
+        "项目日期为2026.03—2026.05",
+        "仅有教育经历、该课程团队项目、相关技能",
+        "保留教师提供、脱敏样例、3家样例门店、8周记录、4条重复订单记录",
+        "未写公司、实习、联系方式、节省比例、上线、业务收益、主导、独立完成或本人制作图表",
+        "目标为数据运营助理，JD仅用于选择表达，未作为个人能力证据"
+      ]
+    },
+    "compilation": {
+      "status": "UNAVAILABLE",
+      "reason": "本地命令发现及导出器检查均未在PATH中找到xelatex；未安装工具或上传材料。",
+      "pdf_generated": false
+    },
+    "page_count": {
+      "status": "NOT_PERFORMED",
+      "requested_target": 1,
+      "observed_pages": null,
+      "reason": "无生成的PDF"
+    },
+    "pdf_text_layer": {
+      "status": "NOT_PERFORMED",
+      "reason": "无生成的PDF；纯文本内容核对不等于PDF文本层检查"
+    },
+    "compiler_warnings": {
+      "status": "NOT_PERFORMED",
+      "reason": "没有运行编译器，不存在可检查的本次编译日志"
+    },
+    "visual_review": {
+      "status": "NOT_PERFORMED",
+      "reason": "无生成的PDF，未查看任何渲染页；未确认实际分页、字体、缺字或裁切"
+    },
+    "ats_certification": "NOT_PERFORMED",
+    "source_map": [
+      {
+        "claim_id": "E1",
+        "claim": "南桥学院（虚构），统计学本科，2022.09—2026.06",
+        "source": "S1",
+        "locator": "S1｜学历",
+        "confidence": "SELF_REPORTED",
+        "ownership": "教育自述",
+        "risk": "未核验学历材料"
+      },
+      {
+        "claim_id": "P0",
+        "claim": "门店周报自动化，2026.03—2026.05，课程团队项目",
+        "source": "S2",
+        "locator": "S2｜2026.03—2026.05做“门店周报自动化”课程项目",
+        "confidence": "SELF_REPORTED",
+        "ownership": "参与课程团队项目",
+        "risk": "未真实上线，不能表述为生产项目"
+      },
+      {
+        "claim_id": "P1",
+        "claim": "本人使用SQL聚合教师提供的脱敏样例销售数据，覆盖3家样例门店、8周记录",
+        "source": "S2",
+        "locator": "S2｜我用SQL聚合老师给的脱敏样例销售表；覆盖3家样例门店和8周记录",
+        "confidence": "SELF_REPORTED",
+        "ownership": "本人SQL聚合",
+        "risk": "样例范围不是客户数；未检查SQL与原始数据"
+      },
+      {
+        "claim_id": "P2",
+        "claim": "本人使用Python生成周报CSV",
+        "source": "S2",
+        "locator": "S2｜用Python生成周报CSV",
+        "confidence": "SELF_REPORTED",
+        "ownership": "本人CSV周报生成；组员做图表",
+        "risk": "没有时间节省或业务收益统计"
+      },
+      {
+        "claim_id": "P3",
+        "claim": "检查时发现4条重复订单记录并在清洗脚本中处理",
+        "source": "S2",
+        "locator": "S2｜检查时找到了4条重复订单记录并在清洗脚本中处理",
+        "confidence": "SELF_REPORTED",
+        "ownership": "本人发现并处理",
+        "risk": "未提供去重规则或脚本，不扩展为完整数据质量体系"
+      },
+      {
+        "claim_id": "K1-K3",
+        "claim": "SQL聚合、Python基础脚本及CSV生成、重复记录检查与清洗实践",
+        "source": "S2",
+        "locator": "S2｜对应P1-P3的具体个人操作",
+        "confidence": "SELF_REPORTED",
+        "ownership": "从用户所述个人操作提炼技能",
+        "risk": "不增加数据库优化、可视化、口头说明等未有依据的技能"
+      }
+    ]
+  },
+  "evaluation_logs_generated": [
+    "responses/U05/turn-2.md",
+    "responses/U05/access-2.json"
+  ],
+  "evaluation_log_write_tool": "apply_patch Add File"
+}

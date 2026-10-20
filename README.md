@@ -209,6 +209,7 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 | 简历源码导出与 PDF 检查边界 | [导出验收](documentation/RESUME_EXPORT_EVAL.md) |
 | 投递实验、行动启动、研究外推 | [研究工作流验收](documentation/RESEARCH_EVOLUTION_EVAL.md) |
 | 参考库、结构化面试、Offer 核验 | [参考库验收](documentation/CAREER_LIBRARY_EVAL.md) |
+| 5个模拟用户、15轮实际交互 | [多轮试用](documentation/MOCK_USER_TRIALS.md) |
 
 既有冻结案例仍有提取、交接和建议泛化等弱点，未全部重测，也未宣称达到原有真实用户试点门槛。
 当前招聘、薪资与公司信息仍需新鲜来源，不提供候选人综合分数或录用概率。

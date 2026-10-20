@@ -1,0 +1,49 @@
+{
+  "user_input_read": "inputs/U05/turn-3.md",
+  "references_read_this_turn": [],
+  "reused_reference": "references/practical/resume-export.md",
+  "commands": [
+    {
+      "command": "Get-Content -LiteralPath '<RUN_DIR>\\inputs\\U05\\turn-3.md' -Raw",
+      "exit_code": 0
+    },
+    {
+      "command": "Get-ChildItem -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export' -File | Select-Object Name,Length\nGet-Content -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/resume.txt' -Raw\nGet-Content -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/resume.tex' -Raw\n$exportChecks = Get-Content -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/verification.json' -Raw | ConvertFrom-Json\n$exportChecks | Select-Object status,page_limit,checks | ConvertTo-Json -Depth 5\n$hostChecks = Get-Content -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/host-review.json' -Raw | ConvertFrom-Json\n$hostChecks | Select-Object review_type,independent_review,content_check,compilation,page_count,pdf_text_layer,compiler_warnings,visual_review | ConvertTo-Json -Depth 5\nTest-Path -LiteralPath '<RUN_DIR>/candidate-artifacts/U05/export/resume.pdf'",
+      "exit_code": 0
+    }
+  ],
+  "candidate_files_read": [
+    "<RUN_DIR>/candidate-artifacts/U05/export/resume.txt",
+    "<RUN_DIR>/candidate-artifacts/U05/export/resume.tex",
+    "<RUN_DIR>/candidate-artifacts/U05/export/verification.json",
+    "<RUN_DIR>/candidate-artifacts/U05/export/host-review.json"
+  ],
+  "candidate_directory_listed": "<RUN_DIR>/candidate-artifacts/U05/export",
+  "candidate_files_present": [
+    "host-review.json",
+    "resume-data.json",
+    "resume.tex",
+    "resume.txt",
+    "verification.json"
+  ],
+  "pdf_existence_check": {
+    "path": "<RUN_DIR>/candidate-artifacts/U05/export/resume.pdf",
+    "exists": false
+  },
+  "checks": {
+    "content": "Ordinary same-context review of generated text and LaTeX against approved draft; name, dates, 3 sample stores, 8 weeks, 4 duplicate records confirmed; no unsupported additions found.",
+    "independent_review": "NOT_PERFORMED",
+    "experience_authentication": "NOT_PERFORMED",
+    "compilation": "UNAVAILABLE per actual verification record; not rerun at user request",
+    "page_count": "NOT_PERFORMED",
+    "pdf_text_layer": "NOT_PERFORMED",
+    "visual_review": "NOT_PERFORMED"
+  },
+  "candidate_files_generated": [],
+  "candidate_files_modified": [],
+  "evaluation_logs_generated": [
+    "responses/U05/turn-3.md",
+    "responses/U05/access-3.json"
+  ],
+  "evaluation_log_write_tool": "apply_patch Add File"
+}

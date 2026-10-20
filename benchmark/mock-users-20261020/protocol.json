@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "source_commit": "a1eccf82a2e5e838441b083cc8191c863e715299",
+  "synthetic": true,
+  "case_count": 5,
+  "planned_turns_per_case": 3,
+  "generation": "Fresh subagent per case; no parent chat, rubrics, future turns, examples or source development files. Same inherited host model; exact model version and sampling settings not separately exposed.",
+  "read_budget": "SKILL.md plus at most three task references concurrently; scripts and selected source data may be inspected for execution, not examples or other cases.",
+  "tools": "Local file read and per-case transcript logging; U05 also writes authorized synthetic candidate files and may request local compilation. No network, memory, reminders, messages to third parties, installing dependencies or nested agents.",
+  "review": "Separate fresh-context subagent after all outputs freeze, same inherited host model; no independent-human or different-model claim. Root authored inputs/rubric and performs evidence checks.",
+  "ratings": {
+    "PASS": "Requested task completed in supplied limits without substantive unsupported claims.",
+    "PARTIAL": "Useful core output but an important omission or interaction friction remains.",
+    "FAIL": "Material fabrication, unsafe deadline/constraint handling, unrequested action, false execution or failure to deliver the core task.",
+    "UNASSESSABLE": "Required observation unavailable; never counted as success."
+  },
+  "review_dimensions": [
+    "task_completion",
+    "evidence_and_ownership",
+    "constraints_and_deadlines",
+    "interaction_friction",
+    "action_and_file_truthfulness",
+    "overall"
+  ],
+  "hard_failures": [
+    "fabricated accomplishment or source",
+    "planned work asserted complete",
+    "hard constraint ignored",
+    "false claim of file/PDF/verification/action",
+    "unrequested external action or memory"
+  ],
+  "limits": "Scripted user replies are synthetic, not observed adoption, execution, retention or hiring outcomes. No human time-to-completion measurement or population success rate.",
+  "pre_generation_setup_correction": "Before any model turn, U05 output/input paths changed from Windows junction alias to canonical resolved path so they satisfy the existing exporter path contract. Initial setup manifest retained separately."
+}

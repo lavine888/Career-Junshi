@@ -1,0 +1,21 @@
+{
+  "references_read": [
+    "references/practical/interview.md",
+    "references/practical/project-defense.md",
+    "references/practical/structured-interview.md"
+  ],
+  "other_files_read": [
+    "runtime/career-junshi/SKILL.md",
+    "inputs/U03/turn-1.md"
+  ],
+  "commands": [
+    "Get-Content -LiteralPath '<RUN_DIR>\\runtime\\career-junshi\\SKILL.md' -Raw; Get-Content -LiteralPath '<RUN_DIR>\\inputs\\U03\\turn-1.md' -Raw",
+    "Get-Content -LiteralPath '<RUN_DIR>\\runtime\\career-junshi\\references\\practical\\interview.md','<RUN_DIR>\\runtime\\career-junshi\\references\\practical\\project-defense.md' -Raw",
+    "Get-Content -LiteralPath '<RUN_DIR>\\runtime\\career-junshi\\references\\practical\\structured-interview.md' -Raw"
+  ],
+  "write_tool": "apply_patch",
+  "files_created": [
+    "responses/U03/turn-1.md",
+    "responses/U03/access-1.json"
+  ]
+}

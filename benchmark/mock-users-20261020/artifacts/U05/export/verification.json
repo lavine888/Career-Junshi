@@ -1,0 +1,141 @@
+{
+  "schema_version": "1",
+  "status": "SOURCE_ONLY",
+  "checks": {
+    "compilation": "UNAVAILABLE",
+    "page_check": "UNAVAILABLE",
+    "text_check": "UNAVAILABLE",
+    "log_check": "UNAVAILABLE",
+    "visual_review": "REQUIRED",
+    "pdf_file": null,
+    "detail": "xelatex is not on PATH; source files remain available"
+  },
+  "page_limit": 1,
+  "expected_text": [
+    "顾禾（合成测试）",
+    "教育经历",
+    "南桥学院（虚构）",
+    "统计学｜本科",
+    "2022.09—2026.06",
+    "项目经历",
+    "门店周报自动化",
+    "课程团队项目",
+    "2026.03—2026.05",
+    "使用 SQL 聚合教师提供的脱敏样例销售数据，覆盖 3 家样例门店、8 周记录。",
+    "使用 Python 生成周报 CSV，整理样例门店的周度销售数据。",
+    "在数据检查中发现 4 条重复订单记录，并在清洗脚本中处理。",
+    "相关技能",
+    "SQL：有销售数据聚合实践。",
+    "Python：有基础脚本处理与 CSV 周报生成实践。",
+    "数据检查：有重复订单记录识别与清洗处理实践。"
+  ],
+  "evidence_map": {
+    "schema_version": "1",
+    "language": "zh",
+    "name": "顾禾（合成测试）",
+    "page_limit": 1,
+    "sources": [
+      {
+        "id": "S1",
+        "description": "本轮已提供的合成资料 S1：姓名顾禾（合成测试）；虚构的南桥学院，统计学本科，2022.09—2026.06；未提供邮箱或电话。来源为用户自述，未独立核验。"
+      },
+      {
+        "id": "S2",
+        "description": "本轮已提供的合成资料 S2：2026.03—2026.05门店周报自动化课程项目；本人用SQL聚合教师提供的脱敏样例销售表，用Python生成周报CSV，覆盖3家样例门店和8周记录；图表由组员制作；发现4条重复订单记录并在清洗脚本中处理；没有真实上线，未统计业务收益或时间节省。来源为用户自述，未独立核验。"
+      },
+      {
+        "id": "D1",
+        "description": "用户提供的虚构数据运营助理JD：提取与检查业务数据、维护周报、说明异常；需要SQL、基础Python和清楚的口头说明。仅用于内容选择，不作为个人能力证据。"
+      }
+    ],
+    "sections": [
+      {
+        "title": "教育经历",
+        "entries": [
+          {
+            "title": "南桥学院（虚构）",
+            "subtitle": "统计学｜本科",
+            "dates": "2022.09—2026.06",
+            "source_ids": [
+              "S1"
+            ],
+            "bullets": []
+          }
+        ]
+      },
+      {
+        "title": "项目经历",
+        "entries": [
+          {
+            "title": "门店周报自动化",
+            "subtitle": "课程团队项目",
+            "dates": "2026.03—2026.05",
+            "source_ids": [
+              "S2"
+            ],
+            "bullets": [
+              {
+                "text": "使用 SQL 聚合教师提供的脱敏样例销售数据，覆盖 3 家样例门店、8 周记录。",
+                "source_ids": [
+                  "S2"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "使用 Python 生成周报 CSV，整理样例门店的周度销售数据。",
+                "source_ids": [
+                  "S2"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "在数据检查中发现 4 条重复订单记录，并在清洗脚本中处理。",
+                "source_ids": [
+                  "S2"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "相关技能",
+        "entries": [
+          {
+            "title": "SQL：有销售数据聚合实践。",
+            "subtitle": "",
+            "dates": "",
+            "source_ids": [
+              "S2"
+            ],
+            "bullets": []
+          },
+          {
+            "title": "Python：有基础脚本处理与 CSV 周报生成实践。",
+            "subtitle": "",
+            "dates": "",
+            "source_ids": [
+              "S2"
+            ],
+            "bullets": []
+          },
+          {
+            "title": "数据检查：有重复订单记录识别与清洗处理实践。",
+            "subtitle": "",
+            "dates": "",
+            "source_ids": [
+              "S2"
+            ],
+            "bullets": []
+          }
+        ]
+      }
+    ],
+    "target_role": "",
+    "contacts": []
+  },
+  "semantic_verification": "NOT_PERFORMED",
+  "ats_certification": "NOT_PERFORMED",
+  "directory": "<RUN_DIR>\\candidate-artifacts\\U05\\export"
+}

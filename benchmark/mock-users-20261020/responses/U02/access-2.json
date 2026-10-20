@@ -1,0 +1,12 @@
+{
+  "references_read": [
+    "references/practical/rejection.md"
+  ],
+  "references_reused_from_prior_turn": [
+    "references/knowledge/02-career-decision.md"
+  ],
+  "executed_commands": [
+    "Get-Content -LiteralPath '<RUN_DIR>/inputs/U02/turn-2.md' -Raw",
+    "Get-Content -LiteralPath '<RUN_DIR>/runtime/career-junshi/references/practical/rejection.md' -Raw"
+  ]
+}

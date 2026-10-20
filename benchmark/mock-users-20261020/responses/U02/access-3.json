@@ -1,0 +1,9 @@
+{
+  "references_read": [
+    "references/practical/wording-audit.md"
+  ],
+  "executed_commands": [
+    "Get-Content -LiteralPath '<RUN_DIR>/inputs/U02/turn-3.md' -Raw",
+    "Get-Content -LiteralPath '<RUN_DIR>/runtime/career-junshi/references/practical/wording-audit.md' -Raw"
+  ]
+}

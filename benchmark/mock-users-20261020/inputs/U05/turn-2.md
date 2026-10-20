@@ -1,0 +1,1 @@
+这版草稿的事实我认可。现在请实际导出文件：姓名保留“顾禾（合成测试）”；项目日期仍是2026.03—2026.05；不补公司、实习、联系方式或节省比例。输出目录是 <RUN_DIR>/candidate-artifacts/U05/export ，这是我选定的全新目录，已授权在那里生成LaTeX、纯文本和必要的来源、验收文件；编译PDF能做就做。没有XeLaTeX时不要安装或上传，源码照样给我，并准确说明未完成的检查。输入JSON可以放在 <RUN_DIR>/candidate-artifacts/U05/reviewed-input.json 。

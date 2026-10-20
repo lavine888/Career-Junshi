@@ -1,0 +1,12 @@
+{
+  "references_read": [],
+  "references_reused_from_previous_turns": [
+    "references/knowledge/01-evidence-and-claims.md",
+    "references/practical/resume.md",
+    "references/practical/wording-audit.md"
+  ],
+  "commands": [
+    "Get-Content -Raw：仅读取 inputs/U01/turn-3.md。",
+    "PowerShell：仅新增 responses/U01/turn-3.md 和 access-3.json 评测日志。"
+  ]
+}

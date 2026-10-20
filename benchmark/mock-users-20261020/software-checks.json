@@ -1,0 +1,32 @@
+{
+  "source_commit": "a1eccf82a2e5e838441b083cc8191c863e715299",
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "tests": 237,
+    "elapsed_seconds": 55.289,
+    "record": "Observed actual command completion; full stdout is not included in this archive."
+  },
+  "package_validator": {
+    "command": "python scripts/validate_skill.py",
+    "valid": true,
+    "errors": []
+  },
+  "source_baseline_files_unchanged": 1096,
+  "installed_files_unchanged": 75,
+  "captured_assistant_turns": 15,
+  "export": {
+    "status": "SOURCE_ONLY",
+    "name_contacts_dates_and_sample_scope_checked": true,
+    "source_confidence": "SELF_REPORTED",
+    "plain_text_expected_strings_present": true,
+    "pdf_present": false,
+    "xelatex_on_path": false,
+    "page_count": null,
+    "pdf_text_layer_check": "NOT_PERFORMED",
+    "visual_check": "NOT_PERFORMED",
+    "independent_export_review": false
+  },
+  "memory_database_found_in_run": false,
+  "limits": "Checks support local artifact behavior only, not authenticity of candidate facts, model provenance, adoption or hiring benefit."
+}

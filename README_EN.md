@@ -227,6 +227,7 @@ They do not establish improved interview or offer rates.
 | Resume source export and PDF verification limits | [Export evaluation](documentation/RESUME_EXPORT_EVAL.md) |
 | Application trials, action starts and research transfer | [Research-workflow evaluation](documentation/RESEARCH_EVOLUTION_EVAL.md) |
 | Sources, structured interviews and offer checks | [Career-library evaluation](documentation/CAREER_LIBRARY_EVAL.md) |
+| Five synthetic users, 15 assistant turns | [Multi-turn trials](documentation/MOCK_USER_TRIALS.md) |
 
 Existing frozen cases retain extraction, handoff and generalization weaknesses.
 They have not all been rerun, and the earlier real-user pilot gates are not claimed as met.
