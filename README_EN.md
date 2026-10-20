@@ -143,10 +143,10 @@ Compile a PDF if local XeLaTeX is available. Report content, compilation,
 PDF text-layer and actual visual checks separately.
 ```
 
-The flow draws on [AI Job Search](https://github.com/MadsLorentzen/ai-job-search):
-draft, independent review when the host supports it, compile and inspect.
-Junshi retains its own evidence and consent boundaries. Source export needs no
-LaTeX installation; PDF compilation needs local XeLaTeX, fonts and template packages.
+The flow covers drafting, independent review when the host supports it,
+compilation and inspection, with evidence and consent boundaries preserved.
+Source export needs no LaTeX installation; PDF compilation needs local XeLaTeX,
+fonts and template packages.
 Missing compilation or visual review is reported rather than treated as success.
 
 The bundle preserves editable source, plain text, sourced content data and a
@@ -258,8 +258,4 @@ is incomplete and is not evidence of architectural superiority for this iteratio
 
 ---
 
-[MIT](LICENSE) · [Attribution and reuse scope](documentation/ATTRIBUTION.md).
-The lightweight kernel and reference routing draw from [Goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi);
-evidence and career feedback methods draw from [Career Alpha](https://github.com/lavine888/career-alpha).
-The resume-export loop draws from [AI Job Search](https://github.com/MadsLorentzen/ai-job-search).
-Upstream license notices are retained.
+[MIT](LICENSE)

@@ -137,8 +137,7 @@ flowchart LR
 分别说明内容、编译、PDF 文字层和实际页面的检查结果。
 ```
 
-这一流程借鉴 [AI Job Search](https://github.com/MadsLorentzen/ai-job-search)
-的起草、独立审阅和 PDF 验收闭环，沿用军师的贡献与证据边界。
+这一流程包括起草、独立审阅和 PDF 验收，沿用军师的贡献与证据边界。
 独立审阅依宿主可用能力进行；源码导出不需要 LaTeX，PDF 编译需要本机 XeLaTeX
 及模板所用字体和宏包。没有编译或视觉检查时会如实标明。
 
@@ -239,7 +238,4 @@ Skill 入口见 [SKILL.md](SKILL.md)，任务指南在 [references](references)�
 
 ---
 
-[MIT](LICENSE) · [来源与复用范围](documentation/ATTRIBUTION.md)。
-轻量内核与参考路由借鉴 [Goutoujunshi](https://github.com/shengjidaguai-china/goutoujunshi)，
-证据与职业反馈方法受 [Career Alpha](https://github.com/lavine888/career-alpha) 启发；
-简历导出闭环参考 [AI Job Search](https://github.com/MadsLorentzen/ai-job-search)。保留上游许可。
+[MIT](LICENSE)
