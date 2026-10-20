@@ -1,0 +1,6 @@
+Page  Type          URL
+   1  Annotation    mailto:synthetic_candidate@example.com
+   1  Annotation    https://example.com/%7Elin/portfolio/data_operations_and_product_research/weekly_reports/quality_checks_and_reproducible_samples?view=full_report&source=resume_2026&format=pdf
+   1  Annotation    https://example.com/%7Elin/portfolio/data_operations_and_product_research/weekly_reports/quality_checks_and_reproducible_samples?view=full_report&source=resume_2026&format=pdf
+   1  Annotation    https://example.com/%7Elin/portfolio/data_operations_and_product_research/weekly_reports/quality_checks_and_reproducible_samples?view=full_report&source=resume_2026&format=pdf
+   1  Annotation    https://example.org/projects/R_and_D_quality_check

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1",
+  "language": "zh",
+  "name": "林舟 / Lin Zhou（合成）",
+  "target_role": "数据运营与产品助理（合成排版测试）",
+  "contacts": [
+    "synthetic_candidate@example.com",
+    "https://example.com/~lin/portfolio/data_operations_and_product_research/weekly_reports/quality_checks_and_reproducible_samples?view=full_report&source=resume_2026&format=pdf",
+    "https://example.org/projects/R_and_D_quality_check"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "description": "专为排版压力测试编写的虚构人物与经历，全部自述，不代表真实候选人或已验证业务成效。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "教育 Education",
+      "entries": [
+        {
+          "title": "虚构青禾学院",
+          "subtitle": "统计学本科；课程：数据库、实验设计、数据可视化",
+          "dates": "2022.09—2026.06（预计毕业）",
+          "source_ids": [
+            "S1"
+          ],
+          "bullets": []
+        }
+      ]
+    },
+    {
+      "title": "项目 Projects",
+      "entries": [
+        {
+          "title": "Weekly_Report & R&D：数据检查 100%",
+          "subtitle": "SQL / Python；所有结果来自合成样本",
+          "dates": "2026.03—2026.05",
+          "source_ids": [
+            "S1"
+          ],
+          "bullets": [
+            {
+              "text": "保留字面标签 quality_check、R&D、100%、item_id；以 SQL 汇总样本、Python 导出 CSV，不把这些符号当作 LaTeX 指令。",
+              "source_ids": [
+                "S1"
+              ],
+              "confidence": "SELF_REPORTED"
+            },
+            {
+              "text": "Created a synthetic weekly report; checked missing fields and duplicate rows without claiming a measured business outcome.",
+              "source_ids": [
+                "S1"
+              ],
+              "confidence": "SELF_REPORTED"
+            },
+            {
+              "text": "公开链接用于测试长 URL 的换行和可点击性；example.com 与 example.org 为示例域名，不声称链接中有实际个人作品。",
+              "source_ids": [
+                "S1"
+              ],
+              "confidence": "SELF_REPORTED"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_limit": 1
+}

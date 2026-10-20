@@ -9,7 +9,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from scripts.models import ContractError
-from scripts.resume_export import ROOT, export_resume, validate_resume
+from scripts.resume_export import ROOT, _check_text, export_resume, validate_resume
 
 
 def sample():
@@ -249,6 +249,80 @@ class ResumeExportTests(unittest.TestCase):
             report = export_resume(data, Path(temp) / "out", compile_pdf=True)
             self.assertEqual(report["status"], "PDF_CHECKS_FAILED")
             self.assertTrue(report["checks"]["missing_text_indexes"])
+
+
+class ResumeTextIntegrityTests(unittest.TestCase):
+    def test_reordered_complete_text_fails(self):
+        result = _check_text("Name Second claim First claim", ["Name", "First claim", "Second claim"])
+        self.assertEqual(result["missing_text_indexes"], [])
+        self.assertEqual(result["text_check"], "FAILED")
+        self.assertEqual(result["text_order_check"], "FAILED")
+        self.assertEqual(result["out_of_order_text_indexes"], [2])
+
+    def test_repeated_approved_text_requires_distinct_occurrences(self):
+        result = _check_text("Name same line", ["Name", "same line", "same line"])
+        self.assertEqual(result["missing_text_indexes"], [])
+        self.assertEqual(result["text_check"], "FAILED")
+        self.assertEqual(result["out_of_order_text_indexes"], [2])
+        self.assertEqual(result["text_occurrence_check"], "FAILED")
+        self.assertEqual(result["insufficient_text_occurrence_indexes"], [1])
+
+    def test_extra_copy_of_a_claim_fails(self):
+        result = _check_text("Name Team prototype Team prototype", ["Name", "Team prototype"])
+        self.assertEqual(result["text_order_check"], "PASSED")
+        self.assertEqual(result["text_occurrence_check"], "FAILED")
+        self.assertEqual(result["unexpected_text_occurrence_indexes"], [1])
+
+    def test_intentional_repetitions_and_substrings_pass(self):
+        expected = ["SQL", "Used SQL for checks", "Education", "Education"]
+        result = _check_text("SQL | Used SQL for checks • Education Education", expected)
+        self.assertEqual(result["text_check"], "PASSED")
+
+    def test_correct_text_does_not_create_duplicates_across_field_boundaries(self):
+        result = _check_text("Data Analyst\nExperience\nAnalyst Experience",
+                             ["Data Analyst", "Experience", "Analyst Experience"])
+        self.assertEqual(result["text_check"], "PASSED")
+        self.assertEqual(result["unexpected_text_occurrence_indexes"], [])
+
+    def test_tilde_contact_target_is_uri_encoded_without_changing_label(self):
+        data = sample()
+        data["contacts"] = ["https://example.invalid/~lin/work?a=1&b=2#demo"]
+        with tempfile.TemporaryDirectory() as temp:
+            target = Path(temp) / "out"
+            export_resume(data, target)
+            tex = (target / "resume.tex").read_text(encoding="utf-8")
+            self.assertIn(r"\href{https://example.invalid/\%7Elin/work?a=1\&b=2\#demo}", tex)
+            self.assertIn(data["contacts"][0], (target / "resume.txt").read_text(encoding="utf-8"))
+
+    def test_unicode_compatibility_and_line_wrap_are_normalized(self):
+        result = _check_text("ﬁeld １００％\nquality_ check", ["field 100%", "quality_check"])
+        self.assertEqual(result["text_check"], "PASSED")
+
+    def test_export_surfaces_extra_and_reordered_claims_as_failed_pdf(self):
+        helper = ResumeExportTests()
+        valid = "示例候选人 sample@example.invalid 项目经历 合成项目 原型阶段 [PLANNED] 计划完成三次合成场景验证"
+        for text in (valid + " [PLANNED] 计划完成三次合成场景验证",
+                     "sample@example.invalid 示例候选人 项目经历 合成项目 原型阶段 [PLANNED] 计划完成三次合成场景验证"):
+            which, run = helper._simulated_compile(text=text)
+            with self.subTest(text=text), tempfile.TemporaryDirectory() as temp, which, run:
+                report = export_resume(sample(), Path(temp) / "out", compile_pdf=True)
+                self.assertEqual(report["status"], "PDF_CHECKS_FAILED")
+
+    def test_contacts_link_only_recognized_addresses_and_keep_source_text(self):
+        data = sample()
+        data["contacts"] = ["first_last@example.invalid", "https://example.invalid/work?a=1&b=2#demo",
+                            r"\input{secret}", "javascript:alert(1)"]
+        with tempfile.TemporaryDirectory() as temp:
+            target = Path(temp) / "out"
+            report = export_resume(data, target)
+            tex = (target / "resume.tex").read_text(encoding="utf-8")
+            self.assertEqual(tex.count(r"\href{"), 2)
+            self.assertIn(r"\href{mailto:first\_last@example.invalid}", tex)
+            self.assertIn(r"\href{https://example.invalid/work?a=1\&b=2\#demo}", tex)
+            self.assertNotIn(r"\input{secret}", tex)
+            self.assertEqual(report["evidence_map"]["contacts"], data["contacts"])
+            for contact in data["contacts"]:
+                self.assertIn(contact, (target / "resume.txt").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

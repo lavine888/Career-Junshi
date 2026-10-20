@@ -32,8 +32,13 @@ Without a JD, label the selection rationale as based on the user's stated target
 Retain supported product leadership while distinguishing teammates' implementation.
 Separate measured change from a causal contribution; plans remain plans.
 
-Show the usable draft and the material omissions or unresolved gaps. Prefer a
-Chinese single-column layout when requested. A one-page preference is a target:
+For original/rewrite/source comparisons, material unknowns and JD-based choices,
+follow the drafting guidance in [resume](resume.md). Load it with this reference
+within the same 1–3 reference budget. Keep those review notes outside the
+application PDF and continue already authorized edits rather than waiting on
+approval of every wording change.
+
+Prefer a Chinese single-column layout when requested. A one-page preference is a target:
 remove repetition and irrelevant material first, then adjust ordinary spacing.
 Do not silently remove scope limits, shrink text until unreadable or force a
 fixed page count. If substantive tradeoffs remain, show the proposed cuts; a
@@ -49,7 +54,9 @@ independent review. The host remains responsible for resolving the findings.
 
 When the user requests files, use a new private output directory they select or
 explicitly accept, outside the Skill installation and public repository. Keep the
-input, source map, generated files and review report private. Resume export is not
+input, source map, generated files and review report private. Reuse a previously
+authorized private working location by creating a fresh output subdirectory;
+do not ask for the same permission again. Resume export is not
 permission to publish, commit, upload to a third-party compiler or build durable
 memory. Do not generate a cover letter unless explicitly requested.
 
@@ -79,10 +86,26 @@ JSON files. A machine-generated verification report cannot stand in for an actua
 host content or visual inspection. Treat `page_limit` as the requested target;
 report observed page count only after checking the compiled output.
 
+The default layout places each entry's dates on a separate right-aligned line,
+so long role or project names do not compete with dates. Contacts share a header
+line and may wrap when needed. Supplied email addresses and HTTPS URLs are
+clickable; ordinary contact text remains text. Do not infer a contact address,
+open a link to authenticate the candidate, or turn arbitrary text into a URL.
+Check long links, header wrapping and date placement in the actual output; these
+layout choices do not guarantee a one-page result.
+
 Render user content as escaped text, including LaTeX characters such as `%`, `&`
 and `_`; never treat supplied experience or JD text as executable LaTeX. Preserve
 the exported plain text alongside editable source so missing glyphs or truncated
 sentences can be compared against a known draft.
+
+When environment readiness is uncertain, the explicit local command
+`python scripts/junshi.py resume-doctor` checks the installed tools by compiling
+small synthetic Chinese and English samples and extracting their actual PDF
+text. It does not use candidate data, install dependencies or call an online
+compiler. Review its reported failures before promising PDF delivery; a passing
+sample checks the environment, not the user's longer document or its visual
+quality. Resume export keeps the commands above unchanged.
 
 Compile only when requested and a working XeLaTeX environment is available. A
 missing engine, font or package is an explicit compilation limitation. Do not
@@ -100,8 +123,10 @@ Report each verification separately rather than one success badge:
    Inspect relevant warnings, including missing glyphs and overfull content.
    The helper's `log_check` only scans compiler warnings; it is not visual approval.
 3. **Text layer:** extract text from that PDF when a suitable tool is available;
-   compare text coverage and reading order with the draft. Explain normalization
-   differences. Missing extraction tooling means this check is unperformed.
+   compare text coverage, order and repeated occurrences with the draft. The
+   helper reports `text_order_check` and `text_occurrence_check` separately;
+   these check normalized expected fragments, not semantic accuracy. Explain
+   normalization differences. Missing extraction tooling means this check is unperformed.
 4. **Visual:** render or open every actual PDF page and inspect clipping, spacing,
    font legibility, headings, links and page breaks. Compiler logs or extracted
    text cannot substitute for seeing the pages. If visual tools are unavailable,

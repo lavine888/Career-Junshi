@@ -1,0 +1,70 @@
+{
+  "status": "NOT_READY",
+  "tools": {
+    "xelatex": {
+      "path": "<tex-bin>/xelatex.exe",
+      "version": "MiKTeX-XeTeX 4.18 (MiKTeX 26.5)",
+      "status": "AVAILABLE"
+    },
+    "pdfinfo": {
+      "path": "<tex-bin>/pdfinfo.exe",
+      "version": "pdfinfo version 24.04.0",
+      "status": "AVAILABLE"
+    },
+    "pdftotext": {
+      "path": "<tex-bin>/pdftotext.exe",
+      "version": "pdftotext version 24.04.0",
+      "status": "AVAILABLE"
+    }
+  },
+  "probes": [
+    {
+      "language": "zh",
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "FAILED",
+        "log_check": "PASSED",
+        "text_order_check": "FAILED",
+        "text_occurrence_check": "FAILED",
+        "visual_review": "REQUIRED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [
+          0,
+          3
+        ],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": [
+          0,
+          3
+        ],
+        "tool_diagnostics": {
+          "text_check": "Syntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Missing language pack for 'Adobe-GB1' mapping\nSyntax Error: Unknown font tag 'F1'\nSyntax Error (179): No font in show/space\nSyntax Error: Unknown font tag 'F9'\nSyntax Error (286): No font in show/space\nSyntax Error: Unknown font tag 'F9'\nSyntax Error (344): No font in show/space\n"
+        }
+      }
+    },
+    {
+      "language": "en",
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "REQUIRED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      }
+    }
+  ],
+  "temporary_probe_files": "REMOVED",
+  "scope": "Local synthetic English/Chinese compilation and PDF text checks only; no candidate files read, no package installation, no visual or ATS certification.",
+  "next_step": "Use the failing probe and tool paths to repair the local environment, then rerun; source-only export remains available."
+}

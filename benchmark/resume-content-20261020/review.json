@@ -1,0 +1,35 @@
+{
+  "case": "same synthetic request, new context per run",
+  "first_run": {
+    "references": [
+      "references/knowledge/01-evidence-and-claims.md",
+      "references/practical/resume.md"
+    ],
+    "response_sha256": "b5df86698478ee529e3ff0bcd67638451a2515575ef998b8717ef02101dc63b9",
+    "finding": "Usable supported draft and rationale; comparison did not clearly separate exact original, proposed text and unresolved facts. The new guidance existed only in export-specific reference, which a content-only request did not load."
+  },
+  "change": "Move shared comparison/selection guidance into resume.md and link it from resume-export.md. Original request and rubric unchanged.",
+  "second_run": {
+    "references": [
+      "references/knowledge/01-evidence-and-claims.md",
+      "references/practical/resume.md",
+      "references/practical/context-extraction.md"
+    ],
+    "response_sha256": "632e5f670c8b630cf7f7d75e9b64b4dda92bdc74c1f7b4f25ce3c232dd6b526f",
+    "outcome": "All seven fixed rubric checks supported by the saved response. Exact originals map to revised entries, reasons, supplied sources and resolved unknowns; useful draft delivered without waiting on routine confirmation.",
+    "observations": [
+      "Retains requirements/acceptance ownership while keeping teammate implementation and local prototype limits.",
+      "Removes both unmeasured business-effect percentages, preserves 3 sample stores/8 weeks/4 duplicate orders.",
+      "Separates candidate facts from JD relevance; notes unavailable live hiring verification.",
+      "Includes a comparison for each original and identifies newly drafted headings. No invented unresolved fact or required response before delivery."
+    ]
+  },
+  "reviewer": "Root agent semantic review; evaluating assistants had fresh contexts and did not receive rubric, suspected issue or desired answer.",
+  "limits": "One authored synthetic request, one response per version, not a controlled causal comparison or long-term/real-user evaluation. Concrete model identifiers and sampling parameters were not separately exposed.",
+  "sha256": {
+    "request.md": "63543794f0559b05e8882716142f45dda045824392ead5d7a9ea7c0f83c9b478",
+    "response-after-routing-fix.md": "632e5f670c8b630cf7f7d75e9b64b4dda92bdc74c1f7b4f25ce3c232dd6b526f",
+    "response-before-routing-fix.md": "b5df86698478ee529e3ff0bcd67638451a2515575ef998b8717ef02101dc63b9",
+    "rubric.json": "b410c0cf42e50c96d047127e8e78e6df064b12f436527eb62fcbab464d934989"
+  }
+}

@@ -22,7 +22,7 @@ RUNTIME_FILES = ["SKILL.md", "LICENSE", "agents/openai.yaml", "documentation/ATT
     "documentation/licenses/Goutoujunshi.txt", "documentation/licenses/Career-Alpha.txt",
     "documentation/licenses/ai-job-search.txt", "assets/resume/single-column.tex", *CATALOG_FILES]
 SCRIPTS = ["__init__.py", "models.py", "io_utils.py", "router.py", "decision.py", "memory_store.py", "feedback_loop.py", "integration.py",
-           "method_adapter.py", "actions.py", "junshi.py", "validate_skill.py", "install_skill.py", "context.py", "intelligence.py", "calibration.py", "hypothesis.py", "role_story.py", "benchmark.py", "decision_quality.py", "resume_export.py", "source_catalog.py"]
+           "method_adapter.py", "actions.py", "junshi.py", "validate_skill.py", "install_skill.py", "context.py", "intelligence.py", "calibration.py", "hypothesis.py", "role_story.py", "benchmark.py", "decision_quality.py", "resume_export.py", "resume_doctor.py", "source_catalog.py"]
 
 
 def validate(root: Path, *, runtime_only=False) -> list[str]:

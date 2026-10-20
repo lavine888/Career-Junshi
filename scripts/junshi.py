@@ -41,6 +41,7 @@ def main(argv=None) -> int:
     resume.add_argument("--input", required=True, help="Explicit private resume JSON")
     resume.add_argument("--output-dir", required=True, help="New private directory outside Git and the Skill installation")
     resume.add_argument("--compile", action="store_true", dest="compile_pdf", help="Request local XeLaTeX compilation and report actual checks")
+    sub.add_parser("resume-doctor", help="Explicit synthetic English/Chinese XeLaTeX and PDF tool self-check; installs nothing")
     sources = sub.add_parser("sources", help="Browse source summaries or one detailed source card; no network or persistence")
     selection = sources.add_mutually_exclusive_group()
     selection.add_argument("--topic", help="job_search, career_choice, resume, interview, negotiation, offer, rights or safety")
@@ -65,6 +66,11 @@ def main(argv=None) -> int:
         if args.command == "sources":
             from scripts.source_catalog import query_sources
             result = query_sources(topic=args.topic, source_id=args.source_id, limit=args.limit)
+        elif args.command == "resume-doctor":
+            from scripts.resume_doctor import diagnose_resume_environment
+            result = diagnose_resume_environment()
+            print(json.dumps(result, ensure_ascii=False, indent=2, allow_nan=False))
+            return 0 if result["status"] == "READY" else 2
         elif args.command == "resume-export":
             from scripts.resume_export import export_resume
             exported = export_resume(load_input(args.input), args.output_dir, compile_pdf=args.compile_pdf)

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-20",
+  "method": "Every page rendered at120DPI with independent Poppler26.09.0. Host inspected all8pages in trial-b; final positive4pages inspected again after fixes, rejected negative4page PNG hashes matched the previously inspected images exactly.",
+  "cases": [
+    {
+      "case": "dense-zh",
+      "pages_reviewed": [
+        1
+      ],
+      "layout_observations": "No clipped/missing glyphs or overlaps; dates and headings readable. Heading with first bullet kept together; subsequent bullets may continue on next page. Long contacts wrap with preserved text.",
+      "visual_review": "PASSED",
+      "delivery": "CHECKED_SYNTHETIC_SAMPLE"
+    },
+    {
+      "case": "two-page-zh",
+      "pages_reviewed": [
+        1,
+        2
+      ],
+      "layout_observations": "No clipped/missing glyphs or overlaps; dates and headings readable. Heading with first bullet kept together; subsequent bullets may continue on next page. Long contacts wrap with preserved text.",
+      "visual_review": "PASSED",
+      "delivery": "CHECKED_SYNTHETIC_SAMPLE"
+    },
+    {
+      "case": "links-mixed",
+      "pages_reviewed": [
+        1
+      ],
+      "layout_observations": "No clipped/missing glyphs or overlaps; dates and headings readable. Heading with first bullet kept together; subsequent bullets may continue on next page. Long contacts wrap with preserved text.",
+      "visual_review": "PASSED",
+      "delivery": "CHECKED_SYNTHETIC_SAMPLE"
+    },
+    {
+      "case": "overflow",
+      "pages_reviewed": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "layout_observations": "No clipped/missing glyphs or overlaps; dates and headings readable. Heading with first bullet kept together; subsequent bullets may continue on next page. Long contacts wrap with preserved text.",
+      "visual_review": "INSPECTED_REJECTED",
+      "delivery": "REJECTED_PAGE_LIMIT"
+    }
+  ],
+  "scope": "Formatting/reading-order observations for synthetic fixtures only; no claim authentication or ATS certification. Machine verification records retain visual_review REQUIRED; this is the separate host review."
+}

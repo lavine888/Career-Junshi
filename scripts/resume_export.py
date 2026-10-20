@@ -11,6 +11,7 @@ import subprocess
 import tempfile
 import unicodedata
 from pathlib import Path
+from urllib.parse import quote, urlsplit
 
 from scripts.models import CONFIDENCE, ContractError
 
@@ -96,13 +97,36 @@ def _escape(text):
     return "".join(substitutions.get(c, c) for c in text)
 
 
+def _contact(value):
+    """Only recognized web/email contacts become links; all labels stay text."""
+    destination = None
+    if re.fullmatch(r"[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}", value):
+        destination = "mailto:" + quote(value, safe="@.+-_")
+    elif re.fullmatch(r"[A-Za-z0-9:/?\[\]@!$&'()*+,;=._~%#-]+", value):
+        try:
+            parsed = urlsplit(value)
+            if parsed.scheme in {"http", "https"} and parsed.hostname and not parsed.username and not parsed.password:
+                destination = value
+        except ValueError:
+            pass
+    if not destination:
+        return _escape(value)
+    # Discretionary breaks have no text-layer glyph, even within a long URL token.
+    label = r"\allowbreak{}".join(_escape(char) for char in value)
+    # Display-text escapes such as \textasciitilde{} alter URI targets.
+    # Encode literal tildes before TeX escaping; preserve existing percent escapes.
+    destination = destination.replace("~", "%7E")
+    return r"\href{" + _escape(destination) + "}{" + label + "}"
+
+
 def _render(data):
     body = [r"{\LARGE\bfseries " + _escape(data["name"]) + r"}\par"]
     plain = [data["name"], data["target_role"], *data["contacts"]]
     expected = [value for value in plain if value]
-    for value in (data["target_role"], *data["contacts"]):
-        if value:
-            body.append(_escape(value) + r"\par")
+    if data["target_role"]:
+        body.append(_escape(data["target_role"]) + r"\par")
+    if data["contacts"]:
+        body.append(r" \textbar{} \allowbreak{}".join(_contact(value) for value in data["contacts"]) + r"\par")
     for section in data["sections"]:
         plain.append(section["title"])
         expected.append(section["title"])
@@ -111,7 +135,10 @@ def _render(data):
             # A minipage keeps the heading with its first bullet; remaining bullets may flow.
             body.append(r"\begin{minipage}{\linewidth}")
             heading = " | ".join(entry[key] for key in ("title", "subtitle", "dates") if entry[key])
-            body.append(r"\textbf{" + _escape(heading) + r"}\par")
+            body.append(r"\textbf{" + _escape(entry["title"]) + "}"
+                        + (" | " + _escape(entry["subtitle"]) if entry["subtitle"] else "") + r"\par")
+            if entry["dates"]:
+                body.append(r"{\small\raggedleft " + _escape(entry["dates"]) + r"\par}")
             plain.append(heading)
             expected.extend(entry[k] for k in ("title", "subtitle", "dates") if entry[k])
             for index, bullet in enumerate(entry["bullets"]):
@@ -155,9 +182,50 @@ def _compact(value):
     return "".join(c for c in unicodedata.normalize("NFKC", value) if not c.isspace())
 
 
-def _compile(tex, target, expected, page_limit):
+def _check_text(extracted, expected):
+    """Check normalized coverage, monotonic reading order and expected multiplicity."""
+    actual = _compact(extracted)
+    segments = [_compact(value) for value in expected]
+    missing = [i for i, value in enumerate(segments) if value not in actual]
+    cursor, out_of_order, gaps = 0, [], []
+    for index, value in enumerate(segments):
+        position = actual.find(value, cursor)
+        if position < 0:
+            if index not in missing:
+                out_of_order.append(index)
+        else:
+            gaps.append(actual[cursor:position])
+            cursor = position + len(value)
+    gaps.append(actual[cursor:])
+    # Once every fragment is anchored in order, approved spans account for all
+    # intended repetitions. Look for extra copies in the remaining gaps only:
+    # removing whitespace must not create duplicates across two approved fields.
+    unexpected, insufficient, seen = [], [], set()
+    ordered = not missing and not out_of_order
+    for index, value in enumerate(segments):
+        if value in seen:
+            continue
+        seen.add(value)
+        if ordered and any(value in gap for gap in gaps):
+            unexpected.append(index)
+        elif not ordered and actual.count(value) < sum(segment.count(value) for segment in segments):
+            insufficient.append(index)
+    occurrence = ("FAILED" if missing or unexpected or insufficient else
+                  "PASSED" if ordered else "UNAVAILABLE")
+    return {"text_check": "FAILED" if missing or out_of_order or occurrence == "FAILED" else "PASSED",
+            "missing_text_indexes": missing,
+            "text_order_check": "PASSED" if ordered else "FAILED",
+            "out_of_order_text_indexes": out_of_order,
+            "text_occurrence_check": occurrence,
+            "unexpected_text_occurrence_indexes": unexpected,
+            "insufficient_text_occurrence_indexes": insufficient}
+
+
+
+def _compile(tex, target, expected, page_limit, *, disable_installer=False):
     compiler = shutil.which("xelatex")
     status = {"compilation": "UNAVAILABLE", "page_check": "UNAVAILABLE", "text_check": "UNAVAILABLE", "log_check": "UNAVAILABLE",
+              "text_order_check": "UNAVAILABLE", "text_occurrence_check": "UNAVAILABLE",
               "visual_review": "REQUIRED", "pdf_file": None}
     if not compiler:
         status["detail"] = "xelatex is not on PATH; source files remain available"
@@ -168,7 +236,10 @@ def _compile(tex, target, expected, page_limit):
         logs = []
         try:
             for _ in range(2):
-                result = _run([compiler, "-no-shell-escape", "-halt-on-error", "-interaction=nonstopmode",
+                command = [compiler]
+                if disable_installer:
+                    command.append("-disable-installer")
+                result = _run([*command, "-no-shell-escape", "-halt-on-error", "-interaction=nonstopmode",
                                "resume.tex"], work)
                 logs.append(result.stdout + result.stderr)
                 if result.returncode:
@@ -196,15 +267,15 @@ def _compile(tex, target, expected, page_limit):
                 check = _run(command, work)
                 if check.returncode:
                     status[kind] = "FAILED"
+                    status.setdefault("tool_diagnostics", {})[kind] = (check.stderr or check.stdout)[-2000:]
                 elif kind == "page_check":
                     match = re.search(r"^Pages:\s+(\d+)\s*$", check.stdout, re.MULTILINE)
                     status[kind] = "PASSED" if match and 1 <= int(match[1]) <= page_limit else "FAILED"
                     status["pages"] = int(match[1]) if match else None
                 else:
-                    extracted = _compact(check.stdout)
-                    missing = [index for index, text in enumerate(expected) if _compact(text) not in extracted]
-                    status[kind] = "FAILED" if missing else "PASSED"
-                    status["missing_text_indexes"] = missing
+                    status.update(_check_text(check.stdout, expected))
+                    if status[kind] == "FAILED" and check.stderr:
+                        status.setdefault("tool_diagnostics", {})[kind] = check.stderr[-2000:]
             except (OSError, subprocess.TimeoutExpired):
                 status[kind] = "FAILED"
         return status
@@ -222,6 +293,7 @@ def export_resume(data, directory, compile_pdf=False):
                           ("resume-data.json", json.dumps(normalized, ensure_ascii=False, indent=2) + "\n")):
         (target / name).write_text(content, encoding="utf-8")
     checks = {"compilation": "NOT_REQUESTED", "page_check": "UNAVAILABLE", "text_check": "UNAVAILABLE", "log_check": "UNAVAILABLE",
+              "text_order_check": "UNAVAILABLE", "text_occurrence_check": "UNAVAILABLE",
               "visual_review": "REQUIRED", "pdf_file": None}
     if compile_pdf:
         checks = _compile(tex, target, expected, normalized["page_limit"])

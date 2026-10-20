@@ -119,13 +119,19 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 
 ```text
 按这份 JD 整理中文单栏简历，优先一页。
-保留真实贡献，先说明重要删留；给我 LaTeX 源码和纯文本。
+保留真实贡献，给出“原句 → 改写 → 理由 → 待核实事实”和岗位删留说明。
+普通润色直接完成；给我 LaTeX 源码和纯文本。
 输出到我指定的新私有目录；本机有 XeLaTeX 时再编译 PDF。
 分别说明内容、编译、PDF 文字层和实际页面的检查结果。
 ```
 
 导出保留 **LaTeX 源码、纯文本、带来源的内容数据和验收记录**。
 内容先起草和审阅，再排版；独立审阅依宿主可用能力进行。
+你能看到哪些经历被前置、压缩或省略，以及对应的岗位理由；不会把 JD 要求写成你的成果。
+默认单栏版式将日期独立右对齐，联系方式集中展示，已提供的邮箱和网页链接可点击。
+
+[查看已编译的中文一页样例](benchmark/resume-layout-20261020/artifacts/dense-zh/resume.pdf) ·
+[两页与长链接测试](documentation/RESUME_ITERATION_EVAL.md)（均为虚构材料）
 
 **按下一步操作选择文件。** 军师会在交付时推荐入口：
 
@@ -141,7 +147,16 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 <details>
 <summary>PDF 编译、页数与文件存放</summary>
 
-源码导出不需要 LaTeX；PDF 编译需要本机 XeLaTeX、模板字体及宏包。
+源码导出不需要 LaTeX；PDF 编译需要本机 XeLaTeX、CTEX/Fandol、geometry 与 hyperref 等模板依赖。
+环境不确定时，在仓库或 Skill 根目录运行：
+
+```bash
+python scripts/junshi.py resume-doctor
+```
+
+自检会实际编译中英文合成小样，报告工具路径、版本和文字提取结果；不读取你的简历，也不安装组件。
+`READY` 表示小样通过，`NOT_READY` 会返回失败检查；源码导出仍可使用。
+真正导出后继续检查文字覆盖、阅读顺序、重复次数及每页版面。
 页数可选 1 或 2 页，不自动缩字或删除实质内容。
 未完成编译或视觉检查时会明确标注，文字层检查也不等于通用 ATS 认证。
 个人文件保存在仓库和 Skill 安装之外，由你指定的新目录中。
@@ -207,7 +222,7 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 
 ## 验证进展
 
-**237 项自动测试、13 个结构化合成基准**，以及有限的独立上下文试用，
+**251 项自动测试、13 个结构化合成基准**，以及有限的独立上下文试用，
 覆盖安装、路由、证据处理和实际交互。它们尚不能证明提高面试通过率或 Offer 率。
 
 <details>
@@ -222,6 +237,7 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 | 参考库、结构化面试、Offer 核验 | [参考库验收](documentation/CAREER_LIBRARY_EVAL.md) |
 | 5个模拟用户、15轮实际交互 | [多轮试用](documentation/MOCK_USER_TRIALS.md) |
 | 导出后的文件选择与新手 / LaTeX 场景复测 | [交付改进验收](documentation/EXPORT_HANDOFF_EVAL.md) |
+| 改写对照、环境自检与真实 XeLaTeX 排版压力测试 | [本轮验收](documentation/RESUME_ITERATION_EVAL.md) |
 
 既有冻结案例仍有提取、交接和建议泛化等弱点，未全部重测，也未宣称达到原有真实用户试点门槛。
 当前招聘、薪资与公司信息仍需新鲜来源，不提供候选人综合分数或录用概率。

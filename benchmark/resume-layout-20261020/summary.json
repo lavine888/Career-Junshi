@@ -1,0 +1,112 @@
+{
+  "schema_version": "1",
+  "fixture_kind": "SYNTHETIC_PUBLIC",
+  "visual_review": "REQUIRED",
+  "cases": [
+    {
+      "case": "dense-zh",
+      "expected_pages": 1,
+      "delivery_status": "AWAITING_VISUAL_REVIEW",
+      "rendered_pages": [
+        "dense-zh/rendered/page-1.png"
+      ],
+      "status": "PDF_COMPILED_AWAITING_VISUAL_REVIEW",
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "REQUIRED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "expectation": "PASSED"
+    },
+    {
+      "case": "two-page-zh",
+      "expected_pages": 2,
+      "delivery_status": "AWAITING_VISUAL_REVIEW",
+      "rendered_pages": [
+        "two-page-zh/rendered/page-1.png",
+        "two-page-zh/rendered/page-2.png"
+      ],
+      "status": "PDF_COMPILED_AWAITING_VISUAL_REVIEW",
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "REQUIRED",
+        "pdf_file": "resume.pdf",
+        "pages": 2,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "expectation": "PASSED"
+    },
+    {
+      "case": "links-mixed",
+      "expected_pages": 1,
+      "delivery_status": "AWAITING_VISUAL_REVIEW",
+      "rendered_pages": [
+        "links-mixed/rendered/page-1.png"
+      ],
+      "status": "PDF_COMPILED_AWAITING_VISUAL_REVIEW",
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "REQUIRED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "expectation": "PASSED"
+    },
+    {
+      "case": "overflow",
+      "expected_pages": null,
+      "delivery_status": "REJECTED",
+      "rendered_pages": [
+        "overflow/rendered/page-1.png",
+        "overflow/rendered/page-2.png",
+        "overflow/rendered/page-3.png",
+        "overflow/rendered/page-4.png"
+      ],
+      "status": "PDF_CHECKS_FAILED",
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "FAILED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "REQUIRED",
+        "pdf_file": "resume.pdf",
+        "pages": 4,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "expectation": "PASSED"
+    }
+  ],
+  "expectation": "PASSED"
+}

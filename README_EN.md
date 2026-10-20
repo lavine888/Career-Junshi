@@ -127,13 +127,20 @@ Authored synthetic walkthroughs, in Chinese: [defense](cases/experiences/defense
 
 ```text
 Prepare a Chinese single-column resume for this JD, aiming for one page.
-Preserve real contributions and explain material cuts. Export LaTeX and plain text
+Preserve real contributions. Show original → rewrite → reason → facts still to confirm,
+and explain role-based cuts. Complete ordinary wording edits. Export LaTeX and plain text
 to a new private directory I specify. Compile a PDF if local XeLaTeX is available.
 Report content, compilation, PDF text-layer and actual visual checks separately.
 ```
 
 The export keeps **LaTeX source, plain text, sourced content data and a verification report**.
 Drafting and review precede formatting; independent review depends on host capabilities.
+See which experiences move forward, are compressed or omitted, with reasons tied to the JD;
+requirements never become candidate achievements. The default single-column layout uses
+separate right-aligned dates, grouped contacts and clickable supplied email/web addresses.
+
+[Compiled one-page Chinese example](benchmark/resume-layout-20261020/artifacts/dense-zh/resume.pdf) ·
+[Two-page and long-link checks](documentation/RESUME_ITERATION_EVAL.md) (synthetic materials)
 
 **Choose the file for your next step.** Junshi recommends an entry point for your task:
 
@@ -151,7 +158,20 @@ remain available; actual PDF page count and layout remain unverified.
 <summary>PDF compilation, page budget and file location</summary>
 
 Source export needs no LaTeX installation. PDF compilation requires local XeLaTeX,
-template fonts and packages. Choose one or two pages; the helper never silently
+CTEX/Fandol, geometry, hyperref and their dependencies. To check the environment,
+run from the repository or installed Skill root:
+
+```bash
+python scripts/junshi.py resume-doctor
+```
+
+The explicit self-check compiles synthetic Chinese and English probes and reports tool
+paths, versions and PDF text results. It reads no candidate files and installs nothing.
+`READY` means the probes passed; `NOT_READY` reports failures with a nonzero exit status.
+Source-only export remains available. Check the actual resume's text coverage, reading
+order, occurrence counts and every rendered page after export.
+
+Choose one or two pages; the helper never silently
 cuts content or shrinks fonts. Missing compilation or visual review is reported;
 text-layer checks do not certify compatibility with every ATS.
 Private output goes to a new directory you specify outside Git and the installed Skill.
@@ -225,7 +245,7 @@ Conversation materials remain subject to the host's data policies.
 
 ## Verification progress
 
-**237 automated tests, 13 structured synthetic benchmark cases** and limited independent
+**251 automated tests, 13 structured synthetic benchmark cases** and limited independent
 fresh-context trials cover installation, routing, evidence handling and interactions.
 They do not establish improved interview or offer rates.
 
@@ -241,6 +261,7 @@ They do not establish improved interview or offer rates.
 | Sources, structured interviews and offer checks | [Career-library evaluation](documentation/CAREER_LIBRARY_EVAL.md) |
 | Five synthetic users, 15 assistant turns | [Multi-turn trials](documentation/MOCK_USER_TRIALS.md) |
 | File selection for novice and LaTeX users | [Handoff refinement](documentation/EXPORT_HANDOFF_EVAL.md) |
+| Rewrite comparisons, environment probes and real XeLaTeX layout stress checks | [Iteration evaluation](documentation/RESUME_ITERATION_EVAL.md) |
 
 Existing frozen cases retain extraction, handoff and generalization weaknesses.
 They have not all been rerun, and the earlier real-user pilot gates are not claimed as met.

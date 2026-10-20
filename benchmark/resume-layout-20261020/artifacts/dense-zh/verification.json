@@ -1,0 +1,210 @@
+{
+  "schema_version": "1",
+  "status": "PDF_COMPILED_AWAITING_VISUAL_REVIEW",
+  "checks": {
+    "compilation": "COMPILED",
+    "page_check": "PASSED",
+    "text_check": "PASSED",
+    "log_check": "PASSED",
+    "text_order_check": "PASSED",
+    "text_occurrence_check": "PASSED",
+    "visual_review": "REQUIRED",
+    "pdf_file": "resume.pdf",
+    "pages": 1,
+    "missing_text_indexes": [],
+    "out_of_order_text_indexes": [],
+    "unexpected_text_occurrence_indexes": [],
+    "insufficient_text_occurrence_indexes": []
+  },
+  "page_limit": 1,
+  "expected_text": [
+    "沈禾（虚构排版样例）",
+    "数据运营与产品助理（合成排版测试）",
+    "synthetic@example.com",
+    "上海（合成地点）",
+    "教育经历",
+    "虚构青禾学院",
+    "统计学本科；课程：数据库、实验设计、数据可视化",
+    "2022.09—2026.06（预计毕业）",
+    "实习经历",
+    "虚构青穗信息服务团队",
+    "数据运营实习生；仅负责样本报表与核对工作",
+    "2026.01—2026.04",
+    "按既定字段口径整理每周销售样本，通过 SQL 连接订单与退款记录；保留原始快照，记录无法匹配的主键并交由业务同学核对。",
+    "使用 Python 生成周度 CSV 汇总，对空值、重复行和日期格式设置独立检查；异常记录保存在单独清单，没有直接修改生产数据。",
+    "与负责报表的同学核对指标定义，将退款跨周归属与时区差异写入说明；个人贡献为字段整理和问题复现，最终口径由负责人确认。",
+    "虚构云帆校园产品工作室",
+    "产品助理实习；服务端与视觉稿由其他成员实现",
+    "2025.07—2025.10",
+    "根据访谈笔记归纳校园活动报名中的操作问题，将信息填写、资格确认和取消报名拆成三个流程，逐条标出证据与待验证假设。",
+    "编写报名表单原型与验收清单，覆盖空字段、重复提交和取消操作；原型用于小组讨论，没有上线用户或转化率提升的证据。",
+    "参与每周需求讨论，维护变更记录并写出本轮暂缓事项；个人负责范围与团队共同决策分别记录，避免将协作成果写成独立完成。",
+    "项目经历",
+    "校园活动报名数据质量检查",
+    "个人课程练习；合成样本",
+    "2026.03—2026.04",
+    "构建包含缺失日期和重复报名的合成数据，用 SQL 输出问题清单，并保存可重复运行的查询和样本输入供同学检查。",
+    "整理 README，说明数据来自人工合成、异常规则的适用边界与复现步骤；未使用真实学生身份信息。",
+    "小组文档检索原型与来源展示",
+    "三人课程项目；个人负责问题梳理与验收设计",
+    "2025.11—2025.12",
+    "比较关键词检索与问答界面的使用路径，将回答来源展示列为验收项；检索服务由队友完成，个人没有独立实现模型服务。",
+    "保存若干查询的输入与输出，标记无来源回答和无法定位的文档段落；该记录用于演示，不用于宣称线上准确率。"
+  ],
+  "evidence_map": {
+    "schema_version": "1",
+    "language": "zh",
+    "name": "沈禾（虚构排版样例）",
+    "target_role": "数据运营与产品助理（合成排版测试）",
+    "contacts": [
+      "synthetic@example.com",
+      "上海（合成地点）"
+    ],
+    "sources": [
+      {
+        "id": "S1",
+        "description": "专为排版压力测试编写的虚构人物与经历，全部自述，不代表真实候选人或已验证业务成效。"
+      }
+    ],
+    "sections": [
+      {
+        "title": "教育经历",
+        "entries": [
+          {
+            "title": "虚构青禾学院",
+            "subtitle": "统计学本科；课程：数据库、实验设计、数据可视化",
+            "dates": "2022.09—2026.06（预计毕业）",
+            "source_ids": [
+              "S1"
+            ],
+            "bullets": []
+          }
+        ]
+      },
+      {
+        "title": "实习经历",
+        "entries": [
+          {
+            "title": "虚构青穗信息服务团队",
+            "subtitle": "数据运营实习生；仅负责样本报表与核对工作",
+            "dates": "2026.01—2026.04",
+            "source_ids": [
+              "S1"
+            ],
+            "bullets": [
+              {
+                "text": "按既定字段口径整理每周销售样本，通过 SQL 连接订单与退款记录；保留原始快照，记录无法匹配的主键并交由业务同学核对。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "使用 Python 生成周度 CSV 汇总，对空值、重复行和日期格式设置独立检查；异常记录保存在单独清单，没有直接修改生产数据。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "与负责报表的同学核对指标定义，将退款跨周归属与时区差异写入说明；个人贡献为字段整理和问题复现，最终口径由负责人确认。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          },
+          {
+            "title": "虚构云帆校园产品工作室",
+            "subtitle": "产品助理实习；服务端与视觉稿由其他成员实现",
+            "dates": "2025.07—2025.10",
+            "source_ids": [
+              "S1"
+            ],
+            "bullets": [
+              {
+                "text": "根据访谈笔记归纳校园活动报名中的操作问题，将信息填写、资格确认和取消报名拆成三个流程，逐条标出证据与待验证假设。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "编写报名表单原型与验收清单，覆盖空字段、重复提交和取消操作；原型用于小组讨论，没有上线用户或转化率提升的证据。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "参与每周需求讨论，维护变更记录并写出本轮暂缓事项；个人负责范围与团队共同决策分别记录，避免将协作成果写成独立完成。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "项目经历",
+        "entries": [
+          {
+            "title": "校园活动报名数据质量检查",
+            "subtitle": "个人课程练习；合成样本",
+            "dates": "2026.03—2026.04",
+            "source_ids": [
+              "S1"
+            ],
+            "bullets": [
+              {
+                "text": "构建包含缺失日期和重复报名的合成数据，用 SQL 输出问题清单，并保存可重复运行的查询和样本输入供同学检查。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "整理 README，说明数据来自人工合成、异常规则的适用边界与复现步骤；未使用真实学生身份信息。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          },
+          {
+            "title": "小组文档检索原型与来源展示",
+            "subtitle": "三人课程项目；个人负责问题梳理与验收设计",
+            "dates": "2025.11—2025.12",
+            "source_ids": [
+              "S1"
+            ],
+            "bullets": [
+              {
+                "text": "比较关键词检索与问答界面的使用路径，将回答来源展示列为验收项；检索服务由队友完成，个人没有独立实现模型服务。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "保存若干查询的输入与输出，标记无来源回答和无法定位的文档段落；该记录用于演示，不用于宣称线上准确率。",
+                "source_ids": [
+                  "S1"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "page_limit": 1
+  },
+  "semantic_verification": "NOT_PERFORMED",
+  "ats_certification": "NOT_PERFORMED",
+  "directory": "<private-output>/dense-zh"
+}
