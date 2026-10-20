@@ -114,3 +114,8 @@ effectiveness. Deliver exact file paths, page count if checked, checks performed
 and remaining limitations. A source-only bundle is useful but is not a completed
 PDF delivery. Revisit the draft when facts or the target change, not by upgrading
 unverified achievements to fill a page.
+
+For research support about writing assistance, use R3 in
+[research and application](../knowledge/08-research-and-application.md) within the
+same reference budget. That online-market experiment does not test this Skill,
+LaTeX, page count, keyword stuffing or achievement inflation.

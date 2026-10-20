@@ -167,6 +167,24 @@ memory, upload documents or submit applications.
 | “Five days without an HR reply. Follow up?” | Check the conversation, promised dates and workdays; provide timing, a draft and a stop rule |
 | “Which offer should I choose?” | Compare personal goals and written terms; identify the preference and unknowns that could reverse it |
 
+### When applications stall or preparation never starts
+
+| Ask this | What you get |
+| --- | --- |
+| “Two application batches had different results. Design a trial within my one-hour budget without assuming the new resume worked better.” | One hypothesis, comparable opportunities, one intended change, a budget and an observation window |
+| “I have 15 minutes and keep changing templates. Help me start preparing for tomorrow.” | One inspectable result, a concrete cue, a fallback and a firm stopping point |
+
+Trials preserve versions and denominators. Different roles, channels or follow-up
+windows do not establish a template effect. Pending applications remain pending;
+plans do not submit applications or create reminders. Start cards address task
+obstacles without personality labels or diagnoses.
+
+Ask “What supports this advice, and where might it not apply?” for the study,
+population and transfer limits. Research effects are not personal hiring odds.
+[Application-trial illustration](cases/experiences/job-search-experiment/example.md) ·
+[Start-card illustration](cases/experiences/action-start/example.md) ·
+[Methods and research boundaries](references/knowledge/08-research-and-application.md)
+
 ## The real contribution stays intact
 
 Team outcomes are not sole implementation. Prototypes are not production. Plans are
@@ -191,7 +209,7 @@ conversation materials remain subject to the host's data policies. See [memory](
 
 ## What has been checked
 
-The current implementation has **226 automated tests**, **13 structured synthetic
+The current implementation has **228 automated tests**, **13 structured synthetic
 benchmark cases**, and limited independent host trials of the four core experiences.
 These check software behavior and evidence boundaries; they do not establish improved
 interview or offer rates.
@@ -199,6 +217,8 @@ The wording audit, checkpoint continuation and two-stage review also received fr
 trials, including a known-outcome boundary check. See the [detail evaluation](documentation/REFINEMENT_EVAL.md).
 Source export, missing-compiler behavior and PDF verification limits are recorded
 in the [resume-export evaluation](documentation/RESUME_EXPORT_EVAL.md).
+Independent trials of application experiments, action starts and research transfer
+are recorded in the [research-workflow evaluation](documentation/RESEARCH_EVOLUTION_EVAL.md).
 
 Known weaknesses remain in existing holdouts. Extraction and handoffs can fail, and
 advice can be generic or too cautious. This iteration does not rerun every frozen

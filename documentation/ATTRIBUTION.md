@@ -18,6 +18,12 @@ newly written, not copies of its scripts. The full upstream MIT notice is retain
 in [licenses/Goutoujunshi.txt](licenses/Goutoujunshi.txt), including in installations.
 No relationship content, dating scripts or PUA material is reused.
 
+On 2026-10-20, also inspected the supplied knowledge/19 bibliography
+(file blob `5bf54af364fe02c9170d55b23795feba565660ee`). Its separation of
+research, theory and practice informed the optional career research index.
+The relationship bibliography was not imported; career sources were checked
+individually, with reading depth and transfer limits recorded in that index.
+
 ## Career Alpha
 
 [Repository](https://github.com/lavine888/career-alpha), audited local commit

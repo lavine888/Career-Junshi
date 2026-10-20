@@ -65,6 +65,29 @@ class ExperienceRoutingTests(unittest.TestCase):
         first["references"].clear()
         self.assertTrue(route("interview", experience="defense")["references"])
 
+    def test_application_experiment_keeps_research_within_the_resource_budget(self):
+        for mode in ("job", "positioning", "recruiting"):
+            result = route(mode, experience="job-search-experiment")
+            self.assertEqual(result["references"], [
+                "references/knowledge/08-research-and-application.md",
+                "references/practical/job-search-experiment.md",
+            ])
+            self.assertEqual(result["execution"], "host-led")
+        for mode in ("interview", "offer"):
+            with self.assertRaises(ContractError):
+                route(mode, experience="job-search-experiment")
+
+    def test_action_start_preserves_default_preparation_and_does_not_start_a_session(self):
+        for mode in ("job", "positioning", "interview"):
+            result = route(mode, experience="action-start")
+            self.assertEqual(result["suggested_artifact"], "action-start.md")
+            self.assertEqual(result["execution"], "host-led")
+            self.assertEqual(len(result["references"]), 2)
+        self.assertIn("references/practical/interview.md", route("interview")["references"])
+        for mode in ("recruiting", "offer"):
+            with self.assertRaises(ContractError):
+                route(mode, experience="action-start")
+
     def test_installed_cli_routes_without_running_or_saving_a_session(self):
         with tempfile.TemporaryDirectory() as tmp:
             base = Path(tmp)

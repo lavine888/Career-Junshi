@@ -39,6 +39,13 @@ practical reference within the same 1–3-resource budget:
 | 措辞核对 / check ownership, stage and causal wording | positioning | [wording-audit](wording-audit.md) |
 | 隐藏结果复盘 / observations before the result is revealed | current situation mode | [outcome-blind-review](outcome-blind-review.md) |
 | 简历排版 / reviewed role-specific resume to LaTeX and optional PDF | positioning | [resume-export](resume-export.md) |
+| 投递实验 / test one job-search hypothesis within a budget | job, positioning or recruiting | [job-search-experiment](job-search-experiment.md) |
+| 卡点启动 / turn a stuck preparation task into one startable action | job, positioning or interview | [action-start](action-start.md) |
+
+When the user asks for research support or a scientific claim affects the advice,
+select the relevant card from [research and application](../knowledge/08-research-and-application.md).
+Replace a less useful reference if needed. A study supports only its actual
+population, intervention and outcome; these workflows have no demonstrated hiring effect.
 
 Defense can pause with a copyable checkpoint and resume one question from the
 supplied record. Outcome-blind review requires a context that has not received the

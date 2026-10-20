@@ -98,9 +98,9 @@ Offer 缺目标或硬约束时先问，给有条件的选择标准，不按公�
 | Offer 比较、谈薪 | career-decision、[offer-evaluation](references/knowledge/06-offer-evaluation.md)、[offer](references/practical/offer.md)；谈薪用 [negotiation](references/practical/negotiation.md) 替换 practical |
 | 记忆授权、查看、更新、结果回流 | [career-memory](references/practical/career-memory.md) |
 
-其他情境从 [practical router](references/practical/00-router.md) 选最小集合。
+投递实验、卡点启动等从 [任务路由](references/practical/00-router.md) 选最小集合。
 确定性结构化路由可用 `python scripts/junshi.py route --mode interview`；
-脚本不理解任意自然语言，也不能代替你的上下文判断。不要把脚本样例建议当个性化真相。
+脚本只处理结构化输入，不代替上下文判断；样例建议不是个性化结论。研究结论不直接当作个人录用预测。
 
 ## Memory and outcomes
 

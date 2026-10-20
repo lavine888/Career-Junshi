@@ -11,6 +11,12 @@ ROUTES = {
 }
 
 EXPERIENCES = {
+    "job-search-experiment": {"modes": {"job", "positioning", "recruiting"},
+                              "references": ["references/knowledge/08-research-and-application.md", "references/practical/job-search-experiment.md"],
+                              "artifact": "job-search-experiment.md"},
+    "action-start": {"modes": {"job", "positioning", "interview"},
+                     "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/action-start.md"],
+                     "artifact": "action-start.md"},
     "resume-export": {"modes": {"positioning"},
                       "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/resume-export.md"],
                       "artifact": "resume.tex"},

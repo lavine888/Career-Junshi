@@ -59,7 +59,8 @@ evaluation reports stay in the checkout; runtime-only benchmark use needs an exp
 
 Core playbooks and focused branches layer on the existing situation modes: resume
 defense, role translation, evidence sprint, decision review, wording audit,
-outcome-blind review and resume export. The host selects the
+outcome-blind review, resume export, job-search experiments and action-start cards.
+The host selects the
 experience from the request, reads its relevant references and conducts the work.
 `junshi.py route --mode interview --experience defense` only selects references
 and suggests an artifact filename; it does not run a session or generate a report.
@@ -72,3 +73,8 @@ has no mandatory TeX dependency: source export remains available without XeLaTeX
 Requested compilation, page-budget checks, text-layer checks and host visual
 inspection are reported separately. Private outputs must be new directories outside
 Git checkouts and the installed Skill. Only synthetic examples ship in the source.
+
+The optional research index separates publication design and findings from product
+adaptations. It is loaded for a relevant question rather than every request.
+Application experiments and start cards remain host-led: routing cannot run an
+experiment, authenticate a study or establish a causal hiring effect.

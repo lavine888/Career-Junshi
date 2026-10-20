@@ -60,3 +60,8 @@ Return a compact summary the user can carry into this chat next time. Never trea
 stored memory as fresh proof, recall unrelated records or auto-enable persistence.
 If the user explicitly asks to manage durable memory, follow
 [career-memory.md](career-memory.md) and its consent boundaries separately.
+
+When application feedback suggests a testable bottleneck and the user wants a
+bounded next trial, use [job-search-experiment](job-search-experiment.md) instead
+of assigning an unstructured increase in application volume. Incomparable batches
+are observations, not an A/B causal result.

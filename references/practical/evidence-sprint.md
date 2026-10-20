@@ -52,3 +52,6 @@ supports stronger wording, keep or weaken it and choose one next check.
 Close with accepted / missing evidence and one next action. The user can return
 later in this chat without enabling persistent memory. Do not read a vault,
 initialize memory or save records as part of this experience by default.
+
+If the immediate obstacle is starting rather than designing a project, replace
+this playbook with [action-start](action-start.md); do not prescribe a bigger sprint.
