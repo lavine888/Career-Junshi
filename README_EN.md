@@ -1,35 +1,43 @@
+<a id="top"></a>
+
 <div align="center">
 
-![Career Junshi — Evidence-backed experience, actionable next steps](assets/readme-hero-editorial.png)
+![Career Junshi: evidence-backed experience and actionable next steps](assets/readme-hero-editorial.png)
 
 # Career Junshi · 求职军师
 
-### Turn real experience into a resume you can defend.
+**Use real experience to rewrite a resume, rehearse interviews and decide what comes next.**
 
-Rewrite a resume, rehearse an interview, build evidence or choose an offer. Start where you are stuck.
+A career workflow for assistants that support local Skills. Start where you are stuck.
 
-[![MIT](https://img.shields.io/badge/License-MIT-D8B466?style=flat-square)](LICENSE)
-![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-627EAA?style=flat-square)
-[![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-83D5BA?style=flat-square)](documentation/MEMORY.md)
+[![MIT](https://img.shields.io/badge/License-MIT-0B3C86?style=flat-square)](LICENSE)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-6D6B64?style=flat-square)
+[![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-2F6C59?style=flat-square)](documentation/MEMORY.md)
 
-[Get started](#start) · [Core experiences](#experiences) · [Resume export](#resume-export) · [Source library](#library) · [中文](README.md)
+[See it work](#demo) · [Get started](#start) · [Core experiences](#experiences) · [Resume export](#resume-export) · [Verification](#evaluation) · [中文](README.md)
 
 </div>
 
-Career Junshi is a career workflow for Codex and other hosts that support local Skills.
-Bring a real project, a JD or a decision. Leave with usable wording, an evidence-grounded judgment
-and 1–3 useful next actions.
-
 <a id="demo"></a>
 
-## See one project claim improve
+## One claim, rewritten so you can explain it
 
-> **Resume claim:** “Independently built a production RAG platform, improving accuracy by 30%.”
->
-> **Actual account:** A team course prototype. You wrote evaluation scripts and classified
-> failures; a teammate built the service. Ten internal questions, no baseline, no production users.
+> **Original:** “Independently built a production RAG platform, improving accuracy by 30%.”
 
-Junshi starts with the actual work, one question at a time:
+The actual account: a team course prototype. You wrote evaluation scripts and classified
+failures; a teammate built the service. Ten internal questions, no baseline, no production users.
+Junshi asks about your work and the evaluation criteria before suggesting usable wording:
+
+> Contributed to a team RAG course prototype, owning evaluation scripts and failure
+> classification; evaluated ten internal questions against team-agreed criteria and
+> recorded missing citations, incorrect passages, and contradictions with source documents.
+
+You leave with **clear ownership, evidence still to gather and a concrete next step**.
+
+<sub>Adapted from an actual host trial with synthetic material, not a real resume or hiring outcome. [Trial record](documentation/EVOLUTION_EVAL.md)</sub>
+
+<details>
+<summary>See the follow-up question</summary>
 
 ```text
 Junshi: For those ten questions, what made an answer count as a failure?
@@ -42,21 +50,17 @@ Junshi: Your contribution is clearer. It remains your account;
         the code and evaluation records still need checking.
 ```
 
-**You leave with usable wording that keeps ownership clear:**
+The [full defense walkthrough](cases/experiences/defense/example.md) is a separately authored synthetic case.
 
-> Contributed to a team RAG course prototype, owning evaluation scripts and failure
-> classification; evaluated ten internal questions against team-agreed criteria and
-> recorded missing citations, incorrect passages, and contradictions with source documents.
-
-<sub>Adapted from an actual host trial using anonymous synthetic material, not a real candidate or hiring outcome. [Trial record](documentation/EVOLUTION_EVAL.md) · [Separately authored walkthrough](cases/experiences/defense/example.md)</sub>
+</details>
 
 <a id="start"></a>
 
 ## Start in two steps
 
-### 1. Install the Skill
+### 1. Install in your assistant
 
-Send this to a host that supports local Skills:
+Send this to Codex or another host that supports local Skills:
 
 ```text
 Install career-junshi from the main branch of
@@ -66,10 +70,7 @@ Validate the installed runtime files. Do not enable persistent memory.
 ```
 
 <details>
-<summary>Manual installation and requirements</summary>
-
-Use a host with local Skill support. The installer and helpers use Python 3.10+
-and its standard library.
+<summary>Manual installation · Python 3.10+ · standard library only</summary>
 
 ```sh
 git clone --branch main https://github.com/lavine888/Career-Junshi.git
@@ -81,7 +82,7 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 
 Replace `/path/to/your/skills` with a directory your host discovers, including on Windows.
 The target folder must be named `career-junshi`; existing targets are preserved and refused.
-Installation copies runtime files and license notices, excluding examples, tests, `.git`
+Installation copies runtime files and license notices, excluding cases, tests, `.git`
 and databases. It does not enable memory.
 
 </details>
@@ -89,196 +90,191 @@ and databases. It does not enable memory.
 ### 2. Bring one real experience
 
 ```text
-Use $career-junshi for a resume defense session.
+Use $career-junshi to rewrite this experience.
 
 My resume says: ...
 What I actually did: ...
 Target role / JD: ...
 Next interview or deadline: ...
 
-Ask one question at a time and follow my actual answers.
-Finish with usable resume wording, evidence gaps and the most useful next step.
+Give me usable wording, reasons for material changes and the best next evidence task.
 ```
 
-A complete resume is optional. Ask to rewrite a paragraph or prioritize tonight's preparation.
-Junshi uses supplied materials first and asks only for consequential missing information.
-Persistent memory can stay off.
+A complete resume is optional; leave the JD or deadline blank if unknown.
+Junshi uses existing material first and asks only for consequential missing facts.
+For interview practice, add “Run a resume defense session, one question at a time.”
 
 <a id="experiences"></a>
 
-## Four core experiences
+## Enter where you are stuck
 
-| Where you are stuck | Ask this | What you get |
+| Core experience | Ask this | What you get |
 | --- | --- | --- |
-| **🛡 Resume defense** · A project might unravel under questions | “Challenge this claim, one question at a time.” | Clear ownership, evidence gaps and usable wording |
-| **🎯 Role translation** · One project, different target jobs | “Adapt this project to these two JDs and explain each version.” | Shared facts, role versions and editing rationale |
-| **🧩 Evidence sprint** · A gap needs a bounded task | “I have four hours this week. Close one important evidence gap.” | A deliverable, acceptance criteria, a budget and a stopping point |
-| **🔄 Decision review** · New feedback changes the picture | “Compare the earlier recommendation with this feedback.” | Prior judgment versus observations and a revised next action |
+| **Resume defense** · A project may unravel under questions | “Challenge this claim, one question at a time.” | Personal contribution, evidence gaps, usable wording |
+| **Role translation** · One project, different jobs | “Adapt this to two JDs. Explain what each version keeps.” | Shared facts, role versions, editing rationale |
+| **Evidence sprint** · You know the gap, not how to close it | “I have four hours this week. Close one key gap.” | A deliverable, acceptance criteria, a budget, a stopping point |
+| **Decision review** · Feedback changes the picture | “Compare the last advice with this feedback.” | Prior judgment versus observations, a revised action |
 
 Enter at any point and stop whenever you need. Role versions keep the same facts.
 
-Authored synthetic walkthroughs, in Chinese: [defense](cases/experiences/defense/example.md) ·
+Synthetic walkthroughs, in Chinese: [defense](cases/experiences/defense/example.md) ·
 [role translation](cases/experiences/role-translation/example.md) ·
 [evidence sprint](cases/experiences/proof-sprint/example.md) · [decision review](cases/experiences/decision-review/example.md)
 
 <a id="resume-export"></a>
 
-## Settle the content, then export the resume
+## From a rewrite to an editable resume
+
+See **original → rewrite → reason → facts still to confirm**, with reasons for moving,
+compressing or omitting experiences. Then export a single-column resume with separate
+right-aligned dates, grouped contacts and clickable supplied email/web addresses.
 
 ```text
 Prepare a Chinese single-column resume for this JD, aiming for one page.
-Preserve real contributions. Show original → rewrite → reason → facts still to confirm,
-and explain role-based cuts. Complete ordinary wording edits. Export LaTeX and plain text
-to a new private directory I specify. Compile a PDF if local XeLaTeX is available.
-Report content, compilation, PDF text-layer and actual visual checks separately.
+Preserve real contributions and explain material rewrites and cuts.
+Complete ordinary edits. Export LaTeX and plain text to a new private directory I specify.
+Compile a PDF if local XeLaTeX is available; report content, compilation, text and visual checks.
 ```
 
-The export keeps **LaTeX source, plain text, sourced content data and a verification report**.
-Drafting and review precede formatting; independent review depends on host capabilities.
-See which experiences move forward, are compressed or omitted, with reasons tied to the JD;
-requirements never become candidate achievements. The default single-column layout uses
-separate right-aligned dates, grouped contacts and clickable supplied email/web addresses.
+<p align="center">
+  <a href="benchmark/resume-layout-20261020/artifacts/dense-zh/resume.pdf">
+    <img src="benchmark/resume-layout-20261020/artifacts/dense-zh/rendered/page-1.png" width="360" alt="Actually compiled one-page Chinese synthetic resume with two internships, projects and right-aligned dates">
+  </a>
+  <br>
+  <sub>Compiled synthetic sample · Click to view the PDF</sub>
+</p>
 
-[Compiled one-page Chinese example](benchmark/resume-layout-20261020/artifacts/dense-zh/resume.pdf) ·
-[Two-page and long-link checks](documentation/RESUME_ITERATION_EVAL.md) (synthetic materials)
-
-**Choose the file for your next step.** Junshi recommends an entry point for your task:
-
-| Your next step | Start here |
+| Your next step | Open this file |
 | --- | --- |
-| Copy or edit the content in Word or another editor | `resume.txt`; the default for people who do not use LaTeX |
-| Continue editing LaTeX layout | `resume.tex`, opened in a TeX editor |
-| View the PDF layout | `resume.pdf`, if actually generated, with its reported verification status |
+| Copy or edit content without LaTeX | **`resume.txt`**; paste into Word or another editor. It is plain text, not a Word document |
+| Adjust LaTeX layout | **`resume.tex`**, opened in a TeX editor |
+| View or submit a PDF | **`resume.pdf`**, if actually generated and checked, with its delivery notes |
 
-The JSON files support source tracing and verification; consult them as needed.
-`resume.txt` is plain text, not a Word document. Without a compiler, source and text
-remain available; actual PDF page count and layout remain unverified.
+Source and verification JSON files remain available for inspection. Without a compiler,
+source and text are still delivered; actual PDF page count and layout remain unverified.
+
+[Two-page sample](benchmark/resume-layout-20261020/artifacts/two-page-zh/resume.pdf) ·
+[Long-link sample](benchmark/resume-layout-20261020/artifacts/links-mixed/resume.pdf) ·
+[Actual checks](documentation/RESUME_ITERATION_EVAL.md) (all synthetic materials)
 
 <details>
-<summary>PDF compilation, page budget and file location</summary>
+<summary>Compilation and self-check · File locations · Verification limits</summary>
 
-Source export needs no LaTeX installation. PDF compilation requires local XeLaTeX,
-CTEX/Fandol, geometry, hyperref and their dependencies. To check the environment,
-run from the repository or installed Skill root:
+Source export needs no LaTeX. PDF compilation requires local XeLaTeX, CTEX/Fandol,
+geometry, hyperref and their dependencies. To check the environment, run from the
+repository or installed Skill root:
 
-```bash
+```sh
 python scripts/junshi.py resume-doctor
 ```
 
-The explicit self-check compiles synthetic Chinese and English probes and reports tool
-paths, versions and PDF text results. It reads no candidate files and installs nothing.
-`READY` means the probes passed; `NOT_READY` reports failures with a nonzero exit status.
-Source-only export remains available. Check the actual resume's text coverage, reading
-order, occurrence counts and every rendered page after export.
+The explicit self-check compiles synthetic Chinese and English probes, reports actual
+tool paths, versions and PDF text results, and neither reads your resume nor installs packages.
+`READY` means the probes passed; `NOT_READY` reports failures. Source export remains available.
 
-Choose one or two pages; the helper never silently
-cuts content or shrinks fonts. Missing compilation or visual review is reported;
-text-layer checks do not certify compatibility with every ATS.
-Private output goes to a new directory you specify outside Git and the installed Skill.
+The actual resume needs separate content, compiler-log, text coverage, reading-order,
+occurrence and per-page visual checks. Choose one or two pages; the helper never silently
+shrinks text or cuts substantive content. Unperformed checks stay explicit, and text
+extraction does not certify compatibility with every ATS. Private output goes to a new
+directory you specify outside Git and the installed Skill.
 
-[Synthetic source-export example](cases/experiences/resume-export/example.md) ·
+[Synthetic input and delivery example](cases/experiences/resume-export/example.md) ·
 [Full export workflow](references/practical/resume-export.md)
 
 </details>
 
-## More situations: ask directly
+## Interviews, applications and offers
+
+<details>
+<summary>More requests and advanced use</summary>
 
 | Ask this | Junshi helps you |
 | --- | --- |
-| “Which roles should I prioritize?” | Use goals, experience and current JDs to choose primary, secondary and exploratory targets |
-| “Run a mock interview for this JD. State what this question observes.” | Choose a job criterion, ask one question and respond to the actual answer |
-| “Second interview tomorrow. Only 90 minutes tonight.” | Prioritize the highest risks, 1–3 actions and a stopping point |
-| “Five days without an HR reply. Follow up?” | Check the conversation, promised dates and workdays; draft a follow-up with timing and a stop rule |
-| “Which offer should I choose? What needs checking first?” | Compare goals and written terms, verify decisive unknowns, and prioritize actual fee or identity risks |
-| “Two resumes got different feedback. Design a trial within one hour this week.” | Define one question, comparable opportunities, one intended change and an observation window |
+| “Which roles should I prioritize?” | Compare goals, experience and current JDs; choose primary, secondary and exploratory targets |
+| “Mock this interview. State what the question observes.” | Choose a criterion, ask one question and respond to the actual answer |
+| “Second interview tomorrow. Only 90 minutes tonight.” | Focus on the highest risks, 1–3 actions and a stopping point |
+| “Five days without an HR reply. Follow up?” | Check the conversation, promised dates and workdays; draft timing, wording and a stop rule |
+| “Which offer should I choose? What needs checking first?” | Compare goals and written terms; verify decisive unknowns and actual fee or identity risks |
+| “Two resumes got different feedback. Design an application trial.” | Choose comparable opportunities, one intended change, versions, denominators and a window |
 | “I have 15 minutes and keep changing templates. Help me start.” | Produce one inspectable result with a cue, a fallback and a firm stopping point |
 
-<details>
-<summary>Advanced use: wording checks, checkpoints and outcome-blind review</summary>
+- **Wording audit:** “Change only unsupported verbs, ownership and causality.” [Example](cases/experiences/wording-audit/example.md)
+- **Checkpoints:** “Pause and give me a copyable checkpoint.” Paste it next time; it stays in chat by default. [Example](cases/experiences/defense-resume/example.md)
+- **Outcome-blind review:** In a fresh chat without the outcome, supply observations, freeze the initial judgment, then reveal the result. Known outcomes use ordinary review. [Example](cases/experiences/outcome-blind-review/example.md)
 
-- **Wording audit:** “Check verbs, ownership and causality. Change only unsupported claims.”
-  Keep supported leadership; separate before/after observations from personal attribution.
-  [Illustration](cases/experiences/wording-audit/example.md)
-- **Checkpoints:** “Pause and give me a copyable checkpoint.” Paste the record next time to
-  resume; checkpoints stay in chat by default. [Illustration](cases/experiences/defense-resume/example.md)
-- **Outcome-blind review:** In a fresh chat without the result, supply interview observations,
-  freeze an initial judgment, then reveal the outcome. Removing text cannot make the same
-  conversation forget; known results use ordinary review.
-  [Illustration](cases/experiences/outcome-blind-review/example.md)
-
-Application trials preserve versions, denominators and observation windows. Different roles
-or channels do not establish a template effect; pending applications stay pending.
-[Application trial](cases/experiences/job-search-experiment/example.md) ·
-[Action-start card](cases/experiences/action-start/example.md)
+Different roles or channels do not establish a template effect; pending applications stay pending.
+[Application trial](cases/experiences/job-search-experiment/example.md) · [Action-start card](cases/experiences/action-start/example.md)
 
 </details>
 
-<a id="library"></a>
-
-## A source library with explicit limits
-
-**18 distinct studies and official documents across eight topics:** job search, career choice,
-resumes, interviews, negotiation, offers, workplace rights and hiring safety.
-A work used for multiple topics is counted once.
-
-Each card records source type, actual reading depth, scope, limits and version.
-Ask **“What supports this advice, and where does it not apply?”** to retrieve relevant cards.
-
-[Browse the index](references/knowledge/08-research-and-application.md).
-Sources inform method choices; individual legal questions still need current applicable authority.
-
-## Real contributions and user control
-
-- **Preserve facts.** Keep sources, ownership and project stage clear; distinguish observations,
-  inference and unknowns. Weak evidence leads to narrower wording and a useful evidence task.
-  [Evidence contract](documentation/EVIDENCE.md)
-- **You control actions.** Reports stay in chat unless you request files and specify a destination.
-  You apply, send messages, negotiate, accept offers and publish material.
-- **Memory is opt-in.** Explicit consent enables compact local records; full resumes, JDs and
-  conversations are excluded by default. View, pause, revoke and delete are available.
-  [Memory guide](documentation/MEMORY.md)
-
-The local database is unencrypted; deletion cannot erase external backups.
-Conversation materials remain subject to the host's data policies.
-
 <a id="evaluation"></a>
 
-## Verification progress
+## What has been verified
 
-**251 automated tests, 13 structured synthetic benchmark cases** and limited independent
-fresh-context trials cover installation, routing, evidence handling and interactions.
-They do not establish improved interview or offer rates.
+| Scope | Completed | Evidence |
+| --- | --- | --- |
+| Automated regression | **251 tests**, covering installation, routing, evidence handling and more | [Iteration evaluation](documentation/RESUME_ITERATION_EVAL.md) |
+| Actual PDF compilation | **4 cases, 8 pages**; three positive cases passed, over-budget output rejected | [Layout stress checks](benchmark/resume-layout-20261020/README.md) |
+| Synthetic user interactions | **5 users, 15 actual assistant turns** | [Multi-turn trials](documentation/MOCK_USER_TRIALS.md) |
+
+There are also 13 structured synthetic benchmark cases and limited fresh-context trials.
+These results do not establish improved interview or offer rates.
 
 <details>
-<summary>Evaluation records and known limits</summary>
+<summary>Earlier evaluations and known limits</summary>
 
 | Scope | Record |
 | --- | --- |
 | Four core experiences | [Core evaluation](documentation/EVOLUTION_EVAL.md) |
 | Wording, checkpoints and outcome-blind review | [Refinement evaluation](documentation/REFINEMENT_EVAL.md) |
-| Resume source export and PDF verification limits | [Export evaluation](documentation/RESUME_EXPORT_EVAL.md) |
+| Resume source export and PDF limits | [Export evaluation](documentation/RESUME_EXPORT_EVAL.md) |
 | Application trials, action starts and research transfer | [Research-workflow evaluation](documentation/RESEARCH_EVOLUTION_EVAL.md) |
 | Sources, structured interviews and offer checks | [Career-library evaluation](documentation/CAREER_LIBRARY_EVAL.md) |
-| Five synthetic users, 15 assistant turns | [Multi-turn trials](documentation/MOCK_USER_TRIALS.md) |
 | File selection for novice and LaTeX users | [Handoff refinement](documentation/EXPORT_HANDOFF_EVAL.md) |
-| Rewrite comparisons, environment probes and real XeLaTeX layout stress checks | [Iteration evaluation](documentation/RESUME_ITERATION_EVAL.md) |
+| Rewrite comparisons, probes and actual compilation | [Iteration evaluation](documentation/RESUME_ITERATION_EVAL.md) |
 
-Existing frozen cases retain extraction, handoff and generalization weaknesses.
-They have not all been rerun, and the earlier real-user pilot gates are not claimed as met.
-Current hiring, salary and company facts need fresh sources. The Skill supplies neither
-an overall candidate score nor a hiring probability.
+Existing frozen cases retain extraction, handoff and generalization weaknesses. They have not
+all been rerun, and the earlier real-user pilot gates are not claimed as met. Current hiring,
+salary and company facts need fresh sources. There is no overall candidate score or hiring probability.
 
-[Evaluation protocol](documentation/EVAL.md) · [Frozen holdouts](documentation/V023_HOLDOUT_EVAL.md) ·
-[Experience plan](documentation/EVOLUTION_PLAN.md)
+[Evaluation protocol](documentation/EVAL.md) · [Frozen holdouts](documentation/V023_HOLDOUT_EVAL.md) · [Experience plan](documentation/EVOLUTION_PLAN.md)
 
 </details>
 
+<a id="library"></a>
+
+## Sources and user control
+
+The career library contains **18 distinct studies and official documents across eight topics**:
+job search, career choice, resumes, interviews, negotiation, offers, workplace rights and
+hiring safety. Each work is counted once; cards state reading depth, scope and limits.
+
+Ask “What supports this advice, and where does it not apply?” [Browse the library](references/knowledge/08-research-and-application.md).
+Individual legal questions still need current applicable authority.
+
+- **Traceable facts.** Keep sources, ownership and project stage clear. Weak evidence leads to narrower wording and a useful evidence task. [Evidence contract](documentation/EVIDENCE.md)
+- **Opt-in memory.** Explicit consent enables compact local records, excluding full resumes, JDs and conversations by default. View, pause, revoke and delete are available. [Memory guide](documentation/MEMORY.md)
+- **You control external actions.** You apply, send messages, negotiate, accept offers and share material. Reports stay in chat unless you request files and specify a destination.
+
 <details>
-<summary>Development, architecture and structured CLI</summary>
+<summary>Data storage</summary>
+
+The local database is unencrypted; deletion cannot erase external backups. Conversation
+materials remain subject to the host's data policies.
+
+</details>
+
+## Development and documentation
+
+[Skill entrypoint](SKILL.md) · [Playbooks](references) · [Synthetic cases](cases) ·
+[Architecture](documentation/ARCHITECTURE.md) · [Issues and ideas](https://github.com/lavine888/Career-Junshi/issues)
+
+<details>
+<summary>Commands and implementation notes</summary>
 
 The host understands context and conducts conversations. Python supplies bounded structured
-support, artifacts and optional memory. `route --experience` selects references;
-it does not run a conversation or generate a report.
+support, artifacts and optional memory. `route --experience` selects references; it does not
+run a conversation or generate a report.
 
 ```sh
 python -m unittest discover -s tests -v
@@ -289,10 +285,7 @@ python scripts/junshi.py sources --topic interview
 python scripts/junshi.py sources --id R7
 ```
 
-[Skill entrypoint](SKILL.md) · [Playbooks](references) · [Synthetic cases](cases) · [Tests](tests) ·
-[Architecture](documentation/ARCHITECTURE.md) · [Extraction](documentation/CONTEXT_EXTRACTION.md) ·
-[Decision contracts](documentation/DECISION_INTELLIGENCE.md) · [Optional snapshot import](documentation/INTEGRATION.md) ·
-[Issues and ideas](https://github.com/lavine888/Career-Junshi/issues)
+[Tests](tests) · [Extraction](documentation/CONTEXT_EXTRACTION.md) · [Decision contracts](documentation/DECISION_INTELLIGENCE.md) · [Optional snapshot import](documentation/INTEGRATION.md)
 
 The separate [v0.3 Host-First experiment](https://github.com/lavine888/Career-Junshi/tree/experiment/v0.3-host-first)
 is incomplete; its results do not establish an architectural conclusion for the current version.
@@ -301,4 +294,8 @@ is incomplete; its results do not establish an architectural conclusion for the 
 
 ---
 
-[MIT](LICENSE)
+<div align="center">
+
+[MIT](LICENSE) · [中文](README.md) · [Back to top](#top)
+
+</div>
