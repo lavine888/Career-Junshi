@@ -1,0 +1,63 @@
+\documentclass[11pt,a4paper,fontset=fandol]{ctexart}
+\usepackage[left=18mm,right=18mm,top=15mm,bottom=17mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[hidelinks,unicode]{hyperref}
+\XeTeXgenerateactualtext=1
+\IfFontExistsTF{Segoe UI}{\setmainfont{Segoe UI}}{\setmainfont{Latin Modern Sans}}
+\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}}{}
+\definecolor{navy}{HTML}{173B40}
+\definecolor{gold}{HTML}{B4834F}
+\definecolor{ink}{HTML}{243238}
+\definecolor{muted}{HTML}{637275}
+\definecolor{rule}{HTML}{CDD9D8}
+\linespread{1}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\widowpenalty=10000
+\clubpenalty=10000
+\pagestyle{plain}
+\newcommand{\cvphoto}{%
+  \IfFileExists{photo.jpg}{\includegraphics[width=28mm,height=38mm,keepaspectratio]{photo.jpg}}{%
+    \IfFileExists{photo.png}{\includegraphics[width=28mm,height=38mm,keepaspectratio]{photo.png}}{%
+      \begingroup\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}%
+      \fcolorbox{rule}{white}{\parbox[c][38mm][c]{28mm}{\mbox{}}}\endgroup}}}
+\newcommand{\cvsection}[1]{%
+  \par\addvspace{11pt}\noindent{\color{navy}\fontsize{13}{17}\selectfont\bfseries #1}\par\nopagebreak
+  \vspace{4pt}{\color{rule}\hrule height0.45pt}\nopagebreak\vspace{5pt}}
+\newcommand{\cventry}[3]{%
+  \noindent{\color{navy}\bfseries\fontsize{11.7}{15}\selectfont #1}\hfill
+  {\color{muted}\fontsize{9.5}{15}\selectfont #2}\par\nopagebreak
+  {\color{muted}\fontsize{9.5}{13.2}\selectfont #3\par}\nopagebreak\vspace{3pt}}
+\newcommand{\cvbullet}[1]{%
+  \begingroup\hangindent=1.05em\hangafter=1\noindent
+  \makebox[1.05em][l]{\color{gold}\textbullet}#1\par\endgroup\vspace{3pt}}
+\begin{document}
+\fontsize{11}{16.5}\selectfont\color{ink}
+\noindent{\color{navy}\rule{15mm}{2pt}}\hspace{3mm}{\color{rule}\rule{\dimexpr\linewidth-18mm\relax}{0.45pt}}\par\vspace{9pt}
+\begin{minipage}[t]{\linewidth}\vspace{0pt}
+{\color{navy}\fontsize{29}{33}\selectfont\bfseries 合成候选人 · 非真实简历}\par\vspace{5pt}
+{\fontsize{12}{16}\selectfont 求职方向：AI 产品／产品集成}\par\vspace{7pt}
+\end{minipage}
+\par\vspace{8pt}
+\cvsection{相关经历摘要}
+\par\addvspace{7pt}\begin{minipage}{\linewidth}
+\cventry{已有课程评测与内部试点决策实践}{}{}
+\cvbullet{将团队约定的三项检查写入评测脚本，完成 10 条内部题分类记录；检索问答服务由队友实现，尚无生产使用记录。}
+\end{minipage}\par
+\cvbullet{一周窗口内，因权限接口未确认而保留人工复核，取舍写入需求说明；服务由队友实现，尚未完成生产交付。}
+\cvsection{项目经历}
+\par\addvspace{7pt}\begin{minipage}{\linewidth}
+\cventry{内部工单助手试点}{}{个人负责范围与验收项；服务由队友实现}
+\cvbullet{主导试点范围与验收项确定，一周交付窗口内因权限接口尚未确认，决定保留人工复核、暂不自动回复，并将取舍写入需求说明。}
+\end{minipage}\par
+\cvbullet{试点范围限于内部团队，尚未面向客户或完成生产交付。}
+\par\addvspace{7pt}\begin{minipage}{\linewidth}
+\cventry{课程文档问答原型}{}{个人负责评测脚本与分类记录；团队项目}
+\cvbullet{将团队约定的引用缺失、引用段落错误、回答与文档冲突三项检查写入评测脚本；检索问答服务由队友实现。}
+\end{minipage}\par
+\cvbullet{完成 10 条内部问题的分类记录；没有基线、改进前后对照或生产用户记录。}
+\end{document}

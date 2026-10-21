@@ -22,6 +22,11 @@ Create one shared fact sheet before writing variants:
 - Actual outputs, observed results, measurement limits and unknowns. No production
   use, improvement, adoption or authorship may be inferred from an artifact's existence.
 
+For contribution extraction, overlapping result descriptions and a whole-resume
+opening, use [resume](resume.md) within the same reference budget; replace a less
+relevant resource if needed. Carry its opening points back to these same sources,
+not to a separate role-specific fact sheet.
+
 Keep this sheet invariant across roles. Correct it once if new evidence arrives and
 recheck every affected version; a role label cannot upgrade confidence or ownership.
 

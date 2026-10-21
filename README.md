@@ -147,6 +147,14 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 ## 04 / 从改写，到一份完整交付
 
 先看清**原句 → 改写 → 理由 → 待核实事实**，以及经历为什么被前置、压缩或省略。
+
+- **写出你的判断**：材料里做过哪些取舍、依据是什么、你交付了哪一部分。
+- **排好简历开头**：一句目标定位，加最多两条最相关的实证；材料不足就少写。
+- **说明数字是什么**：题量、团队成果、内部试用与测算收益分清，保留实际验证范围。
+
+例如，“完成 10 条内部题评测”说明工作范围；“预计每月节省 20 小时”仍是测算。
+它们都不能直接改成“准确率提升”或“实际降本”。[五组同材料改写对照](cases/experiences/resume-positioning/example.md)
+
 再导出单栏简历：基础版保留独立日期行，精排版将日期与标题对齐，使用深墨绿标题、铜色细节与可选照片空位。两版都保留可编辑源码、来源与实际验收。
 
 <p align="center">
@@ -236,8 +244,9 @@ python scripts/junshi.py resume-doctor
 | 检查范围 | 已完成 | 查看记录 |
 | --- | --- | --- |
 | 自动化回归 | **262 项测试**，含两条连续求职流程、版本纠正与安装后接续 | [闭环验收](documentation/JOURNEY_EVAL.md) |
+| 简历定位与结果性质 | **5 组合成改写对照、2 份实际编译 PDF**；宿主自查，非独立评估 | [本轮记录](documentation/RESUME_POSITIONING_EVAL.md) |
 | 实际 PDF 编译 | **4 个场景、8 页**；三个正例通过，超页负例被拒绝 | [排版压力测试](benchmark/resume-layout-20261020/README.md) |
-| 本轮闭环与精排 | **3 份合成 PDF、3 页**；新上下文子代理完成两轮接续试用 | [闭环验收](documentation/JOURNEY_EVAL.md) |
+| 闭环与精排 | **3 份合成 PDF、3 页**；新上下文子代理完成两轮接续试用 | [闭环验收](documentation/JOURNEY_EVAL.md) |
 | 模拟用户交互 | **5 个合成用户、15 轮实际交互** | [多轮试用](documentation/MOCK_USER_TRIALS.md) |
 
 另有 13 个结构化合成基准与有限的新上下文试用。这些结果不能证明提高面试通过率或 Offer 率。

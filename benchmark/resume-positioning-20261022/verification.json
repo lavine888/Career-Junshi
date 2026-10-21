@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-22",
+  "input": "cases/experiences/resume-positioning/input.json",
+  "synthetic": true,
+  "semantic_review": "SAME_CONTEXT_HOST_REVIEW",
+  "visual_review": "PERFORMED_BY_HOST",
+  "runs": [
+    {
+      "layout": "standard",
+      "installed_runtime": true,
+      "cli_exit_code": 0,
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "REQUIRED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "artifacts": [
+        {
+          "kind": "tex",
+          "path": "benchmark/resume-positioning-20261022/artifacts/standard/resume.tex",
+          "sha256": "c2eb314bb491a44ab93e00b551c0eccdac67428972453aacb611d1f7f0c9cc22"
+        },
+        {
+          "kind": "text",
+          "path": "benchmark/resume-positioning-20261022/artifacts/standard/resume.txt",
+          "sha256": "d626cb70738ee93a3c8e03b74de865669f473e52a62da3e7c9fcdc180fa97be0"
+        },
+        {
+          "kind": "data",
+          "path": "benchmark/resume-positioning-20261022/artifacts/standard/resume-data.json",
+          "sha256": "a83595639b9aa2c607b18970e9bafdf4ae49b5bc2c1f54d5c35b7d4df1ce5a7c"
+        },
+        {
+          "kind": "pdf",
+          "path": "benchmark/resume-positioning-20261022/artifacts/standard/resume.pdf",
+          "sha256": "5f6c331b01fa209ee50f723ee7c07677cf310679024b7bbba8338967fd3f536d"
+        }
+      ]
+    },
+    {
+      "layout": "editorial",
+      "installed_runtime": true,
+      "cli_exit_code": 0,
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "REQUIRED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "artifacts": [
+        {
+          "kind": "tex",
+          "path": "benchmark/resume-positioning-20261022/artifacts/editorial/resume.tex",
+          "sha256": "a02c012d22294f220ba7fd9ce3c04b61ad14a58ea1ff46e5bc710c98b2be967b"
+        },
+        {
+          "kind": "text",
+          "path": "benchmark/resume-positioning-20261022/artifacts/editorial/resume.txt",
+          "sha256": "d626cb70738ee93a3c8e03b74de865669f473e52a62da3e7c9fcdc180fa97be0"
+        },
+        {
+          "kind": "data",
+          "path": "benchmark/resume-positioning-20261022/artifacts/editorial/resume-data.json",
+          "sha256": "00938cbfc4e6e1e6e431a3527f41c957f6ea93da94bde29d23bcd7f830aab301"
+        },
+        {
+          "kind": "pdf",
+          "path": "benchmark/resume-positioning-20261022/artifacts/editorial/resume.pdf",
+          "sha256": "5fe0cd0ddd59a244236fd7e79b481b1aa205c21780918eb21978d04541fdb13a"
+        }
+      ]
+    }
+  ],
+  "visual_observation": "Both actual one-page PNGs inspected at 1500 px. No clipping, overlap, missing glyphs or isolated headings observed. Sparse synthetic content does not establish page-balance quality for a complete resume.",
+  "content_review": "PERFORMED_BY_HOST; compared the opening and project text with synthetic A2/A3/B2. No independent authentication or model-behavior scoring.",
+  "regression": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests": 262,
+    "seconds": 66.029,
+    "result": "OK",
+    "new_tests": 0,
+    "scope": "Existing regression, not semantic validation of writing quality"
+  },
+  "validation": {
+    "project": "PASSED",
+    "skill_creator_utf8": "PASSED"
+  }
+}

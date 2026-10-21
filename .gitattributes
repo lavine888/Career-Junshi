@@ -29,3 +29,6 @@ benchmark/export-handoff-20261020/**/response.md whitespace=cr-at-eol,-blank-at-
 benchmark/resume-layout-20261020/** -text -eol whitespace=cr-at-eol
 benchmark/resume-content-20261020/** -text -eol whitespace=cr-at-eol
 benchmark/resume-content-20261020/response-*.md whitespace=cr-at-eol,-blank-at-eol
+
+# Resume positioning exports retain the bytes referenced by their receipts.
+benchmark/resume-positioning-20261022/** -text -eol whitespace=cr-at-eol

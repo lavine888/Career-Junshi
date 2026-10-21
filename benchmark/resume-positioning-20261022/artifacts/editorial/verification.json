@@ -1,0 +1,183 @@
+{
+  "schema_version": "1",
+  "status": "PDF_COMPILED_AWAITING_VISUAL_REVIEW",
+  "checks": {
+    "compilation": "COMPILED",
+    "page_check": "PASSED",
+    "text_check": "PASSED",
+    "log_check": "PASSED",
+    "text_order_check": "PASSED",
+    "text_occurrence_check": "PASSED",
+    "visual_review": "REQUIRED",
+    "pdf_file": "resume.pdf",
+    "pages": 1,
+    "missing_text_indexes": [],
+    "out_of_order_text_indexes": [],
+    "unexpected_text_occurrence_indexes": [],
+    "insufficient_text_occurrence_indexes": []
+  },
+  "lineage": {
+    "resume_id": "f72a935ec53b4e00bb4f9cb9b205dc70",
+    "parent_resume_id": "",
+    "opportunity_id": "",
+    "claim_refs": []
+  },
+  "artifacts": [
+    {
+      "kind": "tex",
+      "path": "benchmark/resume-positioning-20261022/artifacts/editorial/resume.tex",
+      "sha256": "a02c012d22294f220ba7fd9ce3c04b61ad14a58ea1ff46e5bc710c98b2be967b"
+    },
+    {
+      "kind": "text",
+      "path": "benchmark/resume-positioning-20261022/artifacts/editorial/resume.txt",
+      "sha256": "d626cb70738ee93a3c8e03b74de865669f473e52a62da3e7c9fcdc180fa97be0"
+    },
+    {
+      "kind": "data",
+      "path": "benchmark/resume-positioning-20261022/artifacts/editorial/resume-data.json",
+      "sha256": "00938cbfc4e6e1e6e431a3527f41c957f6ea93da94bde29d23bcd7f830aab301"
+    },
+    {
+      "kind": "pdf",
+      "path": "benchmark/resume-positioning-20261022/artifacts/editorial/resume.pdf",
+      "sha256": "5fe0cd0ddd59a244236fd7e79b481b1aa205c21780918eb21978d04541fdb13a"
+    }
+  ],
+  "layout": "editorial",
+  "page_limit": 1,
+  "expected_text": [
+    "合成候选人 · 非真实简历",
+    "求职方向：AI 产品／产品集成",
+    "相关经历摘要",
+    "已有课程评测与内部试点决策实践",
+    "将团队约定的三项检查写入评测脚本，完成 10 条内部题分类记录；检索问答服务由队友实现，尚无生产使用记录。",
+    "一周窗口内，因权限接口未确认而保留人工复核，取舍写入需求说明；服务由队友实现，尚未完成生产交付。",
+    "项目经历",
+    "内部工单助手试点",
+    "个人负责范围与验收项；服务由队友实现",
+    "主导试点范围与验收项确定，一周交付窗口内因权限接口尚未确认，决定保留人工复核、暂不自动回复，并将取舍写入需求说明。",
+    "试点范围限于内部团队，尚未面向客户或完成生产交付。",
+    "课程文档问答原型",
+    "个人负责评测脚本与分类记录；团队项目",
+    "将团队约定的引用缺失、引用段落错误、回答与文档冲突三项检查写入评测脚本；检索问答服务由队友实现。",
+    "完成 10 条内部问题的分类记录；没有基线、改进前后对照或生产用户记录。"
+  ],
+  "evidence_map": {
+    "schema_version": "1",
+    "language": "zh",
+    "name": "合成候选人 · 非真实简历",
+    "target_role": "求职方向：AI 产品／产品集成",
+    "contacts": [],
+    "page_limit": 1,
+    "sources": [
+      {
+        "id": "A2",
+        "description": "request.md A2：本人贡献与团队分工的合成自述，未独立核验。"
+      },
+      {
+        "id": "A3",
+        "description": "request.md A3：合成评测记录节选，仅支持检查项与题量。"
+      },
+      {
+        "id": "B2",
+        "description": "request.md B2：内部试点产品决策与队友实现的合成自述，未独立核验。"
+      }
+    ],
+    "sections": [
+      {
+        "title": "相关经历摘要",
+        "entries": [
+          {
+            "title": "已有课程评测与内部试点决策实践",
+            "subtitle": "",
+            "dates": "",
+            "source_ids": [
+              "A2",
+              "A3",
+              "B2"
+            ],
+            "bullets": [
+              {
+                "text": "将团队约定的三项检查写入评测脚本，完成 10 条内部题分类记录；检索问答服务由队友实现，尚无生产使用记录。",
+                "source_ids": [
+                  "A2",
+                  "A3"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "一周窗口内，因权限接口未确认而保留人工复核，取舍写入需求说明；服务由队友实现，尚未完成生产交付。",
+                "source_ids": [
+                  "B2"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "项目经历",
+        "entries": [
+          {
+            "title": "内部工单助手试点",
+            "subtitle": "个人负责范围与验收项；服务由队友实现",
+            "dates": "",
+            "source_ids": [
+              "B2"
+            ],
+            "bullets": [
+              {
+                "text": "主导试点范围与验收项确定，一周交付窗口内因权限接口尚未确认，决定保留人工复核、暂不自动回复，并将取舍写入需求说明。",
+                "source_ids": [
+                  "B2"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "试点范围限于内部团队，尚未面向客户或完成生产交付。",
+                "source_ids": [
+                  "B2"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          },
+          {
+            "title": "课程文档问答原型",
+            "subtitle": "个人负责评测脚本与分类记录；团队项目",
+            "dates": "",
+            "source_ids": [
+              "A2",
+              "A3"
+            ],
+            "bullets": [
+              {
+                "text": "将团队约定的引用缺失、引用段落错误、回答与文档冲突三项检查写入评测脚本；检索问答服务由队友实现。",
+                "source_ids": [
+                  "A2",
+                  "A3"
+                ],
+                "confidence": "SELF_REPORTED"
+              },
+              {
+                "text": "完成 10 条内部问题的分类记录；没有基线、改进前后对照或生产用户记录。",
+                "source_ids": [
+                  "A2",
+                  "A3"
+                ],
+                "confidence": "SELF_REPORTED"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "layout": "editorial"
+  },
+  "semantic_verification": "NOT_PERFORMED",
+  "ats_certification": "NOT_PERFORMED",
+  "directory": "benchmark/resume-positioning-20261022/artifacts/editorial",
+  "archive_note": "Actual installed CLI export from a temporary private working directory; synthetic artifacts relocated with hashes preserved."
+}

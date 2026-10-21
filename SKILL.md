@@ -93,7 +93,7 @@ Offer 缺目标或硬约束时先问，给有条件的选择标准，不按公�
 | 局势 | 只读这些起点 |
 | --- | --- |
 | 岗位值不值得投、转型、不知道投什么 | [career-decision](references/knowledge/02-career-decision.md)、[jd-analysis](references/practical/jd-analysis.md) |
-| 定位、简历、能不能写主导 | [evidence-and-claims](references/knowledge/01-evidence-and-claims.md)、[resume](references/practical/resume.md) |
+| 定位、简历首屏、个人取舍与结果性质 | [evidence-and-claims](references/knowledge/01-evidence-and-claims.md)、[resume](references/practical/resume.md) |
 | 面试临近、项目会被问穿 | evidence-and-claims、[interview](references/practical/interview.md)、[project-defense](references/practical/project-defense.md) |
 | HR 未回、流程、拒信、复盘 | [recruiting-process](references/knowledge/03-recruiting-process.md)、[follow-up](references/practical/follow-up.md)；明确拒信时换 [rejection](references/practical/rejection.md) |
 | Offer 比较、谈薪 | career-decision、[offer-evaluation](references/knowledge/06-offer-evaluation.md)、[offer](references/practical/offer.md)；谈薪用 [negotiation](references/practical/negotiation.md) 替换 practical |

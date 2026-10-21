@@ -154,7 +154,16 @@ Different roles or channels do not establish a template effect; pending applicat
 ## 04 / From a rewrite to an editable deliverable
 
 See **original → rewrite → reason → facts still to confirm**, with reasons for moving,
-compressing or omitting experiences. Then export a single-column resume. The standard style keeps separate date lines;
+compressing or omitting experiences.
+
+- **Recover personal judgment:** supported choices, reasons and actual deliverables.
+- **Shape the opening:** one target-based positioning line and up to two relevant evidence points; fewer when support is thin.
+- **Explain the numbers:** distinguish work volume, team outcomes, internal trials and projected savings, retaining measurement limits.
+
+Ten internal test questions describe scope; projected monthly savings remain a forecast.
+Neither establishes improved accuracy or realized savings. [Five same-material comparisons, in Chinese](cases/experiences/resume-positioning/example.md)
+
+Then export a single-column resume. The standard style keeps separate date lines;
 the editorial style aligns dates with titles, uses ink-green headings and copper details,
 and optionally reserves a photo area. Both retain editable source and actual checks.
 
@@ -254,8 +263,9 @@ application sending or messaging.
 | Scope | Completed | Evidence |
 | --- | --- | --- |
 | Automated regression | **262 tests**, including two continuous journeys, corrections and installed continuation | [Journey evaluation](documentation/JOURNEY_EVAL.md) |
+| Resume positioning and result nature | **5 synthetic comparisons, 2 compiled PDFs**; host review, not independent evaluation | [Current record](documentation/RESUME_POSITIONING_EVAL.md) |
 | Actual PDF compilation | **4 cases, 8 pages**; three positive cases passed, over-budget output rejected | [Layout stress checks](benchmark/resume-layout-20261020/README.md) |
-| Current journey and layouts | **3 synthetic PDFs, 3 pages**; a fresh-context subagent completed a two-turn continuation trial | [Journey evaluation](documentation/JOURNEY_EVAL.md) |
+| Journey and layouts | **3 synthetic PDFs, 3 pages**; a fresh-context subagent completed a two-turn continuation trial | [Journey evaluation](documentation/JOURNEY_EVAL.md) |
 | Synthetic user interactions | **5 users, 15 actual assistant turns** | [Multi-turn trials](documentation/MOCK_USER_TRIALS.md) |
 
 There are also 13 structured synthetic benchmark cases and limited fresh-context trials.

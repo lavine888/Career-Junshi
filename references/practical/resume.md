@@ -1,47 +1,94 @@
 # Resume and claim wording
 
-Read the exact sentence and evidence before rewriting. Audit ownership, stage,
-numbers and proof. Produce one usable safe sentence and name the minimum missing
-evidence; do not offer an unsubstantiated stronger sentence as a default alternate.
-For a focused verb or causal-scope check, use [wording-audit](wording-audit.md) in
-place of this practical reference. Check the meaning against sources rather than
-treating verbs as forbidden; retain supported product leadership.
+Read the exact sentence and evidence before rewriting. Produce usable wording
+with personal contribution and stage intact; do not offer unsupported stronger
+alternatives. For a focused verb or causal-scope
+check, use [wording-audit](wording-audit.md) instead. For editable LaTeX or PDF,
+use [resume-export](resume-export.md); it may load this drafting guide within the
+same 1–3 reference budget. Neither workflow creates a second evidence ledger.
 
-For a resume rewrite or a role-specific version, show a compact comparison of
-**original sentence → proposed rewrite → reason → facts still to confirm**.
-Reuse existing source IDs and locators. Quote the original exactly or identify
-an exact excerpt; do not put a paraphrase in quotation marks as the original.
-For newly drafted content, state that there was no original. Focus on ownership,
-numbers, causality, stage and material omissions; group routine wording edits.
-Put “none” for facts already resolved instead of manufacturing follow-up questions.
+## Recover the contribution before polishing
+
+Use existing claim IDs and source locators. For each experience worth retaining,
+find the actual problem, personal action, decision or tradeoff, deliverable and
+observed result. Keep teammates' implementation and AI/tool work attributed.
+A decision is stronger when the material explains the constraint, choice and
+reason; do not invent rejected alternatives or retrospectively supply a rationale.
+
+Replace generic “参与 / 负责” with supported specifics, not merely stronger verbs.
+If the candidate implemented team-agreed checks, name those checks and the work
+done; do not promote implementation into defining the criteria. Retain supported
+product leadership without transferring engineering authorship. A prototype may
+show useful judgment without a business outcome. Separate project_stage,
+claim_stage and user_contribution_stage; someone completing work does not establish
+personal authorship or production readiness.
+
+Ask only 1–3 missing details that would materially change the draft. Otherwise use
+the narrower supported sentence now and identify the decisive gap. Do not require
+every experience to contain a tradeoff or number. Several small PRs do not by
+themselves establish cross-project governance or ownership.
+
+## Establish what each result means
+
+Annotate consequential numbers and result assertions in the existing private fact
+sheet or review notes, alongside their source and confidence. These are overlapping
+descriptions, not new confidence levels or a required machine schema:
+
+| Result nature | What the wording must preserve |
+| --- | --- |
+| Scope / volume | Questions, records, modules or coverage; activity volume is not improvement |
+| Observed result | Measured value, sample, period, baseline if claiming change, and conditions; observation alone is not personal causality |
+| Team result | Who achieved it and what the candidate actually contributed; may also be observed or stage-limited |
+| Stage signal | Prototype, internal trial or acceptance event; not automatically adoption or production |
+| Projection | Assumptions and calculation; forecast savings are not realized savings |
+| Usage / distribution | Trial, views, shares and sustained use distinguished; sharing is not adoption or efficiency |
+| Deliverable / method | PRD, query, evaluation script or checklist; existence is not a business result |
+
+Do not force a single label: “team internal trial with ten users” can describe
+scope, usage, team attribution and stage together. A number can be self-reported;
+adding a label cannot authenticate it. Unknown measurement conditions remain
+unknown, without blocking a useful description of the actual work. Keep relevant
+limits in the visible sentence, not only in notes. If a projection distracts from
+stronger completed work, omit it and explain the cut outside the resume.
+
+## Compose the opening for the supplied target
+
+For a whole-resume rewrite or target-role version, propose one short positioning
+line and up to two distinct, strongest supported evidence points near the top.
+Use fewer or omit the summary when evidence is thin, the user requests a sentence
+only, or an opening would merely repeat the next entry. Explain the selection and
+experience order outside the application text.
+
+Use the actual JD responsibilities, or explicitly base the selection on the user's
+stated direction when no JD exists. Mark a desired role as a target rather than
+an already-held title. A JD never supplies achievements, technologies or ownership.
+Choose evidence by relevance, defensibility and personal contribution, not by the
+largest number. Keep necessary stage and measurement limits even in a short opening.
+A private source map should connect each opening point to the same claims used in
+the experience section; revise both when a fact changes.
+
+For export, use existing `target_role` for the stated target and, if useful, a first
+`sections` entry such as “相关经历摘要”. Its entry title holds the positioning line,
+with up to two sourced bullets; subtitle/dates may be empty. Use the same source IDs
+and confidence as the underlying claims. The exporter does not select evidence or
+generate a summary; no new profile field, title inference or auto-ranking is needed.
+
+## Deliver and check
+
+Show a compact **original sentence → proposed rewrite → reason → facts still to
+confirm** comparison. Quote the original exactly or identify an exact excerpt.
+For newly drafted content, state there was no original. Focus on contribution,
+result nature, causality, stage and material omissions; group routine edits.
+Put “none” for resolved facts rather than manufacturing questions.
 
 Explain which experiences move forward, are compressed or are omitted for the
-supplied JD responsibilities. The JD describes requirements, never candidate
-achievements. Without a JD, state that selection follows the user's role direction
-and continue a useful draft. Keep the source map and review notes outside an
-application resume; do not add a second evidence schema.
+target. Deliver the usable draft with its comparison; ordinary edits do not need
+another approval. Keep the source map and review notes outside the application
+resume, and do not hide meaning-changing boundaries there.
 
-Deliver the usable draft with its comparison. Do not require approval of every
-ordinary edit or repeat answered questions. Where a material fact is unresolved,
-use the supported narrower statement or omit the disputed claim with a reason;
-ask only when its answer is needed to proceed. Continue already authorized work.
-
-For editable LaTeX or a compiled application PDF, replace this practical with
-[resume-export](resume-export.md); source generation and PDF verification are
-separate results.
-
-Team demo example: “参与团队 Agent 原型，负责评测脚本与失败分类；原型尚未用于生产。”
-This is an illustrative sentence, not an accomplishment to copy into any candidate's
-resume. Replace it only with the candidate's confirmed contribution.
-
-Next action: check a source or rehearse the weakest assertion. Observation: can the
-candidate answer five layers without improvising? Stop upgrading the wording if
-evidence cannot be supplied. Revisit after a checked artifact or corrected attribution.
-
-When ownership is the bottleneck, produce an Ownership Defense Pack immediately:
-safe rewritten claim, contribution boundary and 3–5 questions tailored to this claim.
-Select personal actions, owned decisions, teammates' implementation, AI-generated
-work/verification or personally defensible technical details as relevant. Do not
-dump every question. Preserve stated product leadership rather than reducing it to
-generic participation. Separate project_stage, claim_stage and user_contribution_stage;
-an activity completed by someone does not establish personal engineering authorship.
+When ownership is the bottleneck, include a safe sentence, contribution boundary
+and 3–5 tailored defense questions. Select relevant personal actions, decisions,
+teammates' implementation or AI verification questions rather than dumping a list.
+Check the weakest assertion against the source or rehearse five layers without
+improvising. Stop strengthening when evidence ends; revisit after checked evidence
+or corrected attribution. Wording quality does not establish hiring effectiveness.

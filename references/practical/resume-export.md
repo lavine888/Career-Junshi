@@ -32,7 +32,8 @@ Without a JD, label the selection rationale as based on the user's stated target
 Retain supported product leadership while distinguishing teammates' implementation.
 Separate measured change from a causal contribution; plans remain plans.
 
-For original/rewrite/source comparisons, material unknowns and JD-based choices,
+For personal decisions, the nature of numbers/results, an optional sourced opening,
+original/rewrite/source comparisons, material unknowns and JD-based choices,
 follow the drafting guidance in [resume](resume.md). Load it with this reference
 within the same 1–3 reference budget. Keep those review notes outside the
 application PDF and continue already authorized edits rather than waiting on
