@@ -2,21 +2,35 @@
 
 <div align="center">
 
-![求职军师：让经历，有据可讲。](assets/readme-hero-editorial.png)
+![求职军师：下一程，从真实的你开始。](assets/brand/readme-cover-zh.svg)
 
 # 求职军师 · Career Junshi
 
-**基于真实材料，改简历、练面试、补证据、做选择。**
+**把经历讲到点上，把下一步握在手里。**
 
-运行在支持本地 Skill 的助手中，从你眼前卡住的地方开始。
+基于真实材料改简历、练面试，让投递反馈接回下一轮行动。<br>
+运行在支持本地 Skill 的助手中；从一段真实经历开始，已有材料直接用。
 
-[![MIT](https://img.shields.io/badge/License-MIT-0B3C86?style=flat-square)](LICENSE)
-![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-6D6B64?style=flat-square)
-[![记忆可选](https://img.shields.io/badge/Memory-opt--in-2F6C59?style=flat-square)](documentation/MEMORY.md)
+[开始使用](#start) · [看一次改写](#demo) · [简历与 PDF](#resume-export) · [接着求职](#journey) · [验证记录](#evaluation) · [English](README_EN.md)
 
-[看效果](#demo) · [开始使用](#start) · [核心体验](#experiences) · [求职接续](#journey) · [简历导出](#resume-export) · [验证记录](#evaluation) · [English](README_EN.md)
+[![MIT](https://img.shields.io/badge/License-MIT-1D1D1F?style=flat-square)](LICENSE)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-62626B?style=flat-square)
+[![记忆可选](https://img.shields.io/badge/Memory-opt--in-62626B?style=flat-square)](documentation/MEMORY.md)
 
 </div>
+
+## 让一次建议，接上下一次行动
+
+| 你带来 | 军师帮你推进 | 你带走 |
+| --- | --- | --- |
+| 一段说不清的项目经历 | 核对个人贡献、项目阶段和证据边界 | 有据可讲的改写、待核实项 |
+| 一份简历或目标 JD | 选择岗位重点，再整理内容与排版 | 岗位版表达、可编辑源码；环境可用时编译 PDF |
+| 一次面试或招聘反馈 | 区分观察与猜测，对照原来的判断 | 一项调整动作、下次能继续用的接续卡 |
+
+**事实底稿 → 岗位表达 → 面试追问 → 反馈接续。**<br>
+共用一套真实经历；已投版本保留，修订形成下一版。
+
+这是供助手使用的 Skill。对话和材料处理在你选择的宿主中进行；本仓库不提供独立的在线简历上传服务。
 
 <a id="demo"></a>
 
@@ -264,6 +278,32 @@ python scripts/junshi.py resume-doctor
 <summary>数据保存说明</summary>
 
 本地数据库未加密，删除不保证擦除外部备份；对话材料仍受宿主的数据政策约束。
+
+</details>
+
+## 开始前，先说清楚
+
+<details>
+<summary>没有完整简历、JD 或 LaTeX，也能开始吗？</summary>
+
+可以。先带来一段项目经历、最近的招聘消息或一个具体问题。没有 JD 时，岗位建议仍是待验证假设。<br>
+没有 XeLaTeX 时仍可交付可编辑源码与纯文本，PDF 保持未编译、未验证。
+
+</details>
+
+<details>
+<summary>下次回来，军师会自动记住我吗？</summary>
+
+默认不会自动跨聊天记住你。把上次的接续卡或明确要求生成的私有记录带回来，就能继续。<br>
+长期记忆需要另外同意；安装不会开启记忆。[记忆说明](documentation/MEMORY.md)
+
+</details>
+
+<details>
+<summary>它会替我投递，或保证拿到面试吗？</summary>
+
+它能准备材料、沟通草稿和下一步行动。实际投递、发消息和接受 Offer 由你决定并执行。<br>
+当前验证检查行为与交付，不构成面试通过率或 Offer 率的效果证明。
 
 </details>
 

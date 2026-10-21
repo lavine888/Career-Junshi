@@ -2,21 +2,35 @@
 
 <div align="center">
 
-![Career Junshi: evidence-backed experience and actionable next steps](assets/readme-hero-editorial.png)
+![Career Junshi: your next move, grounded in you](assets/brand/readme-cover-en.svg)
 
 # Career Junshi · 求职军师
 
-**Use real experience to rewrite a resume, rehearse interviews and decide what comes next.**
+**Real experience. Clearer expression. A concrete next step.**
 
-A career workflow for assistants that support local Skills. Start where you are stuck.
+Rewrite a resume, rehearse interviews, and turn hiring feedback into the next action.<br>
+A workflow for assistants that support local Skills. Bring one experience to begin.
 
-[![MIT](https://img.shields.io/badge/License-MIT-0B3C86?style=flat-square)](LICENSE)
-![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-6D6B64?style=flat-square)
-[![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-2F6C59?style=flat-square)](documentation/MEMORY.md)
+[Get started](#start) · [See a rewrite](#demo) · [Resumes & PDF](#resume-export) · [Continue your search](#journey) · [Verification](#evaluation) · [中文](README.md)
 
-[See it work](#demo) · [Get started](#start) · [Core experiences](#experiences) · [Continue your search](#journey) · [Resume export](#resume-export) · [Verification](#evaluation) · [中文](README.md)
+[![MIT](https://img.shields.io/badge/License-MIT-1D1D1F?style=flat-square)](LICENSE)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-62626B?style=flat-square)
+[![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-62626B?style=flat-square)](documentation/MEMORY.md)
 
 </div>
+
+## Make the next conversation build on this one
+
+| Bring | Work through | Take away |
+| --- | --- | --- |
+| A project you struggle to explain | Personal contribution, project stage and evidence boundaries | Usable wording and facts still to verify |
+| A resume or target job description | Role-relevant emphasis, content and layout | A role-specific version, editable source, and a compiled PDF when the environment supports it |
+| Interview or hiring feedback | Observations, interpretations and the original decision | One adjustment and a continuation card |
+
+**Facts → role-specific expression → interview follow-ups → feedback.**<br>
+Use one factual foundation. Preserve the submitted version; make corrections in a new one.
+
+This is a Skill for your assistant. Conversations and material processing take place in your chosen host; the repository does not provide a standalone online resume-upload service.
 
 <a id="demo"></a>
 
@@ -290,6 +304,32 @@ Individual legal questions still need current applicable authority.
 
 The local database is unencrypted; deletion cannot erase external backups. Conversation
 materials remain subject to the host's data policies.
+
+</details>
+
+## Before you start
+
+<details>
+<summary>Can I start without a complete resume, a JD or LaTeX?</summary>
+
+Yes. Bring a project, a hiring message or a specific question. Without a JD, role recommendations remain hypotheses to test.<br>
+Without XeLaTeX, editable source and plain text are still available; the PDF remains uncompiled and unverified.
+
+</details>
+
+<details>
+<summary>Will Junshi remember me in another conversation?</summary>
+
+Not automatically. Bring the continuation card or private record you explicitly requested to the next conversation.<br>
+Persistent memory requires separate consent; installation does not enable it. [Memory guide](documentation/MEMORY.md)
+
+</details>
+
+<details>
+<summary>Will it apply for me or guarantee an interview?</summary>
+
+It prepares materials, message drafts and next actions. You decide and carry out applications, messages and offer acceptance.<br>
+Current checks validate behavior and deliverables, not improvements in interview or offer rates.
 
 </details>
 
