@@ -2,39 +2,25 @@
 
 <div align="center">
 
-![Career Junshi: your next move, grounded in you](assets/brand/readme-cover-en.svg)
+[![Career Junshi: your next move, grounded in you](assets/brand/readme-cover-en.svg)](https://career-junshi.lavinex.chatgpt.site)
 
 # Career Junshi · 求职军师
 
-**Real experience. Clearer expression. A concrete next step.**
+A career decision Skill that runs in your assistant.<br>Rewrite a resume, rehearse interviews, and turn feedback into the next action.
 
-Rewrite a resume, rehearse interviews, and turn hiring feedback into the next action.<br>
-A workflow for assistants that support local Skills. Bring one experience to begin.
+**[Explore the website ↗](https://career-junshi.lavinex.chatgpt.site)** &nbsp; / &nbsp; [Quick start](#start) &nbsp; / &nbsp; [Resume sample](#resume-export) &nbsp; / &nbsp; [中文](README.md)
 
-[Website ↗](https://career-junshi.lavinex.chatgpt.site) · [Get started](#start) · [See a rewrite](#demo) · [Resumes & PDF](#resume-export) · [Continue your search](#journey) · [Verification](#evaluation) · [中文](README.md)
-
-[![MIT](https://img.shields.io/badge/License-MIT-1D1D1F?style=flat-square)](LICENSE)
-![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-62626B?style=flat-square)
-[![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-62626B?style=flat-square)](documentation/MEMORY.md)
+[![MIT](https://img.shields.io/badge/License-MIT-1D1D1F?style=flat-square)](LICENSE) ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-62626B?style=flat-square) [![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-62626B?style=flat-square)](documentation/MEMORY.md)
 
 </div>
 
-## Make the next conversation build on this one
+---
 
-| Bring | Work through | Take away |
-| --- | --- | --- |
-| A project you struggle to explain | Personal contribution, project stage and evidence boundaries | Usable wording and facts still to verify |
-| A resume or target job description | Role-relevant emphasis, content and layout | A role-specific version, editable source, and a compiled PDF when the environment supports it |
-| Interview or hiring feedback | Observations, interpretations and the original decision | One adjustment and a continuation card |
-
-**Facts → role-specific expression → interview follow-ups → feedback.**<br>
-Use one factual foundation. Preserve the submitted version; make corrections in a new one.
-
-This is a Skill for your assistant. Conversations and material processing take place in your chosen host; the repository does not provide a standalone online resume-upload service.
+[01 Preview](#demo) · [02 Start](#start) · [03 Choose](#experiences) · [04 Export](#resume-export) · [05 Continue](#journey) · [06 Verify](#evaluation) · [07 Boundaries](#boundaries)
 
 <a id="demo"></a>
 
-## One claim, rewritten so you can explain it
+## 01 / Experience you can explain
 
 > **Original:** “Independently built a production RAG platform, improving accuracy by 30%.”
 
@@ -70,7 +56,7 @@ The [full defense walkthrough](cases/experiences/defense/example.md) is a separa
 
 <a id="start"></a>
 
-## Start in two steps
+## 02 / Two steps to begin
 
 ### 1. Install in your assistant
 
@@ -120,7 +106,7 @@ For interview practice, add “Run a resume defense session, one question at a t
 
 <a id="experiences"></a>
 
-## Enter where you are stuck
+## 03 / Four entry points. Shared facts.
 
 | Core experience | Ask this | What you get |
 | --- | --- | --- |
@@ -135,39 +121,47 @@ Synthetic walkthroughs, in Chinese: [defense](cases/experiences/defense/example.
 [role translation](cases/experiences/role-translation/example.md) ·
 [evidence sprint](cases/experiences/proof-sprint/example.md) · [decision review](cases/experiences/decision-review/example.md)
 
-<a id="journey"></a>
+<details>
+<summary>More requests and advanced use</summary>
 
-## Return to the same search, with the history intact
+| Ask this | Junshi helps you |
+| --- | --- |
+| “Which roles should I prioritize?” | Compare goals, experience and current JDs; choose primary, secondary and exploratory targets |
+| “Mock this interview. State what the question observes.” | Choose a criterion, ask one question and respond to the actual answer |
+| “Second interview tomorrow. Only 90 minutes tonight.” | Focus on the highest risks, 1–3 actions and a stopping point |
+| “Five days without an HR reply. Follow up?” | Check the conversation, promised dates and workdays; draft timing, wording and a stop rule |
+| “Which offer should I choose? What needs checking first?” | Compare goals and written terms; verify decisive unknowns and actual fee or identity risks |
+| “Two resumes got different feedback. Design an application trial.” | Choose comparable opportunities, one intended change, versions, denominators and a window |
+| “I have 15 minutes and keep changing templates. Help me start.” | Produce one inspectable result with a cue, a fallback and a firm stopping point |
 
-**Facts → resume version → actual submission → feedback → one adjustment → next version.**
+- **Wording audit:** “Change only unsupported verbs, ownership and causality.” [Example](cases/experiences/wording-audit/example.md)
+- **Checkpoints:** “Pause and give me a copyable checkpoint.” Paste it next time; it stays in chat by default. [Example](cases/experiences/defense-resume/example.md)
+- **Outcome-blind review:** In a fresh chat without the outcome, supply observations, freeze the initial judgment, then reveal the result. Known outcomes use ordinary review. [Example](cases/experiences/outcome-blind-review/example.md)
 
-A short continuation card records the opportunity, actual version, execution receipts,
-feedback sources and next action. A corrected claim flags affected old resumes; the
-original R1 submission stays intact. A later R2 attachment is a material update in the
-same hiring process, not another initial application. Role cancellation changes local
-investment, without turning one outcome into a verdict on your career direction.
+Different roles or channels do not establish a template effect; pending applications stay pending.
+[Application trial](cases/experiences/job-search-experiment/example.md) · [Action-start card](cases/experiences/action-start/example.md)
 
-```text
-Use $career-junshi to continue my search.
-Here is the previous card / journal. This is what happened since: ...
-Compare it with the earlier advice; separate execution from unknowns and pick one next action.
-If the resume changes, retain the submitted version and create a new version.
-Update the continuation card in chat. Do not enable persistent memory.
-```
-
-Files are created only when you request a private checkpoint. Bring `journey.json`
-and `continue.md` back for later work; there is no folder discovery, automatic memory,
-application sending or messaging.
-[Workflow contract](references/practical/job-search-journey.md) · [Synthetic starting request](cases/experiences/journey/request.md) · [Actual verification](documentation/JOURNEY_EVAL.md)
+</details>
 
 <a id="resume-export"></a>
 
-## From a rewrite to an editable resume
+## 04 / From a rewrite to an editable deliverable
 
 See **original → rewrite → reason → facts still to confirm**, with reasons for moving,
 compressing or omitting experiences. Then export a single-column resume. The standard style keeps separate date lines;
 the editorial style aligns dates with titles, uses ink-green headings and copper details,
 and optionally reserves a photo area. Both retain editable source and actual checks.
+
+<p align="center">
+  <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.pdf">
+    <img src="benchmark/journey-20261021/artifacts/editorial-zh/page-1.png" width="420" alt="Compiled editorial synthetic resume with a photo placeholder, internships and projects">
+  </a>
+  <br>
+  <sub>Compiled editorial synthetic sample · Photo space reserved · Click to view the PDF</sub>
+</p>
+
+<details>
+<summary>Copy the resume export request</summary>
 
 ```text
 Prepare a Chinese single-column resume for this JD, aiming for one page.
@@ -177,13 +171,7 @@ Complete ordinary edits. Export LaTeX and plain text to a new private directory 
 Compile a PDF if local XeLaTeX is available; report content, compilation, text and visual checks.
 ```
 
-<p align="center">
-  <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.pdf">
-    <img src="benchmark/journey-20261021/artifacts/editorial-zh/page-1.png" width="360" alt="Compiled editorial synthetic resume with a photo placeholder, internships and projects">
-  </a>
-  <br>
-  <sub>Compiled editorial synthetic sample · Photo space reserved · Click to view the PDF</sub>
-</p>
+</details>
 
 | Your next step | Open this file |
 | --- | --- |
@@ -225,33 +213,37 @@ directory you specify outside Git and the installed Skill.
 
 </details>
 
-## Interviews, applications and offers
+<a id="journey"></a>
+
+## 05 / Keep the next round connected
+
+![Facts, resume versions, actual submissions, feedback and the next action](assets/brand/journey-en.svg)
+
+- **Retain what happened.** Preserve submitted R1, create corrected R2, and record later attachments separately without counting another initial application.
+- **Connect feedback to a specific action.** Role cancellation changes local investment; capability feedback points to practice or evidence.
+- **Return with context.** The continuation card keeps the opportunity, actual version, execution status, feedback sources and next action.
 
 <details>
-<summary>More requests and advanced use</summary>
+<summary>Copy the prompt for your next conversation</summary>
 
-| Ask this | Junshi helps you |
-| --- | --- |
-| “Which roles should I prioritize?” | Compare goals, experience and current JDs; choose primary, secondary and exploratory targets |
-| “Mock this interview. State what the question observes.” | Choose a criterion, ask one question and respond to the actual answer |
-| “Second interview tomorrow. Only 90 minutes tonight.” | Focus on the highest risks, 1–3 actions and a stopping point |
-| “Five days without an HR reply. Follow up?” | Check the conversation, promised dates and workdays; draft timing, wording and a stop rule |
-| “Which offer should I choose? What needs checking first?” | Compare goals and written terms; verify decisive unknowns and actual fee or identity risks |
-| “Two resumes got different feedback. Design an application trial.” | Choose comparable opportunities, one intended change, versions, denominators and a window |
-| “I have 15 minutes and keep changing templates. Help me start.” | Produce one inspectable result with a cue, a fallback and a firm stopping point |
-
-- **Wording audit:** “Change only unsupported verbs, ownership and causality.” [Example](cases/experiences/wording-audit/example.md)
-- **Checkpoints:** “Pause and give me a copyable checkpoint.” Paste it next time; it stays in chat by default. [Example](cases/experiences/defense-resume/example.md)
-- **Outcome-blind review:** In a fresh chat without the outcome, supply observations, freeze the initial judgment, then reveal the result. Known outcomes use ordinary review. [Example](cases/experiences/outcome-blind-review/example.md)
-
-Different roles or channels do not establish a template effect; pending applications stay pending.
-[Application trial](cases/experiences/job-search-experiment/example.md) · [Action-start card](cases/experiences/action-start/example.md)
+```text
+Use $career-junshi to continue my search.
+Here is the previous card / journal. This is what happened since: ...
+Compare it with the earlier advice; separate execution from unknowns and pick one next action.
+If the resume changes, retain the submitted version and create a new version.
+Update the continuation card in chat. Do not enable persistent memory.
+```
 
 </details>
 
+Files are created only when you request a private checkpoint. Bring `journey.json`
+and `continue.md` back for later work; there is no folder discovery, automatic memory,
+application sending or messaging.
+[Workflow contract](references/practical/job-search-journey.md) · [Synthetic starting request](cases/experiences/journey/request.md) · [Actual verification](documentation/JOURNEY_EVAL.md)
+
 <a id="evaluation"></a>
 
-## What has been verified
+## 06 / Verification you can inspect
 
 | Scope | Completed | Evidence |
 | --- | --- | --- |
@@ -284,54 +276,54 @@ salary and company facts need fresh sources. There is no overall candidate score
 
 </details>
 
+<a id="boundaries"></a>
 <a id="library"></a>
 
-## Sources and user control
+## 07 / Facts, memory and user control
 
-The career library contains **18 distinct studies and official documents across eight topics**:
-job search, career choice, resumes, interviews, negotiation, offers, workplace rights and
-hiring safety. Each work is counted once; cards state reading depth, scope and limits.
-
-Ask “What supports this advice, and where does it not apply?” [Browse the library](references/knowledge/08-research-and-application.md).
-Individual legal questions still need current applicable authority.
-
-- **Traceable facts.** Keep sources, ownership and project stage clear. Weak evidence leads to narrower wording and a useful evidence task. [Evidence contract](documentation/EVIDENCE.md)
-- **Opt-in memory.** Explicit consent enables compact local records, excluding full resumes, JDs and conversations by default. View, pause, revoke and delete are available. [Memory guide](documentation/MEMORY.md)
-- **You control external actions.** You apply, send messages, negotiate, accept offers and share material. Reports stay in chat unless you request files and specify a destination.
-
-<details>
-<summary>Data storage</summary>
-
-The local database is unencrypted; deletion cannot erase external backups. Conversation
-materials remain subject to the host's data policies.
-
-</details>
-
-## Before you start
+**Traceable facts. Opt-in memory. External actions stay yours.**
 
 <details>
 <summary>Can I start without a complete resume, a JD or LaTeX?</summary>
 
-Yes. Bring a project, a hiring message or a specific question. Without a JD, role recommendations remain hypotheses to test.<br>
-Without XeLaTeX, editable source and plain text are still available; the PDF remains uncompiled and unverified.
+Yes. Bring a project, a hiring message or a specific question. Without a JD, role recommendations remain hypotheses to test.
+Without XeLaTeX, source and plain text remain available; the PDF stays uncompiled and unverified.
 
 </details>
 
 <details>
-<summary>Will Junshi remember me in another conversation?</summary>
+<summary>Will it remember me? Where does material go?</summary>
 
-Not automatically. Bring the continuation card or private record you explicitly requested to the next conversation.<br>
-Persistent memory requires separate consent; installation does not enable it. [Memory guide](documentation/MEMORY.md)
+Not automatically across conversations. Bring the continuation card or private record you explicitly requested; personal folders are not discovered automatically.
+
+Persistent memory requires separate consent and excludes full resumes, JDs and conversations by default. Viewing, pausing, revoking and deleting are supported.
+The local database is unencrypted; deletion cannot erase external backups. Conversations remain subject to the host's data policies.
+
+[Memory guide](documentation/MEMORY.md) · [Evidence contract](documentation/EVIDENCE.md)
 
 </details>
 
 <details>
-<summary>Will it apply for me or guarantee an interview?</summary>
+<summary>What supports the advice, and what remains uncertain?</summary>
 
-It prepares materials, message drafts and next actions. You decide and carry out applications, messages and offer acceptance.<br>
-Current checks validate behavior and deliverables, not improvements in interview or offer rates.
+The career library contains 18 distinct studies and official documents across eight topics. Each record states reading depth, scope and limits.
+Ask: “What supports this advice, and where does it not apply?”
+
+Current hiring, salary, company and individual legal facts need fresh applicable sources. One silence or rejection cannot establish a career-wide verdict. There is no overall candidate score or hiring probability.
+
+[Career library](references/knowledge/08-research-and-application.md)
 
 </details>
+
+<details>
+<summary>Will it apply, send messages or accept an offer for me?</summary>
+
+Junshi prepares materials, message drafts and next actions. You decide and carry out applications, messages, negotiation, offer acceptance and sharing.
+Reports stay in chat unless you request files and specify a destination. Current checks do not establish improved interview or offer rates.
+
+</details>
+
+---
 
 ## Development and documentation
 
@@ -365,6 +357,6 @@ is incomplete; its results do not establish an architectural conclusion for the 
 
 <div align="center">
 
-[MIT](LICENSE) · [中文](README.md) · [Back to top](#top)
+[Website ↗](https://career-junshi.lavinex.chatgpt.site) · [GitHub Issues](https://github.com/lavine888/Career-Junshi/issues) · [MIT](LICENSE) · [Back to top ↑](#top)
 
 </div>
