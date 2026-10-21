@@ -61,7 +61,8 @@ evaluation reports stay in the checkout; runtime-only benchmark use needs an exp
 
 Core playbooks and focused branches layer on the existing situation modes: resume
 defense, role translation, evidence sprint, decision review, wording audit,
-outcome-blind review, resume export, job-search experiments and action-start cards.
+outcome-blind review, resume export, job-search experiments, action-start cards,
+AI development recap and targeted interview retries.
 The host selects the
 experience from the request, reads its relevant references and conducts the work.
 `junshi.py route --mode interview --experience defense` only selects references
@@ -85,6 +86,13 @@ Source cards live in three runtime JSON catalogs. Identity, type, reading depth,
 version, jurisdiction and limits are required; duplicate IDs, canonical URLs and
 identical normalized titles are rejected. Summary discovery is separate from
 reading one detailed card. Counts are computed from distinct records; topics overlap.
+JD analysis distinguishes expression, evidence, actual gaps and unknowns before
+choosing an action. Development recap reuses the claim/source substrate and
+distinguishes assistant completion statements from inspected execution records.
+Interview retries reuse an actual answer/checkpoint and change the case while
+holding the criterion stable; practice observations never upgrade career confidence.
+These are host decisions, not keyword classifiers or automatic evidence certification.
+
 Structured-interview coaching declares a practice criterion before the answer.
 Offer checks prioritize actual decisive terms and risk signals; the user performs
 external verification and decisions. Neither workflow inherits research validity.

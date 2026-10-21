@@ -126,12 +126,19 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 | 直接这样说 | 军师会帮你做什么 |
 | --- | --- |
 | “我该主投哪个方向？” | 对照目标、经历与当前 JD，给主投 / 副投 / 探索及验证动作 |
+| “对照这份 JD，哪些只需改写，哪些要补证或补能力？” | 分开表达、证据、真实缺口与未知，先核对硬门槛，再选下一步 |
+| “这是我和 AI 开发项目的记录，哪些算我的贡献？” | 区分本人决定、AI 实现和实际执行回执，给有来源的复盘 |
+| “上次没讲清重试逻辑，换个情境再问我。” | 沿用原标准变题复练，对照新回答；讲清不等于事实已核实 |
 | “按这份 JD 模拟面试，先说这题看什么。” | 明确职责与观察点，一次一问，依据实际回答反馈 |
 | “明天二面，今晚只有 90 分钟。” | 收敛最高风险和 1–3 个动作，给今晚的停止线 |
 | “HR 五天没回，要不要催？” | 核对对话、承诺日期和工作日，给时机、草稿与停止等待条件 |
 | “两个 Offer 怎么选，哪些条件先核实？” | 对照目标与书面条款，核实决定性未知；处理实际费用或身份风险 |
 | “两版简历反馈不同，设计一次投递实验。” | 选可比岗位、只改一项，保留版本、分母和观察窗口 |
 | “只有 15 分钟，一直在换模板，帮我开始。” | 给一个可检查的小结果、开始触发点、备用做法和停止时间 |
+
+[JD 缺口分流](cases/experiences/jd-gap/example.md) ·
+[AI 开发复盘](cases/experiences/development-recap/example.md) ·
+[弱项变题复练](cases/experiences/interview-retry/example.md)（合成示意，非独立评估）
 
 - **措辞核对**：“只改动词、贡献和因果中缺证据的部分。”[示意](cases/experiences/wording-audit/example.md)
 - **断点续练**：“先停，给我可复制的断点。”下次贴回继续，默认留在聊天。[示意](cases/experiences/defense-resume/example.md)
@@ -244,6 +251,7 @@ python scripts/junshi.py resume-doctor
 | 检查范围 | 已完成 | 查看记录 |
 | --- | --- | --- |
 | 自动化回归 | **262 项测试**，含两条连续求职流程、版本纠正与安装后接续 | [闭环验收](documentation/JOURNEY_EVAL.md) |
+| 缺口、开发复盘与复练 | 三组合成流程示意；新增入口通过安装与路由检查 | [本轮记录](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
 | 简历定位与结果性质 | **5 组合成改写对照、2 份实际编译 PDF**；宿主自查，非独立评估 | [本轮记录](documentation/RESUME_POSITIONING_EVAL.md) |
 | 实际 PDF 编译 | **4 个场景、8 页**；三个正例通过，超页负例被拒绝 | [排版压力测试](benchmark/resume-layout-20261020/README.md) |
 | 闭环与精排 | **3 份合成 PDF、3 页**；新上下文子代理完成两轮接续试用 | [闭环验收](documentation/JOURNEY_EVAL.md) |

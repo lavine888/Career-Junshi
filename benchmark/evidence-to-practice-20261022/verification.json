@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-22",
+  "scope": "Actual installed CLI routing and resource parity, not host semantic behavior",
+  "new_memory_or_report_files_created_by_route": false,
+  "observations": [
+    {
+      "mode": "job",
+      "experience": null,
+      "exit_code": 0,
+      "references": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "installed_reference_bytes_match_source": true,
+      "suggested_artifact": null,
+      "artifact_was_created": false
+    },
+    {
+      "mode": "positioning",
+      "experience": "development-recap",
+      "exit_code": 0,
+      "references": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/development-recap.md"
+      ],
+      "installed_reference_bytes_match_source": true,
+      "suggested_artifact": "development-recap.md",
+      "artifact_was_created": false
+    },
+    {
+      "mode": "interview",
+      "experience": "interview-retry",
+      "exit_code": 0,
+      "references": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/interview-retry.md"
+      ],
+      "installed_reference_bytes_match_source": true,
+      "suggested_artifact": "interview-retry.md",
+      "artifact_was_created": false
+    }
+  ],
+  "synthetic_examples": "Authored same-context walkthroughs; future answers were visible, not blind or independent trials",
+  "regression": {
+    "tests": 262,
+    "seconds": 61.998,
+    "result": "OK",
+    "new_test_functions": 0,
+    "expanded_checks": "Existing generic experience tests plus invalid mode combinations"
+  },
+  "focused_routing": {
+    "tests": 10,
+    "seconds": 14.53,
+    "result": "OK"
+  },
+  "validation": {
+    "project": "PASSED",
+    "skill_creator_utf8": "PASSED"
+  }
+}

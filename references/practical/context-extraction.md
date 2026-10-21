@@ -18,3 +18,7 @@ competing deadlines. Offer: goals / constraints before user weights; no neutral
 rating for an unknown manager. Current HC / market / salary / policy: fresh source
 or explicit limitation; historic personal experience can remain useful without a
 fake re-verification date. Ask at most 1–3 questions that would change the next move.
+
+For an explicit recap of AI development records, use
+[development-recap](development-recap.md) in place of an unnecessary practical
+reference. Assistant completion statements remain reports without execution receipts.

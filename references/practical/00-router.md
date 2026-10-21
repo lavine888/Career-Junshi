@@ -32,6 +32,8 @@ practical reference within the same 1–3-resource budget:
 
 | Request | Mode | Playbook |
 | --- | --- | --- |
+| 开发复盘 / reconstruct contribution from AI coding records | positioning or interview | [development-recap](development-recap.md) |
+| 弱项复练 / retry a recorded gap with a variant question | interview | [interview-retry](interview-retry.md) |
 | 简历守城 / defend one resume claim | interview or positioning | [resume-defense](resume-defense.md) |
 | 岗位表达 / adapt one project to supplied roles | positioning | [role-translation](role-translation.md) |
 | 补证冲刺 / fill one evidence gap within a budget | job or positioning | [evidence-sprint](evidence-sprint.md) |

@@ -21,3 +21,7 @@ a preparation hypothesis and retain product leadership while clarifying ownershi
 
 For a requested JD-based mock interview with declared criteria, replace this
 practical with [structured-interview](structured-interview.md).
+
+For requested re-practice of a recorded gap, replace this practical with
+[interview-retry](interview-retry.md). It compares actual answers using a changed
+case; improved explanation does not verify the underlying career claim.

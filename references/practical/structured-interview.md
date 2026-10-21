@@ -54,3 +54,7 @@ claims beyond the recorded reading depth.
 
 Practice stays in chat. Only write a report or compact memory when separately
 requested; no applications, messages or reminders are sent by this workflow.
+
+For requested re-practice of a recorded gap, replace this practical with
+[interview-retry](interview-retry.md). It compares actual answers using a changed
+case; improved explanation does not verify the underlying career claim.

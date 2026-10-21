@@ -99,8 +99,8 @@ Offer 缺目标或硬约束时先问，给有条件的选择标准，不按公�
 | Offer 比较、谈薪 | career-decision、[offer-evaluation](references/knowledge/06-offer-evaluation.md)、[offer](references/practical/offer.md)；谈薪用 [negotiation](references/practical/negotiation.md) 替换 practical |
 | 记忆授权、查看、更新、结果回流 | [career-memory](references/practical/career-memory.md) |
 
-投递实验、启动卡、结构化面试、Offer核验见 [任务路由](references/practical/00-router.md)。
-脚本仅辅助结构化输入，不代替上下文判断；样例与研究不能预测个人录用。
+开发复盘、弱项复练、投递实验、启动卡、结构化面试、Offer核验见 [任务路由](references/practical/00-router.md)。
+脚本只辅助结构化输入；样例与研究不能预测个人录用。
 
 ## Memory and outcomes
 

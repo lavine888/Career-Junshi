@@ -133,12 +133,19 @@ Synthetic walkthroughs, in Chinese: [defense](cases/experiences/defense/example.
 | Ask this | Junshi helps you |
 | --- | --- |
 | “Which roles should I prioritize?” | Compare goals, experience and current JDs; choose primary, secondary and exploratory targets |
+| “Which JD gaps need clearer writing, evidence or actual practice?” | Separate the gap types and unknowns, check hard constraints, then choose the next action |
+| “Which parts of this AI coding record are my contribution?” | Separate personal decisions, AI implementation and execution receipts in a sourced recap |
+| “Re-test the retry logic I could not explain, using a different case.” | Keep the criterion, change the scenario and compare actual answers; explanation does not authenticate a claim |
 | “Mock this interview. State what the question observes.” | Choose a criterion, ask one question and respond to the actual answer |
 | “Second interview tomorrow. Only 90 minutes tonight.” | Focus on the highest risks, 1–3 actions and a stopping point |
 | “Five days without an HR reply. Follow up?” | Check the conversation, promised dates and workdays; draft timing, wording and a stop rule |
 | “Which offer should I choose? What needs checking first?” | Compare goals and written terms; verify decisive unknowns and actual fee or identity risks |
 | “Two resumes got different feedback. Design an application trial.” | Choose comparable opportunities, one intended change, versions, denominators and a window |
 | “I have 15 minutes and keep changing templates. Help me start.” | Produce one inspectable result with a cue, a fallback and a firm stopping point |
+
+Synthetic walkthroughs, in Chinese: [JD gaps](cases/experiences/jd-gap/example.md) ·
+[AI development recap](cases/experiences/development-recap/example.md) ·
+[targeted retry](cases/experiences/interview-retry/example.md). These are authored examples, not independent evaluations.
 
 - **Wording audit:** “Change only unsupported verbs, ownership and causality.” [Example](cases/experiences/wording-audit/example.md)
 - **Checkpoints:** “Pause and give me a copyable checkpoint.” Paste it next time; it stays in chat by default. [Example](cases/experiences/defense-resume/example.md)
@@ -263,6 +270,7 @@ application sending or messaging.
 | Scope | Completed | Evidence |
 | --- | --- | --- |
 | Automated regression | **262 tests**, including two continuous journeys, corrections and installed continuation | [Journey evaluation](documentation/JOURNEY_EVAL.md) |
+| Gaps, development recap and targeted retry | Three synthetic walkthroughs; new entries checked through installation and routing | [Current record](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
 | Resume positioning and result nature | **5 synthetic comparisons, 2 compiled PDFs**; host review, not independent evaluation | [Current record](documentation/RESUME_POSITIONING_EVAL.md) |
 | Actual PDF compilation | **4 cases, 8 pages**; three positive cases passed, over-budget output rejected | [Layout stress checks](benchmark/resume-layout-20261020/README.md) |
 | Journey and layouts | **3 synthetic PDFs, 3 pages**; a fresh-context subagent completed a two-turn continuation trial | [Journey evaluation](documentation/JOURNEY_EVAL.md) |

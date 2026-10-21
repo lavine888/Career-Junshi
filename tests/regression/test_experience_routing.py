@@ -35,7 +35,8 @@ class ExperienceRoutingTests(unittest.TestCase):
     def test_invalid_experience_and_mode_combinations_fail_explicitly(self):
         for mode, experience in (("offer", "defense"), ("interview", "proof-sprint"),
                                  ("job", "role-translation"), ("interview", "wording-audit"),
-                                 ("interview", "unknown")):
+                                 ("interview", "unknown"), ("job", "development-recap"),
+                                 ("positioning", "interview-retry")):
             with self.subTest(mode=mode, experience=experience), self.assertRaises(ContractError):
                 route(mode, experience=experience)
 

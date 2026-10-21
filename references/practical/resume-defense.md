@@ -89,3 +89,7 @@ Keep any shareable version limited to content the user selects, without adding
 identity, employer or contact details. The host does not publish or send it.
 
 When this work continues a tracked opportunity, use the [journey handoff](job-search-journey.md) in place of an unnecessary reference. Link the actual resume version, feedback and next action; preserve prior submissions and do not enable memory.
+
+When the user asks to re-test an unresolved point rather than resume the pending
+question, replace this practical with [interview-retry](interview-retry.md).
+Carry forward this checkpoint and its source boundary; do not invent earlier answers.

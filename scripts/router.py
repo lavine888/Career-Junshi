@@ -11,6 +11,12 @@ ROUTES = {
 }
 
 EXPERIENCES = {
+    "development-recap": {"modes": {"positioning", "interview"},
+                          "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/development-recap.md"],
+                          "artifact": "development-recap.md"},
+    "interview-retry": {"modes": {"interview"},
+                        "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/interview-retry.md"],
+                        "artifact": "interview-retry.md"},
     "journey": {"modes": set(ROUTES),
                 "references": ["references/practical/job-search-journey.md"],
                 "artifact": "continue.md"},
