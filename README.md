@@ -2,15 +2,21 @@
 
 <div align="center">
 
-[![求职军师：下一程，从真实的你开始。](assets/brand/readme-cover-zh.svg)](https://career-junshi.lavinex.chatgpt.site)
+[![求职军师：下一程，从真实的你开始。](assets/brand/readme-hero-zh.svg)](https://career-junshi.lavinex.chatgpt.site)
 
 # 求职军师 · Career Junshi
 
-运行在助手中的职业决策 Skill。<br>基于真实经历，改简历、练面试，把反馈接回下一步。
+运行在助手中的职业决策 Skill。基于真实经历，改简历、练面试，把反馈接回下一步。
 
-**[访问官网 ↗](https://career-junshi.lavinex.chatgpt.site)** &nbsp; / &nbsp; [快速开始](#start) &nbsp; / &nbsp; [简历样例](#resume-export) &nbsp; / &nbsp; [English](README_EN.md)
+<p align="center">
+  <a href="https://career-junshi.lavinex.chatgpt.site"><img src="assets/brand/cta-website-zh.svg" width="154" height="42" alt="访问官网"></a>
+  &nbsp;
+  <a href="#start"><img src="assets/brand/cta-start-zh.svg" width="136" height="42" alt="快速开始"></a>
+</p>
 
-[![MIT](https://img.shields.io/badge/License-MIT-1D1D1F?style=flat-square)](LICENSE) ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-62626B?style=flat-square) [![记忆可选](https://img.shields.io/badge/Memory-opt--in-62626B?style=flat-square)](documentation/MEMORY.md)
+[简历样例](#resume-export) &nbsp; · &nbsp; [English](README_EN.md)
+
+<sub>[MIT](LICENSE) &nbsp; · &nbsp; Python 3.10+ &nbsp; · &nbsp; [记忆自选](documentation/MEMORY.md)</sub>
 
 </div>
 

@@ -2,15 +2,21 @@
 
 <div align="center">
 
-[![Career Junshi: your next move, grounded in you](assets/brand/readme-cover-en.svg)](https://career-junshi.lavinex.chatgpt.site)
+[![Career Junshi: your next move, grounded in you.](assets/brand/readme-hero-en.svg)](https://career-junshi.lavinex.chatgpt.site)
 
 # Career Junshi · 求职军师
 
-A career decision Skill that runs in your assistant.<br>Rewrite a resume, rehearse interviews, and turn feedback into the next action.
+A career decision Skill for your assistant. Real experience, clearer expression, and a concrete next step.
 
-**[Explore the website ↗](https://career-junshi.lavinex.chatgpt.site)** &nbsp; / &nbsp; [Quick start](#start) &nbsp; / &nbsp; [Resume sample](#resume-export) &nbsp; / &nbsp; [中文](README.md)
+<p align="center">
+  <a href="https://career-junshi.lavinex.chatgpt.site"><img src="assets/brand/cta-website-en.svg" width="154" height="42" alt="Visit website"></a>
+  &nbsp;
+  <a href="#start"><img src="assets/brand/cta-start-en.svg" width="136" height="42" alt="Quick start"></a>
+</p>
 
-[![MIT](https://img.shields.io/badge/License-MIT-1D1D1F?style=flat-square)](LICENSE) ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-62626B?style=flat-square) [![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-62626B?style=flat-square)](documentation/MEMORY.md)
+[Resume sample](#resume-export) &nbsp; · &nbsp; [中文](README.md)
+
+<sub>[MIT](LICENSE) &nbsp; · &nbsp; Python 3.10+ &nbsp; · &nbsp; [Opt-in memory](documentation/MEMORY.md)</sub>
 
 </div>
 
