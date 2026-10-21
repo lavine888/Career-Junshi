@@ -11,7 +11,7 @@
 Rewrite a resume, rehearse interviews, and turn hiring feedback into the next action.<br>
 A workflow for assistants that support local Skills. Bring one experience to begin.
 
-[Get started](#start) · [See a rewrite](#demo) · [Resumes & PDF](#resume-export) · [Continue your search](#journey) · [Verification](#evaluation) · [中文](README.md)
+[Website ↗](https://career-junshi.lavinex.chatgpt.site) · [Get started](#start) · [See a rewrite](#demo) · [Resumes & PDF](#resume-export) · [Continue your search](#journey) · [Verification](#evaluation) · [中文](README.md)
 
 [![MIT](https://img.shields.io/badge/License-MIT-1D1D1F?style=flat-square)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-62626B?style=flat-square)

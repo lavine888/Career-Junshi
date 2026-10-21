@@ -11,7 +11,7 @@
 基于真实材料改简历、练面试，让投递反馈接回下一轮行动。<br>
 运行在支持本地 Skill 的助手中；从一段真实经历开始，已有材料直接用。
 
-[开始使用](#start) · [看一次改写](#demo) · [简历与 PDF](#resume-export) · [接着求职](#journey) · [验证记录](#evaluation) · [English](README_EN.md)
+[访问官网 ↗](https://career-junshi.lavinex.chatgpt.site) · [开始使用](#start) · [看一次改写](#demo) · [简历与 PDF](#resume-export) · [接着求职](#journey) · [验证记录](#evaluation) · [English](README_EN.md)
 
 [![MIT](https://img.shields.io/badge/License-MIT-1D1D1F?style=flat-square)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-62626B?style=flat-square)
