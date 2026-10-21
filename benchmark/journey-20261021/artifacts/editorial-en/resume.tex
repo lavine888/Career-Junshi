@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=18mm,right=18mm,top=15mm,bottom=17mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[hidelinks,unicode]{hyperref}
+\XeTeXgenerateactualtext=1
+\IfFontExistsTF{Segoe UI}{\setmainfont{Segoe UI}}{\setmainfont{Latin Modern Sans}}
+
+\definecolor{navy}{HTML}{173B40}
+\definecolor{gold}{HTML}{B4834F}
+\definecolor{ink}{HTML}{243238}
+\definecolor{muted}{HTML}{637275}
+\definecolor{rule}{HTML}{CDD9D8}
+\linespread{1}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\widowpenalty=10000
+\clubpenalty=10000
+\pagestyle{plain}
+\newcommand{\cvphoto}{%
+  \IfFileExists{photo.jpg}{\includegraphics[width=28mm,height=38mm,keepaspectratio]{photo.jpg}}{%
+    \IfFileExists{photo.png}{\includegraphics[width=28mm,height=38mm,keepaspectratio]{photo.png}}{%
+      \begingroup\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.4pt}%
+      \fcolorbox{rule}{white}{\parbox[c][38mm][c]{28mm}{\mbox{}}}\endgroup}}}
+\newcommand{\cvsection}[1]{%
+  \par\addvspace{11pt}\noindent{\color{navy}\fontsize{13}{17}\selectfont\bfseries #1}\par\nopagebreak
+  \vspace{4pt}{\color{rule}\hrule height0.45pt}\nopagebreak\vspace{5pt}}
+\newcommand{\cventry}[3]{%
+  \noindent{\color{navy}\bfseries\fontsize{11.7}{15}\selectfont #1}\hfill
+  {\color{muted}\fontsize{9.5}{15}\selectfont #2}\par\nopagebreak
+  {\color{muted}\fontsize{9.5}{13.2}\selectfont #3\par}\nopagebreak\vspace{3pt}}
+\newcommand{\cvbullet}[1]{%
+  \begingroup\hangindent=1.05em\hangafter=1\noindent
+  \makebox[1.05em][l]{\color{gold}\textbullet}#1\par\endgroup\vspace{3pt}}
+\begin{document}
+\fontsize{11}{16.5}\selectfont\color{ink}
+\noindent{\color{navy}\rule{15mm}{2pt}}\hspace{3mm}{\color{rule}\rule{\dimexpr\linewidth-18mm\relax}{0.45pt}}\par\vspace{9pt}
+\begin{minipage}[t]{\linewidth}\vspace{0pt}
+{\color{navy}\fontsize{29}{33}\selectfont\bfseries Synthetic Candidate}\par\vspace{5pt}
+{\fontsize{12}{16}\selectfont AI Product / Integration}\par\vspace{7pt}
+{\fontsize{9.5}{14}\selectfont \href{mailto:candidate@example.invalid}{c\allowbreak{}a\allowbreak{}n\allowbreak{}d\allowbreak{}i\allowbreak{}d\allowbreak{}a\allowbreak{}t\allowbreak{}e\allowbreak{}@\allowbreak{}e\allowbreak{}x\allowbreak{}a\allowbreak{}m\allowbreak{}p\allowbreak{}l\allowbreak{}e\allowbreak{}.\allowbreak{}i\allowbreak{}n\allowbreak{}v\allowbreak{}a\allowbreak{}l\allowbreak{}i\allowbreak{}d} \textbar{} \allowbreak{}\href{https://example.invalid/portfolio}{h\allowbreak{}t\allowbreak{}t\allowbreak{}p\allowbreak{}s\allowbreak{}:\allowbreak{}/\allowbreak{}/\allowbreak{}e\allowbreak{}x\allowbreak{}a\allowbreak{}m\allowbreak{}p\allowbreak{}l\allowbreak{}e\allowbreak{}.\allowbreak{}i\allowbreak{}n\allowbreak{}v\allowbreak{}a\allowbreak{}l\allowbreak{}i\allowbreak{}d\allowbreak{}/\allowbreak{}p\allowbreak{}o\allowbreak{}r\allowbreak{}t\allowbreak{}f\allowbreak{}o\allowbreak{}l\allowbreak{}i\allowbreak{}o}\par}
+\end{minipage}
+\par\vspace{8pt}
+\cvsection{Projects}
+\par\addvspace{7pt}\begin{minipage}{\linewidth}
+\cventry{Team Document Assistant}{2026.07 - 2026.09}{Product scope and acceptance checks}
+\cvbullet{Scoped a team prototype and documented acceptance criteria; the service was implemented by teammates.}
+\end{minipage}\par
+\cvbullet{Recorded citation failures on 10 synthetic questions; no production users or causal accuracy improvement is claimed.}
+\cvsection{Education}
+\par\addvspace{7pt}\begin{minipage}{\linewidth}
+\cventry{Example University}{2023 - 2027 (expected)}{Information Systems}
+\end{minipage}\par
+\end{document}

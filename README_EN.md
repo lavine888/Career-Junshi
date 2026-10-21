@@ -14,7 +14,7 @@ A career workflow for assistants that support local Skills. Start where you are 
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-6D6B64?style=flat-square)
 [![Memory opt-in](https://img.shields.io/badge/Memory-opt--in-2F6C59?style=flat-square)](documentation/MEMORY.md)
 
-[See it work](#demo) · [Get started](#start) · [Core experiences](#experiences) · [Resume export](#resume-export) · [Verification](#evaluation) · [中文](README.md)
+[See it work](#demo) · [Get started](#start) · [Core experiences](#experiences) · [Continue your search](#journey) · [Resume export](#resume-export) · [Verification](#evaluation) · [中文](README.md)
 
 </div>
 
@@ -121,27 +121,54 @@ Synthetic walkthroughs, in Chinese: [defense](cases/experiences/defense/example.
 [role translation](cases/experiences/role-translation/example.md) ·
 [evidence sprint](cases/experiences/proof-sprint/example.md) · [decision review](cases/experiences/decision-review/example.md)
 
+<a id="journey"></a>
+
+## Return to the same search, with the history intact
+
+**Facts → resume version → actual submission → feedback → one adjustment → next version.**
+
+A short continuation card records the opportunity, actual version, execution receipts,
+feedback sources and next action. A corrected claim flags affected old resumes; the
+original R1 submission stays intact. A later R2 attachment is a material update in the
+same hiring process, not another initial application. Role cancellation changes local
+investment, without turning one outcome into a verdict on your career direction.
+
+```text
+Use $career-junshi to continue my search.
+Here is the previous card / journal. This is what happened since: ...
+Compare it with the earlier advice; separate execution from unknowns and pick one next action.
+If the resume changes, retain the submitted version and create a new version.
+Update the continuation card in chat. Do not enable persistent memory.
+```
+
+Files are created only when you request a private checkpoint. Bring `journey.json`
+and `continue.md` back for later work; there is no folder discovery, automatic memory,
+application sending or messaging.
+[Workflow contract](references/practical/job-search-journey.md) · [Synthetic starting request](cases/experiences/journey/request.md) · [Actual verification](documentation/JOURNEY_EVAL.md)
+
 <a id="resume-export"></a>
 
 ## From a rewrite to an editable resume
 
 See **original → rewrite → reason → facts still to confirm**, with reasons for moving,
-compressing or omitting experiences. Then export a single-column resume with separate
-right-aligned dates, grouped contacts and clickable supplied email/web addresses.
+compressing or omitting experiences. Then export a single-column resume. The standard style keeps separate date lines;
+the editorial style aligns dates with titles, uses ink-green headings and copper details,
+and optionally reserves a photo area. Both retain editable source and actual checks.
 
 ```text
 Prepare a Chinese single-column resume for this JD, aiming for one page.
+Use the editorial style and reserve a photo area.
 Preserve real contributions and explain material rewrites and cuts.
 Complete ordinary edits. Export LaTeX and plain text to a new private directory I specify.
 Compile a PDF if local XeLaTeX is available; report content, compilation, text and visual checks.
 ```
 
 <p align="center">
-  <a href="benchmark/resume-layout-20261020/artifacts/dense-zh/resume.pdf">
-    <img src="benchmark/resume-layout-20261020/artifacts/dense-zh/rendered/page-1.png" width="360" alt="Actually compiled one-page Chinese synthetic resume with two internships, projects and right-aligned dates">
+  <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.pdf">
+    <img src="benchmark/journey-20261021/artifacts/editorial-zh/page-1.png" width="360" alt="Compiled editorial synthetic resume with a photo placeholder, internships and projects">
   </a>
   <br>
-  <sub>Compiled synthetic sample · Click to view the PDF</sub>
+  <sub>Compiled editorial synthetic sample · Photo space reserved · Click to view the PDF</sub>
 </p>
 
 | Your next step | Open this file |
@@ -161,7 +188,8 @@ source and text are still delivered; actual PDF page count and layout remain unv
 <summary>Compilation and self-check · File locations · Verification limits</summary>
 
 Source export needs no LaTeX. PDF compilation requires local XeLaTeX, CTEX/Fandol,
-geometry, hyperref and their dependencies. To check the environment, run from the
+geometry, hyperref and their dependencies; editorial also uses fontspec, xcolor and
+graphicx. To check the standard probe environment, run from the
 repository or installed Skill root:
 
 ```sh
@@ -213,8 +241,9 @@ Different roles or channels do not establish a template effect; pending applicat
 
 | Scope | Completed | Evidence |
 | --- | --- | --- |
-| Automated regression | **251 tests**, covering installation, routing, evidence handling and more | [Iteration evaluation](documentation/RESUME_ITERATION_EVAL.md) |
+| Automated regression | **262 tests**, including two continuous journeys, corrections and installed continuation | [Journey evaluation](documentation/JOURNEY_EVAL.md) |
 | Actual PDF compilation | **4 cases, 8 pages**; three positive cases passed, over-budget output rejected | [Layout stress checks](benchmark/resume-layout-20261020/README.md) |
+| Current journey and layouts | **3 synthetic PDFs, 3 pages**; a fresh-context subagent completed a two-turn continuation trial | [Journey evaluation](documentation/JOURNEY_EVAL.md) |
 | Synthetic user interactions | **5 users, 15 actual assistant turns** | [Multi-turn trials](documentation/MOCK_USER_TRIALS.md) |
 
 There are also 13 structured synthetic benchmark cases and limited fresh-context trials.

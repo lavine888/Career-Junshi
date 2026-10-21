@@ -65,3 +65,5 @@ When application feedback suggests a testable bottleneck and the user wants a
 bounded next trial, use [job-search-experiment](job-search-experiment.md) instead
 of assigning an unstructured increase in application volume. Incomparable batches
 are observations, not an A/B causal result.
+
+When this work continues a tracked opportunity, use the [journey handoff](job-search-journey.md) in place of an unnecessary reference. Link the actual resume version, feedback and next action; preserve prior submissions and do not enable memory.

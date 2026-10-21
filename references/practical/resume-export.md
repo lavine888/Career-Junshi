@@ -71,7 +71,7 @@ Use the supported input schema and report unsupported fields instead of silently
 turning them into accomplishments. Keep content separate from the fixed template.
 The JSON object requires `schema_version: "1"`, `language: "zh"` or `"en"`, an
 explicitly supplied `name`, `sources`, `sections` and `page_limit` of 1 or 2.
-Only `target_role` and `contacts` are optional. Each source has `id` and `description`;
+`target_role`, `contacts`, `layout`, `photo` and `lineage` are optional. Each source has `id` and `description`;
 each section has `title` and `entries`. Each entry has `title`, `subtitle`,
 `dates`, required `source_ids` and `bullets` (empty for an entry without bullets);
 each bullet has `text`,
@@ -160,3 +160,26 @@ For research support about writing assistance, use R3 in
 [research and application](../knowledge/08-research-and-application.md) within the
 same reference budget. That online-market experiment does not test this Skill,
 LaTeX, page count, keyword stuffing or achievement inflation.
+
+## Reusable layout and version handoff
+
+`layout` is `standard` (default, unchanged) or `editorial` (11 pt body, ink-green
+headings, copper markers, separated roles and controlled spacing). `photo` is
+`none` (default) or `placeholder`, supported with editorial only. The latter
+reserves 28 × 38 mm and the generated TeX reads a same-directory `photo.jpg` or
+`photo.png` on manual recompilation, preserving aspect ratio. No photo is inferred,
+read or copied by export. Recheck the resulting pages after adding a real photo.
+Ordinary export still respects the supplied section order and page budget.
+
+For a tracked journey, supply optional `lineage` with `resume_id`,
+`parent_resume_id` (empty for first), `opportunity_id` (empty for a general draft),
+and `claim_refs: [{project_id, claim_id, revision_id}]`. A revision ID refers to
+the claim event in the user-supplied journal; keep the private bullet-to-source
+fact map as well. The exporter validates shape, not whether the linked claim
+supports this wording. The host reviews that mapping before registration.
+
+`verification.json` now includes lineage and hashes of actually generated artifacts.
+Without supplied lineage it assigns a new version ID but invents no claim links.
+It does not mark content or visual review passed. Copy the actual receipts into
+a [journey](job-search-journey.md) only when needed; source-only is not READY.
+Changing facts creates a new child version; old submissions remain unchanged.

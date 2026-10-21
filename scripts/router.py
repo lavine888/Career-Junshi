@@ -11,6 +11,9 @@ ROUTES = {
 }
 
 EXPERIENCES = {
+    "journey": {"modes": set(ROUTES),
+                "references": ["references/practical/job-search-journey.md"],
+                "artifact": "continue.md"},
     "structured-interview": {"modes": {"interview"},
                              "references": ["references/knowledge/01-evidence-and-claims.md", "references/practical/structured-interview.md"],
                              "artifact": "structured-interview.md"},

@@ -28,7 +28,8 @@ user materials / consented task memory
 | actions.py | Action ownership and actual Markdown artifact generation | Does not send messages, apply or decide for the user |
 | resume_export.py | Sourced resume data to escaped fixed-template LaTeX and plain text; optional local XeLaTeX | Does not verify claim truth, upload data or certify ATS compatibility |
 | memory_store.py | Consent-gated SQLite and immutable decision history | Local compact memory, no cloud sync |
-| feedback_loop.py | Decision snapshot / next-move handoff | No causal proof from success |
+| feedback_loop.py | Decision snapshot / sourced status-context hint | No causal proof from success |
+| journey.py | Explicit event replay, version links, execution receipts and continuation card | No database, discovery, sending or automatic persistence |
 | install_skill.py | Validated whitelist runtime copy | No overwrite, auto-enable memory or environment setup |
 | validate_skill.py | Inventory, links, syntax, routing and context budget | No assertion of model behavior |
 | context.py | Session spans, extraction types and freshness | No arbitrary NLP or source authentication |
@@ -87,3 +88,18 @@ reading one detailed card. Counts are computed from distinct records; topics ove
 Structured-interview coaching declares a practice criterion before the answer.
 Offer checks prioritize actual decisive terms and risk signals; the user performs
 external verification and decisions. Neither workflow inherits research validity.
+
+## Portable job-search continuation
+
+The optional `journey` CLI replays a bounded explicitly supplied journal. Claim
+revisions, resume hashes, opportunity submissions, recruiting observations, action
+receipts and host-authored reviews retain stable references. Corrections mark
+referencing resumes stale without changing original application history. File
+verification is opt-in. A requested checkpoint creates a new private directory;
+it does not activate the separate consent-gated memory store. No schema migration
+of existing memory or behavioral change to its legacy compact application records
+is implied. [Contract and host workflow](../references/practical/job-search-journey.md).
+
+Resume export keeps its existing default and adds an editorial template with an
+optional blank photo area. Both use escaped content, actual file receipts and the
+same compilation/text/page checks. Visual/content review remain host responsibilities.

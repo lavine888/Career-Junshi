@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import copy
+import hashlib
+import uuid
 import json
 import os
 import re
@@ -13,7 +15,7 @@ import unicodedata
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 
-from scripts.models import CONFIDENCE, ContractError
+from scripts.models import CONFIDENCE, ContractError, revision_refs
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "assets/resume/single-column.tex"
@@ -44,11 +46,27 @@ def _references(value, known):
 def validate_resume(data):
     """Return a deep copy with optional fields filled; never normalize claim wording."""
     _object(data, ("schema_version", "language", "name", "sources", "sections", "page_limit"),
-            ("target_role", "contacts"))
+            ("target_role", "contacts", "layout", "photo", "lineage"))
     if data["schema_version"] != "1" or data["language"] not in ("zh", "en"):
         raise ContractError("Expected schema_version '1' and language zh or en")
     if type(data["page_limit"]) is not int or data["page_limit"] not in (1, 2):
         raise ContractError("page_limit must be 1 or 2")
+    if not isinstance(data.get("layout", "standard"), str) or data.get("layout", "standard") not in {"standard", "editorial"}:
+        raise ContractError("layout must be standard or editorial")
+    if not isinstance(data.get("photo", "none"), str) or data.get("photo", "none") not in {"none", "placeholder"}:
+        raise ContractError("photo must be none or placeholder")
+    if data.get("photo", "none") != "none" and data.get("layout", "standard") != "editorial":
+        raise ContractError("photo placeholder requires editorial layout")
+    if "lineage" in data:
+        lineage = data["lineage"]
+        _object(lineage, ("resume_id", "parent_resume_id", "opportunity_id", "claim_refs"))
+        for key in ("resume_id", "parent_resume_id", "opportunity_id"):
+            _text(lineage[key], 100, empty=key != "resume_id")
+        revision_refs(lineage["claim_refs"])
+        if not lineage["claim_refs"]:
+            raise ContractError("linked resume needs at least one claim revision")
+        if lineage["resume_id"] == lineage["parent_resume_id"]:
+            raise ContractError("resume cannot be its own parent")
     _text(data["name"], 100)
     _text(data.get("target_role", ""), 150, empty=True)
     _list(data.get("contacts", []), maximum=8)
@@ -120,6 +138,8 @@ def _contact(value):
 
 
 def _render(data):
+    if data.get("layout", "standard") == "editorial":
+        return _render_editorial(data)
     body = [r"{\LARGE\bfseries " + _escape(data["name"]) + r"}\par"]
     plain = [data["name"], data["target_role"], *data["contacts"]]
     expected = [value for value in plain if value]
@@ -155,6 +175,44 @@ def _render(data):
     tex = template.replace("@@CLASS@@", "ctexart" if data["language"] == "zh" else "article")
     tex = tex.replace("@@CLASS_OPTIONS@@", ",fontset=fandol" if data["language"] == "zh" else "")
     return tex.replace("@@BODY@@", "\n".join(body)), "\n".join(plain) + "\n", expected
+
+
+def _render_editorial(data):
+    """Escaped content through a bundled style; same fact boundaries as standard."""
+    plain = [data["name"], data["target_role"], *data["contacts"]]
+    expected = [v for v in plain if v]
+    photo = data.get("photo", "none") == "placeholder"
+    body = [r"\begin{minipage}[t]{" + (r"0.78\linewidth" if photo else r"\linewidth") + r"}\vspace{0pt}",
+            r"{\color{navy}\fontsize{29}{33}\selectfont\bfseries " + _escape(data["name"]) + r"}\par\vspace{5pt}"]
+    if data["target_role"]:
+        body.append(r"{\fontsize{12}{16}\selectfont " + _escape(data["target_role"]) + r"}\par\vspace{7pt}")
+    if data["contacts"]:
+        body.append(r"{\fontsize{9.5}{14}\selectfont " + r" \textbar{} \allowbreak{}".join(_contact(v) for v in data["contacts"]) + r"\par}")
+    body.append(r"\end{minipage}")
+    if photo:
+        body.append(r"\hfill\begin{minipage}[t]{0.18\linewidth}\vspace{0pt}\raggedleft\cvphoto\end{minipage}")
+    body.append(r"\par\vspace{8pt}")
+    for section in data["sections"]:
+        body.append(r"\cvsection{" + _escape(section["title"]) + "}")
+        plain.append(section["title"]); expected.append(section["title"])
+        for entry in section["entries"]:
+            body.append(r"\par\addvspace{7pt}\begin{minipage}{\linewidth}")
+            body.append(r"\cventry{" + _escape(entry["title"]) + "}{" + _escape(entry["dates"]) + "}{" + _escape(entry["subtitle"]) + "}")
+            plain.append(" | ".join(entry[k] for k in ("title", "dates", "subtitle") if entry[k]))
+            expected.extend(entry[k] for k in ("title", "dates", "subtitle") if entry[k])
+            for index, bullet in enumerate(entry["bullets"]):
+                prefix = "[PLANNED] " if bullet["confidence"] == "PLANNED" else ""
+                body.append(r"\cvbullet{" + _escape(prefix + bullet["text"]) + "}")
+                plain.append("- " + prefix + bullet["text"]); expected.append(prefix + bullet["text"])
+                if index == 0:
+                    body.append(r"\end{minipage}\par")
+            if not entry["bullets"]:
+                body.append(r"\end{minipage}\par")
+    template = (ROOT / "assets/resume/editorial.tex").read_text(encoding="utf-8")
+    template = template.replace("@@CLASS@@", "ctexart" if data["language"] == "zh" else "article")
+    template = template.replace("@@CLASS_OPTIONS@@", ",fontset=fandol" if data["language"] == "zh" else "")
+    template = template.replace("@@CJK_FONT@@", r"\IfFontExistsTF{Microsoft YaHei}{\setCJKmainfont{Microsoft YaHei}}{}" if data["language"] == "zh" else "")
+    return template.replace("@@BODY@@", "\n".join(body)), "\n".join(plain) + "\n", expected
 
 
 def _output_path(directory):
@@ -237,7 +295,7 @@ def _compile(tex, target, expected, page_limit, *, disable_installer=False):
         try:
             for _ in range(2):
                 command = [compiler]
-                if disable_installer:
+                if disable_installer or "miktex" in compiler.lower():
                     command.append("-disable-installer")
                 result = _run([*command, "-no-shell-escape", "-halt-on-error", "-interaction=nonstopmode",
                                "resume.tex"], work)
@@ -303,7 +361,15 @@ def export_resume(data, directory, compile_pdf=False):
                   else "PDF_COMPILED_AWAITING_VISUAL_REVIEW")
     elif checks["compilation"] == "FAILED":
         status = "COMPILATION_FAILED"
+    lineage = normalized.get("lineage", {"resume_id": uuid.uuid4().hex,
+        "parent_resume_id": "", "opportunity_id": "", "claim_refs": []})
+    artifacts = [{"kind": kind, "path": str(target / name),
+                  "sha256": hashlib.sha256((target / name).read_bytes()).hexdigest()}
+                 for kind, name in (("tex", "resume.tex"), ("text", "resume.txt"),
+                                    ("data", "resume-data.json"), ("pdf", "resume.pdf"))
+                 if (target / name).is_file()]
     report = {"schema_version": "1", "status": status, "checks": checks,
+              "lineage": lineage, "artifacts": artifacts, "layout": normalized.get("layout", "standard"),
               "page_limit": normalized["page_limit"], "expected_text": expected,
               "evidence_map": normalized, "semantic_verification": "NOT_PERFORMED",
               "ats_certification": "NOT_PERFORMED", "directory": str(target)}

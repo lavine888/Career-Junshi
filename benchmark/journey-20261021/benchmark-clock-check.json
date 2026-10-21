@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "clock": "2026-10-03T12:00:00+08:00",
+      "purpose": "frozen protocol",
+      "exit_code": 0,
+      "case_coverage": 13,
+      "regressions": []
+    },
+    {
+      "clock": "2026-10-21T16:00:00+08:00",
+      "purpose": "different clock, not equivalent regression conditions",
+      "exit_code": 1,
+      "case_coverage": 13,
+      "regressions": [
+        "G06"
+      ]
+    }
+  ],
+  "boundary": "Frozen cases must use the recorded clock. Advancing time changes imminent/deadline scenarios; no expectation or planner was changed."
+}

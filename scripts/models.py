@@ -162,3 +162,19 @@ def audit_claim(value: Any) -> dict:
             "ownership": {"scope": scope, "contribution": contribution}, "stage": stage,
             "risk": risk, "safe_wording": safe,
             "verification_boundary": "Structured receipts are operator attestations, not authenticated verification by this script."}
+
+
+def revision_refs(value):
+    """Explicit project/claim/revision identity; never inferred from prose."""
+    result = []
+    for raw in items(value, "claim revision refs", 80):
+        ref = obj(raw, "claim revision reference")
+        if set(ref) != {"project_id", "claim_id", "revision_id"}:
+            raise ContractError("claim revision needs project_id, claim_id and revision_id")
+        clean = {key: text(ref[key], key, 100) for key in ref}
+        if clean in result:
+            raise ContractError("duplicate claim revision reference")
+        if any((x["project_id"], x["claim_id"]) == (clean["project_id"], clean["claim_id"]) for x in result):
+            raise ContractError("one resume cannot mix revisions of the same claim")
+        result.append(clean)
+    return result

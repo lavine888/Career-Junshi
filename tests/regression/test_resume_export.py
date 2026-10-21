@@ -327,3 +327,42 @@ class ResumeTextIntegrityTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ResumeLineageAndLayoutTests(unittest.TestCase):
+    def test_editorial_keeps_fact_text_and_template_commands_escaped(self):
+        data = sample(); data.update(layout="editorial", photo="placeholder")
+        data["sections"][0]["entries"][0]["bullets"][0]["text"] = r"Team prototype 20% & \input{fake}"
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "out"; result = export_resume(data, target)
+            tex = (target / "resume.tex").read_text(encoding="utf-8")
+            self.assertIn(r"\XeTeXgenerateactualtext=1", tex)
+            self.assertIn(r"\cvphoto", tex)
+            self.assertNotIn(r"\input{fake}", tex)
+            self.assertIn(r"\textbackslash{}input\{fake\}", tex)
+            self.assertIn("[PLANNED] Team prototype 20%", (target / "resume.txt").read_text(encoding="utf-8"))
+            self.assertEqual(result["checks"]["visual_review"], "REQUIRED")
+            self.assertEqual(result["layout"], "editorial")
+
+    def test_lineage_and_hashes_identify_exact_generated_files(self):
+        import hashlib
+        data = sample(); data["lineage"] = {"resume_id": "R2", "parent_resume_id": "R1", "opportunity_id": "O1",
+            "claim_refs": [{"project_id": "P1", "claim_id": "C1", "revision_id": "V1"}]}
+        with tempfile.TemporaryDirectory() as tmp:
+            result = export_resume(data, Path(tmp) / "out")
+            self.assertEqual(result["lineage"], data["lineage"])
+            for artifact in result["artifacts"]:
+                self.assertEqual(hashlib.sha256(Path(artifact["path"]).read_bytes()).hexdigest(), artifact["sha256"])
+            self.assertEqual({x["kind"] for x in result["artifacts"]}, {"tex", "text", "data"})
+
+    def test_invalid_layout_photo_and_mixed_revision_rejected_without_writing(self):
+        bad = [{"layout": "custom.tex"}, {"photo": "portrait.jpg"}, {"photo": "placeholder"},
+               {"lineage": {"resume_id": "R1", "parent_resume_id": "R1", "opportunity_id": "", "claim_refs": []}},
+               {"lineage": {"resume_id": "R1", "parent_resume_id": "", "opportunity_id": "", "claim_refs": [
+                   {"project_id": "P", "claim_id": "C", "revision_id": "V1"},
+                   {"project_id": "P", "claim_id": "C", "revision_id": "V2"}]}}]
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "out"
+            for change in bad:
+                with self.subTest(change=change), self.assertRaises(ContractError): export_resume({**sample(), **change}, target)
+                self.assertFalse(target.exists())

@@ -1,0 +1,70 @@
+{
+  "schema_version": "1",
+  "case_id": "synthetic-cancelled-role",
+  "goal": "继续寻找 AI 产品实习",
+  "next_review_at": "2026-10-22T12:00:00+08:00",
+  "events": [
+    {
+      "id": "create-O1",
+      "type": "opportunity",
+      "at": "2026-10-21T12:00:00+08:00",
+      "source": "synthetic:recruiter recap",
+      "origin": "synthetic",
+      "payload": {
+        "opportunity_id": "O1",
+        "company": "合成示例公司",
+        "role": "AI 产品实习"
+      }
+    },
+    {
+      "id": "cancel-O1",
+      "type": "recruiting",
+      "at": "2026-10-21T12:00:00+08:00",
+      "source": "synthetic:recruiter recap",
+      "origin": "synthetic",
+      "payload": {
+        "opportunity_id": "O1",
+        "status": "freeze",
+        "summary": "招聘方明确表示岗位取消；尚未提交申请。"
+      }
+    },
+    {
+      "id": "feedback-O1",
+      "type": "feedback",
+      "at": "2026-10-21T12:00:00+08:00",
+      "source": "synthetic:recruiter recap",
+      "origin": "synthetic",
+      "payload": {
+        "opportunity_id": "O1",
+        "category": "role_cancelled",
+        "summary": "岗位取消，未提供个人能力评价。",
+        "claim_refs": []
+      }
+    },
+    {
+      "id": "next-A1",
+      "type": "action",
+      "at": "2026-10-21T12:00:00+08:00",
+      "source": "synthetic:recruiter recap",
+      "origin": "synthetic",
+      "payload": {
+        "kind": "pipeline_review",
+        "description": "核对另一项已有机会的岗位是否仍开放，不重写经历。",
+        "opportunity_id": ""
+      }
+    },
+    {
+      "id": "review-O1",
+      "type": "review",
+      "at": "2026-10-21T12:00:00+08:00",
+      "source": "synthetic:recruiter recap",
+      "origin": "synthetic",
+      "payload": {
+        "feedback_id": "feedback-O1",
+        "conclusion": "stop",
+        "reason": "停止为取消的岗位投入，不据此降低候选人能力判断。",
+        "next_action_id": "next-A1"
+      }
+    }
+  ]
+}

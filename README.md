@@ -14,7 +14,7 @@
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-6D6B64?style=flat-square)
 [![记忆可选](https://img.shields.io/badge/Memory-opt--in-2F6C59?style=flat-square)](documentation/MEMORY.md)
 
-[看效果](#demo) · [开始使用](#start) · [核心体验](#experiences) · [简历导出](#resume-export) · [验证记录](#evaluation) · [English](README_EN.md)
+[看效果](#demo) · [开始使用](#start) · [核心体验](#experiences) · [求职接续](#journey) · [简历导出](#resume-export) · [验证记录](#evaluation) · [English](README_EN.md)
 
 </div>
 
@@ -114,26 +114,48 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 [守城案例](cases/experiences/defense/example.md) · [岗位表达](cases/experiences/role-translation/example.md) ·
 [补证冲刺](cases/experiences/proof-sprint/example.md) · [决策复盘](cases/experiences/decision-review/example.md)
 
+<a id="journey"></a>
+
+## 下次回来，接着推进同一件事
+
+**事实底稿 → 简历版本 → 实际投递 → 面试或招聘反馈 → 一个调整动作 → 下一版。**
+
+每次结束留一张简短接续卡，带上当前机会、实际使用的版本、已做与未做的动作、反馈来源和下一步。
+纠正经历后，标出受影响的旧简历；已投的 R1 保留历史，之后补交 R2 单独记录，不算第二次初始投递。
+岗位取消用于调整该机会的投入；明确的能力反馈用于选择练习或补证，不从一次拒绝推断整条职业方向。
+
+```text
+使用 $career-junshi，继续我的求职。
+这份是上次的接续卡／记录，这次发生了：……
+对照当时的建议，说明哪些已做、哪些仍未知，给我一个下一步。
+如果需要改简历，保留原投递版本并生成新版；最后更新接续卡。
+先在聊天里处理，不开启长期记忆。
+```
+
+默认只在聊天中交付。明确要求私有接续文件后，才生成记录、检查结果和 `continue.md`；
+下次主动带回即可。不会自动读取个人目录、开启记忆、投递或发消息。
+[完整接续契约](references/practical/job-search-journey.md) · [合成起点](cases/experiences/journey/request.md) · [实际验收](documentation/JOURNEY_EVAL.md)
+
 <a id="resume-export"></a>
 
 ## 从改写，到能继续编辑的简历
 
 先看清**原句 → 改写 → 理由 → 待核实事实**，以及经历为什么被前置、压缩或省略。
-再导出单栏简历：日期独立右对齐，联系方式集中展示，已提供的邮箱和网页链接可点击。
+再导出单栏简历：基础版保留独立日期行，精排版将日期与标题对齐，使用深墨绿标题、铜色细节与可选照片空位。两版都保留可编辑源码、来源与实际验收。
 
 ```text
-按这份 JD 整理中文单栏简历，优先一页。
+按这份 JD 整理中文单栏简历，优先一页；使用精排版，预留照片位。
 保留真实贡献，说明重要改写与删留；普通润色直接完成。
 导出 LaTeX 源码和纯文本到我指定的新私有目录。
 本机有 XeLaTeX 时再编译 PDF，分别说明内容、编译、文字层和页面检查结果。
 ```
 
 <p align="center">
-  <a href="benchmark/resume-layout-20261020/artifacts/dense-zh/resume.pdf">
-    <img src="benchmark/resume-layout-20261020/artifacts/dense-zh/rendered/page-1.png" width="360" alt="已实际编译的一页中文合成简历：双实习、多项目、日期右对齐">
+  <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.pdf">
+    <img src="benchmark/journey-20261021/artifacts/editorial-zh/page-1.png" width="360" alt="实际编译的精排合成简历：照片空位、双实习和多项目">
   </a>
   <br>
-  <sub>实际编译的合成样例 · 点击查看 PDF</sub>
+  <sub>实际编译的精排合成样例 · 已留照片位 · 点击查看 PDF</sub>
 </p>
 
 | 接下来想做什么 | 打开哪个文件 |
@@ -151,7 +173,7 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 <details>
 <summary>编译与自检 · 文件存放 · 检查边界</summary>
 
-源码导出不需要 LaTeX；PDF 编译需要本机 XeLaTeX、CTEX/Fandol、geometry、hyperref 及其依赖。
+源码导出不需要 LaTeX；PDF 编译需要本机 XeLaTeX、CTEX/Fandol、geometry、hyperref 及其依赖；精排版另需 fontspec、xcolor 和 graphicx。
 环境不确定时，在仓库或已安装 Skill 的根目录运行：
 
 ```sh
@@ -199,8 +221,9 @@ python scripts/junshi.py resume-doctor
 
 | 检查范围 | 已完成 | 查看记录 |
 | --- | --- | --- |
-| 自动化回归 | **251 项测试**，覆盖安装、路由与证据处理等 | [本轮验收](documentation/RESUME_ITERATION_EVAL.md) |
+| 自动化回归 | **262 项测试**，含两条连续求职流程、版本纠正与安装后接续 | [闭环验收](documentation/JOURNEY_EVAL.md) |
 | 实际 PDF 编译 | **4 个场景、8 页**；三个正例通过，超页负例被拒绝 | [排版压力测试](benchmark/resume-layout-20261020/README.md) |
+| 本轮闭环与精排 | **3 份合成 PDF、3 页**；新上下文子代理完成两轮接续试用 | [闭环验收](documentation/JOURNEY_EVAL.md) |
 | 模拟用户交互 | **5 个合成用户、15 轮实际交互** | [多轮试用](documentation/MOCK_USER_TRIALS.md) |
 
 另有 13 个结构化合成基准与有限的新上下文试用。这些结果不能证明提高面试通过率或 Offer 率。

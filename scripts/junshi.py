@@ -41,6 +41,13 @@ def main(argv=None) -> int:
     resume.add_argument("--input", required=True, help="Explicit private resume JSON")
     resume.add_argument("--output-dir", required=True, help="New private directory outside Git and the Skill installation")
     resume.add_argument("--compile", action="store_true", dest="compile_pdf", help="Request local XeLaTeX compilation and report actual checks")
+    journey = sub.add_parser("journey", help="Review an explicitly supplied job-search journal; no memory or external actions")
+    journey.add_argument("--input", required=True)
+    journey.add_argument("--event", help="Append one supplied event to the in-memory packet; input remains unchanged")
+    journey.add_argument("--output-dir", help="Explicit new private directory for checkpoint files")
+    journey.add_argument("--verify-files", action="store_true", help="Read only listed resume artifacts and compare their hashes")
+    journey.add_argument("--now", help="Explicit timezone-aware clock")
+    journey.add_argument("--format", choices=["json", "markdown"], default="markdown")
     sub.add_parser("resume-doctor", help="Explicit synthetic English/Chinese XeLaTeX and PDF tool self-check; installs nothing")
     sources = sub.add_parser("sources", help="Browse source summaries or one detailed source card; no network or persistence")
     selection = sources.add_mutually_exclusive_group()
@@ -63,7 +70,20 @@ def main(argv=None) -> int:
             p.add_argument("--memory-directory", help="Private memory directory")
     args = parser.parse_args(argv)
     try:
-        if args.command == "sources":
+        if args.command == "journey":
+            from scripts.journey import review_journey, render_handoff, write_checkpoint
+            packet = load_input(args.input)
+            if args.event:
+                packet = obj(packet, "journey")
+                packet["events"] = [*items(packet.get("events"), "events", 100), load_input(args.event)]
+            result = review_journey(packet, verify_files=args.verify_files, now=args.now)
+            if args.output_dir:
+                result["checkpoint_directory"] = write_checkpoint(packet, result, args.output_dir)
+            if args.format == "markdown":
+                print(render_handoff(result), end="")
+                if args.output_dir: print("已生成私有接续文件：" + result["checkpoint_directory"])
+                return 0
+        elif args.command == "sources":
             from scripts.source_catalog import query_sources
             result = query_sources(topic=args.topic, source_id=args.source_id, limit=args.limit)
         elif args.command == "resume-doctor":

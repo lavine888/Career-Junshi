@@ -1,0 +1,106 @@
+{
+  "date": "2026-10-21",
+  "baseline_commit": "b8fd603e93a20a180fe8cca8d0a4bd015eccf204",
+  "synthetic": true,
+  "actual_pdf_compilations": 3,
+  "actual_pdf_pages": 3,
+  "samples": [
+    {
+      "case": "editorial-zh",
+      "synthetic": true,
+      "pages": 1,
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "PASSED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "artifacts": {
+        "resume.tex": "18c89b097b7c9e26d09bffecdf3df61956bd9e105c99a5c8a2ac712f54a881f2",
+        "resume.pdf": "412cc089a171c8213f89357df2b879568fc7c479a8795b9f94d6e75c7d871326",
+        "resume-data.json": "7fbc5ec49d59991c577318a3f06c149929ae355c200479772bb8553e9e0cbec6",
+        "page-1.png": "068ae23549ade02509728c4cf4eec989e250902e4e3d8c9bb1100b547233c785"
+      }
+    },
+    {
+      "case": "editorial-en",
+      "synthetic": true,
+      "pages": 1,
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "PASSED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "artifacts": {
+        "resume.tex": "02548fc14e540fcf941a8e201e9e60111ad5a350ad9951c7b2c3c7a7f2fa3344",
+        "resume.pdf": "aaa1803b4d258805c3229b3c23d6d4eee3d2bdc3c77aa4a596f5fad22699c566",
+        "resume-data.json": "7dd3f89c96c0987ecafc5efde22fb34844bfd18deaea1350cca3efe95cd827b4",
+        "page-1.png": "1442cff9aa1e0076df311e477a9b471d351a5bcc4c355f5d2e7749b4043250be"
+      }
+    },
+    {
+      "case": "standard-zh",
+      "synthetic": true,
+      "pages": 1,
+      "checks": {
+        "compilation": "COMPILED",
+        "page_check": "PASSED",
+        "text_check": "PASSED",
+        "log_check": "PASSED",
+        "text_order_check": "PASSED",
+        "text_occurrence_check": "PASSED",
+        "visual_review": "PASSED",
+        "pdf_file": "resume.pdf",
+        "pages": 1,
+        "missing_text_indexes": [],
+        "out_of_order_text_indexes": [],
+        "unexpected_text_occurrence_indexes": [],
+        "insufficient_text_occurrence_indexes": []
+      },
+      "artifacts": {
+        "resume.tex": "56073c5dc8f04445c60a5eb5f4b1afb3b797a0672216abe5118645a0f6d7b2e6",
+        "resume.pdf": "bdb5a52339ebc8866849a9e5ddb689700229b485b9335fc1973ff32f059b36c6",
+        "resume-data.json": "564ed0d9e9114703337d860d0507d6441abdd8aff943483f5ea18553956f52fe",
+        "page-1.png": "b0decd1ad8af303dfc7da7c2de66de9454b356a0498df68bdcf475b79b40ac3b"
+      }
+    }
+  ],
+  "actual_pdf_journey": {
+    "without_visual_review": "REVIEW_PENDING",
+    "without_file_verification": "REVIEW_PENDING",
+    "with_actual_files_and_host_reviews": "READY",
+    "after_sourced_claim_revision": "STALE",
+    "source_confidence": "SELF_REPORTED"
+  },
+  "source_hashes": {
+    "scripts/resume_export.py": "26c19015625c3e1d13e94638e2dc01d64db86cb976cef7c7de3892ee60566b81",
+    "scripts/journey.py": "26cc6e4d7496bf35583e4c793a4a3501ee24f3156321b57381347eb8544eb326",
+    "assets/resume/editorial.tex": "b26a970f7217138108776b93514b99337e86b44fc22e513474fcfc0f9a0a1767",
+    "assets/resume/single-column.tex": "59b44dbb6d9598727ae3b03be4a77c4c30923874a0c180a3f22ddb4c0dd89b55"
+  },
+  "limits": [
+    "Synthetic artifacts only; no real candidate records or hiring outcomes.",
+    "Host visual and content checks are operator reviews, not independent authentication.",
+    "Real portrait insertion was not tested.",
+    "Existing frozen host benchmarks were not all rerun."
+  ]
+}

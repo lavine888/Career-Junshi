@@ -1,0 +1,63 @@
+{
+  "schema_version": "1",
+  "language": "en",
+  "name": "Synthetic Candidate",
+  "target_role": "AI Product / Integration",
+  "contacts": [
+    "candidate@example.invalid",
+    "https://example.invalid/portfolio"
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "description": "Synthetic operator-provided demo, not a real candidate"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Projects",
+      "entries": [
+        {
+          "title": "Team Document Assistant",
+          "subtitle": "Product scope and acceptance checks",
+          "dates": "2026.07 - 2026.09",
+          "source_ids": [
+            "S1"
+          ],
+          "bullets": [
+            {
+              "text": "Scoped a team prototype and documented acceptance criteria; the service was implemented by teammates.",
+              "source_ids": [
+                "S1"
+              ],
+              "confidence": "SELF_REPORTED"
+            },
+            {
+              "text": "Recorded citation failures on 10 synthetic questions; no production users or causal accuracy improvement is claimed.",
+              "source_ids": [
+                "S1"
+              ],
+              "confidence": "SELF_REPORTED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Education",
+      "entries": [
+        {
+          "title": "Example University",
+          "subtitle": "Information Systems",
+          "dates": "2023 - 2027 (expected)",
+          "source_ids": [
+            "S1"
+          ],
+          "bullets": []
+        }
+      ]
+    }
+  ],
+  "page_limit": 1,
+  "layout": "editorial"
+}

@@ -19,3 +19,5 @@ If working days are unknown, prepare the message with a conditional send time;
 do not invent holidays or claim it was sent. Keep message, observation window and
 stop condition together. no_contact means an explicit request not to contact,
 not the absence of an HR reply. Avoid implying repeated chasing when none occurred.
+
+When this work continues a tracked opportunity, use the [journey handoff](job-search-journey.md) in place of an unnecessary reference. Link the actual resume version, feedback and next action; preserve prior submissions and do not enable memory.

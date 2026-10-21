@@ -1,5 +1,5 @@
 """Compact Decision/Outcome handoff; learning never establishes causal success."""
-from scripts.models import choices, obj, text
+from scripts.models import ContractError, choices, obj, text
 
 
 def decision_record(decision: dict, *, source: str, expected_outcome: str) -> dict:
@@ -37,5 +37,16 @@ def feedback_next_move(outcome: dict) -> dict:
         "withdrawn": "记录退出理由与约束，投入下一项可逆行动。",
         "unknown": "先确认可观察结果和来源，不改写招聘状态。",
     }
-    return {"recommended_move": messages[status], "learning_scope": "this opportunity only",
+    message = messages[status]
+    context = o.get("feedback_context")
+    if context is not None:
+        from scripts.journey import FEEDBACK_HINTS
+        context = obj(context, "feedback_context")
+        if set(context) != {"category", "text", "source"}:
+            raise ContractError("feedback_context requires category, text and source")
+        category = choices(context["category"], set(FEEDBACK_HINTS), "feedback category")
+        text(context["text"], "reported feedback", 600)
+        text(context["source"], "feedback source", 240)
+        message += " " + FEEDBACK_HINTS[category]
+    return {"recommended_move": message, "learning_scope": "this opportunity only",
             "causal_status": "UNKNOWN", "profile_auto_updates": [], "review": "REFINE only a supported specific gap; do not PIVOT from one observation."}
