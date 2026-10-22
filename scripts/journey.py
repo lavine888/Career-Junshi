@@ -79,9 +79,13 @@ def review_journey(packet, *, verify_files=False, now=None):
         raise ContractError("journey exceeds 256 KiB; explicitly archive old work")
     case_id = text(p["case_id"], "case_id", 100)
     goal = text(p["goal"], "goal", 400)
+    if not isinstance(p["next_review_at"], str):
+        raise ContractError("next_review_at must be a timezone-aware ISO timestamp or empty text")
     review_at = _when(p["next_review_at"]) if p["next_review_at"] else None
     clock = _when(now) if now else datetime.now(timezone.utc)
     claims, revisions, resumes, opportunities, actions, feedback, reviews, ids = {}, {}, {}, {}, {}, {}, [], set()
+
+    status_times, execution_times = {}, {}
 
     def refs(raw):
         clean = revision_refs(raw)
@@ -157,8 +161,11 @@ def review_journey(packet, *, verify_files=False, now=None):
                 raise ContractError("resume targets a different opportunity")
             if _when(d["submitted_at"]) > at:
                 raise ContractError("a reported submission cannot be in the future")
-            opp.update(status="submitted", resume_id=resume["resume_id"], submitted_at=d["submitted_at"],
-                       source=source, origin=origin, latest_resume_id=resume["resume_id"])
+            opp.update(resume_id=resume["resume_id"], submitted_at=d["submitted_at"],
+                       latest_resume_id=resume["resume_id"])
+            if at >= status_times.get(opp["id"], at):
+                opp.update(status="submitted", source=source, origin=origin)
+                status_times[opp["id"]] = at
         elif kind == "material_update":
             exact(d, "opportunity_id resume_id sent_at summary", "material update")
             opp = _existing(opportunities, d["opportunity_id"], "opportunity")
@@ -167,19 +174,27 @@ def review_journey(packet, *, verify_files=False, now=None):
                 raise ContractError("material update needs an existing reported submission")
             if resume["opportunity_id"] and resume["opportunity_id"] != opp["id"]:
                 raise ContractError("updated resume targets another opportunity")
-            if not _when(opp["submitted_at"]) <= _when(d["sent_at"]) <= at:
+            sent_at = _when(d["sent_at"])
+            if not _when(opp["submitted_at"]) <= sent_at <= at:
                 raise ContractError("material update time must follow submission and precede its report")
+            if any(_when(update["sent_at"]) == sent_at and update["resume_id"] != resume["resume_id"]
+                   for update in opp["material_updates"]):
+                raise ContractError("conflicting resume versions at one material update time; verify actual send order")
             opp["material_updates"].append({"event_id": eid, "resume_id": resume["resume_id"],
                 "sent_at": d["sent_at"], "summary": text(d["summary"], "update summary", 400),
                 "source": source, "origin": origin})
-            opp["latest_resume_id"] = resume["resume_id"]
+            latest = max(opp["material_updates"], key=lambda update: _when(update["sent_at"]))
+            opp["latest_resume_id"] = latest["resume_id"]
         elif kind == "recruiting":
             exact(d, "opportunity_id status summary", "recruiting event")
             opp = _existing(opportunities, d["opportunity_id"], "opportunity")
             status = choices(d["status"], {"waiting", "interview", "offer", "rejected", "withdrawn", "freeze"}, "recruiting status")
             if not opp["submitted_at"] and status not in {"withdrawn", "freeze"}:
                 raise ContractError("recruiting progress requires a reported submission")
-            opp.update(status=status, status_summary=text(d["summary"], "status summary", 400), source=source, origin=origin)
+            summary = text(d["summary"], "status summary", 400)
+            if at >= status_times.get(opp["id"], at):
+                opp.update(status=status, status_summary=summary, source=source, origin=origin)
+                status_times[opp["id"]] = at
         elif kind == "action":
             exact(d, "kind description opportunity_id", "action event")
             action_kind = choices(d["kind"], HUMAN | CODEX, "action kind")
@@ -195,7 +210,9 @@ def review_journey(packet, *, verify_files=False, now=None):
             summary = text(d["summary"], "execution summary", 400)
             action["receipts"].append({"event_id": eid, "status": status, "summary": summary,
                                        "source": source, "at": e["at"], "origin": origin})
-            action["status"] = status
+            if at >= execution_times.get(action["id"], at):
+                action["status"] = status
+                execution_times[action["id"]] = at
         elif kind == "feedback":
             exact(d, "opportunity_id category summary claim_refs", "feedback event")
             _existing(opportunities, d["opportunity_id"], "opportunity")

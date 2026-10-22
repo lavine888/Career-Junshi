@@ -13,11 +13,17 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.models import ContractError
+from scripts.io_utils import is_linked_path
 from scripts.validate_skill import ROOT, RUNTIME_FILES, SCRIPTS, validate
 
 
 def install(target: Path, *, source: Path = ROOT) -> Path:
-    target = target.expanduser().resolve()
+    target = target.expanduser().absolute()
+    source = source.expanduser().absolute()
+    for path in (target, *target.parents, source, *source.parents):
+        if is_linked_path(path):
+            raise ContractError("Installation paths must not use symlinks or junctions")
+    target = target.resolve()
     source = source.resolve()
     if target.name != "career-junshi":
         raise ContractError("Target folder must be named career-junshi")
@@ -38,8 +44,8 @@ def install(target: Path, *, source: Path = ROOT) -> Path:
         paths += ["references/role-packs.json"]
         for name in paths:
             src = source / name
-            if src.is_symlink():
-                raise ContractError("Cannot install symlinked files")
+            if any(is_linked_path(path) for path in (src, *src.parents)):
+                raise ContractError("Cannot install symlinked or junction-linked files")
             dst = staging / name
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dst)

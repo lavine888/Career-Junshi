@@ -32,3 +32,6 @@ benchmark/resume-content-20261020/response-*.md whitespace=cr-at-eol,-blank-at-e
 
 # Resume positioning exports retain the bytes referenced by their receipts.
 benchmark/resume-positioning-20261022/** -text -eol whitespace=cr-at-eol
+
+# Preserve captured fresh-context trial evidence.
+benchmark/reliability-20261023/** -text -eol whitespace=cr-at-eol

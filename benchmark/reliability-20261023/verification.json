@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-23",
+  "synthetic_only": true,
+  "regression": {
+    "command": "python -m unittest discover -s tests -v",
+    "tests": 275,
+    "new_tests": 13,
+    "seconds": 143.634,
+    "result": "OK"
+  },
+  "focused": [
+    {
+      "scope": "actions, package links, journey, integration, resume export before final three action tests",
+      "tests": 54,
+      "seconds": 31.876,
+      "result": "OK"
+    },
+    {
+      "scope": "final actions and journey",
+      "tests": 19,
+      "seconds": 11.671,
+      "result": "OK"
+    }
+  ],
+  "checks": {
+    "project_validation": "PASSED",
+    "skill_creator_utf8": "PASSED",
+    "git_diff_check": "PASSED"
+  },
+  "actual_filesystem_checks": {
+    "platform": "Windows",
+    "directory_links": "actual mklink /J junctions, not mocked",
+    "rejected_writes_leave_external_files_unchanged": true,
+    "package_recursion_rejects_linked_files_and_dirs_before_reads": true
+  },
+  "fresh_context_trial": {
+    "sessions": 1,
+    "turns": 2,
+    "context_inherited": false,
+    "expected_answer_given": false,
+    "reference_budget": 3,
+    "read_paths": "Reported by agent; full hidden tool trace not independently authenticated",
+    "observed_issue": "Missing execution receipts initially broadened to unrun verification; user correction narrowed the scope",
+    "guide_updated": true,
+    "independent_post_update_trial": false,
+    "record": "forward-trial.md"
+  },
+  "limits": [
+    "No real user or hiring outcomes measured",
+    "No new PDF layout or compilation experiment",
+    "Supplied chronology and reports are not authenticated"
+  ]
+}

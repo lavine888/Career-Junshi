@@ -89,7 +89,8 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 Replace `/path/to/your/skills` with a directory your host discovers, including on Windows.
 The target folder must be named `career-junshi`; existing targets are preserved and refused.
 Installation copies runtime files and license notices, excluding cases, tests, `.git`
-and databases. It does not enable memory.
+and databases. It does not enable memory. Installation paths and package resources must use real directories;
+symlinks and Windows junctions are rejected before external files can enter the runtime copy.
 
 </details>
 
@@ -201,6 +202,8 @@ Compile a PDF if local XeLaTeX is available; report content, compilation, text a
 | Adjust LaTeX layout | **`resume.tex`**, opened in a TeX editor |
 | View or submit a PDF | **`resume.pdf`**, if actually generated and checked, with its delivery notes |
 
+Resume, interview preparation, message drafts and continuation files use private locations outside Git and the Skill installation, without symlink or junction paths.
+
 Source and verification JSON files remain available for inspection. Without a compiler,
 source and text are still delivered; actual PDF page count and layout remain unverified.
 
@@ -269,7 +272,8 @@ application sending or messaging.
 
 | Scope | Completed | Evidence |
 | --- | --- | --- |
-| Automated regression | **262 tests**, including two continuous journeys, corrections and installed continuation | [Journey evaluation](documentation/JOURNEY_EVAL.md) |
+| Automated regression | **275 tests**, including backfilled history, package links and private output boundaries | [Current evaluation](documentation/RELIABILITY_EVAL.md) |
+| Fresh-context trial | One agent without chat history, two synthetic turns; one verification wording issue found and narrowed | [Actual record](benchmark/reliability-20261023/forward-trial.md) |
 | Gaps, development recap and targeted retry | Three synthetic walkthroughs; new entries checked through installation and routing | [Current record](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
 | Resume positioning and result nature | **5 synthetic comparisons, 2 compiled PDFs**; host review, not independent evaluation | [Current record](documentation/RESUME_POSITIONING_EVAL.md) |
 | Actual PDF compilation | **4 cases, 8 pages**; three positive cases passed, over-budget output rejected | [Layout stress checks](benchmark/resume-layout-20261020/README.md) |

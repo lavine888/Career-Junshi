@@ -3,11 +3,9 @@ from __future__ import annotations
 
 import json
 import re
-import os
-import stat
-from pathlib import Path
 
 from scripts.context import extract, freshness as check_freshness
+from scripts.io_utils import private_output_path
 from scripts.models import ContractError, choices, items, obj, text, timestamp
 
 TYPES = {'Profile', 'Project', 'Claim', 'Company', 'Person', 'Opportunity', 'Application',
@@ -89,16 +87,7 @@ def adapt_snapshot(value, *, mode='job', now=None):
 
 
 def write_private_packet(packet, destination):
-    path = Path(destination).expanduser()
-    for parent in (path, *path.parents):
-        linked = parent.is_symlink()
-        if os.name == 'nt' and parent.exists():
-            linked = linked or bool(os.lstat(parent).st_file_attributes & stat.FILE_ATTRIBUTE_REPARSE_POINT)
-        if linked:
-            raise ContractError('linked output path rejected')
-    path = path.resolve()
-    if any((parent / '.git').exists() for parent in (path.parent, *path.parents)):
-        raise ContractError('private packet output must be outside Git repositories')
+    path = private_output_path(destination)
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open('x', encoding='utf-8') as stream:
         json.dump(packet, stream, ensure_ascii=False, indent=2)

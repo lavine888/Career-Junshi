@@ -29,7 +29,10 @@ tool receipt. A proposed command is not a run; a successful build is not deploye
 use; a deployment receipt does not establish customers or measured impact.
 Supplied tool output can support only that recorded run, with its provenance;
 it does not prove that the entire project works or independently authenticate
-a user, deployment environment or personal authorship.
+a user, deployment environment or personal authorship. Missing receipts mean the
+execution is unverified, not that nobody ever tested the project. If one pasted
+output is corrected to an AI example, retract only claims resting on that output;
+preserve other supported work and leave unrelated testing history unknown.
 
 User approval of generated code is not personal engineering authorship. Preserve
 real problem selection, tradeoffs, integration and verification work when shown;

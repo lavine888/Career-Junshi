@@ -101,12 +101,25 @@ come from the actual export. No new check is manufactured by the journal.
 A source-only export remains SOURCE_ONLY. Changing a referenced claim revision
 marks the old resume STALE; modifying an artifact is FILES_CHANGED. Record a later
 reported corrected attachment as material_update, preserving the original submission
-and its version. Sending does not prove the employer adopted or reviewed it.
+and its version. Attachment reports stay in append order; the latest attachment is
+selected by actual sent_at, comparing instants across timezones. Backfilling an
+earlier send does not replace a later attachment or change recruiting status. Reports
+of the same version at the same instant may coexist. Different versions attributed
+to the same instant are rejected as ambiguous; verify the actual send order without
+inventing timestamp precision. Sending does not prove the employer adopted or
+reviewed it.
 
 Recruiting statuses are waiting / interview / offer / rejected / withdrawn / freeze.
 Except withdrawing/freezing an unsubmitted opportunity, progress requires an
 actual reported submission. Silence remains waiting. Explicitly reported new facts
 may update status; conflicting records need host review rather than invented truth.
+For backfilled recruiting observations and execution receipts, the current status
+uses the latest recorded observation `at`, comparing timezone-aware instants.
+Older observations remain in the supplied history but cannot replace a newer
+status or re-open a completed action. At equal observation times, append order
+resolves the recorded state; the host must clarify real-world contradictions.
+This is separate from a material update's actual `sent_at`.
+
 The latest review prioritizes its linked unfinished action, without discarding
 other pending work. Original events and claim revisions stay intact on export.
 

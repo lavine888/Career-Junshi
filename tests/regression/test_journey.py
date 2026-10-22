@@ -93,6 +93,81 @@ class JourneyTests(unittest.TestCase):
             self.assertFalse(result["external_actions_executed"])
             self.assertEqual(hashlib.sha256((base / "R1/resume.tex").read_bytes()).hexdigest(), first["artifacts"][0]["sha256"])
 
+    def test_backfilled_material_update_preserves_latest_send_submission_and_recruiting_state(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp); packet = journal(); claim(packet); opportunity(packet)
+            exported(packet, base)
+            exported(packet, base, "R2", "R1")
+            exported(packet, base, "R3", "R2")
+            event(packet, "submission", "sent", {"opportunity_id": "O1", "resume_id": "R1", "submitted_at": "2026-10-21T09:00:00+08:00"})
+            event(packet, "recruiting", "interview", {"opportunity_id": "O1", "status": "interview", "summary": "Synthetic invitation"})
+            event(packet, "material_update", "newer", {"opportunity_id": "O1", "resume_id": "R3", "sent_at": "2026-10-21T11:00:00+08:00", "summary": "Later actual attachment"})
+            event(packet, "material_update", "backfill", {"opportunity_id": "O1", "resume_id": "R2", "sent_at": "2026-10-21T10:00:00+08:00", "summary": "Earlier attachment recorded later"})
+            before = copy.deepcopy(packet)
+            result = review_journey(packet, now=NOW)
+            opp = result["state"]["opportunities"][0]
+            self.assertEqual(packet, before)
+            self.assertEqual((opp["resume_id"], opp["submitted_at"], opp["status"]), ("R1", "2026-10-21T09:00:00+08:00", "interview"))
+            self.assertEqual(opp["latest_resume_id"], "R3")
+            self.assertEqual([u["event_id"] for u in opp["material_updates"]], ["newer", "backfill"])
+            self.assertEqual([u["summary"] for u in opp["material_updates"]], ["Later actual attachment", "Earlier attachment recorded later"])
+            self.assertEqual(len(result["state"]["opportunities"]), 1)
+            self.assertEqual(result["handoff"]["opportunities"][0]["latest_resume_id"], "R3")
+            self.assertIn("R3", render_handoff(result))
+
+    def test_material_update_order_compares_instants_across_timezones(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp); packet = journal(); claim(packet); opportunity(packet)
+            exported(packet, base)
+            exported(packet, base, "R2", "R1")
+            exported(packet, base, "R3", "R2")
+            event(packet, "submission", "sent", {"opportunity_id": "O1", "resume_id": "R1", "submitted_at": "2026-10-21T09:00:00+08:00"})
+            for eid, rid, sent_at in (("first-update", "R2", "2026-10-21T10:15:00+08:00"),
+                                      ("latest-update", "R3", "2026-10-21T02:30:00Z"),
+                                      ("older-backfill", "R2", "2026-10-21T03:00:00+01:00")):
+                event(packet, "material_update", eid, {"opportunity_id": "O1", "resume_id": rid, "sent_at": sent_at, "summary": "Synthetic time-zone observation"})
+            opp = review_journey(packet, now=NOW)["state"]["opportunities"][0]
+            self.assertEqual(opp["latest_resume_id"], "R3")
+            self.assertEqual([u["resume_id"] for u in opp["material_updates"]], ["R2", "R3", "R2"])
+
+    def test_same_instant_material_updates_allow_same_version_but_reject_conflicting_versions(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp); packet = journal(); claim(packet); opportunity(packet)
+            exported(packet, base)
+            exported(packet, base, "R2", "R1")
+            exported(packet, base, "R3", "R2")
+            event(packet, "submission", "sent", {"opportunity_id": "O1", "resume_id": "R1", "submitted_at": "2026-10-21T09:00:00+08:00"})
+            for eid, rid, sent_at in (("first-update", "R2", "2026-10-21T10:00:00+08:00"),
+                                      ("same-version-recap", "R2", "2026-10-21T02:00:00Z"),
+                                      ("latest-update", "R3", "2026-10-21T11:00:00+08:00")):
+                event(packet, "material_update", eid, {"opportunity_id": "O1", "resume_id": rid, "sent_at": sent_at, "summary": "Synthetic attachment observation"})
+            result = review_journey(packet, now=NOW)
+            opp = result["state"]["opportunities"][0]
+            self.assertEqual(opp["latest_resume_id"], "R3")
+            self.assertEqual(len(opp["material_updates"]), 3)
+            event(packet, "material_update", "conflicting-backfill", {"opportunity_id": "O1", "resume_id": "R1", "sent_at": "2026-10-21T03:00:00+01:00", "summary": "Different version claimed at the same earlier instant"})
+            before = copy.deepcopy(packet)
+            with self.assertRaisesRegex(ContractError, "conflicting resume versions.*material update time"):
+                review_journey(packet, now=NOW)
+            self.assertEqual(packet, before)
+
+    def test_next_review_at_requires_timestamp_text_or_empty_string(self):
+        for value in (None, False, True, 0, 0.0, [], {}):
+            with self.subTest(value=value):
+                packet = journal(); packet["next_review_at"] = value
+                with self.assertRaisesRegex(ContractError, "next_review_at"):
+                    review_journey(packet, now=NOW)
+        packet = journal(); packet["next_review_at"] = ""
+        result = review_journey(packet, now=NOW)
+        self.assertFalse(result["handoff"]["review_due"])
+        self.assertEqual(result["handoff"]["next_review_at"], "")
+        packet["next_review_at"] = "2026-10-21T08:00:00Z"
+        self.assertTrue(review_journey(packet, now=NOW)["handoff"]["review_due"])
+        for value in ("2026-10-21T08:00:00", " "):
+            with self.subTest(value=value), self.assertRaises(ContractError):
+                packet["next_review_at"] = value
+                review_journey(packet, now=NOW)
+
     def test_cancelled_role_stops_local_investment_without_changing_claim_or_other_opportunity(self):
         packet = journal(); claim(packet); opportunity(packet); opportunity(packet, "O2")
         event(packet, "recruiting", "cancel", {"opportunity_id": "O1", "status": "freeze", "summary": "Recruiter reports requisition cancelled"})
@@ -167,3 +242,38 @@ class JourneyTests(unittest.TestCase):
             restored = json.loads((out / "journey.json").read_text(encoding="utf-8"))
             self.assertEqual(restored, packet)
             self.assertFalse(json.loads(result.stdout)["memory_enabled"])
+
+    def test_backfilled_recruiting_observation_cannot_replace_a_newer_status(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            packet = journal(); claim(packet); opportunity(packet)
+            exported(packet, Path(tmp))
+            event(packet, "submission", "sent", {"opportunity_id": "O1", "resume_id": "R1",
+                  "submitted_at": "2026-10-21T11:00:00+08:00"})
+            event(packet, "recruiting", "new-offer", {"opportunity_id": "O1", "status": "offer",
+                  "summary": "Later reported offer"})
+            packet["events"][-1].update(at="2026-10-21T14:00:00+08:00", source="synthetic:newer status")
+            event(packet, "recruiting", "old-wait", {"opportunity_id": "O1", "status": "waiting",
+                  "summary": "Earlier waiting observation, added later"})
+            packet["events"][-1].update(at="2026-10-21T05:00:00+00:00", source="synthetic:older status")
+            before = copy.deepcopy(packet)
+            result = review_journey(packet, now=NOW)
+            opp = result["state"]["opportunities"][0]
+            self.assertEqual(opp["status"], "offer")
+            self.assertEqual(opp["source"], "synthetic:newer status")
+            self.assertEqual(opp["status_summary"], "Later reported offer")
+            self.assertEqual(opp["resume_id"], "R1")
+            self.assertEqual(packet, before)
+
+    def test_backfilled_action_receipt_keeps_current_completion_and_all_receipts(self):
+        packet = journal(); opportunity(packet); action(packet)
+        event(packet, "execution", "new-done", {"action_id": "A1", "status": "DONE",
+              "summary": "Actually completed at the later observation"})
+        packet["events"][-1]["at"] = "2026-10-21T14:00:00+08:00"
+        event(packet, "execution", "old-blocked", {"action_id": "A1", "status": "BLOCKED",
+              "summary": "Older block recorded afterwards"})
+        packet["events"][-1]["at"] = "2026-10-21T05:00:00+00:00"
+        result = review_journey(packet, now=NOW)
+        current = result["state"]["actions"][0]
+        self.assertEqual(current["status"], "DONE")
+        self.assertEqual([r["event_id"] for r in current["receipts"]], ["new-done", "old-blocked"])
+        self.assertEqual(result["handoff"]["next_actions"], [])

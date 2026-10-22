@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import ast
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -14,6 +15,7 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.router import EXPERIENCES, ROUTES, route
+from scripts.io_utils import is_linked_path
 from scripts.source_catalog import CATALOG_FILES, load_catalog
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -25,9 +27,32 @@ SCRIPTS = ["__init__.py", "models.py", "io_utils.py", "router.py", "decision.py"
            "method_adapter.py", "actions.py", "junshi.py", "validate_skill.py", "install_skill.py", "context.py", "intelligence.py", "calibration.py", "hypothesis.py", "role_story.py", "benchmark.py", "decision_quality.py", "resume_export.py", "resume_doctor.py", "source_catalog.py", "journey.py"]
 
 
-def validate(root: Path, *, runtime_only=False) -> list[str]:
-    root = root.resolve()
+def _package_link_errors(root: Path) -> list[str]:
+    """Inspect entries before traversal; Windows junctions are not symlinks."""
+    for path in (root, *root.parents):
+        if is_linked_path(path):
+            return [f"Distributable path uses symlink or junction: {path}"]
     errors = []
+    for directory, dirs, files in os.walk(root, followlinks=False):
+        # Repository metadata is not part of the runtime package.
+        dirs[:] = [name for name in dirs if name != ".git"]
+        for name in [*dirs, *files]:
+            if name == ".git":
+                continue
+            path = Path(directory) / name
+            if is_linked_path(path):
+                errors.append(f"Distributable contains symlink or junction: {path.relative_to(root)}")
+                if name in dirs:
+                    dirs.remove(name)
+    return errors
+
+
+def validate(root: Path, *, runtime_only=False) -> list[str]:
+    root = root.expanduser().absolute()
+    errors = _package_link_errors(root)
+    if errors:
+        return errors
+    root = root.resolve()
     try:
         load_catalog(root)
     except (ValueError, OSError) as exc:

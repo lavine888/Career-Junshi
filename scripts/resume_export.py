@@ -5,10 +5,8 @@ import copy
 import hashlib
 import uuid
 import json
-import os
 import re
 import shutil
-import stat
 import subprocess
 import tempfile
 import unicodedata
@@ -16,6 +14,7 @@ from pathlib import Path
 from urllib.parse import quote, urlsplit
 
 from scripts.models import CONFIDENCE, ContractError, revision_refs
+from scripts.io_utils import private_output_path
 
 ROOT = Path(__file__).resolve().parents[1]
 TEMPLATE = ROOT / "assets/resume/single-column.tex"
@@ -216,18 +215,9 @@ def _render_editorial(data):
 
 
 def _output_path(directory):
-    raw = Path(directory).expanduser().absolute()
-    for parent in (raw, *raw.parents):
-        linked = parent.is_symlink()
-        if os.name == "nt" and parent.exists():
-            linked = linked or bool(os.lstat(parent).st_file_attributes & stat.FILE_ATTRIBUTE_REPARSE_POINT)
-        if linked:
-            raise ContractError("Output path must not use symlinks or junctions")
-    target = raw.resolve()
-    if target.exists() or target == ROOT or ROOT in target.parents:
+    target = private_output_path(directory)
+    if target.exists():
         raise ContractError("Choose a new output directory outside the Skill installation")
-    if any((parent / ".git").exists() or (parent / ".git").is_symlink() for parent in (target, *target.parents)):
-        raise ContractError("Candidate artifacts must live outside Git repositories")
     return target
 
 

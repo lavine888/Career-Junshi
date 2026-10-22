@@ -65,7 +65,7 @@ def main(argv=None) -> int:
             p.add_argument("--now", help="Explicit ISO timestamp for reproducible scenarios")
             p.add_argument("--format", choices=["json", "markdown"], default="markdown")
             p.add_argument("--details", action="store_true", help="Show sourced facts and inference detail in Markdown")
-            p.add_argument("--artifacts-dir", help="Explicit output directory; existing files are preserved")
+            p.add_argument("--artifacts-dir", help="Private output outside Git and the Skill; existing files are preserved")
             p.add_argument("--use-similar", action="store_true", help="Recall only from already active, explicitly consented memory")
             p.add_argument("--memory-directory", help="Private memory directory")
     args = parser.parse_args(argv)

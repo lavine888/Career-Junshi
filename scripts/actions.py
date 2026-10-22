@@ -4,6 +4,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from scripts.models import ContractError, choices, items, obj, text
+from scripts.io_utils import private_output_path
 
 HUMAN = {"apply", "practice", "send_message", "confirm_terms", "career_decision", "negotiate", "accept_offer", "reject_offer"}
 CODEX = {"evidence_audit", "write_material", "risk_map", "question_ladder", "mother_story",
@@ -109,14 +110,15 @@ def artifact_contents(decision: dict) -> dict[str, str]:
 
 def write_artifacts(decision: dict, directory: str | Path) -> list[str]:
     contents = artifact_contents(decision)
-    target = Path(directory).expanduser().resolve()
+    target = private_output_path(directory)
     if any((target / name).exists() for name in contents):
         raise ContractError("Artifact already exists; use a new output directory to preserve existing work")
-    target.mkdir(parents=True, exist_ok=True)
+    target.mkdir(parents=True, mode=0o700, exist_ok=True)
     paths = []
     for name, content in contents.items():
         path = target / name
         with path.open("x", encoding="utf-8", newline="\n") as handle:
             handle.write(content)
+        path.chmod(0o600)
         paths.append(str(path))
     return paths

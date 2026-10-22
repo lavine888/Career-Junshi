@@ -85,6 +85,7 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 将 `/path/to/your/skills` 替换为宿主实际读取的目录，Windows 同样传入实际路径。
 目标文件夹须名为 `career-junshi`；已有目标会保留并报错。
 安装只复制运行文件与许可，不带案例、测试、`.git` 或数据库，也不会开启记忆。
+安装路径和包内资源若含符号链接或 Windows 目录联接会被拒绝，请使用实际目录；安装器不会沿链接复制包外文件。
 
 </details>
 
@@ -190,6 +191,8 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 | 调整 LaTeX 排版 | **`resume.tex`**，用 TeX 编辑器打开 |
 | 查看或投递 PDF | 实际生成且检查后的 **`resume.pdf`**，同时查看交付说明 |
 
+简历、面试准备、沟通草稿和接续文件统一写入 Git 仓库与 Skill 安装目录之外的私有位置，拒绝经符号链接或目录联接写出。
+
 来源数据和验收 JSON 作为次要查验材料保留。没有编译器时仍可交付源码和纯文本，PDF 页数与版面保持未验证。
 
 [两页样例](benchmark/resume-layout-20261020/artifacts/two-page-zh/resume.pdf) ·
@@ -250,7 +253,8 @@ python scripts/junshi.py resume-doctor
 
 | 检查范围 | 已完成 | 查看记录 |
 | --- | --- | --- |
-| 自动化回归 | **262 项测试**，含两条连续求职流程、版本纠正与安装后接续 | [闭环验收](documentation/JOURNEY_EVAL.md) |
+| 自动化回归 | **275 项测试**，含时间回补、安装链接与私有输出边界 | [本轮验收](documentation/RELIABILITY_EVAL.md) |
+| 新上下文试用 | 一位无聊天历史子代理、两轮合成请求；发现并收窄一处验证措辞 | [实际记录](benchmark/reliability-20261023/forward-trial.md) |
 | 缺口、开发复盘与复练 | 三组合成流程示意；新增入口通过安装与路由检查 | [本轮记录](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
 | 简历定位与结果性质 | **5 组合成改写对照、2 份实际编译 PDF**；宿主自查，非独立评估 | [本轮记录](documentation/RESUME_POSITIONING_EVAL.md) |
 | 实际 PDF 编译 | **4 个场景、8 页**；三个正例通过，超页负例被拒绝 | [排版压力测试](benchmark/resume-layout-20261020/README.md) |

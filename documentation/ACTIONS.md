@@ -14,7 +14,11 @@ accept_offer, reject_offer. These cannot be relabeled `codex`. The helper perfor
 none of these actions. Sending a draft is a separate user decision.
 
 `junshi.py decide --input file.json --artifacts-dir /private/output` creates actual
-Markdown files. It preserves existing files and reports generated paths. Interview
+Markdown files. Preparation files must stay outside Git repositories and the
+Skill installation, without symlink or Windows junction paths. Existing private
+directories remain supported, but existing output filenames are never overwritten.
+Rejected paths create no preparation files. These use the same private path guard
+as snapshot, resume and journey exports. The command reports only generated paths. Interview
 artifacts include a Claim risk map and five-layer questions; HR artifacts include
 a sendable draft; Offer artifacts include the preference comparison and unknowns.
 The host fills evidence-dependent answers by inspecting material. The script does

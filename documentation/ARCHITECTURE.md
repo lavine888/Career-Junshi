@@ -111,3 +111,19 @@ is implied. [Contract and host workflow](../references/practical/job-search-jour
 Resume export keeps its existing default and adds an editorial template with an
 optional blank photo area. Both use escaped content, actual file receipts and the
 same compilation/text/page checks. Visual/content review remain host responsibilities.
+
+
+## Delivery boundaries
+
+Snapshot packets, decision preparation, resumes and journey checkpoints share a
+private destination guard in io_utils. It rejects the Skill installation, Git
+checkouts (including worktree .git files), symlinks and Windows reparse points
+before writing. Each caller retains its documented overwrite behavior.
+Installation checks linked package entries before catalog reads or recursion;
+junctions cannot expand the runtime copy beyond its reviewed source tree.
+
+A resume attachment's latest version follows actual sent_at, while recruiting and
+execution status follow recorded observation at. Backfilled older records remain
+in the history without replacing a newer state. Attachment conflicts at one actual
+instant require clarification. This validates supplied chronology, not external
+delivery, employer adoption or the truth of a career claim.
