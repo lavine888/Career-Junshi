@@ -91,6 +91,18 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 
 ### 2. 发来一段真实材料
 
+简历、一段经历或 GitHub 链接都能开始。只有 GitHub 时，可以直接这样说：
+
+```text
+请用 $career-junshi。我想投【方向】，我的 GitHub 是【链接】。
+先选一个适合开场的项目，给一段现在能用的短介绍，带我完成一个小步骤。
+我还没整理简历，也没选好 JD；先不生成文件或开启记忆。
+```
+
+[看一个只有公开项目的起步示意](cases/experiences/public-projects/example.md)。
+
+已有经历原文时，可以这样发：
+
 ```text
 请使用 $career-junshi，帮我改这段经历。
 
@@ -254,6 +266,7 @@ python scripts/junshi.py resume-doctor
 | 检查范围 | 已完成 | 查看记录 |
 | --- | --- | --- |
 | 自动化回归 | **275 项测试**，含时间回补、安装链接与私有输出边界 | [本轮验收](documentation/RELIABILITY_EVAL.md) |
+| GitHub 首次使用 | 两个新上下文代理、每组两轮；固定公开资料模拟，个人贡献仍待确认 | [本轮记录](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
 | 新上下文试用 | 一位无聊天历史子代理、两轮合成请求；发现并收窄一处验证措辞 | [实际记录](benchmark/reliability-20261023/forward-trial.md) |
 | 缺口、开发复盘与复练 | 三组合成流程示意；新增入口通过安装与路由检查 | [本轮记录](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
 | 简历定位与结果性质 | **5 组合成改写对照、2 份实际编译 PDF**；宿主自查，非独立评估 | [本轮记录](documentation/RESUME_POSITIONING_EVAL.md) |

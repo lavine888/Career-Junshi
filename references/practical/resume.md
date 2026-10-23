@@ -7,6 +7,10 @@ check, use [wording-audit](wording-audit.md) instead. For editable LaTeX or PDF,
 use [resume-export](resume-export.md); it may load this drafting guide within the
 same 1–3 reference budget. Neither workflow creates a second evidence ledger.
 
+For a first-time user with public project links and no prepared resume, use
+[public-projects](public-projects.md) instead of this full rewrite workflow.
+Give a small starting result before requesting a full claim account or JD search.
+
 ## Recover the contribution before polishing
 
 Use existing claim IDs and source locators. For each experience worth retaining,

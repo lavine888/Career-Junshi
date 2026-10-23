@@ -60,3 +60,8 @@ against fresh JDs as time permits, then choose one primary experiment. A one-wee
 or five-comparable-opportunity review is an adjustable planning window; repeated
 gaps may support REFINE / PIVOT only with alternatives and confounders checked.
 Do not restart a project when tomorrow's interview calls for existing evidence.
+
+When the user is starting from public project links without a chosen JD, use
+[public-projects](public-projects.md) in place of this matching workflow. Selecting
+a project to discuss can proceed as a target-based hypothesis without inventing
+requirements or requiring a JD search as the first task.

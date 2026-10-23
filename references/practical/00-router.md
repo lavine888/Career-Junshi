@@ -13,7 +13,8 @@ supports one decision. No slash commands are required from the user.
 | Explicit rejection | recruiting | knowledge/03 + rejection (replace follow-up) |
 | Offer comparison | offer | knowledge/02 + knowledge/06 + offer |
 
-Optional replacements: [hr-chat](hr-chat.md) for draft messages;
+Optional replacements: [public-projects](public-projects.md) for first use from public project links;
+[hr-chat](hr-chat.md) for draft messages;
 [behavioral](behavioral.md) for true stories;
 [negotiation](negotiation.md) for a proposal;
 [career-memory](career-memory.md) for recall and outcomes;

@@ -96,6 +96,18 @@ symlinks and Windows junctions are rejected before external files can enter the 
 
 ### 2. Bring one real experience
 
+Start with a resume, one experience or a GitHub link. If you only have GitHub:
+
+```text
+Use $career-junshi. My target is [role direction], and my GitHub is [link].
+Choose one project to open with, draft a short introduction, and guide one small next step.
+I have no prepared resume or chosen JD yet. Do not create files or enable memory.
+```
+
+[Synthetic project-only starting example, in Chinese](cases/experiences/public-projects/example.md).
+
+If you have an experience to rewrite:
+
 ```text
 Use $career-junshi to rewrite this experience.
 
@@ -273,6 +285,7 @@ application sending or messaging.
 | Scope | Completed | Evidence |
 | --- | --- | --- |
 | Automated regression | **275 tests**, including backfilled history, package links and private output boundaries | [Current evaluation](documentation/RELIABILITY_EVAL.md) |
+| GitHub first use | Two fresh-context agents, two turns each, using fixed public material; personal contribution remains unconfirmed | [Current record](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
 | Fresh-context trial | One agent without chat history, two synthetic turns; one verification wording issue found and narrowed | [Actual record](benchmark/reliability-20261023/forward-trial.md) |
 | Gaps, development recap and targeted retry | Three synthetic walkthroughs; new entries checked through installation and routing | [Current record](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
 | Resume positioning and result nature | **5 synthetic comparisons, 2 compiled PDFs**; host review, not independent evaluation | [Current record](documentation/RESUME_POSITIONING_EVAL.md) |

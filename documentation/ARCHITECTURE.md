@@ -127,3 +127,9 @@ execution status follow recorded observation at. Backfilled older records remain
 in the history without replacing a newer state. Attachment conflicts at one actual
 instant require clarification. This validates supplied chronology, not external
 delivery, employer adoption or the truth of a career claim.
+
+First-use public-project intake is a host workflow linked from SKILL.md and existing
+practicals. It reuses the evidence substrate and targets a small initial result
+without a new CLI mode, candidate schema or mandatory JD search. Public project
+scope and personal attribution remain distinct. Actual candidate-derived trials
+stay outside the repository; only synthetic walkthroughs enter public examples.

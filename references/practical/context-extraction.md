@@ -22,3 +22,7 @@ fake re-verification date. Ask at most 1–3 questions that would change the nex
 For an explicit recap of AI development records, use
 [development-recap](development-recap.md) in place of an unnecessary practical
 reference. Assistant completion statements remain reports without execution receipts.
+
+For first-use GitHub/profile material, use [public-projects](public-projects.md)
+in place of an unnecessary reference. Repository content and personal attribution
+are separate; select a bounded relevant working set rather than ingesting a profile.
