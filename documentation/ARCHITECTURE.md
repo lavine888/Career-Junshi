@@ -146,3 +146,16 @@ transcript remains usable and self-reported. Compensation begins from the actual
 hiring stage; completing an interview does not establish an offer. Each handoff
 carries only relevant claims, actual observations and terms into the existing
 opportunity/checkpoint, without automatic persistence or messages.
+
+Memory uses the same private-path guard at construction and before access, including
+the database file, so later Git/link replacement cannot silently redirect a store.
+This does not relocate or delete existing data. Install and validation entrypoints
+configure UTF-8 streams before producing reports, including errors.
+
+Journey feedback/review projection follows normalized observation time. Concurrent
+latest records remain parallel candidates rather than fabricated sequence; only
+a unique shared next action gains priority. The event journal is unchanged.
+Host responses follow the requested interaction: listening, a finished sentence,
+practice or advice. Explicit stop/no-summary requests suppress default handoffs.
+Missing proof can lower confidence without turning a reported past decision into
+a future plan.

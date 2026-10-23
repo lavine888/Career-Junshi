@@ -1,4 +1,6 @@
 import sqlite3
+import os
+import subprocess
 import tempfile
 import unittest
 from contextlib import closing
@@ -95,3 +97,83 @@ class MemoryRegression(unittest.TestCase):
                 c.execute("UPDATE settings SET value='future' WHERE key='policy_version'")
         with self.assertRaises(ContractError): self.store.status()
         with self.assertRaises(ContractError): self.store.consent(confirmed=True)
+
+
+    def test_memory_refuses_other_git_checkout_and_worktree_without_creating_files(self):
+        for marker in ("directory", "worktree-file"):
+            with self.subTest(marker=marker):
+                root = Path(self.tmp.name) / marker
+                root.mkdir()
+                if marker == "directory":
+                    (root / ".git").mkdir()
+                else:
+                    (root / ".git").write_text("gitdir: external-worktree-metadata", encoding="utf-8")
+                with self.assertRaises(ContractError):
+                    MemoryStore(root / "private-memory").consent(confirmed=True)
+                self.assertFalse((root / "private-memory").exists())
+
+    def test_existing_store_checks_if_parent_became_git_before_any_access(self):
+        self.store.consent(confirmed=True)
+        self.store.put("profile", "candidate", BASE)
+        before = self.store.path.read_bytes()
+        (Path(self.tmp.name) / ".git").mkdir()
+        for operation in (self.store.status, lambda: self.store.read(subject="candidate"),
+                          lambda: self.store.put("profile", "candidate", BASE),
+                          lambda: self.store.delete(confirmed=True)):
+            with self.subTest(operation=operation):
+                with self.assertRaises(ContractError): operation()
+        self.assertEqual(self.store.path.read_bytes(), before)
+
+    def test_database_link_is_refused_before_existing_store_reads_or_writes(self):
+        self.store.consent(confirmed=True)
+        self.store.put("profile", "candidate", BASE)
+        archive = self.store.path.with_name("original.sqlite3")
+        self.store.path.rename(archive)
+        try:
+            self.store.path.symlink_to(archive)
+        except OSError:
+            archive.rename(self.store.path)
+            self.skipTest("symbolic links unavailable")
+        before = archive.read_bytes()
+        with self.assertRaises(ContractError): self.store.status()
+        with self.assertRaises(ContractError): self.store.read(subject="candidate")
+        with self.assertRaises(ContractError): self.store.put("profile", "candidate", BASE)
+        self.assertEqual(archive.read_bytes(), before)
+
+
+    def test_directory_link_is_refused_initially_and_after_store_construction(self):
+        base = Path(self.tmp.name)
+        original, alias = base / "original", base / "alias"
+        original.mkdir()
+        store = MemoryStore(original)
+        store.consent(confirmed=True)
+        store.put("profile", "candidate", BASE)
+        before = store.path.read_bytes()
+        if os.name == "nt":
+            subprocess.run(["cmd", "/c", "mklink", "/J", str(alias), str(original)],
+                           check=True, capture_output=True)
+        else:
+            alias.symlink_to(original, target_is_directory=True)
+        try:
+            with self.assertRaises(ContractError): MemoryStore(alias)
+        finally:
+            if os.name == "nt": alias.rmdir()
+            else: alias.unlink()
+        moved = base / "moved"
+        original.rename(moved)
+        if os.name == "nt":
+            subprocess.run(["cmd", "/c", "mklink", "/J", str(original), str(moved)],
+                           check=True, capture_output=True)
+        else:
+            original.symlink_to(moved, target_is_directory=True)
+        try:
+            for operation in (store.status, lambda: store.read(subject="candidate"),
+                              lambda: store.put("profile", "candidate", BASE),
+                              lambda: store.delete(confirmed=True)):
+                with self.subTest(operation=operation):
+                    with self.assertRaises(ContractError): operation()
+            self.assertEqual((moved / "memory.sqlite3").read_bytes(), before)
+        finally:
+            if os.name == "nt": original.rmdir()
+            else: original.unlink()
+            moved.rename(original)

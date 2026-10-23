@@ -15,7 +15,7 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.router import EXPERIENCES, ROUTES, route
-from scripts.io_utils import is_linked_path
+from scripts.io_utils import configure_cli_streams, is_linked_path
 from scripts.source_catalog import CATALOG_FILES, load_catalog
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -130,6 +130,7 @@ def validate(root: Path, *, runtime_only=False) -> list[str]:
 
 
 def main(argv=None) -> int:
+    configure_cli_streams()
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--root", type=Path, default=ROOT)
     p.add_argument("--runtime-only", action="store_true")

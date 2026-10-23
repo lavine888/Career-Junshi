@@ -15,6 +15,7 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.models import ContractError, audit_claim, claim_references, choices, items, obj, text
+from scripts.io_utils import private_output_path
 
 POLICY_VERSION = "1"
 MAX_RECORDS = 200
@@ -40,14 +41,18 @@ def default_directory() -> Path:
 
 class MemoryStore:
     def __init__(self, directory: str | Path | None = None):
-        self.directory = Path(directory).expanduser().resolve() if directory is not None else default_directory().resolve()
-        installation = Path(__file__).resolve().parents[1]
-        if self.directory == installation or installation in self.directory.parents:
-            raise ContractError("Memory must be outside the Skill installation / public repository")
+        self.directory = private_output_path(directory if directory is not None else default_directory())
         self.path = self.directory / "memory.sqlite3"
+        self._validate_path()
+
+    def _validate_path(self):
+        # Consent does not authorize moving private records into Git or following
+        # a replaced directory/database link on a later operation.
+        private_output_path(self.path)
 
     @contextmanager
     def connection(self, *, create=False, write=False):
+        self._validate_path()
         if not self.path.exists() and not create:
             raise ContractError("Memory is not initialized; explicit consent is required")
         if create:
@@ -69,6 +74,7 @@ class MemoryStore:
             conn.close()
 
     def status(self) -> dict:
+        self._validate_path()
         if not self.path.exists():
             return {"state": "uninitialized", "records": 0, "policy_version": POLICY_VERSION}
         with self.connection() as c:
@@ -329,6 +335,7 @@ class MemoryStore:
             return [{**dict(row), "data": json.loads(row["data"])} for row in rows]
 
     def delete(self, record_id: str | None = None, *, confirmed=False) -> dict:
+        self._validate_path()
         if confirmed is not True:
             raise ContractError("Deletion requires explicit confirmation")
         if not self.path.exists():

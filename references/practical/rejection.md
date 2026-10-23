@@ -12,3 +12,8 @@ Review the next 5 comparable opportunities (or a one-week batch). KEEP if other
 evidence supports fit; REFINE a repeated gap; consider PIVOT only with broader evidence
 and constraints. One result is not a universal verdict. Do not persist an inferred
 failure cause as a verified profile fact.
+
+When the immediate request is to vent or rest, respond to that request before
+analysis. Do not turn “I know, but I am tired” into another lesson about rejection,
+a compulsory self-rating or a new application plan. If they explicitly decline
+next steps, leave them out. Resume tactical review only when the user asks.

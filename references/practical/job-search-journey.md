@@ -34,10 +34,12 @@ an optional working artifact, not a new decision engine or a mandatory sequence.
   affected resume versions, keep their original artifacts and submissions, and
   produce a new resume ID with the former ID as parent. Do not upgrade confidence
   from an interview result or automatically resend a corrected resume.
-- End a meaningful work session with a short continuation card: current goal,
+- Offer a short continuation card when it helps resume the work: current goal,
   opportunity/status/version, remaining next action, known evidence gap and review
-  trigger/date. Omit irrelevant fields. Date windows are observations, not scheduled
-  reminders; never invent dates or holiday calculations.
+  trigger/date. Omit irrelevant fields. If the user does not want a summary or an
+  action now, do not force a card or to-do list; resume from context they provide
+  later, and do not record stopping as failure. Date windows are observations, not
+  scheduled reminders; never invent dates or holiday calculations.
 
 ## Persistence and helpers
 
@@ -120,8 +122,19 @@ status or re-open a completed action. At equal observation times, append order
 resolves the recorded state; the host must clarify real-world contradictions.
 This is separate from a material update's actual `sent_at`.
 
-The latest review prioritizes its linked unfinished action, without discarding
-other pending work. Original events and claim revisions stay intact on export.
+Feedback and reviews also compare timezone-aware observation `at`, so an older
+backfill cannot become the latest feedback or redirect the current next action.
+At the latest instant, parallel feedback/reviews remain visible in the handoff's
+`latest_feedback_candidates` / `latest_review_candidates`; `latest_feedback` /
+`latest_review` is null when several observations share that instant. This is not
+an inferred sequence or a contradiction verdict. Clarify incompatible advice
+without inventing timestamp precision; two gaps from one interview can coexist.
+
+A unique latest review (or parallel latest reviews naming the same action)
+prioritizes its linked unfinished action, without discarding other pending work.
+Parallel reviews naming different actions do not silently choose a winner; the
+card shows their reasons and asks to verify priority. Original events and claim
+revisions stay intact on export.
 
 Legacy `feedback` accepts optional `feedback_context: {category, text, source}`
 using the categories above. Without it, the command keeps its conservative status

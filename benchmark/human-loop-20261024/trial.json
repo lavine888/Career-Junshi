@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-24",
+  "material": "synthetic",
+  "method": "fresh-context agent; three independent scenarios, two turns each; same host/model inherited; specific model/version/sampling not separately recorded",
+  "before_agent": "human_first_use",
+  "before_revision": "6233d088dfa717d4f83411c9546da456e4a5f60d",
+  "records": {
+    "A": {
+      "first": "今天又被拒了。我有点不想找了，先别给我计划，我就想说两句。",
+      "second": "我知道一次拒信说明不了什么。但连续准备太累了，我今天真的不想做下一步，你不用劝我继续。",
+      "before_first": "好，今天先不谈计划。接连收到拒信很消耗人，不用现在就逼自己打起精神。你想说什么就说，我听着。",
+      "before_second": "好，我不劝你继续。连续准备的累，不会因为知道“一次拒信说明不了什么”就消失。你想说什么，我听着。",
+      "references": [
+        "references/practical/rejection.md"
+      ],
+      "after_first": "又被拒了，真的会让人很累，连继续找的劲都被磨掉。今天先不用逼自己振作，也不用马上决定还找不找。你说，我听着。",
+      "after_second": "好，今天就不做下一步，也不用逼自己继续。你想说什么都可以，我听着。",
+      "after_references": [
+        "references/practical/rejection.md"
+      ]
+    },
+    "B": {
+      "first": "只有七分钟，想投AI产品。项目只是团队Demo，代码是队友做的；我决定了先补引用定位再做摘要，但没有数据和JD。你先帮我说一句面试能用的介绍，别让我填表。",
+      "second": "不是下一步计划。我之前就作出了这个取舍，代码是队友实现的，我也做过样例验收；我没有效果数据。你改一下刚才那一句，别加解释。",
+      "before_first": "“我想应聘 AI 产品岗位，参与过一个团队 Demo，代码由队友实现；我做出的一项产品取舍是，下一步先补引用定位，再做摘要，目前还没有效果数据。”",
+      "before_second": "“我想应聘 AI 产品岗位，参与过一个团队 Demo，在其中决定先补引用定位、再做摘要，也做过样例验收；代码由队友实现，目前没有效果数据。”",
+      "references": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/resume.md"
+      ],
+      "after_first": "我想做AI产品，之前参与过一个团队Demo，我决定先补引用定位、再做摘要，代码由队友实现，目前还没有效果数据。",
+      "after_second": "我想做AI产品，之前参与过一个团队Demo，我决定先补引用定位、再做摘要，并做过样例验收，代码由队友实现，目前没有效果数据。",
+      "after_references": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/resume.md"
+      ]
+    },
+    "C": {
+      "first": "模拟两题AI产品项目面试，一次问一题，结束再反馈。我的真实范围：自述负责需求排序和样例验收，代码由队友实现，没有业务效果数据。",
+      "second": "我把引用定位排在摘要前，先验证能不能追来源。先停吧，不用总结，也别留练习任务。",
+      "before_first": "好，共两题，一次一题，第二题回答完再反馈。围绕你实际负责的需求排序和样例验收来问。\n\n第 1 题：在这个团队 Demo 里，请讲一次你实际做过的需求优先级取舍，以及你当时作出这个决定的依据。",
+      "before_second": "好，先停在这里。",
+      "references": [
+        "references/practical/interview-coaching.md"
+      ],
+      "after_first": "好，我们做两题，一次一题，答完第二题再统一反馈，重点看需求取舍和验收判断。\n\n第1题：请讲一次你在这个团队Demo中做需求排序的具体决定，当时你依据什么确定先做哪项需求？",
+      "after_second": "好，我们就停在这里。",
+      "after_references": [
+        "references/practical/interview-coaching.md"
+      ]
+    }
+  },
+  "after_agent": "human_first_use_after",
+  "after_source": "working tree after host human-interaction edits; raw excerpts normalized to plain text",
+  "additional_after_only": [
+    {
+      "user": "我还没开始这个项目，只计划负责需求取舍；代码以后由队友做。帮我写一句介绍，不要把计划写成经验。",
+      "response": "项目目前尚未启动，我计划负责需求取舍，代码计划由队友实现。",
+      "new_references": []
+    },
+    {
+      "user": "面试还没结果，HR只说“可以再看薪酬空间”，我把这当口头Offer了。你别顺着我，先帮我判断现在到哪一步，只说最关键的一点。",
+      "response": "目前录用结果仍未确认，HR说“可以再看薪酬空间”只是薪酬沟通信号，不能据此认定为口头Offer。",
+      "new_references": [
+        "references/knowledge/03-recruiting-process.md"
+      ]
+    }
+  ]
+}

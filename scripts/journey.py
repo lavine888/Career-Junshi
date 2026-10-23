@@ -85,7 +85,7 @@ def review_journey(packet, *, verify_files=False, now=None):
     clock = _when(now) if now else datetime.now(timezone.utc)
     claims, revisions, resumes, opportunities, actions, feedback, reviews, ids = {}, {}, {}, {}, {}, {}, [], set()
 
-    status_times, execution_times = {}, {}
+    status_times, execution_times, event_times = {}, {}, {}
 
     def refs(raw):
         clean = revision_refs(raw)
@@ -102,6 +102,7 @@ def review_journey(packet, *, verify_files=False, now=None):
             raise ContractError("duplicate event id")
         ids.add(eid)
         at = _when(e["at"])
+        event_times[eid] = at
         if at > clock:
             raise ContractError("recorded events cannot be future work; use an action or next_review_at")
         source = text(e["source"], "event source", 240)
@@ -240,8 +241,20 @@ def review_journey(packet, *, verify_files=False, now=None):
         if affected: resume["status"] = "STALE"
     for opp in opportunities.values():
         opp["submitted_resume_stale"] = bool(opp["resume_id"] and resumes[opp["resume_id"]]["stale_claim_refs"])
+
+    def latest_observations(records):
+        # Preserve event history; backfilled older observations are not current.
+        records = list(records)
+        if not records:
+            return []
+        latest_at = max(event_times[record["id"]] for record in records)
+        return [record for record in records if event_times[record["id"]] == latest_at]
+
+    latest_feedback = latest_observations(feedback.values())
+    latest_reviews = latest_observations(reviews)
     pending = [a for a in actions.values() if a["status"] != "DONE"]
-    priority = reviews[-1]["next_action_id"] if reviews else ""
+    next_ids = {review["next_action_id"] for review in latest_reviews}
+    priority = next(iter(next_ids)) if len(next_ids) == 1 else ""
     pending.sort(key=lambda a: a["id"] != priority)
     state = {"claims": list(claims.values()), "resumes": list(resumes.values()),
              "opportunities": list(opportunities.values()), "actions": list(actions.values()),
@@ -254,8 +267,10 @@ def review_journey(packet, *, verify_files=False, now=None):
             "current_claims": [{"project_id": c["project_id"], "claim_id": c["claim"]["id"],
                                 "revision_id": c["revision_id"], "wording": c["claim"]["safe_wording"],
                                 "confidence": c["claim"]["confidence"], "source": c["source"]} for c in list(claims.values())[:5]],
-            "latest_feedback": list(feedback.values())[-1] if feedback else None,
-            "latest_review": reviews[-1] if reviews else None,
+            "latest_feedback": latest_feedback[0] if len(latest_feedback) == 1 else None,
+            "latest_review": latest_reviews[0] if len(latest_reviews) == 1 else None,
+            "latest_feedback_candidates": latest_feedback,
+            "latest_review_candidates": latest_reviews,
             "boundary": "Reported history, not authenticated hiring outcomes. Summary-only continuation must preserve missing sources as unknown."}
     return {"schema_version": "1", "case_id": case_id, "as_of": clock.isoformat(), "state": state, "handoff": card,
             "files_verified": verify_files, "memory_enabled": False, "external_actions_executed": False}
@@ -274,8 +289,19 @@ def render_handoff(report):
     if c["latest_feedback"]:
         f = c["latest_feedback"]
         lines += ["", "最新反馈：" + f["summary"] + "；来源：" + f["source"]]
+    if len(c.get("latest_feedback_candidates", [])) > 1:
+        lines += ["", "最新反馈有同刻并列记录，不代表先后："]
+        lines += ["- " + f["summary"] + "；来源：" + f["source"] for f in c["latest_feedback_candidates"]]
     if c["latest_review"]:
         lines += ["当前判断：" + c["latest_review"]["reason"]]
+    elif len(c.get("latest_review_candidates", [])) > 1:
+        candidates = c["latest_review_candidates"]
+        heading = "最新复盘有同刻并列记录，不代表先后"
+        if len({r["next_action_id"] for r in candidates}) > 1:
+            heading += "；不同下一步先核对优先级"
+        lines += ["", heading + "："]
+        lines += ["- " + r["reason"] + "；下一步：" + r["next_action_id"] + "；来源：" + r["source"]
+                  for r in candidates]
     if c["stale_resume_ids"]:
         lines += ["", "事实已修正的旧版本：" + "、".join(c["stale_resume_ids"]) + "。保留历史；继续使用时应改用验收后的新版本，补交单独记录，不自动重发。"]
     lines += ["", "下一步："]

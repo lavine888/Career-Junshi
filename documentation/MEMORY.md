@@ -12,7 +12,11 @@ Default private locations:
 - Linux: `$XDG_DATA_HOME/career-junshi` or `~/.local/share/career-junshi`
 
 Override with `CAREER_JUNSHI_MEMORY_DIR` or `--directory` before the subcommand.
-The directory must be outside the installed Skill. Do not select a public repository.
+The directory must be outside the installed Skill and every Git checkout/worktree.
+Directory parents and the database path are checked at construction and on later
+access; symlinks and Windows junctions are refused. If the location later becomes
+a repository or link, access fails without moving or deleting the existing data.
+Choose an explicitly authorized private destination rather than retrying in Git.
 No external requests occur. SQLite is unencrypted; protect local account access.
 On POSIX, newly created directories use mode 0700; existing directory permissions
 and Windows ACLs are not rewritten.

@@ -28,6 +28,13 @@ product decisions and coordination while narrowing unreceipted engineering credi
 The local helper recognizes limited creation clauses; coordination is not personal
 implementation. It cannot resolve every paraphrase, attribution or mixed clause.
 
+Missing evidence changes confidence, not the time of an action. A reported past
+decision stays a past decision even when implementation belongs to a teammate
+or its effect is unknown. “I decided to prioritize source lookup” is not “I plan
+to decide.” Keep decision, implementation, validation and outcome stages separate;
+neither promote one from another nor downgrade completed self-reported work into
+a future plan merely because metrics or a receipt are absent.
+
 Normalize before writing or storing: `python scripts/junshi.py audit --input file.json`.
 The helper consumes a structured operator record; it does not fetch evidence or
 authenticate a fabricated verification receipt. Evidence verification remains a

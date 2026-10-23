@@ -145,6 +145,9 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 三段沿用同一机会与事实记录；复盘可以回到下一轮模拟，谈薪也不把面试结束当成已拿 Offer。
 草稿由本人发送，默认不写文件或开启记忆。
 
+也可以直接说：“今天只想说两句”“只给我一句能用的话”“先停，不用总结”。
+军师会按这次需要回应，不强制加计划、表格或接续任务；没有效果数据，也不把已经做过的取舍改成未来计划。
+
 [看三段衔接的合成示例](cases/experiences/interview-loop/example.md)。
 
 <details>
@@ -279,7 +282,8 @@ python scripts/junshi.py resume-doctor
 
 | 检查范围 | 已完成 | 查看记录 |
 | --- | --- | --- |
-| 自动化回归 | **275 项测试**，含时间回补、安装链接与私有输出边界 | [本轮验收](documentation/RELIABILITY_EVAL.md) |
+| 自动化回归 | **286 项：285 通过、1 项权限跳过**，含中文路径、反馈回补与私有记忆边界 | [本轮验收](documentation/HUMAN_LOOP_EVAL.md) |
+| 低负担交互 | 两个新上下文代理，各三场景两轮；另有两个改后边界请求，均为合成试用 | [实际记录](documentation/HUMAN_LOOP_EVAL.md#独立上下文合成试用) |
 | GitHub 首次使用 | 两个新上下文代理、每组两轮；固定公开资料模拟，个人贡献仍待确认 | [本轮记录](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
 | 面试前后闭环 | 模拟、复盘、谈薪三段合成示意；宿主自查，非独立试用 | [整合与验收](documentation/INTERVIEW_COACH_EVAL.md) |
 | 新上下文试用 | 一位无聊天历史子代理、两轮合成请求；发现并收窄一处验证措辞 | [实际记录](benchmark/reliability-20261023/forward-trial.md) |

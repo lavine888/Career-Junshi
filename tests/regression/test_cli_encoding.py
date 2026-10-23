@@ -24,6 +24,35 @@ class CliEncodingTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr.decode("utf-8"))
             self.assertEqual(json.loads(result.stdout.decode("utf-8"))["current_situation"], "测试当前方向")
 
+    def test_install_returns_utf8_success_and_preserves_existing_unicode_target(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "合成安装目录" / "career-junshi"
+            result = self.run_cli("install_skill.py", "--target", str(target))
+            self.assertEqual(result.returncode, 0, result.stderr.decode("utf-8"))
+            self.assertEqual(json.loads(result.stdout.decode("utf-8"))["installed"], str(target))
+            self.assertTrue((target / "SKILL.md").is_file())
+            sentinel = target / "keep.txt"
+            sentinel.write_text("preserve existing installation", encoding="utf-8")
+            before = (target / "SKILL.md").read_bytes()
+            repeated = self.run_cli("install_skill.py", "--target", str(target))
+            self.assertEqual(repeated.returncode, 2)
+            self.assertIn("Target exists", json.loads(repeated.stderr.decode("utf-8"))["error"])
+            self.assertEqual((target / "SKILL.md").read_bytes(), before)
+            self.assertEqual(sentinel.read_text(encoding="utf-8"), "preserve existing installation")
+
+    def test_validator_returns_utf8_diagnostics_for_unicode_broken_links(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "career-junshi"
+            installed = self.run_cli("install_skill.py", "--target", str(target))
+            self.assertEqual(installed.returncode, 0, installed.stderr.decode("utf-8"))
+            skill = target / "SKILL.md"
+            skill.write_text(skill.read_text(encoding="utf-8") + "\n[示例](references/不存在.md)\n", encoding="utf-8")
+            result = self.run_cli("validate_skill.py", "--runtime-only", "--root", str(target))
+            self.assertEqual(result.returncode, 1, result.stderr.decode("utf-8"))
+            report = json.loads(result.stdout.decode("utf-8"))
+            self.assertFalse(report["valid"])
+            self.assertTrue(any("references/不存在.md" in error for error in report["errors"]))
+
     def test_memory_accepts_bom_and_returns_utf8(self):
         with tempfile.TemporaryDirectory() as tmp:
             directory = str(Path(tmp) / "private-memory")

@@ -153,6 +153,11 @@ a large storybank is unnecessary. These stages reuse the same opportunity and
 facts. Reviews can lead back to practice; completing an interview does not imply
 an offer. The human sends drafts. Files and memory remain off by default.
 
+You can also say “I only want to talk”, “Give me one usable sentence”, or
+“Stop, no summary”. The current request controls the response; plans, worksheets
+and checkpoints are optional. Missing outcome data does not turn a past decision
+into a future plan.
+
 [Three-stage synthetic walkthrough, in Chinese](cases/experiences/interview-loop/example.md).
 
 <details>
@@ -299,7 +304,8 @@ application sending or messaging.
 
 | Scope | Completed | Evidence |
 | --- | --- | --- |
-| Automated regression | **275 tests**, including backfilled history, package links and private output boundaries | [Current evaluation](documentation/RELIABILITY_EVAL.md) |
+| Automated regression | **286 tests: 285 passed, 1 permission-related skip**, covering Unicode paths, feedback backfills and private memory | [Current evaluation](documentation/HUMAN_LOOP_EVAL.md) |
+| Low-burden interaction | Two fresh-context agents, three two-turn scenarios each, plus two post-change boundary requests; synthetic trials | [Actual record](documentation/HUMAN_LOOP_EVAL.md#独立上下文合成试用) |
 | GitHub first use | Two fresh-context agents, two turns each, using fixed public material; personal contribution remains unconfirmed | [Current record](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
 | Interview loop | Authored simulation, debrief and compensation walkthrough; host review, not an independent trial | [Integration checks](documentation/INTERVIEW_COACH_EVAL.md) |
 | Fresh-context trial | One agent without chat history, two synthetic turns; one verification wording issue found and narrowed | [Actual record](benchmark/reliability-20261023/forward-trial.md) |

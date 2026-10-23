@@ -277,3 +277,80 @@ class JourneyTests(unittest.TestCase):
         self.assertEqual(current["status"], "DONE")
         self.assertEqual([r["event_id"] for r in current["receipts"]], ["new-done", "old-blocked"])
         self.assertEqual(result["handoff"]["next_actions"], [])
+
+
+    def test_backfilled_feedback_and_review_keep_newest_observation_and_priority(self):
+        packet = journal(); opportunity(packet)
+        action(packet, "A-new"); action(packet, "A-old")
+        for fid, when, aid in (("F-new", "2026-10-21T14:00:00+08:00", "A-new"),
+                               ("F-old", "2026-10-21T05:00:00Z", "A-old")):
+            event(packet, "feedback", fid, {"opportunity_id": "O1", "category": "skill_gap",
+                  "summary": fid, "claim_refs": []})
+            packet["events"][-1]["at"] = when
+            event(packet, "review", "R-" + fid, {"feedback_id": fid, "conclusion": "practice",
+                  "reason": "Based on " + fid, "next_action_id": aid})
+            packet["events"][-1]["at"] = when
+        before = copy.deepcopy(packet)
+        result = review_journey(packet, now=NOW)
+        self.assertEqual(result["handoff"]["latest_feedback"]["id"], "F-new")
+        self.assertEqual(result["handoff"]["latest_review"]["id"], "R-F-new")
+        self.assertEqual(result["handoff"]["next_actions"][0]["id"], "A-new")
+        self.assertEqual([f["id"] for f in result["state"]["feedback"]], ["F-new", "F-old"])
+        self.assertEqual([r["id"] for r in result["state"]["reviews"]], ["R-F-new", "R-F-old"])
+        self.assertEqual(packet, before)
+
+    def test_parallel_feedback_at_equivalent_instants_retains_both_without_invented_order(self):
+        packet = journal(); opportunity(packet)
+        for fid, when, category in (("F1", "2026-10-21T14:00:00+08:00", "skill_gap"),
+                                    ("F2", "2026-10-21T06:00:00Z", "skill_gap")):
+            event(packet, "feedback", fid, {"opportunity_id": "O1", "category": category,
+                  "summary": fid, "claim_refs": []})
+            packet["events"][-1]["at"] = when
+        result = review_journey(packet, now=NOW)
+        self.assertIsNone(result["handoff"]["latest_feedback"])
+        self.assertEqual([f["id"] for f in result["handoff"]["latest_feedback_candidates"]], ["F1", "F2"])
+        self.assertIn("同刻并列", render_handoff(result))
+        self.assertIn("F1", render_handoff(result))
+        self.assertIn("F2", render_handoff(result))
+
+    def test_parallel_reviews_at_equivalent_instants_do_not_choose_one_action(self):
+        packet = journal(); opportunity(packet)
+        event(packet, "feedback", "F1", {"opportunity_id": "O1", "category": "skill_gap",
+              "summary": "Reported gap", "claim_refs": []})
+        action(packet, "A1"); action(packet, "A2")
+        for rid, when, aid in (("R1", "2026-10-21T14:00:00+08:00", "A1"),
+                               ("R2", "2026-10-21T06:00:00Z", "A2")):
+            event(packet, "review", rid, {"feedback_id": "F1", "conclusion": "practice",
+                  "reason": "Prepare the observed gap", "next_action_id": aid})
+            packet["events"][-1]["at"] = when
+        result = review_journey(packet, now=NOW)
+        self.assertIsNone(result["handoff"]["latest_review"])
+        self.assertEqual([r["id"] for r in result["handoff"]["latest_review_candidates"]], ["R1", "R2"])
+        self.assertEqual([a["id"] for a in result["handoff"]["next_actions"]], ["A1", "A2"])
+        self.assertIn("不同下一步先核对优先级", render_handoff(result))
+
+    def test_identical_feedback_and_review_receipts_keep_all_sources(self):
+        packet = journal(); opportunity(packet); action(packet)
+        for index, when in ((1, "2026-10-21T14:00:00+08:00"), (2, "2026-10-21T06:00:00Z")):
+            event(packet, "feedback", "F" + str(index), {"opportunity_id": "O1", "category": "skill_gap",
+                  "summary": "Same reported gap", "claim_refs": []})
+            packet["events"][-1].update(at=when, source="synthetic:receipt-" + str(index))
+            event(packet, "review", "R" + str(index), {"feedback_id": "F1", "conclusion": "practice",
+                  "reason": "Prepare the same gap", "next_action_id": "A1"})
+            packet["events"][-1].update(at=when, source="synthetic:receipt-" + str(index))
+        result = review_journey(packet, now=NOW)
+        self.assertEqual(len(result["state"]["feedback"]), 2)
+        self.assertEqual(len(result["state"]["reviews"]), 2)
+        self.assertIsNone(result["handoff"]["latest_feedback"])
+        self.assertEqual([f["source"] for f in result["handoff"]["latest_feedback_candidates"]],
+                         ["synthetic:receipt-1", "synthetic:receipt-2"])
+        self.assertEqual(result["handoff"]["next_actions"][0]["id"], "A1")
+        self.assertNotIn("不同下一步", render_handoff(result))
+
+    def test_simultaneous_different_opportunities_are_not_conflicting_feedback(self):
+        packet = journal(); opportunity(packet); opportunity(packet, "O2")
+        for oid in ("O1", "O2"):
+            event(packet, "feedback", "F-" + oid, {"opportunity_id": oid, "category": "skill_gap",
+                  "summary": "Distinct gap for " + oid, "claim_refs": []})
+        result = review_journey(packet, now=NOW)
+        self.assertEqual(len(result["state"]["feedback"]), 2)

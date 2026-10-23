@@ -5,6 +5,9 @@ within a real time or energy limit. Replace a less relevant practical reference;
 the usual 1–3-reference budget still applies. This is task planning, not a
 motivation score, personality assessment or mental-health diagnosis.
 
+A user who asks only to talk or explicitly declines action is not asking for a
+start card. Listen or stop; do not convert low energy into a productivity task.
+
 ## Find the actual obstacle
 
 Reuse the supplied goal, deadline, materials and previous attempts. Distinguish

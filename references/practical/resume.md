@@ -27,6 +27,13 @@ show useful judgment without a business outcome. Separate project_stage,
 claim_stage and user_contribution_stage; someone completing work does not establish
 personal authorship or production readiness.
 
+Preserve the tense and object of each reported action. A past product decision
+can be SELF_REPORTED/completed while teammate implementation or business impact
+is separate or unknown. Do not rewrite “I decided X first” as “my next step is X”
+because no outcome data was supplied. If the user corrects this, update that
+sentence and carry the correction forward without making them re-prove unrelated
+parts of their experience.
+
 Ask only 1–3 missing details that would materially change the draft. Otherwise use
 the narrower supported sentence now and identify the decisive gap. Do not require
 every experience to contain a tradeoff or number. Several small PRs do not by
@@ -79,6 +86,11 @@ generate a summary; no new profile field, title inference or auto-ranking is nee
 
 ## Deliver and check
 
+For a requested sentence only, give that sentence first, retaining material
+ownership and stage limits without adding a worksheet, evidence labels, defense
+questions or an unsolicited plan. The comparison below is useful for a review or
+larger rewrite; it need not be displayed for every small edit.
+
 Show a compact **original sentence → proposed rewrite → reason → facts still to
 confirm** comparison. Quote the original exactly or identify an exact excerpt.
 For newly drafted content, state there was no original. Focus on contribution,
@@ -90,8 +102,8 @@ target. Deliver the usable draft with its comparison; ordinary edits do not need
 another approval. Keep the source map and review notes outside the application
 resume, and do not hide meaning-changing boundaries there.
 
-When ownership is the bottleneck, include a safe sentence, contribution boundary
-and 3–5 tailored defense questions. Select relevant personal actions, decisions,
+When the user wants defense preparation, include a safe sentence, contribution
+boundary and a bounded set of tailored defense questions. Select relevant personal actions, decisions,
 teammates' implementation or AI verification questions rather than dumping a list.
 Check the weakest assertion against the source or rehearse five layers without
 improvising. Stop strengthening when evidence ends; revisit after checked evidence

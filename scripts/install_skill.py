@@ -13,7 +13,7 @@ if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from scripts.models import ContractError
-from scripts.io_utils import is_linked_path
+from scripts.io_utils import configure_cli_streams, is_linked_path
 from scripts.validate_skill import ROOT, RUNTIME_FILES, SCRIPTS, validate
 
 
@@ -57,6 +57,7 @@ def install(target: Path, *, source: Path = ROOT) -> Path:
 
 
 def main(argv=None) -> int:
+    configure_cli_streams()
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--target", type=Path, required=True, help="Host-discoverable destination ending in career-junshi")
     args = p.parse_args(argv)
