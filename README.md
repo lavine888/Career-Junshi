@@ -2,46 +2,42 @@
 
 <div align="center">
 
-[![求职军师：下一程，从真实的你开始。](assets/brand/readme-hero-zh.svg)](https://career-junshi.lavinex.chatgpt.site)
+[![求职军师 · Career Junshi：下一程，从真实的你开始。](assets/brand/readme-hero-zh.svg)](#start)
 
-# 求职军师 · Career Junshi
+**把真实经历讲清楚，把下一场面试练具体。**
 
-运行在助手中的职业决策 Skill。基于真实经历，改简历、练面试，把反馈接回下一步。
+<sub>求职军师 · Career Junshi — 运行在助手中的求职 Skill，从你手边的材料开始。</sub>
 
-<p align="center">
-  <a href="https://career-junshi.lavinex.chatgpt.site"><img src="assets/brand/cta-website-zh.svg" width="154" height="42" alt="访问官网"></a>
-  &nbsp;
+<p>
   <a href="#start"><img src="assets/brand/cta-start-zh.svg" width="136" height="42" alt="快速开始"></a>
 </p>
 
-[简历样例](#resume-export) &nbsp; · &nbsp; [English](README_EN.md)
-
-<sub>[MIT](LICENSE) &nbsp; · &nbsp; Python 3.10+ &nbsp; · &nbsp; [记忆自选](documentation/MEMORY.md)</sub>
+[看交付样例](#demo) &nbsp; · &nbsp; [官网 ↗](https://career-junshi.lavinex.chatgpt.site) &nbsp; · &nbsp; [English](README_EN.md)
 
 </div>
 
 ---
 
-[01 看效果](#demo) · [02 开始用](#start) · [03 选入口](#experiences) · [04 拿成稿](#resume-export) · [05 接着走](#journey) · [06 看验证](#evaluation) · [07 了解边界](#boundaries)
-
 <a id="demo"></a>
 
-## 01 / 让一段经历，有据可讲
+## 先看，你会拿到什么
+
+### 一段能讲清贡献的经历
 
 > **原句**：「独立开发生产级 RAG 平台，准确率提升 30%。」
 
-实际做的是团队课程原型：本人负责评测脚本和失败分类，队友实现服务。
-跑过 10 条内部问题，没有基线，也没有生产用户。军师先追问个人工作和判断标准，再给可用表述：
+实际材料是团队课程原型：本人负责评测脚本和失败分类，队友实现服务；
+跑过 10 条内部问题，没有基线，也没有生产用户。追问个人工作与判断标准后：
 
 > 参与团队课程 RAG 原型开发，负责评测脚本与失败分类，按团队约定标准完成
 > 10 条内部问题评测，记录缺少文档引用、引用段落错误及回答与文档冲突三类问题。
 
-你拿到的是**贡献范围清楚的表达、仍需补充的证据、下一步行动**。
+**留下可用表述，也标清还缺什么。** 没有效果数据，不抹掉你做过的工作，也不补写成果。
 
-<sub>改写自合成材料的实际宿主试用，非真人简历或招聘结果。[试用记录](documentation/EVOLUTION_EVAL.md)</sub>
+<sub>改写自合成材料的实际宿主试用，非真人简历或招聘结果。[查看记录](documentation/EVOLUTION_EVAL.md)</sub>
 
 <details>
-<summary>展开看：军师如何追问</summary>
+<summary>看这句改写背后的一次追问</summary>
 
 ```text
 军师：这 10 条问题里，你用什么标准判定一条回答失败？
@@ -56,13 +52,50 @@
 
 </details>
 
+<a id="resume-export"></a>
+
+### 一份可以继续编辑的简历
+
+从岗位表达到排版，保留同一套事实。可交付 **LaTeX 源码、纯文本**；
+本机具备 XeLaTeX 时，再编译、检查 PDF。精排版可预留照片位。
+
+<p align="center">
+  <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.pdf">
+    <img src="benchmark/journey-20261021/artifacts/editorial-zh/page-1.png" width="360" alt="实际编译的中文精排合成简历，预留照片位；点击查看PDF">
+  </a>
+  <br>
+  <sub>实际编译的合成样例 · 可预留照片位 · 点击查看 PDF</sub>
+</p>
+
+<p align="center">
+  <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.pdf">查看 PDF ↗</a>
+  &nbsp; · &nbsp;
+  <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.tex">查看 LaTeX 源码</a>
+</p>
+
+<details>
+<summary>想直接导出简历？复制这段</summary>
+
+```text
+请用 $career-junshi，按这份 JD 整理中文单栏简历，优先一页。
+使用精排版，预留照片位。保留真实贡献，说明重要改写与删留。
+导出 LaTeX 源码和纯文本到我指定的新私有目录。
+本机有 XeLaTeX 时再编译 PDF，说明内容、编译、文字层和版面检查结果。
+```
+
+`resume.txt` 可粘贴到 Word 等编辑器，它是纯文本，不是 Word 文档。
+`resume.tex` 用于继续排版；`resume.pdf` 只有实际生成并检查后才作为 PDF 交付。
+材料与文件写入你指定、位于 Git 仓库和 Skill 安装目录之外的私有位置。
+
+</details>
+
 <a id="start"></a>
 
-## 02 / 两步，开始这一轮
+## 两步，开始这一轮
 
 ### 1. 安装到你的助手
 
-把下面这段发给 Codex 等支持本地 Skill 的助手：
+把这段发给 Codex 等支持本地 Skill 的助手：
 
 ```text
 请将 https://github.com/lavine888/Career-Junshi 的 main 分支
@@ -82,297 +115,198 @@ python scripts/install_skill.py --target /path/to/your/skills/career-junshi
 python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-only
 ```
 
-将 `/path/to/your/skills` 替换为宿主实际读取的目录，Windows 同样传入实际路径。
-目标文件夹须名为 `career-junshi`；已有目标会保留并报错。
-安装只复制运行文件与许可，不带案例、测试、`.git` 或数据库，也不会开启记忆。
-安装路径和包内资源若含符号链接或 Windows 目录联接会被拒绝，请使用实际目录；安装器不会沿链接复制包外文件。
+替换为宿主实际读取的目录，Windows 同样使用实际路径；目标文件夹须名为
+`career-junshi`，已有目标会保留并报错。安装只复制运行文件和许可，不带案例、
+测试、`.git` 或数据库，也不会开启记忆。符号链接与 Windows 目录联接路径会被拒绝。
 
 </details>
 
-### 2. 发来一段真实材料
-
-简历、一段经历或 GitHub 链接都能开始。只有 GitHub 时，可以直接这样说：
+### 2. 带来手边的一点材料
 
 ```text
-请用 $career-junshi。我想投【方向】，我的 GitHub 是【链接】。
-先选一个适合开场的项目，给一段现在能用的短介绍，带我完成一个小步骤。
-我还没整理简历，也没选好 JD；先不生成文件或开启记忆。
+请用 $career-junshi。我想投【方向】。
+这是我的【简历／项目经历／GitHub 链接】：……
+先给我一个现在能用的结果，再带我做一个小步骤。
+暂时不生成文件，不开启长期记忆。
 ```
 
-[看一个只有公开项目的起步示意](cases/experiences/public-projects/example.md)。
-
-已有经历原文时，可以这样发：
-
-```text
-请使用 $career-junshi，帮我改这段经历。
-
-我的简历写：……
-我实际做过：……
-目标岗位 / JD：……
-最近面试或截止时间：……
-
-给我可用的改写、重要修改的依据，以及最值得补的一步。
-```
-
-没有完整简历也能开始；JD、截止时间不知道可以留空。
-已有材料先用，只补问会改变判断的信息。想练追问时，加一句“带我做简历守城，一次问一个问题”。
+没有完整简历也能开始，JD 和截止时间不知道可以留空。
+只有 GitHub 时，先筛项目、给短介绍；个人职责不清楚的部分会继续核实。
+[看项目起步示意](cases/experiences/public-projects/example.md)。
 
 <a id="experiences"></a>
 
-## 03 / 四种入口，共用一套事实
+## 从你正卡住的地方进入
 
-| 核心体验 | 直接这样说 | 带走什么 |
+| 你现在的处境 | 直接这样说 | 本轮拿到什么 |
 | --- | --- | --- |
-| **简历守城** · 怕项目被问穿 | “追问这句经历，一次问一个问题。” | 个人贡献、证据缺口、可用表述 |
-| **岗位表达** · 同一项目投不同岗位 | “适配这两份 JD，解释每版删留。” | 共用事实底稿、岗位版本、取舍理由 |
-| **补证冲刺** · 缺证据，不知从何下手 | “本周有 4 小时，补一个关键缺口。” | 具体产物、验收条件、时间预算、停止线 |
-| **决策复盘** · 收到反馈，不知怎么改 | “对照上次建议和这次反馈，调整下一步。” | 原判断与观察对照、修正动作 |
+| **项目做过，简历说不清** | “改这段经历，解释哪些该留、哪些该删。” | 可用表达、贡献边界、重要改写依据 |
+| **怕被追问，想先练一遍** | “追问这个项目，一次一题，先听我回答。” | 依据实际回答的追问与一个练习点 |
+| **收到反馈，不知怎么继续** | “对照这次反馈，帮我选下一步。” | 保留已发生的事实，调整一项具体行动 |
 
-可以从任一环节进入，随时停止；不同岗位版本沿用同一套事实。
-
-[守城案例](cases/experiences/defense/example.md) · [岗位表达](cases/experiences/role-translation/example.md) ·
-[补证冲刺](cases/experiences/proof-sprint/example.md) · [决策复盘](cases/experiences/decision-review/example.md)
-
-### 面试前后，接着用
-
-| 阶段 | 直接这样说 | 本轮带走什么 |
-| --- | --- | --- |
-| **面试前模拟** | “围绕这个项目模拟 3 题，一次一问，最后再点评。” | 按实际回答追问；逐题纠偏和整场模拟可切换 |
-| **面试复盘** | “刚面完，没有录音。我还记得这道追问，帮我复盘。” | 分开实际问答、本人感受和明确反馈，选一个下一轮练习点 |
-| **面后谈薪** | “HR 开始问预期了，先帮我判断阶段，再陪我练回应。” | 区分预期沟通与 Offer 协商，核对薪酬口径，给请求和备选话术 |
-
-不知道该用哪段经历时，可以先练“选一个事件、说一句开场”，不用凑齐故事库。
-三段沿用同一机会与事实记录；复盘可以回到下一轮模拟，谈薪也不把面试结束当成已拿 Offer。
-草稿由本人发送，默认不写文件或开启记忆。
-
-也可以直接说：“今天只想说两句”“只给我一句能用的话”“先停，不用总结”。
-军师会按这次需要回应，不强制加计划、表格或接续任务；没有效果数据，也不把已经做过的取舍改成未来计划。
-
-[看三段衔接的合成示例](cases/experiences/interview-loop/example.md)。
+> 也可以说：“今天只想说两句”“只给我一句能用的话”“先停，不用总结”。
+> 不必每次都带走一份计划。
 
 <details>
-<summary>展开看：更多请求与进阶用法</summary>
+<summary>四种核心体验与更多用法</summary>
 
-| 直接这样说 | 军师会帮你做什么 |
-| --- | --- |
-| “我该主投哪个方向？” | 对照目标、经历与当前 JD，给主投 / 副投 / 探索及验证动作 |
-| “对照这份 JD，哪些只需改写，哪些要补证或补能力？” | 分开表达、证据、真实缺口与未知，先核对硬门槛，再选下一步 |
-| “这是我和 AI 开发项目的记录，哪些算我的贡献？” | 区分本人决定、AI 实现和实际执行回执，给有来源的复盘 |
-| “上次没讲清重试逻辑，换个情境再问我。” | 沿用原标准变题复练，对照新回答；讲清不等于事实已核实 |
-| “按这份 JD 模拟面试，先说这题看什么。” | 明确职责与观察点，一次一问，依据实际回答反馈 |
-| “明天二面，今晚只有 90 分钟。” | 收敛最高风险和 1–3 个动作，给今晚的停止线 |
-| “HR 五天没回，要不要催？” | 核对对话、承诺日期和工作日，给时机、草稿与停止等待条件 |
-| “两个 Offer 怎么选，哪些条件先核实？” | 对照目标与书面条款，核实决定性未知；处理实际费用或身份风险 |
-| “两版简历反馈不同，设计一次投递实验。” | 选可比岗位、只改一项，保留版本、分母和观察窗口 |
-| “只有 15 分钟，一直在换模板，帮我开始。” | 给一个可检查的小结果、开始触发点、备用做法和停止时间 |
+- **简历守城**：“追问这句经历，一次问一个问题。”[看案例](cases/experiences/defense/example.md)
+- **岗位表达**：“适配这两份 JD，解释每版删留。”[看案例](cases/experiences/role-translation/example.md)
+- **补证冲刺**：“本周有 4 小时，补一个关键缺口。”[看案例](cases/experiences/proof-sprint/example.md)
+- **决策复盘**：“对照上次建议与这次反馈，调整下一步。”[看案例](cases/experiences/decision-review/example.md)
 
-[JD 缺口分流](cases/experiences/jd-gap/example.md) ·
-[AI 开发复盘](cases/experiences/development-recap/example.md) ·
-[弱项变题复练](cases/experiences/interview-retry/example.md)（合成示意，非独立评估）
+还没定方向，可以问“我该主投哪个方向？”；招聘环节也能问“HR 没回，何时跟进？”
+或“两个 Offer 怎么选？”。[跟进示例](cases/follow-up/request.md) ·
+[Offer 比较示例](cases/offer/request.md)
 
-- **措辞核对**：“只改动词、贡献和因果中缺证据的部分。”[示意](cases/experiences/wording-audit/example.md)
-- **断点续练**：“先停，给我可复制的断点。”下次贴回继续，默认留在聊天。[示意](cases/experiences/defense-resume/example.md)
-- **隐藏结果复盘**：在未见结果的新聊天中先提供观察，固定初判后再揭晓结果；已知结果时按普通复盘处理。[示意](cases/experiences/outcome-blind-review/example.md)
+还可以做 [JD 缺口分流](cases/experiences/jd-gap/example.md)、
+[AI 开发贡献复盘](cases/experiences/development-recap/example.md)、
+[变题复练](cases/experiences/interview-retry/example.md)、
+[措辞核对](cases/experiences/wording-audit/example.md)、
+[断点续练](cases/experiences/defense-resume/example.md)、
+[投递实验](cases/experiences/job-search-experiment/example.md)与
+[行动启动卡](cases/experiences/action-start/example.md)。
 
-不同岗位或渠道的结果不能直接归因于模板，未到观察窗口的投递保持待观察。
-[投递实验](cases/experiences/job-search-experiment/example.md) · [行动启动卡](cases/experiences/action-start/example.md)
+只有未见结果的新上下文才能做[隐藏结果复盘](cases/experiences/outcome-blind-review/example.md)。
+以上为合成案例；不同岗位或渠道的结果不能直接归因于模板。
 
 </details>
 
-<a id="resume-export"></a>
+<a id="interview-loop"></a>
 
-## 04 / 从改写，到一份完整交付
+## 面试前后，接着用
 
-先看清**原句 → 改写 → 理由 → 待核实事实**，以及经历为什么被前置、压缩或省略。
+**面试前 · 用实际回答，练一次追问。**<br>
+“围绕这个项目模拟三题，一次一问，最后再点评。”逐题纠偏与整场模拟可以切换，
+从实际回答选下一问；不知道用哪段经历，就先练选一个事件、说一句开场。
 
-- **写出你的判断**：材料里做过哪些取舍、依据是什么、你交付了哪一部分。
-- **排好简历开头**：一句目标定位，加最多两条最相关的实证；材料不足就少写。
-- **说明数字是什么**：题量、团队成果、内部试用与测算收益分清，保留实际验证范围。
+**面试后 · 还原问答，再选一个练习点。**<br>
+“刚面完，没有录音，我还记得这道追问。”分开实际问答、本人感受和明确反馈；
+复盘发现的卡点，可以回到下一轮变题练习。
 
-例如，“完成 10 条内部题评测”说明工作范围；“预计每月节省 20 小时”仍是测算。
-它们都不能直接改成“准确率提升”或“实际降本”。[五组同材料改写对照](cases/experiences/resume-positioning/example.md)
+**谈薪时 · 先对齐条件，再演练回应。**<br>
+“HR 开始问预期了，先判断阶段，再扮 HR 陪我练一句。”区分预期沟通与 Offer 协商，
+核对固定收入、浮动奖金和条件；私有底线不进入外发草稿，草稿由本人发送。
 
-再导出单栏简历：基础版保留独立日期行，精排版将日期与标题对齐，使用深墨绿标题、铜色细节与可选照片空位。两版都保留可编辑源码、来源与实际验收。
-
-<p align="center">
-  <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.pdf">
-    <img src="benchmark/journey-20261021/artifacts/editorial-zh/page-1.png" width="420" alt="实际编译的精排合成简历：照片空位、双实习和多项目">
-  </a>
-  <br>
-  <sub>实际编译的精排合成样例 · 已留照片位 · 点击查看 PDF</sub>
-</p>
-
-<details>
-<summary>复制简历导出请求</summary>
-
-```text
-按这份 JD 整理中文单栏简历，优先一页；使用精排版，预留照片位。
-保留真实贡献，说明重要改写与删留；普通润色直接完成。
-导出 LaTeX 源码和纯文本到我指定的新私有目录。
-本机有 XeLaTeX 时再编译 PDF，分别说明内容、编译、文字层和页面检查结果。
-```
-
-</details>
-
-| 接下来想做什么 | 打开哪个文件 |
-| --- | --- |
-| 复制或继续改内容，不使用 LaTeX | **`resume.txt`**，可粘贴到 Word 等编辑器；它是纯文本，不是 Word 文档 |
-| 调整 LaTeX 排版 | **`resume.tex`**，用 TeX 编辑器打开 |
-| 查看或投递 PDF | 实际生成且检查后的 **`resume.pdf`**，同时查看交付说明 |
-
-简历、面试准备、沟通草稿和接续文件统一写入 Git 仓库与 Skill 安装目录之外的私有位置，拒绝经符号链接或目录联接写出。
-
-来源数据和验收 JSON 作为次要查验材料保留。没有编译器时仍可交付源码和纯文本，PDF 页数与版面保持未验证。
-
-[两页样例](benchmark/resume-layout-20261020/artifacts/two-page-zh/resume.pdf) ·
-[长链接样例](benchmark/resume-layout-20261020/artifacts/links-mixed/resume.pdf) ·
-[实际验收](documentation/RESUME_ITERATION_EVAL.md)（均为虚构材料）
-
-<details>
-<summary>编译与自检 · 文件存放 · 检查边界</summary>
-
-源码导出不需要 LaTeX；PDF 编译需要本机 XeLaTeX、CTEX/Fandol、geometry、hyperref 及其依赖；精排版另需 fontspec、xcolor 和 graphicx。
-环境不确定时，在仓库或已安装 Skill 的根目录运行：
-
-```sh
-python scripts/junshi.py resume-doctor
-```
-
-自检会编译中英文合成小样，报告实际工具路径、版本和文字提取结果，不读取你的简历，也不安装组件。
-`READY` 表示小样通过；`NOT_READY` 返回失败检查，源码导出仍可使用。
-
-实际简历另外检查内容、编译日志、文字覆盖、阅读顺序、重复次数及每页版面。
-可选 1 或 2 页，不自动缩字或删除实质内容；未完成的检查明确标注，文字提取不等于通用 ATS 认证。
-个人文件放在仓库和 Skill 安装之外、由你指定的新目录中。
-
-[合成输入与交付示意](cases/experiences/resume-export/example.md) · [完整导出流程](references/practical/resume-export.md)
-
-</details>
+[看三段衔接的合成示例](cases/experiences/interview-loop/example.md)
 
 <a id="journey"></a>
 
-## 05 / 每一轮，都接得上
+## 这一轮结束，下次接得上
 
-![事实底稿、简历版本、实际投递、招聘反馈与下一步](assets/brand/journey-zh.svg)
+**真实材料 → 简历版本 → 实际投递 → 招聘反馈 → 下一步**
 
-- **保留已经发生的。** 已投 R1 不被覆盖；修订生成 R2，补交单独记录，不重复计算初始投递。
-- **让反馈改变具体动作。** 岗位取消调整该机会投入；明确的能力反馈指向练习或补证。
-- **下次回来继续。** 接续卡记录机会、实际版本、已做与未做的动作、反馈来源和下一步。
+已投的 R1 不被新改的 R2 覆盖，补交单独记录。
+旧反馈回填不顶掉当前判断，同刻反馈并列保留。需要继续时，接续卡带回机会、
+实际版本、反馈来源和未完成的一步；你不想总结时，也可以直接停下。
 
 <details>
 <summary>复制下次继续的提示词</summary>
 
 ```text
-使用 $career-junshi，继续我的求职。
-这份是上次的接续卡／记录，这次发生了：……
-对照当时的建议，说明哪些已做、哪些仍未知，给我一个下一步。
-如果需要改简历，保留原投递版本并生成新版；最后更新接续卡。
-先在聊天里处理，不开启长期记忆。
+请用 $career-junshi，继续我的求职。
+这是上次的接续卡／记录，这次发生了：……
+对照当时建议，说明哪些已做、哪些仍未知，给我一个下一步。
+如果改简历，保留原投递版本并生成新版；需要时更新接续卡。
+先在聊天处理，不开启长期记忆。
 ```
+
+![事实底稿、简历版本、实际投递、招聘反馈与下一步](assets/brand/journey-zh.svg)
+
+默认只在聊天中交付；你明确要求私有接续文件后，才生成记录、检查结果与
+`continue.md`，下次主动带回。[接续契约](references/practical/job-search-journey.md) ·
+[合成起点](cases/experiences/journey/request.md) · [实际验收](documentation/JOURNEY_EVAL.md)
 
 </details>
 
-默认只在聊天中交付。明确要求私有接续文件后，才生成记录、检查结果和 `continue.md`；
-下次主动带回即可。不会自动读取个人目录、开启记忆、投递或发消息。
-[完整接续契约](references/practical/job-search-journey.md) · [合成起点](cases/experiences/journey/request.md) · [实际验收](documentation/JOURNEY_EVAL.md)
-
 <a id="evaluation"></a>
 
-## 06 / 验证，留在可查看的地方
+## 能力有展示，验证有记录
 
-| 检查范围 | 已完成 | 查看记录 |
-| --- | --- | --- |
-| 自动化回归 | **286 项：285 通过、1 项权限跳过**，含中文路径、反馈回补与私有记忆边界 | [本轮验收](documentation/HUMAN_LOOP_EVAL.md) |
-| 低负担交互 | 两个新上下文代理，各三场景两轮；另有两个改后边界请求，均为合成试用 | [实际记录](documentation/HUMAN_LOOP_EVAL.md#独立上下文合成试用) |
-| GitHub 首次使用 | 两个新上下文代理、每组两轮；固定公开资料模拟，个人贡献仍待确认 | [本轮记录](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
-| 面试前后闭环 | 模拟、复盘、谈薪三段合成示意；宿主自查，非独立试用 | [整合与验收](documentation/INTERVIEW_COACH_EVAL.md) |
-| 新上下文试用 | 一位无聊天历史子代理、两轮合成请求；发现并收窄一处验证措辞 | [实际记录](benchmark/reliability-20261023/forward-trial.md) |
-| 缺口、开发复盘与复练 | 三组合成流程示意；新增入口通过安装与路由检查 | [本轮记录](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
-| 简历定位与结果性质 | **5 组合成改写对照、2 份实际编译 PDF**；宿主自查，非独立评估 | [本轮记录](documentation/RESUME_POSITIONING_EVAL.md) |
-| 实际 PDF 编译 | **4 个场景、8 页**；三个正例通过，超页负例被拒绝 | [排版压力测试](benchmark/resume-layout-20261020/README.md) |
-| 闭环与精排 | **3 份合成 PDF、3 页**；新上下文子代理完成两轮接续试用 | [闭环验收](documentation/JOURNEY_EVAL.md) |
-| 模拟用户交互 | **5 个合成用户、15 轮实际交互** | [多轮试用](documentation/MOCK_USER_TRIALS.md) |
+| 已做的检查 | 可以查看的证据 |
+| --- | --- |
+| **软件回归** | 最近记录：286 项，285 通过、1 项文件符号链接权限跳过；目录联接已实测。[修复与验收](documentation/HUMAN_LOOP_EVAL.md) |
+| **真实 PDF 编译** | 合成简历实际编译、提取文字和检查页数；含超页失败例。[排版检查](benchmark/resume-layout-20261020/README.md) · [精排与接续](documentation/JOURNEY_EVAL.md) |
+| **合成交互试用** | 新上下文代理、多轮问答与前后对照，保留原始记录和局限。[低负担交互](documentation/HUMAN_LOOP_EVAL.md#独立上下文合成试用) · [GitHub 起步](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
 
-另有 13 个结构化合成基准与有限的新上下文试用。这些结果不能证明提高面试通过率或 Offer 率。
+这些检查**不能证明提高面试通过率、Offer 率或谈薪结果**。合成案例不是真人背书，
+软件回归与对话试用也分别报告。
 
 <details>
-<summary>历史验收与已知限制</summary>
+<summary>全部验证记录与已知限制</summary>
 
-| 范围 | 记录 |
-| --- | --- |
-| 四个核心体验 | [核心体验验收](documentation/EVOLUTION_EVAL.md) |
-| 措辞核对、断点续练、隐藏结果复盘 | [细节验收](documentation/REFINEMENT_EVAL.md) |
-| 简历源码导出与 PDF 检查边界 | [导出验收](documentation/RESUME_EXPORT_EVAL.md) |
-| 投递实验、行动启动、研究外推 | [研究工作流验收](documentation/RESEARCH_EVOLUTION_EVAL.md) |
-| 参考库、结构化面试、Offer 核验 | [参考库验收](documentation/CAREER_LIBRARY_EVAL.md) |
-| 新手与 LaTeX 用户的文件选择 | [交付改进验收](documentation/EXPORT_HANDOFF_EVAL.md) |
-| 改写对照、自检与实际编译 | [本轮验收](documentation/RESUME_ITERATION_EVAL.md) |
+[面试前后流程](documentation/INTERVIEW_COACH_EVAL.md) ·
+[五个合成用户、十五轮交互](documentation/MOCK_USER_TRIALS.md) ·
+[改写定位与结果性质](documentation/RESUME_POSITIONING_EVAL.md) ·
+[五组改写对照](cases/experiences/resume-positioning/example.md) ·
+[缺口、开发复盘与复练](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) ·
+[新上下文可靠性试用](benchmark/reliability-20261023/forward-trial.md) ·
+[四种核心体验](documentation/EVOLUTION_EVAL.md) ·
+[措辞、续练与盲评](documentation/REFINEMENT_EVAL.md) ·
+[简历导出](documentation/RESUME_EXPORT_EVAL.md) ·
+[导出文件选择](documentation/EXPORT_HANDOFF_EVAL.md) ·
+[简历迭代](documentation/RESUME_ITERATION_EVAL.md) ·
+[研究工作流](documentation/RESEARCH_EVOLUTION_EVAL.md) ·
+[参考库与 Offer 核验](documentation/CAREER_LIBRARY_EVAL.md)。
 
-既有冻结案例仍有提取、交接和建议泛化等弱点，未全部重测，也未宣称达到原有真实用户试点门槛。
-当前招聘、薪资与公司信息需新鲜来源，不提供候选人综合分数或录用概率。
-
-[评测协议](documentation/EVAL.md) · [冻结 Holdout](documentation/V023_HOLDOUT_EVAL.md) · [体验方案](documentation/EVOLUTION_PLAN.md)
+另有 13 个结构化合成基准。冻结案例仍有提取、交接和建议泛化等弱点，
+未全部重测，也未宣称达到真实用户试点门槛。
+[评测协议](documentation/EVAL.md) · [冻结 Holdout](documentation/V023_HOLDOUT_EVAL.md)
 
 </details>
 
 <a id="boundaries"></a>
 <a id="library"></a>
 
-## 07 / 事实、记忆与选择的边界
-
-**事实可追溯，记忆由你开启，对外行动由你决定。**
+## 事实可追溯，节奏由你定
 
 <details>
-<summary>没有完整简历、JD 或 LaTeX，也能开始吗？</summary>
+<summary>没有 JD、完整简历或 LaTeX，也能用吗？</summary>
 
-可以。从一段项目经历、一条招聘消息或一个具体问题开始。没有 JD 时，岗位建议仍是待验证假设。
-没有 XeLaTeX 时可交付源码和纯文本，PDF 保持未编译、未验证。
+可以，从一段经历、项目链接或招聘消息开始。没有 JD 时，岗位建议是待验证假设。
+没有 XeLaTeX 时仍可交付源码与纯文本，PDF 保持未编译、未验证。
+
+PDF 编译需要 XeLaTeX、CTEX/Fandol、geometry、hyperref 及其依赖；精排版另需
+fontspec、xcolor、graphicx。运行 `python scripts/junshi.py resume-doctor` 可实际编译
+中英文合成小样检查环境，不读取你的简历、不安装组件。`READY` 只说明小样通过；
+实际简历还需单独验收，文字提取不等于通用 ATS 认证。
+[完整导出流程](references/practical/resume-export.md)
 
 </details>
 
 <details>
-<summary>下次会自动记住我吗？资料存在哪里？</summary>
+<summary>会自动记住我，或替我投递、发消息吗？</summary>
 
-默认不会自动跨聊天记住你。把接续卡或明确要求生成的私有记录带回来即可继续；不会自动读取个人目录。
+默认不会自动跨聊天记住你，也不会自动读取个人目录。把接续卡主动带回来即可继续。
+长期记忆另需同意，支持查看、暂停、撤销和删除；默认不保存完整简历、JD 或聊天。
+数据库位于 Git 与安装目录外，未加密；删除不保证擦除外部备份，宿主仍有自己的数据政策。
 
-长期记忆需要另外同意，默认不保存完整简历、JD 或聊天，支持查看、暂停、撤销与删除。
-本地数据库未加密，删除不保证擦除外部备份；对话材料仍受宿主数据政策约束。
-
+军师准备材料与草稿，实际投递、发送、谈薪和接受 Offer 由你决定并执行。
 [记忆说明](documentation/MEMORY.md) · [证据契约](documentation/EVIDENCE.md)
 
 </details>
 
 <details>
-<summary>建议依据什么？哪些结论还不能下？</summary>
+<summary>建议有什么依据？哪些结论不能下？</summary>
 
-职业参考库收录 18 条独立研究与官方资料，覆盖八个主题。每条记录阅读深度、适用范围与限制。
-可以直接问：“这个建议有什么依据，哪些情况不适用？”
+[职业参考库](references/knowledge/08-research-and-application.md)按阅读深度、适用范围
+和限制整理研究与官方资料。可以直接问：“这个建议依据什么，哪些情况不适用？”
 
-当前招聘、薪资、公司与个案法律信息需核对新鲜来源。单次沉默或拒绝不足以判断整个职业方向，也不提供候选人综合分数或录用概率。
-
-[职业参考库](references/knowledge/08-research-and-application.md)
-
-</details>
-
-<details>
-<summary>会替我投递、发消息或接受 Offer 吗？</summary>
-
-军师可以准备材料、沟通草稿和下一步行动。实际投递、发消息、谈薪、接受 Offer 与分享由你决定并执行。
-报告默认留在聊天，要文件时再指定目录。现有验证不能证明提高面试或 Offer 率。
+当前招聘、公司、薪资和个案法律信息需新鲜来源；不编造职责、指标或归属。
+单次沉默或拒绝不足以判断职业方向，不提供候选人综合分数或录用概率。
 
 </details>
 
 ---
 
-## 开发与文档
-
-[Skill 入口](SKILL.md) · [任务指南](references) · [合成案例](cases) · [架构](documentation/ARCHITECTURE.md) · [问题与建议](https://github.com/lavine888/Career-Junshi/issues)
-
 <details>
-<summary>开发命令与实现说明</summary>
+<summary>开发者入口与手动验证</summary>
 
-宿主理解材料和互动判断；Python 提供有界的结构化辅助、产物与可选记忆。
-`route --experience` 只选择参考，不会自动运行对话或生成报告。
+[Skill 入口](SKILL.md) · [任务指南](references) · [合成案例](cases) ·
+[架构](documentation/ARCHITECTURE.md) · [问题与建议](https://github.com/lavine888/Career-Junshi/issues)
+
+宿主理解材料并进行互动判断；Python 提供有界的结构化辅助、产物与可选记忆。
+`route --experience` 只选择参考，不自动运行对话或生成报告。
 
 ```sh
 python -m unittest discover -s tests -v
@@ -380,19 +314,21 @@ python scripts/validate_skill.py
 python scripts/benchmark.py run
 python scripts/junshi.py route --mode interview --experience defense
 python scripts/junshi.py sources --topic interview
-python scripts/junshi.py sources --id R7
 ```
 
-[测试](tests) · [提取契约](documentation/CONTEXT_EXTRACTION.md) · [决策契约](documentation/DECISION_INTELLIGENCE.md) · [可选快照集成](documentation/INTEGRATION.md)
+[提取契约](documentation/CONTEXT_EXTRACTION.md) ·
+[决策契约](documentation/DECISION_INTELLIGENCE.md) ·
+[可选快照集成](documentation/INTEGRATION.md)
 
-独立的 [v0.3 Host-First 实验](https://github.com/lavine888/Career-Junshi/tree/experiment/v0.3-host-first)尚未完成，其结果不代表当前版本的架构结论。
+独立的 [v0.3 Host-First 实验](https://github.com/lavine888/Career-Junshi/tree/experiment/v0.3-host-first)
+尚未完成，其结果不代表当前版本的架构结论。
 
 </details>
 
----
-
 <div align="center">
 
-[官网 ↗](https://career-junshi.lavinex.chatgpt.site) · [GitHub Issues](https://github.com/lavine888/Career-Junshi/issues) · [MIT](LICENSE) · [回到顶部 ↑](#top)
+[开始这一轮 ↑](#start) &nbsp; · &nbsp; [官网 ↗](https://career-junshi.lavinex.chatgpt.site) &nbsp; · &nbsp; [GitHub Issues](https://github.com/lavine888/Career-Junshi/issues)
+
+<sub>[MIT](LICENSE) · Python 3.10+ · [English](README_EN.md) · [回到顶部](#top)</sub>
 
 </div>
