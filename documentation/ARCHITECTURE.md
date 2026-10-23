@@ -133,3 +133,16 @@ practicals. It reuses the evidence substrate and targets a small initial result
 without a new CLI mode, candidate schema or mandatory JD search. Public project
 scope and personal attribution remain distinct. Actual candidate-derived trials
 stay outside the repository; only synthetic walkthroughs enter public examples.
+
+Adaptive interview coaching is a host-led replacement for the ordinary interview
+practical. Coached drills, story retrieval, whole mocks and transcript reviews
+share the claim ledger and optional existing checkpoint. A mode switch is explicit;
+whole mocks defer feedback. No new state store, scoring API or CLI mode is added.
+The added upstream license is a required runtime resource.
+
+The interview loop has three user-facing stages: preparation/simulation, actual
+interview debrief and compensation alignment/negotiation. A recap without a
+transcript remains usable and self-reported. Compensation begins from the actual
+hiring stage; completing an interview does not establish an offer. Each handoff
+carries only relevant claims, actual observations and terms into the existing
+opportunity/checkpoint, without automatic persistence or messages.

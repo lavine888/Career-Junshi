@@ -133,6 +133,20 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 [守城案例](cases/experiences/defense/example.md) · [岗位表达](cases/experiences/role-translation/example.md) ·
 [补证冲刺](cases/experiences/proof-sprint/example.md) · [决策复盘](cases/experiences/decision-review/example.md)
 
+### 面试前后，接着用
+
+| 阶段 | 直接这样说 | 本轮带走什么 |
+| --- | --- | --- |
+| **面试前模拟** | “围绕这个项目模拟 3 题，一次一问，最后再点评。” | 按实际回答追问；逐题纠偏和整场模拟可切换 |
+| **面试复盘** | “刚面完，没有录音。我还记得这道追问，帮我复盘。” | 分开实际问答、本人感受和明确反馈，选一个下一轮练习点 |
+| **面后谈薪** | “HR 开始问预期了，先帮我判断阶段，再陪我练回应。” | 区分预期沟通与 Offer 协商，核对薪酬口径，给请求和备选话术 |
+
+不知道该用哪段经历时，可以先练“选一个事件、说一句开场”，不用凑齐故事库。
+三段沿用同一机会与事实记录；复盘可以回到下一轮模拟，谈薪也不把面试结束当成已拿 Offer。
+草稿由本人发送，默认不写文件或开启记忆。
+
+[看三段衔接的合成示例](cases/experiences/interview-loop/example.md)。
+
 <details>
 <summary>展开看：更多请求与进阶用法</summary>
 
@@ -267,6 +281,7 @@ python scripts/junshi.py resume-doctor
 | --- | --- | --- |
 | 自动化回归 | **275 项测试**，含时间回补、安装链接与私有输出边界 | [本轮验收](documentation/RELIABILITY_EVAL.md) |
 | GitHub 首次使用 | 两个新上下文代理、每组两轮；固定公开资料模拟，个人贡献仍待确认 | [本轮记录](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
+| 面试前后闭环 | 模拟、复盘、谈薪三段合成示意；宿主自查，非独立试用 | [整合与验收](documentation/INTERVIEW_COACH_EVAL.md) |
 | 新上下文试用 | 一位无聊天历史子代理、两轮合成请求；发现并收窄一处验证措辞 | [实际记录](benchmark/reliability-20261023/forward-trial.md) |
 | 缺口、开发复盘与复练 | 三组合成流程示意；新增入口通过安装与路由检查 | [本轮记录](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
 | 简历定位与结果性质 | **5 组合成改写对照、2 份实际编译 PDF**；宿主自查，非独立评估 | [本轮记录](documentation/RESUME_POSITIONING_EVAL.md) |

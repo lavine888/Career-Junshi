@@ -25,3 +25,8 @@ practical with [structured-interview](structured-interview.md).
 For requested re-practice of a recorded gap, replace this practical with
 [interview-retry](interview-retry.md). It compares actual answers using a changed
 case; improved explanation does not verify the underlying career claim.
+
+For adaptive coached drills, question-to-story retrieval, a whole mock or review
+of supplied interview text, replace this practical with
+[interview-coaching](interview-coaching.md). A practice request need not inherit the
+whole tonight-preparation plan; whole mocks defer coaching until their end.

@@ -4,6 +4,10 @@ Use for a requested job-specific mock interview or question-design task. This
 adds a stable practice criterion to the user's actual JD and claims; it is not a
 validated selection instrument, an employer's hidden rubric or a hiring forecast.
 
+For a whole mock, story-retrieval exercise or supplied transcript review, replace
+this practical with [interview-coaching](interview-coaching.md). In a whole mock,
+feedback comes at the end; the per-answer feedback below belongs to coached drills.
+
 ## Choose a criterion before hearing the answer
 
 Reuse the provided JD, level, interview stage and time. Choose one material

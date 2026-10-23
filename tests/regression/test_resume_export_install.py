@@ -62,9 +62,11 @@ class InstalledResumeExportTests(unittest.TestCase):
     def test_installed_template_and_license_are_required_resources(self):
         with tempfile.TemporaryDirectory() as temp:
             target = install(Path(temp) / "career-junshi")
-            for name in ("assets/resume/single-column.tex", "documentation/licenses/ai-job-search.txt"):
+            for name in ("assets/resume/single-column.tex", "documentation/licenses/ai-job-search.txt",
+                         "documentation/licenses/interview-coach-skill.txt"):
                 path = target / name
                 data = path.read_bytes()
+                self.assertEqual(data, (ROOT / name).read_bytes())
                 path.unlink()
                 try:
                     self.assertIn("Missing required file: " + name, validate(target, runtime_only=True))

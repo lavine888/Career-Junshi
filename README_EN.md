@@ -140,6 +140,21 @@ Synthetic walkthroughs, in Chinese: [defense](cases/experiences/defense/example.
 [role translation](cases/experiences/role-translation/example.md) ·
 [evidence sprint](cases/experiences/proof-sprint/example.md) · [decision review](cases/experiences/decision-review/example.md)
 
+### Before and after the interview
+
+| Stage | Ask this | Take away |
+| --- | --- | --- |
+| **Pre-interview mock** | “Run three project questions, one at a time. Debrief at the end.” | Follow-ups based on actual answers; an explicit switch between coaching and a whole mock |
+| **Post-interview review** | “No recording, but I remember this follow-up. Help me review it.” | Separate recalled exchanges, feelings and explicit feedback; choose one next exercise |
+| **Compensation discussion** | “HR asked my expectations. Identify the stage, then rehearse my reply.” | Distinguish expectation alignment from offer negotiation; clarify comparable terms, an ask and a fallback |
+
+If choosing a story is the problem, start with one event cue and one opening line;
+a large storybank is unnecessary. These stages reuse the same opportunity and
+facts. Reviews can lead back to practice; completing an interview does not imply
+an offer. The human sends drafts. Files and memory remain off by default.
+
+[Three-stage synthetic walkthrough, in Chinese](cases/experiences/interview-loop/example.md).
+
 <details>
 <summary>More requests and advanced use</summary>
 
@@ -286,6 +301,7 @@ application sending or messaging.
 | --- | --- | --- |
 | Automated regression | **275 tests**, including backfilled history, package links and private output boundaries | [Current evaluation](documentation/RELIABILITY_EVAL.md) |
 | GitHub first use | Two fresh-context agents, two turns each, using fixed public material; personal contribution remains unconfirmed | [Current record](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
+| Interview loop | Authored simulation, debrief and compensation walkthrough; host review, not an independent trial | [Integration checks](documentation/INTERVIEW_COACH_EVAL.md) |
 | Fresh-context trial | One agent without chat history, two synthetic turns; one verification wording issue found and narrowed | [Actual record](benchmark/reliability-20261023/forward-trial.md) |
 | Gaps, development recap and targeted retry | Three synthetic walkthroughs; new entries checked through installation and routing | [Current record](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) |
 | Resume positioning and result nature | **5 synthetic comparisons, 2 compiled PDFs**; host review, not independent evaluation | [Current record](documentation/RESUME_POSITIONING_EVAL.md) |

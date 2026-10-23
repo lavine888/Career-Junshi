@@ -61,6 +61,27 @@ a fixed two-page requirement, fit scores, job scraping or account integrations.
 The full MIT notice (2026 Mads Lorentzen) is retained in
 [licenses/ai-job-search.txt](licenses/ai-job-search.txt), including installations.
 
+## Interview Coach
+
+[Repository](https://github.com/noamseg/interview-coach-skill), inspected revision
+`634a8dd8689e0420c21e5f0c8ae3cfa9e1a7ab7e` on 2026-10-24.
+Read SKILL.md and LICENSE; inspected selected sections of practice, mock, stories,
+analyze, debrief, salary, negotiate, mode detection, detailed rubrics and story
+mapping. The bounded reading
+does not constitute a full audit of the command library.
+
+Conceptual adaptations: select an exercise from the observed bottleneck,
+distinguish coached drills from end-debrief mocks, retrieve a relevant real event
+before delivering a full story, review transcripts with format-aware units, and
+separate pre-offer compensation alignment from post-offer negotiation.
+Career Junshi's instructions are newly written. It keeps its existing evidence
+levels, one-to-three-reference budget, qualitative observations and consent rules.
+It does not import the command registry, numeric scoring/gates, psychological
+diagnoses, interviewer mind-reading or silent coaching-state writes.
+The full MIT notice (2026 Noam Segal) is retained in
+[licenses/interview-coach-skill.txt](licenses/interview-coach-skill.txt), including
+runtime installations.
+
 ## Career Junshi additions
 
 Career Situation Model; executable career claim guards; five situation playbooks;

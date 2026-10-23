@@ -91,12 +91,13 @@ Offer 缺目标或硬约束时先问，给条件性标准，不按公司名选�
 | 岗位值不值得投、转型、不知道投什么 | [career-decision](references/knowledge/02-career-decision.md)、[jd-analysis](references/practical/jd-analysis.md) |
 | 定位、简历首屏、个人取舍与结果性质 | [evidence-and-claims](references/knowledge/01-evidence-and-claims.md)、[resume](references/practical/resume.md) |
 | 面试临近、项目会被问穿 | evidence-and-claims、[interview](references/practical/interview.md)、[project-defense](references/practical/project-defense.md) |
+| 模拟面试、面后复盘 | [面试教练](references/practical/interview-coaching.md) |
 | HR 未回、流程、拒信、复盘 | [recruiting-process](references/knowledge/03-recruiting-process.md)、[follow-up](references/practical/follow-up.md)；明确拒信时换 [rejection](references/practical/rejection.md) |
 | Offer 比较、谈薪 | career-decision、[offer-evaluation](references/knowledge/06-offer-evaluation.md)、[offer](references/practical/offer.md)；谈薪用 [negotiation](references/practical/negotiation.md) 替换 practical |
 | 记忆授权、查看、更新、结果回流 | [career-memory](references/practical/career-memory.md) |
 
-开发复盘、弱项复练、投递实验、启动卡、结构化面试、Offer核验见 [任务路由](references/practical/00-router.md)。
-脚本只辅助结构化输入；样例与研究不能预测个人录用。
+其他体验见 [任务路由](references/practical/00-router.md)。
+脚本辅助结构化输入；样例不预测录用。
 
 ## Memory and outcomes
 

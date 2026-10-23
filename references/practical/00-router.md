@@ -44,6 +44,9 @@ practical reference within the same 1–3-resource budget:
 | 简历排版 / reviewed role-specific resume to LaTeX and optional PDF | positioning | [resume-export](resume-export.md) |
 | 投递实验 / test one job-search hypothesis within a budget | job, positioning or recruiting | [job-search-experiment](job-search-experiment.md) |
 | 卡点启动 / turn a stuck preparation task into one startable action | job, positioning or interview | [action-start](action-start.md) |
+| 面试前模拟 / adaptive drill, story retrieval or whole mock | interview | [interview-coaching](interview-coaching.md) |
+| 面试复盘 / fresh recap or supplied transcript review | interview | [interview-coaching](interview-coaching.md) |
+| 面后谈薪 / compensation alignment, negotiation or rehearsal | offer or recruiting | [negotiation](negotiation.md) |
 | 结构化面试 / practice one declared JD criterion | interview | [structured-interview](structured-interview.md) |
 | Offer 核验 / check decisive terms or suspicious hiring conditions | offer or recruiting | [offer-check](offer-check.md) |
 
