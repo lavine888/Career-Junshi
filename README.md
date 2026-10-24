@@ -4,7 +4,7 @@
 
 [![求职军师 · Career Junshi：下一程，从真实的你开始。](assets/brand/readme-hero-zh.svg)](#start)
 
-**把真实经历讲清楚，把下一场面试练具体。**
+**先讲清一段项目经历，再练成你自己的话。**
 
 <sub>求职军师 · Career Junshi — 运行在助手中的求职 Skill，从你手边的材料开始。</sub>
 
@@ -124,15 +124,20 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 ### 2. 带来手边的一点材料
 
 ```text
-请用 $career-junshi。我想投【方向】。
-这是我的【简历／项目经历／GitHub 链接】：……
-先给我一个现在能用的结果，再带我做一个小步骤。
-暂时不生成文件，不开启长期记忆。
+请用 $career-junshi。
+这是我的一段项目经历：……
+帮我讲清个人贡献。材料够用时先给一段可用表达，
+再一次只问一个针对性问题，等我回答后改进表达。
+先在聊天中完成，不生成文件、不启用长期记忆。
 ```
 
-没有完整简历也能开始，JD 和截止时间不知道可以留空。
-只有 GitHub 时，先筛项目、给短介绍；个人职责不清楚的部分会继续核实。
-[看项目起步示意](cases/experiences/public-projects/example.md)。
+本轮优先适合：做过项目，但说不清个人贡献、担心被追问的人。
+不用完整简历或 JD；材料不足只问最关键的一件事，够用就先给表达。
+只有 GitHub 也能开始，[看项目起步示意](cases/experiences/public-projects/example.md)。
+方向选择、谈薪、Offer 与记忆等能力仍保留，第一次无需先理解它们。
+
+[五人真人试用说明与轻量对照](documentation/EVAL.md#core-first-use-trial)供邀请者使用；
+目前尚未收集这轮真人结果。
 
 <a id="experiences"></a>
 

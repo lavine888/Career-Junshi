@@ -1,6 +1,6 @@
 interface:
   display_name: "求职军师 · Career Junshi"
-  short_description: "先判断职业局势，再给下一步；用证据守住面试，用反馈修正选择"
-  default_prompt: "请使用 $career-junshi 判断我当前的求职局势，给出首选行动、观察窗口与停止条件。"
+  short_description: "把一段项目经历讲清个人贡献，再通过逐题追问改成自己的表达"
+  default_prompt: "请用 $career-junshi，基于我提供的一段项目经历先给可用表达，再一次只问一题；听我回答后修改表达，不预填个人贡献。"
 policy:
   allow_implicit_invocation: true

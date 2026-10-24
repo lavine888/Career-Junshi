@@ -11,6 +11,11 @@ For a first-time user with public project links and no prepared resume, use
 [public-projects](public-projects.md) instead of this full rewrite workflow.
 Give a small starting result before requesting a full claim account or JD search.
 
+For the first-use “project paragraph → usable expression → one follow-up →
+revised expression” request, use [resume-defense](resume-defense.md) in place of
+this full rewrite workflow. It asks only one decisive missing item if needed,
+then updates the visible wording from the actual answer; no new fact ledger.
+
 ## Recover the contribution before polishing
 
 Use existing claim IDs and source locators. For each experience worth retaining,

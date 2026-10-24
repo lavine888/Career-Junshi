@@ -4,7 +4,7 @@
 
 [![Career Junshi: your next move, grounded in you.](assets/brand/readme-hero-en.svg)](#start)
 
-**Explain your experience clearly. Practise for your next interview.**
+**Start with one project. Clarify your contribution, then say it in your own words.**
 
 <sub>Career Junshi · 求职军师 — a career Skill for your assistant. Start with what you have.</sub>
 
@@ -135,16 +135,22 @@ Memory stays off. Paths containing symlinks or Windows junctions are refused.
 ### 2. Bring something you already have
 
 ```text
-Use $career-junshi. My target is [role direction].
-Here is my [resume / project experience / GitHub link]: ...
-Give me one usable result first, then guide one small next step.
-Do not create files or enable persistent memory yet.
+Use $career-junshi.
+Here is one project experience: ...
+Help me explain my contribution. If there is enough material, draft usable wording first.
+Ask one targeted follow-up, wait for my answer, then revise that wording.
+Stay in chat; do not create files or enable persistent memory.
 ```
 
-A complete resume is unnecessary; leave the JD or deadline blank if unknown.
-With only GitHub, start by selecting a project and drafting an introduction;
-unclear personal responsibilities still need clarification.
-[Project-only starting example, in Chinese](cases/experiences/public-projects/example.md).
+This first-use path is for people with real project experience who find their
+contribution hard to explain or worry about follow-up questions. No full resume
+or JD is required. Ask one decisive missing fact if needed; otherwise draft first.
+[GitHub-only starting example, in Chinese](cases/experiences/public-projects/example.md).
+Role choice, compensation, offers and optional memory remain available without
+being prerequisites for this first session.
+
+[Five-person trial and lightweight comparison, in Chinese](documentation/EVAL.md#core-first-use-trial)
+is for the organizer. No human results have yet been collected for this trial.
 
 <a id="experiences"></a>
 
