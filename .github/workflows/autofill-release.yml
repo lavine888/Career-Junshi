@@ -1,0 +1,51 @@
+name: Publish application companion
+
+on:
+  push:
+    tags:
+      - 'autofill-v*'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autofill-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Match tag to manifest
+        run: |
+          version=$(python3 -c "import json; print(json.load(open('extensions/autofill/manifest.json'))['version'])")
+          test "$GITHUB_REF_NAME" = "autofill-v$version"
+      - name: Prepare pinned public runtime dependencies
+        env:
+          JUNSHI_VENDOR_CACHE: ${{ runner.temp }}/junshi-public-vendor
+        run: python3 extensions/autofill/tools/prepare_vendor.py
+      - name: Package and fingerprint
+        run: |
+          version=$(python3 -c "import json; print(json.load(open('extensions/autofill/manifest.json'))['version'])")
+          python3 extensions/autofill/tools/package_extension.py --output "output/junshi-autofill-$version.zip"
+          cd output
+          sha256sum "junshi-autofill-$version.zip" > "junshi-autofill-$version.zip.sha256"
+      - name: Publish reviewed companion package
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cat > "$RUNNER_TEMP/companion-notes.md" <<'EOF'
+          可选浏览器投递助手：本地 OCR／PDF 填表，支持 DeepSeek、智谱 GLM 与自定义 Chat Completions API。
+
+          下载 ZIP，解压后在 Edge／Chrome 扩展页开启开发人员模式，加载内含 manifest.json 的 junshi-autofill 文件夹。
+          升级前备份记录，更新原加载目录后重新加载，勿先卸载。密钥只在插件内填写，默认仅保存当前浏览器会话。
+
+          默认 API 模式只发字段描述，真实资料值留在本机；发送简历内容与 JD 需主动选择并预览。
+          模型结果不自动填入，开放题逐项确认，最终由本人提交。
+
+          本地合成联调和回归检查通过；尚无真实 DeepSeek／GLM 凭据联调结果，不宣称生成质量或雇主网站兼容性。
+          使用说明：https://github.com/lavine888/Career-Junshi/blob/main/extensions/autofill/README.md
+          EOF
+          gh release create "$GITHUB_REF_NAME" output/*.zip output/*.sha256 --verify-tag --latest=false --title "军师投递助手 $GITHUB_REF_NAME" --notes-file "$RUNNER_TEMP/companion-notes.md"
