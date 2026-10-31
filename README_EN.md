@@ -157,6 +157,8 @@ is for the organizer. No human results have yet been collected for this trial.
 <details>
 <summary>Optional browser companion for repeated application forms</summary>
 
+[Download v0.2.0 with local OCR/PDF assets](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.2.0/junshi-autofill-0.2.0.zip).
+
 [Application companion (Chinese guide)](extensions/autofill/README.md) reads a selected
 resume locally, uses Chinese/English field matching, and supports local image OCR.
 No model API key is required for local mode. Optional DeepSeek/GLM-compatible APIs
