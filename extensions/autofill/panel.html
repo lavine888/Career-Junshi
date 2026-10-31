@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>军师投递助手</title><link rel="stylesheet" href="panel.css"></head>
+<body><header><span class="mark" aria-hidden="true">军</span><div><h1>军师投递助手</h1><p>本地填表 · API 增强可选</p></div></header>
+<main inert>
+<section><div class="step">01 / 本次简历</div><p>选择本次准备投递的版本，识别后确认一次。</p>
+<label class="file">导入简历<input id="resume-file" type="file" accept=".pdf,.json,.txt,.md,.png,.jpg,.jpeg,.webp,.bmp"></label>
+<label class="check"><input id="use-ocr" type="checkbox"> 图片／扫描PDF使用本地中英文OCR</label>
+<p id="resume-meta" class="muted">支持 PDF、图片、文字，以及军师的 resume-data.json。</p>
+<details><summary>检查识别文字与常用字段</summary><textarea id="resume-text" rows="7" aria-label="识别的简历文字"></textarea><p class="muted">OCR可能认错。修改文字会重新生成字段并取消旧方案。</p><div id="facts"></div><button id="reparse" class="secondary">按修改后的文字更新</button></details>
+<button id="confirm-resume" class="secondary">确认这份简历，保存在本机</button>
+</section>
+<section><div class="step">02 / 当前招聘表单</div><p id="page-title" class="muted">回到招聘网页，点击扩展图标打开侧栏。</p>
+<div class="actions"><button id="scan">识别并填入确定项</button><button id="undo" class="secondary">撤销本轮填写</button></div>
+<p class="muted">只处理当前页空白字段；不会点击下一步、勾选协议或提交。</p><div id="field-summary"></div>
+<details id="api-details"><summary>可选 API 增强：DeepSeek／智谱</summary>
+<p class="muted">先本地填写，再用模型处理剩余字段。默认只发字段结构与资料类型，真实资料值留在本机。</p>
+<label>服务商<select id="api-provider"><option value="deepseek">DeepSeek</option><option value="glm">智谱 GLM</option><option value="custom">自定义 OpenAI 兼容接口</option></select></label>
+<label>API 地址<input id="api-endpoint" type="url" value="https://api.deepseek.com" autocomplete="off" spellcheck="false"></label>
+<label>模型名称<input id="api-model" value="deepseek-flash" autocomplete="off" spellcheck="false"></label>
+<label>API Key<input id="api-key" type="password" autocomplete="off" placeholder="只在这里填写，不要发送到聊天" spellcheck="false"></label>
+<label class="check"><input id="api-json" type="checkbox" checked> 使用 JSON 输出模式（不支持时可关闭）</label>
+<label class="check"><input id="api-remember" type="checkbox"> 记住密钥：保存在当前浏览器本地明文；默认只保留本次浏览器会话</label>
+<div class="actions"><button id="api-save" class="secondary">保存配置并授权 API 地址</button><button id="api-test" class="secondary">测试连接（仅合成内容）</button><button id="api-clear" class="secondary">移除 API 配置</button></div>
+<p id="api-state" class="muted">尚未配置。未配置也能使用本地填表和 OCR。</p>
+<p class="muted">测试按钮发送一次真实 API 请求，不含简历，可能产生少量调用费用；不会自动重试。</p>
+<label class="check"><input id="api-content" type="checkbox"> 本次允许发送已确认简历内容和下方 JD，用于复杂事实提取与开放题（可能包含联系方式）</label>
+<button id="api-preview" class="secondary">预览本次 API 请求</button>
+<div id="api-request" hidden><p id="api-scope"></p><details><summary>查看将发送的数据</summary><pre id="api-payload"></pre></details><button id="api-run">发送一次请求，生成待核对方案</button></div>
+</details>
+<details><summary>复杂字段和开放题：交给现有军师</summary><p>不需要新密钥。导出给你正在使用的助手，按军师规则生成方案，再在这里导入。开放题仍需逐项确认。</p>
+<label>岗位说明（可选）<textarea id="jd" rows="3" maxlength="12000" placeholder="粘贴相关JD，帮助军师起草开放题"></textarea></label>
+<button id="export-context" class="secondary">导出给军师</button>
+<label class="file">导入军师填写方案<input id="plan-file" type="file" accept=".json"></label>
+<label>也可以粘贴方案JSON<textarea id="plan-text" rows="4" placeholder="junshi-fill-plan"></textarea></label><button id="load-plan" class="secondary">检查方案</button>
+</details><div id="answers"></div><button id="fill-plan" hidden>填入已确认的方案</button>
+</section>
+<section><div class="step">03 / 留下这次投递</div><div class="grid"><label>公司<input id="company" maxlength="120" placeholder="可稍后补"></label><label>岗位<input id="role" maxlength="160" placeholder="可稍后补"></label></div>
+<label>备注<input id="note" maxlength="600" placeholder="例如：已完成网申，等待回复"></label>
+<label class="check"><input id="used-resume" type="checkbox"> 实际提交的就是当前导入的简历（不确定可不选）</label>
+<div class="actions"><button id="save-job" class="secondary">收藏／保存备注</button><button id="submitted">我已实际提交</button></div>
+<p class="muted">填表不等于投递。提交后再点确认；记录时间与实际提交时间分别保留。</p>
+<label>搜索投递<input id="search" placeholder="公司、岗位"></label><div id="records"></div><button id="backup" class="secondary">导出全部本地记录备份</button><label class="file">恢复投递备份<input id="backup-file" type="file" accept=".json"></label>
+</section>
+<details class="privacy"><summary>本地保存与使用范围</summary><p>简历和投递记录保存在本机，不会自动同步到军师或LavineOS。API只在你点击测试或发送时调用，数据发送到已配置服务商，适用其数据政策；密钥不进入备份或招聘网页。卸载前请备份。证件、工作资格、薪资、协议和未知事实留给本人。自定义下拉、封闭Shadow DOM和跨域iframe可能需要手动处理。</p><button id="clear-data" class="danger">清除本地简历、记录与 API 配置</button></details>
+</main><div id="status" role="status" aria-live="polite">准备就绪</div>
+<script src="vendor/ocr/tesseract.min.js"></script><script type="module" src="panel.mjs"></script></body></html>

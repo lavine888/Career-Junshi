@@ -154,6 +154,21 @@ is for the organizer. No human results have yet been collected for this trial.
 
 <a id="experiences"></a>
 
+<details>
+<summary>Optional browser companion for repeated application forms</summary>
+
+[Application companion (Chinese guide)](extensions/autofill/README.md) reads a selected
+resume locally, uses Chinese/English field matching, and supports local image OCR.
+No model API key is required for local mode. Optional DeepSeek/GLM-compatible APIs
+match field descriptors; sending resume content requires explicit opt-in and preview.
+Model output is reviewed before filling. Complex questions can also be handed to your existing
+assistant and returned as a source-bound plan; generated drafts require review.
+It records a submission only after your confirmation and exports one selected
+application to Junshi's existing context adapter. Install it separately; real
+employer compatibility and application outcomes are not established by fixtures.
+
+</details>
+
 ## Start where you are stuck
 
 | Your situation | Ask this | Take away |

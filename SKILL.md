@@ -48,7 +48,7 @@ FACT / INFERENCE / UNKNOWN。FACT 要保留来源；“用户说 X”不是“X 
 3. 读下面路由的 1–3 份参考，形成一个判断，不拼接多个方法输出。
 4. 给明确首选和依据、不确定性，收束到 1–3 个动作。只展示有帮助的推理字段。
 5. 说明接下来观察什么，什么信号触发继续、停止或转向；结果回来再更新。
-继续求职或回流反馈时，按 [求职接续](references/practical/job-search-journey.md) 关联事实、版本与机会；保留原投递和执行回执，按需给接续卡，默认不写文件或启用记忆。
+续用按 [接续](references/practical/job-search-journey.md) 保留原投版本；填表用 [投递助手](references/practical/application-autofill.md)。默认不写文件或启用记忆。
 
 ### 材料、历史与岗位翻译
 
@@ -82,7 +82,7 @@ FACT / INFERENCE / UNKNOWN。FACT 要保留来源；“用户说 X”不是“X 
 暂停时按需留可复制断点；恢复依据实际记录，不预填答案。已知结果只能普通复盘，不能声称盲评。
 角色表达数量依已给材料，不硬凑三版；缺失 JD 保持职责假设。
 产物可先在聊天给出；用户要求文件时再写入指定目录，不把建议文件名当已生成。
-分享摘要仅按用户选定内容生成待审稿，不默认包含身份或原文，不自动发布。
+分享摘要仅用选定内容生成待审稿，不自动加入身份或发布。
 体验参考替换常规 practical；由宿主执行，脚本只辅助路由。
 
 ## Reference router
@@ -97,12 +97,12 @@ FACT / INFERENCE / UNKNOWN。FACT 要保留来源；“用户说 X”不是“X 
 | Offer 比较、谈薪 | career-decision、[offer-evaluation](references/knowledge/06-offer-evaluation.md)、[offer](references/practical/offer.md)；谈薪用 [negotiation](references/practical/negotiation.md) 替换 practical |
 | 记忆授权、查看、更新、结果回流 | [career-memory](references/practical/career-memory.md) |
 
-其他体验见 [任务路由](references/practical/00-router.md)。
+更多见 [任务路由](references/practical/00-router.md)。
 脚本辅助结构化输入；样例不预测录用。
 
 ## Memory and outcomes
 
-不开记忆也能完整使用。跨聊天记忆先检查状态，明确同意后才写压缩信息；
+跨聊天记忆先检查状态，明确同意后才写压缩信息；
 按当前对象召回，沿用 provenance 与 confidence，不从记忆检索提升可信度。
 脚本在本机用户数据目录存储；不要在公开仓库中建数据库。完整简历、JD、邮件和聊天
 默认不持久保存；仅支持压缩字段。写入成功后才说已保存，失败说明没有保存。

@@ -141,6 +141,20 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 
 <a id="experiences"></a>
 
+<details>
+<summary>官网反复填资料？使用可选的浏览器投递助手</summary>
+
+[军师投递助手](extensions/autofill/README.md)在 Edge / Chrome 本地读取本次简历，
+通过中英文字段匹配填写空白项；图片与扫描 PDF 可使用本地 OCR，**无需模型 API 密钥**。
+可选接 DeepSeek／智谱等 API：默认只发字段结构；发送简历起草需主动选择，模型结果先核对。
+也可导出给现有军师生成方案，导回后本人确认草稿。实际提交后再记录，
+保留原投材料，并将选中记录交回军师继续准备或跟进。
+
+这是需单独安装的可试用附属工具，不承诺所有官网兼容；不自动提交、云同步或开启记忆。
+OCR只读文字，不能替代开放题理解。安装与限制见上方说明。
+
+</details>
+
 ## 从你正卡住的地方进入
 
 | 你现在的处境 | 直接这样说 | 本轮拿到什么 |
