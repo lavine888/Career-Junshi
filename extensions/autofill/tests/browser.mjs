@@ -77,7 +77,9 @@ try{
  await panel.getByRole('button',{name:'确认这份简历，保存在本机',exact:true}).click();
  await panel.waitForFunction(()=>document.getElementById('resume-meta').textContent.includes('已确认'));
  await form.bringToFront();await panel.evaluate(()=>document.getElementById('scan').click());
- await panel.waitForFunction(()=>document.getElementById('status').textContent.startsWith('已填'));
+ // The fixture's known values were already filled through the service worker;
+ // this repeat scan must preserve them and report that nothing new was written.
+ await panel.waitForFunction(()=>document.getElementById('status').textContent.startsWith('本轮没有可自动填写'));
  await panel.bringToFront();await panel.locator('#assistance > summary').click();await panel.getByText('复杂字段和开放题：交给现有军师',{exact:true}).click();
  const contextDownload=panel.waitForEvent('download');await panel.locator('#export-context').click();
  const contextFile=join(out,'junshi-form-context.json');await(await contextDownload).saveAs(contextFile);

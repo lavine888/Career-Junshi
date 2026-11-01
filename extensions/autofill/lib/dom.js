@@ -47,8 +47,9 @@
   }
   async function apply(request){
     if(request.session_id!==session||location.href!==href)throw Error('页面已经变化，请重新识别。');
-    const result=[];
+    const result=[],requestHref=href;
     for(const a of request.answers){
+      if(request.session_id!==session||location.href!==requestHref)throw Error('页面已经变化，请重新识别。');
       const entry=nodes.get(a.field_id),e=entry?.el;
       let reason='';
       if(!e?.isConnected||!visible(e)||e.disabled||e.readOnly||fingerprint(e)!==entry.fp)reason='字段已变化';
@@ -64,16 +65,20 @@
         if(options.length!==1){result.push({id:a.field_id,ok:false,reason:'下拉选项没有唯一精确匹配'});continue;}
         target=options[0].value;
       }
+      // A month control can preserve the supplied year/month of a complete date;
+      // the opposite conversion would fabricate a day and remains disallowed.
+      if(e.type==='month'&&/^\d{4}-\d{2}-\d{2}$/.test(target))target=target.slice(0,7);
       if(e.type==='date'&&!/^\d{4}-\d{2}-\d{2}$/.test(target)){result.push({id:a.field_id,ok:false,reason:'日期缺少精度，未补造日'});continue;}
       if(e.type==='month'&&!/^\d{4}-\d{2}$/.test(target)){result.push({id:a.field_id,ok:false,reason:'月份格式需确认'});continue;}
       const before=val(e);setValue(e,target);
       await new Promise(r=>setTimeout(r,40));
+      if(request.session_id!==session||location.href!==requestHref)throw Error('页面已经变化，请重新识别。');
       const ok=val(e)===target;
-      if(ok){history.push({el:e,before,after:target});e.style.outline='2px solid #4a8874';}
+      if(ok){history.push({el:e,before,after:target,url:requestHref,fp:entry.fp,outline:e.style.outline});e.style.outline='2px solid #4a8874';}
       result.push({id:a.field_id,ok,reason:ok?'已填写':'网页未保留值，请手动检查'});
     }
     return result;
   }
-  function undo(){let restored=0;for(const r of history.splice(0).reverse()){if(r.el.isConnected&&val(r.el)===r.after){setValue(r.el,r.before);r.el.style.outline='';restored++;}}return {restored};}
+  function undo(){let restored=0;for(const r of history.splice(0).reverse()){if(location.href===r.url&&r.el.isConnected&&fingerprint(r.el)===r.fp&&val(r.el)===r.after){setValue(r.el,r.before);r.el.style.outline=r.outline;restored++;}}return {restored};}
   globalThis.JunshiDOM={scan,apply,undo};
 })();

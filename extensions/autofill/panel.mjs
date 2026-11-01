@@ -6,6 +6,7 @@ const $=id=>document.getElementById(id);
 let profile=null,snapshot=null,tabId=null,answers=[],records=[];
 let apiPrepared=null;
 let apiReady=false,canUndo=false,lastFillResults=[];
+let recordPage=null,pendingRecordPage=null,recordAcknowledgedPage='';
 const status=(s,tone='info')=>{$('status').textContent=s;document.querySelector('.feedback').dataset.tone=tone;};
 const show=(tag,text,cls='')=>{const e=document.createElement(tag);e.textContent=text;e.className=cls;return e;};
 // Resolve persisted state before registering an import/save action. An import may
@@ -14,7 +15,42 @@ try{const state=await chrome.storage.local.get(['profile','records']);profile=st
 catch(e){status(e.message);}
 async function save(){await chrome.storage.local.set({profile,records});}
 function bind(id,fn){$(id).addEventListener('click',async()=>{const b=$(id),main=document.querySelector('main'),previousInert=main.inert;main.inert=true;b.disabled=true;b.setAttribute('aria-busy','true');try{await fn();}catch(e){status(e.message,'error');}finally{main.inert=previousInert;b.disabled=false;b.removeAttribute('aria-busy');updateControls();}});}
-async function message(type,data){const r=await chrome.runtime.sendMessage({type,tabId,data});if(!r?.ok)throw Error(r?.error||'无法操作当前表单，请回到网页重新点击扩展。');return r.result;}
+function pageIdentity(page){return page?`${page.tabId}:${safeUrl(page.url)}`:'';}
+function tabPage(tab){if(!tab||!/^https?:\/\//.test(tab.url||''))throw Error('请在招聘网页点击扩展图标，授予本次网页访问权限后重试。');return {tabId:tab.id,url:safeUrl(tab.url),title:(tab.title||'招聘网页').slice(0,200)};}
+async function currentRecordPage(){
+  const [active]=await chrome.tabs.query({active:true,currentWindow:true});
+  if(active?.url?.startsWith(chrome.runtime.getURL(''))){
+    const selected=recordPage?.tabId??tabId;
+    if(selected===null||selected===undefined)throw Error('请先在招聘网页打开助手，或识别一次目标表单。');
+    return tabPage(await chrome.tabs.get(selected));
+  }
+  return tabPage(active);
+}
+async function assertFormTarget(){
+  if(tabId===null)throw Error('请先识别目标招聘表单。');
+  const [active]=await chrome.tabs.query({active:true,currentWindow:true});
+  if(active?.id!==tabId&&!active?.url?.startsWith(chrome.runtime.getURL('')))throw Error('当前网页已切换，请回到目标表单重新识别，旧方案未执行。');
+  const target=await chrome.tabs.get(tabId);
+  if(snapshot?.page&&target.url!==snapshot.page.url)throw Error('招聘网页已变化，请重新识别，旧方案未执行。');
+}
+async function message(type,data){await assertFormTarget();const r=await chrome.runtime.sendMessage({type,tabId,data});if(!r?.ok)throw Error(r?.error||'无法操作当前表单，请回到网页重新点击扩展。');return r.result;}
+function clearRecordDraft(){for(const id of ['company','role','note','jd','plan-text'])$(id).value='';$('used-resume').checked=false;$('api-content').checked=false;}
+function selectRecordPage(page,{clear=false}={}){
+  if(clear)clearRecordDraft();
+  if(pageIdentity(page)!==pageIdentity(recordPage))$('used-resume').checked=false;
+  recordPage=page;pendingRecordPage=null;recordAcknowledgedPage=pageIdentity(page);$('record-source-warning').hidden=true;updateControls();
+}
+function showRecordConflict(page){
+  pendingRecordPage=page;$('used-resume').checked=false;$('record-source-warning').hidden=false;
+  $('record-source-description').textContent=`原岗位：${recordPage.title}。当前网页：${page.title}。提交后的成功页可选择仍记原岗位；换了岗位则改用当前网页。`;
+  updateControls();
+}
+async function refreshRecordPage(){
+  const page=await currentRecordPage();
+  if(!recordPage)selectRecordPage(page);
+  else if(pageIdentity(page)!==pageIdentity(recordPage)&&pageIdentity(page)!==recordAcknowledgedPage)showRecordConflict(page);
+  return page;
+}
 function download(name,value){const blob=new Blob([typeof value==='string'?value:JSON.stringify(value,null,2)],{type:name.endsWith('.json')?'application/json':'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),30000);}
 function renderProfile(){
   $('resume-meta').textContent=profile?`${profile.name} · ${profile.confirmed?'已确认':'待你检查确认'}${profile.ocr?' · OCR识别结果':''}`:'尚未导入简历';
@@ -29,24 +65,26 @@ function renderProfile(){
   $('resume-review').hidden=!profile;$('resume-review').open=!!profile&&!profile.confirmed;
   updateControls();
 }
-$('resume-file').addEventListener('change',async()=>{invalidateAPI();document.querySelector('main').inert=true;try{status('正在读取…');profile=await readResume($('resume-file').files[0],{ocr:$('use-ocr').checked,progress:status});snapshot=null;answers=[];renderAnswers();renderProfile();status('已本地识别，请展开检查文字，然后确认。');}catch(e){status(e.message);}finally{document.querySelector('main').inert=false;}});
-$('resume-text').addEventListener('input',()=>{if(!profile)return;profile.confirmed=false;invalidateAPI();answers=[];renderAnswers();$('resume-meta').textContent=profile.name+' · 文字已修改，请更新并重新确认';updateControls();});
-bind('reparse',async()=>{invalidateAPI();if(!profile)throw Error('请先导入简历。');const text=$('resume-text').value,old=profile;profile=makeProfile(text,{name:old.name+'（文字修订）',sha:await sha256(text),ocr:old.ocr});profile.file_name=old.file_name||old.name;profile.file_sha256=old.file_sha256||old.sha256;snapshot=null;answers=[];renderAnswers();renderProfile();status('已更新填表文字，旧方案已失效；原附件文件指纹保留，请确认资料。');});
+$('resume-file').addEventListener('change',async()=>{invalidateAPI();$('used-resume').checked=false;canUndo=false;document.querySelector('main').inert=true;try{status('正在读取…');profile=await readResume($('resume-file').files[0],{ocr:$('use-ocr').checked,progress:status});snapshot=null;answers=[];lastFillResults=[];renderAnswers();renderProfile();status('已本地识别，请展开检查文字，然后确认。');}catch(e){status(e.message,'error');}finally{document.querySelector('main').inert=false;}});
+$('resume-text').addEventListener('input',()=>{if(!profile)return;profile.confirmed=false;$('used-resume').checked=false;invalidateAPI();answers=[];renderAnswers();$('resume-meta').textContent=profile.name+' · 文字已修改，请更新并重新确认';updateControls();});
+bind('reparse',async()=>{invalidateAPI();if(!profile)throw Error('请先导入简历。');$('used-resume').checked=false;canUndo=false;lastFillResults=[];const text=$('resume-text').value,old=profile;profile=makeProfile(text,{name:old.name+'（文字修订）',sha:await sha256(text),ocr:old.ocr});profile.file_name=old.file_name||old.name;profile.file_sha256=old.file_sha256||old.sha256;snapshot=null;answers=[];renderAnswers();renderProfile();status('已更新填表文字，旧方案已失效；原附件文件指纹保留，请确认资料。');});
 bind('confirm-resume',async()=>{if(!profile)throw Error('请先导入简历。');if($('resume-text').value!==profile.text)throw Error('识别文字已修改，请先点击“按修改后的文字更新”。');profile.confirmed=true;await save();renderProfile();status('这份简历已确认并保存在当前浏览器本机。');});
 bind('scan',async()=>{
   invalidateAPI();
   if(!profile?.confirmed)throw Error('请先确认本次简历。');
   status('正在识别当前页面，填写有来源的空白项…','busy');
   const [tab]=await chrome.tabs.query({active:true,currentWindow:true});tabId=tab.id;
-  snapshot=await message('scan');answers=[];lastFillResults=[];renderAnswers();
+  const selected=tabPage(tab),changed=recordPage&&pageIdentity(recordPage)!==pageIdentity(selected);
+  snapshot=null;answers=[];lastFillResults=[];canUndo=false;$('used-resume').checked=false;
+  snapshot=await message('scan');selectRecordPage(selected,{clear:!!changed});renderAnswers();
   $('page-title').textContent=snapshot.page.title;
   const plan=localPlan(snapshot,profile);answers=validatePlan(plan,snapshot,profile);renderAnswers();
   const result=await message('fill',{session_id:snapshot.session_id,answers});
   for(const r of result){const a=answers.find(x=>x.field_id===r.id);if(a)a.result=r;}
-  reflectFill(result);renderAnswers();$('answer-details').open=false;status(`已填 ${result.filter(r=>r.ok).length} 项。请检查官网；剩余空项可在下方补全。`,'success');
+  reflectFill(result);renderAnswers();reportFill(result);
 });
 bind('undo',async()=>{const result=await message('undo');canUndo=false;invalidateAPI();snapshot=await message('scan',{keepHistory:true});answers=[];lastFillResults=[];renderAnswers();renderFillSummary();status(`已撤销 ${result.restored} 项；你手动改过的内容保留。`,'success');});
-bind('export-context',async()=>{if(!snapshot||!profile?.confirmed)throw Error('先识别当前页并确认简历。');download('junshi-form-context.json',makeHandoff(snapshot,profile,$('jd').value));status('已导出当前表单和必要简历来源。把文件交给现有军师，生成junshi-fill-plan再导入。');});
+bind('export-context',async()=>{if(!snapshot||!profile?.confirmed)throw Error('先识别当前页并确认简历。');await assertFormTarget();download('junshi-form-context.json',makeHandoff(snapshot,profile,$('jd').value));status('已导出当前表单和必要简历来源。把文件交给现有军师，生成junshi-fill-plan再导入。');});
 function loadPlan(raw){
   invalidateAPI();
   if(!snapshot)throw Error('请先识别当前表单。');
@@ -78,17 +116,22 @@ bind('fill-plan',async()=>{
   // Revalidate fact provenance after any UI edits; drafts remain user-reviewed.
   validatePlan({schema_version:'1',kind:'junshi-fill-plan',session_id:snapshot.session_id,resume_sha256:profile.sha256,answers:selected},snapshot,profile);
   const result=await message('fill',{session_id:snapshot.session_id,answers:selected.map(({field_id,value})=>({field_id,value}))});
-  for(const r of result){const a=answers.find(x=>x.field_id===r.id);if(a)a.result=r;}reflectFill(result);renderAnswers();status(`本轮已填 ${result.filter(x=>x.ok).length} 项；请检查官网后自行提交。`,'success');
+  for(const r of result){const a=answers.find(x=>x.field_id===r.id);if(a)a.result=r;}reflectFill(result);renderAnswers();reportFill(result,{plan:true});
 });
 async function record(statusValue){
-  if(!snapshot){const [tab]=await chrome.tabs.query({active:true,currentWindow:true});snapshot={page:{url:safeUrl(tab.url),title:tab.title||''}};}
-  const url=safeUrl(snapshot.page.url),old=records.find(r=>r.url===url);
+  await refreshRecordPage();
+  if(pendingRecordPage)throw Error('网页已变化，请先选择这次记录属于哪个岗位，尚未保存。');
+  const url=safeUrl(recordPage.url),old=records.find(r=>r.url===url);
   const usedProfile=statusValue==='submitted'&&!$('used-resume').checked?null:profile;
-  const updated=makeRecord(old,snapshot,usedProfile,{company:$('company').value,role:$('role').value,status:statusValue,note:$('note').value});
+  const updated=makeRecord(old,{page:recordPage},usedProfile,{company:$('company').value,role:$('role').value,status:statusValue,note:$('note').value});
   if(old)records[records.indexOf(old)]=updated;else records.unshift(updated);
-  await save();renderRecords();$('record-editor').open=false;status(statusValue==='submitted'?'已记下你的实际投递确认；未把记录时间当作提交时间。':'已收藏，没有标为已投递。','success');
+  await save();renderRecords();$('record-editor').open=false;$('used-resume').checked=false;
+  status(statusValue==='submitted'?'已记下你的实际投递确认；未把记录时间当作提交时间。':updated.events.some(e=>e.status==='submitted')?'备注已保存，原投递状态保留。':'已收藏，没有标为已投递。','success');
 }
 bind('save-job',()=>record('saved'));bind('submitted',()=>record('submitted'));
+bind('refresh-record-source',async()=>{await refreshRecordPage();status(pendingRecordPage?'网页已变化，请选择这次记录属于哪个岗位。':'已核对当前记录来源，保存前仍会检查网页。');});
+bind('record-source-keep',()=>{if(!pendingRecordPage)throw Error('没有待核对的网页变化。');recordAcknowledgedPage=pageIdentity(pendingRecordPage);pendingRecordPage=null;$('record-source-warning').hidden=true;status('仍记录原岗位；请重新核对实际使用的简历后保存。');});
+bind('record-source-current',()=>{if(!pendingRecordPage)throw Error('没有待核对的网页变化。');const page=pendingRecordPage;snapshot=null;answers=[];lastFillResults=[];canUndo=false;invalidateAPI();selectRecordPage(page,{clear:true});renderAnswers();status('已改用当前网页，旧岗位资料与简历使用确认已清空。');});
 const statusNames={saved:'收藏未投',submitted:'已投递',interview:'面试',rejected:'明确拒绝',offer:'Offer',withdrawn:'撤回'};
 function renderRecords(){
   const search=$('search').value.trim().toLowerCase();$('records').replaceChildren();
@@ -123,7 +166,7 @@ $('backup-file').addEventListener('change',async()=>{try{
   let added=0;for(const r of incoming)if(!records.some(x=>x.id===r.id||x.url===r.url)){records.push(r);added++;}
   await save();renderRecords();status(`恢复 ${added} 条，已有同ID/链接的记录保留，未覆盖。`);
 }catch(e){status(e.message);}});
-bind('clear-data',async()=>{if(!confirm('清除当前浏览器保存的简历、投递记录与 API 配置？请先导出备份。'))return;await chrome.storage.local.remove(['profile','records']);await removeAPI(chrome.storage);invalidateAPI();profile=null;snapshot=null;answers=[];records=[];renderProfile();renderAnswers();renderRecords();await renderAPIState();status('已清除本地数据与密钥；浏览器站点授权和已下载备份可另行管理。');});
+bind('clear-data',async()=>{if(!confirm('清除当前浏览器保存的简历、投递记录与 API 配置？请先导出备份。'))return;await chrome.storage.local.remove(['profile','records']);await removeAPI(chrome.storage);invalidateAPI();clearRecordDraft();profile=null;snapshot=null;tabId=null;recordPage=null;pendingRecordPage=null;recordAcknowledgedPage='';$('record-source-warning').hidden=true;canUndo=false;lastFillResults=[];answers=[];records=[];renderProfile();renderAnswers();renderRecords();await renderAPIState();status('已清除本地数据与密钥；浏览器站点授权和已下载备份可另行管理。');});
 function invalidateAPI(){apiPrepared=null;$('api-request').hidden=true;$('api-payload').textContent='';}
 function apiInputs(){return apiConfig({provider:$('api-provider').value,endpoint:$('api-endpoint').value,model:$('api-model').value,jsonMode:$('api-json').checked,rememberKey:$('api-remember').checked});}
 async function renderAPIState(){
@@ -176,6 +219,7 @@ bind('api-preview',async()=>{
 });
 bind('api-run',async()=>{
   const prepared=apiPrepared;if(!prepared||prepared.sha!==profile?.sha256||prepared.session!==snapshot?.session_id)throw Error('资料或表单已变化，请重新预览。');
+  await assertFormTarget();
   document.querySelector('main').inert=true;status('正在请求模型，最多等待25秒，不自动重试…');
   try{
     const r=await chrome.runtime.sendMessage({type:'api-generate',data:{endpoint:prepared.config.endpoint,model:prepared.config.model,context:prepared.context}});
@@ -199,7 +243,9 @@ function updateControls(){
   $('scan-hint').textContent=profile?.confirmed?'准备好了。点击上方按钮，填写官网当前页。':'先导入并确认简历，即可开始填写。';
   const hasPage=Array.isArray(snapshot?.fields);$('assistance').hidden=!hasPage;$('continue-record').hidden=!hasPage;
   $('api-preview').disabled=!profile?.confirmed||!hasPage||!apiReady;
-  $('record-page').textContent=snapshot?.page?.title?`本次记录来源：${snapshot.page.title}`:'在招聘官网打开助手，保存当前岗位。';
+  $('record-page').textContent=recordPage?`${recordPage.title}\n${new URL(recordPage.url).host}`:'请先读取当前招聘网页';
+  $('used-resume').disabled=!profile;$('used-resume-name').textContent=profile?`${profile.file_name||profile.name}；不确定可不选，原投版本保持未知。`:'尚未导入。未选择时，原投版本保持未知。';
+  $('save-job').disabled=!!pendingRecordPage;$('submitted').disabled=!!pendingRecordPage;
   $('page-title').textContent=snapshot?.page?.title||'打开招聘官网的申请表单';
   renderFillSummary();
   updateAnswerAction();
@@ -209,6 +255,13 @@ function reflectFill(result){
   lastFillResults.push(...result);canUndo=canUndo||result.some(r=>r.ok);
   for(const r of result)if(r.ok){const f=snapshot.fields.find(f=>f.id===r.id);if(f)f.filled=true;}
   renderFillSummary();
+}
+function reportFill(result,{plan=false}={}){
+  const filled=result.filter(r=>r.ok).length,failed=result.length-filled;
+  $('answer-details').open=failed>0||plan;
+  if(failed){status(`已填 ${filled} 项，另有 ${failed} 项未完成；展开的明细说明了原因。`,filled?'info':'error');return;}
+  if(!filled){status('本轮没有可自动填写的空白项。请检查官网，或补充资料后重试。');return;}
+  status(`${plan?'本轮已填':'已填'} ${filled} 项。请检查官网；剩余空项可在下方补全。`,'success');
 }
 function renderFillSummary(){
   const fields=snapshot?.fields;$('field-summary').hidden=!fields;
@@ -227,6 +280,7 @@ function activatePanel(name){
   if(!['fill','records','settings'].includes(name))return;
   for(const tab of document.querySelectorAll('[role=tab]')){const selected=tab.dataset.openPanel===name;tab.setAttribute('aria-selected',String(selected));tab.tabIndex=selected?0:-1;$('panel-'+tab.dataset.openPanel).hidden=!selected;}
   document.querySelector('main').scrollTop=0;
+  if(name==='records'&&recordPage)refreshRecordPage().catch(e=>status(e.message,'error'));
 }
 for(const button of document.querySelectorAll('[data-open-panel]'))button.addEventListener('click',()=>activatePanel(button.dataset.openPanel));
 document.querySelector('[role=tablist]').addEventListener('keydown',event=>{

@@ -30,7 +30,7 @@ python extensions/autofill/tools/package_extension.py --output /private/junshi-a
 ```
 
 发行包包含本地组件和许可证，不包含个人简历、投递记录或浏览器资料。
-从 0.1.0／0.2.0 升级：先备份记录，把新版本文件更新到原先加载的文件夹，再到浏览器扩展页
+从旧版本升级：先备份记录，把新版本文件更新到原先加载的文件夹，再到浏览器扩展页
 对现有扩展点击“重新加载”。若换加载目录，可能成为独立扩展，需恢复备份并重新导入简历。
 不要先卸载，以免丢失记录；重新加载后会话密钥需要重填。
 
@@ -48,6 +48,15 @@ python extensions/autofill/tools/package_extension.py --output /private/junshi-a
    “撤销本轮填写”只撤销仍等于插件填入值的字段，保留本人随后改过的内容。
 5. 本人实际提交后，进入“记录”，点击“我已实际提交”。只填表或打开成功页面不会自动算投递。
    招聘进展可在记录卡片的“更新进展”内填写；备份与恢复位于记录页底部。
+
+填写失败时会自动展开明细，区分已填与未完成，不把零成功显示成完成。
+多所学校但网页缺少明确分组时，不默认取第一所；缺少某段专业不会让后一段前移。
+提供完整日期就保留已有精度，只有年月时不会补造日。
+
+“记录”会显示这条记录属于哪个网页。换了页面后，保存前必须选择“仍记原岗位”或
+“改用当前网页”：提交跳到通用成功页可以保留原岗位；换了岗位则选当前网页，旧公司、
+岗位、备注、JD 和简历使用确认会清空。切换活动网页或 URL 后，旧方案不能继续填入。
+导入或修改简历、重新识别表单都会取消“实际提交的就是这份简历”，需要本人重新核对。
 
 ## 可选：接入国内模型 API
 
@@ -124,6 +133,8 @@ python scripts/junshi.py import-context --input /private/junshi-career-context.j
 
 核心与 API 用例：`node --test extensions/autofill/tests/core.test.mjs extensions/autofill/tests/api.test.mjs`。
 浏览器验收脚本：`extensions/autofill/tests/browser.mjs`（使用本机 Playwright 和隔离浏览器）。
+聚焦回归：`tests/dom-browser.mjs` 验证跨页面写入／撤销与日期控件；
+`tests/state-browser.mjs` 验证记录归属、确认状态和失败提示，路径均相对于本扩展目录。
 API 浏览器联调：`extensions/autofill/tests/api-browser.mjs`，真实扩展向本机 HTTP 合成服务发请求，
 核对默认不发简历值、内容模式、逐项审稿、错误与密钥清理；不冒充真实 DeepSeek / GLM 调用。
 用例是合成资料，不证明真实招聘系统接收或面试结果。

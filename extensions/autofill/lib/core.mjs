@@ -22,18 +22,20 @@ const ALIASES = {
 export function keyFor(field) {
   if (blocked([field.label,field.name,field.placeholder,field.autocomplete].join(' '))) return null;
   const hints = [field.label, field.autocomplete, field.name, field.placeholder].filter(Boolean).map(norm);
-  if (field.autocomplete === 'name') return 'name';
-  if (field.autocomplete === 'email') return 'email';
-  if (field.autocomplete === 'tel') return 'phone';
+  // Autocomplete is another hint, not permission to override a conflicting label.
   const keys = Object.entries(ALIASES).filter(([, aliases]) => hints.some(h => aliases.includes(h))).map(([key]) => key);
   return [...new Set(keys)].length === 1 ? keys[0] : null;
 }
 export function safeUrl(raw) {
   const u = new URL(raw);
   if (!['http:', 'https:'].includes(u.protocol) || u.username || u.password) throw Error('请选择普通招聘网页。');
-  for (const k of [...u.searchParams.keys()]) if (/token|secret|session|signature|auth|password|^code$|^utm_|gclid|fbclid/i.test(k)) u.searchParams.delete(k);
-  // Preserve SPA routes and requisition IDs. Drop a sensitive hash, never all hashes.
-  if (/token=|password=|session=|secret=|authorization=/i.test(u.hash)) u.hash = '';
+  const strip=params=>{let changed=false;for(const k of [...params.keys()])if(/token|secret|session|signature|auth|password|^code$|^utm_|gclid|fbclid/i.test(k)){params.delete(k);changed=true;}return changed;};
+  strip(u.searchParams);
+  // A SPA may carry both its job identity and credentials in the fragment. Strip
+  // only credential parameters, including percent-encoded keys, not the route.
+  const hash=u.hash.slice(1),query=hash.indexOf('?');
+  if(query>=0){const params=new URLSearchParams(hash.slice(query+1));if(strip(params))u.hash=hash.slice(0,query)+(params.size?'?'+params.toString():'');}
+  else if(hash.includes('=')){const params=new URLSearchParams(hash);if(strip(params))u.hash=params.toString();}
   u.searchParams.sort();
   return u.href;
 }
@@ -44,6 +46,15 @@ export async function sha256(value) {
 export function makeProfile(text, {name='', sha='', structured=null, ocr=false}={}) {
   if (typeof text !== 'string' || !text.trim() || text.length > 60000) throw Error('请选择可读取的简历，文字不超过60000字。');
   const facts=[];
+  const groupCounts={education:0,project:0,work:0};
+  function dateValue(raw){
+    const parts=raw.split(/[.\/-]/),year=Number(parts[0]),month=Number(parts[1]);
+    if(month<1||month>12)return null;
+    const value=parts[0]+'-'+String(month).padStart(2,'0');
+    if(parts.length===2)return value;
+    const day=Number(parts[2]),full=value+'-'+String(day).padStart(2,'0'),date=new Date(full+'T00:00:00Z');
+    return date.getUTCFullYear()===year&&date.getUTCMonth()===month-1&&date.getUTCDate()===day?full:null;
+  }
   function add(key,value,group='',index=0) { if (String(value??'').trim()) facts.push({id:'s'+(facts.length+1),key,value:String(value).trim(),group,index}); }
   if (structured?.schema_version === '1' && Array.isArray(structured.sections)) {
     add('name',structured.name);
@@ -53,16 +64,17 @@ export function makeProfile(text, {name='', sha='', structured=null, ocr=false}=
     add('github', contacts.find(c=>/^https:\/\/github\.com\/[^/\s]+\/?$/.test(c)));
     for (const section of structured.sections) {
       const edu=/教育|学历|education/i.test(section.title), project=/项目|project/i.test(section.title), work=/工作|实习|experience/i.test(section.title)&&!project;
-      (section.entries||[]).forEach((e,index)=>{
+      (section.entries||[]).forEach(e=>{
         const group=edu?'education':project?'project':work?'work':'';
         if (!group) return;
+        const index=groupCounts[group]++;
         add(edu?'school':project?'project':'company',e.title,group,index);
         if (edu) add('major',e.subtitle,group,index);
         else add(project?'role':'title',e.subtitle,group,index);
         add(project?'project_description':'contribution',(e.bullets||[]).filter(b=>b.confidence!=='PLANNED').map(b=>b.text).join('\n'),group,index);
-        const dates=String(e.dates||'').match(/\d{4}[.\/-]\d{1,2}/g)||[];
-        if(dates.length>1) {add('start',dates[0].replace(/[.\/]/g,'-'),group,index);add('end',dates[1].replace(/[.\/]/g,'-'),group,index);}
-        else if (dates.length===1 && /预计|毕业|expected|graduat/i.test(e.dates)) add('end',dates[0].replace(/[.\/]/g,'-'),group,index);
+        const dates=(String(e.dates||'').match(/\d{4}[.\/-]\d{1,2}(?:[.\/-]\d{1,2})?(?!\d)/g)||[]).map(dateValue);
+        if(dates.length>1) {add('start',dates[0],group,index);add('end',dates[1],group,index);}
+        else if (dates.length===1 && /预计|毕业|expected|graduat/i.test(e.dates)) add('end',dates[0],group,index);
       });
     }
   } else {
@@ -74,8 +86,16 @@ export function makeProfile(text, {name='', sha='', structured=null, ocr=false}=
     add('email',text.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)?.[0]);
     add('phone',text.match(/(?:手机|电话|mobile|phone)\s*[:：]?\s*(\+?[\d ()-]{10,20})/i)?.[1]);
     add('github',text.match(/https:\/\/github\.com\/[A-Za-z0-9_-]+\/?/i)?.[0]);
-    for(const [key,re] of [['school',/^(?:学校|院校|毕业院校|university|school)\s*[:：]\s*(.+)$/i],['major',/^(?:专业|major)\s*[:：]\s*(.+)$/i],['degree',/^(?:学位|degree)\s*[:：]\s*(.+)$/i]]) {
-      let index=0;for(const line of lines){const m=line.match(re);if(m)add(key,m[1],'education',index++);}
+    const educationFields=[['school',/^(?:学校|院校|毕业院校|university|school)\s*[:：]\s*(.+)$/i],['major',/^(?:专业|major)\s*[:：]\s*(.+)$/i],['degree',/^(?:学位|degree)\s*[:：]\s*(.+)$/i]];
+    const schoolCount=lines.filter(line=>educationFields[0][1].test(line)).length;
+    let schoolIndex=-1;
+    for(const line of lines){
+      const match=educationFields.map(([key,re])=>({key,match:line.match(re)})).find(item=>item.match);
+      if(!match)continue;
+      if(match.key==='school')schoolIndex++;
+      // Keep each following major/degree with its actual school block. If several
+      // schools exist, an orphan field before them has no confirmed association.
+      if(schoolIndex>=0||schoolCount<=1)add(match.key,match.match[1],'education',Math.max(0,schoolIndex));
     }
   }
   // Source chunks allow the existing Junshi host to extract exact facts without new keys.
@@ -90,7 +110,7 @@ export function localPlan(snapshot,profile) {
     const key=keyFor(field);if(!key)continue;
     // An ungrouped repeated field is ambiguous; never stamp the first school twice.
     if(!field.group && snapshot.fields.filter(f=>!f.group&&keyFor(f)===key).length>1)continue;
-    const candidates=profile.facts.filter(f=>f.key===key && (!field.group||!f.group||f.group===field.group) && (f.group ? f.index===field.group_index : true));
+    const candidates=profile.facts.filter(f=>f.key===key && (!field.group||!f.group||f.group===field.group) && (f.group&&field.group ? f.index===field.group_index : true));
     if(candidates.length===1) answers.push({field_id:field.id,value:candidates[0].value,source_ids:[candidates[0].id],kind:'fact'});
   }
   return {schema_version:'1',kind:'junshi-fill-plan',session_id:snapshot.session_id,resume_sha256:profile.sha256,answers};
@@ -106,7 +126,9 @@ export function validatePlan(plan,snapshot,profile) {
     if(!['fact','draft'].includes(a.kind)||typeof a.value!=='string'||!a.value.trim()||a.value.length>6000||!Array.isArray(a.source_ids)||!a.source_ids.length)throw Error('答案或来源格式不正确。');
     const sources=a.source_ids.map(id=>profile.facts.find(f=>f.id===id));
     if(sources.some(s=>!s))throw Error('答案引用了不存在的简历来源。');
-    if(a.kind==='fact' && !sources.some(s=>norm(s.value).includes(norm(a.value))))throw Error('事实答案必须能在简历来源中找到原文。');
+    const supporting=sources.filter(s=>norm(s.value).includes(norm(a.value)));
+    if(a.kind==='fact' && !supporting.length)throw Error('事实答案必须能在简历来源中找到原文。');
+    if(a.kind==='fact' && field.group && supporting.every(s=>s.group&&(s.group!==field.group||s.index!==field.group_index)))throw Error('事实答案引用了不同段经历，请重新匹配。');
     if(a.kind==='fact' && openQuestion(field.label))throw Error('开放题必须作为待确认草稿。');
     if(a.kind==='draft' && !openQuestion(field.label))throw Error('只有开放题接受生成草稿；履历事实不能用生成值替代。');
     return {field_id:a.field_id,value:a.value,source_ids:a.source_ids,kind:a.kind};

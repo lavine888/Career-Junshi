@@ -58,3 +58,35 @@ test('Handoff removes credential parameters and edited filling text retains orig
  const e=makeRecord(null,s,p,{status:'submitted'}).events[0];
  assert.equal(e.resume.name,'synthetic.json');assert.equal(e.resume.sha256,'a'.repeat(64));assert.equal(e.resume.fill_profile_sha256,'b'.repeat(64));
 });
+
+test('A single ungrouped education field cannot choose between multiple supplied schools',()=>{
+ const p=profile(),s=snapshot([field('school','学校')]);
+ assert.deepEqual(localPlan(s,p).answers,[]);
+});
+test('An omitted first major does not shift the second major into the first school',()=>{
+ const p=makeProfile('姓名：林禾\n学校：南城大学\n学校：北城大学\n专业：数据科学',{sha:'a'.repeat(64)});p.confirmed=true;
+ const s=snapshot([field('first','专业','education',0),field('second','专业','education',1)]);
+ assert.deepEqual(localPlan(s,p).answers.map(a=>[a.field_id,a.value]),[['second','数据科学']]);
+});
+test('Separate education sections keep distinct entry indices and supplied date precision',()=>{
+ const structured={schema_version:'1',sections:[{title:'本科教育',entries:[{title:'南城大学',subtitle:'软件工程',dates:'2021.9.3 - 2025.6.30'}]},{title:'硕士教育',entries:[{title:'北城大学',subtitle:'数据科学',dates:'2025.9 - 预计 2027.2 毕业'}]}]};
+ const p=makeProfile('合成教育经历',{structured,sha:'a'.repeat(64)});p.confirmed=true;
+ const s=snapshot([field('first','学校','education',0),field('second','学校','education',1)]);
+ assert.deepEqual(localPlan(s,p).answers.map(a=>a.value),['南城大学','北城大学']);
+ assert.equal(p.facts.find(f=>f.key==='start'&&f.index===0).value,'2021-09-03');
+ assert.equal(p.facts.find(f=>f.key==='end'&&f.index===0).value,'2025-06-30');
+ assert.equal(p.facts.find(f=>f.key==='start'&&f.index===1).value,'2025-09');
+ assert.equal(p.facts.find(f=>f.key==='end'&&f.index===1).value,'2027-02');
+});
+test('Contradictory autocomplete and cross-entry facts cannot override field context',()=>{
+ assert.equal(keyFor({label:'电子邮箱',autocomplete:'name'}),null);
+ const p=profile(),s=snapshot([field('first','学校','education',0)]),wrong=p.facts.find(f=>f.key==='school'&&f.index===1);
+ const plan={schema_version:'1',kind:'junshi-fill-plan',session_id:s.session_id,resume_sha256:p.sha256,answers:[{field_id:'first',value:wrong.value,source_ids:[wrong.id],kind:'fact'}]};
+ assert.throws(()=>validatePlan(plan,s,p),/经历/);
+});
+test('SPA credentials are removed without collapsing distinct job routes',()=>{
+ assert.equal(safeUrl('https://example.com/#/job/22?auth=private&source=campus'),'https://example.com/#/job/22?source=campus');
+ assert.equal(safeUrl('https://example.com/#/job/23?access_token=private'),'https://example.com/#/job/23');
+ assert.equal(safeUrl('https://example.com/#/job/24?%61uth=private'),'https://example.com/#/job/24');
+ assert.equal(safeUrl('https://example.com/#access_token=private'), 'https://example.com/');
+});

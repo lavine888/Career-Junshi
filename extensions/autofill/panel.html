@@ -64,10 +64,11 @@
   <div id="panel-records" role="tabpanel" aria-labelledby="tab-records" tabindex="0" hidden>
     <div class="page-intro"><h2>让每次申请有迹可循。</h2><p id="record-overview">收藏不等于投递，提交后再确认。</p></div>
     <details id="record-editor" class="card record-editor" open><summary>记下当前岗位<svg class="icon"><use href="#i-record"/></svg></summary>
-      <p id="record-page" class="helper">在招聘官网打开助手，保存当前岗位。</p>
+      <div class="record-source"><p class="source-label">这条记录属于</p><p id="record-page">请先读取当前招聘网页</p><button id="refresh-record-source" class="text-button">读取当前网页</button></div>
+      <div id="record-source-warning" class="source-warning" hidden><strong>网页已变化，先核对记录归属</strong><p id="record-source-description"></p><div class="actions"><button id="record-source-keep" class="secondary">仍记原岗位</button><button id="record-source-current" class="primary">改用当前网页</button></div></div>
       <div class="grid"><label>公司<input id="company" maxlength="120" placeholder="可稍后补"></label><label>岗位<input id="role" maxlength="160" placeholder="可稍后补"></label></div>
       <label>备注 <span class="optional">可选</span><input id="note" maxlength="600" placeholder="例如：已完成网申，等待回复"></label>
-      <label class="check"><input id="used-resume" type="checkbox"><span>实际提交的就是当前导入的简历<small>不确定可以不选，原投版本会保留。</small></span></label>
+      <label class="check"><input id="used-resume" type="checkbox"><span>实际提交的就是这份简历<small id="used-resume-name">尚未导入。未选择时，原投版本保持未知。</small></span></label>
       <div class="actions record-actions"><button id="save-job" class="secondary">收藏／保存备注</button><button id="submitted" class="primary">我已实际提交</button></div>
     </details>
     <label class="search-field"><svg class="icon"><use href="#i-fill"/></svg><input id="search" placeholder="搜索公司或岗位" aria-label="搜索投递"></label>
