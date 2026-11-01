@@ -157,8 +157,9 @@ is for the organizer. No human results have yet been collected for this trial.
 <details>
 <summary>Optional browser companion for repeated application forms</summary>
 
-[Download v0.3.0 with local OCR/PDF assets](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.0/junshi-autofill-0.3.0.zip).
+[Download v0.3.2 with local OCR/PDF assets](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.2/junshi-autofill-0.3.2.zip).
 Fill, Records and Settings now have separate views, keeping model configuration out of the daily filling flow.
+Upgrades require reimporting the selected resume to replace outdated parsing; application history stays intact. Changed pages require an explicit record-source choice, and failed fields show their reasons.
 
 [Application companion (Chinese guide)](extensions/autofill/README.md) reads a selected
 resume locally, uses Chinese/English field matching, and supports local image OCR.

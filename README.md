@@ -144,7 +144,9 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 <details>
 <summary>官网反复填资料？使用可选的浏览器投递助手</summary>
 
-[下载 v0.3.0 插件包（含本地 OCR／PDF 组件）](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.0/junshi-autofill-0.3.0.zip)，解压后按下方说明安装。新版分为「填表／记录／设置」，模型配置不再挤占日常填表。
+[下载 v0.3.2 插件包（含本地 OCR／PDF 组件）](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.2/junshi-autofill-0.3.2.zip)，解压后按下方说明安装。新版分为「填表／记录／设置」，模型配置不再挤占日常填表。
+
+旧版升级需要重新导入本次简历，避免沿用旧解析错配；历史投递保留。网页变化后先核对记录归属，填写失败会展开原因。
 
 [军师投递助手](extensions/autofill/README.md)在 Edge / Chrome 本地读取本次简历，
 通过中英文字段匹配填写空白项；图片与扫描 PDF 可使用本地 OCR，**无需模型 API 密钥**。
