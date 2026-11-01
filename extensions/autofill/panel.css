@@ -52,6 +52,7 @@ h3 { margin:0; font-size:14px; font-weight:650; display:flex; align-items:center
 .has-profile .upload-tile { padding:11px 12px; background:#fcfdfb; border-style:solid; border-color:var(--line); }
 .has-profile .upload-icon { width:21px; height:24px; }
 .file-meta { margin:9px 0 0; font-size:12px; color:var(--muted); overflow-wrap:anywhere; }
+.profile-refresh-note { font-size:12px; line-height:1.7; padding:11px; margin:0 0 13px; border:1px solid #ead7b3; border-radius:8px; background:#fff7e7; color:#785c29; }
 .helper { color:var(--muted); font-size:12px; line-height:1.65; margin:8px 0; }
 .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; border:0; overflow:hidden; clip-path:inset(50%); }
 .check { display:flex; align-items:flex-start; gap:8px; font-size:12px; cursor:pointer; margin:13px 0; }

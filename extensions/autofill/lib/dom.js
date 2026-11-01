@@ -1,7 +1,9 @@
 // Native setter/event pattern adapted from wangshen-autofill (MIT).
 // Full upstream notice is included in licenses/wangshen-autofill.txt.
 (() => {
-  if(globalThis.JunshiDOM)return;
+  // Replace helpers left in a tab by an older extension build on the next scan.
+  const version=2;
+  if(globalThis.JunshiDOM?.version===version)return;
   const nodes=new Map(), history=[];
   let session='',href='',seq=0;
   const sensitive=s=>/密码|口令|验证码|身份证|护照|银行卡|信用卡|签证|工作许可|工作资格|薪资|薪酬|期望工资|政治面貌|民族|婚姻|出生|国籍|最高学历|password|passcode|otp|passport|social.security|bank|credit.card|visa|sponsor|work.?authori|salary|compensation|citizenship|nationality|ethnicity|marital|date.?of.?birth|highest.?degree/i.test(s);
@@ -80,5 +82,5 @@
     return result;
   }
   function undo(){let restored=0;for(const r of history.splice(0).reverse()){if(location.href===r.url&&r.el.isConnected&&fingerprint(r.el)===r.fp&&val(r.el)===r.after){setValue(r.el,r.before);r.el.style.outline=r.outline;restored++;}}return {restored};}
-  globalThis.JunshiDOM={scan,apply,undo};
+  globalThis.JunshiDOM={version,scan,apply,undo};
 })();

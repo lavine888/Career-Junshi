@@ -1,4 +1,9 @@
 // Evidence-bound local matching. No provider, network request or secret is needed.
+export const PARSER_REVISION = 2;
+export function needsProfileRefresh(profile) { return !!profile && profile.parser_revision !== PARSER_REVISION; }
+export function assertCurrentProfile(profile) {
+  if(needsProfileRefresh(profile))throw Error('这份简历由旧版本解析，请重新导入原文件，不能直接重新确认。');
+}
 export const norm = v => String(v ?? '').normalize('NFKC').toLowerCase().replace(/[\s_\-：:·|/()（）*.]+/g, '');
 export const blocked = label => /密码|口令|验证码|身份证|护照|银行卡|信用卡|签证|工作许可|工作资格|薪资|薪酬|期望工资|政治面貌|民族|婚姻|出生|国籍|最高学历|password|passcode|otp|passport|social.security|bank|credit.card|visa|sponsor|work.?authori|salary|compensation|citizenship|nationality|ethnicity|marital|date.?of.?birth|highest.?degree/i.test(label);
 export const openQuestion = label => /为什么|为何|选择.*公司|申请理由|自我评价|自我介绍|个人优势|职业规划|自荐|why|motivation|cover.?letter|tell.us|introduce|strength|career.?goal/i.test(label);
@@ -100,10 +105,11 @@ export function makeProfile(text, {name='', sha='', structured=null, ocr=false}=
   }
   // Source chunks allow the existing Junshi host to extract exact facts without new keys.
   for (let i=0;i<text.length;i+=1500) add('source',text.slice(i,i+1500));
-  return {schema_version:'1',name,sha256:sha,file_name:name,file_sha256:sha,text,facts,ocr,confirmed:false};
+  return {schema_version:'1',parser_revision:PARSER_REVISION,name,sha256:sha,file_name:name,file_sha256:sha,text,facts,ocr,confirmed:false};
 }
 export function localPlan(snapshot,profile) {
   const answers=[];
+  assertCurrentProfile(profile);
   if(!profile?.confirmed)throw Error('请先检查并确认这份简历。');
   for(const field of snapshot.fields) {
     if(field.filled || field.blocked || openQuestion(field.label) || !field.supported)continue;
@@ -116,6 +122,7 @@ export function localPlan(snapshot,profile) {
   return {schema_version:'1',kind:'junshi-fill-plan',session_id:snapshot.session_id,resume_sha256:profile.sha256,answers};
 }
 export function validatePlan(plan,snapshot,profile) {
+  assertCurrentProfile(profile);
   if(!profile?.confirmed)throw Error('请先确认简历。');
   if(plan?.schema_version!=='1'||plan.kind!=='junshi-fill-plan'||plan.session_id!==snapshot.session_id||plan.resume_sha256!==profile.sha256||!Array.isArray(plan.answers)||plan.answers.length>150)throw Error('方案不属于本次表单或当前简历，请重新识别。');
   const ids=new Set();
@@ -135,6 +142,7 @@ export function validatePlan(plan,snapshot,profile) {
   });
 }
 export function makeHandoff(snapshot,profile,jd='') {
+  assertCurrentProfile(profile);
   return {schema_version:'1',kind:'junshi-form-context',session_id:snapshot.session_id,resume_sha256:profile.sha256,page:{...snapshot.page,url:safeUrl(snapshot.page.url)},
     fields:snapshot.fields.filter(f=>!f.blocked && f.supported && !f.filled),sources:profile.facts,
     job_description:jd.slice(0,12000),

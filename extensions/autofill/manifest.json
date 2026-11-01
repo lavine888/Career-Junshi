@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "军师投递助手",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "本地简历与OCR填表，可选DeepSeek/智谱等API增强；先预览再填入，提交由本人完成。",
   "minimum_chrome_version": "132",
   "permissions": ["activeTab", "scripting", "storage", "sidePanel"],

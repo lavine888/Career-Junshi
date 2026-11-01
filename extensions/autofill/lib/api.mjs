@@ -1,4 +1,4 @@
-import {blocked,openQuestion,validatePlan} from './core.mjs';
+import {blocked,openQuestion,validatePlan,assertCurrentProfile} from './core.mjs';
 
 export const PRESETS={
   deepseek:{endpoint:'https://api.deepseek.com',model:'deepseek-flash'},
@@ -18,6 +18,7 @@ export function apiConfig(input){
 export const permissionOrigin=config=>new URL(config.endpoint).origin.replace(/:\d+$/,'')+'/*';
 const protectedField=f=>f.blocked||blocked([f.label,f.name,f.placeholder,f.autocomplete].join(' '));
 export function buildAIContext(snapshot,profile,{includeContent=false,jd=''}={}){
+  assertCurrentProfile(profile);
   if(!profile?.confirmed||!Array.isArray(snapshot?.fields))throw Error('请先确认简历并识别当前表单。');
   const fields=snapshot.fields.filter(f=>!f.filled&&f.supported&&!protectedField(f)&&(includeContent||!openQuestion(f.label))).map(f=>({id:f.id,label:f.label,name:f.name,placeholder:f.placeholder,type:f.type,group:f.group,group_index:f.group_index,options:f.options||[],max_length:f.max_length}));
   if(!fields.length)throw Error(includeContent?'没有可交给模型的空白字段。':'没有待匹配的事实字段；如需开放题，可主动勾选发送简历内容。');

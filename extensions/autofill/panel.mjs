@@ -1,4 +1,4 @@
-import {makeProfile,localPlan,validatePlan,makeHandoff,makeRecord,exportSnapshot,safeUrl,sha256} from './lib/core.mjs';
+import {makeProfile,localPlan,validatePlan,makeHandoff,makeRecord,exportSnapshot,safeUrl,sha256,needsProfileRefresh} from './lib/core.mjs';
 import {readResume} from './lib/read-resume.mjs';
 import {PRESETS,apiConfig,permissionOrigin,buildAIContext,resolveAIPlan} from './lib/api.mjs';
 import {readAPI,saveAPI,removeAPI} from './lib/api-settings.mjs';
@@ -11,9 +11,9 @@ const status=(s,tone='info')=>{$('status').textContent=s;document.querySelector(
 const show=(tag,text,cls='')=>{const e=document.createElement(tag);e.textContent=text;e.className=cls;return e;};
 // Resolve persisted state before registering an import/save action. An import may
 // never race a late initial read and be replaced by an old profile or null.
-try{const state=await chrome.storage.local.get(['profile','records']);profile=state.profile||null;records=state.records||[];}
+try{const state=await chrome.storage.local.get(['profile','records']);profile=state.profile||null;records=state.records||[];if(needsProfileRefresh(profile))profile={...profile,confirmed:false};}
 catch(e){status(e.message);}
-async function save(){await chrome.storage.local.set({profile,records});}
+async function save(){const changes={records};if(!needsProfileRefresh(profile))changes.profile=profile;await chrome.storage.local.set(changes);}
 function bind(id,fn){$(id).addEventListener('click',async()=>{const b=$(id),main=document.querySelector('main'),previousInert=main.inert;main.inert=true;b.disabled=true;b.setAttribute('aria-busy','true');try{await fn();}catch(e){status(e.message,'error');}finally{main.inert=previousInert;b.disabled=false;b.removeAttribute('aria-busy');updateControls();}});}
 function pageIdentity(page){return page?`${page.tabId}:${safeUrl(page.url)}`:'';}
 function tabPage(tab){if(!tab||!/^https?:\/\//.test(tab.url||''))throw Error('请在招聘网页点击扩展图标，授予本次网页访问权限后重试。');return {tabId:tab.id,url:safeUrl(tab.url),title:(tab.title||'招聘网页').slice(0,200)};}
@@ -57,18 +57,20 @@ function renderProfile(){
   $('resume-text').value=profile?.text||'';
   const names={name:'姓名',email:'邮箱',phone:'电话',github:'GitHub',school:'学校',major:'专业',degree:'学位',start:'开始时间',end:'结束时间',project:'项目',project_description:'项目描述',role:'担任角色',contribution:'个人贡献',company:'公司',title:'职位'};
   const groups={education:'教育经历',project:'项目经历',work:'工作经历'};
-  const fields=(profile?.facts||[]).filter(f=>f.key!=='source');
+  const legacy=needsProfileRefresh(profile),fields=legacy?[]:(profile?.facts||[]).filter(f=>f.key!=='source');
+  if(legacy)$('resume-meta').textContent=profile.name+' · 旧解析缓存，仅供查看';
+  $('resume-raw').querySelector('summary').textContent=legacy?'查看旧版识别原文':'查看或修正识别原文';
   const factRow=f=>{const row=show('div','','fact-row');row.append(show('dt',`${f.group?`${groups[f.group]||f.group} ${f.index+1} · `:''}${names[f.key]||f.key}`),show('dd',f.value));return row;};
   $('facts').replaceChildren(...fields.slice(0,6).map(factRow));
-  if(profile&&!fields.length)$('facts').append(show('dd','未识别到常用字段，请展开原文核对。'));
+  if(profile&&!fields.length)$('facts').append(show('dd',legacy?'旧字段匹配仅作历史资料，不用于本次填写，请重新导入附件。':'未识别到常用字段，请展开原文核对。'));
   $('extra-facts').hidden=fields.length<=6;$('extra-facts-title').textContent=`查看其他识别字段（${Math.max(0,fields.length-6)} 项）`;$('extra-facts-list').replaceChildren(...fields.slice(6).map(factRow));
   $('resume-review').hidden=!profile;$('resume-review').open=!!profile&&!profile.confirmed;
   updateControls();
 }
 $('resume-file').addEventListener('change',async()=>{invalidateAPI();$('used-resume').checked=false;canUndo=false;document.querySelector('main').inert=true;try{status('正在读取…');profile=await readResume($('resume-file').files[0],{ocr:$('use-ocr').checked,progress:status});snapshot=null;answers=[];lastFillResults=[];renderAnswers();renderProfile();status('已本地识别，请展开检查文字，然后确认。');}catch(e){status(e.message,'error');}finally{document.querySelector('main').inert=false;}});
 $('resume-text').addEventListener('input',()=>{if(!profile)return;profile.confirmed=false;$('used-resume').checked=false;invalidateAPI();answers=[];renderAnswers();$('resume-meta').textContent=profile.name+' · 文字已修改，请更新并重新确认';updateControls();});
-bind('reparse',async()=>{invalidateAPI();if(!profile)throw Error('请先导入简历。');$('used-resume').checked=false;canUndo=false;lastFillResults=[];const text=$('resume-text').value,old=profile;profile=makeProfile(text,{name:old.name+'（文字修订）',sha:await sha256(text),ocr:old.ocr});profile.file_name=old.file_name||old.name;profile.file_sha256=old.file_sha256||old.sha256;snapshot=null;answers=[];renderAnswers();renderProfile();status('已更新填表文字，旧方案已失效；原附件文件指纹保留，请确认资料。');});
-bind('confirm-resume',async()=>{if(!profile)throw Error('请先导入简历。');if($('resume-text').value!==profile.text)throw Error('识别文字已修改，请先点击“按修改后的文字更新”。');profile.confirmed=true;await save();renderProfile();status('这份简历已确认并保存在当前浏览器本机。');});
+bind('reparse',async()=>{invalidateAPI();if(!profile)throw Error('请先导入简历。');if(needsProfileRefresh(profile))throw Error('解析方式已更新，请重新导入原文件，不能直接沿用旧字段。');$('used-resume').checked=false;canUndo=false;lastFillResults=[];const text=$('resume-text').value,old=profile;profile=makeProfile(text,{name:old.name+'（文字修订）',sha:await sha256(text),ocr:old.ocr});profile.file_name=old.file_name||old.name;profile.file_sha256=old.file_sha256||old.sha256;snapshot=null;answers=[];renderAnswers();renderProfile();status('已更新填表文字，旧方案已失效；原附件文件指纹保留，请确认资料。');});
+bind('confirm-resume',async()=>{if(!profile)throw Error('请先导入简历。');if(needsProfileRefresh(profile))throw Error('解析方式已更新，请重新导入原文件。');if($('resume-text').value!==profile.text)throw Error('识别文字已修改，请先点击“按修改后的文字更新”。');profile.confirmed=true;await save();renderProfile();status('这份简历已确认并保存在当前浏览器本机。');});
 bind('scan',async()=>{
   invalidateAPI();
   if(!profile?.confirmed)throw Error('请先确认本次简历。');
@@ -122,7 +124,7 @@ async function record(statusValue){
   await refreshRecordPage();
   if(pendingRecordPage)throw Error('网页已变化，请先选择这次记录属于哪个岗位，尚未保存。');
   const url=safeUrl(recordPage.url),old=records.find(r=>r.url===url);
-  const usedProfile=statusValue==='submitted'&&!$('used-resume').checked?null:profile;
+  const usedProfile=needsProfileRefresh(profile)||(statusValue==='submitted'&&!$('used-resume').checked)?null:profile;
   const updated=makeRecord(old,{page:recordPage},usedProfile,{company:$('company').value,role:$('role').value,status:statusValue,note:$('note').value});
   if(old)records[records.indexOf(old)]=updated;else records.unshift(updated);
   await save();renderRecords();$('record-editor').open=false;$('used-resume').checked=false;
@@ -236,15 +238,18 @@ function updateAnswerAction(){
 }
 function updateControls(){
   $('resume-card').classList.toggle('has-profile',!!profile);
-  $('resume-badge').textContent=profile?(profile.confirmed?'已确认':'待确认'):'未导入';$('resume-badge').className=profile?.confirmed?'badge success':'badge';
+  const legacy=needsProfileRefresh(profile);
+  $('resume-badge').textContent=legacy?'需重新导入':profile?(profile.confirmed?'已确认':'待确认'):'未导入';$('resume-badge').className=legacy?'badge draft':profile?.confirmed?'badge success':'badge';
   $('import-label').textContent=profile?'更换简历':'选择本次简历';$('upload-formats').textContent=profile?'选择本次准备投递的版本':'PDF、图片、文字或军师 JSON';
-  $('confirm-resume').hidden=!profile||profile.confirmed;
+  $('confirm-resume').hidden=!profile||profile.confirmed||legacy;$('confirm-resume').disabled=legacy;
+  $('profile-refresh-note').hidden=!legacy;$('resume-text').readOnly=legacy;$('reparse').disabled=legacy;
   $('scan').disabled=!profile?.confirmed;$('undo').disabled=!canUndo;
   $('scan-hint').textContent=profile?.confirmed?'准备好了。点击上方按钮，填写官网当前页。':'先导入并确认简历，即可开始填写。';
+  if(legacy)$('scan-hint').textContent='解析更新后，请重新导入本次附件；投递历史不受影响。';
   const hasPage=Array.isArray(snapshot?.fields);$('assistance').hidden=!hasPage;$('continue-record').hidden=!hasPage;
   $('api-preview').disabled=!profile?.confirmed||!hasPage||!apiReady;
   $('record-page').textContent=recordPage?`${recordPage.title}\n${new URL(recordPage.url).host}`:'请先读取当前招聘网页';
-  $('used-resume').disabled=!profile;$('used-resume-name').textContent=profile?`${profile.file_name||profile.name}；不确定可不选，原投版本保持未知。`:'尚未导入。未选择时，原投版本保持未知。';
+  $('used-resume').disabled=!profile||legacy;$('used-resume-name').textContent=legacy?'旧简历需重新导入后才能关联本次投递。':profile?`${profile.file_name||profile.name}；不确定可不选，原投版本保持未知。`:'尚未导入。未选择时，原投版本保持未知。';
   $('save-job').disabled=!!pendingRecordPage;$('submitted').disabled=!!pendingRecordPage;
   $('page-title').textContent=snapshot?.page?.title||'打开招聘官网的申请表单';
   renderFillSummary();

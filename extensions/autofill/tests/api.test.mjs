@@ -27,6 +27,11 @@ test('Content mode is explicit and still omits protected or filled fields',()=>{
  assert.deepEqual(context.fields.map(f=>f.id),['f1','f2']);assert.ok(JSON.stringify(context).includes('林禾'));assert.equal(context.job_description,'合成JD');
  profile.confirmed=false;assert.throws(()=>buildAIContext(snapshot,profile));
 });
+test('Legacy cache revisions cannot enter either API mode even if already confirmed',()=>{
+ const {profile,snapshot}=fixtures();delete profile.parser_revision;profile.confirmed=true;const before=JSON.stringify(profile);
+ for(const includeContent of [false,true])assert.throws(()=>buildAIContext(snapshot,profile,{includeContent}),/重新导入原文件/);
+ assert.equal(JSON.stringify(profile),before);
+});
 test('Model matches source IDs; cannot generate a replacement fact, reuse forbidden fields or mix histories',()=>{
  const {profile,snapshot}=fixtures(),context=buildAIContext(snapshot,profile),id=profile.facts.find(s=>s.key==='name').id;
  const result={mappings:[{field_id:'f1',source_id:id}],drafts:[]};assert.equal(resolveAIPlan(result,context,snapshot,profile)[0].value,'林禾');

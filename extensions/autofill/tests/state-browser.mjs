@@ -124,6 +124,40 @@ try{
     await reset('/partial');assert.equal(await form.locator('#name').inputValue(),'');assert.equal(await form.locator('#email').inputValue(),'linhe@example.com');assert.equal(await panel.locator('#answer-details').evaluate(e=>e.open),true);assert.notEqual(await panel.locator('.feedback').getAttribute('data-tone'),'success');assert.match(await panel.locator('#status').textContent(),/需处理|未填|失败|1.*1/);
     await panel.screenshot({path:join(out,'fill-partial.png')});
   });
+  await run('Legacy confirmed cache requires attachment reimport without rewriting stored facts or application history',async()=>{
+    await reset();await recordEditor();await panel.locator('#company').fill('合成历史公司');await panel.locator('#role').fill('合成历史岗位');await panel.locator('#used-resume').check();await panel.locator('#submitted').click();await ready();await waitRecordCount(1);
+    const original=await panel.evaluate(async()=>{
+      const state=await chrome.storage.local.get(['profile','records']);
+      const legacy=structuredClone(state.profile);delete legacy.parser_revision;legacy.confirmed=true;
+      // Deliberately retain a wrong cached association from the pre-upgrade parser.
+      legacy.facts.find(f=>f.key==='major').index=7;
+      await chrome.storage.local.set({profile:legacy,records:state.records});
+      return {profileJSON:JSON.stringify(legacy),recordsJSON:JSON.stringify(state.records)};
+    });
+    await panel.reload();await ready();
+    assert.equal(await panel.locator('#profile-refresh-note').isVisible(),true);
+    assert.equal(await panel.locator('#scan').isDisabled(),true);
+    assert.ok(await panel.locator('#confirm-resume').isHidden()||await panel.locator('#confirm-resume').isDisabled());
+    assert.equal(await panel.locator('#reparse').isDisabled(),true);
+    assert.equal(await panel.locator('#resume-text').evaluate(e=>e.readOnly),true);
+    const stored=()=>panel.evaluate(async()=>{const state=await chrome.storage.local.get(['profile','records']);return {profileJSON:JSON.stringify(state.profile),recordsJSON:JSON.stringify(state.records)};});
+    assert.deepEqual(await stored(),original,'Loading the legacy cache must not persist the in-memory confirmation downgrade');
+    // dispatchEvent deliberately bypasses disabled-button interaction semantics;
+    // the event handler must still reject confirmation/reparse of legacy facts.
+    for(const id of ['confirm-resume','reparse']){
+      await panel.evaluate(id=>document.getElementById(id).dispatchEvent(new MouseEvent('click',{bubbles:true})),id);await ready();
+      assert.deepEqual(await stored(),original,'Programmatic legacy actions must not rewrite cached evidence or receipts');
+    }
+    await panel.screenshot({path:join(out,'legacy-cache-upgrade.png')});
+    await upload(profile1);
+    assert.equal(await panel.locator('#profile-refresh-note').isVisible(),false);assert.equal(await panel.locator('#scan').isDisabled(),true);
+    assert.deepEqual(await stored(),original,'Reimport is not persistence consent until the resume is confirmed');
+    await confirm();assert.equal(await panel.locator('#scan').isDisabled(),false);
+    const refreshed=await panel.evaluate(async()=>chrome.storage.local.get(['profile','records']));
+    assert.equal(refreshed.profile.parser_revision,2);assert.equal(refreshed.profile.confirmed,true);
+    assert.equal(refreshed.profile.facts.find(f=>f.key==='major').index,0);
+    assert.equal(JSON.stringify(refreshed.records),original.recordsJSON,'Reimport must preserve the exact original application records');
+  });
   assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
   const report={cases:outcomes,passed:outcomes.filter(item=>item.passed).length,failed:outcomes.filter(item=>!item.passed).length,limitations:['Synthetic localhost pages and supplied synthetic resume files only','Explicit localhost fixture host permission; production toolbar activation not automated','No live employer or model provider acceptance tested']};
   await writeFile(join(out,'result.json'),JSON.stringify(report,null,2));console.log(JSON.stringify(report));if(report.failed)process.exitCode=1;

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {makeProfile,localPlan,validatePlan,blocked,keyFor,safeUrl,makeRecord,exportSnapshot,makeHandoff} from '../lib/core.mjs';
+import {makeProfile,localPlan,validatePlan,blocked,keyFor,safeUrl,makeRecord,exportSnapshot,makeHandoff,PARSER_REVISION,needsProfileRefresh} from '../lib/core.mjs';
 const source={schema_version:'1',name:'林禾',contacts:['linhe@example.com'],sections:[{title:'教育经历',entries:[{title:'南城大学',subtitle:'软件工程',dates:'2021.09 - 2025.06',bullets:[]},{title:'北城大学',subtitle:'数据科学',dates:'预计 2027.02 毕业',bullets:[]}]},{title:'项目经历',entries:[{title:'团队课程原型',subtitle:'负责评测脚本，服务由队友实现',dates:'',bullets:[{text:'编写内部测试脚本，没有生产用户。',confidence:'SELF_REPORTED'},{text:'计划接入实时服务。',confidence:'PLANNED'}]}]}]};
 function profile(){const p=makeProfile('林禾\n团队课程原型',{structured:source,name:'synthetic.json',sha:'a'.repeat(64)});p.confirmed=true;return p;}
 function field(id,label,group='',index=0){return {id,label,group,group_index:index,supported:true,blocked:false,filled:false};}
@@ -89,4 +89,31 @@ test('SPA credentials are removed without collapsing distinct job routes',()=>{
  assert.equal(safeUrl('https://example.com/#/job/23?access_token=private'),'https://example.com/#/job/23');
  assert.equal(safeUrl('https://example.com/#/job/24?%61uth=private'),'https://example.com/#/job/24');
  assert.equal(safeUrl('https://example.com/#access_token=private'), 'https://example.com/');
+});
+test('Parser revision is separate from schema and retains original attachment provenance',()=>{
+ const p=profile();
+ assert.equal(PARSER_REVISION,2);assert.equal(p.parser_revision,PARSER_REVISION);assert.equal(p.schema_version,'1');
+ assert.equal(p.file_name,'synthetic.json');assert.equal(p.file_sha256,'a'.repeat(64));assert.equal(p.sha256,'a'.repeat(64));
+ assert.equal(needsProfileRefresh(null),false);assert.equal(needsProfileRefresh(p),false);
+ for(const revision of [undefined,1,3,'2'])assert.equal(needsProfileRefresh({...p,parser_revision:revision}),true);
+});
+test('Reconfirming a legacy cache cannot enable filling or handoff and does not rewrite its contents',()=>{
+ const current=profile(),s=snapshot([field('a','姓名')]),plan=localPlan(s,current);
+ const legacy=structuredClone(current);delete legacy.parser_revision;legacy.confirmed=true;
+ const before=JSON.stringify(legacy);
+ assert.throws(()=>localPlan(s,legacy),/重新导入原文件/);
+ assert.throws(()=>validatePlan(plan,s,legacy),/重新导入原文件/);
+ assert.throws(()=>makeHandoff(s,legacy),/重新导入原文件/);
+ assert.equal(JSON.stringify(legacy),before);
+});
+test('Reimport repairs an old major mapping without replacing original submission material',()=>{
+ const text='姓名：林禾\n学校：南城大学\n学校：北城大学\n专业：数据科学';
+ const legacy={schema_version:'1',name:'synthetic.txt',sha256:'a'.repeat(64),file_name:'synthetic.txt',file_sha256:'a'.repeat(64),text,confirmed:true,facts:[{id:'s1',key:'major',value:'数据科学',group:'education',index:0}]};
+ const record=makeRecord(null,snapshot([]),legacy,{status:'submitted'}),before=JSON.stringify(record),legacyBefore=JSON.stringify(legacy);
+ const fresh=makeProfile(legacy.text,{name:legacy.file_name,sha:legacy.file_sha256});
+ assert.equal(fresh.confirmed,false);fresh.confirmed=true;
+ const s=snapshot([field('first','专业','education',0),field('second','专业','education',1)]);
+ assert.deepEqual(localPlan(s,fresh).answers.map(a=>[a.field_id,a.value]),[['second','数据科学']]);
+ assert.equal(fresh.schema_version,'1');assert.equal(fresh.text,text);assert.equal(fresh.file_sha256,legacy.file_sha256);
+ assert.equal(JSON.stringify(record),before);assert.equal(JSON.stringify(legacy),legacyBefore);
 });

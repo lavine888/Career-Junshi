@@ -18,8 +18,8 @@ await new Promise(r=>server.listen(0,'127.0.0.1',r));const url=`http://127.0.0.1
 let browser,page;const passed=[];
 try{
  browser=await chromium.launch({channel:'msedge',headless:true});page=await browser.newPage();
- async function fresh(){await page.goto(url+'/jobA');await page.addScriptTag({path:join(root,'lib/dom.js')});return page.evaluate(()=>JunshiDOM.scan());}
- let snapshot=await fresh();
+ async function fresh({legacy=false}={}){await page.goto(url+'/jobA');if(legacy)await page.evaluate(()=>{globalThis.JunshiDOM={scan(){throw Error('Legacy helper must be replaced');}};});await page.addScriptTag({path:join(root,'lib/dom.js')});return page.evaluate(()=>JunshiDOM.scan());}
+ let snapshot=await fresh({legacy:true});assert.equal(await page.evaluate(()=>JunshiDOM.version),2);passed.push('an older injected helper is replaced after an extension update');
  const p=makeProfile('合成学历',{sha:'a'.repeat(64),structured:{schema_version:'1',sections:[{title:'教育经历',entries:[{title:'南城大学',dates:'2021.9.3 - 2025.6.30'}]}]}});p.confirmed=true;
  await page.evaluate(request=>JunshiDOM.apply(request),{session_id:snapshot.session_id,answers:validatePlan(localPlan(snapshot,p),snapshot,p)});
  assert.equal(await page.locator('#start').inputValue(),'2021-09-03');assert.equal(await page.locator('#end').inputValue(),'2025-06');passed.push('complete dates retain days; month controls use supplied year/month without inventing dates');
