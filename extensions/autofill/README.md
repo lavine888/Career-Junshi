@@ -9,12 +9,19 @@
 
 ## 安装
 
-使用已经准备好 `vendor` 的目录或解压后的发行包。在 Edge 打开
-`edge://extensions`（Chrome 为 `chrome://extensions`），开启开发人员模式，
-点击“加载解压缩的扩展”，选择包含 `manifest.json` 的本目录，再固定扩展图标。
-插件和军师 Skill 分别安装，互不依赖；Skill 安装器不会顺带安装浏览器扩展。
+**直接使用发行包，不需要先配置 Python 或模型 API。**
 
-如果从源码开始，在仓库根目录运行：
+1. [下载 v0.3.2 插件包](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.2/junshi-autofill-0.3.2.zip)，解压并保留 `junshi-autofill` 文件夹。
+2. 打开 `edge://extensions`（Chrome 为 `chrome://extensions`），开启开发人员模式。
+3. 点击“加载解压缩的扩展”，选择包含 `manifest.json` 的 `junshi-autofill` 文件夹，再固定扩展图标。
+
+插件和军师 Skill 分别安装，可以单独使用；Skill 安装器不会顺带安装浏览器扩展。
+安装后直接看[完成第一次填写](#完成第一次填写)；已有旧版请先看[升级说明](#从旧版升级)。
+
+<details>
+<summary>开发者：从源码准备依赖或打包</summary>
+
+如果从源码开始，先准备 Python 3.10+，在仓库根目录运行：
 
 ```sh
 python extensions/autofill/tools/prepare_vendor.py
@@ -30,13 +37,20 @@ python extensions/autofill/tools/package_extension.py --output /private/junshi-a
 ```
 
 发行包包含本地组件和许可证，不包含个人简历、投递记录或浏览器资料。
-从旧版本升级：先备份记录，把新版本文件更新到原先加载的文件夹，再到浏览器扩展页
+
+</details>
+
+## 从旧版升级
+
+先备份记录，把新版本文件更新到原先加载的文件夹，再到浏览器扩展页
 对现有扩展点击“重新加载”。若换加载目录，可能成为独立扩展，需恢复备份并重新导入简历。
 不要先卸载，以免丢失记录；重新加载后会话密钥需要重填。
 解析规则已更新的旧缓存会显示“需重新导入”：旧文字仍可查看，但不能直接确认、更新文字
 或发送给模型来绕过检查。重新选择原简历附件并核对即可恢复；历史投递及原投附件指纹不变。
 
 ## 完成第一次填写
+
+**导入 → 核对 → 填入 → 检查网页 → 本人提交 → 确认记录**
 
 1. 在招聘网页点击军师图标。在“填表”选择**本次准备投递的简历**，检查识别字段；
    需要时展开“查看或修正识别原文”，再

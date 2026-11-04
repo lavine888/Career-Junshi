@@ -12,17 +12,74 @@
   <a href="#start"><img src="assets/brand/cta-start-zh.svg" width="136" height="42" alt="快速开始"></a>
 </p>
 
-[看交付样例](#demo) &nbsp; · &nbsp; [官网 ↗](https://career-junshi.lavinex.chatgpt.site) &nbsp; · &nbsp; [English](README_EN.md)
+[开始使用](#start) &nbsp; · &nbsp; [交付样例](#demo) &nbsp; · &nbsp; [投递助手](#autofill) &nbsp; · &nbsp; [常见问题](#boundaries) &nbsp; · &nbsp; [English](README_EN.md)
 
 </div>
 
 ---
 
+## 先选你这次要解决的问题
+
+求职军师是安装在支持本地 Skill 的 AI 助手中的一套求职指南。优先帮助**做过项目，但说不清个人贡献、担心面试追问的人**。
+
+| 你现在想做什么 | 从哪里开始 |
+| --- | --- |
+| 把项目经历讲清楚，再练一次追问 | [安装 Skill，带来一段经历](#start) |
+| 少填几遍招聘官网的重复资料 | [单独安装浏览器投递助手](#autofill)，本地模式无需模型 API 密钥 |
+
+两个工具分别安装，可以单独使用。第一次用军师，不必先了解方向选择、谈薪或记忆功能。
+
+<a id="start"></a>
+
+## 快速开始：安装 → 给一段经历
+
+### 1. 安装到你的助手
+
+把这段发给 Codex 等支持本地 Skill、能运行本地命令的助手。安装器需要 Python 3.10+：
+
+```text
+请将 https://github.com/lavine888/Career-Junshi 的 main 分支
+安装为 career-junshi 本地 Skill，使用仓库安装器。
+先检查已有同名安装，不要覆盖；安装后验证运行文件。
+不要替我启用长期记忆。
+```
+
+### 2. 带来手边的一点材料
+
+```text
+请用 $career-junshi。
+这是我的一段项目经历：……
+帮我讲清个人贡献。材料够用时先给一段可用表达，
+再一次只问一个针对性问题，等我回答后改进表达。
+先在聊天中完成，不生成文件、不启用长期记忆。
+```
+
+**这一轮应该完成：** 你提供经历 → 得到可用表达 → 回答一个针对性问题 → 得到根据回答改进的表达。
+
+不用先补完整简历或 JD；材料不足时，只问最关键的一件事。只有 GitHub 也能开始，
+[看项目起步示意](cases/experiences/public-projects/example.md)。
+如果助手无法调用 Skill，先请它核对安装路径是否属于当前助手读取的 Skill 目录。
+
+<details>
+<summary>手动安装 · 需要 Git 与 Python 3.10+ · 仅标准库</summary>
+
+```sh
+git clone --branch main https://github.com/lavine888/Career-Junshi.git
+cd Career-Junshi
+python scripts/validate_skill.py
+python scripts/install_skill.py --target /path/to/your/skills/career-junshi
+python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-only
+```
+
+替换为宿主实际读取的目录，Windows 同样使用实际路径；目标文件夹须名为
+`career-junshi`，已有目标会保留并报错。安装只复制运行文件和许可，不带案例、
+测试、`.git` 或数据库，也不会开启记忆。符号链接与 Windows 目录联接路径会被拒绝。
+
+</details>
+
 <a id="demo"></a>
 
-## 先看，你会拿到什么
-
-### 一段能讲清贡献的经历
+## 交付样例：表达怎么变清楚
 
 > **原句**：「独立开发生产级 RAG 平台，准确率提升 30%。」
 
@@ -54,6 +111,9 @@
 
 <a id="resume-export"></a>
 
+<details>
+<summary>需要简历文件？看 LaTeX / PDF 样例和导出提示词</summary>
+
 ### 一份可以继续编辑的简历
 
 从岗位表达到排版，保留同一套事实。可交付 **LaTeX 源码、纯文本**；
@@ -73,8 +133,7 @@
   <a href="benchmark/journey-20261021/artifacts/editorial-zh/resume.tex">查看 LaTeX 源码</a>
 </p>
 
-<details>
-<summary>想直接导出简历？复制这段</summary>
+**复制这段请求：**
 
 ```text
 请用 $career-junshi，按这份 JD 整理中文单栏简历，优先一页。
@@ -89,75 +148,28 @@
 
 </details>
 
-<a id="start"></a>
-
-## 两步，开始这一轮
-
-### 1. 安装到你的助手
-
-把这段发给 Codex 等支持本地 Skill 的助手：
-
-```text
-请将 https://github.com/lavine888/Career-Junshi 的 main 分支
-安装为 career-junshi 本地 Skill，使用仓库安装器。
-先检查已有同名安装，不要覆盖；安装后验证运行文件。
-不要替我启用长期记忆。
-```
-
-<details>
-<summary>手动安装 · Python 3.10+ · 仅标准库</summary>
-
-```sh
-git clone --branch main https://github.com/lavine888/Career-Junshi.git
-cd Career-Junshi
-python scripts/validate_skill.py
-python scripts/install_skill.py --target /path/to/your/skills/career-junshi
-python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-only
-```
-
-替换为宿主实际读取的目录，Windows 同样使用实际路径；目标文件夹须名为
-`career-junshi`，已有目标会保留并报错。安装只复制运行文件和许可，不带案例、
-测试、`.git` 或数据库，也不会开启记忆。符号链接与 Windows 目录联接路径会被拒绝。
-
-</details>
-
-### 2. 带来手边的一点材料
-
-```text
-请用 $career-junshi。
-这是我的一段项目经历：……
-帮我讲清个人贡献。材料够用时先给一段可用表达，
-再一次只问一个针对性问题，等我回答后改进表达。
-先在聊天中完成，不生成文件、不启用长期记忆。
-```
-
-本轮优先适合：做过项目，但说不清个人贡献、担心被追问的人。
-不用完整简历或 JD；材料不足只问最关键的一件事，够用就先给表达。
-只有 GitHub 也能开始，[看项目起步示意](cases/experiences/public-projects/example.md)。
-方向选择、谈薪、Offer 与记忆等能力仍保留，第一次无需先理解它们。
-
-[五人真人试用说明与轻量对照](documentation/EVAL.md#core-first-use-trial)供邀请者使用；
-目前尚未收集这轮真人结果。
-
 <a id="experiences"></a>
+<a id="autofill"></a>
 
-<details>
-<summary>官网反复填资料？使用可选的浏览器投递助手</summary>
+## 可选：招聘官网少填几遍资料
 
-[下载 v0.3.2 插件包（含本地 OCR／PDF 组件）](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.2/junshi-autofill-0.3.2.zip)，解压后按下方说明安装。新版分为「填表／记录／设置」，模型配置不再挤占日常填表。
+[下载军师投递助手 v0.3.2（含本地 OCR / PDF 组件）](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.2/junshi-autofill-0.3.2.zip)
 
-旧版升级需要重新导入本次简历，避免沿用旧解析错配；历史投递保留。网页变化后先核对记录归属，填写失败会展开原因。
+在 Edge / Chrome 中读取你选择的简历，识别中英文字段并填入确定项。**本地模式无需模型 API 密钥**；
+图片或扫描 PDF 可用本地 OCR。填表、投递记录、设置分开，首次使用不必配置模型。
 
-[军师投递助手](extensions/autofill/README.md)在 Edge / Chrome 本地读取本次简历，
-通过中英文字段匹配填写空白项；图片与扫描 PDF 可使用本地 OCR，**无需模型 API 密钥**。
-可选接 DeepSeek／智谱等 API：默认只发字段结构；发送简历起草需主动选择，模型结果先核对。
-也可导出给现有军师生成方案，导回后本人确认草稿。实际提交后再记录，
-保留原投材料，并将选中记录交回军师继续准备或跟进。
+1. 下载并解压 ZIP，保留解压后的 `junshi-autofill` 文件夹。
+2. 打开 `edge://extensions` 或 `chrome://extensions`，开启开发人员模式，点击“加载解压缩的扩展”，选择包含 `manifest.json` 的文件夹。
+3. 打开招聘表单，点击扩展图标：**导入并核对简历 → 识别并填入确定项 → 检查网页 → 本人提交 → 确认记录投递**。
 
-这是需单独安装的可试用附属工具，不承诺所有官网兼容；不自动提交、云同步或开启记忆。
-OCR只读文字，不能替代开放题理解。安装与限制见上方说明。
+可选接 DeepSeek / 智谱等 API，默认只发送字段结构；发送简历内容需主动选择并预览。
+也可将复杂字段交给现有军师。模型结果先核对，开放题逐项确认；已投记录可交回军师，继续面试准备或跟进。
 
-</details>
+不承诺所有官网兼容；OCR 只识字，不能代替开放题理解。自定义控件、附件上传和不确定项需要本人处理，插件不自动提交。
+
+**旧版升级：** 先备份记录，更新原加载文件夹后重新加载，不要先卸载；本次需重新导入简历，历史投递保留。
+
+[完整使用说明与限制](extensions/autofill/README.md) · [可选 API 配置](extensions/autofill/README.md#可选接入国内模型-api)
 
 ## 从你正卡住的地方进入
 
@@ -171,7 +183,7 @@ OCR只读文字，不能替代开放题理解。安装与限制见上方说明�
 > 不必每次都带走一份计划。
 
 <details>
-<summary>四种核心体验与更多用法</summary>
+<summary>更多请求：岗位适配、补证与复盘</summary>
 
 - **简历守城**：“追问这句经历，一次问一个问题。”[看案例](cases/experiences/defense/example.md)
 - **岗位表达**：“适配这两份 JD，解释每版删留。”[看案例](cases/experiences/role-translation/example.md)
@@ -199,6 +211,9 @@ OCR只读文字，不能替代开放题理解。安装与限制见上方说明�
 
 ## 面试前后，接着用
 
+<details>
+<summary>面试前模拟、面试后复盘、谈薪演练</summary>
+
 **面试前 · 用实际回答，练一次追问。**<br>
 “围绕这个项目模拟三题，一次一问，最后再点评。”逐题纠偏与整场模拟可以切换，
 从实际回答选下一问；不知道用哪段经历，就先练选一个事件、说一句开场。
@@ -212,6 +227,8 @@ OCR只读文字，不能替代开放题理解。安装与限制见上方说明�
 核对固定收入、浮动奖金和条件；私有底线不进入外发草稿，草稿由本人发送。
 
 [看三段衔接的合成示例](cases/experiences/interview-loop/example.md)
+
+</details>
 
 <a id="journey"></a>
 
@@ -244,11 +261,11 @@ OCR只读文字，不能替代开放题理解。安装与限制见上方说明�
 
 <a id="evaluation"></a>
 
-## 能力有展示，验证有记录
+## 已验证什么，还没验证什么
 
 | 已做的检查 | 可以查看的证据 |
 | --- | --- |
-| **软件回归** | 最近记录：286 项，285 通过、1 项文件符号链接权限跳过；目录联接已实测。[修复与验收](documentation/HUMAN_LOOP_EVAL.md) |
+| **软件回归** | 已记录：286 项，285 通过、1 项文件符号链接权限跳过；目录联接已实测。[修复与验收](documentation/HUMAN_LOOP_EVAL.md) |
 | **真实 PDF 编译** | 合成简历实际编译、提取文字和检查页数；含超页失败例。[排版检查](benchmark/resume-layout-20261020/README.md) · [精排与接续](documentation/JOURNEY_EVAL.md) |
 | **合成交互试用** | 新上下文代理、多轮问答与前后对照，保留原始记录和局限。[低负担交互](documentation/HUMAN_LOOP_EVAL.md#独立上下文合成试用) · [GitHub 起步](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
 
@@ -257,6 +274,9 @@ OCR只读文字，不能替代开放题理解。安装与限制见上方说明�
 
 <details>
 <summary>全部验证记录与已知限制</summary>
+
+[五人真人试用说明与轻量对照](documentation/EVAL.md#core-first-use-trial)供邀请者使用；
+目前尚未收集这轮真人结果。
 
 [面试前后流程](documentation/INTERVIEW_COACH_EVAL.md) ·
 [五个合成用户、十五轮交互](documentation/MOCK_USER_TRIALS.md) ·
@@ -281,7 +301,7 @@ OCR只读文字，不能替代开放题理解。安装与限制见上方说明�
 <a id="boundaries"></a>
 <a id="library"></a>
 
-## 事实可追溯，节奏由你定
+## 常见问题
 
 <details>
 <summary>没有 JD、完整简历或 LaTeX，也能用吗？</summary>
@@ -338,6 +358,8 @@ python scripts/benchmark.py run
 python scripts/junshi.py route --mode interview --experience defense
 python scripts/junshi.py sources --topic interview
 ```
+
+浏览器插件的检查与限制见[插件说明](extensions/autofill/README.md#边界与验证)；上面的 Python 命令不包含插件浏览器测试。
 
 [提取契约](documentation/CONTEXT_EXTRACTION.md) ·
 [决策契约](documentation/DECISION_INTELLIGENCE.md) ·

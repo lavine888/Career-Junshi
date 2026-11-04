@@ -12,17 +12,75 @@
   <a href="#start"><img src="assets/brand/cta-start-en.svg" width="136" height="42" alt="Quick start"></a>
 </p>
 
-[See the output](#demo) &nbsp; · &nbsp; [Website ↗](https://career-junshi.lavinex.chatgpt.site) &nbsp; · &nbsp; [中文](README.md)
+[Quick start](#start) &nbsp; · &nbsp; [Sample output](#demo) &nbsp; · &nbsp; [Application companion](#autofill) &nbsp; · &nbsp; [FAQ](#boundaries) &nbsp; · &nbsp; [中文](README.md)
 
 </div>
 
 ---
 
+## Choose where to start
+
+Career Junshi runs inside an AI assistant that supports local Skills. It is for **people who have done projects but find their contribution hard to explain or worry about interview follow-ups**.
+
+| What you want to do | Start here |
+| --- | --- |
+| Explain a project and practice a follow-up | [Install the Skill and bring one experience](#start) |
+| Reduce repeated typing on employer websites | [Install the browser companion separately](#autofill); local mode needs no model API key |
+
+The two tools install separately and can be used independently. Role choice, negotiation and memory are optional; you do not need to learn them first.
+
+<a id="start"></a>
+
+## Quick start: install, then bring one experience
+
+### 1. Install in your assistant
+
+Send this to Codex or another assistant that supports local Skills and can run local commands. The installer needs Python 3.10+:
+
+```text
+Install career-junshi from the main branch of
+https://github.com/lavine888/Career-Junshi using the repository installer.
+Check for an existing installation first; do not overwrite it.
+Validate the installed runtime files. Do not enable persistent memory.
+```
+
+### 2. Bring something you already have
+
+```text
+Use $career-junshi.
+Here is one project experience: ...
+Help me explain my contribution. If there is enough material, draft usable wording first.
+Ask one targeted follow-up, wait for my answer, then revise that wording.
+Stay in chat; do not create files or enable persistent memory.
+```
+
+**The first session should complete:** your experience → usable wording → one targeted question → wording revised from your answer.
+
+No full resume or JD is required. If material is missing, ask only the decisive question.
+[GitHub-only starting example, in Chinese](cases/experiences/public-projects/example.md).
+If the assistant cannot invoke the Skill, ask it to check whether the installation directory is one that the current host reads.
+
+<details>
+<summary>Manual installation · Git and Python 3.10+ required · standard library only</summary>
+
+```sh
+git clone --branch main https://github.com/lavine888/Career-Junshi.git
+cd Career-Junshi
+python scripts/validate_skill.py
+python scripts/install_skill.py --target /path/to/your/skills/career-junshi
+python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-only
+```
+
+Use a directory your host discovers, including on Windows. The destination must
+be named `career-junshi`; existing targets are preserved and refused. Installation
+copies runtime files and licenses, excluding cases, tests, `.git` and databases.
+Memory stays off. Paths containing symlinks or Windows junctions are refused.
+
+</details>
+
 <a id="demo"></a>
 
-## See what you leave with
-
-### An experience you can explain
+## Sample output: make the contribution clear
 
 > **Original:** “Independently built a production RAG platform, improving accuracy by 30%.”
 
@@ -60,6 +118,9 @@ is a separately authored synthetic example.
 
 <a id="resume-export"></a>
 
+<details>
+<summary>Need resume files? See the LaTeX / PDF sample and export request</summary>
+
 ### A resume you can keep editing
 
 Keep the same facts from role-specific writing through layout. Export **LaTeX
@@ -80,8 +141,7 @@ The editorial layout can leave space for a photo.
   <a href="benchmark/journey-20261021/artifacts/editorial-en/resume.tex">View LaTeX source</a>
 </p>
 
-<details>
-<summary>Copy a resume-export request</summary>
+**Copy this request:**
 
 ```text
 Use $career-junshi to tailor a single-column English resume to this JD,
@@ -99,79 +159,26 @@ chosen private directory outside Git checkouts and the Skill installation.
 
 </details>
 
-<a id="start"></a>
-
-## Two steps to begin
-
-### 1. Install in your assistant
-
-Send this to Codex or another host that supports local Skills:
-
-```text
-Install career-junshi from the main branch of
-https://github.com/lavine888/Career-Junshi using the repository installer.
-Check for an existing installation first; do not overwrite it.
-Validate the installed runtime files. Do not enable persistent memory.
-```
-
-<details>
-<summary>Manual installation · Python 3.10+ · standard library only</summary>
-
-```sh
-git clone --branch main https://github.com/lavine888/Career-Junshi.git
-cd Career-Junshi
-python scripts/validate_skill.py
-python scripts/install_skill.py --target /path/to/your/skills/career-junshi
-python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-only
-```
-
-Use a directory your host discovers, including on Windows. The destination must
-be named `career-junshi`; existing targets are preserved and refused. Installation
-copies runtime files and licenses, excluding cases, tests, `.git` and databases.
-Memory stays off. Paths containing symlinks or Windows junctions are refused.
-
-</details>
-
-### 2. Bring something you already have
-
-```text
-Use $career-junshi.
-Here is one project experience: ...
-Help me explain my contribution. If there is enough material, draft usable wording first.
-Ask one targeted follow-up, wait for my answer, then revise that wording.
-Stay in chat; do not create files or enable persistent memory.
-```
-
-This first-use path is for people with real project experience who find their
-contribution hard to explain or worry about follow-up questions. No full resume
-or JD is required. Ask one decisive missing fact if needed; otherwise draft first.
-[GitHub-only starting example, in Chinese](cases/experiences/public-projects/example.md).
-Role choice, compensation, offers and optional memory remain available without
-being prerequisites for this first session.
-
-[Five-person trial and lightweight comparison, in Chinese](documentation/EVAL.md#core-first-use-trial)
-is for the organizer. No human results have yet been collected for this trial.
-
 <a id="experiences"></a>
+<a id="autofill"></a>
 
-<details>
-<summary>Optional browser companion for repeated application forms</summary>
+## Optional: reduce repeated application-form typing
 
-[Download v0.3.2 with local OCR/PDF assets](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.2/junshi-autofill-0.3.2.zip).
-Fill, Records and Settings now have separate views, keeping model configuration out of the daily filling flow.
-Upgrades require reimporting the selected resume to replace outdated parsing; application history stays intact. Changed pages require an explicit record-source choice, and failed fields show their reasons.
+[Download the application companion v0.3.2 with local OCR / PDF assets](https://github.com/lavine888/Career-Junshi/releases/download/autofill-v0.3.2/junshi-autofill-0.3.2.zip)
 
-[Application companion (Chinese guide)](extensions/autofill/README.md) reads a selected
-resume locally, uses Chinese/English field matching, and supports local image OCR.
-No model API key is required for local mode. Optional DeepSeek/GLM-compatible APIs
-match field descriptors; sending resume content requires explicit opt-in and preview.
-Model output is reviewed before filling. Complex questions can also be handed to your existing
-assistant and returned as a source-bound plan; generated drafts require review.
-It records a submission only after your confirmation and exports one selected
-application to Junshi's existing context adapter. Install it separately; real
-employer compatibility and application outcomes are not established by fixtures.
+Read a selected resume locally in Edge / Chrome, match Chinese or English fields, and fill supported empty fields. **Local mode needs no model API key**; local OCR supports images and scanned PDFs. Fill, Records and Settings have separate views. Model setup is optional.
 
-</details>
+1. Download and unzip the archive. Keep the extracted `junshi-autofill` folder.
+2. Open `edge://extensions` or `chrome://extensions`, enable Developer mode, choose “Load unpacked”, and select the folder containing `manifest.json`.
+3. Open an application form and click the extension icon: **import and check your resume → fill matched fields → inspect the page → submit yourself → confirm the application record**.
+
+Optionally connect DeepSeek / GLM-compatible APIs. Only field descriptors are sent by default; sending resume content requires explicit opt-in and preview. You can also hand complex fields to your existing assistant. Review model output first; approve open-answer drafts individually. Export a selected application record back to Junshi for interview preparation or follow-up.
+
+Employer compatibility is not guaranteed. OCR reads text; it does not understand open questions. Custom controls, uploads and uncertain fields need manual handling. The companion never submits the form.
+
+**Upgrading:** back up records, replace files in the existing loaded folder, then reload without uninstalling. This upgrade requires reimporting the resume; application history is preserved.
+
+[Full guide and limitations, in Chinese](extensions/autofill/README.md) · [Optional API setup, in Chinese](extensions/autofill/README.md#可选接入国内模型-api)
 
 ## Start where you are stuck
 
@@ -185,7 +192,7 @@ employer compatibility and application outcomes are not established by fixtures.
 > “Stop, no summary”. A plan is optional.
 
 <details>
-<summary>The four core experiences and more ways to use Junshi</summary>
+<summary>More requests: role adaptation, evidence and review</summary>
 
 - **Resume defense:** “Challenge this claim, one question at a time.” [Example](cases/experiences/defense/example.md)
 - **Role translation:** “Adapt this to two JDs. Explain what each version keeps.” [Example](cases/experiences/role-translation/example.md)
@@ -215,6 +222,9 @@ channels do not establish a template effect.
 
 ## Before and after the interview
 
+<details>
+<summary>Mock interviews, debriefs and compensation practice</summary>
+
 **Before · Simulate the follow-up, then learn from your answer.**<br>
 “Run three project questions, one at a time. Debrief at the end.” Switch explicitly
 between coached drills and whole mocks. If choosing a story is the problem,
@@ -231,6 +241,8 @@ variable terms, and keep your private minimum out of the outgoing draft.
 The human sends it.
 
 [Three-stage synthetic walkthrough, in Chinese](cases/experiences/interview-loop/example.md)
+
+</details>
 
 <a id="journey"></a>
 
@@ -266,11 +278,11 @@ generate the journal, review and `continue.md`, then bring them back yourself.
 
 <a id="evaluation"></a>
 
-## See the output. Inspect the evidence.
+## What has been checked, and what has not
 
 | Check | Available evidence |
 | --- | --- |
-| **Software regression** | Latest record: 286 tests, 285 passed and one file-symlink permission skip; Windows junctions were exercised. [Fixes and checks](documentation/HUMAN_LOOP_EVAL.md) |
+| **Software regression** | Recorded run: 286 tests, 285 passed and one file-symlink permission skip; Windows junctions were exercised. [Fixes and checks](documentation/HUMAN_LOOP_EVAL.md) |
 | **Actual PDF compilation** | Synthetic resumes compiled, text extracted and page counts checked, including an overflow failure case. [Layout checks](benchmark/resume-layout-20261020/README.md) · [Editorial export and continuation](documentation/JOURNEY_EVAL.md) |
 | **Synthetic interactions** | Fresh-context agents, multi-turn exchanges and before/after records, with limits stated. [Low-burden interaction](documentation/HUMAN_LOOP_EVAL.md#独立上下文合成试用) · [GitHub first use](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
 
@@ -280,6 +292,9 @@ are reported separately.
 
 <details>
 <summary>All evaluation records and known limitations</summary>
+
+[Five-person trial and lightweight comparison, in Chinese](documentation/EVAL.md#core-first-use-trial)
+is for the organizer. No human results have yet been collected for this trial.
 
 [Interview loop](documentation/INTERVIEW_COACH_EVAL.md) ·
 [Five synthetic users, fifteen turns](documentation/MOCK_USER_TRIALS.md) ·
@@ -305,7 +320,7 @@ been rerun; we do not claim that the original real-user pilot gates have been me
 <a id="boundaries"></a>
 <a id="library"></a>
 
-## Traceable facts. Your pace.
+## FAQ
 
 <details>
 <summary>Can I start without a JD, full resume or LaTeX?</summary>
@@ -371,6 +386,8 @@ python scripts/benchmark.py run
 python scripts/junshi.py route --mode interview --experience defense
 python scripts/junshi.py sources --topic interview
 ```
+
+Companion checks and limits are in the [extension guide, in Chinese](extensions/autofill/README.md#边界与验证). The Python commands above do not run the extension browser tests.
 
 [Extraction contract](documentation/CONTEXT_EXTRACTION.md) ·
 [Decision contract](documentation/DECISION_INTELLIGENCE.md) ·
