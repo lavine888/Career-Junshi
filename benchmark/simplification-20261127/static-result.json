@@ -1,0 +1,138 @@
+{
+  "status": "STATIC_MEASUREMENT_ONLY",
+  "model_generations": 0,
+  "model_reviews": 0,
+  "method": "LF-normalized Unicode character counts of fetched files; task input, wrapping, tool protocol, host context excluded. B_selected assumes direct routes for S01/S02/S08/S09 and full router for others. C_direct assumes direct route for all. These are modeled load policies, not observed tool traces. Case references are unchanged in the four-file PR.",
+  "kernel": {
+    "B": 2738,
+    "C": 5498
+  },
+  "router": {
+    "B": 4379,
+    "C": 4750
+  },
+  "reference_lengths": {
+    "references/practical/resume-defense.md": 7141,
+    "references/knowledge/02-career-decision.md": 2200,
+    "references/practical/jd-analysis.md": 4477,
+    "references/knowledge/01-evidence-and-claims.md": 2663,
+    "references/practical/interview.md": 1942,
+    "references/practical/project-defense.md": 888,
+    "references/practical/interview-coaching.md": 9402,
+    "references/knowledge/03-recruiting-process.md": 972,
+    "references/practical/follow-up.md": 1522,
+    "references/knowledge/06-offer-evaluation.md": 1025,
+    "references/practical/offer.md": 1794,
+    "references/practical/job-search-journey.md": 9545
+  },
+  "rows": [
+    {
+      "id": "S01",
+      "task": "项目首用",
+      "reference_chars": 7141,
+      "A": 217,
+      "B_direct": 9879,
+      "B_selected": 9879,
+      "C_direct": 12639,
+      "B_index": 14258,
+      "C_index": 17389
+    },
+    {
+      "id": "S02",
+      "task": "答后改写",
+      "reference_chars": 7141,
+      "A": 217,
+      "B_direct": 9879,
+      "B_selected": 9879,
+      "C_direct": 12639,
+      "B_index": 14258,
+      "C_index": 17389
+    },
+    {
+      "id": "S03",
+      "task": "JD 硬门槛",
+      "reference_chars": 6677,
+      "A": 217,
+      "B_direct": 9415,
+      "B_selected": 13794,
+      "C_direct": 12175,
+      "B_index": 13794,
+      "C_index": 16925
+    },
+    {
+      "id": "S04",
+      "task": "紧急面试",
+      "reference_chars": 5493,
+      "A": 217,
+      "B_direct": 8231,
+      "B_selected": 12610,
+      "C_direct": 10991,
+      "B_index": 12610,
+      "C_index": 15741
+    },
+    {
+      "id": "S05",
+      "task": "整场模拟",
+      "reference_chars": 9402,
+      "A": 217,
+      "B_direct": 12140,
+      "B_selected": 16519,
+      "C_direct": 14900,
+      "B_index": 16519,
+      "C_index": 19650
+    },
+    {
+      "id": "S06",
+      "task": "HR 沉默",
+      "reference_chars": 2494,
+      "A": 217,
+      "B_direct": 5232,
+      "B_selected": 9611,
+      "C_direct": 7992,
+      "B_index": 9611,
+      "C_index": 12742
+    },
+    {
+      "id": "S07",
+      "task": "Offer 比较",
+      "reference_chars": 5019,
+      "A": 217,
+      "B_direct": 7757,
+      "B_selected": 12136,
+      "C_direct": 10517,
+      "B_index": 12136,
+      "C_index": 15267
+    },
+    {
+      "id": "S08",
+      "task": "旧版本接续",
+      "reference_chars": 9545,
+      "A": 217,
+      "B_direct": 12283,
+      "B_selected": 12283,
+      "C_direct": 15043,
+      "B_index": 16662,
+      "C_index": 19793
+    },
+    {
+      "id": "S09",
+      "task": "明确停止",
+      "reference_chars": 0,
+      "A": 217,
+      "B_direct": 2738,
+      "B_selected": 2738,
+      "C_direct": 5498,
+      "B_index": 7117,
+      "C_index": 10248
+    }
+  ],
+  "totals": {
+    "A": 1953,
+    "B_direct": 77554,
+    "B_selected": 99449,
+    "C_direct": 102394,
+    "B_index": 116965,
+    "C_index": 145144
+  },
+  "relative_percent_B_selected_vs_C_direct": -2.88
+}

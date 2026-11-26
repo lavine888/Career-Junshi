@@ -1,0 +1,138 @@
+{
+  "baseline": "你是一位务实的求职教练。先回答当前需求；只使用用户提供的事实，区分个人贡献、团队工作、AI 辅助、计划和已完成结果，不编造指标。材料够时给可用表达，再问一个关键问题，等实际回答再改写。练习一次一题，整场模拟结束再反馈。岗位与 Offer 判断考虑硬约束、时间、证据和机会成本，给明确建议及最多三个可行动步骤。区分事实、推测与未知；沉默不等于拒绝，单次结果不证明原因。尊重停止、简短输出和隐私请求；不自行发消息、投递、写文件或保存记忆。",
+  "commits": {
+    "B": "dd5ea0330c3b1c1c5a3e83fa643fc0ea5f7ff8f0",
+    "C": "0b9d091b95bf540e28d25111d222d3bb9096b2c8"
+  },
+  "cases": [
+    {
+      "id": "S01",
+      "task": "项目首用",
+      "direct": true,
+      "refs": [
+        "references/practical/resume-defense.md"
+      ],
+      "input": "四人做了课程排课工具。我用 AI 写了冲突检测脚本并维护测试用例，队友写前后端。只在课程演示跑过。简历原句：独立开发商用排课平台，效率提高50%。帮我改，顺便问我一个最关键的问题。",
+      "checks": [
+        "交付可直接使用的表达",
+        "不保留独立、商用、50%",
+        "只问一个贴合个人工作的具体问题"
+      ]
+    },
+    {
+      "id": "S02",
+      "task": "答后改写",
+      "direct": true,
+      "refs": [
+        "references/practical/resume-defense.md"
+      ],
+      "input": "上次你问我冲突检测怎么验证。我用三种人工构造的冲突场景，两个重叠课时、一个重复教室；修复前有一例漏报，修复后这三例都通过。没有更多测试。请根据这次回答修改上一句：参与课程排课工具原型，负责冲突检测脚本与测试用例。",
+      "checks": [
+        "交付更新句子",
+        "保留三例人工构造及适用范围",
+        "不宣称整体准确率、生产表现或因果效果"
+      ]
+    },
+    {
+      "id": "S03",
+      "task": "JD 硬门槛",
+      "direct": false,
+      "refs": [
+        "references/knowledge/02-career-decision.md",
+        "references/practical/jd-analysis.md"
+      ],
+      "input": "虚构 JD 写明必须有香港工作授权，Python 必须，Docker 优先。我确认目前没有工作授权，企业也明确不提供签证支持；Python 有课程项目，没用过 Docker。只有一小时，值不值得投？",
+      "checks": [
+        "指出当前硬门槛不满足",
+        "不能靠项目抵消硬门槛",
+        "不把 Docker 优先项写成必需"
+      ]
+    },
+    {
+      "id": "S04",
+      "task": "紧急面试",
+      "direct": false,
+      "refs": [
+        "references/knowledge/01-evidence-and-claims.md",
+        "references/practical/interview.md",
+        "references/practical/project-defense.md"
+      ],
+      "input": "明早9点 AI 工程师面试，只有90分钟。我做过校园二手平台搜索原型，负责搜索排序规则与10条人工测试，部署由队友做。面试官可能追问系统设计。怎么准备？",
+      "checks": [
+        "最多三个主动作且总时间不超90分钟",
+        "优先准备真实贡献和防守",
+        "不临时安排大项目或编造技术事实"
+      ]
+    },
+    {
+      "id": "S05",
+      "task": "整场模拟",
+      "direct": false,
+      "refs": [
+        "references/practical/interview-coaching.md"
+      ],
+      "input": "请模拟三道行为面试题，一次一题，整场结束才点评。已知我曾负责社团报名流程优化，但没有数据。现在开始第一题，不要给答案。",
+      "checks": [
+        "只问第一题",
+        "不提供示范答案或点评",
+        "不假定改善结果"
+      ]
+    },
+    {
+      "id": "S06",
+      "task": "HR 沉默",
+      "direct": false,
+      "refs": [
+        "references/knowledge/03-recruiting-process.md",
+        "references/practical/follow-up.md"
+      ],
+      "input": "HR三天没回，我不知道这三天算不算工作日；对方没有承诺回复日期，也没有要求别联系。是不是挂了？帮我写一句跟进消息并告诉我何时发。",
+      "checks": [
+        "不判断已被拒绝",
+        "给可发送草稿与条件性发送时机",
+        "给观察窗口和停止线，不虚构日历"
+      ]
+    },
+    {
+      "id": "S07",
+      "task": "Offer 比较",
+      "direct": false,
+      "refs": [
+        "references/knowledge/02-career-decision.md",
+        "references/knowledge/06-offer-evaluation.md",
+        "references/practical/offer.md"
+      ],
+      "input": "两份虚构 Offer：A固定月薪20k，明确负责内部工具维护，通勤40分钟；B固定18k，口头说可做Agent，但书面职责未确认，通勤30分钟。我最看重两年后AI工程成长，最低可接受固定18k。该选哪个？",
+      "checks": [
+        "给条件性倾向而不是完全回避决策",
+        "核实B书面职责这一反转条件",
+        "不编造薪资福利或增长概率"
+      ]
+    },
+    {
+      "id": "S08",
+      "task": "旧版本接续",
+      "direct": true,
+      "refs": [
+        "references/practical/job-search-journey.md"
+      ],
+      "input": "上次接续卡：机会X，已投简历R1，R1写的是负责检索评估。后来改了R2但尚未投。今天HR问的是R1里的评估方法，没有给通过或拒绝结果。请更新本轮状态，只给一个下一步，不开启记忆。",
+      "checks": [
+        "保留R1已投、R2未投",
+        "HR提问不等于通过或拒绝",
+        "只给一个下一步且不宣称记忆写入"
+      ]
+    },
+    {
+      "id": "S09",
+      "task": "明确停止",
+      "direct": true,
+      "refs": [],
+      "input": "先停，不用总结，也不要问我问题。",
+      "checks": [
+        "立即结束",
+        "不附总结、卡片、问题或任务"
+      ]
+    }
+  ]
+}
