@@ -1,66 +1,63 @@
 # Practical router
 
-The host reads only 1–3 relevant references, including knowledge documents. A mixed
-situation has one primary mode selected by deadline and bottleneck; secondary work
-supports one decision. No slash commands are required from the user.
+This is the host's detailed routing index. Choose one primary task by the user's
+intent, deadline and bottleneck, then load only 1–3 task references in total.
+For a simple request, answer directly. The four capabilities below organize the
+experience; they do not introduce new CLI modes. Users can speak naturally.
 
-| User situation | Primary mode | Default resources |
+## 1. Experience and evidence
+
+| Intent | Existing CLI mode | References / playbook |
 | --- | --- | --- |
-| Role worth applying / transition / unknown direction | job | knowledge/02 + jd-analysis |
-| Resume or ownership wording | positioning | knowledge/01 + resume |
-| Upcoming interview or risky project claim | interview | knowledge/01 + interview + project-defense |
-| Silence or process | recruiting | knowledge/03 + follow-up |
-| Explicit rejection | recruiting | knowledge/03 + rejection (replace follow-up) |
-| Offer comparison | offer | knowledge/02 + knowledge/06 + offer |
+| First use, project contribution or claim defense | positioning / interview | [resume-defense](resume-defense.md) |
+| GitHub-only start | positioning | [public-projects](public-projects.md) |
+| Resume positioning, wording or personal scope | positioning | [evidence](../knowledge/01-evidence-and-claims.md) + [resume](resume.md) |
+| Audit a specific claim | positioning | [wording-audit](wording-audit.md) |
+| Reconstruct AI-assisted development | positioning / interview | [development-recap](development-recap.md) |
+| Adapt a project to supplied roles | positioning | [role-translation](role-translation.md) + relevant [role pack](../role-packs.json) |
+| Export reviewed resume | positioning | [resume-export](resume-export.md) |
 
-Optional replacements: [public-projects](public-projects.md) for first use from public project links;
-[hr-chat](hr-chat.md) for draft messages;
-[behavioral](behavioral.md) for true stories;
-[negotiation](negotiation.md) for a proposal;
-[career-memory](career-memory.md) for recall and outcomes;
-[knowledge/04](../knowledge/04-role-positioning.md) for translation;
-[knowledge/05](../knowledge/05-interview-evaluation.md) for feedback interpretation;
-[knowledge/07](../knowledge/07-career-market-boundaries.md) for current market claims.
-Replace a less relevant document instead of loading the entire library.
+## 2. Roles and applications
 
-Structured helper: `python scripts/junshi.py route --mode interview` returns references
-and an internal method plan. Free-text routing is done by the host Skill, not keywords.
-
-## Host-led experiences
-
-Natural-language experience names select a task playbook, replacing the normal
-practical reference within the same 1–3-resource budget:
-
-| Request | Mode | Playbook |
+| Intent | Existing CLI mode | References / playbook |
 | --- | --- | --- |
-| 开发复盘 / reconstruct contribution from AI coding records | positioning or interview | [development-recap](development-recap.md) |
-| 弱项复练 / retry a recorded gap with a variant question | interview | [interview-retry](interview-retry.md) |
-| 简历守城 / defend one resume claim | interview or positioning | [resume-defense](resume-defense.md) |
-| 岗位表达 / adapt one project to supplied roles | positioning | [role-translation](role-translation.md) |
-| 补证冲刺 / fill one evidence gap within a budget | job or positioning | [evidence-sprint](evidence-sprint.md) |
-| 决策复盘 / compare a prior judgment with new observations | current situation mode | [decision-review](decision-review.md) |
-| 措辞核对 / check ownership, stage and causal wording | positioning | [wording-audit](wording-audit.md) |
-| 隐藏结果复盘 / observations before the result is revealed | current situation mode | [outcome-blind-review](outcome-blind-review.md) |
-| 简历排版 / reviewed role-specific resume to LaTeX and optional PDF | positioning | [resume-export](resume-export.md) |
-| 投递实验 / test one job-search hypothesis within a budget | job, positioning or recruiting | [job-search-experiment](job-search-experiment.md) |
-| 卡点启动 / turn a stuck preparation task into one startable action | job, positioning or interview | [action-start](action-start.md) |
-| 官网填表 / use selected form context or browser application records | positioning or recruiting | [application-autofill](application-autofill.md) |
-| 面试前模拟 / adaptive drill, story retrieval or whole mock | interview | [interview-coaching](interview-coaching.md) |
-| 面试复盘 / fresh recap or supplied transcript review | interview | [interview-coaching](interview-coaching.md) |
-| 面后谈薪 / compensation alignment, negotiation or rehearsal | offer or recruiting | [negotiation](negotiation.md) |
-| 结构化面试 / practice one declared JD criterion | interview | [structured-interview](structured-interview.md) |
-| Offer 核验 / check decisive terms or suspicious hiring conditions | offer or recruiting | [offer-check](offer-check.md) |
+| Role worth applying / transition / unknown direction | job | [career-decision](../knowledge/02-career-decision.md) + [jd-analysis](jd-analysis.md) |
+| Close one evidence gap | job / positioning | [evidence-sprint](evidence-sprint.md) |
+| Start a stuck task | job / positioning / interview | [action-start](action-start.md) |
+| Test one application hypothesis | job / positioning / recruiting | [job-search-experiment](job-search-experiment.md) |
+| HR silence or process | recruiting | [recruiting-process](../knowledge/03-recruiting-process.md) + [follow-up](follow-up.md) |
+| Explicit rejection | recruiting | recruiting-process + [rejection](rejection.md) |
+| Draft a recruiting message | recruiting | [hr-chat](hr-chat.md) |
+| Application form / browser records | positioning / recruiting | [application-autofill](application-autofill.md) |
 
-When the user asks for research support or a scientific claim affects the advice,
-select the relevant card from [research and application](../knowledge/08-research-and-application.md).
-Replace a less useful reference if needed. A study supports only its actual
-population, intervention and outcome; these workflows have no demonstrated hiring effect.
+## 3. Interview coaching
 
-Defense can pause with a copyable checkpoint and resume one question from the
-supplied record. Outcome-blind review requires a context that has not received the
-result; known results use ordinary review instead. Neither branch saves memory.
+| Intent | Existing CLI mode | References / playbook |
+| --- | --- | --- |
+| Upcoming interview or risky project claim | interview | evidence + [interview](interview.md) + [project-defense](project-defense.md) |
+| Adaptive drill, whole mock, story retrieval, debrief | interview | [interview-coaching](interview-coaching.md) |
+| Practice a recorded gap with a variant | interview | [interview-retry](interview-retry.md) |
+| Practice one declared JD criterion | interview | [structured-interview](structured-interview.md) |
+| True behavioral story | interview | [behavioral](behavioral.md) |
 
-For example, `python scripts/junshi.py route --mode interview --experience defense`
-selects the playbook and suggests a report filename. It does not conduct an interview,
-generate a report or save a session. File creation and compact memory remain separately
-authorized operations; ordinary routes keep their existing contract.
+## 4. Feedback and decisions
+
+| Intent | Existing CLI mode | References / playbook |
+| --- | --- | --- |
+| Reconsider earlier advice with new observations | current mode | [decision-review](decision-review.md) |
+| Explicit review before outcome reveal | current mode | [outcome-blind-review](outcome-blind-review.md) |
+| Compare offers | offer | career-decision + [offer-evaluation](../knowledge/06-offer-evaluation.md) + [offer](offer.md) |
+| Verify decisive or suspicious offer terms | offer / recruiting | [offer-check](offer-check.md) |
+| Compensation alignment, negotiation or rehearsal | offer / recruiting | [negotiation](negotiation.md) |
+| Continue a tracked opportunity | current mode | [job-search-journey](job-search-journey.md) |
+| Authorized memory / outcomes | current mode | [career-memory](career-memory.md) |
+
+Use optional knowledge only when it changes the answer: [role positioning](../knowledge/04-role-positioning.md),
+[interview evaluation](../knowledge/05-interview-evaluation.md), [market boundaries](../knowledge/07-career-market-boundaries.md),
+[research and application](../knowledge/08-research-and-application.md). Replace a less relevant reference;
+research supports only its studied population, intervention and outcome, not a demonstrated hiring effect.
+
+The host handles free-text routing and interaction. The existing structured helper
+`python scripts/junshi.py route --mode interview --experience defense` selects references
+and suggests an artifact name; it does not run a conversation, create a report or save memory.
+The CLI's five situation modes and experience identifiers remain compatible.
