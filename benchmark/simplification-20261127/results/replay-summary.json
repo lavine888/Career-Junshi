@@ -1,0 +1,28 @@
+{
+  "B": {
+    "pass": 25,
+    "fail": 1,
+    "facts_points": 17,
+    "facts_count": 9,
+    "burden_points": 17,
+    "burden_count": 9,
+    "followup_points": 1,
+    "followup_count": 1,
+    "value_points": 18,
+    "value_count": 9,
+    "preferred_including_ties": 5
+  },
+  "D": {
+    "pass": 25,
+    "facts_points": 17,
+    "facts_count": 9,
+    "burden_points": 17,
+    "burden_count": 9,
+    "followup_points": 2,
+    "followup_count": 1,
+    "value_points": 17,
+    "value_count": 9,
+    "preferred_including_ties": 7,
+    "fail": 1
+  }
+}

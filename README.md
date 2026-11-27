@@ -4,7 +4,7 @@
 
 [![求职军师 · Career Junshi：下一程，从真实的你开始。](assets/brand/readme-hero-zh.svg)](#start)
 
-**先讲清一段项目经历，再练成你自己的话。**
+**用 AI 做出项目，用自己的理解证明价值。**
 
 <sub>求职军师 · Career Junshi — 运行在助手中的求职 Skill，从你手边的材料开始。</sub>
 
@@ -18,16 +18,11 @@
 
 ---
 
-## 先选你这次要解决的问题
+## 这是给谁的？
 
-求职军师是安装在支持本地 Skill 的 AI 助手中的一套求职指南。优先帮助**做过项目，但说不清个人贡献、担心面试追问的人**。
+做过项目，却不知道简历怎么写、面试时怎么讲；尤其是用 AI Coding 做项目、难以区分自己与 AI 或队友贡献的求职者。
 
-| 你现在想做什么 | 从哪里开始 |
-| --- | --- |
-| 把项目经历讲清楚，再练一次追问 | [安装 Skill，带来一段经历](#start) |
-| 少填几遍招聘官网的重复资料 | [单独安装浏览器投递助手](#autofill)，本地模式无需模型 API 密钥 |
-
-两个工具分别安装，可以单独使用。第一次用军师，不必先了解方向选择、谈薪或记忆功能。
+Career-Junshi 是运行在 Codex 等支持本地 Skill 的助手中的求职教练。不需要完整简历，也不需要学习一套求职框架。先带一段经历，拿到能用的表达，再练一次真实追问。
 
 <a id="start"></a>
 
@@ -109,6 +104,34 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 
 </details>
 
+<a id="experiences"></a>
+<a id="interview-loop"></a>
+
+## 四件事，随时开始
+
+| 你现在卡在哪里 | 直接对军师说 | 你会拿到什么 |
+| --- | --- | --- |
+| 经历说不清 | “帮我改这段项目经历，保留真实贡献。” | 可用表达、一个关键追问 |
+| 不知道投什么 | “这份 JD 值不值得投？” | 投递判断、关键缺口、下一步 |
+| 面试怕被问穿 | “围绕这个项目，一次问我一道题。” | 根据实际回答纠偏、变题复练 |
+| 面试结束或收到 Offer | “这是新的反馈，帮我调整下一步。” | 复盘、优先级或 Offer 取舍 |
+
+只要一句就给一句；想练就一题一题来；想停随时停。不用记内部体验名。
+
+[更多实战案例](cases/experiences) · [完整任务索引](references/practical/00-router.md)
+
+<a id="journey"></a>
+
+## 每次求职，都为下一次积累
+
+**真实经历 → 简历版本 → 实际投递 → 面试反馈 → 下一步**
+
+已投版本不被新版本覆盖；面试反馈不被当成录用原因。默认只在聊天中工作，需要下次继续时，可以让军师生成一张简短接续卡，再主动带回。
+
+> 请用 $career-junshi，继续我的求职。这是上次的接续卡，这次发生了：…… 只给我最值得做的下一步。
+
+持久记忆另行授权，默认关闭。[接续机制](references/practical/job-search-journey.md) · [隐私与记忆](documentation/MEMORY.md)
+
 <a id="resume-export"></a>
 
 <details>
@@ -148,7 +171,6 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 
 </details>
 
-<a id="experiences"></a>
 <a id="autofill"></a>
 
 ## 可选：招聘官网少填几遍资料
@@ -171,132 +193,15 @@ python /path/to/your/skills/career-junshi/scripts/validate_skill.py --runtime-on
 
 [完整使用说明与限制](extensions/autofill/README.md) · [可选 API 配置](extensions/autofill/README.md#可选接入国内模型-api)
 
-## 从你正卡住的地方进入
-
-| 你现在的处境 | 直接这样说 | 本轮拿到什么 |
-| --- | --- | --- |
-| **项目做过，简历说不清** | “改这段经历，解释哪些该留、哪些该删。” | 可用表达、贡献边界、重要改写依据 |
-| **怕被追问，想先练一遍** | “追问这个项目，一次一题，先听我回答。” | 依据实际回答的追问与一个练习点 |
-| **收到反馈，不知怎么继续** | “对照这次反馈，帮我选下一步。” | 保留已发生的事实，调整一项具体行动 |
-
-> 也可以说：“今天只想说两句”“只给我一句能用的话”“先停，不用总结”。
-> 不必每次都带走一份计划。
-
-<details>
-<summary>更多请求：岗位适配、补证与复盘</summary>
-
-- **简历守城**：“追问这句经历，一次问一个问题。”[看案例](cases/experiences/defense/example.md)
-- **岗位表达**：“适配这两份 JD，解释每版删留。”[看案例](cases/experiences/role-translation/example.md)
-- **补证冲刺**：“本周有 4 小时，补一个关键缺口。”[看案例](cases/experiences/proof-sprint/example.md)
-- **决策复盘**：“对照上次建议与这次反馈，调整下一步。”[看案例](cases/experiences/decision-review/example.md)
-
-还没定方向，可以问“我该主投哪个方向？”；招聘环节也能问“HR 没回，何时跟进？”
-或“两个 Offer 怎么选？”。[跟进示例](cases/follow-up/request.md) ·
-[Offer 比较示例](cases/offer/request.md)
-
-还可以做 [JD 缺口分流](cases/experiences/jd-gap/example.md)、
-[AI 开发贡献复盘](cases/experiences/development-recap/example.md)、
-[变题复练](cases/experiences/interview-retry/example.md)、
-[措辞核对](cases/experiences/wording-audit/example.md)、
-[断点续练](cases/experiences/defense-resume/example.md)、
-[投递实验](cases/experiences/job-search-experiment/example.md)与
-[行动启动卡](cases/experiences/action-start/example.md)。
-
-只有未见结果的新上下文才能做[隐藏结果复盘](cases/experiences/outcome-blind-review/example.md)。
-以上为合成案例；不同岗位或渠道的结果不能直接归因于模板。
-
-</details>
-
-<a id="interview-loop"></a>
-
-## 面试前后，接着用
-
-<details>
-<summary>面试前模拟、面试后复盘、谈薪演练</summary>
-
-**面试前 · 用实际回答，练一次追问。**<br>
-“围绕这个项目模拟三题，一次一问，最后再点评。”逐题纠偏与整场模拟可以切换，
-从实际回答选下一问；不知道用哪段经历，就先练选一个事件、说一句开场。
-
-**面试后 · 还原问答，再选一个练习点。**<br>
-“刚面完，没有录音，我还记得这道追问。”分开实际问答、本人感受和明确反馈；
-复盘发现的卡点，可以回到下一轮变题练习。
-
-**谈薪时 · 先对齐条件，再演练回应。**<br>
-“HR 开始问预期了，先判断阶段，再扮 HR 陪我练一句。”区分预期沟通与 Offer 协商，
-核对固定收入、浮动奖金和条件；私有底线不进入外发草稿，草稿由本人发送。
-
-[看三段衔接的合成示例](cases/experiences/interview-loop/example.md)
-
-</details>
-
-<a id="journey"></a>
-
-## 这一轮结束，下次接得上
-
-**真实材料 → 简历版本 → 实际投递 → 招聘反馈 → 下一步**
-
-已投的 R1 不被新改的 R2 覆盖，补交单独记录。
-旧反馈回填不顶掉当前判断，同刻反馈并列保留。需要继续时，接续卡带回机会、
-实际版本、反馈来源和未完成的一步；你不想总结时，也可以直接停下。
-
-<details>
-<summary>复制下次继续的提示词</summary>
-
-```text
-请用 $career-junshi，继续我的求职。
-这是上次的接续卡／记录，这次发生了：……
-对照当时建议，说明哪些已做、哪些仍未知，给我一个下一步。
-如果改简历，保留原投递版本并生成新版；需要时更新接续卡。
-先在聊天处理，不开启长期记忆。
-```
-
-![事实底稿、简历版本、实际投递、招聘反馈与下一步](assets/brand/journey-zh.svg)
-
-默认只在聊天中交付；你明确要求私有接续文件后，才生成记录、检查结果与
-`continue.md`，下次主动带回。[接续契约](references/practical/job-search-journey.md) ·
-[合成起点](cases/experiences/journey/request.md) · [实际验收](documentation/JOURNEY_EVAL.md)
-
-</details>
-
 <a id="evaluation"></a>
 
-## 已验证什么，还没验证什么
+## 验证进度
 
-| 已做的检查 | 可以查看的证据 |
-| --- | --- |
-| **软件回归** | 已记录：286 项，285 通过、1 项文件符号链接权限跳过；目录联接已实测。[修复与验收](documentation/HUMAN_LOOP_EVAL.md) |
-| **真实 PDF 编译** | 合成简历实际编译、提取文字和检查页数；含超页失败例。[排版检查](benchmark/resume-layout-20261020/README.md) · [精排与接续](documentation/JOURNEY_EVAL.md) |
-| **合成交互试用** | 新上下文代理、多轮问答与前后对照，保留原始记录和局限。[低负担交互](documentation/HUMAN_LOOP_EVAL.md#独立上下文合成试用) · [GitHub 起步](documentation/PUBLIC_PROJECT_FIRST_USE_EVAL.md) |
+- 历史软件回归：286 项，285 通过、1 项因文件符号链接权限跳过。[记录](documentation/HUMAN_LOOP_EVAL.md)
+- 已有合成多轮试用、简历 PDF 实际编译及边界验收。[评测索引](documentation/EVAL.md) · [简历排版](benchmark/resume-layout-20261020/README.md)
+- 五人真人首用对照尚未收集结果。[试用协议](documentation/EVAL.md#core-first-use-trial)
 
-这些检查**不能证明提高面试通过率、Offer 率或谈薪结果**。合成案例不是真人背书，
-软件回归与对话试用也分别报告。
-
-<details>
-<summary>全部验证记录与已知限制</summary>
-
-[五人真人试用说明与轻量对照](documentation/EVAL.md#core-first-use-trial)供邀请者使用；
-目前尚未收集这轮真人结果。
-
-[面试前后流程](documentation/INTERVIEW_COACH_EVAL.md) ·
-[五个合成用户、十五轮交互](documentation/MOCK_USER_TRIALS.md) ·
-[改写定位与结果性质](documentation/RESUME_POSITIONING_EVAL.md) ·
-[五组改写对照](cases/experiences/resume-positioning/example.md) ·
-[缺口、开发复盘与复练](documentation/EVIDENCE_TO_PRACTICE_EVAL.md) ·
-[新上下文可靠性试用](benchmark/reliability-20261023/forward-trial.md) ·
-[四种核心体验](documentation/EVOLUTION_EVAL.md) ·
-[措辞、续练与盲评](documentation/REFINEMENT_EVAL.md) ·
-[简历导出](documentation/RESUME_EXPORT_EVAL.md) ·
-[导出文件选择](documentation/EXPORT_HANDOFF_EVAL.md) ·
-[简历迭代](documentation/RESUME_ITERATION_EVAL.md) ·
-[研究工作流](documentation/RESEARCH_EVOLUTION_EVAL.md) ·
-[参考库与 Offer 核验](documentation/CAREER_LIBRARY_EVAL.md)。
-
-另有 13 个结构化合成基准。冻结案例仍有提取、交接和建议泛化等弱点，
-未全部重测，也未宣称达到真实用户试点门槛。
-[评测协议](documentation/EVAL.md) · [冻结 Holdout](documentation/V023_HOLDOUT_EVAL.md)
-
-</details>
+以上为已有版本的验证记录，不是本轮精简版重测结果；不能证明提升面试通过率、Offer 率或谈薪结果。冻结案例仍有提取、交接和泛化方面的局限。[冻结 Holdout](documentation/V023_HOLDOUT_EVAL.md)
 
 <a id="boundaries"></a>
 <a id="library"></a>
