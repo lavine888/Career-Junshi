@@ -1,0 +1,13 @@
+diff --git a/references/practical/resume-defense.md b/references/practical/resume-defense.md
+index bbe7d3c..ce39a0d 100644
+--- a/references/practical/resume-defense.md
++++ b/references/practical/resume-defense.md
+@@ -14,5 +14,7 @@ and wait; do not ask the user to repeat material already supplied.
+ When enough is known, first give a short, usable expression of those facts,
+ keeping actual personal action, team scope and stage intact. Then ask one
+-targeted question about the most useful unresolved detail and wait. The initial
++targeted question about the most useful unresolved detail and wait. Ask for one
++answerable detail, such as one test case that shows what the user checked.
++Avoid stacking a second question about that same example. The initial
+ wording is not an answer to a still-unanswered question. Do not invent the
+ candidate's reason, tradeoff, implementation, metric or anticipated response.

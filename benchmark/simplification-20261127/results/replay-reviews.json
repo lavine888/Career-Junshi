@@ -1,0 +1,626 @@
+{
+  "model": "gpt-6.2-sol",
+  "effort": "medium",
+  "records": [
+    {
+      "id": "S01",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 21663,
+        "cached_input_tokens": 20864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 552,
+        "reasoning_output_tokens": 70
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 18.67
+    },
+    {
+      "id": "S02",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 21642,
+        "cached_input_tokens": 19328,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 588,
+        "reasoning_output_tokens": 96
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 18.7
+    },
+    {
+      "id": "S03",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 21694,
+        "cached_input_tokens": 19328,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 491,
+        "reasoning_output_tokens": 78
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 17.27
+    },
+    {
+      "id": "S04",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 22380,
+        "cached_input_tokens": 19328,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 679,
+        "reasoning_output_tokens": 67
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 20.58
+    },
+    {
+      "id": "S05",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 21544,
+        "cached_input_tokens": 19328,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 465,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 16.09
+    },
+    {
+      "id": "S06",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 21695,
+        "cached_input_tokens": 19328,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 608,
+        "reasoning_output_tokens": 80
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 18.95
+    },
+    {
+      "id": "S07",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 21883,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 768,
+        "reasoning_output_tokens": 133
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 21.89
+    },
+    {
+      "id": "S08",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 21666,
+        "cached_input_tokens": 20864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 431,
+        "reasoning_output_tokens": 31
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 15.47
+    },
+    {
+      "id": "S09",
+      "status": "VALID",
+      "usage": {
+        "input_tokens": 21427,
+        "cached_input_tokens": 19328,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 269,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "exit_code": 0,
+      "tool_types": [],
+      "seconds": 13.02
+    }
+  ],
+  "reviews": {
+    "S01": {
+      "ratings": [
+        {
+          "id": "S01-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "在四人课程项目中，使用 AI 辅助编写排课冲突检测脚本并维护测试用例。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "前后端由队友负责，工具仅在课程演示中运行。全文已删除“独立”“商用”和“50%”。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "能举一个你维护过的测试用例，说明它验证了哪种排课冲突吗？"
+            }
+          ],
+          "facts": 2,
+          "followup": 2,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        },
+        {
+          "id": "S01-R2",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "在四人团队的课程排课项目中，借助 AI 编写排课冲突检测脚本并维护测试用例"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "前后端由队友开发，工具仅在课程演示中运行。全文已删除“独立”“商用”和“50%”。"
+            },
+            {
+              "verdict": "fail",
+              "evidence": "“能举一个你维护的测试用例吗？”和“它检查的是什么排课冲突？”是两句相关的提问。"
+            }
+          ],
+          "facts": 2,
+          "followup": 1,
+          "burden": 1,
+          "value": 2,
+          "issues": [
+            "将举例和说明冲突类型合并为一个问句，满足用户只问一个问题的明确要求。"
+          ]
+        }
+      ],
+      "preferred": [
+        "S01-R1"
+      ],
+      "reason": "两份改写均可直接使用，准确交代了个人贡献、队友分工和演示范围。S01-R1 用一个具体问题引导用户补充测试用例及其覆盖的冲突类型，符合用户明确要求的提问数量。"
+    },
+    "S02": {
+      "ratings": [
+        {
+          "id": "S02-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "以一句话更新了原句，保留原型经历和职责，并补充测试与复测结果。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“构造 3 个冲突场景（2 个课时重叠、1 个教室重复占用）”，并将通过结果限定在“复测 3 例”。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“发现 1 例漏报，修复后复测 3 例均通过”仅描述这三例的观察结果和先后顺序。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        },
+        {
+          "id": "S02-R2",
+          "checks": [
+            {
+              "verdict": "fail",
+              "evidence": "在“负责冲突检测脚本和测试用例。”处结束第一句，另起一句描述验证，未交付单句改写。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“构造 3 个测试用例（2 个课时重叠、1 个教室重复占用）”，并将通过结果限定在“复测 3 例”。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“发现 1 例漏报，修复后复测 3 例均通过”仅描述这三例的观察结果和先后顺序。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 1,
+          "value": 1,
+          "issues": [
+            "将职责和验证结果合为一句，便于用户直接替换原句。"
+          ]
+        }
+      ],
+      "preferred": [
+        "S02-R1"
+      ],
+      "reason": "两份回答都准确保留了三例构造场景及复测范围。S02-R1 将职责和验证结果写进同一句，可以直接替换原句。"
+    },
+    "S03": {
+      "ratings": [
+        {
+          "id": "S03-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "「这份 JD 要求已有香港工作授权，你目前没有，企业也明确不提供签证支持。」"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "「这一项就足以决定跳过。」"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "「Docker 是加分项，没用过也不构成硬门槛。」"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        },
+        {
+          "id": "S03-R2",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "「香港工作授权是硬性要求，你目前没有，企业也明确不提供签证支持。」"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "提到 Python 课程项目后明确「决定这次是否投递的是工作授权」。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "「Docker 只是加分项。」"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": [
+            "把这一小时的搜索范围限于明确提供签证支持的机会，漏掉了用户已经满足工作授权条件的岗位。"
+          ]
+        }
+      ],
+      "preferred": [
+        "S03-R1"
+      ],
+      "reason": "两份回答都直接建议跳过，并准确处理了工作授权、Python 项目和 Docker 的关系。S03-R1 给出更完整的一小时时间分配建议，也明确说明仅凭课程项目信息无法判断 Python 是否达标。"
+    },
+    "S04": {
+      "ratings": [
+        {
+          "id": "S04-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "三个主动作分别用时 25、45、20 分钟，合计 90 分钟。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "先练「你负责的排序规则和 10 条人工测试」，用真实用例解释排序，并准备被问到部署时如何交代分工。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "只安排口述、白板设计和计时演练。「匹配度与发布时间冲突」明确作为假设，部署明确归队友负责。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": [
+            "最终演练聚焦一条排序用例，可以再覆盖 10 条测试的整体判定依据，或练习说明测试覆盖了哪些边界，以应对对测试可信度的追问。"
+          ]
+        },
+        {
+          "id": "S04-R2",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "三个主动作分别用时 20、40、30 分钟，合计 90 分钟。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "先从真实经历写下查询词、预期排序、实际观察和理由，再练规则依据、测试判定和边界情况等四个追问。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "只安排整理底稿、画图和口头演练。扩容与索引明确放在假设题里，原型细节遵循「能确认多少就画多少」。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": [
+            "开场交代了部署由队友负责，但四个演练追问未覆盖部署分工。可以加练一句，说明自己实际了解的部署环节，以便应对系统设计面试中的相关追问。"
+          ]
+        }
+      ],
+      "preferred": [
+        "S04-R2"
+      ],
+      "reason": "两份回答都能在 90 分钟内执行。R2 更充分地演练了排序决策、测试判定和边界情况，还把性能追问组织成先确认目标、再定位瓶颈、最后验证改动的答题过程，便于用户第二天直接使用。"
+    },
+    "S05": {
+      "ratings": [
+        {
+          "id": "S05-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "“第 1 题（共 3 题）”下只提出一道行为面试题，围绕同一段经历询问问题和个人行动。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“当时你发现了什么问题，你亲自采取了哪些行动？”只有提问。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "只询问发现的问题和采取的行动，未预设改善结果。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        },
+        {
+          "id": "S05-R2",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "“第 1 题（共 3 题）”下只提出一道行为面试题，围绕同一段经历询问问题和决策。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“当时你发现了什么具体问题，你是怎么决定先改哪一步的？”只有提问。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“先改哪一步”预设了改动顺序，但未预设改善结果。"
+            }
+          ],
+          "facts": 1,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": [
+            "“你是怎么决定先改哪一步的”预设候选人亲自决定了改动顺序。已知信息只说明其负责流程优化，提问可先请其描述自己参与的决策。"
+          ]
+        }
+      ],
+      "preferred": [
+        "S05-R1"
+      ],
+      "reason": "两条回答都完成了本轮练习。S05-R1 让候选人从实际经历中说明发现的问题和自己的行动，适用于不同的分工和决策方式。"
+    },
+    "S06": {
+      "ratings": [
+        {
+          "id": "S06-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "“单凭 HR 三天没回，还判断不出是否被拒。”"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“如果已经过了三个工作日，就可以发一次”，并给出可直接发送的草稿“您好，想请问一下目前的招聘进度，如需我补充材料，我可以配合，谢谢！”"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“发出后再等约三个工作日。如果仍没回复，就先推进其他投递，停止追问。”未假定具体日期或工作日。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        },
+        {
+          "id": "S06-R2",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "“HR 三天没回，结果仍未知。”"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“如果距上次联系已满 3 个工作日”，即可发送“您好，想请问目前招聘流程有更新吗？如需我补充材料，我可以配合，谢谢！”"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“发一次后，再等约 3 个工作日。如果仍没回复，就先把精力放到其他投递上，暂时不用再催。”未假定具体日期或工作日。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": [
+            "可补一句仍算不准时就等到能确认满三个工作日再发，直接处理用户当前的疑问。",
+            "“暂时不用再催”可改为“这次跟进后仍无回复，就停止追问”，让停止线更明确。"
+          ]
+        }
+      ],
+      "preferred": [
+        "S06-R1"
+      ],
+      "reason": "两条回答都给出了可直接发送的消息和有条件的发送时机。S06-R1 还明确说明了算不准工作日时怎么做，以及一次跟进后何时停止追问。"
+    },
+    "S07": {
+      "ratings": [
+        {
+          "id": "S07-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "暂时倾向 B……确认不了，就选 A。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "请 B 的直属负责人书面确认……我会在哪个 Agent 项目里负责哪部分开发，这会是我的主要职责吗？"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "B 每月少 2k，通勤短 10 分钟。B 的 Agent 机会目前只有口头说法。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": [
+            "把「主要职责」设为选择 B 的硬门槛略严。即使 Agent 开发并非主要职责，只要有稳定投入和明确的交付责任，也可能符合用户的成长目标。"
+          ]
+        },
+        {
+          "id": "S07-R2",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "暂时首选 B。签约前先确认 Agent 开发确实是你的职责，确认不了就选 A。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "请 B 的直属负责人书面确认……我会负责哪个 Agent 项目，具体承担哪些开发和交付工作，预计占多少工作时间？"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "两份 Offer 的固定月薪都达到你的 18k 底线。B 每月少 2k。未添加福利信息或成长概率。"
+            }
+          ],
+          "facts": 1,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": [
+            "「单程通勤少 10 分钟」加入了题目未给出的单程口径。已知的只是两份 Offer 的通勤时长相差 10 分钟。",
+            "把核实窗口限定在入职前半年，可能把短期项目当作持续机会。用户看重两年后的成长，前半年的安排可以作为起点，也应核实 Agent 开发是否属于持续职责。"
+          ]
+        }
+      ],
+      "preferred": [
+        "S07-R1",
+        "S07-R2"
+      ],
+      "reason": "两份回答都给出了可直接执行的决策规则。B 能书面确认实质性的 Agent 开发职责就选 B，确认不了就选 A。R1 更明确地强调持续参与，R2 把书面核实细化为项目、交付责任和时间占比。"
+    },
+    "S08": {
+      "ratings": [
+        {
+          "id": "S08-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "“已投版本是 R1，R2 尚未投递。”"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“今天 HR 问了 R1 中的检索评估方法，目前没有通过或拒绝的反馈。”"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“本轮仅在聊天中更新。”唯一下一步是“围绕 R1 准备对这次追问的回答”。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        },
+        {
+          "id": "S08-R2",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "“已投版本是 R1，R2 尚未投递。”"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "“今天 HR 询问了 R1 中的检索评估方法，尚未给出通过或拒绝结果。”"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "唯一下一步是“准备一段简短回复”，全文未宣称写入记忆。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        }
+      ],
+      "preferred": [
+        "S08-R1",
+        "S08-R2"
+      ],
+      "reason": "两份回答都准确更新了投递和反馈状态，并只给出一个可执行的下一步，即根据实际用过的评估方法和本人职责准备回复 HR。"
+    },
+    "S09": {
+      "ratings": [
+        {
+          "id": "S09-R1",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "仅回复「好，先停。」后结束。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "全文为「好，先停。」，没有附加内容。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        },
+        {
+          "id": "S09-R2",
+          "checks": [
+            {
+              "verdict": "pass",
+              "evidence": "仅回复「好，先停。」后结束。"
+            },
+            {
+              "verdict": "pass",
+              "evidence": "全文为「好，先停。」，没有附加内容。"
+            }
+          ],
+          "facts": 2,
+          "followup": null,
+          "burden": 2,
+          "value": 2,
+          "issues": []
+        }
+      ],
+      "preferred": [
+        "S09-R1",
+        "S09-R2"
+      ],
+      "reason": "两条回答完全相同，都简短确认后立即结束，符合用户要求。"
+    }
+  }
+}

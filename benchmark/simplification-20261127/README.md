@@ -1,6 +1,6 @@
 # Simplification ablation — 2026-11-27
 
-Status: **static measurement completed; independent generation and review blocked in current environment**.
+Status: **27 independent generations and nine blind case reviews completed**. See the [results and decision](RESULTS.md).
 
 Frozen source commits: B `dd5ea0330c3b1c1c5a3e83fa643fc0ea5f7ff8f0`, C `0b9d091b95bf540e28d25111d222d3bb9096b2c8`. A is a strong generic career-coach prompt in cases.json. Nine synthetic scenarios, not real candidate data.
 
@@ -27,6 +27,20 @@ Finding: B kernel saves 2,760 characters, but an additional B router read costs 
 
 `python benchmark/simplification-20261127/run.py --model <accessible-model> --output /private/new/run-dir`
 
-Requires authenticated Codex CLI, both frozen commits available via git, and the chosen model accessible. The runner probes the model, freezes prompt files, starts separate ephemeral invocations with preloaded task references, records raw final responses and usage where returned, and produces a version-hidden review packet plus separate mapping. This is a controlled **preloaded prompt** comparison, not autonomous installed-Skill routing or true adaptive multi-turn testing. S02 and S08 replay a frozen prior state. A blind human reviewer should assess each checklist without seeing mapping or manifests: pass / fail / unknown with response excerpts; compare usable outputs, unnecessary actions and material errors. Freeze reviews before unblinding. For actual host routing/latency, run an additional instrumented installed-Skill trial; for retention, recruit real users.
+Requires authenticated Codex CLI, both frozen commits available via Git, and an accessible model. The runner probes model access, saves the exact prompts, then starts a fresh ephemeral invocation for each answer. It records the CLI's token counts, wall time, unique tool items and failures. The review packet excludes arm mapping, prompts and telemetry.
 
-No API credentials or Codex executable available in the current execution environment; direct git network access also failed. Generation count 0, blind review count 0. No model quality conclusion. The runner was authored for reproduction but not executed against a model here. Do not merge on the basis of static counts alone. Next: shorten the lookup path or make common direct routes explicit, then compare against the same frozen cases; preserve original results.
+```sh
+python benchmark/simplification-20261127/run.py --model gpt-6.2-sol --effort medium --output /private/new/generation
+python benchmark/simplification-20261127/review.py --model gpt-6.2-sol --effort medium --packet /private/new/generation/blind-packet.json --output /private/new/review
+```
+
+The reviewer receives one synthetic input, its frozen checks and its anonymized answers per fresh session. Review each check as pass, fail or unknown with evidence from the response. Score factual accuracy, follow-up quality, burden and immediate value separately. Freeze these records before opening the mapping. Transport logs, prompts and session identifiers stay in the private run directory.
+
+This protocol compares **preloaded prompts**. S02 and S08 replay frozen prior state. Installed-Skill routing, adaptive multi-turn behavior and real-user outcomes require separate observations.
+
+For a follow-up replay, add `--candidate` to the generation command and choose a new
+output directory. This runs the nine cases using the current checkout and B's
+reference-loading policy. To compare with B, pair each replay answer with the
+original B answer under fresh random labels in the same packet format. Keep
+the new mapping separate and use `review.py --responses 2`. Treat this as a
+separate round and retain the original 27 generations.
